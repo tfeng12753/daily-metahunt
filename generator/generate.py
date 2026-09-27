@@ -370,6 +370,39 @@ def verify_meta(meta, answers, mutated, final):
         raise AssertionError("meta %s resolves to %s, expected %s" % (t, got, final))
 
 
+SEALED = os.path.join(ROOT, "generator", "sealed")
+
+
+def _keystream(secret, date, n):
+    out = b""
+    ctr = 0
+    while len(out) < n:
+        out += hmac.new(secret.encode(), ("seal|%s|%d" % (date, ctr)).encode(), hashlib.sha256).digest()
+        ctr += 1
+    return out[:n]
+
+
+def seal(secret, date, solution):
+    """Store a solution encrypted with a key derived from PUZZLE_SECRET, so it can be
+    published tomorrow even if the generator code changes in between."""
+    raw = json.dumps(solution, ensure_ascii=False).encode()
+    data = bytes(a ^ b for a, b in zip(raw, _keystream(secret, date, len(raw))))
+    mac = hmac.new(secret.encode(), b"mac|" + data, hashlib.sha256).hexdigest()
+    write_json(os.path.join(SEALED, date + ".json"), {"data": data.hex(), "mac": mac})
+
+
+def unseal(secret, date):
+    path = os.path.join(SEALED, date + ".json")
+    if not os.path.exists(path):
+        return None
+    with open(path) as f:
+        box = json.load(f)
+    data = bytes.fromhex(box["data"])
+    if not hmac.compare_digest(box["mac"], hmac.new(secret.encode(), b"mac|" + data, hashlib.sha256).hexdigest()):
+        return None
+    return json.loads(bytes(a ^ b for a, b in zip(data, _keystream(secret, date, len(data)))).decode())
+
+
 def write_json(path, obj):
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, "w") as f:
@@ -405,6 +438,7 @@ def main():
             theme = next(t for t in THEMES if t["name"] == puzzle["round"])
             llm.polish(puzzle, solution, theme)
         write_json(path, puzzle)
+        seal(secret, ds, solution)
         print("wrote", path, "-", puzzle["round"])
 
     # Index + solutions for every puzzle older than the newest one.
@@ -415,11 +449,17 @@ def main():
             p = json.load(f)
         index.append({"date": ds, "number": p["number"], "round": p["round"]})
         spath = os.path.join(sdir, ds + ".json")
-        if ds < dates[-1] and not os.path.exists(spath):
+        if os.path.exists(spath):
+            continue
+        sol = unseal(secret, ds)
+        if sol is None:
             _, sol = build(secret, ds)
             if answer_hash(ds, sol["final"]) != p["meta"]["hash"]:
-                print("skip solution for %s: generator changed since it was published" % ds, file=sys.stderr)
+                print("no solution for %s: not sealed, and the generator changed since it was published" % ds, file=sys.stderr)
                 continue
+            seal(secret, ds, sol)
+            print("sealed", ds)
+        if ds < dates[-1]:
             write_json(spath, sol)
             print("wrote", spath)
     write_json(os.path.join(pdir, "index.json"), {"latest": dates[-1], "puzzles": index})
