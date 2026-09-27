@@ -1,0 +1,182 @@
+{
+ "date": "2026-09-27",
+ "number": 1,
+ "round": "Insert Coin",
+ "intro": "The cabinet in the back corner of the arcade has been unplugged since 1987. It still has a high-score table, and the initials on it keep changing.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Warp Zone",
+   "flavor": "The typist in the arcade was consistently, reliably, one step off.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "XINVI",
+     "big": true,
+     "shift": -1
+    }
+   ],
+   "hash": "f6068d3b27b70d42e7ba4ba080d456e69067665fafe5e2b7c985a858a597dcff",
+   "partials": {},
+   "hint": "Every letter was typed one key to the side on a QWERTY keyboard."
+  },
+  {
+   "id": 2,
+   "title": "Up Up Down Down",
+   "flavor": "Every chord is a button. Every button remembers how many times it was hit. Half a turn of the wheel and you'd have it.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "852 Hz + 1209 Hz  ×1",
+      "697 Hz + 1336 Hz  ×2",
+      "697 Hz + 1336 Hz  ×1",
+      "770 Hz + 1209 Hz  ×1",
+      "697 Hz + 1477 Hz  ×2",
+      "697 Hz + 1336 Hz  ×2",
+      "852 Hz + 1477 Hz  ×3",
+      "852 Hz + 1477 Hz  ×3",
+      "852 Hz + 1209 Hz  ×3",
+      "697 Hz + 1477 Hz  ×2"
+     ],
+     "mono": true
+    }
+   ],
+   "hash": "1ba7c7efb29060e26078125a18b336a6806063fba75bf4d4bebd8e5dad02e16c",
+   "partials": {
+    "b0dd49563f6ce9c612003cdd4db4a640685e9c077957aeaacabe93d68ad2c2b4": "You've decoded it, but it's not finished. One more layer."
+   },
+   "hint": "Each frequency pair is a phone keypad key (DTMF). The ×n is how many times it was pressed: old-school multi-tap texting. Then undo: ROT13."
+  },
+  {
+   "id": 3,
+   "title": "Attract Mode",
+   "flavor": "The chemist only ever shopped from the first twenty-six shelves.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "nitrogen",
+      "hydrogen",
+      "magnesium",
+      "hydrogen",
+      "nitrogen",
+      "hydrogen"
+     ]
+    }
+   ],
+   "hash": "56bb1a0edfa7ce52f8b61e7b534025641c586b7406090e2d3f72d8074b6f9a5a",
+   "partials": {},
+   "hint": "Each element's atomic number is a letter position (hydrogen = 1 = A)."
+  },
+  {
+   "id": 4,
+   "title": "Kill Screen",
+   "flavor": "The hands aren't telling the time. They're waving.",
+   "blocks": [
+    {
+     "type": "clocks",
+     "items": [
+      [
+       6,
+       3
+      ],
+      [
+       0,
+       6
+      ],
+      [
+       2,
+       6
+      ],
+      [
+       5,
+       7
+      ],
+      [
+       7,
+       0
+      ],
+      [
+       1,
+       4
+      ]
+     ]
+    }
+   ],
+   "hash": "c2296789f03c17dd309efc2d7ea49a6d92e5f07f8aa69a8c8c384747ed2010c8",
+   "partials": {},
+   "hint": "Each clock's two hands are the two arms of a flag-semaphore signaller (hand length doesn't matter)."
+  },
+  {
+   "id": 5,
+   "title": "Speedrun",
+   "flavor": "Fences and corners. Some of them have an animal inside.",
+   "blocks": [
+    {
+     "type": "pigpen",
+     "items": [
+      {
+       "g": "hash",
+       "p": 3,
+       "dot": false
+      },
+      {
+       "g": "x",
+       "p": 2,
+       "dot": false
+      },
+      {
+       "g": "hash",
+       "p": 4,
+       "dot": true
+      },
+      {
+       "g": "hash",
+       "p": 6,
+       "dot": false
+      },
+      {
+       "g": "hash",
+       "p": 4,
+       "dot": false
+      },
+      {
+       "g": "hash",
+       "p": 5,
+       "dot": true
+      },
+      {
+       "g": "hash",
+       "p": 4,
+       "dot": true
+      }
+     ]
+    }
+   ],
+   "hash": "32a5e6af25841ff06a0fe47340d4c542e35bcca2e60e7d6f59cf13390388b1cc",
+   "partials": {},
+   "hint": "Pigpen (Freemason's) cipher: A–I in a # grid, J–R the same with dots, S–V in an X, W–Z the X with dots."
+  }
+ ],
+ "meta": {
+  "title": "Meta: Insert Coin",
+  "flavor": "A well-thumbed book of scripture, and a list of verses someone underlined. Its chapters are the reports on this page.",
+  "blocks": [
+   {
+    "type": "list",
+    "items": [
+     "Ch. 3 v. 4",
+     "Ch. 2 v. 10",
+     "Ch. 1 v. 1",
+     "Ch. 3 v. 2",
+     "Ch. 5 v. 1",
+     "Ch. 4 v. 6"
+    ],
+    "ordered": true
+   }
+  ],
+  "length": 6,
+  "hash": "dc2a9c94836f0ad7303b1cb5bbd56132c2a521f427fa1ba1c840d8ac0d8ae2ec"
+ }
+}
