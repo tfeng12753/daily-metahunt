@@ -25,7 +25,10 @@ BANNED = ["morse", "semaphore", "braille", "vigenere", "vigenère", "atbash", "n
           "phonetic alphabet", "ascii", "hexadecimal", "pigpen", "baconian", "dtmf",
           "tap code", "rot13", "rot-13", "caesar", "qwerty", "amino acid", "codon",
           "atomic number", "periodic table", "roman numeral", "prime number",
-          "multi-tap", "multitap", "binary", "cipher"]
+          "multi-tap", "multitap", "binary", "cipher", "nonogram", "picross",
+          "paint by numbers", "word search", "wordsearch", "rail fence", "railfence",
+          "cryptogram", "substitution", "book cipher", "signal flag", "semaphore flag",
+          "knight's tour", "radix", "base two", "base 2"]
 
 SYSTEM = """You write flavour text for a very hard puzzle hunt, in the style of the MIT Mystery Hunt and tech-company hunts.
 Flavour text is an oblique, atmospheric nudge: it must preserve every hint in the original line (a solver should be able to get the same "aha" from it), but it must never name the technique outright, never state an answer, and never give instructions.

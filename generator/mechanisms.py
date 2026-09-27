@@ -164,7 +164,7 @@ class Mechanism:
     flavors = []
     allow_transform = True
 
-    def can(self, word):
+    def can(self, word, ctx=None):
         return all(c in ALPHA for c in word)
 
     def encode(self, word, rng, ctx):
@@ -184,7 +184,7 @@ class DnaBinary(Mechanism):
         "The sequencer {at} ran out of ink and fell back to its native tongue. Its alphabet has four letters; its vocabulary, sixty-four words.",
     ]
 
-    def can(self, word):
+    def can(self, word, ctx=None):
         return all(c in AA_TO_CODONS for c in word)
 
     def encode(self, word, rng, ctx):
@@ -212,7 +212,7 @@ class DnaTemplate(Mechanism):
         "Recovered: the wrong half of a helix, carefully labelled from head to tail.",
     ]
 
-    def can(self, word):
+    def can(self, word, ctx=None):
         return all(c in AA_TO_CODONS for c in word)
 
     def encode(self, word, rng, ctx):
@@ -232,7 +232,7 @@ class Morse(Mechanism):
     hint = "Two glyphs stand for dot and dash; the gaps separate letters."
     flavors = [
         "{Crew} tapped this out against the hull: short, long, and the silence in between.",
-        "Two kinds of creature drifted past the porthole, in an order that felt far too deliberate.",
+        "Two kinds of thing kept passing {at}, in an order that felt far too deliberate.",
         "Samuel would have recognised the rhythm at once, whatever it happened to be wearing.",
     ]
 
@@ -397,7 +397,7 @@ class TapCode(Mechanism):
         "Knock, knock. Pause. Knock knock knock.",
     ]
 
-    def can(self, word):
+    def can(self, word, ctx=None):
         return "K" not in word
 
     def encode(self, word, rng, ctx):
@@ -430,7 +430,7 @@ class Keyboard(Mechanism):
                 return row[j] if 0 <= j < len(row) else None
         return None
 
-    def can(self, word):
+    def can(self, word, ctx=None):
         return any(all(self._shift(c, d) for c in word) for d in (1, -1))
 
     def encode(self, word, rng, ctx):

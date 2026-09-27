@@ -129,3 +129,26 @@ button, select, input { font: inherit; color: inherit; }
   .prose { font-size: 18px; padding: 14px 16px; }
   .brand span:last-child { display: none; }
 }
+
+.mono.wide { word-break: normal; letter-spacing: .14em; line-height: 2; font-size: 16px; }
+.board { border-collapse: collapse; font: 600 17px var(--mono); }
+.board td { width: 34px; height: 34px; text-align: center; border: 1px solid var(--line); background: var(--panel-2); }
+.board td.dark { background: color-mix(in srgb, var(--accent) 22%, var(--panel-2)); }
+.board th { font: 12px var(--mono); color: var(--muted); padding: 0 6px; }
+.board.plain td { width: 30px; height: 30px; border-color: transparent; background: transparent; }
+.board.plain { background: var(--paper); color: var(--paper-ink); border-radius: 6px; }
+.gallery svg[aria-label="flag"] { box-shadow: 0 1px 3px rgba(0,0,0,.35); }
+.nono-wrap { overflow-x: auto; padding-bottom: 4px; }
+.nono { border-collapse: collapse; font: 11px var(--mono); color: var(--muted); user-select: none; }
+.nono .colclue { vertical-align: bottom; padding: 0 0 4px; min-width: 20px; line-height: 1.25; }
+.nono .rowclue { text-align: right; padding-right: 8px; white-space: nowrap; }
+.nono .cell { width: 20px; height: 20px; border: 1px solid var(--line); background: var(--panel-2); cursor: pointer; }
+.nono .cell.gapcol { border-right: 2px solid color-mix(in srgb, var(--muted) 60%, transparent); }
+.nono .cell.filled { background: var(--ink); }
+.nono .cell.crossed { background: var(--panel-2) linear-gradient(45deg, transparent 45%, var(--muted) 45% 55%, transparent 55%); }
+.nono .cell.given { cursor: default; outline: 2px solid var(--accent); outline-offset: -3px; }
+.fitgrid { display: grid; gap: 6px; margin-bottom: 18px; }
+.fitrow { display: flex; gap: 4px; }
+.fitcell { width: 30px; height: 30px; border: 1.5px solid var(--muted); border-radius: 3px; }
+.fitcell.shade { background: color-mix(in srgb, var(--accent) 55%, transparent); border-color: var(--accent); }
+@media (max-width: 560px) { .board td { width: 30px; height: 30px; } .fitcell { width: 24px; height: 24px; } }

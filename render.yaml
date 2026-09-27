@@ -1,0 +1,21 @@
+# Render Blueprint: serves docs/ as a static site.
+# Rounds are generated and committed by .github/workflows/daily.yml every day
+# at 00:02 UTC; each of those commits triggers a Render deploy.
+services:
+  - type: web
+    name: daily-metahunt
+    runtime: static
+    buildCommand: echo "Nothing to build; rounds are committed by GitHub Actions."
+    staticPublishPath: ./docs
+    autoDeployTrigger: commit
+    headers:
+      # Rounds change daily; never let a browser or CDN serve yesterday's index.
+      - path: /puzzles/*
+        name: Cache-Control
+        value: no-cache
+      - path: /solutions/*
+        name: Cache-Control
+        value: no-cache
+      - path: /*
+        name: X-Content-Type-Options
+        value: nosniff

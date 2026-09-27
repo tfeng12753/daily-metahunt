@@ -21,7 +21,8 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import llm  # noqa: E402
-from mechanisms import ALPHA, BY_KEY, MECHANISMS, TRANSFORMS  # noqa: E402
+from hunt_mechanisms import MECHANISMS  # noqa: E402
+from mechanisms import ALPHA, TRANSFORMS  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOCS = os.path.join(ROOT, "docs")
@@ -144,6 +145,77 @@ def meta_mutation(final, pool, rng):
     }
 
 
+def meta_fitin(final, pool, rng):
+    """Answers fit a grid by length (all distinct); one shaded square per row spells the final."""
+    n = len(final)
+    if not 5 <= n <= 9:
+        return None
+
+    def dfs(k, lens, chosen):
+        if k == n:
+            return chosen
+        cands = [w for w in pool if final[k] in w and len(w) not in lens and w not in chosen]
+        rng.shuffle(cands)
+        for w in cands[:4]:
+            r = dfs(k + 1, lens | {len(w)}, chosen + [w])
+            if r:
+                return r
+        return None
+
+    words = dfs(0, set(), [])
+    if not words:
+        return None
+    rows = []
+    for w, c in zip(words, final):
+        rows.append({"len": len(w), "shade": rng.choice([i for i, ch in enumerate(w) if ch == c])})
+    return {
+        "type": "fitin",
+        "feeders": [{"answer": w} for w in words],
+        "flavor": [
+            "Everything {at} has a place, and every place is exactly the right size.",
+            "A rack of pigeonholes, each cut to fit one thing only. Put them away, then read down the marked slots.",
+        ],
+        "explain": "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+        "body": [{"type": "fitgrid", "rows": rows}],
+        "shuffle": True,
+    }
+
+
+def meta_stowaway(final, pool, rng):
+    """Each feeder encodes its answer with one extra letter; the extras spell the final."""
+    n = len(final)
+    if not 5 <= n <= 8:
+        return None
+    poolset = set(pool)
+    used, feeders = set(), []
+    for c in final:
+        opts = []
+        for w in pool:
+            if w in used or len(w) < 5:
+                continue
+            for p in range(1, len(w) + 1):
+                m = w[:p] + c + w[p:]
+                # an insertion that duplicates a neighbour is ambiguous about where it went; that's fine,
+                # the letter is the same. Just avoid landing on another real word.
+                if m not in poolset:
+                    opts.append((w, m))
+        if not opts:
+            return None
+        w, m = rng.choice(opts)
+        used.add(w)
+        feeders.append({"answer": w, "encode": m, "extra": True})
+    return {
+        "type": "stowaway",
+        "feeders": feeders,
+        "flavor": [
+            "Every report that reached {place} was carrying a stowaway: exactly one letter too many. Put each one ashore, then take a roll call of the stowaways.",
+            "Each message is one letter heavier than it should be. Weigh them all, and the surplus, in order, adds up to something.",
+        ],
+        "explain": "Each feeder decodes to its answer plus one inserted letter. The inserted letters, in puzzle order, spell the final answer.",
+        "body": [],
+    }
+
+
 def meta_logbook(final, pool, rng):
     """5-6 feeders; each final letter is (feeder #, letter #), disguised as a log."""
     for _ in range(300):
@@ -202,7 +274,7 @@ def meta_initials(final, pool, rng):
     }
 
 
-METAS = [meta_diagonal, meta_title_diagonal, meta_mutation, meta_logbook, meta_initials]
+METAS = [meta_diagonal, meta_title_diagonal, meta_mutation, meta_stowaway, meta_fitin, meta_logbook, meta_initials]
 
 
 # --------------------------------------------------------------------------
@@ -221,7 +293,7 @@ def pick_theme_and_final(secret, date):
     return theme, finals[cycle % len(finals)], day + 1
 
 
-def assign_mechanisms(feeders, rng):
+def assign_mechanisms(feeders, rng, ctx):
     """Give each feeder a distinct mechanism (plus an optional transform layer)."""
     mechs = list(MECHANISMS)
     for _ in range(200):
@@ -237,10 +309,10 @@ def assign_mechanisms(feeders, rng):
                 if m.allow_transform and rng.random() < 0.4:
                     tkey = rng.choice(sorted(TRANSFORMS))
                 enc = TRANSFORMS[tkey]["fn"](src) if tkey else src
-                if m.can(enc):
+                if m.can(enc, ctx):
                     choice = (m, tkey, enc)
                     break
-                if tkey and m.can(src):
+                if tkey and m.can(src, ctx):
                     choice = (m, None, src)
                     break
             if not choice:
@@ -271,20 +343,21 @@ def build(secret, date):
     titles = rng.sample(theme["titles"], len(feeders))
     if meta.get("title_order"):
         titles.sort(key=lambda t: t.upper())  # feeder k gets the k-th title alphabetically
-    if meta["type"] in ("diagonal", "title_diagonal"):
+    if meta["type"] in ("diagonal", "title_diagonal") or meta.get("shuffle"):
         order = list(range(len(feeders)))
         rng.shuffle(order)  # the meta itself imposes the order, so hide it
         feeders = [feeders[i] for i in order]
         titles = [titles[i] for i in order]
-    plan = assign_mechanisms(feeders, rng)
     used_words = {fd["answer"] for fd in feeders} | {final}
     carrier = [w for w in theme["feeders"] if w not in used_words]
+    base_ctx = {"glyphs": theme["glyphs"], "carrier": carrier, "intro": theme["intro"]}
+    plan = assign_mechanisms(feeders, rng, base_ctx)
 
     puzzles, solutions = [], []
     for i, (fd, (mech, tkey, enc), title) in enumerate(zip(feeders, plan, titles)):
-        ctx = {"title": title, "glyphs": theme["glyphs"], "carrier": carrier}
+        ctx = dict(base_ctx, title=title)
         blocks = mech.encode(enc, rng, ctx)
-        flavor = fmt(rng.choice(mech.flavors), theme)
+        flavor = fmt(rng.choice(mech.flavors), theme).replace("{n}", ctx.get("_flavor_n", ""))
         if tkey:
             flavor += " " + rng.choice(TRANSFORMS[tkey]["hints"])
 
@@ -298,7 +371,9 @@ def build(secret, date):
         src = fd.get("encode", fd["answer"])
         if tkey and enc != src:
             partials[answer_hash(date, enc)] = "You've decoded it, but it's not finished. One more layer."
-        if src != fd["answer"]:
+        if src != fd["answer"] and fd.get("extra"):
+            partials[answer_hash(date, src)] = "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+        elif src != fd["answer"]:
             partials[answer_hash(date, src)] = "So close. Exactly one thing is wrong here. Fix it (and remember what you fixed)."
 
         puzzles.append({
@@ -354,6 +429,18 @@ def verify_meta(meta, answers, mutated, final):
             diff = [y for x, y in zip(a, m) if x != y]
             assert len(diff) == 1
             got += diff[0]
+    elif t == "stowaway":
+        got = ""
+        for a, m in zip(answers, mutated):
+            extras = {m[p] for p in range(len(m)) if m[:p] + m[p + 1:] == a}
+            assert len(extras) == 1, (a, m)
+            got += extras.pop()
+    elif t == "fitin":
+        got = ""
+        for row in meta["body"][0]["rows"]:
+            fits = [a for a in answers if len(a) == row["len"]]
+            assert len(fits) == 1
+            got += fits[0][row["shade"]]
     elif t == "logbook":
         got = ""
         for e in meta["body"][0]["items"]:

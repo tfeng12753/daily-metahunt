@@ -83,10 +83,128 @@
     return s;
   }
 
+  // International maritime signal flags, drawn on a 60×40 field.
+  const FC = { r: "#d42a2a", b: "#1d3f9a", y: "#f4c20d", w: "#ffffff", k: "#161616" };
+  const rect = (x, y, w, h, f) => svg("rect", { x, y, width: w, height: h, fill: FC[f] });
+  const poly = (pts, f) => svg("polygon", { points: pts, fill: FC[f] });
+  const FLAGS = {
+    A: () => [rect(0, 0, 30, 40, "w"), poly("30,0 60,0 45,20 60,40 30,40", "b")],
+    B: () => [poly("0,0 60,0 45,20 60,40 0,40", "r")],
+    C: () => ["b", "w", "r", "w", "b"].map((f, i) => rect(0, i * 8, 60, 8, f)),
+    D: () => [rect(0, 0, 60, 40, "y"), rect(0, 10, 60, 20, "b")],
+    E: () => [rect(0, 0, 60, 20, "b"), rect(0, 20, 60, 20, "r")],
+    F: () => [rect(0, 0, 60, 40, "w"), poly("30,0 60,20 30,40 0,20", "r")],
+    G: () => [0, 1, 2, 3, 4, 5].map((i) => rect(i * 10, 0, 10, 40, i % 2 ? "b" : "y")),
+    H: () => [rect(0, 0, 30, 40, "w"), rect(30, 0, 30, 40, "r")],
+    I: () => [rect(0, 0, 60, 40, "y"), svg("circle", { cx: 30, cy: 20, r: 10, fill: FC.k })],
+    J: () => [rect(0, 0, 60, 40, "b"), rect(0, 13.3, 60, 13.4, "w")],
+    K: () => [rect(0, 0, 30, 40, "y"), rect(30, 0, 30, 40, "b")],
+    L: () => [rect(0, 0, 60, 40, "y"), rect(30, 0, 30, 20, "k"), rect(0, 20, 30, 20, "k")],
+    M: () => [rect(0, 0, 60, 40, "b"), poly("0,0 8,0 60,34 60,40 52,40 0,6", "w"), poly("60,0 52,0 0,34 0,40 8,40 60,6", "w")],
+    N: () => [...Array(16)].map((_, i) => rect((i % 4) * 15, Math.floor(i / 4) * 10, 15, 10, (i % 4 + Math.floor(i / 4)) % 2 ? "w" : "b")),
+    O: () => [rect(0, 0, 60, 40, "y"), poly("0,0 60,0 0,40", "r")],
+    P: () => [rect(0, 0, 60, 40, "b"), rect(20, 12, 20, 16, "w")],
+    Q: () => [rect(0, 0, 60, 40, "y")],
+    R: () => [rect(0, 0, 60, 40, "r"), rect(26, 0, 8, 40, "y"), rect(0, 16, 60, 8, "y")],
+    S: () => [rect(0, 0, 60, 40, "w"), rect(20, 12, 20, 16, "b")],
+    T: () => [rect(0, 0, 20, 40, "r"), rect(20, 0, 20, 40, "w"), rect(40, 0, 20, 40, "b")],
+    U: () => [rect(0, 0, 60, 40, "w"), rect(0, 0, 30, 20, "r"), rect(30, 20, 30, 20, "r")],
+    V: () => [rect(0, 0, 60, 40, "w"), poly("0,0 8,0 60,34 60,40 52,40 0,6", "r"), poly("60,0 52,0 0,34 0,40 8,40 60,6", "r")],
+    W: () => [rect(0, 0, 60, 40, "b"), rect(9, 6, 42, 28, "w"), rect(19, 13, 22, 14, "r")],
+    X: () => [rect(0, 0, 60, 40, "w"), rect(26, 0, 8, 40, "b"), rect(0, 16, 60, 8, "b")],
+    Y: () => [rect(0, 0, 60, 40, "y"), ...[-40, -20, 0, 20, 40].map((o) => poly(`${o},0 ${o + 10},0 ${o + 50},40 ${o + 40},40`, "r"))],
+    Z: () => [poly("0,0 60,0 30,20", "y"), poly("60,0 60,40 30,20", "b"), poly("0,40 60,40 30,20", "r"), poly("0,0 0,40 30,20", "k")],
+  };
+  function flag(ch) {
+    const s = svg("svg", { width: 72, height: 48, viewBox: "0 0 60 40", role: "img", "aria-label": "flag" });
+    const clip = "c" + Math.random().toString(36).slice(2);
+    const cp = svg("clipPath", { id: clip });
+    cp.append(svg("rect", { width: 60, height: 40 }));
+    const g = svg("g", { "clip-path": `url(#${clip})` });
+    FLAGS[ch]().forEach((e) => g.append(e));
+    s.append(cp, g, svg("rect", { width: 60, height: 40, fill: "none", stroke: "rgba(0,0,0,.35)", "stroke-width": 0.8 }));
+    return s;
+  }
+
+  function board(b) {
+    const t = el("table", "board" + (b.plain ? " plain" : ""));
+    const files = "abcdefgh";
+    b.rows.forEach((row, r) => {
+      const tr = el("tr");
+      if (!b.plain) tr.append(el("th", null, String(8 - r)));
+      [...row].forEach((ch, c) => tr.append(el("td", !b.plain && (r + c) % 2 ? "dark" : null, ch)));
+      t.append(tr);
+    });
+    if (!b.plain) {
+      const tr = el("tr");
+      tr.append(el("th"));
+      [...files].forEach((f) => tr.append(el("th", null, f)));
+      t.append(tr);
+    }
+    return t;
+  }
+
+  // Interactive nonogram: click cycles empty → filled → crossed.
+  function nonogram(b) {
+    const R = b.rows.length, C = b.cols.length;
+    const given = {};
+    b.givens.forEach(([r, c, v]) => { given[r + "," + c] = v; });
+    const wrap = el("div", "nono-wrap");
+    const t = el("table", "nono");
+    const head = el("tr");
+    head.append(el("th", "corner"));
+    b.cols.forEach((clue) => {
+      const th = el("th", "colclue");
+      (clue.length ? clue : [0]).forEach((n) => th.append(el("div", null, String(n))));
+      head.append(th);
+    });
+    t.append(head);
+    for (let r = 0; r < R; r++) {
+      const tr = el("tr");
+      tr.append(el("th", "rowclue", (b.rows[r].length ? b.rows[r] : [0]).join(" ")));
+      for (let c = 0; c < C; c++) {
+        const td = el("td", "cell");
+        const g = given[r + "," + c];
+        if (g !== undefined) {
+          td.classList.add(g ? "filled" : "crossed", "given");
+        } else {
+          td.addEventListener("click", () => {
+            if (td.classList.contains("filled")) { td.classList.replace("filled", "crossed"); }
+            else if (td.classList.contains("crossed")) { td.classList.remove("crossed"); }
+            else { td.classList.add("filled"); }
+          });
+        }
+        if (c % 6 === 5) td.classList.add("gapcol");
+        tr.append(td);
+      }
+      t.append(tr);
+    }
+    wrap.append(t);
+    return wrap;
+  }
+
+  function fitgrid(b) {
+    const g = el("div", "fitgrid");
+    b.rows.forEach((row) => {
+      const r = el("div", "fitrow");
+      for (let i = 0; i < row.len; i++) r.append(el("span", "fitcell" + (i === row.shade ? " shade" : "")));
+      g.append(r);
+    });
+    return g;
+  }
+
   function renderBlock(b) {
     switch (b.type) {
-      case "mono": return el("pre", "mono" + (b.big ? " big" : ""), b.text);
+      case "mono": return el("pre", "mono" + (b.big ? " big" : "") + (b.wide ? " wide" : ""), b.text);
       case "prose": return el("p", "prose", b.text);
+      case "board": return board(b);
+      case "nonogram": return nonogram(b);
+      case "fitgrid": return fitgrid(b);
+      case "flags": {
+        const g = el("div", "gallery");
+        b.items.forEach((ch) => g.append(flag(ch)));
+        return g;
+      }
       case "numbers": {
         const ul = el("ul", "chips");
         b.items.forEach((n) => ul.append(el("li", "chip", String(n))));
@@ -190,6 +308,7 @@
     const body = el("div", "body");
     p.blocks.forEach((b) => body.append(renderBlock(b)));
     card.append(body);
+    [...body.children].forEach((c, i) => { if (i) c.style.marginTop = "14px"; });
 
     const markSolved = (word) => {
       card.classList.add("solved");

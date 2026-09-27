@@ -23,10 +23,15 @@ titles and shape of the data are the only clues.
   | DTMF multi-tap phone tones | Vigenère keyed by the puzzle title | Mirrored NATO alphabet |
   | Tap code | QWERTY keyboard shift | Hex colours as ASCII |
   | Resistor colour bands | Pigpen | Punched paper tape |
-  | Primes in Roman numerals | Baconian cipher in the typesetting | |
+  | Primes in Roman numerals | Baconian cipher in the typesetting | Nonogram (interactive, line-solvable) |
+  | Word search: leftover letters | Cryptogram of a cluephrase | Rail fence of a cluephrase |
+  | Book cipher on a recovered page | Knight's path on a letter board | Maritime signal flags |
+  | Numbers in mixed bases | | |
 
 - **A meta**, which is one of:
   - *Mutation*: each feeder decodes with exactly one wrong letter; the wrong letters spell the answer.
+  - *Stowaways*: each feeder decodes with one extra letter; the extras spell the answer.
+  - *Fit-in grid*: answers slot into rows by length; the shaded squares spell the answer.
   - *Diagonal*: order the answers (alphabetically, or by their puzzles' titles) and read the k-th letter of the k-th.
   - *Logbook*: the meta gives (puzzle, letter) indices disguised as ship's bells, verses, seats…
   - *Initials*: a Vigenère ciphertext whose key is the feeders' first letters.
@@ -35,11 +40,23 @@ Answers are checked in the browser against salted SHA-256 hashes, so the page
 never contains them. Intermediate layers and uncorrected mutations get a
 "keep going" response. Solutions are published the day after.
 
+## Hosting on Render
+
+`render.yaml` is a Render Blueprint for a free static site that serves `docs/`.
+In Render, choose **New → Blueprint** and pick this repo. Every daily bot
+commit then triggers a Render deploy, so Render stays current without its
+own cron job. The GitHub Pages deploy in the workflow still runs as a mirror;
+delete its last three steps if you only want Render.
+
 ## How it runs
 
 `.github/workflows/daily.yml` runs at 00:02 UTC. It self-tests the generator,
 creates `docs/puzzles/<today>.json` plus yesterday's `docs/solutions/…`,
 commits them, and deploys `docs/` to GitHub Pages.
+
+Each day's solution is also written to `generator/sealed/`, encrypted with a
+key derived from `PUZZLE_SECRET`, and decrypted and published the next day.
+That way, changing the generator never loses a solution.
 
 Puzzles are deterministic in `(PUZZLE_SECRET, date)`. The secret lives in the
 repository's Actions secrets, so the public source can't be used to generate
