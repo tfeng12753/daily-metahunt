@@ -1,0 +1,14 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "metahunt",
+      "runtimeExecutable": "node",
+      "runtimeArgs": [
+        "serve.mjs",
+        "8791"
+      ],
+      "port": 8791
+    }
+  ]
+}

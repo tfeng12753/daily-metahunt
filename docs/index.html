@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Metahunt</title>
+<meta name="description" content="A new, very hard puzzle-hunt round every day. Solve the feeders, crack the meta, find the word.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23111'/><text x='16' y='23' font-size='20' text-anchor='middle' fill='%23e8b64c' font-family='serif'>?</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800&family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="wrap">
+    <div class="brand">
+      <span class="mark">?</span>
+      <span>Daily Metahunt</span>
+    </div>
+    <nav class="nav">
+      <button id="prev" class="ghost" aria-label="Previous puzzle">←</button>
+      <select id="archive" aria-label="Choose a date"></select>
+      <button id="next" class="ghost" aria-label="Next puzzle">→</button>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <p class="eyebrow" id="eyebrow"></p>
+    <h1 id="round">Loading…</h1>
+    <p class="intro" id="intro"></p>
+    <div class="status">
+      <span id="progress"></span>
+      <span id="countdown"></span>
+    </div>
+  </section>
+
+  <section id="puzzles" class="puzzles"></section>
+  <section id="meta"></section>
+  <section id="solution"></section>
+
+  <details class="rules">
+    <summary>How this works</summary>
+    <p>Every day at 00:00 UTC a new round appears: a handful of feeder puzzles and one metapuzzle. Each feeder hides a single word, and nothing tells you how. The flavour text, the title, and the shape of the data are the only clues. Some puzzles have more than one layer.</p>
+    <p>The meta uses the feeder answers (and sometimes things you noticed along the way) to produce one final, on-theme word. Answers are checked against a hash, so the page itself doesn't contain them. Solutions for each round are published the day after.</p>
+    <p>Hints exist, but using one is noted on your record.</p>
+  </details>
+</main>
+
+<footer class="wrap footer">
+  New round daily · <a href="https://github.com/tfeng12753/daily-metahunt">source</a>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

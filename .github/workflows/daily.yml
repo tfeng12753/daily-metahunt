@@ -1,0 +1,61 @@
+name: Daily round
+
+on:
+  schedule:
+    - cron: "2 0 * * *"   # 00:02 UTC every day
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: daily-round
+  cancel-in-progress: false
+
+jobs:
+  generate-and-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Self-test the generator
+        run: cd generator && python selftest.py 60
+
+      - name: Generate today's round (and yesterday's solution)
+        env:
+          PUZZLE_SECRET: ${{ secrets.PUZZLE_SECRET }}
+        run: |
+          if [ -z "$PUZZLE_SECRET" ]; then
+            echo "::error::Set the PUZZLE_SECRET repository secret first."; exit 1
+          fi
+          python generator/generate.py
+
+      - name: Commit new files
+        run: |
+          git config user.name "metahunt-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/puzzles docs/solutions
+          if git diff --cached --quiet; then
+            echo "Nothing new."
+          else
+            git commit -m "Round for $(date -u +%F)"
+            git push
+          fi
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+      - id: deploy
+        uses: actions/deploy-pages@v4
