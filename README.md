@@ -6,7 +6,7 @@ tech-company hunts. Each round has five to eight **feeder puzzles** and one
 words into a single final answer, and nothing tells you how. The flavour text,
 titles and shape of the data are the only clues.
 
-**Play:** https://tfeng12753.github.io/daily-metahunt/
+**Play:** https://daily-metahunt.onrender.com (mirror: https://tfeng12753.github.io/daily-metahunt/)
 
 ## What's in a round
 
