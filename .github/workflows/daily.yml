@@ -35,6 +35,8 @@ jobs:
       - name: Generate today's round (and yesterday's solution)
         env:
           PUZZLE_SECRET: ${{ secrets.PUZZLE_SECRET }}
+          IFM_API_KEY: ${{ secrets.IFM_API_KEY }}   # optional: K2 Horizon flavour polish
+          IFM_MODEL: ${{ vars.IFM_MODEL }}          # optional: pin a model id
         run: |
           if [ -z "$PUZZLE_SECRET" ]; then
             echo "::error::Set the PUZZLE_SECRET repository secret first."; exit 1

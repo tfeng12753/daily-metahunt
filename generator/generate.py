@@ -20,6 +20,7 @@ import random
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import llm  # noqa: E402
 from mechanisms import ALPHA, BY_KEY, MECHANISMS, TRANSFORMS  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -381,6 +382,7 @@ def main():
     ap.add_argument("--date", default=dt.datetime.now(dt.timezone.utc).date().isoformat())
     ap.add_argument("--days", type=int, default=1, help="also generate this many days ending at --date")
     ap.add_argument("--force", action="store_true", help="overwrite existing puzzle files")
+    ap.add_argument("--no-llm", action="store_true", help="skip the K2 Horizon flavour polish even if IFM_API_KEY is set")
     args = ap.parse_args()
 
     secret = os.environ.get("PUZZLE_SECRET")
@@ -398,7 +400,10 @@ def main():
         path = os.path.join(pdir, ds + ".json")
         if os.path.exists(path) and not args.force:
             continue
-        puzzle, _ = build(secret, ds)
+        puzzle, solution = build(secret, ds)
+        if not args.no_llm:
+            theme = next(t for t in THEMES if t["name"] == puzzle["round"])
+            llm.polish(puzzle, solution, theme)
         write_json(path, puzzle)
         print("wrote", path, "-", puzzle["round"])
 

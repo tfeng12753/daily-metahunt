@@ -47,6 +47,20 @@ tomorrow's answers. Every encoding is round-tripped through its decoder, and
 every meta is re-solved, before a round is written. A broken puzzle fails the
 build and is never published.
 
+## K2 Horizon flavour text (optional)
+
+If the `IFM_API_KEY` Actions secret is set, each new round's intro and
+flavour lines are rewritten by IFM's K2 Horizon (`api.ifm.ai`, OpenAI-compatible)
+in the voice of that round's story. The model only touches prose. Each rewrite
+is rejected, and the template kept, if it mentions an answer or an intermediate
+string, names the technique outright, or runs too long. An API outage just means
+a template-flavoured day. Pin a model with the `IFM_MODEL` repository variable;
+otherwise the largest K2 Horizon model listed by `/models` is used.
+
+```bash
+IFM_API_KEY=... python3 generator/llm.py 2026-10-02   # preview rewrites, writes nothing
+```
+
 ## Local development
 
 ```bash
