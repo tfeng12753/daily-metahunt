@@ -1,0 +1,54 @@
+{
+ "date": "2026-09-27",
+ "number": 1,
+ "final": "ARCADE",
+ "metaType": "logbook",
+ "explain": "Each entry is (puzzle number, letter number): index into that puzzle's answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Warp Zone",
+   "answer": "COMBO",
+   "mechanism": "Keyboard shift",
+   "transform": null,
+   "encoded": "COMBO",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Up Up Down Down",
+   "answer": "CONTROLLER",
+   "mechanism": "DTMF multi-tap",
+   "transform": "ROT13",
+   "encoded": "PBAGEBYYRE",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Attract Mode",
+   "answer": "GALAGA",
+   "mechanism": "Atomic numbers",
+   "transform": null,
+   "encoded": "GALAGA",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Kill Screen",
+   "answer": "SPRITE",
+   "mechanism": "Semaphore clocks",
+   "transform": null,
+   "encoded": "SPRITE",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Speedrun",
+   "answer": "DUNGEON",
+   "mechanism": "Pigpen cipher",
+   "transform": null,
+   "encoded": "DUNGEON",
+   "mutated": null
+  }
+ ]
+}

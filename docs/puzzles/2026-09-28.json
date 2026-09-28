@@ -1,0 +1,171 @@
+{
+ "date": "2026-09-28",
+ "number": 2,
+ "round": "Series Z",
+ "intro": "The startup pivoted eleven times in one quarter. The last pivot left a trail of cryptic commit messages and a whiteboard nobody is allowed to erase.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "All Hands",
+   "flavor": "Recovered from the All Hands answering machine: two tones sounded together, and a few keys were tapped twice or thrice before the message moved on.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "852 Hz + 1209 Hz  ×1",
+      "770 Hz + 1209 Hz  ×3",
+      "697 Hz + 1336 Hz  ×2",
+      "697 Hz + 1477 Hz  ×2",
+      "770 Hz + 1336 Hz  ×3",
+      "770 Hz + 1209 Hz  ×3",
+      "770 Hz + 1477 Hz  ×2",
+      "697 Hz + 1477 Hz  ×2"
+     ],
+     "mono": true
+    }
+   ],
+   "hash": "ceaf9c42e91028912d63a75e991f4d46f783beb0bce8429c7b0f2f9e13378244",
+   "partials": {
+    "fe61c9a64bd3d9527230f2723a30c0449cc22b949568132a09ca230d7063a82c": "So close. Exactly one thing is wrong here. Fix it (and remember what you fixed)."
+   },
+   "hint": "Each frequency pair is a phone keypad key (DTMF). The ×n is how many times it was pressed: old-school multi-tap texting."
+  },
+  {
+   "id": 2,
+   "title": "Monday Deploy",
+   "flavor": "The same quantities keep returning with different little marks beneath them; translate each into its own counting and then take its place along the alphabet.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "13₅",
+      "1₄",
+      "3₉",
+      "102₃",
+      "1₆",
+      "110₄",
+      "8₁₆",
+      "F₁₆",
+      "13₆"
+     ],
+     "inline": true
+    }
+   ],
+   "hash": "38be3295aa7f4bbdb06dfa0f3dccc0fa0cade96899934f56b8b464a7f896e003",
+   "partials": {
+    "2ebc7e0ec81f301e5c82b5aa3b292e6411bddead2536d94dda330d479d78e3bd": "So close. Exactly one thing is wrong here. Fix it (and remember what you fixed)."
+   },
+   "hint": "Each number is a letter position written in the base shown in its subscript."
+  },
+  {
+   "id": 3,
+   "title": "Standup",
+   "flavor": "At standup someone knocks from the hallway: two raps, a held breath, three raps. The first burst chooses the row and the second the column on a five-by-five grid that has no place for J.",
+   "blocks": [
+    {
+     "type": "taps",
+     "groups": [
+      [
+       "•••",
+       "•"
+      ],
+      [
+       "•",
+       "•"
+      ],
+      [
+       "•••",
+       "•••••"
+      ],
+      [
+       "••••",
+       "••••"
+      ],
+      [
+       "•••",
+       "••••"
+      ],
+      [
+       "•••",
+       "•••"
+      ]
+     ]
+    }
+   ],
+   "hash": "cc5aaccc7fd062820105b8d2843eb755798d80259f74c16cc3278be8c82e51b7",
+   "partials": {
+    "ae49b4373638efa00720a589bca9c7ff47719c4115704427acade322aa994241": "So close. Exactly one thing is wrong here. Fix it (and remember what you fixed)."
+   },
+   "hint": "Tap code: first burst = row, second = column, in a 5×5 grid without K."
+  },
+  {
+   "id": 4,
+   "title": "Hotfix",
+   "flavor": "Two forward and one across; keep the square where you land. The copyist had the alphabet up to a mirror, so reflect that letter back before speaking it.",
+   "blocks": [
+    {
+     "type": "board",
+     "rows": [
+      "RVWULZHK",
+      "ZLNSUKKB",
+      "FSZZDHPS",
+      "EZOSFSZS",
+      "DYTBBKVA",
+      "OCEOBFFH",
+      "FWNPGOXR",
+      "EHSVIBZG"
+     ]
+    },
+    {
+     "type": "prose",
+     "text": "The knight sets out from h8: Nf7 Ng5 Ne4 Nd6 Nb7 Nc5 Nd3."
+    }
+   ],
+   "hash": "89b591b7d0ef50f08b6f45525e4d1bb5ea96829efbd6c088dbce7ce87e5c7a75",
+   "partials": {
+    "1dc0ede40a335c29b77f84d9e36fdb3390828c770c04ffd5a2dd12bc99ba03cf": "You've decoded it, but it's not finished. One more layer.",
+    "bfef49430ec752ff481efaff284b204464a1717301b493a41e01172f91d0da3a": "So close. Exactly one thing is wrong here. Fix it (and remember what you fixed)."
+   },
+   "hint": "Start on the given square and follow the knight moves; read the letter on each square it lands on. Then undo: Atbash (A↔Z mirror)."
+  },
+  {
+   "id": 5,
+   "title": "Burn Rate",
+   "flavor": "Every rung of the ladder is two switches set or clear; the engineers swear that three rungs together are where the chain first folds into a single letter.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "100100 000011 100110 011110 110001 000100 011001 111001 110101"
+    }
+   ],
+   "hash": "fa6ffd92253b4148f20eb7afa940adfcfa4e468dc548da3526e664a8c7a1e9fa",
+   "partials": {
+    "e3ad16beec7057fcc29364bb599b5c28fea3a56964916fcdbfb66ec7500cfa82": "So close. Exactly one thing is wrong here. Fix it (and remember what you fixed)."
+   },
+   "hint": "Pairs of bits are nucleotides (A=00, C=01, G=10, T=11). Six bits = one codon; translate codons to amino-acid one-letter codes."
+  },
+  {
+   "id": 6,
+   "title": "Runway",
+   "flavor": "The office photograph is of the negative, and the negative is hung upside down; read from the back, the right way up, in triplets, until the chain folds into letters.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "5′–GGTGATCATCATGTAGCA–3′"
+    }
+   ],
+   "hash": "3e9e6e16616088803c4618d974f5d38215fa90eec3b4667c36059ad063318247",
+   "partials": {
+    "42f4906e5fffd55bbb93fa43651627503a5b11ded162dbe9dbb7519343082e8e": "So close. Exactly one thing is wrong here. Fix it (and remember what you fixed)."
+   },
+   "hint": "This is the template (antisense) strand written 5′→3′. Reverse-complement it to get the coding strand, then translate codons to amino-acid one-letter codes."
+  }
+ ],
+ "meta": {
+  "title": "Meta: Series Z",
+  "flavor": "Each transmission reached the office with exactly one corrupted character; the true answer hides behind it, and the corruption—kept in turn—spells the final message.",
+  "blocks": [],
+  "length": 6,
+  "hash": "a05ea7e164155b466597252c7aabb5e0922e25f63623c5447bf592560e8ee3db"
+ }
+}
