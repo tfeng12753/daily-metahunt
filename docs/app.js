@@ -547,6 +547,7 @@
         save(rk(), st);
         markSolved(v);
         updateProgress();
+        renderLiveSplits();
         report("solve", p.id, v);
       } else if (p.partials && p.partials[h]) {
         fb.className = "feedback warn";
@@ -567,6 +568,7 @@
       save(rk(), st);
       showHint();
       updateProgress();
+      renderLiveSplits();
       report("hint", p.id);
     });
     card.append(hintBtn);
@@ -643,6 +645,7 @@
         save(rk(), st);
         win(v);
         updateProgress();
+        renderLiveSplits();
         report("solve", "meta", v);
       } else {
         fb.className = "feedback bad";
@@ -816,12 +819,6 @@
     if (!r.ok) { $("#round").textContent = "Puzzle not found"; return; }
     puzzle = await r.json();
     const st = load(rk());
-    if (!st.start) {  // your personal clock starts the first time you open a round
-      st.start = Date.now();
-      save(rk(), st);
-    }
-    tickTimer();
-    if (me()) api("/api/start", { token: me().token, date: puzzle.date, difficulty }).catch(() => {});
     const d = new Date(date + "T00:00:00Z");
     $("#eyebrow").textContent = `No. ${puzzle.number} · ${diff === "easy" ? "Easy · " : ""}${d.toLocaleDateString(undefined, { weekday: "long", month: "long", day: "numeric", year: "numeric", timeZone: "UTC" })}`;
     $("#round").textContent = puzzle.round;
@@ -831,12 +828,9 @@
       b.classList.toggle("on", b.dataset.diff === diff);
       b.disabled = b.dataset.diff === "easy" && entry && !entry.easy;
     });
-    const list = $("#puzzles");
-    list.innerHTML = "";
-    puzzle.puzzles.forEach((p) => list.append(renderPuzzle(p, st)));
-    $("#meta").innerHTML = "";
-    $("#meta").append(renderMeta(puzzle.meta, st));
-    updateProgress();
+    if (st.start) renderRound(st);
+    else renderGate(st);  // nothing is shown, and no clock runs, until you press Begin
+    tickTimer();
     renderSolution();
     renderLeaderboard();
 
@@ -845,6 +839,96 @@
     $("#archive").value = date;
     $("#prev").disabled = i <= 0;
     $("#next").disabled = i >= dates.length - 1;
+  }
+
+  function renderRound(st) {
+    const list = $("#puzzles");
+    list.innerHTML = "";
+    puzzle.puzzles.forEach((p) => list.append(renderPuzzle(p, st)));
+    $("#meta").innerHTML = "";
+    $("#meta").append(renderMeta(puzzle.meta, st));
+    updateProgress();
+    renderLiveSplits();
+  }
+
+  // The "Ready?" screen: the round stays hidden until you choose to start the clock.
+  function renderGate(st) {
+    const key = rk();
+    $("#livesplits").innerHTML = "";
+    $("#meta").innerHTML = "";
+    $("#progress").textContent = "";
+    const card = el("article", "card gate");
+    card.append(el("span", "num", difficulty === "easy" ? "EASY ROUND" : "HARD ROUND"));
+    card.append(el("h2", "gate-title", "Ready?"));
+    const n = puzzle.puzzles.length;
+    card.append(el("p", "gate-copy",
+      `${n} puzzles and a meta are waiting behind this door. Your clock starts the moment you press Begin, and a split is recorded every time you solve something.`));
+    if (me()) card.append(el("p", "note", `You're on the leaderboard as ${me().name}; your server clock starts with Begin too.`));
+    const btn = el("button", "btn gate-btn", "Begin");
+    btn.type = "button";
+    const count = el("div", "countdown");
+    count.setAttribute("aria-live", "assertive");
+    btn.addEventListener("click", () => {
+      btn.remove();
+      const steps = ["3", "2", "1", "Go!"];
+      let i = 0;
+      const tick = () => {
+        if (rk() !== key) return;  // navigated away mid-countdown
+        if (i < steps.length) {
+          count.textContent = steps[i++];
+          count.classList.remove("pop");
+          void count.offsetWidth;  // restart the animation
+          count.classList.add("pop");
+          setTimeout(tick, 700);
+          return;
+        }
+        const fresh = load(key);
+        fresh.start = fresh.start || Date.now();
+        save(key, fresh);
+        if (me()) api("/api/start", { token: me().token, date: puzzle.date, difficulty }).catch(() => {});
+        renderRound(fresh);
+        tickTimer();
+        $("#puzzles").scrollIntoView({ behavior: "smooth", block: "start" });
+      };
+      tick();
+    });
+    card.append(btn, count);
+    const list = $("#puzzles");
+    list.innerHTML = "";
+    list.append(card);
+  }
+
+  // Live splits: every solve so far, plus how long you've been on the current split.
+  function renderLiveSplits() {
+    const box = $("#livesplits");
+    if (!box || !puzzle) return;
+    const st = load(rk());
+    if (!st.start) { box.innerHTML = ""; return; }
+    const rows = splits(st);
+    const wrap = el("div", "livesplits");
+    rows.forEach((r) => {
+      const chip = el("div", "split-chip" + (r.id === "meta" ? " meta" : "") + (r.hint ? " hinted" : ""));
+      chip.append(el("span", "split-name", r.id === "meta" ? "★ Meta" : String(r.id).padStart(2, "0") + " " + r.title),
+        el("span", "split-time", "+" + hms(r.split)), el("span", "split-at", hms(r.at)));
+      wrap.append(chip);
+    });
+    if (!(st.times && st.times.meta)) {
+      const cur = el("div", "split-chip current");
+      cur.append(el("span", "split-name", "Current split"), el("span", "split-time", ""), el("span", "split-at", ""));
+      wrap.append(cur);
+    }
+    box.replaceChildren(wrap);
+    updateCurrentSplit();
+  }
+
+  function updateCurrentSplit() {
+    const cur = document.querySelector(".split-chip.current");
+    if (!cur || !puzzle) return;
+    const st = load(rk());
+    if (!st.start) return;
+    const rows = splits(st);
+    const last = rows.length ? st.start + rows[rows.length - 1].at * 1000 : st.start;
+    cur.querySelector(".split-time").textContent = "+" + hms((Date.now() - last) / 1000);
   }
 
   const go = (date, diff) => { location.hash = diff === "easy" ? `${date}/easy` : date; };
@@ -880,7 +964,7 @@
     window.addEventListener("hashchange", route);
     tickCountdown();
     setInterval(tickCountdown, 30000);
-    setInterval(tickTimer, 1000);
+    setInterval(() => { tickTimer(); updateCurrentSplit(); }, 1000);
     route();
   }
 

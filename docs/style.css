@@ -218,3 +218,25 @@ a.btn { text-decoration: none; display: inline-block; }
 .stat-v { font: 600 22px var(--mono); color: var(--accent); }
 .stat-k { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; }
 .masthead a.btn { padding: 7px 14px; font-size: 14px; }
+
+.gate { text-align: center; padding: 44px 22px 40px; border-width: 2px; border-color: color-mix(in srgb, var(--accent) 45%, var(--line)); }
+.card .gate-title { font-family: var(--display); font-weight: 800; font-size: clamp(44px, 9vw, 72px); margin: 8px 0 10px; }
+.gate-copy { max-width: 52ch; margin: 0 auto 18px; color: var(--muted); font-family: var(--display); font-size: 18px; }
+.gate-btn { font-size: 20px; padding: 14px 44px; border-radius: 12px; margin-top: 6px; }
+.countdown { font-family: var(--display); font-weight: 800; font-size: 88px; line-height: 1; color: var(--accent); min-height: 0; }
+.countdown.pop { animation: pop .7s ease-out; }
+@keyframes pop { from { transform: scale(1.6); opacity: 0; } 30% { opacity: 1; } to { transform: scale(1); opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { .countdown.pop { animation: none; } }
+.livesplits { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 18px; }
+.split-chip { display: grid; grid-template-columns: auto auto; column-gap: 10px; background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 6px 12px; font-size: 13px; }
+.split-chip .split-name { grid-column: 1 / -1; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 200px; }
+.split-chip .split-time { font: 600 14px var(--mono); color: var(--good); }
+.split-chip .split-at { font: 12px var(--mono); color: var(--muted); align-self: end; }
+.split-chip.hinted .split-time { color: var(--warn); }
+.split-chip.meta { border-color: var(--accent); }
+.split-chip.meta .split-time { color: var(--accent); }
+.split-chip.current { border-style: dashed; }
+.split-chip.current .split-time { color: var(--ink); }
+@media (min-width: 760px) {
+  #livesplits { position: sticky; top: 56px; z-index: 4; background: color-mix(in srgb, var(--bg) 94%, transparent); backdrop-filter: blur(6px); padding-top: 8px; }
+}
