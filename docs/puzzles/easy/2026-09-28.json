@@ -1,0 +1,413 @@
+{
+ "date": "2026-09-28",
+ "difficulty": "easy",
+ "salt": "2026-09-28/easy",
+ "number": 2,
+ "round": "Series Z",
+ "intro": "A startup in this office pivoted eleven times before lunch one quarter, and the last pivot left only cryptic commit messages plus a whiteboard nobody is allowed to erase.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "All Hands",
+   "flavor": "The office inventory tacks a word-list to the wall, and every listed item is hiding in the grid forwards, backwards or diagonally. Tick them all off, then gather the letters nobody claimed in reading order.",
+   "blocks": [
+    {
+     "type": "board",
+     "rows": [
+      "BCLOUDR",
+      "TNIRPSE",
+      "GNITSEV",
+      "PIVOTAR",
+      "CALPHAE",
+      "KMERGES",
+      "LOBETAG"
+     ],
+     "plain": true
+    },
+    {
+     "type": "list",
+     "items": [
+      "ALPHA",
+      "BETA",
+      "CLOUD",
+      "MERGE",
+      "PIVOT",
+      "SERVER",
+      "SPRINT",
+      "VESTING"
+     ],
+     "inline": true
+    }
+   ],
+   "hash": "6f209b8eed1da8a37e5ee1ebf5f580bed94efb879c301d61e136cb5ce697c403",
+   "partials": {},
+   "hint": "Find every listed word (any of 8 directions). The unused letters, read left-to-right, top-to-bottom, spell the answer.",
+   "technique": "Word search leftovers",
+   "length": 7
+  },
+  {
+   "id": 2,
+   "title": "Tech Debt",
+   "flavor": "The edge counts are the only honest documentation left in the repo. A few shaded commits are already in; honour the counts and the finished panel will spell something in chunky five-by-five letters.",
+   "blocks": [
+    {
+     "type": "nonogram",
+     "rows": [
+      [
+       1,
+       1,
+       5,
+       1,
+       1,
+       5,
+       1,
+       1,
+       4,
+       5
+      ],
+      [
+       1,
+       1,
+       1,
+       2,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       4,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       4,
+       4
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       2,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       5,
+       1,
+       1,
+       1,
+       3,
+       1,
+       1,
+       5
+      ]
+     ],
+     "cols": [
+      [
+       3
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       3
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       5
+      ],
+      [],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [],
+      [
+       4
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       4
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "givens": [
+      [
+       3,
+       2,
+       0
+      ],
+      [
+       0,
+       25,
+       0
+      ],
+      [
+       0,
+       2,
+       0
+      ],
+      [
+       4,
+       1,
+       0
+      ],
+      [
+       0,
+       0,
+       1
+      ],
+      [
+       1,
+       3,
+       0
+      ],
+      [
+       0,
+       3,
+       0
+      ]
+     ]
+    }
+   ],
+   "hash": "eb501a95038e540edd72ef45794ca2060f448a1c22d97f2797865b38326a5589",
+   "partials": {},
+   "hint": "A nonogram (paint-by-numbers). The filled picture is the answer written in 5×5 block letters.",
+   "technique": "Nonogram",
+   "length": 7
+  },
+  {
+   "id": 3,
+   "title": "Hotfix",
+   "flavor": "The typesetter spilled each column into a neat alphabetical pile above the grid, but gravity did the rest. Tip the piles down into their columns; black squares are the gaps, and a word may continue on the next line. Read the sentence it whispers.",
+   "blocks": [
+    {
+     "type": "dropquote",
+     "cols": [
+      "DEHNY",
+      "DIVW",
+      "EOSSY",
+      "ORR",
+      "DPUWY",
+      "AI",
+      "AGGTW",
+      "AEHNO",
+      "DNO",
+      "ADIT",
+      "ST",
+      "FHHS",
+      "EEIRU",
+      "NNOQ",
+      "GMTUW",
+      "ILO",
+      "EERTT"
+     ],
+     "mask": [
+      ".....#....#....#.",
+      "...#....#.#......",
+      "#....#...#...#...",
+      ".#...#....#....#.",
+      "...#....#..#.....",
+      ".################"
+     ]
+    }
+   ],
+   "hash": "2ff8931d123f0747b1df174557f7615c7d98603c45dc51416557afd8c9760bcc",
+   "partials": {},
+   "hint": "A drop quote: each column's letters (shown alphabetised above it) drop into that column of the grid below. Black squares are spaces; words can wrap between rows. The sentence tells you the answer.",
+   "technique": "Drop quote",
+   "length": 6
+  },
+  {
+   "id": 4,
+   "title": "Postmortem",
+   "flavor": "In every row, every column and every little box, the office keeps exactly one of each name. Finish the duty rota, then note the letters in the numbered squares, lowest to highest.",
+   "blocks": [
+    {
+     "type": "sudoku",
+     "size": 9,
+     "rows": [
+      "..Y...A.N",
+      "....D...C",
+      "C.RY...B.",
+      ".YKDNT.CR",
+      "B.D.A....",
+      "NTCKBRYD.",
+      "R.....T..",
+      "YKTN.B...",
+      "DA.TCK.N."
+     ],
+     "alphabet": "ABCDKNRTY",
+     "marks": [
+      [
+       4,
+       8
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       1,
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       5,
+       8
+      ],
+      [
+       4,
+       6
+      ]
+     ]
+    }
+   ],
+   "hash": "879620e566fc4c05c67270d14615905a808306073cf06034e4002e96fe36cf42",
+   "partials": {},
+   "hint": "Sudoku using the letters shown instead of digits (each row, column and box uses each letter once). Read the numbered squares in order.",
+   "technique": "Letter sudoku",
+   "length": 6
+  }
+ ],
+ "meta": {
+  "title": "Meta: Series Z",
+  "flavor": "The watch-keeper logged only the day and the number of bells rung, never the words themselves, counting days from the first report on this page. Treat the day as a puzzle, count that many letters into its answer, and the bell chart will ring out.",
+  "blocks": [
+   {
+    "type": "list",
+    "items": [
+     "Day 1, 4 bells",
+     "Day 2, 2 bells",
+     "Day 2, 6 bells",
+     "Day 4, 3 bells",
+     "Day 3, 1 bells",
+     "Day 1, 5 bells"
+    ],
+    "ordered": true
+   }
+  ],
+  "length": 6,
+  "hash": "2359e053267fdd93c89f849f62855d5ad65217434d0bda17ca4a4e682be8c9af",
+  "explain": "Each entry is (puzzle number, letter number): index into that puzzle's answer."
+ }
+}
