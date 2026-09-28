@@ -69,6 +69,14 @@ real solves count. Times run from 00:00 UTC on the round's date, and each hint
 adds a five-minute penalty. There are per-round and all-time boards for each
 difficulty.
 
+Everyone also gets a **personal timer**. It starts the first time you open a
+round and records a split at every solve. When you finish, you get a split
+table and a **share link** (`share.html#run=…`) with your time, a solve
+timeline and splits, plus Wordle-style share text. If you're on the
+leaderboard, the share page cross-checks the run against the server's record
+and shows a "verified" badge. `share.html?player=NAME` shows a player's stored
+history: every round, their times, and their best and average clock.
+
 Scores live in Postgres via the `DATABASE_URL` environment variable on the API
 service (a free Neon or Supabase database works). Without it the API keeps
 scores in memory, which is fine locally but resets on every restart or deploy.

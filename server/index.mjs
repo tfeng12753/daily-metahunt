@@ -106,6 +106,60 @@ async function api(req, res, url) {
     return send(res, 200, { name: player.name, token });
   }
 
+  if (url.pathname === "/api/start" && req.method === "POST") {
+    const body = await readBody(req);
+    const player = await playerFrom(body);
+    if (!player) return send(res, 401, { error: "Unknown player; join the leaderboard again." });
+    const difficulty = body.difficulty === "easy" ? "easy" : "hard";
+    const round = await loadRound(String(body.date), difficulty);
+    if (!round) return send(res, 404, { error: "No such round." });
+    const at = await store.recordStart({ playerId: player.id, date: round.date, difficulty });
+    return send(res, 200, { startedAt: at });
+  }
+
+  // Public, read-only: one player's run on one round (powers verified share links).
+  if (url.pathname === "/api/run" && req.method === "GET") {
+    const difficulty = url.searchParams.get("difficulty") === "easy" ? "easy" : "hard";
+    const date = url.searchParams.get("date") || "";
+    const player = await store.playerByName(url.searchParams.get("name") || "");
+    const round = await loadRound(date, difficulty);
+    if (!player || !round) return send(res, 404, { error: "No such run." });
+    const run = await store.run(player.id, date, difficulty);
+    const rel = releaseTime(date);
+    const secs = (t) => (t == null ? null : Math.max(0, Math.round((t - rel) / 1000)));
+    return send(res, 200, {
+      name: player.name, date, difficulty, round: round.round,
+      started: secs(run.startedAt),
+      solves: Object.fromEntries(Object.entries(run.solves).map(([k, t]) => [k, secs(t)])),
+      personal: run.startedAt && run.solves.meta ? Math.round((run.solves.meta - run.startedAt) / 1000) : null,
+      hints: run.hints,
+    });
+  }
+
+  // Public, read-only: a player's stored history across rounds.
+  if (url.pathname === "/api/player" && req.method === "GET") {
+    const player = await store.playerByName(url.searchParams.get("name") || "");
+    if (!player) return send(res, 404, { error: "No such player." });
+    const rounds = (await store.history(player.id)).map((r) => ({
+      date: r.date, difficulty: r.difficulty, feeders: r.feeders, hints: r.hints, meta: r.metaAt != null,
+      sinceRelease: r.metaAt != null ? Math.max(0, Math.round((r.metaAt - releaseTime(r.date)) / 1000)) : null,
+      personal: r.metaAt != null && r.startedAt != null ? Math.round((r.metaAt - r.startedAt) / 1000) : null,
+    }));
+    const metas = rounds.filter((r) => r.meta);
+    const personal = metas.map((r) => r.personal).filter((x) => x != null);
+    return send(res, 200, {
+      name: player.name,
+      rounds,
+      totals: {
+        metas: metas.length,
+        hard: metas.filter((r) => r.difficulty === "hard").length,
+        easy: metas.filter((r) => r.difficulty === "easy").length,
+        best: personal.length ? Math.min(...personal) : null,
+        average: personal.length ? Math.round(personal.reduce((a, b) => a + b, 0) / personal.length) : null,
+      },
+    });
+  }
+
   if ((url.pathname === "/api/solve" || url.pathname === "/api/hint") && req.method === "POST") {
     const body = await readBody(req);
     const player = await playerFrom(body);
@@ -144,6 +198,7 @@ async function api(req, res, url) {
         seconds,
         hints: r.hints,
         score: seconds === null ? null : seconds + HINT_PENALTY * r.hints,
+        personal: r.metaAt && r.startedAt ? Math.round((r.metaAt - r.startedAt) / 1000) : null,
       };
     });
     rows.sort((a, b) => (a.score ?? Infinity) - (b.score ?? Infinity) || b.feeders - a.feeders || a.hints - b.hints);

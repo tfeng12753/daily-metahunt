@@ -35,6 +35,45 @@
       .catch(() => {});
   }
 
+  // ---------- personal timer & sharing ----------
+  const hms = (sec) => {
+    sec = Math.max(0, Math.round(sec));
+    const h = Math.floor(sec / 3600), m = Math.floor((sec % 3600) / 60), s = sec % 60;
+    return `${h}:${String(m).padStart(2, "0")}:${String(s).padStart(2, "0")}`;
+  };
+  const b64url = (str) => btoa(unescape(encodeURIComponent(str))).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
+
+  function splits(st) {
+    // [{id, title, at (s from start), split (s since previous solve), hint}], in solve order.
+    if (!st.start) return [];
+    const rows = puzzle.puzzles
+      .filter((p) => st.times && st.times[p.id])
+      .map((p) => ({ id: p.id, title: p.title, at: (st.times[p.id] - st.start) / 1000, hint: st.hints.includes(p.id) }));
+    if (st.times && st.times.meta) rows.push({ id: "meta", title: "Meta", at: (st.times.meta - st.start) / 1000, hint: false });
+    rows.sort((a, b) => a.at - b.at);
+    rows.forEach((r, i) => { r.split = r.at - (i ? rows[i - 1].at : 0); });
+    return rows;
+  }
+
+  function shareLink(st) {
+    const p = me();
+    const payload = {
+      v: 1, d: puzzle.date, x: difficulty, n: p ? p.name : null,
+      s: splits(st).filter((r) => r.id !== "meta").map((r) => [r.id, Math.round(r.at), r.hint ? 1 : 0]),
+      m: st.times && st.times.meta && st.start ? Math.round((st.times.meta - st.start) / 1000) : null,
+    };
+    return new URL("share.html#run=" + b64url(JSON.stringify(payload)), location.href).href;
+  }
+
+  function shareText(st) {
+    const squares = puzzle.puzzles.map((p) => (st.solved[p.id] ? (st.hints.includes(p.id) ? "🟨" : "🟩") : "⬛")).join("");
+    const total = st.times && st.times.meta && st.start ? hms((st.times.meta - st.start) / 1000) : "unfinished";
+    const nh = st.hints.length;
+    return `Daily Metahunt #${puzzle.number} ${difficulty === "easy" ? "(Easy)" : "(Hard)"}: ${puzzle.round}\n` +
+      `⏱ ${total} · ${Object.keys(st.solved).length}/${puzzle.puzzles.length} feeders · ${nh} hint${nh === 1 ? "" : "s"}\n` +
+      `${squares}${st.meta ? " ⭐" : ""}\n${shareLink(st)}`;
+  }
+
   // ---------- storage (best-effort) ----------
   const load = (date) => {
     try { return JSON.parse(localStorage.getItem("mh:" + date)) || { solved: {}, hints: [] }; }
@@ -503,6 +542,8 @@
       const h = await hash(rk(), v);
       if (h === p.hash) {
         st.solved[p.id] = v;
+        st.times = st.times || {};
+        st.times[p.id] = st.times[p.id] || Date.now();
         save(rk(), st);
         markSolved(v);
         updateProgress();
@@ -550,6 +591,41 @@
       w.append(el("div", "big", word));
       const nh = st.hints.length;
       w.append(el("p", "flavor", `Round complete. ${Object.keys(st.solved).length} of ${puzzle.puzzles.length} feeders solved, ${nh} hint${nh === 1 ? "" : "s"} used.`));
+      const rows = splits(st);
+      if (rows.length) {
+        const t = el("table", "sol-table splits");
+        const hr = el("tr");
+        ["", "Puzzle", "Split", "Clock"].forEach((h) => hr.append(el("th", null, h)));
+        t.append(hr);
+        rows.forEach((r, i) => {
+          const tr = el("tr", r.id === "meta" ? "meta-row" : null);
+          [i + 1, r.title + (r.hint ? " (hint)" : ""), "+" + hms(r.split), hms(r.at)].forEach((c) => tr.append(el("td", null, String(c))));
+          t.append(tr);
+        });
+        w.append(t);
+      }
+      const actions = el("div", "share-actions");
+      const copy = el("button", "btn", "Share your run");
+      copy.type = "button";
+      const fb = el("span", "note");
+      copy.addEventListener("click", async () => {
+        const text = shareText(st);
+        try {
+          if (navigator.share && matchMedia("(pointer: coarse)").matches) await navigator.share({ text });
+          else { await navigator.clipboard.writeText(text); fb.textContent = "Copied: results and a link to your splits."; }
+        } catch { fb.textContent = shareLink(st); }
+      });
+      const view = el("a", "btn secondary", "View share page");
+      view.href = shareLink(st);
+      view.target = "_blank";
+      view.rel = "noopener";
+      actions.append(copy, view);
+      if (me()) {
+        const hist = el("a", "btn secondary", "Your stats");
+        hist.href = "share.html?player=" + encodeURIComponent(me().name);
+        actions.append(hist);
+      }
+      w.append(actions, fb);
       card.querySelector(".answer")?.parentElement.replaceWith(w);
       [...blanks.children].forEach((b, i) => { b.textContent = word[i]; });
     };
@@ -562,6 +638,8 @@
       }
       if ((await hash(rk(), v)) === m.hash) {
         st.meta = v;
+        st.times = st.times || {};
+        st.times.meta = st.times.meta || Date.now();
         save(rk(), st);
         win(v);
         updateProgress();
@@ -650,6 +728,8 @@
           try { localStorage.setItem("mh:player", JSON.stringify(res)); } catch {}
           // Anything already solved this round counts from now.
           const st = load(rk());
+          // The server's clock starts now: it only trusts times it witnessed itself.
+          await api("/api/start", { token: res.token, date: puzzle.date, difficulty }).catch(() => {});
           Object.entries(st.solved).forEach(([id, v]) => report("solve", Number(id), v));
           st.hints.forEach((id) => report("hint", id));
           if (st.meta) report("solve", "meta", st.meta);
@@ -661,7 +741,11 @@
       });
       card.append(form, fb);
     } else {
-      card.append(el("p", "note", `Playing as ${player.name}. Solves are timed from 00:00 UTC on the round's date; each hint adds 5 minutes.`));
+      const note = el("p", "note", `Playing as ${player.name}. "Meta" is timed from 00:00 UTC on the round's date plus 5 minutes per hint; "Your clock" runs from when you first opened the round. `);
+      const a = el("a", null, "Your stats →");
+      a.href = "share.html?player=" + encodeURIComponent(player.name);
+      note.append(a);
+      card.append(note);
     }
     box.replaceChildren(card);
 
@@ -672,15 +756,23 @@
         : await api(`/api/alltime?${q}`);
       const t = el("table", "sol-table board-table");
       const hr = el("tr");
-      const cols = boardView === "today" ? ["#", "Name", "Meta", "Feeders", "Hints"] : ["#", "Name", "Metas solved"];
+      const cols = boardView === "today" ? ["#", "Name", "Meta", "Your clock", "Feeders", "Hints"] : ["#", "Name", "Metas solved"];
       cols.forEach((h) => hr.append(el("th", null, h)));
       t.append(hr);
       data.rows.forEach((r, i) => {
         const tr = el("tr", player && r.name === player.name ? "me" : null);
         const cells = boardView === "today"
-          ? [i + 1, r.name, r.meta ? fmtTime(r.score) : "—", `${r.feeders}/${r.total}`, r.hints]
+          ? [i + 1, r.name, r.meta ? fmtTime(r.score) : "—", r.personal != null ? hms(r.personal) : "—", `${r.feeders}/${r.total}`, r.hints]
           : [i + 1, r.name, r.metas];
-        cells.forEach((c) => tr.append(el("td", null, String(c))));
+        cells.forEach((c, j) => {
+          const td = el("td");
+          if (j === 1) {
+            const a = el("a", null, String(c));
+            a.href = "share.html?player=" + encodeURIComponent(r.name);
+            td.append(a);
+          } else td.textContent = String(c);
+          tr.append(td);
+        });
         t.append(tr);
       });
       status.replaceWith(data.rows.length ? t : el("p", "note", "Nobody on the board yet. Be the first."));
@@ -696,6 +788,15 @@
     if (st.hints.length) s += ` · ${st.hints.length} hint${st.hints.length === 1 ? "" : "s"}`;
     if (st.meta) s += " · meta ✓";
     $("#progress").textContent = s;
+  }
+
+  function tickTimer() {
+    const t = $("#timer");
+    if (!t || !puzzle) return;
+    const st = load(rk());
+    if (!st.start) { t.textContent = ""; return; }
+    const end = st.times && st.times.meta ? st.times.meta : Date.now();
+    t.textContent = `⏱ ${hms((end - st.start) / 1000)}${st.times && st.times.meta ? " (finished)" : ""}`;
   }
 
   function tickCountdown() {
@@ -715,6 +816,12 @@
     if (!r.ok) { $("#round").textContent = "Puzzle not found"; return; }
     puzzle = await r.json();
     const st = load(rk());
+    if (!st.start) {  // your personal clock starts the first time you open a round
+      st.start = Date.now();
+      save(rk(), st);
+    }
+    tickTimer();
+    if (me()) api("/api/start", { token: me().token, date: puzzle.date, difficulty }).catch(() => {});
     const d = new Date(date + "T00:00:00Z");
     $("#eyebrow").textContent = `No. ${puzzle.number} · ${diff === "easy" ? "Easy · " : ""}${d.toLocaleDateString(undefined, { weekday: "long", month: "long", day: "numeric", year: "numeric", timeZone: "UTC" })}`;
     $("#round").textContent = puzzle.round;
@@ -773,6 +880,7 @@
     window.addEventListener("hashchange", route);
     tickCountdown();
     setInterval(tickCountdown, 30000);
+    setInterval(tickTimer, 1000);
     route();
   }
 
