@@ -45,17 +45,22 @@ class Cryptogram(Mechanism):
     weight = 3
     SYMBOLS = "♠♣♥♦★☆●○■□▲△▼▽◆◇♪♫☀☁☂☾✈✚✿⚑"
     SYMBOL_VARIANT = ("Symbol cryptogram", "Each symbol stands for one letter (a simple substitution); word breaks are kept. Solve the sentence; it tells you the answer.", [
-        "Someone {at} wrote a whole sentence without using a single letter.",
-        "The cipher clerk ran out of alphabet and switched to the typewriter's other keys.",
+        "Not a single letter on the page, and yet it says something.",
+        "The clerk ran out of alphabet and kept going anyway.",
     ])
     key = "cryptogram"
     name = "Cryptogram (cluephrase)"
     hint = "Simple monoalphabetic substitution with word breaks kept. Solve the sentence; it tells you the answer."
     allow_transform = False
-    flavors = [
+    easy_flavors = [
         "Every letter here is wearing someone else's coat. The spaces, at least, are honest.",
         "The newspaper's puzzle page, the one your grandmother did in pen, every single morning.",
         "One alphabet was traded for another, one for one, and nobody bothered to hide where the words begin and end.",
+    ]
+    flavors = [
+        "Every letter here is wearing someone else's coat.",
+        'The spaces, at least, are honest.',
+        'A sentence in disguise, and not a very good disguise.',
     ]
 
     def encode(self, word, rng, ctx):
@@ -95,10 +100,15 @@ class RailFence(Mechanism):
     hint = "Rail-fence transposition of a sentence with the spaces removed. Try 2 to 5 rails; the sentence tells you the answer."
     allow_transform = False
     NUMS = {2: "two", 3: "three", 4: "four", 5: "five"}
-    flavors = [
+    easy_flavors = [
         "The fence around {place} zigzags between {n} rails. Walk it, don't read it.",
         "Someone wrote this out in a zigzag across {n} lines of the ledger, then copied each line out in turn.",
         "Up and down, up and down: {n} rows, one long sentence, and not a single space left.",
+    ]
+    flavors = [
+        'Written in a zigzag, then copied out one row at a time.',
+        'Up and down, up and down, and not a single space left.',
+        "Walk the fence; don't read it.",
     ]
 
     @staticmethod
@@ -131,10 +141,15 @@ class BookCipher(Mechanism):
     key = "book"
     name = "Book cipher"
     hint = "Each pair is word.letter into the recovered page (words split on spaces; punctuation ignored)."
-    flavors = [
+    easy_flavors = [
         "Only one page of the book survived. Luckily, it was the only page anyone needed.",
         "Numbers in pairs, pencilled in the margin: a page reference is a very old kind of key.",
         "The spy's handbook said to always carry a novel. It never said which one; this page will have to do.",
+    ]
+    flavors = [
+        'Only one page survived. It was the only page anyone needed.',
+        'Pairs of numbers pencilled in the margin.',
+        'The spy always carried a novel. This page will have to do.',
     ]
 
     @staticmethod
@@ -171,10 +186,15 @@ class KnightPath(Mechanism):
     key = "knight"
     name = "Knight's path"
     hint = "Start on the given square and follow the knight moves; read the letter on each square it lands on."
-    flavors = [
+    easy_flavors = [
         "The knight never moves in a straight line, and neither does the truth {at}.",
         "A board full of noise, and one horseman who knows exactly where to step.",
         "Two forward, one across. Remember where you land.",
+    ]
+    flavors = [
+        'Two forward, one across. Remember where you land.',
+        'One horseman, and a field full of noise.',
+        'It never travels in a straight line, and neither does the truth.',
     ]
     FILES = "abcdefgh"
 
@@ -214,10 +234,15 @@ class SignalFlags(Mechanism):
     key = "flags"
     name = "Maritime signal flags"
     hint = "International maritime signal flags, one letter each."
-    flavors = [
+    easy_flavors = [
         "Run up the halyard at dawn and left there: a string of bunting that isn't meant for decoration.",
         "The harbourmaster says the ship is dressed overall, but that's not what the flags are saying.",
         "Every flag on this line has a meaning on its own. Together, they have one more.",
+    ]
+    flavors = [
+        'Bunting on the halyard, and not for a celebration.',
+        'Every flag on this line means something on its own. Together they mean one more thing.',
+        'Dressed overall, and saying far more than hello.',
     ]
 
     def encode(self, word, rng, ctx):
@@ -232,10 +257,15 @@ class MixedBases(Mechanism):
     key = "bases"
     name = "Mixed number bases"
     hint = "Each number is a letter position written in the base shown in its subscript."
-    flavors = [
+    easy_flavors = [
         "An accountant who changes currency every line, but never the amount.",
         "Everyone {at} counts differently. The little number tells you on how many fingers.",
         "Same quantities, many radixes. Convert, then count through the alphabet.",
+    ]
+    flavors = [
+        'Same quantities, different fingers.',
+        'Everyone here counts differently. The little number says how.',
+        'An accountant who changes currency every line, but never the amount.',
     ]
     SUB = str.maketrans("0123456789", "₀₁₂₃₄₅₆₇₈₉")
 
@@ -269,10 +299,15 @@ class WordSearch(Mechanism):
     key = "wordsearch"
     name = "Word search leftovers"
     hint = "Find every listed word (any of 8 directions). The unused letters, read left-to-right, top-to-bottom, spell the answer."
-    flavors = [
+    easy_flavors = [
         "Cross off everything you recognise. What nobody claims is what you came for.",
         "An inventory of {place}, tangled up. Whatever is left over when every item is accounted for is yours.",
         "Find them all. The letters nobody used are the only ones that were talking to you.",
+    ]
+    flavors = [
+        'Cross off everything you recognise. What nobody claims is yours.',
+        'An inventory, tangled. The leftovers are the point.',
+        "Everything on the list is in there somewhere. Some things aren't on the list.",
     ]
     DIRS = [(0, 1), (1, 0), (1, 1), (-1, 1), (0, -1), (-1, 0), (-1, -1), (1, -1)]
 
@@ -469,10 +504,15 @@ class Nonogram(Mechanism):
     key = "nonogram"
     name = "Nonogram"
     hint = "A nonogram (paint-by-numbers). The filled picture is the answer written in 5×5 block letters."
-    flavors = [
+    easy_flavors = [
         "Paint by numbers. The picture is worth exactly one word.",
         "A mosaic {at} was taken apart tile by tile, and all that was kept was the count of each run.",
         "Fill in the blanks, literally. Some squares have been given to you for free.",
+    ]
+    flavors = [
+        'The picture is worth exactly one word.',
+        'Only the count of each run was kept.',
+        'Some squares have been given to you for free.',
     ]
 
     def encode(self, word, rng, ctx):
@@ -534,10 +574,15 @@ class AnagramExtras(Mechanism):
     name = "Anagrams with an extra letter"
     hint = "Each jumble is an anagram of a word from this round's theme plus one extra letter. The extra letters, in order, spell the answer."
     weight = 3
-    flavors = [
+    easy_flavors = [
         "Everything {at} got thrown in the tumble dryer, and every item came out with a little something extra.",
         "Scrambled inventory. Each entry picked up one hitchhiker on the way through the machine.",
         "Unjumble the kit list. You'll have one letter left over every time, and you'll want to keep those.",
+    ]
+    flavors = [
+        'Everything came out of the wash with a little something extra.',
+        'Each entry picked up a hitchhiker on the way.',
+        "Tidy up the inventory. You'll have one thing left over every time.",
     ]
 
     def can(self, word, ctx=None):
@@ -634,10 +679,15 @@ class DropQuote(Mechanism):
     hint = "A drop quote: each column's letters (shown alphabetised above it) drop into that column of the grid below. Black squares are spaces; words can wrap between rows. The sentence tells you the answer."
     weight = 3
     allow_transform = False
-    flavors = [
+    easy_flavors = [
         "Somebody shook the sentence and all the letters fell to the bottom of their columns.",
         "The typesetter dropped the tray. Every letter landed in the right column, at least.",
         "Each column remembers what it held, but not in what order.",
+    ]
+    flavors = [
+        'Everything fell straight down, and landed in the right column.',
+        'Each column remembers what it held, but not in what order.',
+        'A sentence that came loose from its lines.',
     ]
 
     def encode(self, word, rng, ctx):
@@ -666,10 +716,15 @@ class Fragments(Mechanism):
     hint = "The sentence was cut into three-letter fragments (spaces removed) and alphabetised. Reassemble it using the word lengths; it tells you the answer."
     weight = 3
     allow_transform = False
-    flavors = [
+    easy_flavors = [
         "Recovered from the shredder {at}. Somebody at least had the decency to note how long each word was.",
         "Confetti, sorted alphabetically by a very tidy intern. Put it back together.",
         "Three letters to a strip. The strips are in order; the sentence isn't.",
+    ]
+    flavors = [
+        'Shredded, then sorted by a very tidy intern.',
+        'Three letters to a strip, and a note of how long each word was.',
+        'Confetti, alphabetised.',
     ]
 
     def encode(self, word, rng, ctx):
@@ -755,10 +810,15 @@ class LetterSudoku(Mechanism):
     name = "Letter sudoku"
     hint = "Sudoku using the letters shown instead of digits (each row, column and box uses each letter once). Read the numbered squares in order."
     weight = 3
-    flavors = [
+    easy_flavors = [
         "Every row {at} holds one of everything. So does every column, and every box. Then read the numbered squares.",
         "The quartermaster insists on a perfect distribution: no duplicates, anywhere. The numbered bins are the ones that matter.",
         "A familiar grid, an unfamiliar alphabet.",
+    ]
+    flavors = [
+        'One of everything in every row, column and box. Then read the numbered squares.',
+        'A familiar grid, an unfamiliar alphabet.',
+        'No duplicates anywhere. The numbered squares are the ones that matter.',
     ]
 
     def can(self, word, ctx=None):

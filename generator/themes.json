@@ -76,7 +76,15 @@
       "SARDINE",
       "EEL",
       "CUTTLEFISH"
-    ]
+    ],
+    "echoes": {
+      "ABYSS": "Stare long enough into the dark below, the philosopher warned, and something stares back.",
+      "TRENCH": "Soldiers once lived for years in long ditches; the sea keeps one seven miles deep.",
+      "KRAKEN": "Tennyson wrote that it sleeps below the thunders of the upper deep, and will rise only once.",
+      "PRESSURE": "Every ten metres down, the sea leans a little harder on the hull, and the hull remembers every one.",
+      "LEVIATHAN": "Job was asked whether he could draw it out with a hook; Hobbes named a whole commonwealth after it.",
+      "UNDERTOW": "What drowns strong swimmers is never the wave you can see, but the pull going the other way beneath it."
+    }
   },
   {
     "id": "genetics",
@@ -157,7 +165,16 @@
       "PIPETTE",
       "BACTERIA",
       "PETRIDISH"
-    ]
+    ],
+    "echoes": {
+      "HELIX": "Two railings, one staircase, and a photograph in 1952 that someone else took.",
+      "GENOME": "The whole library, every volume, copied into every room of the house.",
+      "MUTANT": "Every one of us differs from our parents in about sixty places. Some of us rather more.",
+      "CODON": "Somewhere in this building, everything is read three letters at a time.",
+      "RIBOSOME": "A small factory, half built from the very kind of message it reads.",
+      "CHIMERA": "A few of the mice in cage four are two animals at once, and perfectly happy about it.",
+      "PHENOTYPE": "What the code says is one thing; what walks out of the incubator is another."
+    }
   },
   {
     "id": "space",
@@ -236,7 +253,17 @@
       "SOLARWIND",
       "CONSTELLATION",
       "EQUINOX"
-    ]
+    ],
+    "echoes": {
+      "ORBIT": "Everything up there is falling. It just keeps missing.",
+      "NEBULA": "Stars are born in clouds, like most bad ideas.",
+      "QUASAR": "The brightest lights in the sky are hungry, and very far away.",
+      "ECLIPSE": "For a few minutes, the day forgot to happen.",
+      "PULSAR": "The first one was so regular that its discoverers labelled it LGM, for little green men.",
+      "COMET": "It comes back every seventy-six years, and last time hardly anybody looked up.",
+      "SUPERNOVA": "Every atom of iron in your blood was forged by something dying spectacularly.",
+      "GRAVITY": "Newton blamed an apple; Einstein blamed the shape of space itself."
+    }
   },
   {
     "id": "startup",
@@ -315,7 +342,16 @@
       "DASHBOARD",
       "METRICS",
       "ANALYTICS"
-    ]
+    ],
+    "echoes": {
+      "STARTUP": "Every giant in the valley began in somebody's garage.",
+      "UNICORN": "The investors are hunting for a mythical beast worth a billion.",
+      "KERNEL": "At the heart of every machine, and every nut, there is a small hard core.",
+      "BINARY": "There are ten kinds of engineer: those who get the joke, and those who don't.",
+      "COMPILER": "Someone has to translate what you meant into what the machine will actually do.",
+      "SEGFAULT": "The program reached for memory that wasn't its own, and was shot for it.",
+      "DEADLOCK": "Two engineers each wait politely for the other to go first. Forever."
+    }
   },
   {
     "id": "bletchley",
@@ -387,7 +423,16 @@
       "PIGEON",
       "CARRIER",
       "PUNCHCARD"
-    ]
+    ],
+    "echoes": {
+      "ENIGMA": "Elgar wrote variations on it; the Kriegsmarine typed on it.",
+      "CIPHER": "A nobody, a zero and a secret, all spelled the same way.",
+      "ROTOR": "Three wheels, turning one notch at a time, like an odometer that lies.",
+      "BOMBE": "The Poles built the first one and, the story goes, named it after an ice-cream dessert.",
+      "TURING": "He asked whether machines could think, and did not live to see them try.",
+      "ULTRA": "The secret was graded above Most Secret, and there was only one word left for it.",
+      "COLOSSUS": "One wonder of the ancient world stood astride the harbour at Rhodes; its namesake stood in Block H."
+    }
   },
   {
     "id": "heist",
@@ -460,7 +505,15 @@
       "PENTHOUSE",
       "CROWBAR",
       "GLOVES"
-    ]
+    ],
+    "echoes": {
+      "VAULT": "The architect gave the strongroom an arched ceiling, as if it were a cathedral.",
+      "HEIST": "Everyone in the crew has seen the films, and everyone thinks theirs will end differently.",
+      "JACKPOT": "Three cherries in a row, and every light and bell in the building goes off.",
+      "GETAWAY": "The driver has been idling around the corner since before any of this began.",
+      "SAFECRACKER": "One of the crew sands their fingertips before every job, to feel the tumblers fall.",
+      "BULLION": "The bars are stamped, stacked in pyramids, and weigh four hundred troy ounces apiece."
+    }
   },
   {
     "id": "detective",
@@ -532,7 +585,15 @@
       "SNUFFBOX",
       "DIARY",
       "PORTRAIT"
-    ]
+    ],
+    "echoes": {
+      "CULPRIT": "It is always the person you trusted with the tea.",
+      "MOTIVE": "Means and opportunity are easy. The hard part is why.",
+      "SLEUTH": "The word once meant the track an animal leaves; now it means whoever follows it.",
+      "DEDUCE": "When you have eliminated the impossible, whatever remains is the answer.",
+      "ALIBI": "Latin for 'elsewhere', which is precisely where everyone claims to have been.",
+      "CONFESSION": "In the end, somebody always wants to tell."
+    }
   },
   {
     "id": "polar",
@@ -607,7 +668,15 @@
       "CHRONOMETER",
       "TENT",
       "SLEDDOG"
-    ]
+    ],
+    "echoes": {
+      "AURORA": "Some nights the sky above the camp moves like a curtain in a draught.",
+      "GLACIER": "The river behind the tents moves a foot a day, and it is made of ice.",
+      "BLIZZARD": "For three days nobody could see the next tent.",
+      "POLARIS": "The navigator trusted only one star: the one that never moved.",
+      "ENDURANCE": "Shackleton's family motto was Fortitudine vincimus, and he named his ship after it.",
+      "PERMAFROST": "Dig down a foot and the ground has been frozen since the mammoths."
+    }
   },
   {
     "id": "horology",
@@ -681,7 +750,15 @@
       "WEIGHT",
       "BRASS",
       "LOUPE"
-    ]
+    ],
+    "echoes": {
+      "PENDULUM": "Galileo timed a swinging lamp in Pisa cathedral against his own pulse.",
+      "SUNDIAL": "The oldest clock in the garden is useless after dark and honest all day.",
+      "CUCKOO": "The Black Forest clockmakers taught a bird to announce the hour.",
+      "HOURGLASS": "Some time can only be measured by watching it run out.",
+      "TOURBILLON": "Breguet put the whole escapement in a spinning cage, to cheat gravity.",
+      "CLEPSYDRA": "The Athenians limited speeches in court with a jar of dripping water."
+    }
   },
   {
     "id": "olympus",
@@ -758,7 +835,16 @@
       "PERSEPHONE",
       "ARGONAUT",
       "SPARTA"
-    ]
+    ],
+    "echoes": {
+      "ODYSSEY": "The journey home took ten years, and every long journey since has borrowed its name.",
+      "OLYMPUS": "The gods live nearly three thousand metres up, above the clouds of Thessaly.",
+      "ORACLE": "At Delphi, a priestess breathed the vapours and answered only in riddles.",
+      "TITAN": "Before the gods there were their parents, and they were very large.",
+      "HYDRA": "Cut off one head and two grow back.",
+      "PROPHECY": "Every hero's story begins with someone who already knows how it ends.",
+      "LABYRINTH": "Daedalus built it so well that he could barely find his own way out."
+    }
   },
   {
     "id": "arcade",
@@ -831,7 +917,15 @@
       "SPACESHIP",
       "MAZE",
       "CHERRY"
-    ]
+    ],
+    "echoes": {
+      "JOYSTICK": "The pilots called it that first, long before the high scores.",
+      "PIXEL": "Up close, every face on the screen is made of tiny squares.",
+      "CARTRIDGE": "If it didn't work, you blew on the contacts and tried again.",
+      "CONTINUE": "Ten, nine, eight... insert coin.",
+      "PLAYER": "One up, two up: somebody has to hold the controls.",
+      "ARCADE": "Once it meant a row of arches; now it means a row of glowing cabinets."
+    }
   },
   {
     "id": "alchemy",
@@ -903,7 +997,15 @@
       "ASHES",
       "MOON",
       "SUN"
-    ]
+    ],
+    "echoes": {
+      "ELIXIR": "One sip and you would live forever, or so the label says.",
+      "ALEMBIC": "Two glass vessels joined by a beak, where vapour goes to become something purer.",
+      "CRUCIBLE": "Everything that matters here was tested in fire, and Arthur Miller named a play after the vessel.",
+      "AZOTH": "The adepts' universal solvent takes its name from the first and last letters of three alphabets.",
+      "TRANSMUTE": "Lead into gold was always the goal; the change itself was the thing.",
+      "PANACEA": "The goddess of the universal remedy was a daughter of Asclepius."
+    }
   },
   {
     "id": "orchestra",
@@ -980,7 +1082,15 @@
       "PRELUDE",
       "INTERMISSION",
       "BALCONY"
-    ]
+    ],
+    "echoes": {
+      "MAESTRO": "The one person on stage who makes no sound at all.",
+      "SYMPHONY": "Four movements, a hundred players, and Beethoven wrote nine of them.",
+      "OVERTURE": "Before the curtain rises, the orchestra plays a promise of everything to come.",
+      "CRESCENDO": "Everything tonight builds, little by little, to one very loud moment.",
+      "ENSEMBLE": "No soloists tonight: everyone plays together, or nobody does.",
+      "RHAPSODY": "Gershwin wrote his in blue; Queen set theirs in Bohemia."
+    }
   },
   {
     "id": "railway",
@@ -1053,7 +1163,15 @@
       "LANTERN",
       "PASSPORT",
       "BORDER"
-    ]
+    ],
+    "echoes": {
+      "EXPRESS": "Agatha Christie booked a murder on the fastest train out of Istanbul.",
+      "TERMINUS": "Every line ends somewhere; the Romans kept a god for boundary stones.",
+      "JUNCTION": "Two lines meet, and someone else decides which way you go.",
+      "CABOOSE": "The last car of the freight train, where the brakeman kept his stove.",
+      "DERAILED": "Something has come off the rails, and not only the train.",
+      "TIMETABLE": "The whole railway runs on a printed promise about when things will happen."
+    }
   },
   {
     "id": "volcano",
@@ -1129,7 +1247,15 @@
       "DIAMOND",
       "GARNET",
       "CRYSTAL"
-    ]
+    ],
+    "echoes": {
+      "MAGMA": "Below the crust it has another name; it only earns the word lava when it reaches the air.",
+      "CALDERA": "When the mountain empties itself, the summit falls in and leaves a cauldron.",
+      "OBSIDIAN": "The Aztecs made mirrors and blades from the mountain's black glass.",
+      "TECTONIC": "The ground is a jigsaw whose pieces drift a few centimetres every year.",
+      "ERUPTION": "Pliny's uncle sailed toward it for a better look, and did not come back.",
+      "EPICENTRE": "The damage spreads out in rings from a single point on the surface."
+    }
   },
   {
     "id": "pirate",
@@ -1203,7 +1329,15 @@
       "TORTUGA",
       "LAGOON",
       "SHIPWRECK"
-    ]
+    ],
+    "echoes": {
+      "TREASURE": "Stevenson drew the map first, and wrote the island to fit it.",
+      "PLUNDER": "The ship's articles set out exactly how the spoils would be divided.",
+      "GALLEON": "Every year the Spanish fleet sailed home low in the water, heavy with silver.",
+      "CUTLASS": "A short, heavy blade: far better below decks than any rapier.",
+      "BUCCANEER": "The first of them smoked meat on wooden frames in Hispaniola.",
+      "MUTINY": "Fletcher Christian took the Bounty. The crew here are considering something similar."
+    }
   },
   {
     "id": "chess",
@@ -1277,7 +1411,15 @@
       "ARBITER",
       "NOTATION",
       "SCORESHEET"
-    ]
+    ],
+    "echoes": {
+      "GAMBIT": "Every good opening starts by giving something away.",
+      "ZUGZWANG": "Any move at all will lose, and passing is not allowed.",
+      "CASTLING": "The only move where two pieces go at once, and the king hides behind a tower.",
+      "CHECKMATE": "The Persian shah was never killed; he was simply left with nowhere to go.",
+      "STALEMATE": "No legal moves, not in check, and nobody wins.",
+      "PROMOTION": "A pawn that walks all the way across the board can become anything it likes."
+    }
   },
   {
     "id": "greenhouse",
@@ -1354,7 +1496,15 @@
       "COMPOST",
       "SPRINKLER",
       "GREENHOUSE"
-    ]
+    ],
+    "echoes": {
+      "ORCHID": "The Victorians sent collectors to die in jungles for a single rare bloom.",
+      "BLOSSOM": "In Kyoto they hold parties just to watch the trees flower.",
+      "MANDRAKE": "Pull it from the soil and its scream, they say, will kill you.",
+      "NIGHTSHADE": "Italian ladies once dropped belladonna in their eyes to look beautiful.",
+      "TERRARIUM": "A sealed glass world that has not been watered since 1960.",
+      "HERBARIUM": "Pressed flowers, dried and labelled, filed away like old letters."
+    }
   },
   {
     "id": "weather",
@@ -1428,7 +1578,15 @@
       "HEATWAVE",
       "SNOWFLAKE",
       "UMBRELLA"
-    ]
+    ],
+    "echoes": {
+      "CYCLONE": "The winds turn anticlockwise here, and clockwise on the other side of the world.",
+      "TEMPEST": "Prospero raised one to bring his enemies ashore.",
+      "MONSOON": "The Arabic word meant simply 'season', and here the season means rain.",
+      "TORNADO": "Dorothy's house left Kansas in one.",
+      "HURRICANE": "The Taíno named it after a god of chaos.",
+      "MAELSTROM": "Poe sent a fisherman down a whirlpool off the coast of Norway."
+    }
   },
   {
     "id": "circus",
@@ -1500,7 +1658,15 @@
       "JESTER",
       "PUPPET",
       "SWORDSWALLOWER"
-    ]
+    ],
+    "echoes": {
+      "CAROUSEL": "The painted horses go up and down and round, and never get anywhere.",
+      "TRAPEZE": "The daring young man flew through the air with the greatest of ease.",
+      "JUGGLER": "Five things in the air, and only two hands.",
+      "RINGMASTER": "The one in the red coat and top hat, telling everyone where to look.",
+      "MENAGERIE": "The Tower of London once kept lions, and nobody thought it strange.",
+      "SPECTACLE": "Roll up: the whole show exists only to be looked at."
+    }
   },
   {
     "id": "netsec",
@@ -1575,7 +1741,15 @@
       "VIRUS",
       "GATEWAY",
       "SUBNET"
-    ]
+    ],
+    "echoes": {
+      "FIREWALL": "Builders put a brick barrier between houses to stop the flames spreading; the network keeps one too.",
+      "PHREAK": "A toy whistle from a cereal box once played exactly 2600 hertz.",
+      "ROOTKIT": "The intruder didn't just get in. They moved in, and hid the furniture.",
+      "EXPLOIT": "Every bug is a door, and somebody always walks through it.",
+      "HONEYPOT": "Leave something sweet out, and watch who comes to take it.",
+      "MALWARE": "Software with bad intentions, which is all its name means."
+    }
   },
   {
     "id": "egypt",
@@ -1649,6 +1823,14 @@
       "AMULET",
       "TEMPLE",
       "CHARIOT"
-    ]
+    ],
+    "echoes": {
+      "PHARAOH": "The title meant only 'great house', but the house was the king.",
+      "PYRAMID": "Four triangular faces, pointing at the sun, over a very small room.",
+      "SPHINX": "What walks on four legs in the morning, two at noon and three in the evening?",
+      "SCARAB": "The beetle rolls its ball across the sand the way Khepri rolls the sun.",
+      "PAPYRUS": "The reeds by the river were split, pressed and dried into the first paper.",
+      "OBELISK": "A single needle of granite; London, Paris and New York each carried one home."
+    }
   }
 ]

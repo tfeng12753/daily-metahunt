@@ -77,8 +77,8 @@ def meta_diagonal(final, pool, rng):
         "type": "diagonal",
         "feeders": feeders,
         "flavor": [
-            "Roll call is always taken alphabetically. The first to answer gives up a single letter; each one after gives up exactly one more than whoever came before, and keeps only the last one given.",
-            "Stand {crew} in a line, A to Z. Each steps forward one pace further than the last, and each has something written on the ground in front of them.",
+            "Roll call is taken alphabetically, and each answer goes one step further than the last.",
+            "Stand {crew} in a line, A to Z. Then take the stairs.",
         ],
         "explain": "Sort the feeder answers alphabetically and take the k-th letter of the k-th answer (a diagonal read).",
         "body": [],
@@ -100,8 +100,8 @@ def meta_title_diagonal(final, pool, rng):
         "type": "title_diagonal",
         "feeders": [{"answer": w} for w in words],
         "flavor": [
-            "File the reports the way any archivist would: by their headings, A to Z. The first report surrenders its first letter, the second its second, and so on down the drawer.",
-            "Shelve everything by title. Then walk down the shelf, reaching one step further into each report than the last.",
+            "File everything the way an archivist would, by its heading. Then walk down the drawer.",
+            "Shelved by title, and read on the slant.",
         ],
         "explain": "Order the puzzles alphabetically by title; take the k-th letter of the k-th answer.",
         "body": [],
@@ -137,8 +137,8 @@ def meta_mutation(final, pool, rng):
         "type": "mutation",
         "feeders": feeders,
         "flavor": [
-            "Every transmission that reached {place} arrived with exactly one corrupted character. Repair each one to find its true answer. But don't throw the damage away: in order, the damage is the message.",
-            "Nothing survives the journey intact. Each report picked up one mutation on the way; the mutations, read in order, are the only part that wasn't an accident.",
+            "Nothing reached {place} undamaged. The damage, though, was remarkably consistent.",
+            "Every report is one slip away from perfect. Keep the slips.",
         ],
         "explain": "Each feeder decodes to its answer with a single wrong letter. Those substituted letters, in puzzle order, spell the final answer.",
         "body": [],
@@ -173,7 +173,7 @@ def meta_fitin(final, pool, rng):
         "feeders": [{"answer": w} for w in words],
         "flavor": [
             "Everything {at} has a place, and every place is exactly the right size.",
-            "A rack of pigeonholes, each cut to fit one thing only. Put them away, then read down the marked slots.",
+            "Pigeonholes, each cut to fit one thing only.",
         ],
         "explain": "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
         "body": [{"type": "fitgrid", "rows": rows}],
@@ -208,8 +208,8 @@ def meta_stowaway(final, pool, rng):
         "type": "stowaway",
         "feeders": feeders,
         "flavor": [
-            "Every report that reached {place} was carrying a stowaway: exactly one letter too many. Put each one ashore, then take a roll call of the stowaways.",
-            "Each message is one letter heavier than it should be. Weigh them all, and the surplus, in order, adds up to something.",
+            "Everything arrived a little heavier than it left.",
+            "Count heads at the gangway: one too many on every boat.",
         ],
         "explain": "Each feeder decodes to its answer plus one inserted letter. The inserted letters, in puzzle order, spell the final answer.",
         "body": [],
@@ -253,10 +253,10 @@ def meta_logbook(final, pool, rng, sizes=(5, 6)):
     else:
         return None
     styles = [
-        ("Day {i}, {j} bells", "The watch-keeper wrote nothing down but the day and how many bells had rung. Days are counted from the first report on this page."),
-        ("Ch. {i} v. {j}", "A well-thumbed book of scripture, and a list of verses someone underlined. Its chapters are the reports on this page."),
-        ("Platform {i}, car {j}", "The porter's notes list where each passenger boarded. The platforms are numbered as the reports on this page are."),
-        ("Row {i}, seat {j}", "Tonight's seating chart. Each row is one of the reports on this page, and every seat is one letter wide."),
+        ("Day {i}, {j} bells", "The watch-keeper wrote down nothing but the day and the bell."),
+        ("Ch. {i} v. {j}", "Someone underlined a few verses. This page has its own chapters."),
+        ("Platform {i}, car {j}", "The porter only ever noted where each passenger boarded."),
+        ("Row {i}, seat {j}", "Tonight's seating chart. Every seat is one letter wide."),
     ]
     fmt_s, flavor = rng.choice(styles)
     entries = [fmt_s.format(i=i + 1, j=j + 1) for i, j in picks]
@@ -286,8 +286,8 @@ def meta_initials(final, pool, rng):
         "type": "initials",
         "feeders": [{"answer": w} for w in words],
         "flavor": [
-            "Each report was signed with nothing but an initial. The last lock {at} takes all of the signatures at once, in order, the way Blaise would have wanted.",
-            "Nobody {at} signs their full name. Put the initials together and turn the wheel.",
+            "Every report is signed with a single initial. Blaise would know what to do with them.",
+            "The last lock takes every signature at once.",
         ],
         "explain": "The ciphertext is Vigenère-encrypted with the first letters of the feeder answers (in puzzle order) as the key.",
         "body": [{"type": "mono", "text": ct, "big": True}],
@@ -397,7 +397,8 @@ def build(secret, date, easy=False):
     for i, (fd, (mech, tkey, enc), title) in enumerate(zip(feeders, plan, titles)):
         ctx = dict(base_ctx, title=title)
         blocks = mech.encode(enc, rng, ctx)
-        flavor = fmt(rng.choice(ctx.get("_flavors") or mech.flavors), theme).replace("{n}", ctx.get("_flavor_n", ""))
+        pool_flavors = ctx.get("_flavors") or (mech.easy_flavors if easy and mech.easy_flavors else mech.flavors)
+        flavor = fmt(rng.choice(pool_flavors), theme).replace("{n}", ctx.get("_flavor_n", ""))
         hint = ctx.get("_hint", mech.hint)
         technique = ctx.get("_name", mech.name)
         if tkey:
@@ -445,6 +446,7 @@ def build(secret, date, easy=False):
         "number": number,
         "round": theme["name"],
         "intro": theme["intro"],
+        "echo": theme.get("echoes", {}).get(final),
         "puzzles": puzzles,
         "meta": {
             "title": "Meta: " + theme["name"],

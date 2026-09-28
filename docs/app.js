@@ -241,14 +241,73 @@
     return wrap;
   }
 
+  // Letter-box helpers shared by the fill-in grids: type to advance, backspace to go back.
+  function letterInput(cls, label, onChange, next, prev) {
+    const inp = el("input", cls);
+    inp.maxLength = 1;
+    inp.autocomplete = "off";
+    inp.spellcheck = false;
+    inp.setAttribute("aria-label", label);
+    inp.addEventListener("input", () => {
+      inp.value = inp.value.toUpperCase().replace(/[^A-Z]/g, "").slice(-1);
+      onChange();
+      if (inp.value) next()?.focus();
+    });
+    inp.addEventListener("keydown", (e) => {
+      if (e.key === "Backspace" && !inp.value) { const p = prev(); if (p) { p.focus(); p.value = ""; onChange(); e.preventDefault(); } }
+      if (e.key === "ArrowRight") next()?.focus();
+      if (e.key === "ArrowLeft") prev()?.focus();
+    });
+    return inp;
+  }
+
   function fitgrid(b) {
     const g = el("div", "fitgrid");
-    b.rows.forEach((row) => {
-      const r = el("div", "fitrow");
-      for (let i = 0; i < row.len; i++) r.append(el("span", "fitcell" + (i === row.shade ? " shade" : "")));
-      g.append(r);
+    g.append(el("p", "note", "Every answer fits exactly one row. Solved answers drop in automatically; you can also type."));
+    const readBox = el("p", "fitread");
+    const update = () => {
+      readBox.replaceChildren(el("span", "fitread-label", "Shaded squares, top to bottom:"));
+      g.querySelectorAll(".fitrow").forEach((row) => {
+        const v = row.querySelector(".shade").value;
+        readBox.append(el("span", "fitread-letter" + (v ? "" : " empty"), v || "·"));
+      });
+    };
+    b.rows.forEach((row, r) => {
+      const line = el("div", "fitrow");
+      line.dataset.len = row.len;
+      line.append(el("span", "fitlen", String(row.len)));
+      const cells = el("div", "fitcells");
+      const inputs = [];
+      for (let i = 0; i < row.len; i++) {
+        const inp = letterInput("fitcell" + (i === row.shade ? " shade" : ""), `row ${r + 1}, letter ${i + 1}`,
+          () => { delete line.dataset.from; line.querySelector(".fitsrc").textContent = ""; update(); },
+          () => inputs[i + 1], () => inputs[i - 1]);
+        inputs.push(inp);
+        cells.append(inp);
+      }
+      line.append(cells, el("span", "fitsrc"));
+      g.append(line);
     });
+    g.append(readBox);
+    update();
+    g._update = update;
     return g;
+  }
+
+  // Drop every solved answer into the fit-in row of the same length.
+  function fillFitgrid() {
+    const g = document.querySelector("#meta .fitgrid");
+    if (!g) return;
+    const st = load(rk());
+    Object.entries(st.solved).forEach(([id, word]) => {
+      const row = g.querySelector(`.fitrow[data-len="${word.length}"]`);
+      if (!row || (row.dataset.from && row.dataset.from !== id)) return;
+      row.querySelectorAll("input").forEach((inp, i) => { inp.value = word[i]; });
+      row.dataset.from = id;
+      row.classList.add("filled");
+      row.querySelector(".fitsrc").textContent = `puzzle ${id}`;
+    });
+    g._update();
   }
 
   function sudoku(b) {
@@ -284,32 +343,55 @@
 
   function dropquote(b) {
     const W = b.cols.length;
+    const wrap = el("div");
+    wrap.append(el("p", "note", "Each column's letters drop into the open squares directly below them, in some order. Hatched squares are the gaps between words."));
     const t = el("table", "dropquote");
     const depth = Math.max(...b.cols.map((c) => c.length));
+    const pool = b.cols.map(() => []);
     for (let r = 0; r < depth; r++) {
       const tr = el("tr", "pool");
-      b.cols.forEach((col) => {
+      b.cols.forEach((col, c) => {
         const pad = depth - col.length;
-        tr.append(el("td", null, r >= pad ? col[r - pad] : ""));
+        const td = el("td", null, r >= pad ? col[r - pad] : "");
+        td.dataset.col = c;
+        if (r >= pad) pool[c].push(td);
+        tr.append(td);
       });
       t.append(tr);
     }
+    const slots = [];
+    const recount = () => {
+      pool.forEach((tds) => tds.forEach((td) => td.classList.remove("used")));
+      slots.forEach((inp) => {
+        inp.classList.remove("bad");
+        if (!inp.value) return;
+        const free = pool[inp.dataset.col].find((td) => td.textContent === inp.value && !td.classList.contains("used"));
+        if (free) free.classList.add("used");
+        else inp.classList.add("bad");  // that letter isn't available in this column
+      });
+    };
+    const focusCol = (c) => t.querySelectorAll("td").forEach((td) => td.classList.toggle("col-focus", td.dataset.col === String(c)));
     b.mask.forEach((row) => {
       const tr = el("tr", "slots");
-      [...row].forEach((m) => {
+      [...row].forEach((m, c) => {
         const td = el("td", m === "#" ? "black" : "open");
+        td.dataset.col = c;
         if (m !== "#") {
-          const inp = el("input");
-          inp.maxLength = 1;
-          inp.addEventListener("input", () => { inp.value = inp.value.toUpperCase().replace(/[^A-Z]/g, ""); });
+          const k = slots.length;
+          const inp = letterInput("", `column ${c + 1}`, recount, () => slots[k + 1], () => slots[k - 1]);
+          inp.dataset.col = c;
+          inp.addEventListener("focus", () => focusCol(c));
+          slots.push(inp);
           td.append(inp);
         }
         tr.append(td);
       });
       t.append(tr);
     });
-    const wrap = el("div", "scroll-x");
-    wrap.append(t);
+    t.addEventListener("focusout", () => setTimeout(() => { if (!t.contains(document.activeElement)) focusCol(-1); }));
+    const scroll = el("div", "scroll-x");
+    scroll.append(t);
+    wrap.append(scroll);
     return wrap;
   }
 
@@ -548,6 +630,7 @@
         markSolved(v);
         updateProgress();
         renderLiveSplits();
+        fillFitgrid();
         report("solve", p.id, v);
       } else if (p.partials && p.partials[h]) {
         fb.className = "feedback warn";
@@ -843,6 +926,9 @@
     $("#eyebrow").textContent = `No. ${puzzle.number} · ${diff === "easy" ? "Easy · " : ""}${d.toLocaleDateString(undefined, { weekday: "long", month: "long", day: "numeric", year: "numeric", timeZone: "UTC" })}`;
     $("#round").textContent = puzzle.round;
     $("#intro").textContent = puzzle.intro;
+    const echo = $("#echo");
+    echo.textContent = puzzle.echo || "";
+    echo.hidden = !puzzle.echo;
     document.title = `${puzzle.round}${diff === "easy" ? " (Easy)" : ""} · Daily Metahunt`;
     document.querySelectorAll(".diff button").forEach((b) => {
       b.classList.toggle("on", b.dataset.diff === diff);
@@ -867,6 +953,7 @@
     puzzle.puzzles.forEach((p) => list.append(renderPuzzle(p, st)));
     $("#meta").innerHTML = "";
     $("#meta").append(renderMeta(puzzle.meta, st));
+    fillFitgrid();
     updateProgress();
     renderLiveSplits();
   }

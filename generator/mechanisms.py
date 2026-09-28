@@ -161,7 +161,8 @@ class Mechanism:
     key = ""
     name = ""
     hint = ""
-    flavors = []
+    flavors = []        # hard round: oblique
+    easy_flavors = []   # easy round: more direct (falls back to flavors)
     allow_transform = True
     weight = 1      # relative pick frequency; word/logic puzzles are weighted up
     easy = True     # allowed in the easy round
@@ -182,10 +183,15 @@ class DnaBinary(Mechanism):
     key = "dna_binary"
     name = "Binary codons"
     hint = "Pairs of bits are nucleotides (A=00, C=01, G=10, T=11). Six bits = one codon; translate codons to amino-acid one-letter codes."
-    flavors = [
+    easy_flavors = [
         "Life keeps its books in a four-letter ledger. The machines that copied this one could only count to two, and they insisted on reading everything in threes.",
         "Every rung of the ladder became a pair of switches. {Crew} swear that, three rungs at a time, something begins to fold.",
         "The sequencer {at} ran out of ink and fell back to its native tongue. Its alphabet has four letters; its vocabulary, sixty-four words.",
+    ]
+    flavors = [
+        'Somewhere between the lab and the server room, four became two, and two became three.',
+        "It isn't text. It was never text. It was always going to fold into something.",
+        "The machine keeps its diary in your cells' alphabet, if your cells could only say yes or no.",
     ]
 
     def can(self, word, ctx=None):
@@ -211,10 +217,15 @@ class DnaTemplate(Mechanism):
     key = "dna_template"
     name = "Template strand"
     hint = "This is the template (antisense) strand written 5′→3′. Reverse-complement it to get the coding strand, then translate codons to amino-acid one-letter codes."
-    flavors = [
+    easy_flavors = [
         "We only kept the strand nobody reads. Find its partner, turn it around, and let the ribosome do the rest.",
         "The photograph {at} was of the negative, and the negative was hung upside down.",
         "Recovered: the wrong half of a helix, carefully labelled from head to tail.",
+    ]
+    flavors = [
+        'We kept the wrong half, and we kept it backwards.',
+        'A negative, hung upside down, of something that only reads in threes.',
+        'Half a ladder, read from the far end.',
     ]
 
     def can(self, word, ctx=None):
@@ -235,19 +246,24 @@ class Morse(Mechanism):
     key = "morse"
     name = "Morse code"
     hint = "Morse code: two symbols stand for dot and dash; gaps separate letters."
-    flavors = [
+    easy_flavors = [
         "{Crew} tapped this out against the hull: short, long, and the silence in between.",
         "Two kinds of thing kept passing {at}, in an order that felt far too deliberate.",
         "Samuel would have recognised the rhythm at once, whatever it happened to be wearing.",
     ]
+    flavors = [
+        'Some visitors stayed briefly; others lingered.',
+        'Two kinds of footprint on the sand, in no particular hurry.',
+        'Listen to the rhythm, not the picture.',
+    ]
     VARIANTS = {
         "lamp": ("Morse code (signal lamp)", "Morse code: short flashes are dots, long flashes are dashes; each row is a letter.", [
-            "The lighthouse keeper logged every flash: how long the lamp burned, and when it rested.",
-            "An Aldis lamp, seen from the shore {at}. Some flashes lingered.",
+            "A light on the far shore that refuses to stay on.",
+            "Someone across the water is impatient, and has a lamp.",
         ]),
         "audio": ("Morse code (audio)", "Morse code, played as beeps. Short = dot, long = dash; longer silences separate letters.", [
-            "Recorded {at} on a very old tape. Headphones recommended.",
-            "Something on the radio, between stations. It repeats if you ask it to.",
+            "Static, then something that isn't static.",
+            "Turn it up. It's saying something, just not in words.",
         ]),
     }
 
@@ -286,20 +302,25 @@ class Semaphore(Mechanism):
     key = "semaphore"
     name = "Semaphore clocks"
     hint = "Each clock's two hands are the two arms of a flag-semaphore signaller (hand length doesn't matter)."
-    flavors = [
+    easy_flavors = [
         "Every clock {at} stopped at a different moment, and not one of them can agree which hand is which.",
         "A signaller with no flags and no sense of time left these behind.",
         "The hands aren't telling the time. They're waving.",
     ]
+    flavors = [
+        'None of these clocks is broken. None of them tells the time.',
+        'Every one stopped at a different moment, and none can agree which hand is which.',
+        'Stopped hands, raised arms.',
+    ]
     COMPASS = ["N", "NE", "E", "SE", "S", "SW", "W", "NW"]
     VARIANTS = {
         "bearings": ("Semaphore (compass bearings)", "Flag semaphore, with each arm given as a compass direction as you face the signaller (N = straight up).", [
-            "A signaller who will only speak in compass points.",
-            "The navigator {at} wrote down two bearings at a time and refused to explain.",
+            "Two directions at a time, and never a destination.",
+            "The navigator keeps pointing two ways at once.",
         ]),
         "figures": ("Semaphore (figures)", "Flag semaphore: read each figure's arm positions.", [
-            "Snapshots of someone on the far pier, arms out at very particular angles.",
-            "A flip-book of a figure who never once put their arms down.",
+            "Someone on the pier is trying very hard to get your attention.",
+            "Arms out, arms up, arms down: a dance with no music.",
         ]),
     }
 
@@ -329,19 +350,24 @@ class BrailleDecimal(Mechanism):
     key = "braille"
     name = "Braille as numbers"
     hint = "Each number is a 6-bit value: bit k set means Braille dot k+1 is raised (dot 1 = 1, dot 2 = 2, dot 3 = 4, dot 4 = 8, ...)."
-    flavors = [
+    easy_flavors = [
         "Room numbers from a hotel where every guest reads with their fingertips.",
         "These readings came from a sensor with six raised pins. It reports in powers of two, and it reports in order.",
         "Sixty-four ways to press a fingertip into paper. Louis numbered his from one to six; we just added them up.",
     ]
+    flavors = [
+        'Room numbers in a hotel where nobody reads with their eyes.',
+        "Small numbers, none above sixty-three. What matters is what's raised.",
+        'Every value here was once something you could touch.',
+    ]
     VARIANTS = {
         "bits": ("Braille as bit strings", "Six-bit strings: the k-th character is 1 if Braille dot k is raised (dots 1-2-3 down the left, 4-5-6 down the right).", [
-            "A six-pin sensor reported which pins were pressed, left to right, one through six.",
-            "Six switches per reading. Louis would have numbered them the same way.",
+            "Six switches at a time, some pressed, some not.",
+            "A sensor that only knows up and down, six times over.",
         ]),
         "cells": ("Braille (drawn)", "Braille cells, drawn as raised and flat dots.", [
-            "Rubbings taken from the handrail {at}.",
-            "Someone traced the bumps on the lift buttons.",
+            "Rubbings from a handrail.",
+            "Bumps on a lift button, copied carefully.",
         ]),
     }
 
@@ -366,10 +392,15 @@ class Elements(Mechanism):
     key = "elements"
     name = "Atomic numbers"
     hint = "Each element's atomic number is a letter position (hydrogen = 1 = A)."
-    flavors = [
+    easy_flavors = [
         "An inventory from the stores {at}, listed by order of arrival rather than by weight.",
         "Mendeleev would have lined these up by number without a second thought.",
         "The chemist only ever shopped from the first twenty-six shelves.",
+    ]
+    flavors = [
+        'An inventory of the stores, in order of arrival.',
+        'Only the first shelves of the cabinet were ever opened.',
+        'The smallest things there are, listed by rank.',
     ]
     SYMBOLS = ["H", "He", "Li", "Be", "B", "C", "N", "O", "F", "Ne", "Na", "Mg", "Al", "Si", "P",
                "S", "Cl", "Ar", "K", "Ca", "Sc", "Ti", "V", "Cr", "Mn", "Fe"]
@@ -378,12 +409,12 @@ class Elements(Mechanism):
               "39.098", "40.078", "44.956", "47.867", "50.942", "51.996", "54.938", "55.845"]
     VARIANTS = {
         "symbols": ("Atomic numbers (symbols)", "Element symbols; each atomic number is a letter position (H = 1 = A).", [
-            "Labels peeled off a rack of reagent bottles {at}, in the order they were used.",
-            "A formula no chemist would ever write, but every chemist could read.",
+            "Labels peeled from bottles, in the order they were used.",
+            "A formula no chemist would sign.",
         ]),
         "masses": ("Atomic numbers (by mass)", "Standard atomic masses: identify each element, then use its atomic number as a letter position.", [
-            "Weighed, not counted. The scale {at} is very precise.",
-            "The assayer only wrote down what everything weighed.",
+            "Everything here has been weighed, not counted.",
+            "The scale is very precise; the list is very short.",
         ]),
     }
 
@@ -405,19 +436,24 @@ class Dtmf(Mechanism):
     key = "dtmf"
     name = "DTMF multi-tap"
     hint = "Each frequency pair is a phone keypad key (DTMF). The ×n is how many times it was pressed: old-school multi-tap texting."
-    flavors = [
+    easy_flavors = [
         "Recovered from an old answering machine: two notes at once, some pressed more insistently than others.",
         "Before phones were smart, you had to be patient with the seven key.",
         "Every chord is a button. Every button remembers how many times it was hit.",
     ]
+    flavors = [
+        'Two notes at once, some pressed more insistently than others.',
+        'Chords from a very dull instrument that everyone once owned.',
+        'Somebody leaned on a few of these.',
+    ]
     VARIANTS = {
         "keys": ("Phone multi-tap", "Old phone multi-tap: the digit is the key, and how many times it repeats picks the letter.", [
-            "A text message typed on a flip phone {at}, one thumb, no predictive text.",
-            "The keypad {at} is worn smooth on some buttons more than others.",
+            "Thumbs, patience, and no predictive text.",
+            "Some buttons are more worn than others.",
         ]),
         "audio": ("DTMF multi-tap (audio)", "Touch-tone (DTMF) key presses, played as sound. Identify each key; repeated presses pick the letter, multi-tap style.", [
-            "A voicemail that is nothing but someone pressing buttons. Listen closely.",
-            "Recorded off a payphone {at}: beeps, pauses, and more beeps.",
+            "A voicemail with no voice.",
+            "Beeps, pauses and more beeps, from a payphone that should be disconnected.",
         ]),
     }
 
@@ -455,10 +491,15 @@ class Vigenere(Mechanism):
     name = "Vigenère keyed by the title"
     hint = "Vigenère cipher; the key is this puzzle's title (letters only)."
     allow_transform = False
-    flavors = [
+    easy_flavors = [
         "The name on the door is also the key to it.",
         "Blaise left the lock. The heading of this page is his combination.",
         "Read the title carefully, then use it for more than reading.",
+    ]
+    flavors = [
+        'The name on the door is also the key to it.',
+        'Read the heading twice: once to learn what this is called, and once to open it.',
+        'The label is not decoration.',
     ]
 
     @staticmethod
@@ -482,10 +523,15 @@ class AtbashNato(Mechanism):
     name = "Mirrored NATO"
     hint = "NATO phonetic alphabet, then Atbash (A↔Z, B↔Y, ...)."
     allow_transform = False
-    flavors = [
+    easy_flavors = [
         "Heard over the radio {at}, read aloud by someone standing in front of a mirror.",
         "Zulu comes first, Alfa comes last, and the call signs never noticed.",
         "Call signs, looking-glass edition.",
+    ]
+    flavors = [
+        'Call signs, reflected.',
+        'The radio operator had everything back to front, but only from A to Z.',
+        'Heard over the radio from the other side of the glass.',
     ]
 
     def encode(self, word, rng, ctx):
@@ -499,14 +545,19 @@ class TapCode(Mechanism):
     key = "tapcode"
     name = "Tap code"
     hint = "Tap code: first burst = row, second = column, in a 5×5 grid without K."
-    flavors = [
+    easy_flavors = [
         "Heard through the wall of the next cell: bursts of knocks, always in pairs, and a grid of twenty-five that someone kept in their head.",
         "{Crew} kept each other sane with a knuckle and a five-by-five memory.",
         "Knock, knock. Pause. Knock knock knock.",
     ]
+    flavors = [
+        'Through the wall: bursts of knocks, always in pairs.',
+        'Five rows, five columns, and one letter nobody needed.',
+        'Knock, knock. Pause. Knock knock knock.',
+    ]
     AUDIO = ("Tap code (audio)", "Tap code, as knocks: a burst for the row, a burst for the column, in a 5×5 grid without K.", [
-        "Recorded through the wall {at}. Count carefully.",
-        "The pipes {at} have been knocking all night, and not at random.",
+        "Recorded through a wall. Count carefully.",
+        "The pipes have been knocking all night, and not at random.",
     ])
 
     def can(self, word, ctx=None):
@@ -534,10 +585,15 @@ class Keyboard(Mechanism):
     key = "keyboard"
     name = "Keyboard shift"
     hint = "Every letter was typed one key to the side on a QWERTY keyboard."
-    flavors = [
+    easy_flavors = [
         "Typed in the dark, with one hand resting a single key out of place.",
         "The typist {at} was consistently, reliably, one step off.",
         "Nothing was lost in transcription; everything simply moved over.",
+    ]
+    flavors = [
+        'Typed in the dark, with one hand resting a key out of place.',
+        'Nothing was lost; everything simply moved over.',
+        "The typist's hands were fine. Their aim was not.",
     ]
 
     @staticmethod
@@ -565,10 +621,15 @@ class Swatches(Mechanism):
     key = "swatches"
     name = "Hex colour ASCII"
     hint = "Each hex colour code is three ASCII bytes."
-    flavors = [
+    easy_flavors = [
         "Paint chips left behind {at}. The labels matter more than the colours.",
         "Each colour whispers three characters, if you ask in the right code.",
         "A designer's palette, specified in the language of 1963.",
+    ]
+    flavors = [
+        'The labels matter more than the colours.',
+        'A paint chart for a room nobody will ever decorate.',
+        'Three characters to a colour, if you ask the right way.',
     ]
 
     def encode(self, word, rng, ctx):
@@ -587,14 +648,19 @@ class Resistors(Mechanism):
     key = "resistors"
     name = "Resistor colour bands"
     hint = "Read the first two bands of each resistor as digits (black 0 … white 9) and use the number as a letter position."
-    flavors = [
+    easy_flavors = [
         "Pulled from a burnt-out board. Only the first two stripes on each part were ever meant to be read.",
         "The engineer colour-coded everything, then numbered the alphabet.",
         "Every component on this board offers exactly the same resistance: somewhere between one and twenty-six.",
     ]
+    flavors = [
+        'Components from a dead board, stripes and all.',
+        'Every part here resists a little, and never more than twenty-six.',
+        'Only the first two stripes on each were ever meant to be read.',
+    ]
     TEXT = ("Resistor colour code (written)", "Resistor colour code: each pair of colours is two digits (black 0 … white 9), a letter position.", [
-        "The parts list {at} was dictated over the phone by someone who only knew the stripes.",
-        "Bill of materials, colourblind edition: every part described by its first two bands.",
+        "A parts list read aloud by someone who only knew the stripes.",
+        "Every part described by its first two stripes, and nothing else.",
     ])
 
     def encode(self, word, rng, ctx):
@@ -617,10 +683,15 @@ class Pigpen(Mechanism):
     key = "pigpen"
     name = "Pigpen cipher"
     hint = "Pigpen (Freemason's) cipher: A–I in a # grid, J–R the same with dots, S–V in an X, W–Z the X with dots."
-    flavors = [
+    easy_flavors = [
         "Scratched into the wall of a Masonic lodge. Or a pig pen; the caretaker wasn't sure.",
         "Noughts and crosses, with a few stray dots where someone pressed too hard.",
         "Fences and corners. Some of them have an animal inside.",
+    ]
+    flavors = [
+        'Fences and corners; some have an animal inside.',
+        'Noughts and crosses, with a few stray dots.',
+        'Scratched into the wall of a very old lodge.',
     ]
 
     def encode(self, word, rng, ctx):
@@ -651,10 +722,15 @@ class Tape(Mechanism):
     key = "tape"
     name = "Punched tape"
     hint = "Each row of the paper tape is a 7-bit ASCII character (hole = 1, most significant bit on the left)."
-    flavors = [
+    easy_flavors = [
         "A strip of paper tape, seven holes wide, fed through the teletype {at}.",
         "Holes where there ought to be ones. The little sprocket keeps count.",
         "The machine spoke American Standard. Every row is one character.",
+    ]
+    flavors = [
+        'A strip of paper full of holes, seven across.',
+        'The sprocket keeps count; the holes do the talking.',
+        'What the teletype said, before anyone could read it.',
     ]
 
     def encode(self, word, rng, ctx):
@@ -670,10 +746,15 @@ class PrimesRoman(Mechanism):
     key = "primes_roman"
     name = "Prime indices in Roman numerals"
     hint = "Each Roman numeral is a prime; its position in the list of primes (2 is 1st) is a letter position."
-    flavors = [
+    easy_flavors = [
         "The Senate admitted only the indivisible, and numbered each new member in its own fashion.",
         "Caesar counted only indivisible things. We wrote down which ones he counted.",
         "A list only a Roman number theorist could love.",
+    ]
+    flavors = [
+        'The Senate admitted only the indivisible.',
+        'Numbers that nothing divides, written the old way.',
+        'Caesar counted only things that could not be shared.',
     ]
 
     def encode(self, word, rng, ctx):
@@ -689,10 +770,15 @@ class Bacon(Mechanism):
     name = "Baconian cipher"
     hint = "Baconian cipher: in groups of five letters, lowercase = a/0 and uppercase = b/1; A = aaaaa, B = aaaab, … (26-letter version). Leftover letters at the end are padding."
     allow_transform = True
-    flavors = [
+    easy_flavors = [
         "Francis would have adored this paragraph. Pay attention to how it stands, not what it says.",
         "Some letters stand tall and some stay low. In groups of five, that's all that matters.",
         "The words are nonsense. The typesetting isn't.",
+    ]
+    flavors = [
+        'Pay attention to how it stands, not what it says.',
+        "The words are nonsense. The typesetting isn't.",
+        'Some letters stand tall; most stay low.',
     ]
     FILLER = ["a", "an", "the", "of", "and", "to", "in", "by", "on", "at", "for", "from"]
 

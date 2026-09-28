@@ -121,7 +121,9 @@ def polish(puzzle, solution, theme, easy=False):
         user = ("Round: %s\nSetting: %s, %s.\n%s\nRewrite each line below. Return JSON mapping the same keys to the new text.\n\n%s"
                 % (puzzle["round"], theme["place"], theme["crew"],
                    "This is the EASY round, for newcomers: the technique is shown next to each puzzle, so flavour "
-                   "can be warmer and more direct. Still never state an answer.\n" if easy else "",
+                   "can be warmer and more direct. Still never state an answer.\n" if easy else
+                   "This is the HARD round: make every line MORE oblique than the original. Allude; never explain, "
+                   "never give instructions, never name a person or tool that gives the method away.\n",
                    json.dumps(lines, indent=1, ensure_ascii=False)))
         out = parse_json(chat(key, model, [{"role": "system", "content": SYSTEM}, {"role": "user", "content": user}]))
     except Exception as e:  # network, auth, bad JSON: keep the templates

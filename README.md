@@ -13,7 +13,10 @@ titles and shape of the data are the only clues.
 - **A theme**, drawn from 22 rounds (Bletchley's Hut Eight, a bathysphere, a
   night train, a clockmaker's will, a CTF…), each with its own story, titles,
   Morse glyphs and a set of themed final answers.
-- **Hard vs Easy.** Hard gives you nothing but flavour. Easy uses 4–6 feeders,
+- **An epigraph.** Each round opens with a line under its story that alludes
+  to the final answer. It shouldn't give the answer away, but it clicks once
+  you've solved it.
+- **Hard vs Easy.** Hard gives you nothing but oblique flavour: it alludes and never explains. Easy uses 4–6 feeders,
   no hidden layers, names each puzzle's technique, shows answer lengths and
   explains its meta (first letters, fit-in grid, title diagonal or logbook).
 - **Feeders**, each built with a different mechanism, and sometimes with a
