@@ -144,7 +144,6 @@ button, select, input { font: inherit; color: inherit; }
 .nono .colclue { vertical-align: bottom; padding: 0 0 4px; min-width: 20px; line-height: 1.25; }
 .nono .rowclue { text-align: right; padding-right: 8px; white-space: nowrap; }
 .nono .cell { width: 20px; height: 20px; border: 1px solid var(--line); background: var(--panel-2); cursor: pointer; }
-.nono .cell.gapcol { border-right: 2px solid color-mix(in srgb, var(--muted) 60%, transparent); }
 .nono .cell.filled { background: var(--ink); }
 .nono .cell.crossed { background: var(--panel-2) linear-gradient(45deg, transparent 45%, var(--muted) 45% 55%, transparent 55%); }
 .nono .cell.given { cursor: default; outline: 2px solid var(--accent); outline-offset: -3px; }

@@ -7,7 +7,7 @@
   {
    "id": 1,
    "title": "All Hands",
-   "flavor": "Recovered from the All Hands answering machine: two tones sounded together, and a few keys were tapped twice or thrice before the message moved on.",
+   "flavor": "Two notes at once, some pressed more insistently than others.",
    "blocks": [
     {
      "type": "list",
@@ -33,7 +33,7 @@
   {
    "id": 2,
    "title": "Monday Deploy",
-   "flavor": "The same quantities keep returning with different little marks beneath them; translate each into its own counting and then take its place along the alphabet.",
+   "flavor": "Same quantities, different fingers.",
    "blocks": [
     {
      "type": "list",
@@ -60,7 +60,7 @@
   {
    "id": 3,
    "title": "Standup",
-   "flavor": "At standup someone knocks from the hallway: two raps, a held breath, three raps. The first burst chooses the row and the second the column on a five-by-five grid that has no place for J.",
+   "flavor": "Through the wall: bursts of knocks, always in pairs.",
    "blocks": [
     {
      "type": "taps",
@@ -101,7 +101,7 @@
   {
    "id": 4,
    "title": "Hotfix",
-   "flavor": "Two forward and one across; keep the square where you land. The copyist had the alphabet up to a mirror, so reflect that letter back before speaking it.",
+   "flavor": "Two forward, one across. Remember where you land. Whoever transcribed it held the alphabet up to a mirror.",
    "blocks": [
     {
      "type": "board",
@@ -131,7 +131,7 @@
   {
    "id": 5,
    "title": "Burn Rate",
-   "flavor": "Every rung of the ladder is two switches set or clear; the engineers swear that three rungs together are where the chain first folds into a single letter.",
+   "flavor": "Somewhere between the lab and the server room, four became two, and two became three.",
    "blocks": [
     {
      "type": "mono",
@@ -147,7 +147,7 @@
   {
    "id": 6,
    "title": "Runway",
-   "flavor": "The office photograph is of the negative, and the negative is hung upside down; read from the back, the right way up, in triplets, until the chain folds into letters.",
+   "flavor": "We kept the wrong half, and we kept it backwards.",
    "blocks": [
     {
      "type": "mono",
@@ -163,7 +163,7 @@
  ],
  "meta": {
   "title": "Meta: Series Z",
-  "flavor": "Each transmission reached the office with exactly one corrupted character; the true answer hides behind it, and the corruption—kept in turn—spells the final message.",
+  "flavor": "Every report is one slip away from perfect. Keep the slips.",
   "blocks": [],
   "length": 6,
   "hash": "a05ea7e164155b466597252c7aabb5e0922e25f63623c5447bf592560e8ee3db"

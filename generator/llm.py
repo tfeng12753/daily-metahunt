@@ -1,7 +1,8 @@
 """Optional flavour-text polish via IFM's K2 Horizon (OpenAI-compatible API).
 
-The model only ever rewrites prose: the round intro, each feeder's flavour
-line and the meta's flavour. Puzzle data, answers and hashes are untouched.
+The model only rewrites each round's opening story. Clue lines stay
+hand-written, because rewrites kept explaining methods and once stated a
+wrong fact about one. Puzzle data, answers and hashes are untouched.
 Every rewrite is validated (no answers, no intermediate strings, no naming
 the mechanism outright, sane length) and anything that fails keeps the
 template text, so a bad or missing API response can never break a round.
@@ -31,8 +32,13 @@ BANNED = ["morse", "semaphore", "braille", "vigenere", "vigenère", "atbash", "n
           "knight's tour", "radix", "base two", "base 2", "sudoku", "drop quote",
           "dropquote", "anagram", "shredded sentence"]
 
+# Descriptions of what the solved output looks like spoil every round, easy included.
+OUTPUT_TELLS = ["block letter", "five-by-five", "five by five", "5x5", "5×5", "pixel letter",
+                "chunky letter", "will spell", "spells out", "spell something", "spell a word"]
+
 SYSTEM = """You write flavour text for a very hard puzzle hunt, in the style of the MIT Mystery Hunt and tech-company hunts.
 Flavour text is an oblique, atmospheric nudge: it must preserve every hint in the original line (a solver should be able to get the same "aha" from it), but it must never name the technique outright, never state an answer, and never give instructions.
+Never describe what the finished picture, grid or decoded text will look like (no "letters", "spell", "reads", "word" hints about the output).
 Write in the voice of the round's story. British spelling. One to three sentences per line, at most 55 words. No emoji, no markdown, no quotation marks around the whole line.
 Reply with a single JSON object and nothing else."""
 
@@ -93,6 +99,8 @@ def ok(text, forbidden, old, easy=False):
         # long answers are caught even if spaced out; short ones only as whole words
         if (len(w) >= 6 and w in letters) or w in words:
             return False
+    if any(t in low for t in OUTPUT_TELLS):
+        return False
     # The easy round names each technique on the page anyway.
     return easy or not any(b in low for b in BANNED if b not in old.lower())
 
@@ -107,17 +115,9 @@ def polish(puzzle, solution, theme, easy=False):
         for q in solution["puzzles"]:
             forbidden |= {q["answer"], q["encoded"]} | ({q["mutated"]} if q["mutated"] else set())
 
-        lines = {"intro": {"original": puzzle["intro"], "note": "Round introduction: set the scene for the whole round."}}
-        for p, q in zip(puzzle["puzzles"], solution["puzzles"]):
-            note = "Feeder titled %r. Hidden method (never name it, only allude): %s" % (p["title"], p["hint"])
-            if q["transform"]:
-                note += " There is a second layer (%s) that the original also hints at; keep that hint." % q["transform"]
-            if q["mechanism"].startswith("Vigen"):
-                note += " The key is this puzzle's title, so the line must still point at the title/heading."
-            lines["p%d" % p["id"]] = {"original": p["flavor"], "note": note}
-        lines["meta"] = {"original": puzzle["meta"]["flavor"],
-                         "note": "The metapuzzle. How it works (allude, never state plainly): " + solution["explain"]}
-
+        # Only the opening story is rewritten. Clue lines stay hand-written: a model asked to be
+        # "oblique" still tends to explain the method, and can state wrong facts about it.
+        lines = {"intro": {"original": puzzle["intro"], "note": "Round introduction: set the scene for the whole round. Do not hint at any puzzle method."}}
         user = ("Round: %s\nSetting: %s, %s.\n%s\nRewrite each line below. Return JSON mapping the same keys to the new text.\n\n%s"
                 % (puzzle["round"], theme["place"], theme["crew"],
                    "This is the EASY round, for newcomers: the technique is shown next to each puzzle, so flavour "
@@ -133,14 +133,7 @@ def polish(puzzle, solution, theme, easy=False):
     kept = 0
     if ok(out.get("intro"), forbidden, puzzle["intro"], easy):
         puzzle["intro"], kept = out["intro"].strip(), kept + 1
-    for p in puzzle["puzzles"]:
-        new = out.get("p%d" % p["id"])
-        if ok(new, forbidden, p["flavor"], easy):
-            p["flavor"], kept = new.strip(), kept + 1
-    if ok(out.get("meta"), forbidden, puzzle["meta"]["flavor"], easy):
-        puzzle["meta"]["flavor"], kept = out["meta"].strip(), kept + 1
-    total = len(puzzle["puzzles"]) + 2
-    print("llm polish (%s): %d/%d lines rewritten" % (model, kept, total))
+    print("llm polish (%s): intro %s" % (model, "rewritten" if kept else "kept"))
     return model
 
 

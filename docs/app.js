@@ -232,7 +232,6 @@
             else { td.classList.add("filled"); }
           });
         }
-        if (c % 6 === 5) td.classList.add("gapcol");
         tr.append(td);
       }
       t.append(tr);
@@ -240,8 +239,7 @@
     wrap.append(t);
     const legend = el("p", "note nono-legend");
     legend.innerHTML = '<span class="nono-key filled"></span> filled &nbsp; <span class="nono-key crossed">×</span> empty &nbsp; ' +
-      '<span class="nono-key given"></span> gold border = given to you &nbsp;·&nbsp; click a square: blank → filled → × → blank. ' +
-      "Numbers are runs of filled squares, in order; the picture is the answer in 5×5 block letters, one letter between each thick line.";
+      '<span class="nono-key given"></span> given &nbsp;·&nbsp; click to cycle blank → filled → ×';
     wrap.append(legend);
     return wrap;
   }
