@@ -28,7 +28,8 @@ BANNED = ["morse", "semaphore", "braille", "vigenere", "vigenère", "atbash", "n
           "multi-tap", "multitap", "binary", "cipher", "nonogram", "picross",
           "paint by numbers", "word search", "wordsearch", "rail fence", "railfence",
           "cryptogram", "substitution", "book cipher", "signal flag", "semaphore flag",
-          "knight's tour", "radix", "base two", "base 2"]
+          "knight's tour", "radix", "base two", "base 2", "sudoku", "drop quote",
+          "dropquote", "anagram", "shredded sentence"]
 
 SYSTEM = """You write flavour text for a very hard puzzle hunt, in the style of the MIT Mystery Hunt and tech-company hunts.
 Flavour text is an oblique, atmospheric nudge: it must preserve every hint in the original line (a solver should be able to get the same "aha" from it), but it must never name the technique outright, never state an answer, and never give instructions.
@@ -78,7 +79,7 @@ def parse_json(text):
     return json.loads(text[start:end + 1])
 
 
-def ok(text, forbidden, old):
+def ok(text, forbidden, old, easy=False):
     if not isinstance(text, str):
         return False
     t = text.strip()
@@ -92,10 +93,11 @@ def ok(text, forbidden, old):
         # long answers are caught even if spaced out; short ones only as whole words
         if (len(w) >= 6 and w in letters) or w in words:
             return False
-    return not any(b in low for b in BANNED if b not in old.lower())
+    # The easy round names each technique on the page anyway.
+    return easy or not any(b in low for b in BANNED if b not in old.lower())
 
 
-def polish(puzzle, solution, theme):
+def polish(puzzle, solution, theme, easy=False):
     key = os.environ.get("IFM_API_KEY")
     if not key:
         return None
@@ -116,21 +118,24 @@ def polish(puzzle, solution, theme):
         lines["meta"] = {"original": puzzle["meta"]["flavor"],
                          "note": "The metapuzzle. How it works (allude, never state plainly): " + solution["explain"]}
 
-        user = ("Round: %s\nSetting: %s, %s.\n\nRewrite each line below. Return JSON mapping the same keys to the new text.\n\n%s"
-                % (puzzle["round"], theme["place"], theme["crew"], json.dumps(lines, indent=1, ensure_ascii=False)))
+        user = ("Round: %s\nSetting: %s, %s.\n%s\nRewrite each line below. Return JSON mapping the same keys to the new text.\n\n%s"
+                % (puzzle["round"], theme["place"], theme["crew"],
+                   "This is the EASY round, for newcomers: the technique is shown next to each puzzle, so flavour "
+                   "can be warmer and more direct. Still never state an answer.\n" if easy else "",
+                   json.dumps(lines, indent=1, ensure_ascii=False)))
         out = parse_json(chat(key, model, [{"role": "system", "content": SYSTEM}, {"role": "user", "content": user}]))
     except Exception as e:  # network, auth, bad JSON: keep the templates
         print("llm polish skipped: %s" % e, file=sys.stderr)
         return None
 
     kept = 0
-    if ok(out.get("intro"), forbidden, puzzle["intro"]):
+    if ok(out.get("intro"), forbidden, puzzle["intro"], easy):
         puzzle["intro"], kept = out["intro"].strip(), kept + 1
     for p in puzzle["puzzles"]:
         new = out.get("p%d" % p["id"])
-        if ok(new, forbidden, p["flavor"]):
+        if ok(new, forbidden, p["flavor"], easy):
             p["flavor"], kept = new.strip(), kept + 1
-    if ok(out.get("meta"), forbidden, puzzle["meta"]["flavor"]):
+    if ok(out.get("meta"), forbidden, puzzle["meta"]["flavor"], easy):
         puzzle["meta"]["flavor"], kept = out["meta"].strip(), kept + 1
     total = len(puzzle["puzzles"]) + 2
     print("llm polish (%s): %d/%d lines rewritten" % (model, kept, total))

@@ -18,6 +18,10 @@
       <span class="mark">?</span>
       <span>Daily Metahunt</span>
     </div>
+    <div class="diff" role="group" aria-label="Difficulty">
+      <button type="button" data-diff="hard" class="on">Hard</button>
+      <button type="button" data-diff="easy">Easy</button>
+    </div>
     <nav class="nav">
       <button id="prev" class="ghost" aria-label="Previous puzzle">←</button>
       <select id="archive" aria-label="Choose a date"></select>
@@ -40,12 +44,13 @@
   <section id="puzzles" class="puzzles"></section>
   <section id="meta"></section>
   <section id="solution"></section>
+  <section id="leaderboard"></section>
 
   <details class="rules">
     <summary>How this works</summary>
-    <p>Every day at 00:00 UTC a new round appears: a handful of feeder puzzles and one metapuzzle. Each feeder hides a single word, and nothing tells you how. The flavour text, the title, and the shape of the data are the only clues. Some puzzles have more than one layer.</p>
+    <p>Every day at 00:00 UTC two new rounds appear on the same theme. <strong>Hard</strong> gives you nothing but flavour; <strong>Easy</strong> names each puzzle's technique, shows answer lengths and explains the meta. Each round is a handful of feeder puzzles and one metapuzzle. Each feeder hides a single word. On Hard, nothing tells you how: the flavour text, the title and the shape of the data are the only clues, and some puzzles have more than one layer.</p>
     <p>The meta uses the feeder answers (and sometimes things you noticed along the way) to produce one final, on-theme word. Answers are checked against a hash, so the page itself doesn't contain them. Solutions for each round are published the day after.</p>
-    <p>Hints exist, but using one is noted on your record.</p>
+    <p>Hints exist, but using one is noted on your record, and on the leaderboard each hint adds a five-minute penalty.</p>
   </details>
 </main>
 
@@ -53,6 +58,7 @@
   New round daily · <a href="https://github.com/tfeng12753/daily-metahunt">source</a>
 </footer>
 
+<script src="config.js"></script>
 <script src="app.js"></script>
 </body>
 </html>

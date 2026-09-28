@@ -8,10 +8,10 @@ n = int(sys.argv[1]) if len(sys.argv) > 1 else 730
 for k in range(n):
     d = (EPOCH + dt.timedelta(days=k)).isoformat()
     for secret in ("dev-secret", "another-secret"):
-        p, s = build(secret, d)
+        p, s = build(secret, d, easy=(secret == "another-secret"))
         counts[s["metaType"]] += 1
         for q in s["puzzles"]:
             mechs[q["mechanism"]] += 1
-print("ok:", 2 * n, "puzzles")
+print("ok:", 2 * n, "rounds (hard with one secret, easy with the other)")
 print(dict(counts))
 print(dict(mechs))

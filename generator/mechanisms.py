@@ -163,6 +163,9 @@ class Mechanism:
     hint = ""
     flavors = []
     allow_transform = True
+    weight = 1      # relative pick frequency; word/logic puzzles are weighted up
+    easy = True     # allowed in the easy round
+    hard = True     # allowed in the hard round
 
     def can(self, word, ctx=None):
         return all(c in ALPHA for c in word)
@@ -175,6 +178,7 @@ class Mechanism:
 
 
 class DnaBinary(Mechanism):
+    easy = False
     key = "dna_binary"
     name = "Binary codons"
     hint = "Pairs of bits are nucleotides (A=00, C=01, G=10, T=11). Six bits = one codon; translate codons to amino-acid one-letter codes."
@@ -203,6 +207,7 @@ class DnaBinary(Mechanism):
 
 
 class DnaTemplate(Mechanism):
+    easy = False
     key = "dna_template"
     name = "Template strand"
     hint = "This is the template (antisense) strand written 5′→3′. Reverse-complement it to get the coding strand, then translate codons to amino-acid one-letter codes."
@@ -229,35 +234,51 @@ class DnaTemplate(Mechanism):
 class Morse(Mechanism):
     key = "morse"
     name = "Morse code"
-    hint = "Two glyphs stand for dot and dash; the gaps separate letters."
+    hint = "Morse code: two symbols stand for dot and dash; gaps separate letters."
     flavors = [
         "{Crew} tapped this out against the hull: short, long, and the silence in between.",
         "Two kinds of thing kept passing {at}, in an order that felt far too deliberate.",
         "Samuel would have recognised the rhythm at once, whatever it happened to be wearing.",
     ]
+    VARIANTS = {
+        "lamp": ("Morse code (signal lamp)", "Morse code: short flashes are dots, long flashes are dashes; each row is a letter.", [
+            "The lighthouse keeper logged every flash: how long the lamp burned, and when it rested.",
+            "An Aldis lamp, seen from the shore {at}. Some flashes lingered.",
+        ]),
+        "audio": ("Morse code (audio)", "Morse code, played as beeps. Short = dot, long = dash; longer silences separate letters.", [
+            "Recorded {at} on a very old tape. Headphones recommended.",
+            "Something on the radio, between stations. It repeats if you ask it to.",
+        ]),
+    }
 
     def encode(self, word, rng, ctx):
+        variant = rng.choice(["glyphs", "glyphs", "lamp", "audio"])
+        if variant != "glyphs":
+            ctx["_name"], ctx["_hint"], ctx["_flavors"] = self.VARIANTS[variant]
+            groups = [MORSE[c] for c in word]
+            if variant == "lamp":
+                return [{"type": "lamp", "groups": groups}]
+            return [{"type": "audio", "kind": "morse", "groups": groups}]
         dot, dash = ctx["glyphs"]["dot"], ctx["glyphs"]["dash"]
         if rng.random() < 0.5:
             dot, dash = dash, dot  # which glyph is the dot is part of the puzzle
-        letters = []
-        for c in word:
-            letters.append("".join(dot if s == "." else dash for s in MORSE[c]))
+        letters = ["".join(dot if s == "." else dash for s in MORSE[c]) for c in word]
         return [{"type": "glyphs", "groups": letters, "legend": [dot, dash]}]
 
     def decode(self, blocks, ctx):
         b = blocks[0]
+        if b["type"] in ("lamp", "audio"):
+            return "".join(MORSE_REV[g] for g in b["groups"])
         for dot, dash in (b["legend"], b["legend"][::-1]):
             out = ""
-            ok = True
             for g in b["groups"]:
                 code = g.replace(dot, ".").replace(dash, "-")
                 if code not in MORSE_REV:
-                    ok = False
                     break
                 out += MORSE_REV[code]
-            if ok and out == ctx.get("expect", out):
-                return out
+            else:
+                if out == ctx.get("expect", out):
+                    return out
         return None
 
 
@@ -270,16 +291,38 @@ class Semaphore(Mechanism):
         "A signaller with no flags and no sense of time left these behind.",
         "The hands aren't telling the time. They're waving.",
     ]
+    COMPASS = ["N", "NE", "E", "SE", "S", "SW", "W", "NW"]
+    VARIANTS = {
+        "bearings": ("Semaphore (compass bearings)", "Flag semaphore, with each arm given as a compass direction as you face the signaller (N = straight up).", [
+            "A signaller who will only speak in compass points.",
+            "The navigator {at} wrote down two bearings at a time and refused to explain.",
+        ]),
+        "figures": ("Semaphore (figures)", "Flag semaphore: read each figure's arm positions.", [
+            "Snapshots of someone on the far pier, arms out at very particular angles.",
+            "A flip-book of a figure who never once put their arms down.",
+        ]),
+    }
 
     def encode(self, word, rng, ctx):
+        variant = rng.choice(["clocks", "bearings", "figures"])
         items = []
         for c in word:
             a, b = SEMAPHORE[c]
             items.append([a, b] if rng.random() < 0.5 else [b, a])
-        return [{"type": "clocks", "items": items}]
+        if variant == "clocks":
+            return [{"type": "clocks", "items": items}]
+        ctx["_name"], ctx["_hint"], ctx["_flavors"] = self.VARIANTS[variant]
+        if variant == "bearings":
+            return [{"type": "list", "items": ["%s & %s" % (self.COMPASS[a], self.COMPASS[b]) for a, b in items], "inline": True}]
+        return [{"type": "semaphore", "items": items}]
 
     def decode(self, blocks, ctx):
-        return "".join(SEMAPHORE_REV[frozenset(p)] for p in blocks[0]["items"])
+        b = blocks[0]
+        if b["type"] == "list":
+            pairs = [[self.COMPASS.index(x) for x in it.split(" & ")] for it in b["items"]]
+        else:
+            pairs = b["items"]
+        return "".join(SEMAPHORE_REV[frozenset(p)] for p in pairs)
 
 
 class BrailleDecimal(Mechanism):
@@ -291,12 +334,32 @@ class BrailleDecimal(Mechanism):
         "These readings came from a sensor with six raised pins. It reports in powers of two, and it reports in order.",
         "Sixty-four ways to press a fingertip into paper. Louis numbered his from one to six; we just added them up.",
     ]
+    VARIANTS = {
+        "bits": ("Braille as bit strings", "Six-bit strings: the k-th character is 1 if Braille dot k is raised (dots 1-2-3 down the left, 4-5-6 down the right).", [
+            "A six-pin sensor reported which pins were pressed, left to right, one through six.",
+            "Six switches per reading. Louis would have numbered them the same way.",
+        ]),
+        "cells": ("Braille (drawn)", "Braille cells, drawn as raised and flat dots.", [
+            "Rubbings taken from the handrail {at}.",
+            "Someone traced the bumps on the lift buttons.",
+        ]),
+    }
 
     def encode(self, word, rng, ctx):
-        return [{"type": "numbers", "items": [BRAILLE_VAL[c] for c in word]}]
+        variant = rng.choice(["numbers", "bits", "cells"])
+        if variant == "numbers":
+            return [{"type": "numbers", "items": [BRAILLE_VAL[c] for c in word]}]
+        ctx["_name"], ctx["_hint"], ctx["_flavors"] = self.VARIANTS[variant]
+        bits = ["".join("1" if str(d) in BRAILLE_DOTS[c] else "0" for d in range(1, 7)) for c in word]
+        if variant == "bits":
+            return [{"type": "list", "items": bits, "inline": True}]
+        return [{"type": "braille", "items": bits}]
 
     def decode(self, blocks, ctx):
-        return "".join(BRAILLE_REV[n] for n in blocks[0]["items"])
+        b = blocks[0]
+        if b["type"] == "numbers":
+            return "".join(BRAILLE_REV[n] for n in b["items"])
+        return "".join(BRAILLE_REV[int(x[::-1], 2)] for x in b["items"])
 
 
 class Elements(Mechanism):
@@ -308,12 +371,34 @@ class Elements(Mechanism):
         "Mendeleev would have lined these up by number without a second thought.",
         "The chemist only ever shopped from the first twenty-six shelves.",
     ]
+    SYMBOLS = ["H", "He", "Li", "Be", "B", "C", "N", "O", "F", "Ne", "Na", "Mg", "Al", "Si", "P",
+               "S", "Cl", "Ar", "K", "Ca", "Sc", "Ti", "V", "Cr", "Mn", "Fe"]
+    MASSES = ["1.008", "4.003", "6.94", "9.012", "10.81", "12.011", "14.007", "15.999", "18.998",
+              "20.180", "22.990", "24.305", "26.982", "28.085", "30.974", "32.06", "35.45", "39.95",
+              "39.098", "40.078", "44.956", "47.867", "50.942", "51.996", "54.938", "55.845"]
+    VARIANTS = {
+        "symbols": ("Atomic numbers (symbols)", "Element symbols; each atomic number is a letter position (H = 1 = A).", [
+            "Labels peeled off a rack of reagent bottles {at}, in the order they were used.",
+            "A formula no chemist would ever write, but every chemist could read.",
+        ]),
+        "masses": ("Atomic numbers (by mass)", "Standard atomic masses: identify each element, then use its atomic number as a letter position.", [
+            "Weighed, not counted. The scale {at} is very precise.",
+            "The assayer only wrote down what everything weighed.",
+        ]),
+    }
 
     def encode(self, word, rng, ctx):
-        return [{"type": "list", "items": [ELEMENTS[idx(c)] for c in word]}]
+        variant = rng.choice(["names", "symbols", "masses"])
+        if variant == "names":
+            return [{"type": "list", "items": [ELEMENTS[idx(c)] for c in word]}]
+        ctx["_name"], ctx["_hint"], ctx["_flavors"] = self.VARIANTS[variant]
+        table = self.SYMBOLS if variant == "symbols" else self.MASSES
+        return [{"type": "list", "items": [table[idx(c)] for c in word], "inline": True, "variant": variant}]
 
     def decode(self, blocks, ctx):
-        return "".join(ALPHA[ELEMENTS.index(e)] for e in blocks[0]["items"])
+        b = blocks[0]
+        table = {"symbols": self.SYMBOLS, "masses": self.MASSES}.get(b.get("variant"), ELEMENTS)
+        return "".join(ALPHA[table.index(e)] for e in b["items"])
 
 
 class Dtmf(Mechanism):
@@ -325,25 +410,47 @@ class Dtmf(Mechanism):
         "Before phones were smart, you had to be patient with the seven key.",
         "Every chord is a button. Every button remembers how many times it was hit.",
     ]
+    VARIANTS = {
+        "keys": ("Phone multi-tap", "Old phone multi-tap: the digit is the key, and how many times it repeats picks the letter.", [
+            "A text message typed on a flip phone {at}, one thumb, no predictive text.",
+            "The keypad {at} is worn smooth on some buttons more than others.",
+        ]),
+        "audio": ("DTMF multi-tap (audio)", "Touch-tone (DTMF) key presses, played as sound. Identify each key; repeated presses pick the letter, multi-tap style.", [
+            "A voicemail that is nothing but someone pressing buttons. Listen closely.",
+            "Recorded off a payphone {at}: beeps, pauses, and more beeps.",
+        ]),
+    }
 
     def encode(self, word, rng, ctx):
-        items = []
+        variant = rng.choice(["tones", "keys", "audio"])
+        presses = []
         for c in word:
             for k, letters in KEYPAD.items():
                 if c in letters:
-                    items.append("%d Hz + %d Hz  ×%d" % (DTMF_ROW[k], DTMF_COL[k], letters.index(c) + 1))
-        return [{"type": "list", "items": items, "mono": True}]
+                    presses.append((k, letters.index(c) + 1))
+        if variant == "tones":
+            items = ["%d Hz + %d Hz  ×%d" % (DTMF_ROW[k], DTMF_COL[k], n) for k, n in presses]
+            return [{"type": "list", "items": items, "mono": True}]
+        ctx["_name"], ctx["_hint"], ctx["_flavors"] = self.VARIANTS[variant]
+        if variant == "keys":
+            return [{"type": "list", "items": [k * n for k, n in presses], "inline": True, "variant": "keys"}]
+        return [{"type": "audio", "kind": "dtmf", "groups": [k * n for k, n in presses]}]
 
     def decode(self, blocks, ctx):
+        b = blocks[0]
+        if b["type"] == "audio" or b.get("variant") == "keys":
+            key = "groups" if b["type"] == "audio" else "items"
+            return "".join(KEYPAD[g[0]][len(g) - 1] for g in b[key])
         out = ""
-        for it in blocks[0]["items"]:
+        for it in b["items"]:
             parts = it.replace("Hz", "").replace("+", "").replace("×", " ").split()
-            key = DTMF_REV[(int(parts[0]), int(parts[1]))]
-            out += KEYPAD[key][int(parts[2]) - 1]
+            k = DTMF_REV[(int(parts[0]), int(parts[1]))]
+            out += KEYPAD[k][int(parts[2]) - 1]
         return out
 
 
 class Vigenere(Mechanism):
+    easy = False
     key = "vigenere"
     name = "Vigenère keyed by the title"
     hint = "Vigenère cipher; the key is this puzzle's title (letters only)."
@@ -370,6 +477,7 @@ class Vigenere(Mechanism):
 
 
 class AtbashNato(Mechanism):
+    easy = False
     key = "atbash_nato"
     name = "Mirrored NATO"
     hint = "NATO phonetic alphabet, then Atbash (A↔Z, B↔Y, ...)."
@@ -396,6 +504,10 @@ class TapCode(Mechanism):
         "{Crew} kept each other sane with a knuckle and a five-by-five memory.",
         "Knock, knock. Pause. Knock knock knock.",
     ]
+    AUDIO = ("Tap code (audio)", "Tap code, as knocks: a burst for the row, a burst for the column, in a 5×5 grid without K.", [
+        "Recorded through the wall {at}. Count carefully.",
+        "The pipes {at} have been knocking all night, and not at random.",
+    ])
 
     def can(self, word, ctx=None):
         return "K" not in word
@@ -406,10 +518,16 @@ class TapCode(Mechanism):
             for r, row in enumerate(TAP_GRID):
                 if c in row:
                     groups.append(["•" * (r + 1), "•" * (row.index(c) + 1)])
+        if rng.random() < 0.35:
+            ctx["_name"], ctx["_hint"], ctx["_flavors"] = self.AUDIO
+            return [{"type": "audio", "kind": "taps", "groups": [[len(a), len(b)] for a, b in groups]}]
         return [{"type": "taps", "groups": groups}]
 
     def decode(self, blocks, ctx):
-        return "".join(TAP_GRID[len(a) - 1][len(b) - 1] for a, b in blocks[0]["groups"])
+        b = blocks[0]
+        if b["type"] == "audio":
+            return "".join(TAP_GRID[a - 1][c - 1] for a, c in b["groups"])
+        return "".join(TAP_GRID[len(a) - 1][len(c) - 1] for a, c in b["groups"])
 
 
 class Keyboard(Mechanism):
@@ -474,16 +592,25 @@ class Resistors(Mechanism):
         "The engineer colour-coded everything, then numbered the alphabet.",
         "Every component on this board offers exactly the same resistance: somewhere between one and twenty-six.",
     ]
+    TEXT = ("Resistor colour code (written)", "Resistor colour code: each pair of colours is two digits (black 0 … white 9), a letter position.", [
+        "The parts list {at} was dictated over the phone by someone who only knew the stripes.",
+        "Bill of materials, colourblind edition: every part described by its first two bands.",
+    ])
 
     def encode(self, word, rng, ctx):
         items = []
         for c in word:
             n = idx(c) + 1
             items.append([RESISTOR[n // 10], RESISTOR[n % 10], "black", "gold"])
+        if rng.random() < 0.35:
+            ctx["_name"], ctx["_hint"], ctx["_flavors"] = self.TEXT
+            return [{"type": "list", "items": ["%s–%s" % (a, b) for a, b, _, _ in items]}]
         return [{"type": "resistors", "items": items}]
 
     def decode(self, blocks, ctx):
-        return "".join(ALPHA[RESISTOR.index(a) * 10 + RESISTOR.index(b) - 1] for a, b, _, _ in blocks[0]["items"])
+        b = blocks[0]
+        pairs = [it.split("–") for it in b["items"]] if b["type"] == "list" else [it[:2] for it in b["items"]]
+        return "".join(ALPHA[RESISTOR.index(x) * 10 + RESISTOR.index(y) - 1] for x, y in pairs)
 
 
 class Pigpen(Mechanism):
@@ -539,6 +666,7 @@ class Tape(Mechanism):
 
 
 class PrimesRoman(Mechanism):
+    easy = False
     key = "primes_roman"
     name = "Prime indices in Roman numerals"
     hint = "Each Roman numeral is a prime; its position in the list of primes (2 is 1st) is a letter position."
@@ -556,6 +684,7 @@ class PrimesRoman(Mechanism):
 
 
 class Bacon(Mechanism):
+    easy = False
     key = "bacon"
     name = "Baconian cipher"
     hint = "Baconian cipher: in groups of five letters, lowercase = a/0 and uppercase = b/1; A = aaaaa, B = aaaab, … (26-letter version). Leftover letters at the end are padding."

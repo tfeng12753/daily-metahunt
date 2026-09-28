@@ -152,3 +152,53 @@ button, select, input { font: inherit; color: inherit; }
 .fitcell { width: 30px; height: 30px; border: 1.5px solid var(--muted); border-radius: 3px; }
 .fitcell.shade { background: color-mix(in srgb, var(--accent) 55%, transparent); border-color: var(--accent); }
 @media (max-width: 560px) { .board td { width: 30px; height: 30px; } .fitcell { width: 24px; height: 24px; } }
+
+.diff { display: inline-flex; border: 1px solid var(--line); border-radius: 9px; overflow: hidden; }
+.diff button { background: transparent; border: 0; padding: 6px 12px; cursor: pointer; color: var(--muted); font-weight: 600; font-size: 14px; }
+.diff button.on { background: var(--accent); color: var(--accent-ink); }
+.diff button:disabled { opacity: .35; cursor: default; }
+.enum { font-family: var(--mono); font-size: 16px; color: var(--muted); font-weight: 400; }
+.technique { display: inline-block; font: 600 11px var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--accent); border: 1px solid color-mix(in srgb, var(--accent) 45%, transparent); border-radius: 999px; padding: 2px 10px; margin: 0 0 10px; }
+.explain { margin: -8px 0 16px; font-size: 14px; color: var(--ink); border-left: 3px solid var(--accent); padding: 2px 12px; }
+.note { font-size: 13px; color: var(--muted); margin: 0 0 10px; }
+.scroll-x { overflow-x: auto; }
+.sudoku { border-collapse: collapse; border: 2px solid var(--ink); font: 600 18px var(--mono); }
+.sudoku td { width: 36px; height: 36px; border: 1px solid var(--line); text-align: center; position: relative; padding: 0; }
+.sudoku td.box-r { border-right: 2px solid var(--ink); }
+.sudoku td.box-b { border-bottom: 2px solid var(--ink); }
+.sudoku td.given { background: var(--panel-2); }
+.sudoku td.marked { background: color-mix(in srgb, var(--accent) 22%, transparent); }
+.sudoku input, .dropquote input { width: 100%; height: 100%; border: 0; background: transparent; text-align: center; font: inherit; color: var(--accent); text-transform: uppercase; padding: 0; }
+.sudoku input:focus, .dropquote input:focus { outline: 2px solid var(--accent); outline-offset: -2px; }
+.sudoku .cellnum { position: absolute; top: 1px; left: 3px; font: 600 9px var(--mono); color: var(--accent); pointer-events: none; }
+.dropquote { border-collapse: collapse; font: 600 14px var(--mono); }
+.dropquote .pool td { width: 24px; height: 18px; text-align: center; color: var(--muted); }
+.dropquote .slots td { width: 24px; height: 28px; border: 1px solid var(--line); }
+.dropquote .slots td.black { background: var(--ink); }
+.dropquote .slots tr:first-child td { border-top-width: 2px; }
+.lamp { display: grid; gap: 8px; background: #0b0d12; padding: 14px 16px; border-radius: 8px; }
+.lamp-row { display: flex; gap: 8px; align-items: center; min-height: 12px; }
+.flash { height: 10px; border-radius: 5px; background: #ffd66b; box-shadow: 0 0 10px #ffc83a; }
+.flash.short { width: 12px; }
+.flash.long { width: 40px; }
+.braille-cell { display: grid; grid-template-columns: repeat(2, 14px); gap: 6px; padding: 10px; background: var(--panel-2); border: 1px solid var(--line); border-radius: 8px; }
+.braille-cell .dot { width: 14px; height: 14px; border-radius: 50%; border: 1.5px solid var(--line); }
+.braille-cell .dot.on { background: var(--ink); border-color: var(--ink); }
+.audio-btn { font-size: 16px; }
+.tabs { display: flex; gap: 4px; }
+.tab { background: transparent; border: 1px solid var(--line); border-radius: 999px; padding: 3px 12px; cursor: pointer; font-size: 13px; color: var(--muted); }
+.tab.on { border-color: var(--accent); color: var(--accent); }
+.board-card { margin-top: 28px; }
+.board-table tr.me td { color: var(--accent); font-weight: 600; }
+.join { margin-bottom: 4px; }
+@media (max-width: 560px) {
+  .masthead .wrap { gap: 8px; }
+  .diff button { padding: 6px 8px; font-size: 13px; }
+  .nav select { max-width: 34vw; }
+  .sudoku td { width: 30px; height: 30px; }
+}
+/* Grid items default to min-width:auto and would stretch to fit a wide nonogram. */
+.puzzles > .card, .body { min-width: 0; }
+.dropquote .slots td.black { background: repeating-linear-gradient(45deg, var(--muted) 0 2px, transparent 2px 6px); }
+.dropquote .slots td.open { background: var(--panel-2); }
+.plain-list { list-style-position: inside; padding-left: 0; }

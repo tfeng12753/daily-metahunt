@@ -1,0 +1,15 @@
+{
+  "name": "daily-metahunt",
+  "private": true,
+  "type": "module",
+  "description": "Leaderboard API (and local static server) for Daily Metahunt",
+  "scripts": {
+    "start": "node server/index.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "pg": "^8.23.0"
+  }
+}

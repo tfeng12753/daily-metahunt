@@ -1,7 +1,7 @@
 # Daily Metahunt
 
-A new puzzle-hunt round every day, in the spirit of MIT Mystery Hunt and the
-tech-company hunts. Each round has five to eight **feeder puzzles** and one
+Two new puzzle-hunt rounds every day, a **Hard** one and an **Easy** one on the
+same theme, in the spirit of MIT Mystery Hunt and the tech-company hunts. Each round has five to eight **feeder puzzles** and one
 **metapuzzle**, all on a theme. Every feeder hides a word, the meta turns those
 words into a single final answer, and nothing tells you how. The flavour text,
 titles and shape of the data are the only clues.
@@ -13,6 +13,9 @@ titles and shape of the data are the only clues.
 - **A theme**, drawn from 22 rounds (Bletchley's Hut Eight, a bathysphere, a
   night train, a clockmaker's will, a CTF…), each with its own story, titles,
   Morse glyphs and a set of themed final answers.
+- **Hard vs Easy.** Hard gives you nothing but flavour. Easy uses 4–6 feeders,
+  no hidden layers, names each puzzle's technique, shows answer lengths and
+  explains its meta (first letters, fit-in grid, title diagonal or logbook).
 - **Feeders**, each built with a different mechanism, and sometimes with a
   second layer (Atbash, reversal or ROT13) hinted only in the flavour:
 
@@ -26,7 +29,15 @@ titles and shape of the data are the only clues.
   | Primes in Roman numerals | Baconian cipher in the typesetting | Nonogram (interactive, line-solvable) |
   | Word search: leftover letters | Cryptogram of a cluephrase | Rail fence of a cluephrase |
   | Book cipher on a recovered page | Knight's path on a letter board | Maritime signal flags |
-  | Numbers in mixed bases | | |
+  | Numbers in mixed bases | Anagrams with an extra letter | Letter sudoku (numbered squares) |
+  | Drop quote | Shredded sentence | Missing letters (easy only) |
+
+  Word and logic puzzles are weighted to appear about three times as often as
+  pure encodings. Classic codes also come in variations: Morse as symbols, a
+  signal lamp or audio; semaphore as clocks, compass bearings or stick figures;
+  Braille as numbers, bit strings or drawn cells; elements by name, symbol or
+  atomic mass; phone codes as tones, keypad presses or audio; tap code and
+  resistor codes as pictures, text or sound; cryptograms in letters or symbols.
 
 - **A meta**, which is one of:
   - *Mutation*: each feeder decodes with exactly one wrong letter; the wrong letters spell the answer.
@@ -42,11 +53,26 @@ never contains them. Intermediate layers and uncorrected mutations get a
 
 ## Hosting on Render
 
-`render.yaml` is a Render Blueprint for a free static site that serves `docs/`.
-In Render, choose **New → Blueprint** and pick this repo. Every daily bot
-commit then triggers a Render deploy, so Render stays current without its
-own cron job. The GitHub Pages deploy in the workflow still runs as a mirror;
-delete its last three steps if you only want Render.
+`render.yaml` is a Render Blueprint with two services:
+
+- **daily-metahunt**: a free static site serving `docs/`.
+- **daily-metahunt-api**: the leaderboard (`server/index.mjs`, Node, one dependency).
+
+Every daily bot commit redeploys both. The GitHub Pages deploy in the workflow
+still runs as a mirror; delete its last three steps if you only want Render.
+
+## Leaderboard
+
+Players pick a display name (no accounts). Each correct answer is sent to the
+API, which re-checks it against the round's hash before recording it, so only
+real solves count. Times run from 00:00 UTC on the round's date, and each hint
+adds a five-minute penalty. There are per-round and all-time boards for each
+difficulty.
+
+Scores live in Postgres via the `DATABASE_URL` environment variable on the API
+service (a free Neon or Supabase database works). Without it the API keeps
+scores in memory, which is fine locally but resets on every restart or deploy.
+`docs/config.js` holds the API's URL.
 
 ## How it runs
 
@@ -83,7 +109,7 @@ IFM_API_KEY=... python3 generator/llm.py 2026-10-02   # preview rewrites, writes
 ```bash
 python3 generator/selftest.py 365          # build a year of rounds in memory, verifying each
 python3 generator/generate.py --date 2026-10-01 --days 3   # writes into docs/
-node serve.mjs                              # http://localhost:8791
+npm install && node server/index.mjs        # site + leaderboard on http://localhost:8791
 ```
 
 Without `PUZZLE_SECRET`, the generator falls back to an insecure dev secret.

@@ -1,6 +1,8 @@
-# Render Blueprint: serves docs/ as a static site.
-# Rounds are generated and committed by .github/workflows/daily.yml every day
-# at 00:02 UTC; each of those commits triggers a Render deploy.
+# Render Blueprint.
+#   daily-metahunt      static site serving docs/
+#   daily-metahunt-api  leaderboard API (server/index.mjs)
+# Rounds are generated and committed by .github/workflows/daily.yml at 00:02 UTC;
+# each commit redeploys both services, so the API always has the new round.
 services:
   - type: web
     name: daily-metahunt
@@ -19,3 +21,21 @@ services:
       - path: /*
         name: X-Content-Type-Options
         value: nosniff
+
+  - type: web
+    name: daily-metahunt-api
+    runtime: node
+    plan: free
+    buildCommand: npm ci --omit=dev
+    startCommand: node server/index.mjs
+    healthCheckPath: /api/health
+    autoDeployTrigger: commit
+    envVars:
+      - key: SERVE_STATIC
+        value: "0"
+      - key: STATIC_BASE
+        value: https://daily-metahunt.onrender.com
+      # Postgres connection string (e.g. a free Neon or Supabase database).
+      # Without it the API still runs, but scores reset whenever it restarts.
+      - key: DATABASE_URL
+        sync: false

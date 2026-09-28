@@ -15,6 +15,25 @@
 
   let index = null;
   let puzzle = null;
+  let difficulty = "hard";
+  const rk = () => puzzle.salt || puzzle.date; // "2026-09-28" or "2026-09-28/easy"
+
+  // ---------- leaderboard API ----------
+  const API = ["localhost", "127.0.0.1"].includes(location.hostname) ? "" : (window.METAHUNT_API || "");
+  const me = () => { try { return JSON.parse(localStorage.getItem("mh:player")); } catch { return null; } };
+  async function api(path, body) {
+    const r = await fetch(API + path, body ? { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(body) } : {});
+    const data = await r.json().catch(() => ({}));
+    if (!r.ok) throw new Error(data.error || `HTTP ${r.status}`);
+    return data;
+  }
+  function report(kind, puzzleId, answer) {
+    const p = me();
+    if (!p) return;
+    api("/api/" + kind, { token: p.token, date: puzzle.date, difficulty, puzzle: puzzleId, answer })
+      .then(() => { if (kind === "solve") renderLeaderboard(); })
+      .catch(() => {});
+  }
 
   // ---------- storage (best-effort) ----------
   const load = (date) => {
@@ -193,6 +212,155 @@
     return g;
   }
 
+  function sudoku(b) {
+    const n = b.size, [br, bc] = n === 6 ? [2, 3] : [3, 3];
+    const marks = {};
+    b.marks.forEach(([r, c], i) => { marks[r + "," + c] = i + 1; });
+    const wrap = el("div");
+    wrap.append(el("p", "note", "Letters: " + [...b.alphabet].join(" ")));
+    const t = el("table", "sudoku");
+    b.rows.forEach((row, r) => {
+      const tr = el("tr");
+      [...row].forEach((ch, c) => {
+        const td = el("td");
+        if ((c + 1) % bc === 0 && c < n - 1) td.classList.add("box-r");
+        if ((r + 1) % br === 0 && r < n - 1) td.classList.add("box-b");
+        if (ch !== ".") { td.textContent = ch; td.classList.add("given"); }
+        else {
+          const inp = el("input");
+          inp.maxLength = 1;
+          inp.setAttribute("aria-label", `row ${r + 1} column ${c + 1}`);
+          inp.addEventListener("input", () => { inp.value = inp.value.toUpperCase().replace(/[^A-Z]/g, ""); });
+          td.append(inp);
+        }
+        const m = marks[r + "," + c];
+        if (m) { td.classList.add("marked"); td.append(el("span", "cellnum", String(m))); }
+        tr.append(td);
+      });
+      t.append(tr);
+    });
+    wrap.append(t);
+    return wrap;
+  }
+
+  function dropquote(b) {
+    const W = b.cols.length;
+    const t = el("table", "dropquote");
+    const depth = Math.max(...b.cols.map((c) => c.length));
+    for (let r = 0; r < depth; r++) {
+      const tr = el("tr", "pool");
+      b.cols.forEach((col) => {
+        const pad = depth - col.length;
+        tr.append(el("td", null, r >= pad ? col[r - pad] : ""));
+      });
+      t.append(tr);
+    }
+    b.mask.forEach((row) => {
+      const tr = el("tr", "slots");
+      [...row].forEach((m) => {
+        const td = el("td", m === "#" ? "black" : "open");
+        if (m !== "#") {
+          const inp = el("input");
+          inp.maxLength = 1;
+          inp.addEventListener("input", () => { inp.value = inp.value.toUpperCase().replace(/[^A-Z]/g, ""); });
+          td.append(inp);
+        }
+        tr.append(td);
+      });
+      t.append(tr);
+    });
+    const wrap = el("div", "scroll-x");
+    wrap.append(t);
+    return wrap;
+  }
+
+  function lamp(b) {
+    const box = el("div", "lamp");
+    b.groups.forEach((g) => {
+      const row = el("div", "lamp-row");
+      [...g].forEach((s) => row.append(el("span", s === "." ? "flash short" : "flash long")));
+      box.append(row);
+    });
+    return box;
+  }
+
+  function braille(b) {
+    const g = el("div", "gallery");
+    b.items.forEach((bits) => {
+      const cell = el("div", "braille-cell");
+      [0, 3, 1, 4, 2, 5].forEach((k) => cell.append(el("span", bits[k] === "1" ? "dot on" : "dot")));
+      g.append(cell);
+    });
+    return g;
+  }
+
+  function semaphoreFigure(pair) {
+    const s = svg("svg", { width: 70, height: 84, viewBox: "-35 -40 70 84", role: "img", "aria-label": "signaller" });
+    const st = { stroke: "var(--ink)", "stroke-width": 3, "stroke-linecap": "round" };
+    s.append(svg("circle", { cx: 0, cy: -22, r: 6, fill: "none", ...st }));
+    s.append(svg("line", { x1: 0, y1: -16, x2: 0, y2: 14, ...st }));
+    s.append(svg("line", { x1: 0, y1: 14, x2: -8, y2: 38, ...st }));
+    s.append(svg("line", { x1: 0, y1: 14, x2: 8, y2: 38, ...st }));
+    pair.forEach((d) => {
+      const a = (d * Math.PI) / 4, x = Math.sin(a) * 26, y = -8 - Math.cos(a) * 26;
+      s.append(svg("line", { x1: 0, y1: -8, x2: x, y2: y, ...st }));
+      s.append(svg("rect", { x: x - 5, y: y - 5, width: 10, height: 10, fill: "#d42a2a", stroke: "#f4c20d", "stroke-width": 1.5 }));
+    });
+    return s;
+  }
+
+  // Audio puzzles are synthesised in the browser, so there are no files to peek at.
+  let audioCtx = null;
+  function playAudio(b, btn) {
+    audioCtx = audioCtx || new (window.AudioContext || window.webkitAudioContext)();
+    const ctx = audioCtx, t0 = ctx.currentTime + 0.1;
+    let t = t0;
+    const tone = (freqs, start, dur) => {
+      freqs.forEach((f) => {
+        const o = ctx.createOscillator(), g = ctx.createGain();
+        o.frequency.value = f;
+        o.type = b.kind === "taps" ? "triangle" : "sine";
+        g.gain.setValueAtTime(0, start);
+        g.gain.linearRampToValueAtTime(0.18 / freqs.length, start + 0.005);
+        g.gain.setValueAtTime(0.18 / freqs.length, start + dur - 0.01);
+        g.gain.linearRampToValueAtTime(0, start + dur);
+        o.connect(g).connect(ctx.destination);
+        o.start(start);
+        o.stop(start + dur + 0.02);
+      });
+    };
+    const DTMF = { 1: [697, 1209], 2: [697, 1336], 3: [697, 1477], 4: [770, 1209], 5: [770, 1336], 6: [770, 1477], 7: [852, 1209], 8: [852, 1336], 9: [852, 1477] };
+    if (b.kind === "morse") {
+      const u = 0.09;
+      b.groups.forEach((g) => {
+        [...g].forEach((s) => { const d = s === "." ? u : 3 * u; tone([640], t, d); t += d + u; });
+        t += 2 * u;
+      });
+    } else if (b.kind === "dtmf") {
+      b.groups.forEach((g) => {
+        [...g].forEach((k) => { tone(DTMF[k], t, 0.13); t += 0.2; });
+        t += 0.55;
+      });
+    } else {
+      b.groups.forEach(([a, c]) => {
+        for (let i = 0; i < a; i++) { tone([180], t, 0.05); t += 0.2; }
+        t += 0.45;
+        for (let i = 0; i < c; i++) { tone([180], t, 0.05); t += 0.2; }
+        t += 1.0;
+      });
+    }
+    btn.disabled = true;
+    btn.textContent = "Playing…";
+    setTimeout(() => { btn.disabled = false; btn.textContent = "▶ Play again"; }, (t - t0 + 0.3) * 1000);
+  }
+
+  function audio(b) {
+    const btn = el("button", "btn secondary audio-btn", "▶ Play");
+    btn.type = "button";
+    btn.addEventListener("click", () => playAudio(b, btn));
+    return btn;
+  }
+
   function renderBlock(b) {
     switch (b.type) {
       case "mono": return el("pre", "mono" + (b.big ? " big" : "") + (b.wide ? " wide" : ""), b.text);
@@ -200,6 +368,16 @@
       case "board": return board(b);
       case "nonogram": return nonogram(b);
       case "fitgrid": return fitgrid(b);
+      case "sudoku": return sudoku(b);
+      case "dropquote": return dropquote(b);
+      case "lamp": return lamp(b);
+      case "braille": return braille(b);
+      case "audio": return audio(b);
+      case "semaphore": {
+        const g = el("div", "gallery");
+        b.items.forEach((p) => g.append(semaphoreFigure(p)));
+        return g;
+      }
       case "flags": {
         const g = el("div", "gallery");
         b.items.forEach((ch) => g.append(flag(ch)));
@@ -304,7 +482,11 @@
     card.id = "p" + p.id;
     const head = el("div", "card-head");
     head.append(el("span", "num", "PUZZLE " + String(p.id).padStart(2, "0")));
-    card.append(head, el("h2", null, p.title), el("p", "flavor", p.flavor));
+    const h2 = el("h2", null, p.title);
+    if (p.length) h2.append(el("span", "enum", ` (${p.length})`));
+    card.append(head, h2);
+    if (p.technique) card.append(el("span", "technique", p.technique));
+    card.append(el("p", "flavor", p.flavor));
     const body = el("div", "body");
     p.blocks.forEach((b) => body.append(renderBlock(b)));
     card.append(body);
@@ -318,12 +500,13 @@
     };
 
     card.append(answerForm(async (v, fb) => {
-      const h = await hash(puzzle.date, v);
+      const h = await hash(rk(), v);
       if (h === p.hash) {
         st.solved[p.id] = v;
-        save(puzzle.date, st);
+        save(rk(), st);
         markSolved(v);
         updateProgress();
+        report("solve", p.id, v);
       } else if (p.partials && p.partials[h]) {
         fb.className = "feedback warn";
         fb.textContent = p.partials[h];
@@ -337,11 +520,13 @@
     hintBtn.style.marginTop = "12px";
     const showHint = () => { hintBtn.replaceWith(el("div", "hint", p.hint)); };
     hintBtn.addEventListener("click", () => {
-      if (!confirm("Reveal the mechanism for this puzzle? It will be noted on your record.")) return;
+      const penalty = me() ? " On the leaderboard it adds a 5-minute penalty." : "";
+      if (!confirm("Reveal the mechanism for this puzzle? It will be noted on your record." + penalty)) return;
       if (!st.hints.includes(p.id)) st.hints.push(p.id);
-      save(puzzle.date, st);
+      save(rk(), st);
       showHint();
       updateProgress();
+      report("hint", p.id);
     });
     card.append(hintBtn);
     if (st.hints.includes(p.id)) showHint();
@@ -352,6 +537,7 @@
   function renderMeta(m, st) {
     const card = el("article", "card");
     card.append(el("span", "num", "METAPUZZLE"), el("h2", null, m.title), el("p", "flavor", m.flavor));
+    if (m.explain) card.append(el("p", "explain", "How it works: " + m.explain));
     const body = el("div", "body");
     m.blocks.forEach((b) => body.append(renderBlock(b)));
     const blanks = el("div", "blanks");
@@ -374,11 +560,12 @@
         fb.textContent = `The final answer has ${m.length} letters.`;
         return;
       }
-      if ((await hash(puzzle.date, v)) === m.hash) {
+      if ((await hash(rk(), v)) === m.hash) {
         st.meta = v;
-        save(puzzle.date, st);
+        save(rk(), st);
         win(v);
         updateProgress();
+        report("solve", "meta", v);
       } else {
         fb.className = "feedback bad";
         fb.textContent = `${v} is not the final answer.`;
@@ -388,12 +575,13 @@
     return card;
   }
 
-  async function renderSolution(date) {
+  async function renderSolution() {
     const box = $("#solution");
     box.innerHTML = "";
     let sol;
     try {
-      const r = await fetch(`solutions/${date}.json`, { cache: "no-cache" });
+      const path = difficulty === "easy" ? `solutions/easy/${puzzle.date}.json` : `solutions/${puzzle.date}.json`;
+      const r = await fetch(path, { cache: "no-cache" });
       if (!r.ok) return;
       sol = await r.json();
     } catch { return; }
@@ -419,8 +607,90 @@
     box.append(card);
   }
 
+  // ---------- leaderboard ----------
+  const fmtTime = (s) => {
+    const h = Math.floor(s / 3600), m = Math.floor((s % 3600) / 60), sec = s % 60;
+    return h ? `${h}h ${String(m).padStart(2, "0")}m` : `${m}m ${String(sec).padStart(2, "0")}s`;
+  };
+  let boardView = "today";
+
+  async function renderLeaderboard() {
+    const box = $("#leaderboard");
+    if (!box || (!API && !["localhost", "127.0.0.1"].includes(location.hostname))) return;
+    const card = el("article", "card board-card");
+    const head = el("div", "card-head");
+    head.append(el("span", "num", "LEADERBOARD · " + difficulty.toUpperCase()));
+    const tabs = el("div", "tabs");
+    [["today", "This round"], ["alltime", "All time"]].forEach(([k, label]) => {
+      const b = el("button", "tab" + (boardView === k ? " on" : ""), label);
+      b.type = "button";
+      b.addEventListener("click", () => { boardView = k; renderLeaderboard(); });
+      tabs.append(b);
+    });
+    head.append(tabs);
+    card.append(head);
+    const status = el("p", "note", "Loading… (the leaderboard server may take a moment to wake up)");
+    card.append(status);
+
+    const player = me();
+    if (!player) {
+      const form = el("form", "answer join");
+      const input = el("input");
+      input.placeholder = "Pick a display name to join";
+      input.maxLength = 24;
+      input.setAttribute("aria-label", "Display name");
+      const btn = el("button", "btn", "Join");
+      btn.type = "submit";
+      const fb = el("div", "feedback");
+      form.append(input, btn);
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        try {
+          const res = await api("/api/players", { name: input.value });
+          try { localStorage.setItem("mh:player", JSON.stringify(res)); } catch {}
+          // Anything already solved this round counts from now.
+          const st = load(rk());
+          Object.entries(st.solved).forEach(([id, v]) => report("solve", Number(id), v));
+          st.hints.forEach((id) => report("hint", id));
+          if (st.meta) report("solve", "meta", st.meta);
+          renderLeaderboard();
+        } catch (err) {
+          fb.className = "feedback bad";
+          fb.textContent = err.message;
+        }
+      });
+      card.append(form, fb);
+    } else {
+      card.append(el("p", "note", `Playing as ${player.name}. Solves are timed from 00:00 UTC on the round's date; each hint adds 5 minutes.`));
+    }
+    box.replaceChildren(card);
+
+    try {
+      const q = `difficulty=${difficulty}`;
+      const data = boardView === "today"
+        ? await api(`/api/leaderboard?date=${puzzle.date}&${q}`)
+        : await api(`/api/alltime?${q}`);
+      const t = el("table", "sol-table board-table");
+      const hr = el("tr");
+      const cols = boardView === "today" ? ["#", "Name", "Meta", "Feeders", "Hints"] : ["#", "Name", "Metas solved"];
+      cols.forEach((h) => hr.append(el("th", null, h)));
+      t.append(hr);
+      data.rows.forEach((r, i) => {
+        const tr = el("tr", player && r.name === player.name ? "me" : null);
+        const cells = boardView === "today"
+          ? [i + 1, r.name, r.meta ? fmtTime(r.score) : "—", `${r.feeders}/${r.total}`, r.hints]
+          : [i + 1, r.name, r.metas];
+        cells.forEach((c) => tr.append(el("td", null, String(c))));
+        t.append(tr);
+      });
+      status.replaceWith(data.rows.length ? t : el("p", "note", "Nobody on the board yet. Be the first."));
+    } catch {
+      status.textContent = "The leaderboard is offline right now; your progress is still saved in this browser.";
+    }
+  }
+
   function updateProgress() {
-    const st = load(puzzle.date);
+    const st = load(rk());
     const n = Object.keys(st.solved).length;
     let s = `${n}/${puzzle.puzzles.length} solved`;
     if (st.hints.length) s += ` · ${st.hints.length} hint${st.hints.length === 1 ? "" : "s"}`;
@@ -436,23 +706,32 @@
     $("#countdown").textContent = `next round in ${h}h ${String(m).padStart(2, "0")}m`;
   }
 
-  async function show(date) {
-    const r = await fetch(`puzzles/${date}.json`, { cache: "no-cache" });
+  async function show(date, diff) {
+    const entry = index.puzzles.find((x) => x.date === date);
+    if (diff === "easy" && entry && !entry.easy) diff = "hard"; // early rounds had no easy version
+    difficulty = diff;
+    const path = diff === "easy" ? `puzzles/easy/${date}.json` : `puzzles/${date}.json`;
+    const r = await fetch(path, { cache: "no-cache" });
     if (!r.ok) { $("#round").textContent = "Puzzle not found"; return; }
     puzzle = await r.json();
-    const st = load(date);
+    const st = load(rk());
     const d = new Date(date + "T00:00:00Z");
-    $("#eyebrow").textContent = `No. ${puzzle.number} · ${d.toLocaleDateString(undefined, { weekday: "long", month: "long", day: "numeric", year: "numeric", timeZone: "UTC" })}`;
+    $("#eyebrow").textContent = `No. ${puzzle.number} · ${diff === "easy" ? "Easy · " : ""}${d.toLocaleDateString(undefined, { weekday: "long", month: "long", day: "numeric", year: "numeric", timeZone: "UTC" })}`;
     $("#round").textContent = puzzle.round;
     $("#intro").textContent = puzzle.intro;
-    document.title = `${puzzle.round} · Daily Metahunt`;
+    document.title = `${puzzle.round}${diff === "easy" ? " (Easy)" : ""} · Daily Metahunt`;
+    document.querySelectorAll(".diff button").forEach((b) => {
+      b.classList.toggle("on", b.dataset.diff === diff);
+      b.disabled = b.dataset.diff === "easy" && entry && !entry.easy;
+    });
     const list = $("#puzzles");
     list.innerHTML = "";
     puzzle.puzzles.forEach((p) => list.append(renderPuzzle(p, st)));
     $("#meta").innerHTML = "";
     $("#meta").append(renderMeta(puzzle.meta, st));
     updateProgress();
-    renderSolution(date);
+    renderSolution();
+    renderLeaderboard();
 
     const dates = index.puzzles.map((x) => x.date);
     const i = dates.indexOf(date);
@@ -461,10 +740,12 @@
     $("#next").disabled = i >= dates.length - 1;
   }
 
+  const go = (date, diff) => { location.hash = diff === "easy" ? `${date}/easy` : date; };
+
   function route() {
-    const want = location.hash.slice(1);
+    const [want, diff] = location.hash.slice(1).split("/");
     const dates = index.puzzles.map((x) => x.date);
-    show(dates.includes(want) ? want : index.latest);
+    show(dates.includes(want) ? want : index.latest, diff === "easy" ? "easy" : "hard");
   }
 
   async function init() {
@@ -480,14 +761,15 @@
       o.value = p.date;
       sel.append(o);
     });
-    sel.addEventListener("change", () => { location.hash = sel.value; });
+    sel.addEventListener("change", () => go(sel.value, difficulty));
     const step = (k) => {
       const dates = index.puzzles.map((x) => x.date);
       const i = dates.indexOf(puzzle.date) + k;
-      if (i >= 0 && i < dates.length) location.hash = dates[i];
+      if (i >= 0 && i < dates.length) go(dates[i], difficulty);
     };
     $("#prev").addEventListener("click", () => step(-1));
     $("#next").addEventListener("click", () => step(1));
+    document.querySelectorAll(".diff button").forEach((b) => b.addEventListener("click", () => go(puzzle.date, b.dataset.diff)));
     window.addEventListener("hashchange", route);
     tickCountdown();
     setInterval(tickCountdown, 30000);

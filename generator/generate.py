@@ -216,10 +216,30 @@ def meta_stowaway(final, pool, rng):
     }
 
 
-def meta_logbook(final, pool, rng):
+def meta_first_letters(final, pool, rng):
+    """Easy: the answers' first letters, in puzzle order, spell the final."""
+    n = len(final)
+    if not 4 <= n <= 7:
+        return None
+    words = []
+    for c in final:
+        cands = [w for w in pool if w[0] == c and w not in words and len(w) <= 10]
+        if not cands:
+            return None
+        words.append(rng.choice(cands))
+    return {
+        "type": "first_letters",
+        "feeders": [{"answer": w} for w in words],
+        "flavor": ["Everyone {at} introduces themselves in turn. Listen to how each of them begins."],
+        "explain": "Take the first letter of each feeder answer, in puzzle order.",
+        "body": [],
+    }
+
+
+def meta_logbook(final, pool, rng, sizes=(5, 6)):
     """5-6 feeders; each final letter is (feeder #, letter #), disguised as a log."""
     for _ in range(300):
-        k = rng.choice([5, 6])
+        k = rng.choice(sizes)
         words = rng.sample(pool, k)
         picks = []
         for c in final:
@@ -275,6 +295,8 @@ def meta_initials(final, pool, rng):
 
 
 METAS = [meta_diagonal, meta_title_diagonal, meta_mutation, meta_stowaway, meta_fitin, meta_logbook, meta_initials]
+EASY_METAS = [meta_first_letters, meta_first_letters, meta_fitin, meta_title_diagonal,
+              lambda final, pool, rng: meta_logbook(final, pool, rng, sizes=(4, 5))]
 
 
 # --------------------------------------------------------------------------
@@ -293,11 +315,15 @@ def pick_theme_and_final(secret, date):
     return theme, finals[cycle % len(finals)], day + 1
 
 
-def assign_mechanisms(feeders, rng, ctx):
-    """Give each feeder a distinct mechanism (plus an optional transform layer)."""
-    mechs = list(MECHANISMS)
+def assign_mechanisms(feeders, rng, ctx, easy=False):
+    """Give each feeder a distinct mechanism (plus an optional transform layer).
+
+    Mechanisms are drawn in a weighted random order, so word and logic
+    puzzles (weight 3) turn up about three times as often as pure encodings.
+    """
+    allowed = [m for m in MECHANISMS if (m.easy if easy else m.hard)]
     for _ in range(200):
-        rng.shuffle(mechs)
+        mechs = sorted(allowed, key=lambda m: rng.random() ** (1.0 / m.weight), reverse=True)
         used, plan, ok = set(), [], True
         for fd in feeders:
             src = fd.get("encode", fd["answer"])
@@ -306,7 +332,7 @@ def assign_mechanisms(feeders, rng, ctx):
                 if m.key in used:
                     continue
                 tkey = None
-                if m.allow_transform and rng.random() < 0.4:
+                if m.allow_transform and not easy and rng.random() < 0.4:
                     tkey = rng.choice(sorted(TRANSFORMS))
                 enc = TRANSFORMS[tkey]["fn"](src) if tkey else src
                 if m.can(enc, ctx):
@@ -325,15 +351,28 @@ def assign_mechanisms(feeders, rng, ctx):
     raise RuntimeError("could not assign mechanisms")
 
 
-def build(secret, date):
+def build(secret, date, easy=False):
     theme, final, number = pick_theme_and_final(secret, date)
-    rng = random.Random(seed_for(secret, date))
-    pool = [w for w in theme["feeders"] if w != final and final not in w and w not in final]
-    metas = list(METAS)
-    rng.shuffle(metas)
+    salt = date + "/easy" if easy else date
+    rng = random.Random(seed_for(secret, date, "|easy" if easy else ""))
+    if easy:
+        # Same theme, a different (shorter) final word; fall back through the
+        # theme's other finals until an easy meta fits.
+        others = sorted((f for f in theme["finals"] if f != final), key=lambda f: (len(f), f))
+        short = [f for f in others if len(f) <= 7]
+        rng.shuffle(short)
+        candidates = short + [f for f in others if f not in short]
+    else:
+        candidates = [final]
     meta = None
-    for fn in metas:
-        meta = fn(final, pool, rng)
+    for final in candidates:
+        pool = [w for w in theme["feeders"] if w != final and final not in w and w not in final]
+        metas = list(EASY_METAS if easy else METAS)
+        rng.shuffle(metas)
+        for fn in metas:
+            meta = fn(final, pool, rng)
+            if meta:
+                break
         if meta:
             break
     if not meta:
@@ -350,14 +389,17 @@ def build(secret, date):
         titles = [titles[i] for i in order]
     used_words = {fd["answer"] for fd in feeders} | {final}
     carrier = [w for w in theme["feeders"] if w not in used_words]
-    base_ctx = {"glyphs": theme["glyphs"], "carrier": carrier, "intro": theme["intro"]}
-    plan = assign_mechanisms(feeders, rng, base_ctx)
+    base_ctx = {"glyphs": theme["glyphs"], "carrier": carrier, "intro": theme["intro"],
+                "all_words": theme["feeders"] + theme["finals"], "easy": easy}
+    plan = assign_mechanisms(feeders, rng, base_ctx, easy)
 
     puzzles, solutions = [], []
     for i, (fd, (mech, tkey, enc), title) in enumerate(zip(feeders, plan, titles)):
         ctx = dict(base_ctx, title=title)
         blocks = mech.encode(enc, rng, ctx)
-        flavor = fmt(rng.choice(mech.flavors), theme).replace("{n}", ctx.get("_flavor_n", ""))
+        flavor = fmt(rng.choice(ctx.get("_flavors") or mech.flavors), theme).replace("{n}", ctx.get("_flavor_n", ""))
+        hint = ctx.get("_hint", mech.hint)
+        technique = ctx.get("_name", mech.name)
         if tkey:
             flavor += " " + rng.choice(TRANSFORMS[tkey]["hints"])
 
@@ -370,23 +412,25 @@ def build(secret, date):
         partials = {}
         src = fd.get("encode", fd["answer"])
         if tkey and enc != src:
-            partials[answer_hash(date, enc)] = "You've decoded it, but it's not finished. One more layer."
+            partials[answer_hash(salt, enc)] = "You've decoded it, but it's not finished. One more layer."
         if src != fd["answer"] and fd.get("extra"):
-            partials[answer_hash(date, src)] = "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+            partials[answer_hash(salt, src)] = "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
         elif src != fd["answer"]:
-            partials[answer_hash(date, src)] = "So close. Exactly one thing is wrong here. Fix it (and remember what you fixed)."
+            partials[answer_hash(salt, src)] = "So close. Exactly one thing is wrong here. Fix it (and remember what you fixed)."
 
         puzzles.append({
             "id": i + 1,
             "title": title,
             "flavor": flavor,
             "blocks": blocks,
-            "hash": answer_hash(date, fd["answer"]),
+            "hash": answer_hash(salt, fd["answer"]),
             "partials": partials,
-            "hint": mech.hint + ((" Then undo: " + TRANSFORMS[tkey]["name"] + ".") if tkey else ""),
+            "hint": hint + ((" Then undo: " + TRANSFORMS[tkey]["name"] + ".") if tkey else ""),
         })
+        if easy:
+            puzzles[-1].update(technique=technique, length=len(fd["answer"]))
         solutions.append({
-            "id": i + 1, "title": title, "answer": fd["answer"], "mechanism": mech.name,
+            "id": i + 1, "title": title, "answer": fd["answer"], "mechanism": technique,
             "transform": TRANSFORMS[tkey]["name"] if tkey else None,
             "encoded": enc, "mutated": fd.get("encode"),
         })
@@ -396,6 +440,8 @@ def build(secret, date):
 
     puzzle = {
         "date": date,
+        "difficulty": "easy" if easy else "hard",
+        "salt": salt,
         "number": number,
         "round": theme["name"],
         "intro": theme["intro"],
@@ -405,11 +451,13 @@ def build(secret, date):
             "flavor": fmt(rng.choice(meta["flavor"]), theme),
             "blocks": meta["body"],
             "length": len(final),
-            "hash": answer_hash(date, final),
+            "hash": answer_hash(salt, final),
         },
     }
+    if easy:
+        puzzle["meta"]["explain"] = meta["explain"]
     solution = {
-        "date": date, "number": number, "final": final, "metaType": meta["type"],
+        "date": date, "number": number, "difficulty": "easy" if easy else "hard", "final": final, "metaType": meta["type"],
         "explain": meta["explain"], "puzzles": solutions,
     }
     return puzzle, solution
@@ -441,6 +489,8 @@ def verify_meta(meta, answers, mutated, final):
             fits = [a for a in answers if len(a) == row["len"]]
             assert len(fits) == 1
             got += fits[0][row["shade"]]
+    elif t == "first_letters":
+        got = "".join(w[0] for w in answers)
     elif t == "logbook":
         got = ""
         for e in meta["body"][0]["items"]:
@@ -469,17 +519,23 @@ def _keystream(secret, date, n):
     return out[:n]
 
 
-def seal(secret, date, solution):
+def _sealed_path(date, easy):
+    return os.path.join(SEALED, "easy", date + ".json") if easy else os.path.join(SEALED, date + ".json")
+
+
+def seal(secret, date, solution, easy=False):
     """Store a solution encrypted with a key derived from PUZZLE_SECRET, so it can be
     published tomorrow even if the generator code changes in between."""
+    key = date + "/easy" if easy else date
     raw = json.dumps(solution, ensure_ascii=False).encode()
-    data = bytes(a ^ b for a, b in zip(raw, _keystream(secret, date, len(raw))))
+    data = bytes(a ^ b for a, b in zip(raw, _keystream(secret, key, len(raw))))
     mac = hmac.new(secret.encode(), b"mac|" + data, hashlib.sha256).hexdigest()
-    write_json(os.path.join(SEALED, date + ".json"), {"data": data.hex(), "mac": mac})
+    write_json(_sealed_path(date, easy), {"data": data.hex(), "mac": mac})
 
 
-def unseal(secret, date):
-    path = os.path.join(SEALED, date + ".json")
+def unseal(secret, date, easy=False):
+    key = date + "/easy" if easy else date
+    path = _sealed_path(date, easy)
     if not os.path.exists(path):
         return None
     with open(path) as f:
@@ -487,7 +543,7 @@ def unseal(secret, date):
     data = bytes.fromhex(box["data"])
     if not hmac.compare_digest(box["mac"], hmac.new(secret.encode(), b"mac|" + data, hashlib.sha256).hexdigest()):
         return None
-    return json.loads(bytes(a ^ b for a, b in zip(data, _keystream(secret, date, len(data)))).decode())
+    return json.loads(bytes(a ^ b for a, b in zip(data, _keystream(secret, key, len(data)))).decode())
 
 
 def write_json(path, obj):
@@ -511,44 +567,55 @@ def main():
         secret = "dev-secret"
 
     end = dt.date.fromisoformat(args.date)
-    pdir, sdir = os.path.join(DOCS, "puzzles"), os.path.join(DOCS, "solutions")
-    for k in range(args.days - 1, -1, -1):
-        d = end - dt.timedelta(days=k)
-        if d < EPOCH:
-            continue
-        ds = d.isoformat()
-        path = os.path.join(pdir, ds + ".json")
-        if os.path.exists(path) and not args.force:
-            continue
-        puzzle, solution = build(secret, ds)
-        if not args.no_llm:
-            theme = next(t for t in THEMES if t["name"] == puzzle["round"])
-            llm.polish(puzzle, solution, theme)
-        write_json(path, puzzle)
-        seal(secret, ds, solution)
-        print("wrote", path, "-", puzzle["round"])
+    for easy in (False, True):
+        pdir = os.path.join(DOCS, "puzzles", "easy") if easy else os.path.join(DOCS, "puzzles")
+        for k in range(args.days - 1, -1, -1):
+            d = end - dt.timedelta(days=k)
+            if d < EPOCH:
+                continue
+            ds = d.isoformat()
+            path = os.path.join(pdir, ds + ".json")
+            if os.path.exists(path) and not args.force:
+                continue
+            puzzle, solution = build(secret, ds, easy)
+            if not args.no_llm:
+                theme = next(t for t in THEMES if t["name"] == puzzle["round"])
+                llm.polish(puzzle, solution, theme, easy=easy)
+            write_json(path, puzzle)
+            seal(secret, ds, solution, easy)
+            print("wrote", path, "-", puzzle["round"])
+    publish_solutions(secret)
 
-    # Index + solutions for every puzzle older than the newest one.
+
+def publish_solutions(secret):
+    """Rebuild the index and publish every solution older than the newest round."""
+    pdir = os.path.join(DOCS, "puzzles")
     dates = sorted(f[:-5] for f in os.listdir(pdir) if f.endswith(".json") and f[0].isdigit())
     index = []
     for ds in dates:
         with open(os.path.join(pdir, ds + ".json")) as f:
             p = json.load(f)
-        index.append({"date": ds, "number": p["number"], "round": p["round"]})
-        spath = os.path.join(sdir, ds + ".json")
-        if os.path.exists(spath):
-            continue
-        sol = unseal(secret, ds)
-        if sol is None:
-            _, sol = build(secret, ds)
-            if answer_hash(ds, sol["final"]) != p["meta"]["hash"]:
-                print("no solution for %s: not sealed, and the generator changed since it was published" % ds, file=sys.stderr)
+        has_easy = os.path.exists(os.path.join(pdir, "easy", ds + ".json"))
+        index.append({"date": ds, "number": p["number"], "round": p["round"], "easy": has_easy})
+        for easy in (False, True) if has_easy else (False,):
+            sub = ("easy",) if easy else ()
+            spath = os.path.join(DOCS, "solutions", *sub, ds + ".json")
+            if os.path.exists(spath):
                 continue
-            seal(secret, ds, sol)
-            print("sealed", ds)
-        if ds < dates[-1]:
-            write_json(spath, sol)
-            print("wrote", spath)
+            sol = unseal(secret, ds, easy)
+            if sol is None:
+                with open(os.path.join(pdir, *sub, ds + ".json")) as f:
+                    published = json.load(f)
+                _, sol = build(secret, ds, easy)
+                if answer_hash(published.get("salt", ds), sol["final"]) != published["meta"]["hash"]:
+                    print("no solution for %s%s: not sealed, and the generator changed since it was published"
+                          % (ds, " (easy)" if easy else ""), file=sys.stderr)
+                    continue
+                seal(secret, ds, sol, easy)
+                print("sealed", ds, "easy" if easy else "")
+            if ds < dates[-1]:
+                write_json(spath, sol)
+                print("wrote", spath)
     write_json(os.path.join(pdir, "index.json"), {"latest": dates[-1], "puzzles": index})
 
 
