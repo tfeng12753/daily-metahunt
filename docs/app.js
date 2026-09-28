@@ -237,6 +237,18 @@
       t.append(tr);
     }
     wrap.append(t);
+    // Size the squares so the whole grid fits the card without sideways scrolling.
+    const fit = () => {
+      const avail = wrap.clientWidth;
+      if (!avail) return;
+      const clue = t.querySelector(".rowclue");
+      t.style.setProperty("--cell", "20px");
+      const clueW = clue ? clue.offsetWidth : 60;
+      const size = Math.floor((avail - clueW - 4) / C);
+      t.style.setProperty("--cell", Math.max(12, Math.min(28, size)) + "px");
+    };
+    if (window.ResizeObserver) new ResizeObserver(fit).observe(wrap);
+    requestAnimationFrame(fit);
     const legend = el("p", "note nono-legend");
     legend.innerHTML = '<span class="nono-key filled"></span> filled &nbsp; <span class="nono-key crossed">×</span> empty &nbsp; ' +
       '<span class="nono-key given"></span> given &nbsp;·&nbsp; click to cycle blank → filled → ×';

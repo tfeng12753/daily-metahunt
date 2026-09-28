@@ -41,7 +41,7 @@ body {
   font: 18px/1.55 var(--sans);
   font-variant-numeric: lining-nums;
 }
-.wrap { max-width: 920px; margin: 0 auto; padding: 0 16px; }
+.wrap { max-width: 1180px; margin: 0 auto; padding: 0 20px; }
 a { color: var(--accent); }
 button, select, input { font: inherit; color: inherit; }
 
@@ -140,10 +140,10 @@ button, select, input { font: inherit; color: inherit; }
 .board.plain { background: var(--paper); color: var(--paper-ink); border-radius: 6px; }
 .gallery svg[aria-label="flag"] { box-shadow: 0 1px 3px rgba(0,0,0,.35); }
 .nono-wrap { overflow-x: auto; padding-bottom: 4px; }
-.nono { border-collapse: collapse; font: 11px var(--mono); color: var(--muted); user-select: none; }
-.nono .colclue { vertical-align: bottom; padding: 0 0 4px; min-width: 20px; line-height: 1.25; }
+.nono { --cell: 20px; border-collapse: collapse; font: 700 calc(var(--cell) * .58)/1.2 var(--mono); color: var(--muted); user-select: none; }
+.nono .colclue { vertical-align: bottom; padding: 0 0 4px; min-width: var(--cell); max-width: var(--cell); line-height: 1.2; }
 .nono .rowclue { text-align: right; padding-right: 8px; white-space: nowrap; }
-.nono .cell { width: 20px; height: 20px; border: 1px solid var(--line); background: var(--panel-2); cursor: pointer; }
+.nono .cell { width: var(--cell); height: var(--cell); min-width: var(--cell); padding: 0; border: 1px solid var(--line); background: var(--panel-2); cursor: pointer; }
 .nono .cell.filled { background: var(--ink); }
 .nono .cell.crossed { background: var(--panel-2) linear-gradient(45deg, transparent 45%, var(--muted) 45% 55%, transparent 55%); }
 .nono .cell.given { cursor: default; outline: 2px solid var(--accent); outline-offset: -3px; }
@@ -319,10 +319,13 @@ input.fitcell.shade { background: color-mix(in srgb, var(--accent) 30%, var(--pa
 
 /* nonogram: × marks instead of hatching, so "given empty" is unmistakable */
 .nono .cell.crossed { background: var(--panel-2); position: relative; }
-.nono .cell.crossed::after { content: "×"; position: absolute; inset: 0; display: grid; place-items: center; font: 700 14px/1 var(--mono); color: var(--muted); }
+.nono .cell.crossed::after { content: "×"; position: absolute; inset: 0; display: grid; place-items: center; font: 700 calc(var(--cell) * .7)/1 var(--mono); color: var(--muted); }
 .nono .cell.crossed.given::after { color: var(--accent); }
 .nono .cell.given { outline: 2px solid var(--accent); outline-offset: -2px; }
 .nono-legend { margin-top: 10px; line-height: 1.9; }
 .nono-key { display: inline-block; width: 16px; height: 16px; vertical-align: -3px; border: 1px solid var(--line); background: var(--panel-2); text-align: center; font: 700 13px/14px var(--mono); color: var(--muted); }
 .nono-key.filled { background: var(--ink); }
 .nono-key.given { outline: 2px solid var(--accent); outline-offset: -2px; }
+
+.flavor, .intro, .epigraph, .gate-copy, .note { max-width: 72ch; }
+.nono-wrap { width: 100%; }
