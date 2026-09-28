@@ -240,3 +240,26 @@ a.btn { text-decoration: none; display: inline-block; }
 @media (min-width: 760px) {
   #livesplits { position: sticky; top: 56px; z-index: 4; background: color-mix(in srgb, var(--bg) 94%, transparent); backdrop-filter: blur(6px); padding-top: 8px; }
 }
+
+a.ghost { text-decoration: none; color: inherit; display: inline-flex; align-items: center; gap: 4px; }
+@media (max-width: 720px) { .mine span { display: none; } }
+.stat-tiles { margin-bottom: 16px; }
+.cal-card { margin-bottom: 16px; }
+.cal { display: grid; grid-template-columns: repeat(7, 1fr); gap: 6px; margin-top: 10px; }
+.cal-head { font: 600 11px var(--mono); color: var(--muted); text-align: center; letter-spacing: .06em; }
+.cal-cell { min-height: 58px; border: 1px solid var(--line); border-radius: 8px; padding: 5px 6px; display: flex; flex-direction: column; justify-content: space-between; color: inherit; text-decoration: none; background: var(--panel-2); }
+.cal-cell.empty { background: transparent; border-style: dashed; opacity: .35; }
+a.cal-cell:hover { border-color: var(--accent); }
+.cal-day { font: 600 12px var(--mono); color: var(--muted); }
+.cal-dots { display: flex; gap: 4px; }
+.cal-dot { width: 20px; height: 20px; border-radius: 50%; display: grid; place-items: center; font: 700 10px var(--mono); border: 1.5px solid var(--line); color: var(--muted); }
+.cal-dot.done { background: var(--good); border-color: var(--good); color: var(--bg); }
+.cal-dot.progress { background: linear-gradient(90deg, var(--warn) 50%, transparent 50%); border-color: var(--warn); color: var(--ink); }
+.cal-dot.opened { border-color: var(--muted); }
+.cal-legend { margin: -4px 0 16px; }
+.progress-table tr.st-none td { color: var(--muted); }
+.progress-table tr.st-done td:nth-child(5) { color: var(--good); }
+.progress-table tr.st-progress td:nth-child(5) { color: var(--warn); }
+.backup { margin-top: 16px; }
+label.btn { cursor: pointer; }
+@media (max-width: 560px) { .cal-cell { min-height: 46px; padding: 3px; } .cal-dot { width: 16px; height: 16px; font-size: 9px; } }

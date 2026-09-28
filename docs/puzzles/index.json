@@ -5,13 +5,20 @@
    "date": "2026-09-27",
    "number": 1,
    "round": "Insert Coin",
-   "easy": false
+   "easy": false,
+   "count": {
+    "hard": 5
+   }
   },
   {
    "date": "2026-09-28",
    "number": 2,
    "round": "Series Z",
-   "easy": true
+   "easy": true,
+   "count": {
+    "hard": 6,
+    "easy": 4
+   }
   }
  ]
 }

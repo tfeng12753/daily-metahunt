@@ -595,8 +595,14 @@ def publish_solutions(secret):
     for ds in dates:
         with open(os.path.join(pdir, ds + ".json")) as f:
             p = json.load(f)
-        has_easy = os.path.exists(os.path.join(pdir, "easy", ds + ".json"))
-        index.append({"date": ds, "number": p["number"], "round": p["round"], "easy": has_easy})
+        epath = os.path.join(pdir, "easy", ds + ".json")
+        has_easy = os.path.exists(epath)
+        entry = {"date": ds, "number": p["number"], "round": p["round"], "easy": has_easy,
+                 "count": {"hard": len(p["puzzles"])}}
+        if has_easy:
+            with open(epath) as f:
+                entry["count"]["easy"] = len(json.load(f)["puzzles"])
+        index.append(entry)
         for easy in (False, True) if has_easy else (False,):
             sub = ("easy",) if easy else ()
             spath = os.path.join(DOCS, "solutions", *sub, ds + ".json")

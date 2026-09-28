@@ -621,7 +621,9 @@
       view.href = shareLink(st);
       view.target = "_blank";
       view.rel = "noopener";
-      actions.append(copy, view);
+      const mine = el("a", "btn secondary", "My rounds");
+      mine.href = "progress.html";
+      actions.append(copy, view, mine);
       if (me()) {
         const hist = el("a", "btn secondary", "Your stats");
         hist.href = "share.html?player=" + encodeURIComponent(me().name);
@@ -784,6 +786,23 @@
     }
   }
 
+  // Date picker labels carry your saved status: ✓ solved, ◐ in progress (H = hard, E = easy).
+  function markFor(key) {
+    const st = load(key);
+    if (st.meta) return "✓";
+    if (Object.keys(st.solved).length || st.hints.length) return "◐";
+    return "";
+  }
+  function refreshArchiveMarks() {
+    const byDate = Object.fromEntries(index.puzzles.map((p) => [p.date, p]));
+    [...$("#archive").options].forEach((o) => {
+      const p = byDate[o.value];
+      const h = markFor(p.date), e = p.easy ? markFor(p.date + "/easy") : "";
+      const marks = [h && "H" + h, e && "E" + e].filter(Boolean).join(" ");
+      o.textContent = `#${p.number} · ${p.date} · ${p.round}${marks ? "  " + marks : ""}`;
+    });
+  }
+
   function updateProgress() {
     const st = load(rk());
     const n = Object.keys(st.solved).length;
@@ -791,6 +810,7 @@
     if (st.hints.length) s += ` · ${st.hints.length} hint${st.hints.length === 1 ? "" : "s"}`;
     if (st.meta) s += " · meta ✓";
     $("#progress").textContent = s;
+    refreshArchiveMarks();
   }
 
   function tickTimer() {
@@ -948,10 +968,11 @@
     }
     const sel = $("#archive");
     [...index.puzzles].reverse().forEach((p) => {
-      const o = el("option", null, `#${p.number} · ${p.date} · ${p.round}`);
+      const o = el("option");
       o.value = p.date;
       sel.append(o);
     });
+    refreshArchiveMarks();
     sel.addEventListener("change", () => go(sel.value, difficulty));
     const step = (k) => {
       const dates = index.puzzles.map((x) => x.date);

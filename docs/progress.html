@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My Rounds · Daily Metahunt</title>
+<meta name="description" content="Every Daily Metahunt round you've played, saved in this browser.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23111'/><text x='16' y='23' font-size='20' text-anchor='middle' fill='%23e8b64c' font-family='serif'>?</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800&family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="wrap">
+    <a class="brand" href="./" style="color:inherit;text-decoration:none">
+      <span class="mark">?</span>
+      <span>Daily Metahunt</span>
+    </a>
+    <a class="btn" href="./">Today's round</a>
+  </div>
+</header>
+<main class="wrap">
+  <section class="hero">
+    <p class="eyebrow">Saved in this browser</p>
+    <h1>My rounds</h1>
+    <p class="intro" id="sub">Loading…</p>
+  </section>
+  <section id="tiles" class="stat-tiles"></section>
+  <section id="calendar"></section>
+  <section id="list"></section>
+  <section class="card backup">
+    <span class="num">BACKUP</span>
+    <h2>Keep your progress</h2>
+    <p class="note">Progress lives in this browser's storage, so clearing site data or switching devices loses it. Export a backup file, and import it anywhere to pick up where you left off. Importing merges; it never deletes anything.</p>
+    <div class="share-actions" style="justify-content:flex-start">
+      <button id="export" class="btn" type="button">Export progress</button>
+      <label class="btn secondary" for="import">Import progress</label>
+      <input id="import" type="file" accept="application/json,.json" hidden>
+    </div>
+    <p id="backup-msg" class="note" aria-live="polite"></p>
+  </section>
+</main>
+<footer class="wrap footer">Daily Metahunt · a new round every day</footer>
+<script src="progress.js"></script>
+</body>
+</html>

@@ -77,6 +77,12 @@ leaderboard, the share page cross-checks the run against the server's record
 and shows a "verified" badge. `share.html?player=NAME` shows a player's stored
 history: every round, their times, and their best and average clock.
 
+Everything you do is also saved **in your browser**. `progress.html` ("My
+rounds") shows every day you've played: totals, your streak, a calendar with
+Hard/Easy status, and a list of each round's solves, clock and hints. The date
+picker marks rounds ✓ (solved) or ◐ (in progress). Progress can be exported
+to a JSON file and imported on another device; imports merge and never delete.
+
 Scores live in Postgres via the `DATABASE_URL` environment variable on the API
 service (a free Neon or Supabase database works). Without it the API keeps
 scores in memory, which is fine locally but resets on every restart or deploy.
