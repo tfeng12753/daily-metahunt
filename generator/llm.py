@@ -33,6 +33,11 @@ BANNED = ["morse", "semaphore", "braille", "vigenere", "vigenère", "atbash", "n
           "knight's tour", "radix", "base two", "base 2", "sudoku", "drop quote",
           "dropquote", "anagram", "shredded sentence"]
 
+# On Hard the description may only allude; words like these mean it has started explaining.
+HARD_TELLS = ["number", "numbers", "numbered", "count", "counted", "counting", "letter", "letters", "heading",
+              "headings", "title", "titles", "alphabet", "alphabetical", "order", "ordered", "index", "row", "rows",
+              "column", "columns", "pluck", "match", "diagonal", "initial", "initials", "sequence"]
+
 # Descriptions of what the solved output looks like spoil every round, easy included.
 OUTPUT_TELLS = ["block letter", "five-by-five", "five by five", "5x5", "5×5", "pixel letter",
                 "chunky letter", "will spell", "spells out", "spell something", "spell a word"]
@@ -90,9 +95,10 @@ Write in the voice of the round's setting. British spelling. One paragraph of 4 
 Reply with a single JSON object {"intro": "..."} and nothing else."""
 
 STRENGTH = {
-    "hard": ("VAGUE. Bury one faint, atmospheric allusion to the final step in the story. A solver should only "
-             "recognise it in hindsight. Do not use plain words for the mechanism (order, alphabetical, first letter, "
-             "diagonal, length, index, key, extra, wrong) literally."),
+    "hard": ("VAGUE. At most one sentence may allude to the final step, and only through a single atmospheric image "
+             "(a habit of the people, an object in the scene), never by describing a procedure. A solver should only "
+             "recognise it in hindsight. Do not mention numbers, counting, letters, headings, titles, order, rows, "
+             "columns, matching or picking."),
     "medium": ("A NOTICEABLE HINT. Include an in-story image or detail that points toward the final step (for example a "
                "roll call, a filing drawer, a signature, a seating plan), which an attentive solver will pick up on. "
                "Suggest, don't instruct."),
@@ -117,11 +123,13 @@ def ok_description(text, forbidden, level):
             return False
     if any(x in low for x in OUTPUT_TELLS):
         return False
+    if level == "hard" and words & set(HARD_TELLS):
+        return False
     # Easy names its techniques on the page anyway; the other levels must not.
     return level == "easy" or not any(b in low for b in BANNED)
 
 
-def describe(puzzle, solution, theme, level="hard", attempts=3):
+def describe(puzzle, solution, theme, level="hard", attempts=4):
     """Replace puzzle["intro"] with a longer story that hints at the meta. Returns the model id, or None."""
     key = os.environ.get("IFM_API_KEY")
     if not key:
@@ -131,9 +139,10 @@ def describe(puzzle, solution, theme, level="hard", attempts=3):
         forbidden |= {q["answer"], q["encoded"]} | ({q["mutated"]} if q.get("mutated") else set())
     user = ("Round: %s\nSetting: %s; the people there are %s.\nCurrent opening (keep its facts and mood, expand it): %s\n"
             "How the metapuzzle works (for you only; never quote it): %s\nThe round has %d feeder puzzles.\n"
-            "Hint strength: %s\nReturn JSON {\"intro\": \"...\"}."
+            "Hint strength: %s\nDon't state how many messages, notes or puzzles there are unless the number is exactly %d.\n"
+            "Return JSON {\"intro\": \"...\"}."
             % (puzzle["round"], theme["place"], theme["crew"], theme["intro"], solution["explain"],
-               len(puzzle["puzzles"]), STRENGTH[level]))
+               len(puzzle["puzzles"]), STRENGTH[level], len(puzzle["puzzles"])))
     try:
         model = pick_model(key)
     except Exception as e:
