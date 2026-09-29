@@ -23,7 +23,9 @@
     if (!r.ok) throw new Error(`HTTP ${r.status}`);
     return r.json();
   };
-  const roundPath = (date, diff) => (diff === "easy" ? `puzzles/easy/${date}.json` : `puzzles/${date}.json`);
+  const NAME = { easy: "Easy", medium: "Medium", hard: "Hard" };
+  const roundPath = (date, diff) => (NAME[diff] && diff !== "hard" ? `puzzles/${diff}/${date}.json` : `puzzles/${date}.json`);
+  const levelHash = (diff) => (NAME[diff] && diff !== "hard" ? "/" + diff : "");
   const dateLabel = (d) => new Date(d + "T00:00:00Z").toLocaleDateString(undefined, { weekday: "short", month: "short", day: "numeric", year: "numeric", timeZone: "UTC" });
 
   function fail(msg) {
@@ -46,7 +48,7 @@
     const hintSet = new Set(run.s.filter((s) => s[2]).map((s) => s[0]));
     const solvedSet = new Set(run.s.map((s) => s[0]));
 
-    $("#eyebrow").textContent = `No. ${round.number} · ${run.x === "easy" ? "Easy" : "Hard"} · ${dateLabel(run.d)}`;
+    $("#eyebrow").textContent = `No. ${round.number} · ${NAME[run.x] || "Hard"} · ${dateLabel(run.d)}`;
     $("#title").textContent = round.round;
     $("#sub").textContent = run.n ? `${run.n}'s run` : "A solver's run";
     document.title = `${run.n ? run.n + " · " : ""}${round.round} · Daily Metahunt`;
@@ -102,7 +104,7 @@
     card.append(verify);
     const actions = el("div", "share-actions");
     const play = el("a", "btn", "Play this round");
-    play.href = `./#${run.d}${run.x === "easy" ? "/easy" : ""}`;
+    play.href = `./#${run.d}${levelHash(run.x)}`;
     actions.append(play);
     if (run.n) {
       const hist = el("a", "btn secondary", `All of ${run.n}'s rounds`);
@@ -147,7 +149,7 @@
     }
     $("#title").textContent = data.name;
     const t = data.totals;
-    $("#sub").textContent = `${t.metas} meta${t.metas === 1 ? "" : "s"} solved (${t.hard} hard, ${t.easy} easy)`;
+    $("#sub").textContent = `${t.metas} meta${t.metas === 1 ? "" : "s"} solved (${t.hard} hard, ${t.medium || 0} medium, ${t.easy} easy)`;
 
     const tiles = el("div", "stat-tiles");
     [["Metas solved", String(t.metas)], ["Best clock", t.best != null ? hms(t.best) : "—"], ["Average clock", t.average != null ? hms(t.average) : "—"], ["Rounds played", String(data.rounds.length)]]
@@ -166,7 +168,7 @@
     data.rounds.forEach((r) => {
       const tr = el("tr");
       const a = el("a", null, r.date);
-      a.href = `./#${r.date}${r.difficulty === "easy" ? "/easy" : ""}`;
+      a.href = `./#${r.date}${levelHash(r.difficulty)}`;
       const td = el("td");
       td.append(a);
       tr.append(td);

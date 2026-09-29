@@ -16,7 +16,10 @@
   let index = null;
   let puzzle = null;
   let difficulty = "hard";
-  const rk = () => puzzle.salt || puzzle.date; // "2026-09-28" or "2026-09-28/easy"
+  const rk = () => puzzle.salt || puzzle.date; // "2026-09-28", "2026-09-28/medium" or "2026-09-28/easy"
+  const LEVEL = { easy: "Easy", medium: "Medium", hard: "Hard" };
+  const levelPath = (dir, date, diff) => (diff === "hard" ? `${dir}/${date}.json` : `${dir}/${diff}/${date}.json`);
+  const hasLevel = (entry, diff) => diff === "hard" || !entry || !!entry[diff];
 
   // ---------- leaderboard API ----------
   const API = ["localhost", "127.0.0.1"].includes(location.hostname) ? "" : (window.METAHUNT_API || "");
@@ -69,7 +72,7 @@
     const squares = puzzle.puzzles.map((p) => (st.solved[p.id] ? (st.hints.includes(p.id) ? "🟨" : "🟩") : "⬛")).join("");
     const total = st.times && st.times.meta && st.start ? hms((st.times.meta - st.start) / 1000) : "unfinished";
     const nh = st.hints.length;
-    return `Daily Metahunt #${puzzle.number} ${difficulty === "easy" ? "(Easy)" : "(Hard)"}: ${puzzle.round}\n` +
+    return `Daily Metahunt #${puzzle.number} (${LEVEL[difficulty]}): ${puzzle.round}\n` +
       `⏱ ${total} · ${Object.keys(st.solved).length}/${puzzle.puzzles.length} feeders · ${nh} hint${nh === 1 ? "" : "s"}\n` +
       `${squares}${st.meta ? " ⭐" : ""}\n${shareLink(st)}`;
   }
@@ -86,6 +89,305 @@
   async function hash(date, word) {
     const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(`metahunt|${date}|${word}`));
     return [...new Uint8Array(buf)].map((b) => b.toString(16).padStart(2, "0")).join("");
+  }
+
+  // ---------- per-puzzle notes (scratch letters, marks, tiles), kept in this browser ----------
+  function notes(c) {
+    const k = c && c.key ? "mh:notes:" + c.key : null;
+    const read = () => { if (!k) return {}; try { return JSON.parse(localStorage.getItem(k)) || {}; } catch { return {}; } };
+    const f = (name) => `${c && c.i != null ? c.i : 0}:${name}`;
+    return {
+      get: (name, d) => { const v = read()[f(name)]; return v === undefined ? d : v; },
+      set: (name, v) => {
+        if (!k) return;
+        const all = read();
+        all[f(name)] = v;
+        try { localStorage.setItem(k, JSON.stringify(all)); } catch {}
+      },
+    };
+  }
+
+  // A small box under each item for jotting down what it decodes to.
+  function trayWrap(container, nodes, width, c) {
+    const s = notes(c);
+    const vals = s.get("tray", []);
+    const inputs = [];
+    nodes.forEach((node, k) => {
+      const slot = el("div", "slot");
+      const inp = el("input", "slot-in" + (width > 1 ? " wide" : ""));
+      inp.maxLength = width;
+      if (width > 1) inp.style.width = `calc(${Math.min(width, 14)}ch + 14px)`;
+      inp.value = vals[k] || "";
+      inp.autocomplete = "off";
+      inp.spellcheck = false;
+      inp.setAttribute("aria-label", `Your note for item ${k + 1}`);
+      inp.addEventListener("input", () => {
+        inp.value = inp.value.toUpperCase().replace(/[^A-Z]/g, "").slice(0, width);
+        s.set("tray", inputs.map((i) => i.value));
+        if (width === 1 && inp.value) inputs[k + 1]?.focus();
+      });
+      inp.addEventListener("keydown", (e) => {
+        if (e.key === "Backspace" && !inp.value && k) { inputs[k - 1].focus(); e.preventDefault(); }
+      });
+      slot.append(node, inp);
+      container.append(slot);
+      inputs.push(inp);
+    });
+    return container;
+  }
+
+  // Which blocks get note boxes: 1 = one letter per item, 3 = three letters, "word" = a whole word.
+  function trayWidth(b, c) {
+    if (!c || b.tray === false) return 0;
+    if (b.tray === "word") return 16;
+    if (b.tray === "letter") return 1;
+    if (["clocks", "semaphore", "flags", "resistors", "pigpen", "braille", "glyphs", "numbers", "taps", "lamp", "tape"].includes(b.type)) return 1;
+    if (b.type === "swatches") return 3;
+    if (b.type === "mono" && b.big) return 1;
+    if (b.type === "list" && !b.tiles && !b.strike) return b.ordered && b.mono ? 16 : 1;
+    return 0;
+  }
+
+  const sign = (x) => (x > 0) - (x < 0);
+  // Cells on the straight line (row, column or diagonal) from a to z, or null.
+  function lineCells(a, z) {
+    const dr = z[0] - a[0], dc = z[1] - a[1];
+    if (dr && dc && Math.abs(dr) !== Math.abs(dc)) return null;
+    const n = Math.max(Math.abs(dr), Math.abs(dc));
+    return [...Array(n + 1)].map((_, k) => [a[0] + sign(dr) * k, a[1] + sign(dc) * k]);
+  }
+
+  // Interactive word search: drag across a word, or click its first and last letters.
+  function wordsearch(b, c) {
+    const s = notes(c);
+    const R = b.rows.length, C = b.rows[0].length;
+    const sibling = c && c.blocks && c.blocks[c.i + 1];
+    const known = b.words || (sibling && sibling.type === "list" ? sibling.items : null);
+    const words = known ? new Set(known) : null;
+    let marks = s.get("ws", []);
+    let anchor = null, start = null, cur = null, dragging = false, focus = [0, 0];
+    const wrap = el("div", "ws-wrap");
+    const t = el("table", "board plain ws");
+    t.tabIndex = 0;
+    t.setAttribute("aria-label", "Word search grid. Drag across a word, or click its first and last letters. Arrow keys move, Enter or Space selects.");
+    const cells = b.rows.map((row, r) => {
+      const tr = el("tr");
+      const out = [...row].map((ch, col) => {
+        const td = el("td", null, ch);
+        td.dataset.r = r;
+        td.dataset.c = col;
+        tr.append(td);
+        return td;
+      });
+      t.append(tr);
+      return out;
+    });
+    const status = el("p", "note ws-status");
+    status.setAttribute("aria-live", "polite");
+    const read = el("p", "ws-read");
+    const letters = (line) => line.map(([r, col]) => b.rows[r][col]).join("");
+    const same = (m, a, z) => (m[0] === a[0] && m[1] === a[1] && m[2] === z[0] && m[3] === z[1]) || (m[0] === z[0] && m[1] === z[1] && m[2] === a[0] && m[3] === a[1]);
+    function paint() {
+      const hit = new Set();
+      cells.flat().forEach((td) => td.classList.remove("hit", "anchor", "preview", "focus"));
+      marks.forEach((m) => lineCells([m[0], m[1]], [m[2], m[3]]).forEach(([r, col]) => { hit.add(r + "," + col); cells[r][col].classList.add("hit"); }));
+      if (anchor) cells[anchor[0]][anchor[1]].classList.add("anchor");
+      if (dragging && start && cur) (lineCells(start, cur) || [start]).forEach(([r, col]) => cells[r][col].classList.add("preview"));
+      if (document.activeElement === t) cells[focus[0]][focus[1]].classList.add("focus");
+      let left = "";
+      for (let r = 0; r < R; r++) for (let col = 0; col < C; col++) if (!hit.has(r + "," + col)) left += b.rows[r][col];
+      read.replaceChildren(el("span", "fitread-label", "Letters not in any marked word:"), el("span", "ws-left", left || "—"));
+    }
+    function select(a, z) {
+      const line = lineCells(a, z);
+      if (!line || line.length < 2) { status.textContent = "Words run in a straight line: across, down or diagonally."; return; }
+      const i = marks.findIndex((m) => same(m, a, z));
+      if (i >= 0) {
+        marks.splice(i, 1);
+        status.textContent = `Unmarked ${letters(line)}.`;
+      } else {
+        const w = letters(line), back = [...w].reverse().join("");
+        if (words && !words.has(w) && !words.has(back)) { status.textContent = `${w} isn't one of the hidden words.`; return; }
+        marks.push([...a, ...z]);
+        const found = words ? marks.length : null;
+        status.textContent = `Marked ${words && words.has(back) && !words.has(w) ? back : w}.` + (found != null && difficulty !== "hard" ? ` ${found} of ${words.size} found.` : "");
+      }
+      s.set("ws", marks);
+    }
+    function tap(pos) {
+      if (anchor && (anchor[0] !== pos[0] || anchor[1] !== pos[1])) { select(anchor, pos); anchor = null; }
+      else anchor = anchor ? null : pos;
+    }
+    const posOf = (node) => { const td = node && node.closest ? node.closest("td") : null; return td && t.contains(td) ? [+td.dataset.r, +td.dataset.c] : null; };
+    t.addEventListener("pointerdown", (e) => {
+      const p = posOf(e.target);
+      if (!p) return;
+      e.preventDefault();
+      t.focus({ preventScroll: true });
+      focus = p;
+      start = cur = p;
+      dragging = true;
+      paint();
+    });
+    window.addEventListener("pointermove", (e) => {
+      if (!dragging) return;
+      const p = posOf(document.elementFromPoint(e.clientX, e.clientY));
+      if (p && (p[0] !== cur[0] || p[1] !== cur[1])) { cur = p; paint(); }
+    });
+    window.addEventListener("pointerup", () => {
+      if (!dragging) return;
+      dragging = false;
+      if (start[0] === cur[0] && start[1] === cur[1]) tap(start);
+      else { select(start, cur); anchor = null; }
+      paint();
+    });
+    t.addEventListener("keydown", (e) => {
+      const mv = { ArrowUp: [-1, 0], ArrowDown: [1, 0], ArrowLeft: [0, -1], ArrowRight: [0, 1] }[e.key];
+      if (mv) { focus = [Math.min(R - 1, Math.max(0, focus[0] + mv[0])), Math.min(C - 1, Math.max(0, focus[1] + mv[1]))]; e.preventDefault(); }
+      else if (e.key === "Enter" || e.key === " ") { tap(focus); e.preventDefault(); }
+      else if (e.key === "Escape") anchor = null;
+      else return;
+      paint();
+    });
+    t.addEventListener("focus", paint);
+    t.addEventListener("blur", paint);
+    const clear = el("button", "btn secondary small", "Clear marks");
+    clear.type = "button";
+    clear.addEventListener("click", () => { marks = []; anchor = null; s.set("ws", marks); status.textContent = ""; paint(); });
+    wrap.append(t, el("p", "note", "Drag across a word, or click its first and last letters. Select a marked word again to unmark it."), status, read, clear);
+    paint();
+    return wrap;
+  }
+
+  // Word list chips you can strike through (older word searches print their list).
+  function strikeList(b, c) {
+    const s = notes(c);
+    const struck = new Set(s.get("strike", []));
+    const box = el("div", "chips");
+    b.items.forEach((w) => {
+      const chip = el("button", "chip strike" + (struck.has(w) ? " struck" : ""), w);
+      chip.type = "button";
+      chip.setAttribute("aria-pressed", struck.has(w));
+      chip.addEventListener("click", () => {
+        struck.has(w) ? struck.delete(w) : struck.add(w);
+        chip.classList.toggle("struck", struck.has(w));
+        chip.setAttribute("aria-pressed", struck.has(w));
+        s.set("strike", [...struck]);
+      });
+      box.append(chip);
+    });
+    return box;
+  }
+
+  // Shredded sentence: click strips to lay them out in order.
+  function tiles(b, c) {
+    const s = notes(c);
+    let order = s.get("tiles", []).filter((i) => i < b.items.length);
+    const sibling = c && c.blocks && c.blocks[c.i + 1];
+    const m = sibling && sibling.text && sibling.text.match(/\(([\d ]+)\)/);
+    const lengths = m ? m[1].trim().split(/\s+/).map(Number) : [];
+    const wrap = el("div", "tiles");
+    const pool = el("div", "chips");
+    const laid = el("div", "chips tiles-laid");
+    const reads = el("p", "ws-read");
+    function paint() {
+      pool.replaceChildren();
+      laid.replaceChildren();
+      b.items.forEach((t, i) => {
+        const chip = el("button", "chip tile", t);
+        chip.type = "button";
+        chip.disabled = order.includes(i);
+        chip.addEventListener("click", () => { order.push(i); s.set("tiles", order); paint(); });
+        pool.append(chip);
+      });
+      order.forEach((i, k) => {
+        const chip = el("button", "chip tile laid", b.items[i]);
+        chip.type = "button";
+        chip.title = "Put back";
+        chip.addEventListener("click", () => { order.splice(k, 1); s.set("tiles", order); paint(); });
+        laid.append(chip);
+      });
+      if (!order.length) laid.append(el("span", "note", "Click strips above to lay them out here; click a laid strip to put it back."));
+      let flat = order.map((i) => b.items[i]).join(""), words = [];
+      for (const n of lengths) { if (!flat) break; words.push(flat.slice(0, n)); flat = flat.slice(n); }
+      if (flat) words.push(flat);
+      reads.replaceChildren(el("span", "fitread-label", "Reads:"), el("span", "ws-left", words.join(" ") || "—"));
+    }
+    const clear = el("button", "btn secondary small", "Start again");
+    clear.type = "button";
+    clear.addEventListener("click", () => { order = []; s.set("tiles", order); paint(); });
+    wrap.append(pool, laid, reads, clear);
+    paint();
+    return wrap;
+  }
+
+  // Substitution solver: type a letter under a symbol and every copy of it fills in.
+  function substitution(b, c) {
+    const s = notes(c);
+    const map = s.get("sub", {});
+    const wrap = el("div", "subst");
+    if (b.wheel) wrap.append(wheel(b.text));
+    const box = el("div", "subst-text");
+    const all = [];
+    const refresh = () => {
+      const count = {};
+      Object.values(map).forEach((v) => { if (v) count[v] = (count[v] || 0) + 1; });
+      all.forEach(({ sym, inp }) => { inp.value = map[sym] || ""; inp.classList.toggle("dup", !!inp.value && count[inp.value] > 1); });
+    };
+    b.text.split(" ").forEach((w) => {
+      const word = el("span", "subst-word");
+      [...w].forEach((sym) => {
+        const cell = el("span", "subst-cell");
+        const inp = el("input", "subst-in");
+        inp.maxLength = 1;
+        inp.autocomplete = "off";
+        inp.spellcheck = false;
+        inp.setAttribute("aria-label", `Letter for ${sym}`);
+        const k = all.length;
+        inp.addEventListener("input", () => {
+          map[sym] = inp.value.toUpperCase().replace(/[^A-Z]/g, "").slice(-1);
+          s.set("sub", map);
+          refresh();
+          if (map[sym]) all.slice(k + 1).find((x) => !x.inp.value)?.inp.focus();
+        });
+        inp.addEventListener("focus", () => all.forEach((x) => x.cell.classList.toggle("same", x.sym === sym)));
+        cell.append(el("span", "subst-sym", sym), inp);
+        word.append(cell);
+        all.push({ sym, inp, cell });
+      });
+      box.append(word);
+    });
+    box.addEventListener("focusout", () => setTimeout(() => { if (!box.contains(document.activeElement)) all.forEach((x) => x.cell.classList.remove("same")); }));
+    const clear = el("button", "btn secondary small", "Clear letters");
+    clear.type = "button";
+    clear.addEventListener("click", () => { Object.keys(map).forEach((k) => delete map[k]); s.set("sub", map); refresh(); });
+    wrap.append(el("p", "note", "Type a letter under any symbol and every copy of that symbol fills in. Letters used twice turn red."), box, clear);
+    refresh();
+    return wrap;
+  }
+
+  // A cipher wheel for the easy shift puzzles.
+  function wheel(text) {
+    const box = el("div", "wheel");
+    let k = 0;
+    const out = el("pre", "mono wide");
+    const label = el("span", "wheel-k");
+    const show = () => {
+      label.textContent = `Shift back by ${k}`;
+      out.textContent = [...text].map((ch) => (/[A-Z]/.test(ch) ? String.fromCharCode((ch.charCodeAt(0) - 65 - k + 26) % 26 + 65) : ch)).join("");
+    };
+    const btn = (t, d) => {
+      const x = el("button", "btn secondary small", t);
+      x.type = "button";
+      x.setAttribute("aria-label", d > 0 ? "Turn the wheel forward" : "Turn the wheel back");
+      x.addEventListener("click", () => { k = (k + d + 26) % 26; show(); });
+      return x;
+    };
+    const row = el("div", "wheel-row");
+    row.append(btn("◀", -1), label, btn("▶", 1));
+    box.append(row, out);
+    show();
+    return box;
   }
 
   // ---------- block renderers ----------
@@ -184,22 +486,52 @@
     return s;
   }
 
-  function board(b) {
-    const t = el("table", "board" + (b.plain ? " plain" : ""));
+  function board(b, c) {
+    if (b.plain) return wordsearch(b, c);
+    const s = notes(c);
+    let path = s.get("path", []);
+    const t = el("table", "board chess");
     const files = "abcdefgh";
+    const tds = {};
+    const read = el("p", "ws-read");
+    const paint = () => {
+      Object.values(tds).forEach((td) => { td.classList.remove("visited"); td.querySelector(".cellnum")?.remove(); });
+      path.forEach((sq, k) => { const td = tds[sq]; td.classList.add("visited"); td.append(el("span", "cellnum", String(k + 1))); });
+      read.replaceChildren(el("span", "fitread-label", "Squares you've marked:"), el("span", "ws-left", path.map((sq) => tds[sq].firstChild.textContent).join("") || "—"));
+    };
     b.rows.forEach((row, r) => {
       const tr = el("tr");
-      if (!b.plain) tr.append(el("th", null, String(8 - r)));
-      [...row].forEach((ch, c) => tr.append(el("td", !b.plain && (r + c) % 2 ? "dark" : null, ch)));
+      tr.append(el("th", null, String(8 - r)));
+      [...row].forEach((ch, col) => {
+        const sq = files[col] + (8 - r);
+        const td = el("td", (r + col) % 2 ? "dark" : null);
+        td.append(document.createTextNode(ch));
+        td.tabIndex = 0;
+        td.setAttribute("aria-label", `${sq}: ${ch}`);
+        const toggle = () => {
+          const i = path.indexOf(sq);
+          if (i >= 0) path.splice(i, 1); else path.push(sq);
+          s.set("path", path);
+          paint();
+        };
+        td.addEventListener("click", toggle);
+        td.addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") { toggle(); e.preventDefault(); } });
+        tds[sq] = td;
+        tr.append(td);
+      });
       t.append(tr);
     });
-    if (!b.plain) {
-      const tr = el("tr");
-      tr.append(el("th"));
-      [...files].forEach((f) => tr.append(el("th", null, f)));
-      t.append(tr);
-    }
-    return t;
+    const tr = el("tr");
+    tr.append(el("th"));
+    [...files].forEach((f) => tr.append(el("th", null, f)));
+    t.append(tr);
+    const wrap = el("div");
+    const clear = el("button", "btn secondary small", "Clear marks");
+    clear.type = "button";
+    clear.addEventListener("click", () => { path = []; s.set("path", path); paint(); });
+    wrap.append(t, el("p", "note", "Click squares to mark them in order; click again to unmark."), read, clear);
+    paint();
+    return wrap;
   }
 
   // Interactive nonogram: click cycles empty → filled → crossed.
@@ -497,11 +829,66 @@
     return btn;
   }
 
-  function renderBlock(b) {
+  // Items drawn one per letter, so each can carry a note box.
+  function itemNodes(b) {
     switch (b.type) {
-      case "mono": return el("pre", "mono" + (b.big ? " big" : "") + (b.wide ? " wide" : ""), b.text);
+      case "clocks": return b.items.map(clock);
+      case "semaphore": return b.items.map(semaphoreFigure);
+      case "flags": return b.items.map(flag);
+      case "resistors": return b.items.map(resistor);
+      case "pigpen": return b.items.map(pigpen);
+      case "numbers": return b.items.map((n) => el("span", "chip", String(n)));
+      case "glyphs": return b.groups.map((g) => el("span", "chip glyph", g));
+      case "taps": return b.groups.map(([a, c]) => { const x = el("span", "chip"); x.append(a, el("span", "gap"), c); return x; });
+      case "mono": return [...b.text].map((ch) => el("span", "bigchar", ch));
+      case "list": return b.items.map((t) => el("span", "chip", t));
+      default: return null;
+    }
+  }
+
+  function renderBlock(b, c) {
+    const width = trayWidth(b, c);
+    if (width && b.type === "list" && !b.inline) {
+      const l = el(b.ordered ? "ol" : "ul", "plain-list tray-list" + (b.mono ? " mono-list" : ""));
+      const vals = notes(c).get("tray", []);
+      const inputs = [];
+      b.items.forEach((t, k) => {
+        const li = el("li");
+        const inp = el("input", "slot-in" + (width > 1 ? " wide" : ""));
+        inp.maxLength = width;
+        inp.value = vals[k] || "";
+        inp.autocomplete = "off";
+        inp.spellcheck = false;
+        inp.setAttribute("aria-label", `Your note for line ${k + 1}`);
+        inp.addEventListener("input", () => {
+          inp.value = inp.value.toUpperCase().replace(/[^A-Z]/g, "").slice(0, width);
+          notes(c).set("tray", inputs.map((i) => i.value));
+          if (width === 1 && inp.value) inputs[k + 1]?.focus();
+        });
+        inputs.push(inp);
+        li.append(el("span", "tray-text", t), inp);
+        l.append(li);
+      });
+      return l;
+    }
+    if (width && ["lamp", "tape", "braille", "swatches"].includes(b.type)) {
+      const node = renderBlock(b, null);
+      const rows = [...node.children];
+      node.replaceChildren();
+      node.classList.add(b.type === "lamp" || b.type === "tape" ? "tray-rows" : "tray-gallery");
+      return trayWrap(node, rows, width, c);
+    }
+    if (width) {
+      const nodes = itemNodes(b);
+      if (nodes) return trayWrap(el("div", "gallery tray-gallery" + (b.type === "mono" ? " bigchars" : "")), nodes, width, c);
+    }
+    switch (b.type) {
+      case "mono":
+        if (b.solver === "substitution" && c) return substitution(b, c);
+        return el("pre", "mono" + (b.big ? " big" : "") + (b.wide ? " wide" : ""), b.text);
       case "prose": return el("p", "prose", b.text);
-      case "board": return board(b);
+      case "caption": return el("p", "caption", b.text);
+      case "board": return board(b, c);
       case "nonogram": return nonogram(b);
       case "fitgrid": return fitgrid(b);
       case "sudoku": return sudoku(b);
@@ -539,6 +926,8 @@
         return ul;
       }
       case "list": {
+        if (b.tiles && c) return tiles(b, c);
+        if (b.strike && c) return strikeList(b, c);
         if (b.inline) {
           const ul = el("ul", "chips");
           b.items.forEach((t) => ul.append(el("li", "chip", t)));
@@ -613,6 +1002,68 @@
     return wrap;
   }
 
+  // Hints come in tiers: each click reveals the next, stronger one. Only the first costs a penalty.
+  function hintBox(id, list, st) {
+    const box = el("div", "hints");
+    st.hintTiers = st.hintTiers || {};
+    let shown = st.hintTiers[id] || (st.hints.includes(id) ? 1 : 0);
+    const btn = el("button", "btn secondary", "Hint");
+    btn.type = "button";
+    const paint = () => {
+      box.querySelectorAll(".hint").forEach((h) => h.remove());
+      list.slice(0, shown).forEach((h, k) => box.insertBefore(el("div", "hint", list.length > 1 ? `Hint ${k + 1}: ${h}` : h), btn));
+      btn.textContent = shown ? `Stronger hint (${shown + 1} of ${list.length})` : list.length > 1 ? `Hint (1 of ${list.length})` : "Hint";
+      btn.hidden = shown >= list.length;
+    };
+    btn.addEventListener("click", () => {
+      if (!shown) {
+        const penalty = me() ? " On the leaderboard it adds a 5-minute penalty (once per puzzle)." : "";
+        if (!confirm("Reveal a hint for this puzzle? It will be noted on your record." + penalty)) return;
+      } else if (!confirm("Reveal a stronger hint? It gives away more than the last one.")) return;
+      shown++;
+      st.hintTiers[id] = shown;
+      const first = !st.hints.includes(id);
+      if (first) st.hints.push(id);
+      save(rk(), st);
+      paint();
+      if (first) {
+        updateProgress();
+        renderLiveSplits();
+        report("hint", id);
+      }
+    });
+    box.append(btn);
+    paint();
+    return box;
+  }
+
+  // Older rounds printed some interactive pieces as plain lists; give them the new controls.
+  function upgradeBlocks(blocks) {
+    return blocks.map((b, i) => {
+      const next = blocks[i + 1], prev = blocks[i - 1];
+      if (b.type === "list" && b.inline && !b.tiles && next && next.type === "prose" && /^Word lengths:/.test(next.text)) return { ...b, tiles: true };
+      if (b.type === "list" && b.inline && prev && prev.type === "board" && prev.plain) return { ...b, strike: true };
+      if (b.type === "mono" && b.wide && !b.rails && !b.solver) return { ...b, solver: "substitution" };
+      return b;
+    });
+  }
+
+  function scratchpad(key) {
+    const d = el("details", "scratch");
+    d.append(el("summary", null, "Notes"));
+    const ta = el("textarea");
+    ta.rows = 4;
+    ta.spellcheck = false;
+    ta.setAttribute("aria-label", "Your notes");
+    ta.placeholder = "Working space. Saved in this browser.";
+    const k = "mh:scratch:" + key;
+    try { ta.value = localStorage.getItem(k) || ""; } catch {}
+    if (ta.value) d.open = true;
+    ta.addEventListener("input", () => { try { localStorage.setItem(k, ta.value); } catch {} });
+    d.append(ta);
+    return d;
+  }
+
   function renderPuzzle(p, st) {
     const card = el("article", "card");
     card.id = "p" + p.id;
@@ -624,9 +1075,11 @@
     if (p.technique) card.append(el("span", "technique", p.technique));
     card.append(el("p", "flavor", p.flavor));
     const body = el("div", "body");
-    p.blocks.forEach((b) => body.append(renderBlock(b)));
+    const blocks = upgradeBlocks(p.blocks);
+    blocks.forEach((b, i) => body.append(renderBlock(b, { key: `${rk()}|${p.id}`, i, blocks })));
     card.append(body);
     [...body.children].forEach((c, i) => { if (i) c.style.marginTop = "14px"; });
+    card.append(scratchpad(`${rk()}|${p.id}`));
 
     const markSolved = (word) => {
       card.classList.add("solved");
@@ -656,21 +1109,7 @@
       }
     }));
 
-    const hintBtn = el("button", "btn secondary", "Hint");
-    hintBtn.style.marginTop = "12px";
-    const showHint = () => { hintBtn.replaceWith(el("div", "hint", p.hint)); };
-    hintBtn.addEventListener("click", () => {
-      const penalty = me() ? " On the leaderboard it adds a 5-minute penalty." : "";
-      if (!confirm("Reveal the mechanism for this puzzle? It will be noted on your record." + penalty)) return;
-      if (!st.hints.includes(p.id)) st.hints.push(p.id);
-      save(rk(), st);
-      showHint();
-      updateProgress();
-      renderLiveSplits();
-      report("hint", p.id);
-    });
-    card.append(hintBtn);
-    if (st.hints.includes(p.id)) showHint();
+    card.append(hintBox(p.id, p.hints || [p.hint], st));
     if (st.solved[p.id]) markSolved(st.solved[p.id]);
     return card;
   }
@@ -680,7 +1119,7 @@
     card.append(el("span", "num", "METAPUZZLE"), el("h2", null, m.title), el("p", "flavor", m.flavor));
     if (m.explain) card.append(el("p", "explain", "How it works: " + m.explain));
     const body = el("div", "body");
-    m.blocks.forEach((b) => body.append(renderBlock(b)));
+    m.blocks.forEach((b, i) => body.append(renderBlock(b, b.type === "fitgrid" ? null : { key: `${rk()}|meta`, i, blocks: m.blocks })));
     const blanks = el("div", "blanks");
     for (let i = 0; i < m.length; i++) blanks.append(el("div", "blank", st.meta ? st.meta[i] : ""));
     body.append(blanks);
@@ -752,6 +1191,8 @@
         fb.textContent = `${v} is not the final answer.`;
       }
     }, "Final answer"));
+    card.append(scratchpad(`${rk()}|meta`));
+    if (m.hints) card.append(hintBox("meta", m.hints, st));
     if (st.meta) win(st.meta);
     return card;
   }
@@ -761,7 +1202,7 @@
     box.innerHTML = "";
     let sol;
     try {
-      const path = difficulty === "easy" ? `solutions/easy/${puzzle.date}.json` : `solutions/${puzzle.date}.json`;
+      const path = levelPath("solutions", puzzle.date, difficulty);
       const r = await fetch(path, { cache: "no-cache" });
       if (!r.ok) return;
       sol = await r.json();
@@ -895,8 +1336,8 @@
     const byDate = Object.fromEntries(index.puzzles.map((p) => [p.date, p]));
     [...$("#archive").options].forEach((o) => {
       const p = byDate[o.value];
-      const h = markFor(p.date), e = p.easy ? markFor(p.date + "/easy") : "";
-      const marks = [h && "H" + h, e && "E" + e].filter(Boolean).join(" ");
+      const h = markFor(p.date), m = p.medium ? markFor(p.date + "/medium") : "", e = p.easy ? markFor(p.date + "/easy") : "";
+      const marks = [e && "E" + e, m && "M" + m, h && "H" + h].filter(Boolean).join(" ");
       o.textContent = `#${p.number} · ${p.date} · ${p.round}${marks ? "  " + marks : ""}`;
     });
   }
@@ -930,24 +1371,24 @@
 
   async function show(date, diff) {
     const entry = index.puzzles.find((x) => x.date === date);
-    if (diff === "easy" && entry && !entry.easy) diff = "hard"; // early rounds had no easy version
+    if (!hasLevel(entry, diff)) diff = "hard"; // early rounds had no easy or medium version
     difficulty = diff;
-    const path = diff === "easy" ? `puzzles/easy/${date}.json` : `puzzles/${date}.json`;
+    const path = levelPath("puzzles", date, diff);
     const r = await fetch(path, { cache: "no-cache" });
     if (!r.ok) { $("#round").textContent = "Puzzle not found"; return; }
     puzzle = await r.json();
     const st = load(rk());
     const d = new Date(date + "T00:00:00Z");
-    $("#eyebrow").textContent = `No. ${puzzle.number} · ${diff === "easy" ? "Easy · " : ""}${d.toLocaleDateString(undefined, { weekday: "long", month: "long", day: "numeric", year: "numeric", timeZone: "UTC" })}`;
+    $("#eyebrow").textContent = `No. ${puzzle.number} · ${diff !== "hard" ? LEVEL[diff] + " · " : ""}${d.toLocaleDateString(undefined, { weekday: "long", month: "long", day: "numeric", year: "numeric", timeZone: "UTC" })}`;
     $("#round").textContent = puzzle.round;
     $("#intro").textContent = puzzle.intro;
     const echo = $("#echo");
     echo.textContent = puzzle.echo || "";
     echo.hidden = !puzzle.echo;
-    document.title = `${puzzle.round}${diff === "easy" ? " (Easy)" : ""} · Daily Metahunt`;
+    document.title = `${puzzle.round}${diff !== "hard" ? ` (${LEVEL[diff]})` : ""} · Daily Metahunt`;
     document.querySelectorAll(".diff button").forEach((b) => {
       b.classList.toggle("on", b.dataset.diff === diff);
-      b.disabled = b.dataset.diff === "easy" && entry && !entry.easy;
+      b.disabled = !hasLevel(entry, b.dataset.diff);
     });
     if (st.start) renderRound(st);
     else renderGate(st);  // nothing is shown, and no clock runs, until you press Begin
@@ -980,7 +1421,7 @@
     $("#meta").innerHTML = "";
     $("#progress").textContent = "";
     const card = el("article", "card gate");
-    card.append(el("span", "num", difficulty === "easy" ? "EASY ROUND" : "HARD ROUND"));
+    card.append(el("span", "num", `${LEVEL[difficulty].toUpperCase()} ROUND`));
     card.append(el("h2", "gate-title", "Ready?"));
     const n = puzzle.puzzles.length;
     card.append(el("p", "gate-copy",
@@ -1053,12 +1494,12 @@
     cur.querySelector(".split-time").textContent = "+" + hms((Date.now() - last) / 1000);
   }
 
-  const go = (date, diff) => { location.hash = diff === "easy" ? `${date}/easy` : date; };
+  const go = (date, diff) => { location.hash = diff !== "hard" ? `${date}/${diff}` : date; };
 
   function route() {
     const [want, diff] = location.hash.slice(1).split("/");
     const dates = index.puzzles.map((x) => x.date);
-    show(dates.includes(want) ? want : index.latest, diff === "easy" ? "easy" : "hard");
+    show(dates.includes(want) ? want : index.latest, ["easy", "medium"].includes(diff) ? diff : "hard");
   }
 
   async function init() {

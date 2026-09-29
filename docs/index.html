@@ -19,8 +19,9 @@
       <span>Daily Metahunt</span>
     </div>
     <div class="diff" role="group" aria-label="Difficulty">
-      <button type="button" data-diff="hard" class="on">Hard</button>
       <button type="button" data-diff="easy">Easy</button>
+      <button type="button" data-diff="medium">Medium</button>
+      <button type="button" data-diff="hard" class="on">Hard</button>
     </div>
     <nav class="nav">
       <button id="prev" class="ghost" aria-label="Previous puzzle">←</button>
@@ -52,9 +53,10 @@
 
   <details class="rules">
     <summary>How this works</summary>
-    <p>Every day at 00:00 UTC two new rounds appear on the same theme. <strong>Hard</strong> gives you nothing but flavour; <strong>Easy</strong> names each puzzle's technique, shows answer lengths and explains the meta. Each round is a handful of feeder puzzles and one metapuzzle. Each feeder hides a single word. On Hard, nothing tells you how: the flavour text, the title and the shape of the data are the only clues, and some puzzles have more than one layer.</p>
+    <p>Every day at 00:00 UTC three new rounds appear on the same theme. <strong>Easy</strong> names each puzzle's technique and shows answer lengths. <strong>Medium</strong> shows lengths but not techniques, and only rarely hides a second layer. <strong>Hard</strong> gives you nothing but flavour: the title and the shape of the data are the only clues, and some puzzles have more than one layer. Each round is a handful of feeder puzzles and one metapuzzle, and each feeder hides a single word.</p>
     <p>The meta uses the feeder answers (and sometimes things you noticed along the way) to produce one final, on-theme word. Answers are checked against a hash, so the page itself doesn't contain them. Solutions for each round are published the day after.</p>
-    <p>Hints exist, but using one is noted on your record, and on the leaderboard each hint adds a five-minute penalty.</p>
+    <p>Hints come in tiers, from a gentle question to a plain explanation. Hard only offers the gentle one; Easy goes all the way. Using a hint on a puzzle is noted on your record, and on the leaderboard it adds a five-minute penalty (once per puzzle, however many tiers you open).</p>
+    <p>Grids, cryptograms, word searches and shredded sentences can be worked in the page: click, drag or type. Most encodings have small boxes under each item for jotting letters, and every puzzle has a notes pad. All of it is saved in this browser.</p>
   </details>
 </main>
 

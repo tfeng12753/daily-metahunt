@@ -166,6 +166,7 @@ class Mechanism:
     allow_transform = True
     weight = 1      # relative pick frequency; word/logic puzzles are weighted up
     easy = True     # allowed in the easy round
+    medium = True   # allowed in the medium round
     hard = True     # allowed in the hard round
 
     def can(self, word, ctx=None):
@@ -180,6 +181,7 @@ class Mechanism:
 
 class DnaBinary(Mechanism):
     easy = False
+    medium = False
     key = "dna_binary"
     name = "Binary codons"
     hint = "Pairs of bits are nucleotides (A=00, C=01, G=10, T=11). Six bits = one codon; translate codons to amino-acid one-letter codes."
@@ -214,6 +216,7 @@ class DnaBinary(Mechanism):
 
 class DnaTemplate(Mechanism):
     easy = False
+    medium = False
     key = "dna_template"
     name = "Template strand"
     hint = "This is the template (antisense) strand written 5′→3′. Reverse-complement it to get the coding strand, then translate codons to amino-acid one-letter codes."
@@ -487,6 +490,7 @@ class Dtmf(Mechanism):
 
 class Vigenere(Mechanism):
     easy = False
+    medium = False
     key = "vigenere"
     name = "Vigenère keyed by the title"
     hint = "Vigenère cipher; the key is this puzzle's title (letters only)."

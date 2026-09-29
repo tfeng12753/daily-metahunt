@@ -79,7 +79,7 @@ class Cryptogram(Mechanism):
         table = dict(zip(ALPHA, perm))
         ct = "".join(table.get(c, c) for c in plain)
         ctx["_plain"] = plain
-        return [{"type": "mono", "text": ct, "wide": True}]
+        return [{"type": "mono", "text": ct, "wide": True, "solver": "substitution"}]
 
     def decode(self, blocks, ctx):
         # The self-check knows the plaintext; verify it is a consistent substitution of the ciphertext.
@@ -298,7 +298,7 @@ class WordSearch(Mechanism):
     weight = 3
     key = "wordsearch"
     name = "Word search leftovers"
-    hint = "Find every listed word (any of 8 directions). The unused letters, read left-to-right, top-to-bottom, spell the answer."
+    hint = "Find every hidden word (any of 8 directions). The unused letters, read left-to-right, top-to-bottom, spell the answer."
     easy_flavors = [
         "Cross off everything you recognise. What nobody claims is what you came for.",
         "An inventory of {place}, tangled up. Whatever is left over when every item is accounted for is yours.",
@@ -307,7 +307,7 @@ class WordSearch(Mechanism):
     flavors = [
         'Cross off everything you recognise. What nobody claims is yours.',
         'An inventory, tangled. The leftovers are the point.',
-        "Everything on the list is in there somewhere. Some things aren't on the list.",
+        "Everything that belongs is in there somewhere. Some things don't belong.",
     ]
     DIRS = [(0, 1), (1, 0), (1, 1), (-1, 1), (0, -1), (-1, 0), (-1, -1), (1, -1)]
 
@@ -377,15 +377,29 @@ class WordSearch(Mechanism):
                     if grid[r][c] is None:
                         grid[r][c] = next(it)
             if all(self._count(grid, w) == 1 for w in placed):
-                return [{"type": "board", "rows": ["".join(row) for row in grid], "plain": True},
-                        {"type": "list", "items": sorted(placed), "inline": True}]
+                words = sorted(placed)
+                # The word list is not printed: a category stands in for it, and the last hint reveals it.
+                level = ctx.get("level", "hard")
+                place = ctx.get("place", "this round")
+                if level == "easy":
+                    lens = ", ".join(str(n) for n in sorted(len(w) for w in words))
+                    cap = "Hidden in the grid: %d words to do with %s (lengths %s), running in any direction." % (len(words), place, lens)
+                elif level == "medium":
+                    cap = "Hidden in the grid: %d words to do with %s." % (len(words), place)
+                else:
+                    cap = "Somewhere in here: things to do with %s." % place
+                ctx["_extra_hint"] = "The hidden words are: " + ", ".join(words) + "."
+                return [{"type": "caption", "text": cap},
+                        {"type": "board", "rows": ["".join(row) for row in grid], "plain": True, "words": words}]
         raise RuntimeError("word search failed")
 
     def decode(self, blocks, ctx):
-        grid = blocks[0]["rows"]
+        board = next(b for b in blocks if b["type"] == "board")
+        listed = [b for b in blocks if b["type"] == "list"]  # older rounds printed the word list
+        grid = board["rows"]
         R, C = len(grid), len(grid[0])
         used = set()
-        for w in blocks[1]["items"]:
+        for w in board.get("words") or listed[0]["items"]:
             for r in range(R):
                 for c in range(C):
                     for dr, dc in self.DIRS:
@@ -643,23 +657,26 @@ class MissingLetters(Mechanism):
     def encode(self, word, rng, ctx):
         pool = [w for w in ctx["carrier"] if len(w) >= 5]
         known = set(ctx.get("all_words", [])) | set(pool)
-        items, used = [], set()
-        for c in word:
-            opts = []
-            for w in pool:
-                if w in used:
-                    continue
-                for i, ch in enumerate(w):
-                    if ch == c:
-                        pat = w[:i] + "_" + w[i + 1:]
-                        fills = [k for k in known if len(k) == len(w) and all(a == b or a == "_" for a, b in zip(pat, k))]
-                        if fills == [w]:
-                            opts.append((w, pat))
-            if not opts:
-                raise RuntimeError("no gap word for %s" % c)
-            w, pat = rng.choice(opts)
-            used.add(w)
-            items.append(pat)
+        by_letter = {}
+        for w in pool:
+            for i, ch in enumerate(w):
+                pat = w[:i] + "_" + w[i + 1:]
+                fills = [k for k in known if len(k) == len(w) and all(a == b or a == "_" for a, b in zip(pat, k))]
+                if fills == [w]:
+                    by_letter.setdefault(ch, []).append((w, pat))
+        for _ in range(40):  # random picks can strand a later letter; retry a few times
+            items, used = [], set()
+            for c in word:
+                opts = [o for o in by_letter.get(c, []) if o[0] not in used]
+                if not opts:
+                    break
+                w, pat = rng.choice(opts)
+                used.add(w)
+                items.append(pat)
+            if len(items) == len(word):
+                break
+        else:
+            raise RuntimeError("no gap word for %s" % word)
         ctx["_known"] = sorted(known)
         return [{"type": "list", "items": items, "ordered": True, "mono": True}]
 
@@ -732,7 +749,7 @@ class Fragments(Mechanism):
         flat = plain.replace(" ", "")
         chunks = [flat[i:i + 3] for i in range(0, len(flat), 3)]
         ctx["_plain"] = plain
-        return [{"type": "list", "items": sorted(chunks), "inline": True},
+        return [{"type": "list", "items": sorted(chunks), "inline": True, "tiles": True},
                 {"type": "prose", "text": "Word lengths: (%s)" % " ".join(str(len(w)) for w in plain.split())}]
 
     def decode(self, blocks, ctx):
@@ -861,8 +878,147 @@ class LetterSudoku(Mechanism):
         return "".join(alphabet[sol[r * n + c]] for r, c in b["marks"])
 
 
+
+# --------------------------------------------------------------------------
+# More word puzzles: trivia numbers, scrambled sentences, shift ciphers
+# --------------------------------------------------------------------------
+
+TRIVIA = {
+    1: ["Moons orbiting Earth", "Wheels on a unicycle"],
+    2: ["Wheels on a bicycle", "Humps on a Bactrian camel"],
+    3: ["Sides of a triangle", "Primary colours of light"],
+    4: ["Suits in a deck of cards", "Strings on a violin"],
+    5: ["Rings on the Olympic flag", "Sides of a pentagon"],
+    6: ["Legs on an insect", "Faces on a cube"],
+    7: ["Days in a week", "Continents on a standard world map"],
+    8: ["Legs on a spider", "Arms on an octopus"],
+    9: ["Players fielding for a baseball team", "Squares in a noughts-and-crosses grid"],
+    10: ["Years in a decade", "Sides of a decagon"],
+    11: ["Players on a football (soccer) side", "Players on a cricket side"],
+    12: ["Months in a year", "Signs of the Western zodiac"],
+    13: ["Cards in one suit of a standard deck", "Original British colonies that became the United States"],
+    14: ["Days in a fortnight", "Lines in a sonnet"],
+    15: ["Players on a rugby union side", "Red balls racked at the start of a snooker frame"],
+    16: ["Ounces in a pound", "Pawns on a chessboard at the start of a game"],
+    17: ["Syllables in a haiku"],
+    18: ["Holes on a full golf course"],
+    19: ["Lines in a villanelle"],
+    20: ["Faces on an icosahedron", "Things in a score"],
+    21: ["Spots on a standard die, all faces added up", "Guns fired in a traditional royal salute"],
+    22: ["Yards in a cricket pitch, stump to stump", "Players on a football pitch at kick-off"],
+    23: ["Pairs of chromosomes in a typical human cell"],
+    24: ["Hours in a day", "Carats in pure gold"],
+    25: ["Cents in a US quarter", "Years of marriage marked by a silver anniversary"],
+    26: ["Letters in the English alphabet", "Whole miles in a marathon"],
+}
+TRIVIA_REV = {fact: n for n, facts in TRIVIA.items() for fact in facts}
+
+
+class TriviaNumbers(Mechanism):
+    key = "trivia"
+    name = "Number trivia"
+    hint = "Each line is a number from 1 to 26. Turn each number into a letter (A = 1, B = 2, …)."
+    weight = 2
+    easy_flavors = [
+        "The quizmaster {at} only ever asks questions with a number for an answer, and never a big one.",
+        "A pub quiz where every answer is a count. Keep a tally, then keep counting.",
+        "How many? How many? How many? The answers go somewhere after that.",
+    ]
+    flavors = [
+        "The quiz only ever asks how many.",
+        "Count everything. Then count again, differently.",
+        "Every answer is small, and none is bigger than it needs to be.",
+    ]
+
+    def encode(self, word, rng, ctx):
+        return [{"type": "list", "items": [rng.choice(TRIVIA[idx(c) + 1]) for c in word], "ordered": True, "tray": "letter"}]
+
+    def decode(self, blocks, ctx):
+        return "".join(ALPHA[TRIVIA_REV[f] - 1] for f in blocks[0]["items"])
+
+
+class Scramble(Mechanism):
+    key = "scramble"
+    name = "Scrambled sentence"
+    hint = "Each word of a sentence has had its letters shuffled. Unscramble them; the sentence tells you the answer."
+    weight = 3
+    allow_transform = False
+    easy_flavors = [
+        "Every word {at} went through the blender, but each one came out whole.",
+        "The typesetter shook each word like a box of tiles, one word at a time.",
+        "All the right letters, all in the right words, none in the right places.",
+    ]
+    flavors = [
+        "All the right letters, none in the right places.",
+        "Shaken, one word at a time.",
+        "Nothing is missing. Nothing is where it was.",
+    ]
+
+    @staticmethod
+    def _shuffle(w, rng):
+        if len(set(w)) < 2:
+            return w
+        for _ in range(50):
+            letters = list(w)
+            rng.shuffle(letters)
+            j = "".join(letters)
+            if j != w:
+                return j
+        return w
+
+    def encode(self, word, rng, ctx):
+        plain = cluephrase(word, rng)
+        words = [self._shuffle(w, rng) for w in plain.split()]
+        if ctx.get("level", "hard") == "hard":
+            rng.shuffle(words)  # the hard round loses the word order too
+        ctx["_plain"] = plain
+        return [{"type": "list", "items": words, "inline": True, "tray": "word"}]
+
+    def decode(self, blocks, ctx):
+        plain = ctx["_plain"]
+        if sorted("".join(sorted(w)) for w in blocks[0]["items"]) != sorted("".join(sorted(w)) for w in plain.split()):
+            return None
+        return phrase_answer(plain)
+
+
+class Caesar(Mechanism):
+    key = "caesar"
+    name = "Caesar shift"
+    hint = "Every letter of the sentence was shifted along the alphabet by the same amount. Find the shift; the sentence tells you the answer."
+    weight = 2
+    allow_transform = False
+    hard = False
+    easy_flavors = [
+        "Julius would have read this before breakfast.",
+        "Every letter {at} took the same number of steps down the road, and none of them came back.",
+        "Turn the wheel until the words come back.",
+    ]
+    flavors = [
+        "Everyone moved along by the same number of seats.",
+        "Turn the wheel until it talks.",
+        "An emperor's idea of privacy.",
+    ]
+
+    def encode(self, word, rng, ctx):
+        k = rng.choice([s for s in range(1, 26) if s != 13])
+        plain = cluephrase(word, rng)
+        ct = "".join(ALPHA[(idx(c) + k) % 26] if c in ALPHA else c for c in plain)
+        ctx["_plain"] = plain
+        block = {"type": "mono", "text": ct, "wide": True, "solver": "substitution"}
+        if ctx.get("level") == "easy":
+            block["wheel"] = True  # a cipher wheel you can turn in the browser
+        return [block]
+
+    def decode(self, blocks, ctx):
+        ct, plain = blocks[0]["text"], ctx["_plain"]
+        shifts = {(idx(a) - idx(b)) % 26 for a, b in zip(ct, plain) if a in ALPHA}
+        if len(shifts) != 1 or len(ct) != len(plain):
+            return None
+        return phrase_answer(plain)
+
+
 HUNT_MECHANISMS = [Cryptogram(), RailFence(), BookCipher(), KnightPath(), SignalFlags(),
                    MixedBases(), WordSearch(), Nonogram(), AnagramExtras(), MissingLetters(),
-                   DropQuote(), Fragments(), LetterSudoku()]
+                   DropQuote(), Fragments(), LetterSudoku(), TriviaNumbers(), Scramble(), Caesar()]
 MECHANISMS = BASE_MECHANISMS + HUNT_MECHANISMS
 BY_KEY = {m.key: m for m in MECHANISMS}

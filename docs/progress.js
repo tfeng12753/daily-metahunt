@@ -12,7 +12,10 @@
     return `${h}:${String(m).padStart(2, "0")}:${String(s).padStart(2, "0")}`;
   };
 
-  // Same storage format the round pages write: "mh:<date>" and "mh:<date>/easy".
+  // Same storage format the round pages write: "mh:<date>", "mh:<date>/medium" and "mh:<date>/easy".
+  const LEVELS = ["easy", "medium", "hard"];
+  const NAME = { easy: "Easy", medium: "Medium", hard: "Hard" };
+  const levelsOf = (r) => LEVELS.filter((l) => l === "hard" || r.has[l]);
   const read = (key) => {
     try { return JSON.parse(localStorage.getItem("mh:" + key)); } catch { return null; }
   };
@@ -34,7 +37,7 @@
 
   function streak(rows) {
     // Consecutive days, ending today or yesterday, with at least one meta solved.
-    const done = new Set(rows.filter((r) => r.hard.state === "done" || r.easy.state === "done").map((r) => r.date));
+    const done = new Set(rows.filter((r) => LEVELS.some((l) => r[l].state === "done")).map((r) => r.date));
     const day = new Date();
     let key = day.toISOString().slice(0, 10);
     if (!done.has(key)) { day.setUTCDate(day.getUTCDate() - 1); key = day.toISOString().slice(0, 10); }
@@ -44,16 +47,16 @@
   }
 
   function roundLink(date, diff) {
-    return `./#${date}${diff === "easy" ? "/easy" : ""}`;
+    return `./#${date}${diff !== "hard" ? "/" + diff : ""}`;
   }
 
   function renderTiles(rows) {
-    const all = rows.flatMap((r) => [r.hard, r.easy]);
+    const all = rows.flatMap((r) => LEVELS.map((l) => r[l]));
     const done = all.filter((s) => s.state === "done");
     const clocks = done.map((s) => s.clock).filter((c) => c != null);
     const tiles = [
       ["Metas solved", `${done.length}`],
-      ["Hard / Easy", `${rows.filter((r) => r.hard.state === "done").length} / ${rows.filter((r) => r.easy.state === "done").length}`],
+      ["Easy / Medium / Hard", LEVELS.map((l) => rows.filter((r) => r[l].state === "done").length).join(" / ")],
       ["Current streak", `${streak(rows)} day${streak(rows) === 1 ? "" : "s"}`],
       ["Best clock", clocks.length ? hms(Math.min(...clocks)) : "—"],
       ["Feeders solved", `${all.reduce((a, s) => a + (s.solved || 0), 0)}`],
@@ -86,11 +89,11 @@
         const cell = el(r ? "a" : "div", "cal-cell" + (r ? "" : " empty"));
         cell.append(el("span", "cal-day", String(d)));
         if (r) {
-          cell.href = roundLink(date, r.hard.state === "done" && r.easy.state !== "done" && r.hasEasy ? "easy" : "hard");
-          cell.title = `${r.round}: Hard ${LABEL[r.hard.state].toLowerCase()}` + (r.hasEasy ? `, Easy ${LABEL[r.easy.state].toLowerCase()}` : "");
+          const levels = levelsOf(r);
+          cell.href = roundLink(date, levels.find((l) => r[l].state !== "done") || "hard");
+          cell.title = `${r.round}: ` + levels.map((l) => `${NAME[l]} ${LABEL[r[l].state].toLowerCase()}`).join(", ");
           const dots = el("span", "cal-dots");
-          dots.append(el("span", "cal-dot " + r.hard.state, "H"));
-          if (r.hasEasy) dots.append(el("span", "cal-dot " + r.easy.state, "E"));
+          levels.forEach((l) => dots.append(el("span", "cal-dot " + r[l].state, NAME[l][0])));
           cell.append(dots);
         }
         grid.append(cell);
@@ -99,7 +102,7 @@
       box.append(card);
     });
     const legend = el("p", "note cal-legend");
-    legend.textContent = "H = Hard, E = Easy.  Filled = solved · half = in progress · outline = opened.";
+    legend.textContent = "E = Easy, M = Medium, H = Hard.  Filled = solved · half = in progress · outline = opened.";
     box.append(legend);
   }
 
@@ -111,13 +114,12 @@
     ["#", "Date", "Round", "Level", "Status", "Puzzles", "Clock", "Hints"].forEach((h) => hr.append(el("th", null, h)));
     t.append(hr);
     rows.forEach((r) => {
-      [["hard", r.hard], ["easy", r.easy]].forEach(([diff, s]) => {
-        if (diff === "easy" && !r.hasEasy) return;
+      levelsOf(r).reverse().map((l) => [l, r[l]]).forEach(([diff, s]) => {
         const tr = el("tr", "st-" + s.state);
         const link = el("a", null, r.round);
         link.href = roundLink(r.date, diff);
         const cells = [
-          `#${r.number}`, r.date, link, diff === "easy" ? "Easy" : "Hard",
+          `#${r.number}`, r.date, link, NAME[diff],
           `${MARK[s.state]} ${LABEL[s.state]}`.trim(),
           s.state === "none" ? "—" : `${s.solved}/${s.total ?? "?"}${s.meta ? " + meta" : ""}`,
           s.clock != null ? hms(s.clock) : "—",
@@ -202,11 +204,12 @@
       return;
     }
     const rows = [...index.puzzles].reverse().map((p) => ({
-      date: p.date, number: p.number, round: p.round, hasEasy: !!p.easy,
+      date: p.date, number: p.number, round: p.round, has: { easy: !!p.easy, medium: !!p.medium },
       hard: status(read(p.date), p.count && p.count.hard),
+      medium: status(read(p.date + "/medium"), p.count && p.count.medium),
       easy: status(read(p.date + "/easy"), p.count && p.count.easy),
     }));
-    const played = rows.filter((r) => r.hard.state !== "none" || r.easy.state !== "none").length;
+    const played = rows.filter((r) => LEVELS.some((l) => r[l].state !== "none")).length;
     $("#sub").textContent = played
       ? `You've played ${played} of ${rows.length} day${rows.length === 1 ? "" : "s"} so far.`
       : "Nothing played in this browser yet. Pick a day below, or import a backup.";

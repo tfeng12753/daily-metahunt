@@ -23,13 +23,15 @@ const TYPES = { ".html": "text/html; charset=utf-8", ".js": "text/javascript", "
 
 const store = await createStore(process.env.DATABASE_URL);
 const sha = (s) => createHash("sha256").update(s).digest("hex");
+const LEVELS = ["hard", "medium", "easy"];
+const level = (d) => (LEVELS.includes(d) ? d : "hard");
 const norm = (s) => String(s || "").toUpperCase().replace(/[^A-Z]/g, "");
 
 // ---------- puzzle lookup (local files first, then the live static site) ----------
 const puzzleCache = new Map();
 async function loadRound(date, difficulty) {
-  if (!/^\d{4}-\d{2}-\d{2}$/.test(date) || !["hard", "easy"].includes(difficulty)) return null;
-  const rel = difficulty === "easy" ? `puzzles/easy/${date}.json` : `puzzles/${date}.json`;
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(date) || !LEVELS.includes(difficulty)) return null;
+  const rel = difficulty === "hard" ? `puzzles/${date}.json` : `puzzles/${difficulty}/${date}.json`;
   const hit = puzzleCache.get(rel);
   if (hit && Date.now() - hit.at < 10 * 60e3) return hit.round;
   let round = null;
@@ -110,7 +112,7 @@ async function api(req, res, url) {
     const body = await readBody(req);
     const player = await playerFrom(body);
     if (!player) return send(res, 401, { error: "Unknown player; join the leaderboard again." });
-    const difficulty = body.difficulty === "easy" ? "easy" : "hard";
+    const difficulty = level(body.difficulty);
     const round = await loadRound(String(body.date), difficulty);
     if (!round) return send(res, 404, { error: "No such round." });
     const at = await store.recordStart({ playerId: player.id, date: round.date, difficulty });
@@ -119,7 +121,7 @@ async function api(req, res, url) {
 
   // Public, read-only: one player's run on one round (powers verified share links).
   if (url.pathname === "/api/run" && req.method === "GET") {
-    const difficulty = url.searchParams.get("difficulty") === "easy" ? "easy" : "hard";
+    const difficulty = level(url.searchParams.get("difficulty"));
     const date = url.searchParams.get("date") || "";
     const player = await store.playerByName(url.searchParams.get("name") || "");
     const round = await loadRound(date, difficulty);
@@ -153,6 +155,7 @@ async function api(req, res, url) {
       totals: {
         metas: metas.length,
         hard: metas.filter((r) => r.difficulty === "hard").length,
+        medium: metas.filter((r) => r.difficulty === "medium").length,
         easy: metas.filter((r) => r.difficulty === "easy").length,
         best: personal.length ? Math.min(...personal) : null,
         average: personal.length ? Math.round(personal.reduce((a, b) => a + b, 0) / personal.length) : null,
@@ -164,7 +167,7 @@ async function api(req, res, url) {
     const body = await readBody(req);
     const player = await playerFrom(body);
     if (!player) return send(res, 401, { error: "Unknown player; join the leaderboard again." });
-    const difficulty = body.difficulty === "easy" ? "easy" : "hard";
+    const difficulty = level(body.difficulty);
     const round = await loadRound(String(body.date), difficulty);
     if (!round) return send(res, 404, { error: "No such round." });
     const which = body.puzzle === "meta" ? "meta" : Number(body.puzzle);
@@ -185,7 +188,7 @@ async function api(req, res, url) {
 
   if (url.pathname === "/api/leaderboard" && req.method === "GET") {
     const date = url.searchParams.get("date") || "";
-    const difficulty = url.searchParams.get("difficulty") === "easy" ? "easy" : "hard";
+    const difficulty = level(url.searchParams.get("difficulty"));
     const round = await loadRound(date, difficulty);
     if (!round) return send(res, 404, { error: "No such round." });
     const rows = (await store.roundRows(date, difficulty)).map((r) => {
@@ -206,7 +209,7 @@ async function api(req, res, url) {
   }
 
   if (url.pathname === "/api/alltime" && req.method === "GET") {
-    const difficulty = url.searchParams.get("difficulty") === "easy" ? "easy" : "hard";
+    const difficulty = level(url.searchParams.get("difficulty"));
     return send(res, 200, { difficulty, rows: await store.allTime(difficulty) });
   }
 

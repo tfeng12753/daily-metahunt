@@ -12,6 +12,7 @@ newest generated puzzle.
 """
 import argparse
 import datetime as dt
+import functools
 import hashlib
 import hmac
 import json
@@ -20,6 +21,7 @@ import random
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import hints  # noqa: E402
 import llm  # noqa: E402
 from hunt_mechanisms import MECHANISMS  # noqa: E402
 from mechanisms import ALPHA, TRANSFORMS  # noqa: E402
@@ -27,6 +29,9 @@ from mechanisms import ALPHA, TRANSFORMS  # noqa: E402
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOCS = os.path.join(ROOT, "docs")
 EPOCH = dt.date(2026, 9, 27)  # puzzle #1
+LEVELS = ("hard", "medium", "easy")
+# Chance that a feeder gets a hidden second layer (Atbash, reversal, ROT13).
+TRANSFORM_RATE = {"hard": 0.4, "medium": 0.15, "easy": 0.0}
 
 with open(os.path.join(ROOT, "generator", "themes.json")) as f:
     THEMES = json.load(f)
@@ -295,8 +300,10 @@ def meta_initials(final, pool, rng):
 
 
 METAS = [meta_diagonal, meta_title_diagonal, meta_mutation, meta_stowaway, meta_fitin, meta_logbook, meta_initials]
+MEDIUM_METAS = [meta_fitin, meta_title_diagonal, meta_diagonal, meta_stowaway, meta_logbook]
 EASY_METAS = [meta_first_letters, meta_first_letters, meta_fitin, meta_title_diagonal,
               lambda final, pool, rng: meta_logbook(final, pool, rng, sizes=(4, 5))]
+METAS_BY_LEVEL = {"hard": METAS, "medium": MEDIUM_METAS, "easy": EASY_METAS}
 
 
 # --------------------------------------------------------------------------
@@ -315,13 +322,14 @@ def pick_theme_and_final(secret, date):
     return theme, finals[cycle % len(finals)], day + 1
 
 
-def assign_mechanisms(feeders, rng, ctx, easy=False):
+def assign_mechanisms(feeders, rng, ctx, level="hard"):
     """Give each feeder a distinct mechanism (plus an optional transform layer).
 
     Mechanisms are drawn in a weighted random order, so word and logic
     puzzles (weight 3) turn up about three times as often as pure encodings.
     """
-    allowed = [m for m in MECHANISMS if (m.easy if easy else m.hard)]
+    allowed = [m for m in MECHANISMS if getattr(m, level)]
+    rate = TRANSFORM_RATE[level]
     for _ in range(200):
         mechs = sorted(allowed, key=lambda m: rng.random() ** (1.0 / m.weight), reverse=True)
         used, plan, ok = set(), [], True
@@ -332,7 +340,7 @@ def assign_mechanisms(feeders, rng, ctx, easy=False):
                 if m.key in used:
                     continue
                 tkey = None
-                if m.allow_transform and not easy and rng.random() < 0.4:
+                if m.allow_transform and rate and rng.random() < rate:
                     tkey = rng.choice(sorted(TRANSFORMS))
                 enc = TRANSFORMS[tkey]["fn"](src) if tkey else src
                 if m.can(enc, ctx):
@@ -351,10 +359,17 @@ def assign_mechanisms(feeders, rng, ctx, easy=False):
     raise RuntimeError("could not assign mechanisms")
 
 
-def build(secret, date, easy=False):
+@functools.lru_cache(maxsize=64)
+def _easy_final(secret, date):
+    return build(secret, date, level="easy")[1]["final"]
+
+
+def build(secret, date, easy=False, level=None):
+    level = level or ("easy" if easy else "hard")
+    easy = level == "easy"
     theme, final, number = pick_theme_and_final(secret, date)
-    salt = date + "/easy" if easy else date
-    rng = random.Random(seed_for(secret, date, "|easy" if easy else ""))
+    salt = date if level == "hard" else date + "/" + level
+    rng = random.Random(seed_for(secret, date, "" if level == "hard" else "|" + level))
     if easy:
         # Same theme, a different (shorter) final word; fall back through the
         # theme's other finals until an easy meta fits.
@@ -362,12 +377,18 @@ def build(secret, date, easy=False):
         short = [f for f in others if len(f) <= 7]
         rng.shuffle(short)
         candidates = short + [f for f in others if f not in short]
+    elif level == "medium":
+        # A third final word: not the hard one, and not the easy one.
+        easy_final = _easy_final(secret, date)
+        others = sorted(f for f in theme["finals"] if f not in (final, easy_final))
+        rng.shuffle(others)
+        candidates = others + [easy_final]
     else:
         candidates = [final]
     meta = None
     for final in candidates:
         pool = [w for w in theme["feeders"] if w != final and final not in w and w not in final]
-        metas = list(EASY_METAS if easy else METAS)
+        metas = list(METAS_BY_LEVEL[level])
         rng.shuffle(metas)
         for fn in metas:
             meta = fn(final, pool, rng)
@@ -390,16 +411,19 @@ def build(secret, date, easy=False):
     used_words = {fd["answer"] for fd in feeders} | {final}
     carrier = [w for w in theme["feeders"] if w not in used_words]
     base_ctx = {"glyphs": theme["glyphs"], "carrier": carrier, "intro": theme["intro"],
-                "all_words": theme["feeders"] + theme["finals"], "easy": easy}
-    plan = assign_mechanisms(feeders, rng, base_ctx, easy)
+                "all_words": theme["feeders"] + theme["finals"], "easy": easy, "level": level,
+                "place": theme["place"]}
+    plan = assign_mechanisms(feeders, rng, base_ctx, level)
 
     puzzles, solutions = [], []
     for i, (fd, (mech, tkey, enc), title) in enumerate(zip(feeders, plan, titles)):
         ctx = dict(base_ctx, title=title)
         blocks = mech.encode(enc, rng, ctx)
-        pool_flavors = ctx.get("_flavors") or (mech.easy_flavors if easy and mech.easy_flavors else mech.flavors)
+        # Easy and medium get the more direct flavour; hard keeps the oblique one.
+        direct = level != "hard" and mech.easy_flavors
+        pool_flavors = ctx.get("_flavors") or (mech.easy_flavors if direct else mech.flavors)
         flavor = fmt(rng.choice(pool_flavors), theme).replace("{n}", ctx.get("_flavor_n", ""))
-        hint = ctx.get("_hint", mech.hint)
+        method = ctx.get("_hint", mech.hint)
         technique = ctx.get("_name", mech.name)
         if tkey:
             flavor += " " + rng.choice(TRANSFORMS[tkey]["hints"])
@@ -426,10 +450,13 @@ def build(secret, date, easy=False):
             "blocks": blocks,
             "hash": answer_hash(salt, fd["answer"]),
             "partials": partials,
-            "hint": hint + ((" Then undo: " + TRANSFORMS[tkey]["name"] + ".") if tkey else ""),
+            "hints": hints.feeder_hints(level, mech.key, method, TRANSFORMS[tkey]["name"] if tkey else None,
+                                        ctx.get("_extra_hint")),
         })
         if easy:
-            puzzles[-1].update(technique=technique, length=len(fd["answer"]))
+            puzzles[-1]["technique"] = technique
+        if level != "hard":
+            puzzles[-1]["length"] = len(fd["answer"])
         solutions.append({
             "id": i + 1, "title": title, "answer": fd["answer"], "mechanism": technique,
             "transform": TRANSFORMS[tkey]["name"] if tkey else None,
@@ -441,7 +468,7 @@ def build(secret, date, easy=False):
 
     puzzle = {
         "date": date,
-        "difficulty": "easy" if easy else "hard",
+        "difficulty": level,
         "salt": salt,
         "number": number,
         "round": theme["name"],
@@ -454,12 +481,12 @@ def build(secret, date, easy=False):
             "blocks": meta["body"],
             "length": len(final),
             "hash": answer_hash(salt, final),
+            # The explanation is no longer printed up front, even on easy: it's the last hint.
+            "hints": hints.meta_hints(level, meta["type"], meta["explain"]),
         },
     }
-    if easy:
-        puzzle["meta"]["explain"] = meta["explain"]
     solution = {
-        "date": date, "number": number, "difficulty": "easy" if easy else "hard", "final": final, "metaType": meta["type"],
+        "date": date, "number": number, "difficulty": level, "final": final, "metaType": meta["type"],
         "explain": meta["explain"], "puzzles": solutions,
     }
     return puzzle, solution
@@ -521,23 +548,27 @@ def _keystream(secret, date, n):
     return out[:n]
 
 
-def _sealed_path(date, easy):
-    return os.path.join(SEALED, "easy", date + ".json") if easy else os.path.join(SEALED, date + ".json")
+def _sub(level):
+    return () if level == "hard" else (level,)
 
 
-def seal(secret, date, solution, easy=False):
+def _sealed_path(date, level):
+    return os.path.join(SEALED, *_sub(level), date + ".json")
+
+
+def seal(secret, date, solution, level="hard"):
     """Store a solution encrypted with a key derived from PUZZLE_SECRET, so it can be
     published tomorrow even if the generator code changes in between."""
-    key = date + "/easy" if easy else date
+    key = date if level == "hard" else date + "/" + level
     raw = json.dumps(solution, ensure_ascii=False).encode()
     data = bytes(a ^ b for a, b in zip(raw, _keystream(secret, key, len(raw))))
     mac = hmac.new(secret.encode(), b"mac|" + data, hashlib.sha256).hexdigest()
-    write_json(_sealed_path(date, easy), {"data": data.hex(), "mac": mac})
+    write_json(_sealed_path(date, level), {"data": data.hex(), "mac": mac})
 
 
-def unseal(secret, date, easy=False):
-    key = date + "/easy" if easy else date
-    path = _sealed_path(date, easy)
+def unseal(secret, date, level="hard"):
+    key = date if level == "hard" else date + "/" + level
+    path = _sealed_path(date, level)
     if not os.path.exists(path):
         return None
     with open(path) as f:
@@ -569,8 +600,8 @@ def main():
         secret = "dev-secret"
 
     end = dt.date.fromisoformat(args.date)
-    for easy in (False, True):
-        pdir = os.path.join(DOCS, "puzzles", "easy") if easy else os.path.join(DOCS, "puzzles")
+    for level in LEVELS:
+        pdir = os.path.join(DOCS, "puzzles", *_sub(level))
         for k in range(args.days - 1, -1, -1):
             d = end - dt.timedelta(days=k)
             if d < EPOCH:
@@ -579,12 +610,12 @@ def main():
             path = os.path.join(pdir, ds + ".json")
             if os.path.exists(path) and not args.force:
                 continue
-            puzzle, solution = build(secret, ds, easy)
+            puzzle, solution = build(secret, ds, level=level)
             if not args.no_llm:
                 theme = next(t for t in THEMES if t["name"] == puzzle["round"])
-                llm.polish(puzzle, solution, theme, easy=easy)
+                llm.polish(puzzle, solution, theme, easy=level == "easy")
             write_json(path, puzzle)
-            seal(secret, ds, solution, easy)
+            seal(secret, ds, solution, level)
             print("wrote", path, "-", puzzle["round"])
     publish_solutions(secret)
 
@@ -597,30 +628,32 @@ def publish_solutions(secret):
     for ds in dates:
         with open(os.path.join(pdir, ds + ".json")) as f:
             p = json.load(f)
-        epath = os.path.join(pdir, "easy", ds + ".json")
-        has_easy = os.path.exists(epath)
-        entry = {"date": ds, "number": p["number"], "round": p["round"], "easy": has_easy,
-                 "count": {"hard": len(p["puzzles"])}}
-        if has_easy:
-            with open(epath) as f:
-                entry["count"]["easy"] = len(json.load(f)["puzzles"])
+        entry = {"date": ds, "number": p["number"], "round": p["round"], "count": {"hard": len(p["puzzles"])}}
+        levels = ["hard"]
+        for level in ("medium", "easy"):
+            lpath = os.path.join(pdir, level, ds + ".json")
+            entry[level] = os.path.exists(lpath)
+            if entry[level]:
+                levels.append(level)
+                with open(lpath) as f:
+                    entry["count"][level] = len(json.load(f)["puzzles"])
         index.append(entry)
-        for easy in (False, True) if has_easy else (False,):
-            sub = ("easy",) if easy else ()
+        for level in levels:
+            sub = _sub(level)
             spath = os.path.join(DOCS, "solutions", *sub, ds + ".json")
             if os.path.exists(spath):
                 continue
-            sol = unseal(secret, ds, easy)
+            sol = unseal(secret, ds, level)
             if sol is None:
                 with open(os.path.join(pdir, *sub, ds + ".json")) as f:
                     published = json.load(f)
-                _, sol = build(secret, ds, easy)
+                _, sol = build(secret, ds, level=level)
                 if answer_hash(published.get("salt", ds), sol["final"]) != published["meta"]["hash"]:
-                    print("no solution for %s%s: not sealed, and the generator changed since it was published"
-                          % (ds, " (easy)" if easy else ""), file=sys.stderr)
+                    print("no solution for %s (%s): not sealed, and the generator changed since it was published"
+                          % (ds, level), file=sys.stderr)
                     continue
-                seal(secret, ds, sol, easy)
-                print("sealed", ds, "easy" if easy else "")
+                seal(secret, ds, sol, level)
+                print("sealed", ds, level)
             if ds < dates[-1]:
                 write_json(spath, sol)
                 print("wrote", spath)

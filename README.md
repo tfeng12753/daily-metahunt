@@ -1,6 +1,6 @@
 # Daily Metahunt
 
-Two new puzzle-hunt rounds every day, a **Hard** one and an **Easy** one on the
+Three new puzzle-hunt rounds every day, **Easy**, **Medium** and **Hard**, on the
 same theme, in the spirit of MIT Mystery Hunt and the tech-company hunts. Each round has five to eight **feeder puzzles** and one
 **metapuzzle**, all on a theme. Every feeder hides a word, the meta turns those
 words into a single final answer, and nothing tells you how. The flavour text,
@@ -16,9 +16,17 @@ titles and shape of the data are the only clues.
 - **An epigraph.** Each round opens with a line under its story that alludes
   to the final answer. It shouldn't give the answer away, but it clicks once
   you've solved it.
-- **Hard vs Easy.** Hard gives you nothing but oblique flavour: it alludes and never explains. Easy uses 4–6 feeders,
-  no hidden layers, names each puzzle's technique, shows answer lengths and
-  explains its meta (first letters, fit-in grid, title diagonal or logbook).
+- **Three levels.** Hard gives you nothing but oblique flavour: it alludes and never explains.
+  Medium shows answer lengths and more direct flavour, but doesn't name techniques, only
+  rarely adds a hidden layer, and uses the gentler metas (fit-in, title diagonal, logbook,
+  stowaways). Easy uses 4–6 feeders, no hidden layers, names each puzzle's technique and
+  shows answer lengths. Each level has its own final word.
+- **Tiered hints**, for feeders and the meta alike. A *nudge* asks a question or points at
+  a kind of system; a *pointer* names the family of trick; the *method* spells it out.
+  Hard offers the nudge, Medium the nudge then the pointer, Easy the pointer then the
+  method. The meta's explanation is no longer printed up front, even on Easy. Word
+  searches don't print their word list: a category stands in for it (with the count on
+  Medium, and lengths on Easy), and the last hint reveals the words.
 - **Feeders**, each built with a different mechanism, and sometimes with a
   second layer (Atbash, reversal or ROT13) hinted only in the flavour:
 
@@ -33,7 +41,8 @@ titles and shape of the data are the only clues.
   | Word search: leftover letters | Cryptogram of a cluephrase | Rail fence of a cluephrase |
   | Book cipher on a recovered page | Knight's path on a letter board | Maritime signal flags |
   | Numbers in mixed bases | Anagrams with an extra letter | Letter sudoku (numbered squares) |
-  | Drop quote | Shredded sentence | Missing letters (easy only) |
+  | Drop quote | Shredded sentence | Missing letters (not on Hard) |
+  | Number trivia | Scrambled sentence | Caesar shift (not on Hard) |
 
   Word and logic puzzles are weighted to appear about three times as often as
   pure encodings. Classic codes also come in variations: Morse as symbols, a
@@ -49,6 +58,14 @@ titles and shape of the data are the only clues.
   - *Diagonal*: order the answers (alphabetically, or by their puzzles' titles) and read the k-th letter of the k-th.
   - *Logbook*: the meta gives (puzzle, letter) indices disguised as ship's bells, verses, seats…
   - *Initials*: a Vigenère ciphertext whose key is the feeders' first letters.
+
+- **Solving in the page.** Word searches take a drag (or a click on the first and last
+  letters) and show the leftover letters live; cryptograms and shift ciphers get a
+  substitution grid where one keystroke fills every copy of a symbol (Easy shift ciphers
+  also get a cipher wheel); shredded sentences are laid out by clicking strips; knight
+  boards take clicks to mark the path. Encodings drawn one item per letter get a note box
+  under each item, and every puzzle has a notes pad. Older rounds get these tools too.
+  Everything is saved in the browser.
 
 Answers are checked in the browser against salted SHA-256 hashes, so the page
 never contains them. Intermediate layers and uncorrected mutations get a
@@ -69,7 +86,7 @@ still runs as a mirror; delete its last three steps if you only want Render.
 Players pick a display name (no accounts). Each correct answer is sent to the
 API, which re-checks it against the round's hash before recording it, so only
 real solves count. Times run from 00:00 UTC on the round's date, and each hint
-adds a five-minute penalty. There are per-round and all-time boards for each
+adds a five-minute penalty (once per puzzle, however many hint tiers you open). There are per-round and all-time boards for each
 difficulty.
 
 Everyone also gets a **personal timer**. It starts the first time you open a
@@ -82,7 +99,7 @@ history: every round, their times, and their best and average clock.
 
 Everything you do is also saved **in your browser**. `progress.html` ("My
 rounds") shows every day you've played: totals, your streak, a calendar with
-Hard/Easy status, and a list of each round's solves, clock and hints. The date
+Easy/Medium/Hard status, and a list of each round's solves, clock and hints. The date
 picker marks rounds ✓ (solved) or ◐ (in progress). Progress can be exported
 to a JSON file and imported on another device; imports merge and never delete.
 
@@ -94,7 +111,8 @@ scores in memory, which is fine locally but resets on every restart or deploy.
 ## How it runs
 
 `.github/workflows/daily.yml` runs at 00:02 UTC. It self-tests the generator,
-creates `docs/puzzles/<today>.json` plus yesterday's `docs/solutions/…`,
+creates `docs/puzzles/<today>.json` (Medium and Easy go in `docs/puzzles/medium/` and
+`docs/puzzles/easy/`) plus yesterday's `docs/solutions/…`,
 commits them, and deploys `docs/` to GitHub Pages.
 
 Each day's solution is also written to `generator/sealed/`, encrypted with a
@@ -135,7 +153,8 @@ Don't commit rounds made that way.
 
 Add a theme by appending to `generator/themes.json`. Add a mechanism by
 subclassing `Mechanism` in `generator/mechanisms.py` with `encode` and
-`decode`, then teach `docs/app.js` any new block type.
+`decode`, give it a nudge and pointer in `generator/hints.py`, then teach `docs/app.js`
+any new block type.
 
 ## Honesty clause
 
