@@ -1,0 +1,289 @@
+{
+ "date": "2026-09-29",
+ "difficulty": "easy",
+ "salt": "2026-09-29/easy",
+ "number": 3,
+ "round": "The Last Expedition",
+ "intro": "The ship was crushed by pack ice in the first winter. What survives of the expedition is a biscuit tin full of messages, each written in a different hand, and each deliberately obscure.",
+ "echo": "The navigator trusted only one star: the one that never moved.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Dead Reckoning",
+   "flavor": "Only one page of the book survived. Luckily, it was the only page anyone needed.",
+   "blocks": [
+    {
+     "type": "prose",
+     "text": "The ship was crushed by pack ice in the first winter. What survives of the expedition is a biscuit tin full of messages, each written in a different hand, and each deliberately obscure.",
+     "paper": true
+    },
+    {
+     "type": "list",
+     "items": [
+      "6.1",
+      "30.1",
+      "13.3",
+      "6.4",
+      "29.2"
+     ],
+     "inline": true
+    }
+   ],
+   "hash": "260d3b587ba3616aca759e803c5c006ef5b99bb906582103469e8efc912121b2",
+   "partials": {},
+   "hint": "Each pair is word.letter into the recovered page (words split on spaces; punctuation ignored).",
+   "technique": "Book cipher",
+   "length": 5
+  },
+  {
+   "id": 2,
+   "title": "Ship's Biscuit",
+   "flavor": "An inventory of base camp, tangled up. Whatever is left over when every item is accounted for is yours.",
+   "blocks": [
+    {
+     "type": "board",
+     "rows": [
+      "SNDOOLGI",
+      "SARALAES",
+      "ACOTUTUC",
+      "PIJNNKDA",
+      "MMFLOESI",
+      "OMORCATR",
+      "CEKAYAKN",
+      "RPETRELA"
+     ],
+     "plain": true
+    },
+    {
+     "type": "list",
+     "items": [
+      "CAIRN",
+      "COMPASS",
+      "FJORD",
+      "FLOE",
+      "IGLOO",
+      "KAYAK",
+      "ORCA",
+      "PEMMICAN",
+      "PETREL",
+      "SEAL",
+      "SKUA",
+      "TENT"
+     ],
+     "inline": true
+    }
+   ],
+   "hash": "8fe3ab8438f690ae92f235260df7afd73c59fecb3e8f932da672434a7e96805c",
+   "partials": {},
+   "hint": "Find every listed word (any of 8 directions). The unused letters, read left-to-right, top-to-bottom, spell the answer.",
+   "technique": "Word search leftovers",
+   "length": 6
+  },
+  {
+   "id": 3,
+   "title": "Sastrugi",
+   "flavor": "The knight never moves in a straight line, and neither does the truth at base camp.",
+   "blocks": [
+    {
+     "type": "board",
+     "rows": [
+      "BNJTVFMZ",
+      "GRSJRNCV",
+      "JAWOALFA",
+      "IKBXSRBK",
+      "LPNZSHHF",
+      "KHBZVGSE",
+      "OZQXDEGU",
+      "CXIHIYHY"
+     ]
+    },
+    {
+     "type": "prose",
+     "text": "The knight sets out from d5: Nb6 Na4 Nc5 Ne6 Nd8 Nb7 Nd6 Ne4 Ng3."
+    }
+   ],
+   "hash": "3f1fbebfb756c0cd4b9c082e29d505a4d08369144e44f8f8735c22a50a83ce82",
+   "partials": {},
+   "hint": "Start on the given square and follow the knight moves; read the letter on each square it lands on.",
+   "technique": "Knight's path",
+   "length": 9
+  },
+  {
+   "id": 4,
+   "title": "Pack Ice",
+   "flavor": "Unjumble the kit list. You'll have one letter left over every time, and you'll want to keep those.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "POROSAHN",
+      "IROARKCEEEB",
+      "CMNMLAIEP",
+      "OEDLSDGS",
+      "TKSLNECAHOT",
+      "AAIWRLHN",
+      "SRCVECAES",
+      "BUORCEIA"
+     ],
+     "ordered": true,
+     "mono": true
+    }
+   ],
+   "hash": "f312f2577e090d808afa5d36098c45813a89661edf991be6ae6f66831c830153",
+   "partials": {},
+   "hint": "Each jumble is an anagram of a word from this round's theme plus one extra letter. The extra letters, in order, spell the answer.",
+   "technique": "Anagrams with an extra letter",
+   "length": 8
+  },
+  {
+   "id": 5,
+   "title": "Whiteout",
+   "flavor": "Knock, knock. Pause. Knock knock knock.",
+   "blocks": [
+    {
+     "type": "taps",
+     "groups": [
+      [
+       "•••",
+       "•••••"
+      ],
+      [
+       "•",
+       "•••••"
+      ],
+      [
+       "•••",
+       "•••"
+      ],
+      [
+       "••",
+       "••"
+      ],
+      [
+       "••••",
+       "•••••"
+      ],
+      [
+       "••",
+       "••••"
+      ],
+      [
+       "•••",
+       "•••"
+      ]
+     ]
+    }
+   ],
+   "hash": "8a188e2ab118acaab5e65c605acf6ae89287ba475762a4c8467d282a5e938e4f",
+   "partials": {},
+   "hint": "Tap code: first burst = row, second = column, in a 5×5 grid without K.",
+   "technique": "Tap code",
+   "length": 7
+  },
+  {
+   "id": 6,
+   "title": "Polar Plateau",
+   "flavor": "Not a single letter on the page, and yet it says something.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "○⚑● ◆☀■○ ○⚑♠♦★ ○⚑● ◇☁●▲☀○◇▲ ○♥☁●✚ ☾●✈◇▲● ○⚑● ◆♠♦● ♪●♦○ ✚●☀✚ ♪☀■ ♪☀◆▲▽■",
+     "wide": true
+    }
+   ],
+   "hash": "c699a9fa1a68279ee1cad908fbf2b91d5507a3ec3f2793e016d0186f0e4f851d",
+   "partials": {},
+   "hint": "Each symbol stands for one letter (a simple substitution); word breaks are kept. Solve the sentence; it tells you the answer.",
+   "technique": "Symbol cryptogram",
+   "length": 6
+  },
+  {
+   "id": 7,
+   "title": "Winter Quarters",
+   "flavor": "The machine spoke American Standard. Every row is one character.",
+   "blocks": [
+    {
+     "type": "tape",
+     "rows": [
+      [
+       1,
+       0,
+       1,
+       0,
+       0,
+       1,
+       0
+      ],
+      [
+       1,
+       0,
+       0,
+       0,
+       0,
+       0,
+       1
+      ],
+      [
+       1,
+       0,
+       1,
+       0,
+       1,
+       0,
+       0
+      ],
+      [
+       1,
+       0,
+       0,
+       1,
+       0,
+       0,
+       1
+      ],
+      [
+       1,
+       0,
+       0,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       0,
+       0,
+       1,
+       1,
+       1,
+       0
+      ],
+      [
+       1,
+       0,
+       1,
+       0,
+       0,
+       1,
+       1
+      ]
+     ]
+    }
+   ],
+   "hash": "9f21cf6d77b39404eb2fdfd4964040a3fe1b1f4eabf5b2b09a055e667ca7f228",
+   "partials": {},
+   "hint": "Each row of the paper tape is a 7-bit ASCII character (hole = 1, most significant bit on the left).",
+   "technique": "Punched tape",
+   "length": 7
+  }
+ ],
+ "meta": {
+  "title": "Meta: The Last Expedition",
+  "flavor": "File everything the way an archivist would, by its heading. Then walk down the drawer.",
+  "blocks": [],
+  "length": 7,
+  "hash": "913f1b805bc719f1662c7728a4e90dfaa33c96ac4ba2b73c06e28eb584c03f8e",
+  "explain": "Order the puzzles alphabetically by title; take the k-th letter of the k-th answer."
+ }
+}

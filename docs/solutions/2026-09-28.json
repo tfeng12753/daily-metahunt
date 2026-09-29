@@ -1,0 +1,63 @@
+{
+ "date": "2026-09-28",
+ "number": 2,
+ "final": "BINARY",
+ "metaType": "mutation",
+ "explain": "Each feeder decodes to its answer with a single wrong letter. Those substituted letters, in puzzle order, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "All Hands",
+   "answer": "PIPELINE",
+   "mechanism": "DTMF multi-tap",
+   "transform": null,
+   "encoded": "PIBELINE",
+   "mutated": "PIBELINE"
+  },
+  {
+   "id": 2,
+   "title": "Monday Deploy",
+   "answer": "HACKATHON",
+   "mechanism": "Mixed number bases",
+   "transform": null,
+   "encoded": "HACKATHOI",
+   "mutated": "HACKATHOI"
+  },
+  {
+   "id": 3,
+   "title": "Standup",
+   "answer": "LAPTOP",
+   "mechanism": "Tap code",
+   "transform": null,
+   "encoded": "LAPTON",
+   "mutated": "LAPTON"
+  },
+  {
+   "id": 4,
+   "title": "Hotfix",
+   "answer": "PAYROLL",
+   "mechanism": "Knight's path",
+   "transform": "Atbash (A↔Z mirror)",
+   "encoded": "KZBZLOO",
+   "mutated": "PAYAOLL"
+  },
+  {
+   "id": 5,
+   "title": "Burn Rate",
+   "answer": "ANALYTICS",
+   "mechanism": "Binary codons",
+   "transform": null,
+   "encoded": "ANALYTRCS",
+   "mutated": "ANALYTRCS"
+  },
+  {
+   "id": 6,
+   "title": "Runway",
+   "answer": "COMMIT",
+   "mechanism": "Template strand",
+   "transform": null,
+   "encoded": "CYMMIT",
+   "mutated": "CYMMIT"
+  }
+ ]
+}

@@ -1,0 +1,46 @@
+{
+ "date": "2026-09-28",
+ "number": 2,
+ "difficulty": "easy",
+ "final": "KERNEL",
+ "metaType": "logbook",
+ "explain": "Each entry is (puzzle number, letter number): index into that puzzle's answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "All Hands",
+   "answer": "BACKLOG",
+   "mechanism": "Word search leftovers",
+   "transform": null,
+   "encoded": "BACKLOG",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Tech Debt",
+   "answer": "VENTURE",
+   "mechanism": "Nonogram",
+   "transform": null,
+   "encoded": "VENTURE",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Hotfix",
+   "answer": "EQUITY",
+   "mechanism": "Drop quote",
+   "transform": null,
+   "encoded": "EQUITY",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Postmortem",
+   "answer": "KANBAN",
+   "mechanism": "Letter sudoku",
+   "transform": null,
+   "encoded": "KANBAN",
+   "mutated": null
+  }
+ ]
+}

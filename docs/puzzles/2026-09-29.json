@@ -1,0 +1,366 @@
+{
+ "date": "2026-09-29",
+ "difficulty": "hard",
+ "salt": "2026-09-29",
+ "number": 3,
+ "round": "The Last Expedition",
+ "intro": "The first winter took the hull, and with it most of our voices. What remains sits splayed beneath canvas, a tin of folded slips, each hand unsteady in its own way, each sentence circling its meaning like a dog reluctant to lie down.",
+ "echo": "The river behind the tents moves a foot a day, and it is made of ice.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Sastrugi",
+   "flavor": "Some squares have been given to you for free.",
+   "blocks": [
+    {
+     "type": "nonogram",
+     "rows": [
+      [
+       4,
+       1,
+       5,
+       4,
+       4,
+       3,
+       4
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       3,
+       1,
+       4,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       2
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       4,
+       5,
+       5,
+       4,
+       4,
+       3,
+       4
+      ]
+     ],
+     "cols": [
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       3
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       3
+      ],
+      [],
+      [
+       3
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       3
+      ],
+      [],
+      [
+       3
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       3
+      ]
+     ],
+     "givens": [
+      [
+       1,
+       31,
+       0
+      ],
+      [
+       1,
+       34,
+       1
+      ],
+      [
+       4,
+       4,
+       0
+      ],
+      [
+       1,
+       0,
+       1
+      ]
+     ]
+    }
+   ],
+   "hash": "37d8345fdd630c55a1d53d77161cfb46e6783ab39121699302a8a73f1b0eb862",
+   "partials": {},
+   "hint": "A nonogram (paint-by-numbers). The filled picture is the answer written in 5×5 block letters."
+  },
+  {
+   "id": 2,
+   "title": "Whiteout",
+   "flavor": "Heard over the radio from the other side of the glass.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "Hotel",
+      "Sierra",
+      "Zulu",
+      "X-ray",
+      "Papa",
+      "Oscar",
+      "Victor",
+      "Golf",
+      "Lima",
+      "Mike"
+     ]
+    }
+   ],
+   "hash": "aa9e62cfe769777230d09f52bb10332d6f2e3528ec3a1156116ab25cf7f2f8ae",
+   "partials": {},
+   "hint": "NATO phonetic alphabet, then Atbash (A↔Z, B↔Y, ...)."
+  },
+  {
+   "id": 3,
+   "title": "Polar Plateau",
+   "flavor": "A paint chart for a room nobody will ever decorate. Alpha and Omega traded places before this was written down.",
+   "blocks": [
+    {
+     "type": "swatches",
+     "items": [
+      "#484C4F",
+      "#484752",
+      "#585620"
+     ]
+    }
+   ],
+   "hash": "df3f5ca150d3e9cfa9b09a6c6ae10d893b25e506b00c28bdb217b644139ad02e",
+   "partials": {
+    "c2b0b080adf2e9675388ec85ae67ec047d9f2238f5cf694f9a7057f22deed90f": "You've decoded it, but it's not finished. One more layer."
+   },
+   "hint": "Each hex colour code is three ASCII bytes. Then undo: Atbash (A↔Z mirror)."
+  },
+  {
+   "id": 4,
+   "title": "Katabatic",
+   "flavor": "Confetti, alphabetised.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "AND",
+      "AYS",
+      "DDE",
+      "EWA",
+      "FJO",
+      "IGH",
+      "IMP",
+      "INS",
+      "ITS",
+      "LAL",
+      "LYS",
+      "MES",
+      "NIN",
+      "ONG",
+      "PLA",
+      "RD",
+      "SAG",
+      "SHI",
+      "TAL",
+      "THE"
+     ],
+     "inline": true
+    },
+    {
+     "type": "prose",
+     "text": "Word lengths: (3 7 3 6 2 5 5 3 5 3 2 6 4 5)"
+    }
+   ],
+   "hash": "1a0883135b461081138ef9e0eda52327f31a835ddcb2fc7c0a91c76301f86d8e",
+   "partials": {},
+   "hint": "The sentence was cut into three-letter fragments (spaces removed) and alphabetised. Reassemble it using the word lengths; it tells you the answer."
+  },
+  {
+   "id": 5,
+   "title": "Nunatak",
+   "flavor": "A negative, hung upside down, of something that only reads in threes.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "5′–TAAGGCTTCGGA–3′"
+    }
+   ],
+   "hash": "1273b911d51313270e6db9c671ee90ab0af9c3da9598d628aba68a2d9d27ee50",
+   "partials": {},
+   "hint": "This is the template (antisense) strand written 5′→3′. Reverse-complement it to get the coding strand, then translate codons to amino-acid one-letter codes."
+  }
+ ],
+ "meta": {
+  "title": "Meta: The Last Expedition",
+  "flavor": "The porter only ever noted where each passenger boarded.",
+  "blocks": [
+   {
+    "type": "list",
+    "items": [
+     "Platform 1, car 7",
+     "Platform 2, car 6",
+     "Platform 5, car 3",
+     "Platform 2, car 4",
+     "Platform 3, car 6",
+     "Platform 1, car 3",
+     "Platform 4, car 4"
+    ],
+    "ordered": true
+   }
+  ],
+  "length": 7,
+  "hash": "949e6e394566bee5cd291a5af60ccf600df5a5271c539f95a9e258c3b7fedf0f"
+ }
+}
