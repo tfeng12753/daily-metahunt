@@ -1,8 +1,9 @@
-"""Optional flavour-text polish via IFM's K2 Horizon (OpenAI-compatible API).
+"""Optional round descriptions via IFM's K2 Horizon (OpenAI-compatible API).
 
-The model only rewrites each round's opening story. Clue lines stay
-hand-written, because rewrites kept explaining methods and once stated a
-wrong fact about one. Puzzle data, answers and hashes are untouched.
+The model only writes each round's opening story: a longer description that
+hints at the meta, faintly on Hard, more on Medium and clearly on Easy. Clue
+lines stay hand-written, because rewrites kept explaining methods and once
+stated a wrong fact about one. Puzzle data, answers and hashes are untouched.
 Every rewrite is validated (no answers, no intermediate strings, no naming
 the mechanism outright, sane length) and anything that fails keeps the
 template text, so a bad or missing API response can never break a round.
@@ -35,13 +36,6 @@ BANNED = ["morse", "semaphore", "braille", "vigenere", "vigenère", "atbash", "n
 # Descriptions of what the solved output looks like spoil every round, easy included.
 OUTPUT_TELLS = ["block letter", "five-by-five", "five by five", "5x5", "5×5", "pixel letter",
                 "chunky letter", "will spell", "spells out", "spell something", "spell a word"]
-
-SYSTEM = """You write flavour text for a very hard puzzle hunt, in the style of the MIT Mystery Hunt and tech-company hunts.
-Flavour text is an oblique, atmospheric nudge: it must preserve every hint in the original line (a solver should be able to get the same "aha" from it), but it must never name the technique outright, never state an answer, and never give instructions.
-Never describe what the finished picture, grid or decoded text will look like (no "letters", "spell", "reads", "word" hints about the output).
-Write in the voice of the round's story. British spelling. One to three sentences per line, at most 55 words. No emoji, no markdown, no quotation marks around the whole line.
-Reply with a single JSON object and nothing else."""
-
 
 def _request(path, body=None, key=None, timeout=240):
     req = urllib.request.Request(
@@ -85,72 +79,90 @@ def parse_json(text):
     return json.loads(text[start:end + 1])
 
 
-def ok(text, forbidden, old, easy=False):
+# ---------------------------------------------------------------------------
+# Round descriptions: a longer opening story that hints at the meta
+# ---------------------------------------------------------------------------
+
+DESCRIBE_SYSTEM = """You write the opening story for one round of a puzzle hunt, in the style of the MIT Mystery Hunt and tech-company hunts.
+The story sets the scene and, somewhere inside it, hints at how the round's metapuzzle (the final step that turns the feeder answers into one final word) works, at exactly the strength you are asked for.
+Rules: never state or spell any answer; never name the technique of any individual puzzle; never describe what a solved grid, picture or decoded message looks like; never give numbered or step-by-step instructions.
+Write in the voice of the round's setting. British spelling. One paragraph of 4 to 6 sentences, 90 to 170 words. No emoji, no markdown, no headings.
+Reply with a single JSON object {"intro": "..."} and nothing else."""
+
+STRENGTH = {
+    "hard": ("VAGUE. Bury one faint, atmospheric allusion to the final step in the story. A solver should only "
+             "recognise it in hindsight. Do not use plain words for the mechanism (order, alphabetical, first letter, "
+             "diagonal, length, index, key, extra, wrong) literally."),
+    "medium": ("A NOTICEABLE HINT. Include an in-story image or detail that points toward the final step (for example a "
+               "roll call, a filing drawer, a signature, a seating plan), which an attentive solver will pick up on. "
+               "Suggest, don't instruct."),
+    "easy": ("A DECENT, FAIRLY CLEAR HINT. This is the beginners' round: through the story, make it reasonably clear what "
+             "to look at in the answers and in what order, so a newcomer can work out the final step. Keep it as story, "
+             "not as a list of instructions."),
+}
+
+
+def ok_description(text, forbidden, level):
     if not isinstance(text, str):
         return False
     t = text.strip()
-    if not 20 <= len(t) <= 420 or len(t) > 3 * len(old) + 120:
+    if not 250 <= len(t) <= 1200:
         return False
     low = t.lower()
     letters = re.sub(r"[^a-z]", "", low)
     words = set(re.findall(r"[a-z]+", low))
     for w in forbidden:
         w = w.lower()
-        # long answers are caught even if spaced out; short ones only as whole words
         if (len(w) >= 6 and w in letters) or w in words:
             return False
-    if any(t in low for t in OUTPUT_TELLS):
+    if any(x in low for x in OUTPUT_TELLS):
         return False
-    # The easy round names each technique on the page anyway.
-    return easy or not any(b in low for b in BANNED if b not in old.lower())
+    # Easy names its techniques on the page anyway; the other levels must not.
+    return level == "easy" or not any(b in low for b in BANNED)
 
 
-def polish(puzzle, solution, theme, easy=False):
+def describe(puzzle, solution, theme, level="hard", attempts=3):
+    """Replace puzzle["intro"] with a longer story that hints at the meta. Returns the model id, or None."""
     key = os.environ.get("IFM_API_KEY")
     if not key:
         return None
+    forbidden = {solution["final"]}
+    for q in solution["puzzles"]:
+        forbidden |= {q["answer"], q["encoded"]} | ({q["mutated"]} if q.get("mutated") else set())
+    user = ("Round: %s\nSetting: %s; the people there are %s.\nCurrent opening (keep its facts and mood, expand it): %s\n"
+            "How the metapuzzle works (for you only; never quote it): %s\nThe round has %d feeder puzzles.\n"
+            "Hint strength: %s\nReturn JSON {\"intro\": \"...\"}."
+            % (puzzle["round"], theme["place"], theme["crew"], theme["intro"], solution["explain"],
+               len(puzzle["puzzles"]), STRENGTH[level]))
     try:
         model = pick_model(key)
-        forbidden = {solution["final"]}
-        for q in solution["puzzles"]:
-            forbidden |= {q["answer"], q["encoded"]} | ({q["mutated"]} if q["mutated"] else set())
-
-        # Only the opening story is rewritten. Clue lines stay hand-written: a model asked to be
-        # "oblique" still tends to explain the method, and can state wrong facts about it.
-        lines = {"intro": {"original": puzzle["intro"], "note": "Round introduction: set the scene for the whole round. Do not hint at any puzzle method."}}
-        user = ("Round: %s\nSetting: %s, %s.\n%s\nRewrite each line below. Return JSON mapping the same keys to the new text.\n\n%s"
-                % (puzzle["round"], theme["place"], theme["crew"],
-                   "This is the EASY round, for newcomers: the technique is shown next to each puzzle, so flavour "
-                   "can be warmer and more direct. Still never state an answer.\n" if easy else
-                   "This is the HARD round: make every line MORE oblique than the original. Allude; never explain, "
-                   "never give instructions, never name a person or tool that gives the method away.\n",
-                   json.dumps(lines, indent=1, ensure_ascii=False)))
-        out = parse_json(chat(key, model, [{"role": "system", "content": SYSTEM}, {"role": "user", "content": user}]))
-    except Exception as e:  # network, auth, bad JSON: keep the templates
-        print("llm polish skipped: %s" % e, file=sys.stderr)
+    except Exception as e:
+        print("llm describe skipped: %s" % e, file=sys.stderr)
         return None
-
-    kept = 0
-    if ok(out.get("intro"), forbidden, puzzle["intro"], easy):
-        puzzle["intro"], kept = out["intro"].strip(), kept + 1
-    print("llm polish (%s): intro %s" % (model, "rewritten" if kept else "kept"))
-    return model
+    for _ in range(attempts):
+        try:
+            out = parse_json(chat(key, model, [{"role": "system", "content": DESCRIBE_SYSTEM},
+                                               {"role": "user", "content": user}]))
+        except Exception as e:  # network, auth, bad JSON: try again, then keep the template
+            print("llm describe attempt failed: %s" % e, file=sys.stderr)
+            continue
+        if ok_description(out.get("intro"), forbidden, level):
+            puzzle["intro"] = out["intro"].strip()
+            print("llm describe (%s, %s): intro rewritten" % (model, level))
+            return model
+    print("llm describe (%s, %s): kept template" % (model, level))
+    return None
 
 
 if __name__ == "__main__":
-    # Preview: python3 generator/llm.py [date]. Builds a throwaway round with the
-    # dev secret and prints template vs. K2 Horizon flavour side by side.
-    import copy
+    # Preview: python3 generator/llm.py [date]. Builds throwaway rounds with the dev
+    # secret and prints each level's K2 Horizon description.
     import datetime as dt
     import generate
     date = sys.argv[1] if len(sys.argv) > 1 else dt.date.today().isoformat()
-    puzzle, solution = generate.build("dev-secret", date)
-    before = copy.deepcopy(puzzle)
-    theme = next(t for t in generate.THEMES if t["name"] == puzzle["round"])
-    if not polish(puzzle, solution, theme):
-        sys.exit("no rewrite: is IFM_API_KEY set? (see message above)")
-    pairs = [("intro", before["intro"], puzzle["intro"])]
-    pairs += [(p["title"], b["flavor"], p["flavor"]) for b, p in zip(before["puzzles"], puzzle["puzzles"])]
-    pairs.append(("meta", before["meta"]["flavor"], puzzle["meta"]["flavor"]))
-    for name, old, new in pairs:
-        print("\n## %s\n  template: %s\n  k2:       %s" % (name, old, new if new != old else "(kept template)"))
+    for level in generate.LEVELS:
+        puzzle, solution = generate.build("dev-secret", date, level=level)
+        theme = next(t for t in generate.THEMES if t["name"] == puzzle["round"])
+        if not describe(puzzle, solution, theme, level):
+            sys.exit("no rewrite: is IFM_API_KEY set? (see message above)")
+        print("\n## %s (%s)\n%s" % (puzzle["round"], level, puzzle["intro"]))

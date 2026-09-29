@@ -591,7 +591,7 @@ def main():
     ap.add_argument("--date", default=dt.datetime.now(dt.timezone.utc).date().isoformat())
     ap.add_argument("--days", type=int, default=1, help="also generate this many days ending at --date")
     ap.add_argument("--force", action="store_true", help="overwrite existing puzzle files")
-    ap.add_argument("--no-llm", action="store_true", help="skip the K2 Horizon flavour polish even if IFM_API_KEY is set")
+    ap.add_argument("--no-llm", action="store_true", help="skip the K2 Horizon descriptions even if IFM_API_KEY is set")
     args = ap.parse_args()
 
     secret = os.environ.get("PUZZLE_SECRET")
@@ -609,15 +609,38 @@ def main():
             ds = d.isoformat()
             path = os.path.join(pdir, ds + ".json")
             if os.path.exists(path) and not args.force:
+                if ds == args.date and not args.no_llm:
+                    redescribe(secret, path, ds, level)
                 continue
             puzzle, solution = build(secret, ds, level=level)
             if not args.no_llm:
                 theme = next(t for t in THEMES if t["name"] == puzzle["round"])
-                llm.polish(puzzle, solution, theme, easy=level == "easy")
+                if llm.describe(puzzle, solution, theme, level):
+                    puzzle["described"] = True
             write_json(path, puzzle)
             seal(secret, ds, solution, level)
             print("wrote", path, "-", puzzle["round"])
     publish_solutions(secret)
+
+
+def redescribe(secret, path, date, level):
+    """Give an already-published round (today's only) the longer, meta-hinting story.
+
+    Only the intro changes; puzzles, answers and hashes stay exactly as published.
+    Rounds that already have one are left alone, so this runs once per round.
+    """
+    with open(path) as f:
+        puzzle = json.load(f)
+    if puzzle.get("described"):
+        return
+    solution = unseal(secret, date, level)
+    if solution is None:
+        return
+    theme = next(t for t in THEMES if t["name"] == puzzle["round"])
+    if llm.describe(puzzle, solution, theme, level):
+        puzzle["described"] = True
+        write_json(path, puzzle)
+        print("described", path)
 
 
 def publish_solutions(secret):

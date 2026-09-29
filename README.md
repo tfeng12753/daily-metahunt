@@ -125,19 +125,27 @@ tomorrow's answers. Every encoding is round-tripped through its decoder, and
 every meta is re-solved, before a round is written. A broken puzzle fails the
 build and is never published.
 
-## K2 Horizon flavour text (optional)
+## K2 Horizon round descriptions (optional)
 
-If the `IFM_API_KEY` Actions secret is set, each new round's opening story is
-rewritten by IFM's K2 Horizon (`api.ifm.ai`, OpenAI-compatible) in the voice of
-that round's theme. Clue lines are never rewritten: when they were, the model
-explained methods outright and once stated a wrong fact about one, so clues
-stay hand-written. A rewrite is rejected, and the template kept, if it mentions
-an answer, describes what a solved grid looks like, or runs too long. An API
-outage just means a template-flavoured day. Pin a model with the `IFM_MODEL`
-repository variable; otherwise the largest K2 Horizon model listed by `/models` is used.
+If the `IFM_API_KEY` Actions secret is set, IFM's K2 Horizon (`api.ifm.ai`,
+OpenAI-compatible) writes each new round's opening story: a longer paragraph in
+the voice of the theme that also hints at how the meta works. The hint is faint
+on Hard, noticeable on Medium and fairly clear on Easy. The model is told how
+the meta works but never sees it printed; a description is rejected (and retried,
+then the template kept) if it mentions an answer, describes what a solved grid
+looks like, falls outside 250–1200 characters, or, on Medium and Hard, names a
+technique. Clue lines are never rewritten: when they were, the model explained
+methods outright and once stated a wrong fact about one, so clues stay
+hand-written. An API outage just means a template-flavoured day. Pin a model
+with the `IFM_MODEL` repository variable; otherwise the largest K2 Horizon model
+listed by `/models` is used.
+
+A run also gives today's already-published rounds a description if they don't
+have one yet (only the intro changes; puzzles and answers are untouched), and
+marks them `"described": true` so it happens once.
 
 ```bash
-IFM_API_KEY=... python3 generator/llm.py 2026-10-02   # preview rewrites, writes nothing
+IFM_API_KEY=... python3 generator/llm.py 2026-10-02   # preview each level's description, writes nothing
 ```
 
 ## Local development
