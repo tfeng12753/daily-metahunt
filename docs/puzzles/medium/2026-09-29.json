@@ -1,0 +1,240 @@
+{
+ "date": "2026-09-29",
+ "difficulty": "medium",
+ "salt": "2026-09-29/medium",
+ "number": 3,
+ "round": "The Last Expedition",
+ "intro": "The ship was crushed by pack ice in the first winter. What survives of the expedition is a biscuit tin full of messages, each written in a different hand, and each deliberately obscure. Around the fire at base camp they keep the tin on a crate, and every evening one of the team pulls out a note, reads it aloud, and sets it aside in the order it was drawn. The crate is labelled, in small precise letters, like a ledger: each slip of paper, when settled, finds its place beneath the name of the soul who wrote it, and beside that name somebody has pencilled a count of words, and a mark beside the letter that seems to matter. They say the Major designed it so that no message means anything whole, only by being taken apart by its own row and column, like a muster list where every man is a number and every word a place in line. The tin lid rattles when the wind shifts, as if something inside is still trying to be found.",
+ "echo": "Dig down a foot and the ground has been frozen since the mammoths.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Sastrugi",
+   "flavor": "The typesetter dropped the tray. Every letter landed in the right column, at least.",
+   "blocks": [
+    {
+     "type": "dropquote",
+     "cols": [
+      "IRTTY",
+      "HOSY",
+      "DEOTU",
+      "HORSU",
+      "IOO",
+      "AGLNST",
+      "HNOOS",
+      "EPSTTT",
+      "IRUW",
+      "CEISTZ",
+      "EERTZ",
+      "HLL",
+      "BEFLO",
+      "OUW"
+     ],
+     "mask": [
+      "....#......#..",
+      ".#....#......#",
+      "..#........#..",
+      ".#..#...#....#",
+      "...#......#...",
+      "#...#...#..###"
+     ]
+    }
+   ],
+   "hash": "5610a18444ad69d17386bda2555bc9d33a3a6e705958317411bc445718e86435",
+   "partials": {},
+   "hints": [
+    "The columns say which letters, but not in what order. Can the shape of the grid help?",
+    "Start with the short words; a sentence will emerge."
+   ],
+   "length": 8
+  },
+  {
+   "id": 2,
+   "title": "Nunatak",
+   "flavor": "Three letters to a strip. The strips are in order; the sentence isn't.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "ADY",
+      "AN",
+      "ANR",
+      "EAD",
+      "ERW",
+      "FOU",
+      "HEA",
+      "HIC",
+      "HIS",
+      "IFY",
+      "LRE",
+      "MIC",
+      "NCE",
+      "NDT",
+      "NSW",
+      "NTE",
+      "NYO",
+      "OUC",
+      "PEM",
+      "SSE",
+      "THE",
+      "THI",
+      "UHA",
+      "VEA"
+     ],
+     "inline": true,
+     "tiles": true
+    },
+    {
+     "type": "prose",
+     "text": "Word lengths: (2 3 3 4 4 8 4 3 4 7 5 3 6 5 2 8)"
+    }
+   ],
+   "hash": "91b9d0bf2b9af228ac31c8054f16e96217ee8f6bee6a27e0ed32b6b62e97b32e",
+   "partials": {},
+   "hints": [
+    "The pieces are all here, just shuffled. What order would make sense of them?",
+    "Use the word lengths to rebuild the sentence."
+   ],
+   "length": 8
+  },
+  {
+   "id": 3,
+   "title": "The Long Night",
+   "flavor": "Up and down, up and down: two rows, one long sentence, and not a single space left.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "TIPGH SETTS CEFRV RLNTM ADHTE RTSUF NHSAE AKPIS ERTOA EYOGI ENTAS CEIPF I",
+     "wide": true,
+     "rails": 2
+    }
+   ],
+   "hash": "41e990488580151740bf30028135a0a09a270da91088a8ffbdbefe28ed2a5d61",
+   "partials": {},
+   "hints": [
+    "All the right letters seem to be here, just out of order. Could they have been written along some path?",
+    "Written in a zigzag over a few rows, then copied out row by row."
+   ],
+   "length": 6
+  },
+  {
+   "id": 4,
+   "title": "Polar Plateau",
+   "flavor": "Francis would have adored this paragraph. Pay attention to how it stands, not what it says. A baker's dozen steps separate this from the truth, in either direction.",
+   "blocks": [
+    {
+     "type": "prose",
+     "text": "iCECAp PEnGuiN seAl FlOe NARwhal iCebERG."
+    }
+   ],
+   "hash": "67cf447fed7e87ad0401ce14392c261b862acf81fd09788af83c2057780da13a",
+   "partials": {
+    "78882fbe246a325e482d6d25757268b75ff534ac10c7002a847f56c8f008e3b5": "You've decoded it, but it's not finished. One more layer."
+   },
+   "hints": [
+    "Look at how the text is set, not what it says. Are there two kinds of something?",
+    "Two kinds of letter, in groups of five: a cipher named after a philosopher. Whatever you get may still need one more twist."
+   ],
+   "length": 7
+  },
+  {
+   "id": 5,
+   "title": "Midnight Sun",
+   "flavor": "Every row at base camp holds one of everything. So does every column, and every box. Then read the numbered squares. Whoever transcribed it held the alphabet up to a mirror.",
+   "blocks": [
+    {
+     "type": "sudoku",
+     "size": 9,
+     "rows": [
+      "...G.I.A.",
+      ".O..Z....",
+      "A.Y......",
+      ".....G...",
+      "O......L.",
+      "L.H.Y.G..",
+      "Z....A.C.",
+      "...I.HA.Y",
+      "....L...H"
+     ],
+     "alphabet": "ACGHILOYZ",
+     "marks": [
+      [
+       4,
+       5
+      ],
+      [
+       5,
+       3
+      ],
+      [
+       0,
+       6
+      ],
+      [
+       2,
+       6
+      ],
+      [
+       4,
+       2
+      ],
+      [
+       5,
+       7
+      ],
+      [
+       3,
+       3
+      ],
+      [
+       6,
+       1
+      ],
+      [
+       1,
+       7
+      ]
+     ]
+    }
+   ],
+   "hash": "cb635981e4decb13eb501d65b23cbbc28b701563642976d37ece16fecbfb4bca",
+   "partials": {
+    "ac3aa975679ae3e544841bbc18cefc962e9f6b0acacd5523d2092d3a12c11d86": "You've decoded it, but it's not finished. One more layer."
+   },
+   "hints": [
+    "A familiar grid puzzle in unfamiliar clothes. Once it's done, are some squares more important than others?",
+    "Solve it like a sudoku, then read the numbered squares in order. Whatever you get may still need one more twist."
+   ],
+   "length": 9
+  }
+ ],
+ "meta": {
+  "title": "Meta: The Last Expedition",
+  "flavor": "The porter only ever noted where each passenger boarded.",
+  "blocks": [
+   {
+    "type": "list",
+    "items": [
+     "Platform 2, car 1",
+     "Platform 2, car 2",
+     "Platform 5, car 6",
+     "Platform 2, car 3",
+     "Platform 5, car 1",
+     "Platform 3, car 3",
+     "Platform 4, car 3",
+     "Platform 1, car 2",
+     "Platform 1, car 1",
+     "Platform 5, car 5"
+    ],
+    "ordered": true
+   }
+  ],
+  "length": 10,
+  "hash": "4cd390a1b4d96f36245eb9f4cd319a45464c0b017185301630608c7ae3cfbc52",
+  "hints": [
+   "Every entry has two numbers. What in this round is numbered, and what could the second number count?",
+   "The first number picks a puzzle; the second picks a letter inside its answer."
+  ]
+ },
+ "described": true
+}

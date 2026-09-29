@@ -4,7 +4,7 @@
  "salt": "2026-09-29/easy",
  "number": 3,
  "round": "The Last Expedition",
- "intro": "The ship was crushed by pack ice in the first winter. What survives of the expedition is a biscuit tin full of messages, each written in a different hand, and each deliberately obscure.",
+ "intro": "The ship was crushed by pack ice in the first winter, and all that survives of the expedition is a battered biscuit tin, its lid sealed with tar and hope, holding messages written in seven different hands. Each note is deliberately obscure, as though the writers knew that sense alone would not save them, that only patience and a careful eye would let a stranger piece together what they meant. The men spoke often of order, of sorting, of the way things must be arranged before any truth could be coaxed from chaos, and several of the notes seem to argue about which should come first, which second, as if the sequence itself were the secret. Some messages begin with striking openings, and a few mention counting deep into the words, as though each letter had been placed there to be weighed. Reading them, one feels the same pull the expedition must have felt, the need to line the pages up just so and take from each exactly what it offers, no more, no less. In the quiet of the tent, with the ice pressing in, the tin feels less like a relic and more like a summons to finish what they started.",
  "echo": "The navigator trusted only one star: the one that never moved.",
  "puzzles": [
   {
@@ -285,5 +285,6 @@
   "length": 7,
   "hash": "913f1b805bc719f1662c7728a4e90dfaa33c96ac4ba2b73c06e28eb584c03f8e",
   "explain": "Order the puzzles alphabetically by title; take the k-th letter of the k-th answer."
- }
+ },
+ "described": true
 }

@@ -5,30 +5,34 @@
    "date": "2026-09-27",
    "number": 1,
    "round": "Insert Coin",
-   "easy": false,
    "count": {
     "hard": 5
-   }
+   },
+   "medium": false,
+   "easy": false
   },
   {
    "date": "2026-09-28",
    "number": 2,
    "round": "Series Z",
-   "easy": true,
    "count": {
     "hard": 6,
     "easy": 4
-   }
+   },
+   "medium": false,
+   "easy": true
   },
   {
    "date": "2026-09-29",
    "number": 3,
    "round": "The Last Expedition",
-   "easy": true,
    "count": {
     "hard": 5,
+    "medium": 5,
     "easy": 7
-   }
+   },
+   "medium": true,
+   "easy": true
   }
  ]
 }

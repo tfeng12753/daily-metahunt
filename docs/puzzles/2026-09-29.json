@@ -4,7 +4,7 @@
  "salt": "2026-09-29",
  "number": 3,
  "round": "The Last Expedition",
- "intro": "The first winter took the hull, and with it most of our voices. What remains sits splayed beneath canvas, a tin of folded slips, each hand unsteady in its own way, each sentence circling its meaning like a dog reluctant to lie down.",
+ "intro": "The ship was crushed by pack ice in the first winter, and what survives of the expedition is a biscuit tin full of messages, each written in a different hand and each deliberately obscure. Here in the lee of the black ridge, where the stove coughs more smoke than heat, we pass the tin from palm to palm and try to read the frost between the lines. Five notes are sealed with wax, five more are loose, and all of them speak as if the danger were still at the edge of the map rather than inside the tent. There is a rhythm to the obscurity, though: the hands keep returning to pairings, as if every scrap expects a listener to match one number from its own heading with a count taken from its own prose, then to pluck that single token from the same reply. Until that thaw comes, we write our own warnings and wait for the wind to choose a direction.",
  "echo": "The river behind the tents moves a foot a day, and it is made of ice.",
  "puzzles": [
   {
@@ -362,5 +362,6 @@
   ],
   "length": 7,
   "hash": "949e6e394566bee5cd291a5af60ccf600df5a5271c539f95a9e258c3b7fedf0f"
- }
+ },
+ "described": true
 }
