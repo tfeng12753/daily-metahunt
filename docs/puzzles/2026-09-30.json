@@ -1,0 +1,408 @@
+{
+ "date": "2026-09-30",
+ "difficulty": "hard",
+ "salt": "2026-09-30",
+ "number": 4,
+ "round": "221B, Upstairs",
+ "intro": "The gaslight in 221B guttered low, as if the room itself were holding its breath, and the detective was gone—only his violin sat on the chair, one string wound tight to a note that was not quite true, and beside it a stack of notes tied with a fraying ribbon, each addressed to whoever might be clever enough to read between the lines. The Irregulars drifted in and out like smoke, each pocketing a scrap, each coming back with half a truth and a shrug, but the one who pieced the scraps together always left a single odd stitch in the telling, a word that did not belong to the story but slipped in anyway, as though the telling itself had taken up a habit of hiding things in plain sight. Mrs Hudson tutted and swept the hearth, muttering that Holmes had never been much good at leaving instructions, only at leaving things that almost said enough. A cold wind rattled the sash and the violin sang, faintly, one string at a time.",
+ "echo": "When you have eliminated the impossible, whatever remains is the answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "The Reichenbach Fall",
+   "flavor": "The picture is worth exactly one word.",
+   "blocks": [
+    {
+     "type": "nonogram",
+     "rows": [
+      [
+       4,
+       5,
+       4,
+       3,
+       4,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       5,
+       4,
+       1
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       4,
+       5,
+       4,
+       1,
+       1,
+       1,
+       1,
+       1
+      ]
+     ],
+     "cols": [
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       3
+      ],
+      [],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       3
+      ],
+      [],
+      [
+       4
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       4
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       3
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ],
+     "givens": [
+      [
+       0,
+       19,
+       1
+      ],
+      [
+       0,
+       31,
+       0
+      ],
+      [
+       4,
+       32,
+       1
+      ],
+      [
+       0,
+       33,
+       0
+      ]
+     ]
+    }
+   ],
+   "hash": "a431df86f7ae042c2b658cba276a15ff4617aacc5e0d5396526d4c7455da3ce4",
+   "partials": {
+    "275f9f5fad54ecb8c7e1c5fb440bb07f18a0f2e20f10aa73a60f8edb1d39d702": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "The numbers describe runs of something. What picture could they be drawing?"
+   ]
+  },
+  {
+   "id": 2,
+   "title": "Five Orange Pips",
+   "flavor": "One of everything in every row, column and box. Then read the numbered squares. Unlucky for some: the letters were all nudged by the same unlucky amount.",
+   "blocks": [
+    {
+     "type": "sudoku",
+     "size": 9,
+     "rows": [
+      "Y....E...",
+      "..NP.B..J",
+      "..P...Y.A",
+      "B......R.",
+      ".Y.J....P",
+      ".AR...J..",
+      "..YG..A..",
+      "RG...J...",
+      "....NR.Y."
+     ],
+     "alphabet": "ABEGJNPRY",
+     "marks": [
+      [
+       1,
+       4
+      ],
+      [
+       3,
+       3
+      ],
+      [
+       3,
+       5
+      ],
+      [
+       8,
+       6
+      ],
+      [
+       2,
+       3
+      ],
+      [
+       0,
+       1
+      ],
+      [
+       7,
+       8
+      ],
+      [
+       7,
+       4
+      ]
+     ]
+    }
+   ],
+   "hash": "70e11e7ad1c46902e73aa6749acf6c9f79445a305d408e02228aa1ea1a31b550",
+   "partials": {
+    "94746f3f4556d24244d31de250e5f5208d6a3d98b1c39cfef1a889e6a5435e81": "You've decoded it, but it's not finished. One more layer.",
+    "56174965ae2f170a31988606f317bca765e4ab8574bd51b71bddd6e3cd4ae0ce": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "A familiar grid puzzle in unfamiliar clothes. Once it's done, are some squares more important than others?"
+   ]
+  },
+  {
+   "id": 3,
+   "title": "A Study In Scarlet",
+   "flavor": "A sentence that came loose from its lines.",
+   "blocks": [
+    {
+     "type": "dropquote",
+     "cols": [
+      "EHRTT",
+      "AEHTVY",
+      "ADEHP",
+      "EELT",
+      "DILOW",
+      "AANOR",
+      "BEPSSY",
+      "EET",
+      "CFRW",
+      "ADEOT",
+      "HNORT",
+      "EINOT",
+      "NRS",
+      "DEGT"
+     ],
+     "mask": [
+      "...#....#.....",
+      "#...#........#",
+      ".....#......#.",
+      "..#....#....#.",
+      "...#...#......",
+      ".......#######"
+     ]
+    }
+   ],
+   "hash": "49235bcfe827fd0f320468e0f6ac409f1e296fdd471ded102cf1a04da5df61d5",
+   "partials": {
+    "a9fb7eade385a6c63cf99156c17f2bf757f4cd1a74618e7e8aa2d3e2cb4c7903": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "The columns say which letters, but not in what order. Can the shape of the grid help?"
+   ]
+  },
+  {
+   "id": 4,
+   "title": "The Final Problem",
+   "flavor": "Everything came out of the wash with a little something extra.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "CLRIBYRA",
+      "LVVEORAER",
+      "NUOBXNSFF",
+      "DOCCATBO",
+      "DGRAENLRE",
+      "GMEEEALRT",
+      "URNEEI",
+      "SOIPUM",
+      "MFTIRIAENG",
+      "ARILTSEED",
+      "OCARTTIPR",
+      "NETRSKCOIP"
+     ],
+     "ordered": true,
+     "mono": true
+    }
+   ],
+   "hash": "5cae51913fa3be5a3ed06d4d164e07372cc9c947b35fcab2a0642f0cfc120c92",
+   "partials": {
+    "93dd56e51780754ed973a3571a129af6ec15d68aa4848bc84914fd5f695cc3ca": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Each jumble is almost a familiar word from this round. Almost."
+   ]
+  },
+  {
+   "id": 5,
+   "title": "Seven Per Cent",
+   "flavor": "A negative, hung upside down, of something that only reads in threes.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "5′–GCATCTCTCTCCGTCTTCAAG–3′"
+    }
+   ],
+   "hash": "6386bb0c41d2ccc43bc029ae19e31141d9d27bb7da9e07dfb5dd829d549a1103",
+   "partials": {
+    "399205a6b6ec8c7ace0074da0eb5e62e58831e26bd77ec06c025e9fc3091b962": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Is this the strand a cell would actually read? And which end would it start from?"
+   ]
+  },
+  {
+   "id": 6,
+   "title": "The Dog In The Night",
+   "flavor": "Every letter here is wearing someone else's coat.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "TLTAE WGGV PRQO TQVH JMOP N HMQWBT JGAV NQV OPT JGAV EGR JNQO SAGD OPMH ZNWT MH JMOQTTHH",
+     "wide": true,
+     "solver": "substitution"
+    }
+   ],
+   "hash": "4e5156d26f1f4cf7a46676a29404eefd5494af1c3febcfd16037d64192a4ad32",
+   "partials": {
+    "9420f494fcd57c079da08b32edeb54d373ab6592271fcbfdff58eedcbd5b1fb8": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Which short words are most common in English? Could any of them be hiding here?"
+   ]
+  }
+ ],
+ "meta": {
+  "title": "Meta: 221B, Upstairs",
+  "flavor": "Count heads at the gangway: one too many on every boat.",
+  "blocks": [],
+  "length": 6,
+  "hash": "610944bde968e524b3b41a65e0510c2fc6af12e9447d8d8eed50d535156a25d6",
+  "hints": [
+   "Did every answer come out the right size the first time? What did you have to throw overboard?"
+  ]
+ },
+ "described": true
+}

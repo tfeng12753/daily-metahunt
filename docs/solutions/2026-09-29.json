@@ -1,0 +1,55 @@
+{
+ "date": "2026-09-29",
+ "number": 3,
+ "difficulty": "hard",
+ "final": "GLACIER",
+ "metaType": "logbook",
+ "explain": "Each entry is (puzzle number, letter number): index into that puzzle's answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Sastrugi",
+   "answer": "SLEDDOG",
+   "mechanism": "Nonogram",
+   "transform": null,
+   "encoded": "SLEDDOG",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Whiteout",
+   "answer": "SHACKLETON",
+   "mechanism": "Mirrored NATO",
+   "transform": null,
+   "encoded": "SHACKLETON",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Polar Plateau",
+   "answer": "SOLSTICE",
+   "mechanism": "Hex colour ASCII",
+   "transform": "Atbash (A↔Z mirror)",
+   "encoded": "HLOHGRXV",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Katabatic",
+   "answer": "FJORD",
+   "mechanism": "Shredded sentence",
+   "transform": null,
+   "encoded": "FJORD",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Nunatak",
+   "answer": "SEAL",
+   "mechanism": "Template strand",
+   "transform": null,
+   "encoded": "SEAL",
+   "mutated": null
+  }
+ ]
+}

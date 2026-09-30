@@ -1,0 +1,215 @@
+{
+ "date": "2026-09-30",
+ "difficulty": "easy",
+ "salt": "2026-09-30/easy",
+ "number": 4,
+ "round": "221B, Upstairs",
+ "intro": "The detective has vanished, leaving only a violin with one string retuned and a stack of notes addressed to whoever is clever enough to read them. The Irregulars have spread the notes across the upstairs rooms at Baker Street, each tucked beside the thing it describes: a cracked fob watch, a smouldering pipe, a letter half-burnt in the grate, a shoe with the heel worn thin, and a map of the Underground with a single line drawn in pencil. One string on the violin, they say, was bent to match the pitch of the note left upon the mantelpiece — the rest are still as the maker tuned them, so the odd one out tells you which letter to pluck from each. When you have them all, lay the letters down in the order the notes were written, and read what the violin leaves unsaid.",
+ "echo": "Latin for 'elsewhere', which is precisely where everyone claims to have been.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Elementary",
+   "flavor": "Two forward, one across. Remember where you land.",
+   "blocks": [
+    {
+     "type": "board",
+     "rows": [
+      "ZQIPPPCX",
+      "PLUUKPXB",
+      "QSBQBPBB",
+      "JNZBFDXZ",
+      "JVCEORZT",
+      "ETQRULMG",
+      "OXQMAMVT",
+      "ALAVCPEH"
+     ]
+    },
+    {
+     "type": "prose",
+     "text": "The knight sets out from a5: Nb3 Nd4 Nf3 Ng1 Nh3 Nf4 Ne2 Ng3."
+    }
+   ],
+   "hash": "947df8dcd2d2d2884adb1dcc8f71e4de3756cccc140c28ae77166f75b7145989",
+   "partials": {},
+   "hints": [
+    "Follow the moves and note the letter on every square it lands on.",
+    "Start on the given square and follow the knight moves; read the letter on each square it lands on."
+   ],
+   "technique": "Knight's path",
+   "length": 8
+  },
+  {
+   "id": 2,
+   "title": "The Empty House",
+   "flavor": "Someone wrote this out in a zigzag across five lines of the ledger, then copied each line out in turn.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "WYWWD EEOEE EOOWO NRMIR VQYNN XLNUN RDTOA FAOUL TETLO MYIEH WGINM ITOHO EDATE NDETN",
+     "wide": true,
+     "rails": 5
+    }
+   ],
+   "hash": "b90def9630f9ab407ee3b104a696317a7a1c1cbeb92305c6bb908643e938886a",
+   "partials": {},
+   "hints": [
+    "Written in a zigzag over a few rows, then copied out row by row.",
+    "Rail-fence transposition of a sentence with the spaces removed. Try 2 to 5 rails; the sentence tells you the answer."
+   ],
+   "technique": "Rail fence (cluephrase)",
+   "length": 9
+  },
+  {
+   "id": 3,
+   "title": "The Speckled Band",
+   "flavor": "The quartermaster insists on a perfect distribution: no duplicates, anywhere. The numbered bins are the ones that matter.",
+   "blocks": [
+    {
+     "type": "sudoku",
+     "size": 9,
+     "rows": [
+      ".SM.V.U..",
+      ".....MOVF",
+      "...FXB.M.",
+      "VN.B.S.U.",
+      "M....OS..",
+      ".XF.MVBN.",
+      "U.S..XF..",
+      ".FVNSUXO.",
+      "..NM...S."
+     ],
+     "alphabet": "BFMNOSUVX",
+     "marks": [
+      [
+       5,
+       0
+      ],
+      [
+       0,
+       5
+      ],
+      [
+       8,
+       8
+      ],
+      [
+       4,
+       7
+      ],
+      [
+       0,
+       0
+      ],
+      [
+       6,
+       7
+      ],
+      [
+       0,
+       3
+      ],
+      [
+       1,
+       2
+      ]
+     ]
+    }
+   ],
+   "hash": "c19a300f543a650e9c111490e76571e56dff1644437d3b69fcd89496a06aa164",
+   "partials": {},
+   "hints": [
+    "Solve it like a sudoku, then read the numbered squares in order.",
+    "Sudoku using the letters shown instead of digits (each row, column and box uses each letter once). Read the numbered squares in order."
+   ],
+   "technique": "Letter sudoku",
+   "length": 8
+  },
+  {
+   "id": 4,
+   "title": "Dancing Men",
+   "flavor": "Unjumble the kit list. You'll have one letter left over every time, and you'll want to keep those.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "HUSFDNO",
+      "IMYRIRTAO",
+      "DREGELN",
+      "IRMGHSTYCE",
+      "IPEMOU",
+      "EAENDRGRR",
+      "FTNPROOITP",
+      "ERRIEN",
+      "IHSAMNO",
+      "DLEESRANT",
+      "IVOINTL"
+     ],
+     "ordered": true,
+     "mono": true
+    }
+   ],
+   "hash": "bcff8f65920c8cc622e7476834db229339f0e6bdb663e099d939ff522c5ea5d1",
+   "partials": {},
+   "hints": [
+    "Rearrange each into a theme word; there's always one letter spare.",
+    "Each jumble is an anagram of a word from this round's theme plus one extra letter. The extra letters, in order, spell the answer."
+   ],
+   "technique": "Anagrams with an extra letter",
+   "length": 11
+  },
+  {
+   "id": 5,
+   "title": "Three Pipe Problem",
+   "flavor": "Fill the gaps. What you fill them with is the point.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "_ATSON",
+      "PO_SON",
+      "LES_RADE",
+      "SCOTLA_DYARD",
+      "BUTL_R",
+      "DEER_TALKER",
+      "IN_PECTOR"
+     ],
+     "ordered": true,
+     "mono": true
+    }
+   ],
+   "hash": "a13c44a0c0e579f94d706676d6756d43af93dde48337cdf7a4c1b4a75b0ad3e3",
+   "partials": {},
+   "hints": [
+    "Collect the letters you had to supply.",
+    "Each theme word is missing one letter. The missing letters, in order, spell the answer."
+   ],
+   "technique": "Missing letters",
+   "length": 7
+  }
+ ],
+ "meta": {
+  "title": "Meta: 221B, Upstairs",
+  "flavor": "Tonight's seating chart. Every seat is one letter wide.",
+  "blocks": [
+   {
+    "type": "list",
+    "items": [
+     "Row 2, seat 2",
+     "Row 1, seat 3",
+     "Row 4, seat 9",
+     "Row 3, seat 6",
+     "Row 5, seat 2"
+    ],
+    "ordered": true
+   }
+  ],
+  "length": 5,
+  "hash": "d325642f4bae8af29dcc35946e53e67de177c49cc6678cf24edb99c737557892",
+  "hints": [
+   "The first number picks a puzzle; the second picks a letter inside its answer.",
+   "Each entry is (puzzle number, letter number): index into that puzzle's answer."
+  ]
+ },
+ "described": true
+}

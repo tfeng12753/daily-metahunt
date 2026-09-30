@@ -1,0 +1,73 @@
+{
+ "date": "2026-09-29",
+ "number": 3,
+ "difficulty": "easy",
+ "final": "POLARIS",
+ "metaType": "title_diagonal",
+ "explain": "Order the puzzles alphabetically by title; take the k-th letter of the k-th answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Dead Reckoning",
+   "answer": "PARKA",
+   "mechanism": "Book cipher",
+   "transform": null,
+   "encoded": "PARKA",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Ship's Biscuit",
+   "answer": "TUNDRA",
+   "mechanism": "Word search leftovers",
+   "transform": null,
+   "encoded": "TUNDRA",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Sastrugi",
+   "answer": "ALBATROSS",
+   "mechanism": "Knight's path",
+   "transform": null,
+   "encoded": "ALBATROSS",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Pack Ice",
+   "answer": "SOLSTICE",
+   "mechanism": "Anagrams with an extra letter",
+   "transform": null,
+   "encoded": "SOLSTICE",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Whiteout",
+   "answer": "PENGUIN",
+   "mechanism": "Tap code",
+   "transform": null,
+   "encoded": "PENGUIN",
+   "mutated": null
+  },
+  {
+   "id": 6,
+   "title": "Polar Plateau",
+   "answer": "WALRUS",
+   "mechanism": "Symbol cryptogram",
+   "transform": null,
+   "encoded": "WALRUS",
+   "mutated": null
+  },
+  {
+   "id": 7,
+   "title": "Winter Quarters",
+   "answer": "RATIONS",
+   "mechanism": "Punched tape",
+   "transform": null,
+   "encoded": "RATIONS",
+   "mutated": null
+  }
+ ]
+}

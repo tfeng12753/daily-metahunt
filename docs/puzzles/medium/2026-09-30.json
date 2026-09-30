@@ -1,0 +1,322 @@
+{
+ "date": "2026-09-30",
+ "difficulty": "medium",
+ "salt": "2026-09-30/medium",
+ "number": 4,
+ "round": "221B, Upstairs",
+ "intro": "The detective has vanished, leaving only a violin with one string retuned and a stack of notes addressed to whoever is clever enough to read them.",
+ "echo": "It is always the person you trusted with the tea.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Elementary",
+   "flavor": "Every part described by its first two stripes, and nothing else.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "brown–blue",
+      "brown–green",
+      "brown–grey",
+      "red–black",
+      "brown–grey",
+      "black–orange",
+      "black–brown",
+      "black–white",
+      "red–black"
+     ]
+    }
+   ],
+   "hash": "2d5de02fbab9adb4bb583b22622c6fb0e182dae3f385caf606c7527ad43fb0c4",
+   "partials": {
+    "13542b63ef1ae1ce6bdee3f6670e9ae42b1c0eae996b3c8f174f925d320370b6": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Where would you see stripes like these, and what do engineers read them as?",
+    "Each colour stands for a digit."
+   ],
+   "length": 8
+  },
+  {
+   "id": 2,
+   "title": "Five Orange Pips",
+   "flavor": "An inventory of Baker Street, tangled up. Whatever is left over when every item is accounted for is yours.",
+   "blocks": [
+    {
+     "type": "caption",
+     "text": "Hidden in the grid: 6 words to do with Baker Street."
+    },
+    {
+     "type": "board",
+     "rows": [
+      "BSCOTLW",
+      "UNHRANI",
+      "TOAEMDT",
+      "LSNGAYN",
+      "EISDNUE",
+      "ROOEOAS",
+      "RPMLRDS"
+     ],
+     "plain": true,
+     "words": [
+      "BUTLER",
+      "HANSOM",
+      "LEDGER",
+      "MANOR",
+      "POISON",
+      "WITNESS"
+     ]
+    }
+   ],
+   "hash": "0428ec1eaacdd660480ee0e084df603e87db514ffd914a78dd458e9814eab56e",
+   "partials": {
+    "1011b92859f50d921a0d859b9dc8d987344f08bf5a3a9df4ceb3dd91c54a20bf": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Once everything that belongs here is accounted for, is anything left unclaimed?",
+    "Find the theme words; the letters no word uses are the ones that matter.",
+    "The hidden words are: BUTLER, HANSOM, LEDGER, MANOR, POISON, WITNESS."
+   ],
+   "length": 12
+  },
+  {
+   "id": 3,
+   "title": "The Final Problem",
+   "flavor": "Someone wrote this out in a zigzag across three lines of the ledger, then copied each line out in turn.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "NDPEY TTSSE ZJOOO RTOOY XETDN OEOET IFROH PIESU TNWRC NEVAO YBECA NGHAT RISED SLR",
+     "wide": true,
+     "rails": 3
+    }
+   ],
+   "hash": "1871c1c83100576f3d244e7cf2e301e43f5d6b794d467238a91ed9c5c7dcfdb9",
+   "partials": {
+    "389ecdb593d9ad1f6641987a63a641725056b50f28f7d5984af2aa822ce303ff": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "All the right letters seem to be here, just out of order. Could they have been written along some path?",
+    "Written in a zigzag over a few rows, then copied out row by row."
+   ],
+   "length": 12
+  },
+  {
+   "id": 4,
+   "title": "The Speckled Band",
+   "flavor": "The labels at Baker Street have faded. Each one lost exactly one letter.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "BUT_ER",
+      "IREN_",
+      "WITNES_",
+      "DEERS_ALKER",
+      "FINGER_RINT",
+      "LEDGE_",
+      "ASHTR_Y",
+      "CAN_LESTICK",
+      "REVOLV_R"
+     ],
+     "ordered": true,
+     "mono": true
+    }
+   ],
+   "hash": "4dedf184fb192efc50bc7e4964bb42901112cedaa07ce6098518afb6ed6b94be",
+   "partials": {
+    "4735f45c583d7835f079c1824032b3044ffdbbd3ba26f0c14c85bd659640d792": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "What fills each gap? Is there a pattern in what you filled in?",
+    "Collect the letters you had to supply."
+   ],
+   "length": 8
+  },
+  {
+   "id": 5,
+   "title": "Dancing Men",
+   "flavor": "A strip of paper tape, seven holes wide, fed through the teletype at Baker Street.",
+   "blocks": [
+    {
+     "type": "tape",
+     "rows": [
+      [
+       1,
+       0,
+       0,
+       1,
+       1,
+       0,
+       1
+      ],
+      [
+       1,
+       0,
+       0,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       0,
+       1,
+       0,
+       0,
+       1,
+       0
+      ],
+      [
+       1,
+       0,
+       0,
+       1,
+       0,
+       0,
+       1
+      ],
+      [
+       1,
+       0,
+       0,
+       0,
+       0,
+       0,
+       1
+      ],
+      [
+       1,
+       0,
+       1,
+       0,
+       0,
+       1,
+       0
+      ],
+      [
+       1,
+       0,
+       1,
+       0,
+       1,
+       0,
+       0
+      ],
+      [
+       1,
+       0,
+       1,
+       1,
+       0,
+       0,
+       1
+      ],
+      [
+       1,
+       0,
+       1,
+       0,
+       0,
+       1,
+       0
+      ]
+     ]
+    }
+   ],
+   "hash": "b21a833314acce97477c37af8897e9d1f0a5df5d87e84dccd74c26d10663d794",
+   "partials": {
+    "e99848e2ee945671695ac69123cd04ee0761886d618cae48dc21ca93b7535a21": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Seven positions a row, each punched or not. What were seven bits once enough for?",
+    "Teletype tape carried a standard character code."
+   ],
+   "length": 8
+  },
+  {
+   "id": 6,
+   "title": "The Dog In The Night",
+   "flavor": "The typist at Baker Street was consistently, reliably, one step off. Whatever you find, it was said on the way out, not the way in.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "UBUKIUC",
+     "big": true,
+     "shift": -1
+    }
+   ],
+   "hash": "cb9ce7da95491c9c33e84ccf8e3dac2b100c551dbd798d53fed9dd6485377183",
+   "partials": {
+    "f696fa55a935a7a83343186ee9e1f6ac78a2be9b2b79f39510e2575d43df87c0": "You've decoded it, but it's not finished. One more layer.",
+    "58adb69886025915d0a6a18762f01b0ffbff279f8922a150340b048692306149": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Try typing this. Where are your fingers?",
+    "Look at the keyboard in front of you, and at each key's neighbours. Whatever you get may still need one more twist."
+   ],
+   "length": 6
+  },
+  {
+   "id": 7,
+   "title": "The Empty House",
+   "flavor": "Confetti, sorted alphabetically by a very tidy intern. Put it back together.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "ARR",
+      "DOR",
+      "ECO",
+      "ERC",
+      "GOL",
+      "IED",
+      "ING",
+      "LEW",
+      "MAG",
+      "NIF",
+      "NOT",
+      "ORD",
+      "R",
+      "RET",
+      "SBU",
+      "SEC",
+      "TAS",
+      "TIE",
+      "TTH",
+      "URI",
+      "WAS",
+      "WHA"
+     ],
+     "inline": true,
+     "tiles": true
+    },
+    {
+     "type": "prose",
+     "text": "Word lengths: (4 3 7 7 3 3 4 2 7 3 1 6 4 10)"
+    }
+   ],
+   "hash": "ecd24b685845ef5f66ec559d8abb54fb529b809ee678b5c1a94f6b732da9f2dd",
+   "partials": {
+    "ab68e9ad50cac3573f378bec562d6aaffeb3f007d13fbab4207795cf4d2a21d7": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "The pieces are all here, just shuffled. What order would make sense of them?",
+    "Use the word lengths to rebuild the sentence."
+   ],
+   "length": 9
+  }
+ ],
+ "meta": {
+  "title": "Meta: 221B, Upstairs",
+  "flavor": "Everything arrived a little heavier than it left.",
+  "blocks": [],
+  "length": 7,
+  "hash": "5aaf0915fe390361dfeef754764605ea3a27275ef6a5ce44195cd0830910beb3",
+  "hints": [
+   "Did every answer come out the right size the first time? What did you have to throw overboard?",
+   "Each feeder decoded with one letter too many. Those letters matter."
+  ]
+ }
+}

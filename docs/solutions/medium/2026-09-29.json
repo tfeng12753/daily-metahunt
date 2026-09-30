@@ -1,0 +1,55 @@
+{
+ "date": "2026-09-29",
+ "number": 3,
+ "difficulty": "medium",
+ "final": "PERMAFROST",
+ "metaType": "logbook",
+ "explain": "Each entry is (puzzle number, letter number): index into that puzzle's answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Sastrugi",
+   "answer": "SOLSTICE",
+   "mechanism": "Drop quote",
+   "transform": null,
+   "encoded": "SOLSTICE",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Nunatak",
+   "answer": "PEMMICAN",
+   "mechanism": "Shredded sentence",
+   "transform": null,
+   "encoded": "PEMMICAN",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "The Long Night",
+   "answer": "PUFFIN",
+   "mechanism": "Rail fence (cluephrase)",
+   "transform": null,
+   "encoded": "PUFFIN",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Polar Plateau",
+   "answer": "CARIBOU",
+   "mechanism": "Baconian cipher",
+   "transform": "ROT13",
+   "encoded": "PNEVOBH",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Midnight Sun",
+   "answer": "ALBATROSS",
+   "mechanism": "Letter sudoku",
+   "transform": "Atbash (A↔Z mirror)",
+   "encoded": "ZOYZGILHH",
+   "mutated": null
+  }
+ ]
+}
