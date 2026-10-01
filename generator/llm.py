@@ -1,7 +1,8 @@
 """Optional round descriptions via IFM's K2 Horizon (OpenAI-compatible API).
 
 The model only writes each round's opening story: a longer description that
-hints at the meta, faintly on Hard, more on Medium and clearly on Easy. Clue
+hints at the meta, faintly on Hard, lightly on Medium and noticeably on Easy,
+always saying less than the meta's first hint (it is given as a ceiling). Clue
 lines stay hand-written, because rewrites kept explaining methods and once
 stated a wrong fact about one. Puzzle data, answers and hashes are untouched.
 Every rewrite is validated (no answers, no intermediate strings, no naming
@@ -99,12 +100,12 @@ STRENGTH = {
              "(a habit of the people, an object in the scene), never by describing a procedure. A solver should only "
              "recognise it in hindsight. Do not mention numbers, counting, letters, headings, titles, order, rows, "
              "columns, matching or picking."),
-    "medium": ("A NOTICEABLE HINT. Include an in-story image or detail that points toward the final step (for example a "
-               "roll call, a filing drawer, a signature, a seating plan), which an attentive solver will pick up on. "
-               "Suggest, don't instruct."),
-    "easy": ("A DECENT, FAIRLY CLEAR HINT. This is the beginners' round: through the story, make it reasonably clear what "
-             "to look at in the answers and in what order, so a newcomer can work out the final step. Keep it as story, "
-             "not as a list of instructions."),
+    "medium": ("A LIGHT HINT. Include one in-story image or detail that relates to the final step (for example a "
+               "roll call, a filing drawer, a signature, a seating plan), which a solver could connect to it once "
+               "they are already thinking along those lines. Never say what to take from each answer, or in what order."),
+    "easy": ("A NOTICEABLE HINT. This is the beginners' round: through the story, point at what kind of thing the "
+             "final step involves, so a newcomer has somewhere to start. Keep it as story, never as instructions, and "
+             "never say which letter or position to take."),
 }
 
 
@@ -139,10 +140,12 @@ def describe(puzzle, solution, theme, level="hard", attempts=4):
         forbidden |= {q["answer"], q["encoded"]} | ({q["mutated"]} if q.get("mutated") else set())
     user = ("Round: %s\nSetting: %s; the people there are %s.\nCurrent opening (keep its facts and mood, expand it): %s\n"
             "How the metapuzzle works (for you only; never quote it): %s\nThe round has %d feeder puzzles.\n"
-            "Hint strength: %s\nDon't state how many messages, notes or puzzles there are unless the number is exactly %d.\n"
+            "Hint strength: %s\nCeiling: the solver can later open this hint about the final step. Your story must "
+            "say clearly less than it, never as much: \"%s\"\n"
+            "Don't state how many messages, notes or puzzles there are unless the number is exactly %d.\n"
             "Return JSON {\"intro\": \"...\"}."
             % (puzzle["round"], theme["place"], theme["crew"], theme["intro"], solution["explain"],
-               len(puzzle["puzzles"]), STRENGTH[level], len(puzzle["puzzles"])))
+               len(puzzle["puzzles"]), STRENGTH[level], puzzle["meta"]["hints"][0], len(puzzle["puzzles"])))
     try:
         model = pick_model(key)
     except Exception as e:

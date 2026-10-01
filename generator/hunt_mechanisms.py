@@ -106,7 +106,7 @@ class RailFence(Mechanism):
         "Up and down, up and down: {n} rows, one long sentence, and not a single space left.",
     ]
     flavors = [
-        'Written in a zigzag, then copied out one row at a time.',
+        'Fenced in, and copied out in a hurry.',
         'Up and down, up and down, and not a single space left.',
         "Walk the fence; don't read it.",
     ]
@@ -192,7 +192,7 @@ class KnightPath(Mechanism):
         "Two forward, one across. Remember where you land.",
     ]
     flavors = [
-        'Two forward, one across. Remember where you land.',
+        'Two forward, one across.',
         'One horseman, and a field full of noise.',
         'It never travels in a straight line, and neither does the truth.',
     ]
@@ -305,8 +305,8 @@ class WordSearch(Mechanism):
         "Find them all. The letters nobody used are the only ones that were talking to you.",
     ]
     flavors = [
-        'Cross off everything you recognise. What nobody claims is yours.',
-        'An inventory, tangled. The leftovers are the point.',
+        'Take stock of everything you recognise.',
+        'An inventory, tangled.',
         "Everything that belongs is in there somewhere. Some things don't belong.",
     ]
     DIRS = [(0, 1), (1, 0), (1, 1), (-1, 1), (0, -1), (-1, 0), (-1, -1), (1, -1)]
@@ -596,7 +596,7 @@ class AnagramExtras(Mechanism):
     flavors = [
         'Everything came out of the wash with a little something extra.',
         'Each entry picked up a hitchhiker on the way.',
-        "Tidy up the inventory. You'll have one thing left over every time.",
+        "Tidy up the inventory.",
     ]
 
     def can(self, word, ctx=None):
@@ -645,10 +645,15 @@ class MissingLetters(Mechanism):
     hint = "Each theme word is missing one letter. The missing letters, in order, spell the answer."
     weight = 3
     hard = False
-    flavors = [
+    easy_flavors = [
         "The labels {at} have faded. Each one lost exactly one letter.",
         "Moths got into the inventory: one letter eaten out of every entry.",
         "Fill the gaps. What you fill them with is the point.",
+    ]
+    flavors = [
+        "The labels {at} have faded.",
+        "Moths got into the inventory.",
+        "Fill the gaps.",
     ]
 
     def can(self, word, ctx=None):
@@ -833,9 +838,9 @@ class LetterSudoku(Mechanism):
         "A familiar grid, an unfamiliar alphabet.",
     ]
     flavors = [
-        'One of everything in every row, column and box. Then read the numbered squares.',
+        'Everything in its place, and nothing twice.',
         'A familiar grid, an unfamiliar alphabet.',
-        'No duplicates anywhere. The numbered squares are the ones that matter.',
+        'No duplicates anywhere.',
     ]
 
     def can(self, word, ctx=None):

@@ -82,6 +82,10 @@ def meta_diagonal(final, pool, rng):
         "type": "diagonal",
         "feeders": feeders,
         "flavor": [
+            "Stand {crew} in a line. Then take the stairs.",
+            "Line them up properly, and each one has a little further to go than the last.",
+        ],
+        "easy_flavor": [
             "Roll call is taken alphabetically, and each answer goes one step further than the last.",
             "Stand {crew} in a line, A to Z. Then take the stairs.",
         ],
@@ -105,6 +109,10 @@ def meta_title_diagonal(final, pool, rng):
         "type": "title_diagonal",
         "feeders": [{"answer": w} for w in words],
         "flavor": [
+            "File everything the way an archivist would.",
+            "Every drawer is labelled. Walk down them.",
+        ],
+        "easy_flavor": [
             "File everything the way an archivist would, by its heading. Then walk down the drawer.",
             "Shelved by title, and read on the slant.",
         ],
@@ -143,7 +151,7 @@ def meta_mutation(final, pool, rng):
         "feeders": feeders,
         "flavor": [
             "Nothing reached {place} undamaged. The damage, though, was remarkably consistent.",
-            "Every report is one slip away from perfect. Keep the slips.",
+            "Every report is one slip away from perfect.",
         ],
         "explain": "Each feeder decodes to its answer with a single wrong letter. Those substituted letters, in puzzle order, spell the final answer.",
         "body": [],
@@ -177,8 +185,12 @@ def meta_fitin(final, pool, rng):
         "type": "fitin",
         "feeders": [{"answer": w} for w in words],
         "flavor": [
-            "Everything {at} has a place, and every place is exactly the right size.",
+            "Everything {at} has a place.",
             "Pigeonholes, each cut to fit one thing only.",
+        ],
+        "easy_flavor": [
+            "Everything {at} has a place, and every place is exactly the right size.",
+            "Pigeonholes, each cut to fit one thing, and some of them marked.",
         ],
         "explain": "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
         "body": [{"type": "fitgrid", "rows": rows}],
@@ -214,6 +226,9 @@ def meta_stowaway(final, pool, rng):
         "feeders": feeders,
         "flavor": [
             "Everything arrived a little heavier than it left.",
+            "Count heads at the gangway.",
+        ],
+        "easy_flavor": [
             "Count heads at the gangway: one too many on every boat.",
         ],
         "explain": "Each feeder decodes to its answer plus one inserted letter. The inserted letters, in puzzle order, spell the final answer.",
@@ -257,18 +272,24 @@ def meta_logbook(final, pool, rng, sizes=(5, 6)):
                 break
     else:
         return None
+    # (entry format, oblique flavour, Easy flavour)
     styles = [
-        ("Day {i}, {j} bells", "The watch-keeper wrote down nothing but the day and the bell."),
-        ("Ch. {i} v. {j}", "Someone underlined a few verses. This page has its own chapters."),
-        ("Platform {i}, car {j}", "The porter only ever noted where each passenger boarded."),
-        ("Row {i}, seat {j}", "Tonight's seating chart. Every seat is one letter wide."),
+        ("Day {i}, {j} bells", "The watch-keeper wrote down nothing but the day and the bell.",
+         "The watch-keeper wrote down nothing but the day and the bell. Every day was one of your puzzles."),
+        ("Ch. {i} v. {j}", "Someone underlined a few verses.",
+         "Someone underlined a few verses. This page has its own chapters."),
+        ("Platform {i}, car {j}", "The porter only ever noted where each passenger boarded.",
+         "The porter only ever noted where each passenger boarded. Every car holds one letter."),
+        ("Row {i}, seat {j}", "Tonight's seating chart.",
+         "Tonight's seating chart. Every seat is one letter wide."),
     ]
-    fmt_s, flavor = rng.choice(styles)
+    fmt_s, flavor, easy_flavor = rng.choice(styles)
     entries = [fmt_s.format(i=i + 1, j=j + 1) for i, j in picks]
     return {
         "type": "logbook",
         "feeders": [{"answer": w} for w in words],
         "flavor": [flavor],
+        "easy_flavor": [easy_flavor],
         "explain": "Each entry is (puzzle number, letter number): index into that puzzle's answer.",
         "body": [{"type": "list", "items": entries, "ordered": True}],
     }
@@ -419,14 +440,15 @@ def build(secret, date, easy=False, level=None):
     for i, (fd, (mech, tkey, enc), title) in enumerate(zip(feeders, plan, titles)):
         ctx = dict(base_ctx, title=title)
         blocks = mech.encode(enc, rng, ctx)
-        # Easy and medium get the more direct flavour; hard keeps the oblique one.
-        direct = level != "hard" and mech.easy_flavors
+        # Only Easy gets the direct flavour. Medium keeps the oblique one, so its nudge and
+        # pointer each add something (see hints.py for the ladder).
+        direct = level == "easy" and mech.easy_flavors
         pool_flavors = ctx.get("_flavors") or (mech.easy_flavors if direct else mech.flavors)
         flavor = fmt(rng.choice(pool_flavors), theme).replace("{n}", ctx.get("_flavor_n", ""))
         method = ctx.get("_hint", mech.hint)
         technique = ctx.get("_name", mech.name)
         if tkey:
-            flavor += " " + rng.choice(TRANSFORMS[tkey]["hints"])
+            flavor += " " + rng.choice(TRANSFORMS[tkey]["hints" if level == "hard" else "plain_hints"])
 
         # Self-check: the encoding must decode back to exactly what we meant.
         dctx = dict(ctx, expect=enc)
@@ -450,8 +472,8 @@ def build(secret, date, easy=False, level=None):
             "blocks": blocks,
             "hash": answer_hash(salt, fd["answer"]),
             "partials": partials,
-            "hints": hints.feeder_hints(level, mech.key, method, TRANSFORMS[tkey]["name"] if tkey else None,
-                                        ctx.get("_extra_hint")),
+            "hints": hints.feeder_hints(level, mech.key, method, TRANSFORMS[tkey] if tkey else None,
+                                        ctx.get("_extra_hint"), fd["answer"]),
         })
         if easy:
             puzzles[-1]["technique"] = technique
@@ -477,12 +499,12 @@ def build(secret, date, easy=False, level=None):
         "puzzles": puzzles,
         "meta": {
             "title": "Meta: " + theme["name"],
-            "flavor": fmt(rng.choice(meta["flavor"]), theme),
+            "flavor": fmt(rng.choice(meta.get("easy_flavor", meta["flavor"]) if easy else meta["flavor"]), theme),
             "blocks": meta["body"],
             "length": len(final),
             "hash": answer_hash(salt, final),
             # The explanation is no longer printed up front, even on easy: it's the last hint.
-            "hints": hints.meta_hints(level, meta["type"], meta["explain"]),
+            "hints": hints.meta_hints(level, meta["type"], meta["explain"], final),
         },
     }
     solution = {
