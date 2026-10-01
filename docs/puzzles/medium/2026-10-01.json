@@ -1,0 +1,206 @@
+{
+ "date": "2026-10-01",
+ "difficulty": "medium",
+ "salt": "2026-10-01/medium",
+ "number": 5,
+ "round": "The Great Work",
+ "intro": "The alchemist's notebook was written so that only a fellow adept could read it. Every page is a different recipe, and every recipe is a lie with one true ingredient. The margins are crowded with sigils, but the ink is not alike: some entries are pressed deep, others merely brushed on, and a few seem to sit at the very gate of the page, waiting for a hand to find them. In the back of the book, a single loose sheet lists the names of the five adepts who prepared the vials, each with a number and a letter circled in crimson, as though the order of the cupboard mattered more than the contents. The last line, scratched in haste, reads: the true essence is not in the mixture, but in the place each one occupies.",
+ "echo": "The goddess of the universal remedy was a daughter of Asclepius.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Albedo",
+   "flavor": "Everything in the laboratory got thrown in the tumble dryer, and every item came out with a little something extra.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "ESRNCAIH",
+      "OUBOORROOS",
+      "MECSESNE",
+      "IAUBNRNAC",
+      "ORNTRTE",
+      "CDILTSLI",
+      "SESAHU",
+      "IUSLBHTM",
+      "LOBWULES",
+      "SSLKFA"
+     ],
+     "ordered": true,
+     "mono": true
+    }
+   ],
+   "hash": "c7a9e85633db1e4acd350e1ef07424d937114b0db6d9123f1142128d1f4fb7b0",
+   "partials": {},
+   "hints": [
+    "Each jumble is almost a familiar word from this round. Almost.",
+    "Rearrange each into a theme word; there's always one letter spare."
+   ],
+   "length": 10
+  },
+  {
+   "id": 2,
+   "title": "Athanor",
+   "flavor": "Fill the gaps. What you fill them with is the point.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "_ULFUR",
+      "QUICKSILV_R",
+      "SILVE_",
+      "S_IRIT",
+      "EMB_R",
+      "FUR_ACE",
+      "RE_ORT"
+     ],
+     "ordered": true,
+     "mono": true
+    }
+   ],
+   "hash": "071bd62252aec99477a964814aaeb7aed26a72df0e6f9edf490d34b01fbdc74f",
+   "partials": {},
+   "hints": [
+    "What fills each gap? Is there a pattern in what you filled in?",
+    "Collect the letters you had to supply."
+   ],
+   "length": 7
+  },
+  {
+   "id": 3,
+   "title": "The Green Lion",
+   "flavor": "Somebody shook the sentence and all the letters fell to the bottom of their columns.",
+   "blocks": [
+    {
+     "type": "dropquote",
+     "cols": [
+      "ADEMTVW",
+      "AEEOOT",
+      "HLWY",
+      "ALNQT",
+      "HNNU",
+      "DEIOOT",
+      "EHORW",
+      "ENNT",
+      "AEELW",
+      "NRWXY",
+      "DIOTY",
+      "OORT",
+      "DEMNOU",
+      "NO"
+     ],
+     "mask": [
+      "....#....#...#",
+      "...#...#.....#",
+      "....#...#....#",
+      ".......#...#..",
+      "..#.......#..#",
+      "..#...#....#..",
+      ".#############"
+     ]
+    }
+   ],
+   "hash": "ed6b6276c8d343b2e41fd725cc018d2caf67a7add6be55bca3f55298964f1062",
+   "partials": {},
+   "hints": [
+    "The columns say which letters, but not in what order. Can the shape of the grid help?",
+    "Start with the short words; a sentence will emerge."
+   ],
+   "length": 7
+  },
+  {
+   "id": 4,
+   "title": "Rubedo",
+   "flavor": "All the right letters, all in the right words, none in the right places.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "THSI",
+      "EGAP",
+      "HSA",
+      "ETPK",
+      "STI",
+      "SECETR",
+      "FRO",
+      "A",
+      "REVY",
+      "GLNO",
+      "EIMT",
+      "NDA",
+      "TTHA",
+      "REETCS",
+      "SI",
+      "INOHPEX"
+     ],
+     "inline": true,
+     "tray": "word"
+    }
+   ],
+   "hash": "9de08466afdc6f25baed7b0c2ea80cd376cb0e3d2d1f983445d343cfc9aefb88",
+   "partials": {},
+   "hints": [
+    "Every word here has exactly the right letters. Are they in the right order?",
+    "Unscramble the words; the sentence tells you what to submit."
+   ],
+   "length": 7
+  },
+  {
+   "id": 5,
+   "title": "As Above So Below",
+   "flavor": "Same quantities, many radixes. Convert, then count through the alphabet. Start from the end; that's where it started.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "5₁₂",
+      "40₅",
+      "1₅",
+      "D₁₆",
+      "1001₂",
+      "10₁₂",
+      "2₉",
+      "15₁₆",
+      "13₁₆"
+     ],
+     "inline": true
+    }
+   ],
+   "hash": "e149fb16fccaaf104218ed769291575f96bc1fb5379dcf524861d6b8c8c5390f",
+   "partials": {
+    "d4d1de8772f7acb90eb35ff347bb6b86bf93a8ca5ad97737cca8dd759e90a60a": "You've decoded it, but it's not finished. One more layer."
+   },
+   "hints": [
+    "What is the little number telling you about how the big one was written?",
+    "Convert each one to ordinary base ten. Whatever you get may still need one more twist."
+   ],
+   "length": 9
+  }
+ ],
+ "meta": {
+  "title": "Meta: The Great Work",
+  "flavor": "Tonight's seating chart. Every seat is one letter wide.",
+  "blocks": [
+   {
+    "type": "list",
+    "items": [
+     "Row 2, seat 4",
+     "Row 3, seat 1",
+     "Row 1, seat 5",
+     "Row 5, seat 7",
+     "Row 1, seat 6",
+     "Row 4, seat 4",
+     "Row 3, seat 4"
+    ],
+    "ordered": true
+   }
+  ],
+  "length": 7,
+  "hash": "6fa61a7f2661f3849c7a9cce26d7affbf00cb7aeb47f1c359590482332bdbe5f",
+  "hints": [
+   "Every entry has two numbers. What in this round is numbered, and what could the second number count?",
+   "The first number picks a puzzle; the second picks a letter inside its answer."
+  ]
+ },
+ "described": true
+}

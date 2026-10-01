@@ -1,0 +1,372 @@
+{
+ "date": "2026-10-01",
+ "difficulty": "hard",
+ "salt": "2026-10-01",
+ "number": 5,
+ "round": "The Great Work",
+ "intro": "The alchemist's notebook was written so that only a fellow adept could read it, its pages curling at the edges like old skin, each one a different recipe, each recipe a lie with one true ingredient. The adepts gathered in the laboratory long after midnight, murmuring over porcelain mortars and brass alembics, distrusting every word on every page yet trusting the ones written in pencil, the ones left smudged as if someone had pressed too hard and then rubbed it out. They kept their own ledgers in the margins, each habit more peculiar than the last, for no two hands seemed to hold the quill the same way twice. One adept always drew a single vertical line beside every entry that felt certain, another traced the spine of the notebook with a fingertip whenever the air turned cold, and by dawn the lines had grown so long and straight that they seemed less like marks and more like the grooves of a key.",
+ "echo": "Lead into gold was always the goal; the change itself was the thing.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Aqua Regia",
+   "flavor": "Three letters to a strip, and a note of how long each word was.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "ADY",
+      "ANR",
+      "EAD",
+      "ERW",
+      "FOU",
+      "HEA",
+      "HIC",
+      "HIS",
+      "IFY",
+      "LRE",
+      "NCE",
+      "NDT",
+      "NSW",
+      "NTE",
+      "NYO",
+      "OUC",
+      "SSE",
+      "SUN",
+      "THE",
+      "THI",
+      "UHA",
+      "VEA"
+     ],
+     "inline": true,
+     "tiles": true
+    },
+    {
+     "type": "prose",
+     "text": "Word lengths: (2 3 3 4 4 8 4 3 4 7 5 3 6 5 2 3)"
+    }
+   ],
+   "hash": "e2677c66d6ed8c88346206d26501dfc3371e525c306329e51fb16ec112a331e9",
+   "partials": {},
+   "hints": [
+    "The pieces are all here, just shuffled. What order would make sense of them?"
+   ]
+  },
+  {
+   "id": 2,
+   "title": "Ouroboros",
+   "flavor": "A sentence that came loose from its lines.",
+   "blocks": [
+    {
+     "type": "dropquote",
+     "cols": [
+      "EMPRT",
+      "EHTT",
+      "AI",
+      "AIIS",
+      "NSTV",
+      "DEPS",
+      "ARS",
+      "GSTUY",
+      "BEEH",
+      "ACLL",
+      "HIORT",
+      "AEMN",
+      "AGSST",
+      "ET",
+      "CEFKT",
+      "EIOR"
+     ],
+     "mask": [
+      "....#....#...#..",
+      "..#...#......#..",
+      ".#.#....#....#..",
+      "..#...#....#....",
+      "..#..#.........#"
+     ]
+    }
+   ],
+   "hash": "97604c8397ad7c54a88491a317c33ce546ccdea2c16fc2841d5d12234fb8b232",
+   "partials": {},
+   "hints": [
+    "The columns say which letters, but not in what order. Can the shape of the grid help?"
+   ]
+  },
+  {
+   "id": 3,
+   "title": "Emerald Tablet",
+   "flavor": "It never travels in a straight line, and neither does the truth.",
+   "blocks": [
+    {
+     "type": "board",
+     "rows": [
+      "EROTSGLP",
+      "KSFSOPJD",
+      "UTWCJZDO",
+      "MAANUEIN",
+      "ITLQCZOZ",
+      "HZELDSNJ",
+      "VQMMRUKR",
+      "KOYVAUWC"
+     ]
+    },
+    {
+     "type": "prose",
+     "text": "The knight sets out from c4: Na3 Nb1 Nd2 Nf1 Ng3 Nh1 Nf2 Nd3 Ne5 Nd7."
+    }
+   ],
+   "hash": "bd09babb204ee745a21d8fa7d568d10091f6c81f6814b3b0bf4c0287cbc72f2a",
+   "partials": {},
+   "hints": [
+    "Which piece would take a route like that? Where does it stop each time?"
+   ]
+  },
+  {
+   "id": 4,
+   "title": "Albedo",
+   "flavor": "Small numbers, none above sixty-three. What matters is what's raised.",
+   "blocks": [
+    {
+     "type": "numbers",
+     "items": [
+      9,
+      1,
+      37,
+      7,
+      25,
+      23,
+      21,
+      29
+     ]
+    }
+   ],
+   "hash": "e0de0eb21f074b5640b25f81d8bf468a9b00ef0d7ec3692fd3e59da95ce47630",
+   "partials": {},
+   "hints": [
+    "Each item comes down to six yes-or-no choices. Is there an alphabet built from exactly that?"
+   ]
+  },
+  {
+   "id": 5,
+   "title": "The Green Lion",
+   "flavor": "Every part here resists a little, and never more than twenty-six. Whoever transcribed it held the alphabet up to a mirror.",
+   "blocks": [
+    {
+     "type": "resistors",
+     "items": [
+      [
+       "brown",
+       "black",
+       "black",
+       "gold"
+      ],
+      [
+       "black",
+       "blue",
+       "black",
+       "gold"
+      ],
+      [
+       "brown",
+       "grey",
+       "black",
+       "gold"
+      ],
+      [
+       "red",
+       "yellow",
+       "black",
+       "gold"
+      ],
+      [
+       "brown",
+       "blue",
+       "black",
+       "gold"
+      ],
+      [
+       "black",
+       "grey",
+       "black",
+       "gold"
+      ],
+      [
+       "brown",
+       "grey",
+       "black",
+       "gold"
+      ],
+      [
+       "brown",
+       "green",
+       "black",
+       "gold"
+      ],
+      [
+       "black",
+       "green",
+       "black",
+       "gold"
+      ],
+      [
+       "red",
+       "red",
+       "black",
+       "gold"
+      ],
+      [
+       "black",
+       "white",
+       "black",
+       "gold"
+      ]
+     ]
+    }
+   ],
+   "hash": "c3cc2badbd154a51a81a729bc2fb256c1c430cf30f77473b1c4a62ea983c05f5",
+   "partials": {
+    "7f59a5f7d393cbbd31b13ec8e1331a6bcea26a39a3471216ad1a81d8e85fc913": "You've decoded it, but it's not finished. One more layer."
+   },
+   "hints": [
+    "Where would you see stripes like these, and what do engineers read them as?"
+   ]
+  },
+  {
+   "id": 6,
+   "title": "Calcination",
+   "flavor": "The typist's hands were fine. Their aim was not. Unlucky for some: the letters were all nudged by the same unlucky amount.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "OVXXEW",
+     "big": true,
+     "shift": -1
+    }
+   ],
+   "hash": "ff006d6b82965d6bfc5ea0277c7a1e1d39167bcffb40fda129e98de951786443",
+   "partials": {
+    "04a724a37ec6167bee81ce7a88673ee2d3aa2862acb984d326f034c730168a84": "You've decoded it, but it's not finished. One more layer."
+   },
+   "hints": [
+    "Try typing this. Where are your fingers?"
+   ]
+  },
+  {
+   "id": 7,
+   "title": "The Red King",
+   "flavor": "A paint chart for a room nobody will ever decorate.",
+   "blocks": [
+    {
+     "type": "swatches",
+     "items": [
+      "#564954",
+      "#52494F",
+      "#4C2020"
+     ]
+    }
+   ],
+   "hash": "d260235eb8763a0b390e197f9aa0f7f3d8f18d59be89bff2726e875d7f12126e",
+   "partials": {},
+   "hints": [
+    "What else could a six-digit colour code be, two digits at a time?"
+   ]
+  },
+  {
+   "id": 8,
+   "title": "Nigredo",
+   "flavor": "Somewhere between the lab and the server room, four became two, and two became three.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "011110 100010 100101 100011"
+    }
+   ],
+   "hash": "eb77300f19b81ec1cb1c8dd3097b11816a6df21b9a20ba0660c2234506aab94f",
+   "partials": {},
+   "hints": [
+    "How many different things can a pair of bits say? Does that number turn up anywhere in biology?"
+   ]
+  },
+  {
+   "id": 9,
+   "title": "As Above So Below",
+   "flavor": "The spy always carried a novel. This page will have to do.",
+   "blocks": [
+    {
+     "type": "prose",
+     "text": "The alchemist's notebook was written so that only a fellow adept could read it. Every page is a different recipe, and every recipe is a lie with one true ingredient.",
+     "paper": true
+    },
+    {
+     "type": "list",
+     "items": [
+      "21.1",
+      "24.2",
+      "1.2",
+      "5.6",
+      "17.2"
+     ],
+     "inline": true
+    }
+   ],
+   "hash": "c8e9ff2cce0fb1e6faaa93154af5b9f64c20c237172ca071b35dedf92a2862e9",
+   "partials": {},
+   "hints": [
+    "Pairs of numbers, and a page of text. How might one point into the other?"
+   ]
+  }
+ ],
+ "meta": {
+  "title": "Meta: The Great Work",
+  "flavor": "Everything in the laboratory has a place, and every place is exactly the right size.",
+  "blocks": [
+   {
+    "type": "fitgrid",
+    "rows": [
+     {
+      "len": 9,
+      "shade": 7
+     },
+     {
+      "len": 6,
+      "shade": 5
+     },
+     {
+      "len": 4,
+      "shade": 2
+     },
+     {
+      "len": 8,
+      "shade": 7
+     },
+     {
+      "len": 5,
+      "shade": 4
+     },
+     {
+      "len": 10,
+      "shade": 2
+     },
+     {
+      "len": 3,
+      "shade": 1
+     },
+     {
+      "len": 7,
+      "shade": 2
+     },
+     {
+      "len": 11,
+      "shade": 9
+     }
+    ]
+   }
+  ],
+  "length": 9,
+  "hash": "439168330f8723839b1dee9e726f247b7fdfeae1abac78b5449dfc627ff7a0d5",
+  "hints": [
+   "The grid's rows come in particular sizes. What else do you have that comes in particular sizes?"
+  ]
+ },
+ "described": true
+}

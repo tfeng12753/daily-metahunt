@@ -1,0 +1,73 @@
+{
+ "date": "2026-09-30",
+ "number": 4,
+ "difficulty": "medium",
+ "final": "CULPRIT",
+ "metaType": "stowaway",
+ "explain": "Each feeder decodes to its answer plus one inserted letter. The inserted letters, in puzzle order, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Elementary",
+   "answer": "PORTRAIT",
+   "mechanism": "Resistor colour code (written)",
+   "transform": null,
+   "encoded": "PORTRCAIT",
+   "mutated": "PORTRCAIT"
+  },
+  {
+   "id": 2,
+   "title": "Five Orange Pips",
+   "answer": "SCOTLANDYARD",
+   "mechanism": "Word search leftovers",
+   "transform": null,
+   "encoded": "SCOTLANDYUARD",
+   "mutated": "SCOTLANDYUARD"
+  },
+  {
+   "id": 3,
+   "title": "The Final Problem",
+   "answer": "CONSERVATORY",
+   "mechanism": "Rail fence (cluephrase)",
+   "transform": null,
+   "encoded": "CONSERVLATORY",
+   "mutated": "CONSERVLATORY"
+  },
+  {
+   "id": 4,
+   "title": "The Speckled Band",
+   "answer": "LESTRADE",
+   "mechanism": "Missing letters",
+   "transform": null,
+   "encoded": "LESTPRADE",
+   "mutated": "LESTPRADE"
+  },
+  {
+   "id": 5,
+   "title": "Dancing Men",
+   "answer": "MORIARTY",
+   "mechanism": "Punched tape",
+   "transform": null,
+   "encoded": "MORIARTYR",
+   "mutated": "MORIARTYR"
+  },
+  {
+   "id": 6,
+   "title": "The Dog In The Night",
+   "answer": "VIOLIN",
+   "mechanism": "Keyboard shift",
+   "transform": "Reversal",
+   "encoded": "INILOIV",
+   "mutated": "VIOLINI"
+  },
+  {
+   "id": 7,
+   "title": "The Empty House",
+   "answer": "MAGNIFIER",
+   "mechanism": "Shredded sentence",
+   "transform": null,
+   "encoded": "MAGNIFTIER",
+   "mutated": "MAGNIFTIER"
+  }
+ ]
+}

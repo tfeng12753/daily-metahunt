@@ -1,0 +1,55 @@
+{
+ "date": "2026-09-30",
+ "number": 4,
+ "difficulty": "easy",
+ "final": "ALIBI",
+ "metaType": "logbook",
+ "explain": "Each entry is (puzzle number, letter number): index into that puzzle's answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Elementary",
+   "answer": "TELEGRAM",
+   "mechanism": "Knight's path",
+   "transform": null,
+   "encoded": "TELEGRAM",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "The Empty House",
+   "answer": "MAGNIFIER",
+   "mechanism": "Rail fence (cluephrase)",
+   "transform": null,
+   "encoded": "MAGNIFIER",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "The Speckled Band",
+   "answer": "SNUFFBOX",
+   "mechanism": "Letter sudoku",
+   "transform": null,
+   "encoded": "SNUFFBOX",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Dancing Men",
+   "answer": "FINGERPRINT",
+   "mechanism": "Anagrams with an extra letter",
+   "transform": null,
+   "encoded": "FINGERPRINT",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Three Pipe Problem",
+   "answer": "WITNESS",
+   "mechanism": "Missing letters",
+   "transform": null,
+   "encoded": "WITNESS",
+   "mutated": null
+  }
+ ]
+}

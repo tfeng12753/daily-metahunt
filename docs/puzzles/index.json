@@ -1,5 +1,5 @@
 {
- "latest": "2026-09-30",
+ "latest": "2026-10-01",
  "puzzles": [
   {
    "date": "2026-09-27",
@@ -42,6 +42,18 @@
     "hard": 6,
     "medium": 7,
     "easy": 5
+   },
+   "medium": true,
+   "easy": true
+  },
+  {
+   "date": "2026-10-01",
+   "number": 5,
+   "round": "The Great Work",
+   "count": {
+    "hard": 9,
+    "medium": 5,
+    "easy": 6
    },
    "medium": true,
    "easy": true

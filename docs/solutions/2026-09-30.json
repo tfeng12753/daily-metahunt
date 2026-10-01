@@ -1,0 +1,64 @@
+{
+ "date": "2026-09-30",
+ "number": 4,
+ "difficulty": "hard",
+ "final": "DEDUCE",
+ "metaType": "stowaway",
+ "explain": "Each feeder decodes to its answer plus one inserted letter. The inserted letters, in puzzle order, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "The Reichenbach Fall",
+   "answer": "DIARY",
+   "mechanism": "Nonogram",
+   "transform": null,
+   "encoded": "DIDARY",
+   "mutated": "DIDARY"
+  },
+  {
+   "id": 2,
+   "title": "Five Orange Pips",
+   "answer": "LANTERN",
+   "mechanism": "Letter sudoku",
+   "transform": "ROT13",
+   "encoded": "YNAGRREA",
+   "mutated": "LANTEERN"
+  },
+  {
+   "id": 3,
+   "title": "A Study In Scarlet",
+   "answer": "CONSERVATORY",
+   "mechanism": "Drop quote",
+   "transform": null,
+   "encoded": "CDONSERVATORY",
+   "mutated": "CDONSERVATORY"
+  },
+  {
+   "id": 4,
+   "title": "The Final Problem",
+   "answer": "CANDLESTICK",
+   "mechanism": "Anagrams with an extra letter",
+   "transform": null,
+   "encoded": "CANDLEUSTICK",
+   "mutated": "CANDLEUSTICK"
+  },
+  {
+   "id": 5,
+   "title": "Seven Per Cent",
+   "answer": "LEDGER",
+   "mechanism": "Template strand",
+   "transform": null,
+   "encoded": "LEDGERC",
+   "mutated": "LEDGERC"
+  },
+  {
+   "id": 6,
+   "title": "The Dog In The Night",
+   "answer": "WITNESS",
+   "mechanism": "Cryptogram (cluephrase)",
+   "transform": null,
+   "encoded": "WITNEESS",
+   "mutated": "WITNEESS"
+  }
+ ]
+}

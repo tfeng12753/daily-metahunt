@@ -1,0 +1,608 @@
+{
+ "date": "2026-10-01",
+ "difficulty": "easy",
+ "salt": "2026-10-01/easy",
+ "number": 5,
+ "round": "The Great Work",
+ "intro": "The alchemist's notebook was written so that only a fellow adept could read it. Every page is a different recipe, and every recipe is a lie with one true ingredient. The master kept no list of which matters were real, only a set of crates in the cellar, each marked with a single word and a row of empty phials beneath. The crates fit her samples exactly, no more and no less, and the labels tell you where each ingredient belongs. Some of the phials are shaded from years of handling, and when the true ingredients are laid out in the order the master's hand fell to them, the darker ones keep the memory of her touch. It is said the final truth lies not in any single recipe, but in the row they make together.",
+ "echo": "One sip and you would live forever, or so the label says.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Aqua Regia",
+   "flavor": "The machine spoke American Standard. Every row is one character.",
+   "blocks": [
+    {
+     "type": "tape",
+     "rows": [
+      [
+       1,
+       0,
+       0,
+       0,
+       1,
+       0,
+       1
+      ],
+      [
+       1,
+       0,
+       0,
+       1,
+       1,
+       0,
+       1
+      ],
+      [
+       1,
+       0,
+       0,
+       0,
+       0,
+       1,
+       0
+      ],
+      [
+       1,
+       0,
+       0,
+       0,
+       1,
+       0,
+       1
+      ],
+      [
+       1,
+       0,
+       1,
+       0,
+       0,
+       1,
+       0
+      ]
+     ]
+    }
+   ],
+   "hash": "926abbba72eb77b2a5e5dbcc852069a33639f757fadf2cfdc918392e43633e61",
+   "partials": {},
+   "hints": [
+    "Teletype tape carried a standard character code.",
+    "Each row of the paper tape is a 7-bit ASCII character (hole = 1, most significant bit on the left)."
+   ],
+   "technique": "Punched tape",
+   "length": 5
+  },
+  {
+   "id": 2,
+   "title": "The Red King",
+   "flavor": "An inventory of the laboratory, tangled up. Whatever is left over when every item is accounted for is yours.",
+   "blocks": [
+    {
+     "type": "caption",
+     "text": "Hidden in the grid: 7 words to do with the laboratory (lengths 4, 4, 6, 6, 7, 7, 7), running in any direction."
+    },
+    {
+     "type": "board",
+     "rows": [
+      "HANPYTT",
+      "TISERRN",
+      "UMASUEE",
+      "MDLTCPP",
+      "SLTLRPR",
+      "IOOEEOE",
+      "BGNYMCS"
+     ],
+     "plain": true,
+     "words": [
+      "BISMUTH",
+      "COPPER",
+      "GOLD",
+      "MERCURY",
+      "PESTLE",
+      "SALT",
+      "SERPENT"
+     ]
+    }
+   ],
+   "hash": "354b3f5da3bff84cd64a137972ba421cc0ed7f6413901f882fa30752f8ce343e",
+   "partials": {},
+   "hints": [
+    "Find the theme words; the letters no word uses are the ones that matter.",
+    "Find every hidden word (any of 8 directions). The unused letters, read left-to-right, top-to-bottom, spell the answer.",
+    "The hidden words are: BISMUTH, COPPER, GOLD, MERCURY, PESTLE, SALT, SERPENT."
+   ],
+   "technique": "Word search leftovers",
+   "length": 8
+  },
+  {
+   "id": 3,
+   "title": "The Green Lion",
+   "flavor": "The typist in the laboratory was consistently, reliably, one step off.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "AUKCWE",
+     "big": true,
+     "shift": -1
+    }
+   ],
+   "hash": "a357d6ed7777f7b0d3415d03c651f8dea82567d488732e57e954d6a50944a99f",
+   "partials": {},
+   "hints": [
+    "Look at the keyboard in front of you, and at each key's neighbours.",
+    "Every letter was typed one key to the side on a QWERTY keyboard."
+   ],
+   "technique": "Keyboard shift",
+   "length": 6
+  },
+  {
+   "id": 4,
+   "title": "As Above So Below",
+   "flavor": "Paint by numbers. The picture is worth exactly one word.",
+   "blocks": [
+    {
+     "type": "nonogram",
+     "rows": [
+      [
+       3,
+       1,
+       1,
+       4,
+       3,
+       4,
+       3,
+       4,
+       3,
+       4
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       4,
+       1,
+       1,
+       4,
+       1,
+       1,
+       4,
+       1,
+       1,
+       3
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       3,
+       3,
+       1,
+       1,
+       3,
+       4,
+       3,
+       1,
+       1,
+       3,
+       4
+      ]
+     ],
+     "cols": [
+      [
+       3
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       3
+      ],
+      [],
+      [
+       4
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       4
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       3
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       3
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       3
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       3
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       3
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       3
+      ],
+      [],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "givens": [
+      [
+       1,
+       33,
+       0
+      ],
+      [
+       0,
+       48,
+       0
+      ],
+      [
+       0,
+       46,
+       0
+      ],
+      [
+       3,
+       33,
+       0
+      ],
+      [
+       4,
+       19,
+       1
+      ],
+      [
+       0,
+       3,
+       1
+      ],
+      [
+       4,
+       10,
+       0
+      ],
+      [
+       3,
+       42,
+       1
+      ],
+      [
+       4,
+       48,
+       1
+      ],
+      [
+       3,
+       22,
+       1
+      ],
+      [
+       3,
+       4,
+       1
+      ]
+     ]
+    }
+   ],
+   "hash": "7a83f2e51a4a141379f9d98d5d100f836f71a22c336b5ddf862f71f0af1d434f",
+   "partials": {},
+   "hints": [
+    "Paint by numbers. The picture is written, not drawn.",
+    "A nonogram (paint-by-numbers). The filled picture is the answer written in 5×5 block letters."
+   ],
+   "technique": "Nonogram",
+   "length": 9
+  },
+  {
+   "id": 5,
+   "title": "Solve Et Coagula",
+   "flavor": "Three letters to a strip. The strips are in order; the sentence isn't.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "AYN",
+      "DMO",
+      "EDO",
+      "ENE",
+      "ENI",
+      "HEW",
+      "LDO",
+      "NE",
+      "NEY",
+      "ONT",
+      "ORD",
+      "OTH",
+      "OUM",
+      "OWW",
+      "PHO",
+      "RIT",
+      "TLY",
+      "UIE",
+      "VEQ",
+      "WEL",
+      "WNT",
+      "XAN",
+      "XTO"
+     ],
+     "inline": true,
+     "tiles": true
+    },
+    {
+     "type": "prose",
+     "text": "Word lengths: (4 4 3 3 3 5 4 3 4 7 3 4 7 2 2 3 4 3)"
+    }
+   ],
+   "hash": "8e40703060dfc235a8c88d74ad0dec61a3f8c60bead9cde2adb700daccf21616",
+   "partials": {},
+   "hints": [
+    "Use the word lengths to rebuild the sentence.",
+    "The sentence was cut into three-letter fragments (spaces removed) and alphabetised. Reassemble it using the word lengths; it tells you the answer."
+   ],
+   "technique": "Shredded sentence",
+   "length": 7
+  },
+  {
+   "id": 6,
+   "title": "Emerald Tablet",
+   "flavor": "Somebody shook the sentence and all the letters fell to the bottom of their columns.",
+   "blocks": [
+    {
+     "type": "dropquote",
+     "cols": [
+      "EEGINOS",
+      "DEOORRS",
+      "BDT",
+      "AJOT",
+      "DHNQTU",
+      "EHSUYY",
+      "IIOT",
+      "CENPS",
+      "EKORX",
+      "FINPS",
+      "AEEITZ",
+      "CELOR",
+      "TVW"
+     ],
+     "mask": [
+      "......#......",
+      "..#......#..#",
+      "...#....#...#",
+      "..#...#.....#",
+      "..#....#...#.",
+      "...#.........",
+      "..###########"
+     ]
+    }
+   ],
+   "hash": "68a6ccfdb177870d4041096eaecf695bb16475d6d2126a910ab368f9ce70d283",
+   "partials": {},
+   "hints": [
+    "Start with the short words; a sentence will emerge.",
+    "A drop quote: each column's letters (shown alphabetised above it) drop into that column of the grid below. Black squares are spaces; words can wrap between rows. The sentence tells you the answer."
+   ],
+   "technique": "Drop quote",
+   "length": 11
+  }
+ ],
+ "meta": {
+  "title": "Meta: The Great Work",
+  "flavor": "Pigeonholes, each cut to fit one thing only.",
+  "blocks": [
+   {
+    "type": "fitgrid",
+    "rows": [
+     {
+      "len": 5,
+      "shade": 3
+     },
+     {
+      "len": 11,
+      "shade": 7
+     },
+     {
+      "len": 8,
+      "shade": 3
+     },
+     {
+      "len": 7,
+      "shade": 6
+     },
+     {
+      "len": 6,
+      "shade": 1
+     },
+     {
+      "len": 9,
+      "shade": 6
+     }
+    ]
+   }
+  ],
+  "length": 6,
+  "hash": "2b662988856a540e5548a0face8576db078ca1b468294e640b9aede969e0e540",
+  "hints": [
+   "Each answer fits exactly one row; then look at the shaded squares.",
+   "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer."
+  ]
+ },
+ "described": true
+}
