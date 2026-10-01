@@ -17,18 +17,22 @@ titles and shape of the data are the only clues.
   to the final answer. It shouldn't give the answer away, but it clicks once
   you've solved it.
 - **Three levels.** Hard gives you nothing but oblique flavour: it alludes and never explains.
-  Medium shows answer lengths and more direct flavour, but doesn't name techniques, only
+  Medium keeps the oblique flavour but shows answer lengths, doesn't name techniques, only
   rarely adds a hidden layer, and uses the gentler metas (fit-in, title diagonal, logbook,
   stowaways). Easy uses 4–6 feeders, no hidden layers, names each puzzle's technique and
   shows answer lengths. Each level has its own final word.
-- **Tiered hints**, for feeders and the meta alike. A *nudge* asks a question or points at
-  a kind of system; a *pointer* names the family of trick; the *method* spells it out.
-  Hard offers the nudge, Medium the nudge then the pointer, Easy the pointer then the
-  method. The meta's explanation is no longer printed up front, even on Easy. Word
+- **Tiered hints**, for feeders and the meta alike, on a ladder where each rung says more
+  than the one before: story → flavour → *nudge* (names the kind of system, or the
+  observation that unlocks it) → *pointer* (names the trick and the step) → *method* (spells
+  it out) → *worked start* (the first letter you should be getting). Hard offers the nudge,
+  Medium the nudge then the pointer. Easy's flavour and technique label already say as much
+  as a pointer, so its hints are the method and then the worked start. `selftest.py` fails
+  if a first hint mostly repeats its own flavour. The meta's explanation is no longer
+  printed up front, even on Easy. Word
   searches don't print their word list: a category stands in for it (with the count on
-  Medium, and lengths on Easy), and the last hint reveals the words.
+  Medium, and lengths on Easy), and a hint reveals the words.
 - **Feeders**, each built with a different mechanism, and sometimes with a
-  second layer (Atbash, reversal or ROT13) hinted only in the flavour:
+  second layer (Atbash, reversal or ROT13) hinted in the flavour, obliquely on Hard:
 
   | | | |
   |---|---|---|
@@ -130,7 +134,8 @@ build and is never published.
 If the `IFM_API_KEY` Actions secret is set, IFM's K2 Horizon (`api.ifm.ai`,
 OpenAI-compatible) writes each new round's opening story: a longer paragraph in
 the voice of the theme that also hints at how the meta works. The hint is faint
-on Hard, noticeable on Medium and fairly clear on Easy. The model is told how
+on Hard, light on Medium and noticeable on Easy, and the model is given the meta's
+first hint as a ceiling the story must stay below. The model is told how
 the meta works but never sees it printed; a description is rejected (and retried,
 then the template kept) if it mentions an answer, describes what a solved grid
 looks like, falls outside 250–1200 characters, or, on Medium and Hard, names a

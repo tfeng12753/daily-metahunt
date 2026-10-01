@@ -1,138 +1,145 @@
 """Tiered hints.
 
-Every mechanism has three levels of help:
+Every puzzle climbs one ladder, and each rung must say more than the one before:
 
-- nudge:   an oblique question. It points at a kind of system or asks whether
-           there's a pattern, and never says what to do.
-- pointer: names the family of the trick without spelling out the steps.
+    flavour  ->  tier 1  ->  tier 2  ->  tier 3
+
+- flavour: on the page. Oblique on Hard and Medium; on Easy it is direct and
+           the technique is named beside it.
+- nudge:   names the kind of system, or the observation that unlocks it, in a
+           way the oblique flavour does not. Never just rephrases the flavour.
+- pointer: names the trick and the step to take with it.
 - method:  the full explanation (the mechanism's own `hint`).
+- first:   a worked start: the first letter you should be getting. Easy only;
+           it puts one letter of the answer in the page, which is accepted
+           there because the round is for beginners.
 
-Which tiers a round offers depends on its level (see TIERS). Nudges and
-pointers are written to fit every visual variant of a mechanism.
+Easy already shows the technique and a direct flavour, which together say
+as much as a pointer, so its hints start at the method.
 """
 
 TIERS = {
     "hard": ("nudge",),
     "medium": ("nudge", "pointer"),
-    "easy": ("pointer", "method"),
+    "easy": ("method", "first"),
 }
 
 FEEDER = {
     "dna_binary": (
-        "How many different things can a pair of bits say? Does that number turn up anywhere in biology?",
-        "Four symbols, read three at a time: the way a cell reads a gene.",
+        "How many different things can a pair of bits say? Four is a very biological number.",
+        "Each pair of bits is a DNA base; three bases make a codon, and every codon is an amino acid with a one-letter code.",
     ),
     "dna_template": (
-        "Is this the strand a cell would actually read? And which end would it start from?",
-        "It's DNA, but the partner strand, and backwards. Genes are read three bases at a time.",
+        "This is DNA, but not the strand a cell would read. What is its partner, and which end does reading start from?",
+        "Complement it, reverse it, then translate three bases at a time into amino-acid letters.",
     ),
     "morse": (
-        "Only two kinds of mark, in groups of different lengths. Where have you heard a rhythm like that?",
-        "Think of the telegraph: short, long, and the gaps between.",
+        "Only two kinds of mark, in groups of one to four. Which old alphabet is built from exactly that?",
+        "Morse code: one mark is a dot, the other a dash. Try it both ways round.",
     ),
     "semaphore": (
-        "What if each of these were a person holding their arms out at particular angles?",
-        "Sailors once spelled messages with two hand-held flags.",
+        "Imagine each of these as a person holding two flags out at arm's length. Sailors had an alphabet for that.",
+        "Flag semaphore: the two hands are the two arms, and each pair of angles is a letter.",
     ),
     "braille": (
-        "Each item comes down to six yes-or-no choices. Is there an alphabet built from exactly that?",
-        "It's an alphabet you read with your fingertips.",
+        "Write each number in binary. Six yes-or-no choices: is there an alphabet built from exactly that?",
+        "Braille: each bit is one of the six dots (1, 2, 4 down the left column; 8, 16, 32 down the right).",
     ),
     "elements": (
-        "Everything listed here has a fixed place in a famous line-up. Where does each one stand?",
-        "The periodic table, counted from the top.",
+        "Everything here has a number in a famous chemical line-up. What number does each one have?",
+        "Atomic numbers, then count through the alphabet (hydrogen = 1 = A).",
     ),
     "dtmf": (
-        "Have you ever listened to the sounds a phone makes while you dial?",
-        "Old phone keypads: each key has a few letters, and you pressed it more times to move along.",
+        "Two frequencies at once is the sound of a phone key being pressed. What letters did those keys carry?",
+        "Old phone keypads: find each key, then press it the number of times shown to move along its letters.",
     ),
     "vigenere": (
-        "Is there anything on this page, besides the puzzle, made of letters you could borrow?",
-        "A repeating-key cipher, and the key is in plain view.",
+        "A cipher with a word for a key. Which famous one works like that, and what word on this page could open it?",
+        "Vigenère, keyed with this puzzle's own title.",
     ),
     "atbash_nato": (
-        "These words have an obvious reading. Is that the whole story, or is the alphabet facing the wrong way?",
-        "Radio call signs, then turn the alphabet end to end.",
+        "Each word stands for a letter, the way radio operators spell. Do those letters read? If not, try the alphabet backwards.",
+        "Take the NATO call signs' initials, then swap each letter for its mirror: A for Z, B for Y.",
     ),
     "tapcode": (
-        "How would two people talk through a wall with nothing but their knuckles?",
-        "Prisoners used a small square grid: knock the row, then the column.",
+        "Always two numbers, never more than five. How would two prisoners spell through a wall with a 5×5 grid?",
+        "Tap code: the first count is the row, the second the column, in a 5×5 alphabet with no K.",
     ),
     "keyboard": (
-        "Try typing this. Where are your fingers?",
-        "Look at the keyboard in front of you, and at each key's neighbours.",
+        "Every letter is close to the right one. Close on what? Look down at your hands.",
+        "QWERTY: every letter was typed one key to the side. Try shifting each one back, both directions.",
     ),
     "swatches": (
-        "What else could a six-digit colour code be, two digits at a time?",
-        "Computers have a standard number for every character.",
+        "Split each colour code into three pairs of hex digits. What else is a two-digit hex number?",
+        "Each pair of hex digits is an ASCII code: three characters per colour.",
     ),
     "resistors": (
-        "Where would you see stripes like these, and what do engineers read them as?",
-        "Each colour stands for a digit.",
+        "Engineers read stripes like these as numbers. What number does each part give, and what is a number up to 26?",
+        "Resistor colour code: the first two bands are two digits; that number is a letter position.",
     ),
     "pigpen": (
-        "Picture the alphabet written into a couple of simple grids. What shape would each letter's cell be?",
-        "A very old cipher associated with the Freemasons.",
+        "Picture the alphabet written into a couple of #-grids and X-grids. Which cell would each shape be?",
+        "Pigpen cipher: the shape of each cell, and whether it has a dot, picks the letter.",
     ),
     "tape": (
         "Seven positions a row, each punched or not. What were seven bits once enough for?",
-        "Teletype tape carried a standard character code.",
+        "Seven-bit ASCII: a hole is 1, the leftmost hole is the highest bit.",
     ),
     "primes_roman": (
-        "Once you read these numbers, what do they all have in common?",
-        "Every one is prime. Where does each sit in the list of primes?",
+        "Read the numerals. They're all prime. Is there a natural way to number the primes?",
+        "Find each prime's place in the list of primes (2 is 1st, 3 is 2nd…), then count through the alphabet.",
     ),
     "bacon": (
-        "Look at how the text is set, not what it says. Are there two kinds of something?",
-        "Two kinds of letter, in groups of five: a cipher named after a philosopher.",
+        "Two kinds of letter, big and small. How many of them would you need to spell twenty-six different things?",
+        "Baconian cipher: groups of five, lowercase = a, uppercase = b; aaaaa is A.",
     ),
     "cryptogram": (
         "Which short words are most common in English? Could any of them be hiding here?",
         "Each symbol always stands for the same letter. The finished sentence tells you what to submit.",
     ),
     "railfence": (
-        "All the right letters seem to be here, just out of order. Could they have been written along some path?",
-        "Written in a zigzag over a few rows, then copied out row by row.",
+        "All the right letters are here, just out of order. Could they have been written along a path that goes up and down?",
+        "Rail fence: written in a zigzag over a few rows, then copied out row by row. Try two to five rows.",
     ),
     "book": (
-        "Pairs of numbers, and a page of text. How might one point into the other?",
-        "The first number finds a word; the second finds a letter in it.",
+        "The first number in each pair never goes past the number of words on the page. What does the second count?",
+        "The first number finds a word on the page; the second finds a letter in it.",
     ),
     "knight": (
-        "Which piece would take a route like that? Where does it stop each time?",
-        "Follow the moves and note the letter on every square it lands on.",
+        "Those are chess moves. Which squares does the piece land on, and what's written there?",
+        "Start on the given square, play each move, and read the letter on every square it lands on.",
     ),
     "flags": (
-        "Where would you see a row of flags like these flying?",
-        "Ships signal with one flag per letter.",
+        "Ships carry a flag for every letter of the alphabet. Do you know them?",
+        "International maritime signal flags: one letter each, left to right.",
     ),
     "bases": (
-        "What is the little number telling you about how the big one was written?",
-        "Convert each one to ordinary base ten.",
+        "The subscript is a base. Once everything is in ordinary decimal, what range are the numbers in?",
+        "Convert each one to base ten; each is a letter position (A = 1).",
     ),
     "wordsearch": (
-        "Once everything that belongs here is accounted for, is anything left unclaimed?",
-        "Find the theme words; the letters no word uses are the ones that matter.",
+        "Once every theme word is found, is anything left unclaimed? Read it in order.",
+        "Find the theme words; the letters no word uses, read row by row, are the answer.",
     ),
     "nonogram": (
-        "The numbers describe runs of something. What picture could they be drawing?",
+        "The numbers describe runs of filled squares. What picture could they be drawing?",
         "Paint by numbers. The picture is written, not drawn.",
     ),
     "anagram_extra": (
-        "Each jumble is almost a familiar word from this round. Almost.",
-        "Rearrange each into a theme word; there's always one letter spare.",
+        "Each jumble is almost a word from this round, but with a letter to spare. Which letter, every time?",
+        "Rearrange each into a theme word; the spare letters, in order, are the answer.",
     ),
     "missing": (
-        "What fills each gap? Is there a pattern in what you filled in?",
-        "Collect the letters you had to supply.",
+        "Every gap takes exactly one letter. Is there a pattern in what you filled in?",
+        "Read the letters you supplied, in order.",
     ),
     "dropquote": (
-        "The columns say which letters, but not in what order. Can the shape of the grid help?",
-        "Start with the short words; a sentence will emerge.",
+        "Black squares are spaces. Which two- and three-letter words fit, using only the letters each column allows?",
+        "Each column's letters drop into that column of the grid; cross them off as you place them. The sentence tells you what to submit.",
     ),
     "fragments": (
-        "The pieces are all here, just shuffled. What order would make sense of them?",
-        "Use the word lengths to rebuild the sentence.",
+        "The strips are alphabetised, not in order. The word lengths say where the breaks fall. Which strip could start the sentence?",
+        "Chain the strips into one string and split it by the word lengths; the sentence tells you what to submit.",
     ),
     "sudoku": (
         "A familiar grid puzzle in unfamiliar clothes. Once it's done, are some squares more important than others?",
@@ -140,48 +147,47 @@ FEEDER = {
     ),
     "trivia": (
         "Every line has a number for an answer. Could those numbers be counting through something else?",
-        "They're all between 1 and 26.",
+        "They're all between 1 and 26: A = 1, B = 2…",
     ),
     "scramble": (
-        "Every word here has exactly the right letters. Are they in the right order?",
-        "Unscramble the words; the sentence tells you what to submit.",
+        "Each word is complete but shuffled. Start with the shortest ones: does a sentence appear?",
+        "Unscramble each word where it stands; the sentence tells you what to submit.",
     ),
     "caesar": (
-        "Could every letter have moved by the same amount?",
-        "A shift cipher. There are only 25 shifts to try.",
+        "Try moving every letter the same distance. How far turns the short words into English?",
+        "A Caesar shift: find the one shift that fixes a short word, then apply it everywhere.",
     ),
 }
 
-TRANSFORM_POINTER = "Whatever you get may still need one more twist."
 
 META = {
     "diagonal": (
-        "Is there a natural order these answers could stand in? And does every answer have to give the same thing?",
-        "Put the answers in alphabetical order, then think of a staircase.",
+        "Is there a natural order these answers could stand in? And does every answer have to give the same letter position?",
+        "Alphabetise the answers; take the 1st letter of the 1st, the 2nd of the 2nd, and so on.",
     ),
     "title_diagonal": (
-        "The puzzles' titles might be more than labels. How would an archivist arrange them?",
-        "Order by title; then read on the slant.",
+        "The puzzles' titles might be more than labels. What order would they put the answers in, and where would you read?",
+        "Sort the puzzles by title, A to Z; take the 1st letter of the 1st answer, the 2nd of the 2nd, and so on.",
     ),
     "mutation": (
-        "Did every answer come out clean the first time? Maybe the mistakes have something in common.",
-        "Each feeder decoded with one wrong letter before you fixed it. Those letters matter.",
+        "Did every answer come out clean the first time? Each had exactly one wrong letter. Did you keep them?",
+        "Take the wrong letter from each feeder, in puzzle order.",
     ),
     "stowaway": (
-        "Did every answer come out the right size the first time? What did you have to throw overboard?",
-        "Each feeder decoded with one letter too many. Those letters matter.",
+        "Did every answer come out the right size the first time? Each had one letter too many. Did you keep them?",
+        "Take the extra letter from each feeder, in puzzle order.",
     ),
     "fitin": (
-        "The grid's rows come in particular sizes. What else do you have that comes in particular sizes?",
-        "Each answer fits exactly one row; then look at the shaded squares.",
+        "The grid's rows are all different lengths. So are your answers.",
+        "Put each answer in the row its length fits; read the shaded squares top to bottom.",
     ),
     "logbook": (
         "Every entry has two numbers. What in this round is numbered, and what could the second number count?",
         "The first number picks a puzzle; the second picks a letter inside its answer.",
     ),
     "initials": (
-        "Who was Blaise, and what would he need to open this? Has anyone signed their work?",
-        "It's a Vigenère cipher, and the key comes from how your answers begin.",
+        "Blaise de Vigenère needed a key to open this. Has every answer signed its work?",
+        "It's a Vigenère cipher, and the key is your answers' first letters, in puzzle order.",
     ),
     "first_letters": (
         "Is there anything the answers share, in the order they came?",
@@ -190,22 +196,31 @@ META = {
 }
 
 
-def tiers(level, nudge, pointer, method):
-    text = {"nudge": nudge, "pointer": pointer, "method": method}
-    return [text[t] for t in TIERS[level]]
+def tiers(level, nudge, pointer, method, first=None):
+    text = {"nudge": nudge, "pointer": pointer, "method": method, "first": first}
+    return [text[t] for t in TIERS[level] if text[t]]
 
 
-def feeder_hints(level, key, method, transform=None, extra=None):
+def first_step(word):
+    return "To check you're on track: the answer begins with %s." % word[0]
+
+
+def feeder_hints(level, key, method, transform=None, extra=None, answer=None):
+    """transform: a TRANSFORMS entry, or None. answer: the feeder's answer (Easy's worked start)."""
     nudge, pointer = FEEDER[key]
     if transform:
-        pointer = pointer + " " + TRANSFORM_POINTER
-        method = method + " Then undo: " + transform + "."
+        nudge = nudge + " And if what you get still isn't a word, reread the flavour text."
+        pointer = pointer + " Then one more layer: " + transform["pointer"]
+        method = method + " Then undo: " + transform["name"] + "."
     out = tiers(level, nudge, pointer, method)
     if extra:
-        out.append(extra)
+        out.append(extra)  # word lists come before the letter check: they're the bigger help
+    if level == "easy" and answer:
+        out.append(first_step(answer))
     return out
 
 
-def meta_hints(level, meta_type, method):
+def meta_hints(level, meta_type, method, final=None):
     nudge, pointer = META[meta_type]
-    return tiers(level, nudge, pointer, method)
+    first = "To check you're on track: the final answer begins with %s." % final[0] if final else None
+    return tiers(level, nudge, pointer, method, first)

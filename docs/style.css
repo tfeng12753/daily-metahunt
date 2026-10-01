@@ -384,3 +384,13 @@ button.chip { cursor: pointer; color: var(--ink); }
 .wheel { margin-bottom: 12px; }
 .wheel-row { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
 .wheel-k { font: 600 14px var(--mono); min-width: 13ch; text-align: center; }
+
+/* ---------- phone masthead: difficulty gets its own full-width row of big tap targets ---------- */
+@media (max-width: 560px) {
+  .masthead .wrap { flex-wrap: wrap; height: auto; padding-top: 8px; padding-bottom: 8px; row-gap: 8px; }
+  .masthead .nav { flex: 1 1 0; min-width: 0; justify-content: flex-end; }
+  .masthead .nav select { flex: 1 1 auto; min-width: 0; max-width: none; }
+  .masthead a.ghost.mine { white-space: nowrap; font-size: 15px; padding: 5px 8px; }
+  .masthead .diff { order: 3; flex: 1 0 100%; display: flex; }
+  .masthead .diff button { flex: 1; min-height: 42px; padding: 6px 4px; font-size: 17px; touch-action: manipulation; }
+}

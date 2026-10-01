@@ -125,9 +125,13 @@ TRANSFORMS = {
         "inv": lambda w: "".join(ALPHA[25 - idx(c)] for c in w),
         "hints": [
             "Something in here has been through the looking glass.",
+            "Whoever copied it out was standing in front of a mirror.",
+        ],
+        "plain_hints": [
             "Alpha and Omega traded places before this was written down.",
             "Whoever transcribed it held the alphabet up to a mirror.",
         ],
+        "pointer": "Turn the alphabet end to end: A for Z, B for Y.",
         "name": "Atbash (A↔Z mirror)",
     },
     "reverse": {
@@ -136,8 +140,12 @@ TRANSFORMS = {
         "hints": [
             "The tape was spooled back onto the wrong reel.",
             "Whatever you find, it was said on the way out, not the way in.",
-            "Start from the end; that's where it started.",
         ],
+        "plain_hints": [
+            "Start from the end; that's where it started.",
+            "It was written down last letter first.",
+        ],
+        "pointer": "Read what you get backwards.",
         "name": "Reversal",
     },
     "rot13": {
@@ -145,9 +153,13 @@ TRANSFORMS = {
         "inv": lambda w: "".join(ALPHA[(idx(c) + 13) % 26] for c in w),
         "hints": [
             "Half a turn of the wheel and you'd have it.",
+            "Unlucky for some, and the same distance either way.",
+        ],
+        "plain_hints": [
             "A baker's dozen steps separate this from the truth, in either direction.",
             "Unlucky for some: the letters were all nudged by the same unlucky amount.",
         ],
+        "pointer": "Shift every letter 13 places (A↔N).",
         "name": "ROT13",
     },
 }
