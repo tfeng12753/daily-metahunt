@@ -119,6 +119,16 @@ creates `docs/puzzles/<today>.json` (Medium and Easy go in `docs/puzzles/medium/
 `docs/puzzles/easy/`) plus yesterday's `docs/solutions/…`,
 commits them, and deploys `docs/` to GitHub Pages.
 
+**On-time release.** GitHub starts scheduled runs late when it's busy (five hours
+has happened). So a second run at 12:07 UTC builds tomorrow's rounds early and
+commits them encrypted to `docs/locked/`. From 00:00 UTC the leaderboard API
+releases that day's key (`/api/unlock`, which refuses any earlier), and the site
+decrypts the round in the browser. When the daily run does start, it publishes
+exactly the same rounds in the clear and removes the locked copies. To turn it on,
+generate a random value (e.g. `openssl rand -hex 32`) and set it as
+`RELEASE_SECRET` in both the repository's Actions secrets and the API service's
+environment on Render. Without it, rounds simply appear when the daily run finishes.
+
 Each day's solution is also written to `generator/sealed/`, encrypted with a
 key derived from `PUZZLE_SECRET`, and decrypted and published the next day.
 That way, changing the generator never loses a solution.

@@ -1373,10 +1373,13 @@
     const entry = index.puzzles.find((x) => x.date === date);
     if (!hasLevel(entry, diff)) diff = "hard"; // early rounds had no easy or medium version
     difficulty = diff;
-    const path = levelPath("puzzles", date, diff);
-    const r = await fetch(path, { cache: "no-cache" });
-    if (!r.ok) { $("#round").textContent = "Puzzle not found"; return; }
-    puzzle = await r.json();
+    const early = unlocked[`${date}/${diff}`];
+    if (early) puzzle = JSON.parse(JSON.stringify(early));
+    else {
+      const r = await fetch(levelPath("puzzles", date, diff), { cache: "no-cache" });
+      if (!r.ok) { $("#round").textContent = "Puzzle not found"; return; }
+      puzzle = await r.json();
+    }
     const st = load(rk());
     const d = new Date(date + "T00:00:00Z");
     $("#eyebrow").textContent = `No. ${puzzle.number} · ${diff !== "hard" ? LEVEL[diff] + " · " : ""}${d.toLocaleDateString(undefined, { weekday: "long", month: "long", day: "numeric", year: "numeric", timeZone: "UTC" })}`;
@@ -1502,6 +1505,55 @@
     show(dates.includes(want) ? want : index.latest, ["easy", "medium"].includes(diff) ? diff : "hard");
   }
 
+  // ---------- early release ----------
+  // Tomorrow's round is committed encrypted ahead of time (docs/locked/). From 00:00 UTC the
+  // leaderboard API hands out its key, so the round opens on time even if the daily build is late.
+  const unlocked = {};
+  const fromHex = (h) => new Uint8Array(h.match(/../g).map((x) => parseInt(x, 16)));
+  async function unlockRound(date, diff) {
+    const box = await (await fetch(levelPath("locked", date, diff), { cache: "no-cache" })).json();
+    const { key } = await api(`/api/unlock?date=${date}&difficulty=${diff}`);
+    const k = fromHex(key);
+    const data = Uint8Array.from(atob(box.data), (c) => c.charCodeAt(0));
+    const enc = new TextEncoder();
+    const blocks = await Promise.all([...Array(Math.ceil(data.length / 32))].map((_, i) => {
+      const tag = enc.encode(":" + i), buf = new Uint8Array(k.length + tag.length);
+      buf.set(k);
+      buf.set(tag, k.length);
+      return crypto.subtle.digest("SHA-256", buf);
+    }));
+    const out = new Uint8Array(data.length);
+    blocks.forEach((b, i) => new Uint8Array(b).forEach((x, j) => { if (i * 32 + j < data.length) out[i * 32 + j] = data[i * 32 + j] ^ x; }));
+    return JSON.parse(new TextDecoder().decode(out));
+  }
+  async function addUpcoming() {
+    const today = new Date().toISOString().slice(0, 10);
+    for (const u of index.upcoming || []) {
+      if (u.date > today || index.puzzles.some((p) => p.date === u.date)) continue;
+      $("#round").textContent = "Unlocking today's round…";
+      $("#intro").textContent = "Waking the server for today's key. This can take up to a minute.";
+      try {
+        const hard = await unlockRound(u.date, "hard");
+        unlocked[`${u.date}/hard`] = hard;
+        const entry = { date: u.date, number: hard.number, round: hard.round, count: { hard: hard.puzzles.length } };
+        for (const l of ["medium", "easy"]) {
+          if (!u.levels.includes(l)) continue;
+          try {
+            const p = await unlockRound(u.date, l);
+            unlocked[`${u.date}/${l}`] = p;
+            entry[l] = true;
+            entry.count[l] = p.puzzles.length;
+          } catch {}
+        }
+        index.puzzles.push(entry);
+        index.latest = u.date;
+      } catch {
+        // Server asleep, or early release not set up: the newest published round is shown instead.
+      }
+      $("#intro").textContent = "";
+    }
+  }
+
   async function init() {
     try {
       index = await (await fetch("puzzles/index.json", { cache: "no-cache" })).json();
@@ -1509,6 +1561,7 @@
       $("#round").textContent = "No puzzles yet";
       return;
     }
+    await addUpcoming();
     const sel = $("#archive");
     [...index.puzzles].reverse().forEach((p) => {
       const o = el("option");

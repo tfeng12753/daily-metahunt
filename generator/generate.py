@@ -11,6 +11,7 @@ public source. Solutions are only written for dates strictly before the
 newest generated puzzle.
 """
 import argparse
+import base64
 import datetime as dt
 import functools
 import hashlib
@@ -601,6 +602,57 @@ def unseal(secret, date, level="hard"):
     return json.loads(bytes(a ^ b for a, b in zip(data, _keystream(secret, key, len(data)))).decode())
 
 
+# --------------------------------------------------------------------------
+# Locked rounds: tomorrow's round, generated early and encrypted
+#
+# GitHub can start the 00:02 UTC run hours late. So a midday run also builds
+# tomorrow's round and commits it encrypted under docs/locked/. The leaderboard
+# API (which holds RELEASE_SECRET) hands out the key from 00:00 UTC on that date,
+# and browsers decrypt the round themselves. When the daily run does get going it
+# publishes the very same round in the clear.
+# --------------------------------------------------------------------------
+
+LOCKED = os.path.join(DOCS, "locked")
+
+
+def release_key(rsecret, salt):
+    return hmac.new(rsecret.encode(), ("release|" + salt).encode(), hashlib.sha256).digest()
+
+
+def _release_stream(key, n):
+    # SHA-256(key || ":" || counter): easy to reproduce with WebCrypto and node:crypto.
+    out, ctr = b"", 0
+    while len(out) < n:
+        out += hashlib.sha256(key + (":%d" % ctr).encode()).digest()
+        ctr += 1
+    return out[:n]
+
+
+def _locked_path(date, level):
+    return os.path.join(LOCKED, *_sub(level), date + ".json")
+
+
+def lock(rsecret, puzzle, level):
+    raw = json.dumps(puzzle, ensure_ascii=False).encode()
+    data = bytes(a ^ b for a, b in zip(raw, _release_stream(release_key(rsecret, puzzle["salt"]), len(raw))))
+    write_json(_locked_path(puzzle["date"], level), {"v": 1, "date": puzzle["date"], "difficulty": level,
+                                                    "data": base64.b64encode(data).decode()})
+
+
+def unlock(rsecret, date, level):
+    path = _locked_path(date, level)
+    if not os.path.exists(path):
+        return None
+    with open(path) as f:
+        box = json.load(f)
+    data = base64.b64decode(box["data"])
+    salt = date if level == "hard" else date + "/" + level
+    try:
+        return json.loads(bytes(a ^ b for a, b in zip(data, _release_stream(release_key(rsecret, salt), len(data)))).decode())
+    except ValueError:  # wrong RELEASE_SECRET
+        return None
+
+
 def write_json(path, obj):
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, "w") as f:
@@ -621,6 +673,7 @@ def main():
         print("warning: PUZZLE_SECRET not set; using an insecure dev secret", file=sys.stderr)
         secret = "dev-secret"
 
+    rsecret = os.environ.get("RELEASE_SECRET")
     end = dt.date.fromisoformat(args.date)
     for level in LEVELS:
         pdir = os.path.join(DOCS, "puzzles", *_sub(level))
@@ -635,14 +688,40 @@ def main():
                     redescribe(secret, path, ds, level)
                 continue
             puzzle, solution = build(secret, ds, level=level)
-            if not args.no_llm:
+            early = unlock(rsecret, ds, level) if rsecret else None
+            if early and early["meta"]["hash"] == puzzle["meta"]["hash"]:
+                puzzle = early  # players may already be solving the locked copy: publish exactly that
+            elif not args.no_llm:
                 theme = next(t for t in THEMES if t["name"] == puzzle["round"])
                 if llm.describe(puzzle, solution, theme, level):
                     puzzle["described"] = True
             write_json(path, puzzle)
             seal(secret, ds, solution, level)
             print("wrote", path, "-", puzzle["round"])
+    if rsecret:
+        lock_ahead(secret, rsecret, end + dt.timedelta(days=1), args.no_llm)
     publish_solutions(secret)
+
+
+def lock_ahead(secret, rsecret, day, no_llm=False):
+    """Build and lock the next day's rounds (once), and drop locked files already published."""
+    ds = day.isoformat()
+    for level in LEVELS:
+        if os.path.exists(_locked_path(ds, level)):
+            continue
+        puzzle, solution = build(secret, ds, level=level)
+        if not no_llm:
+            theme = next(t for t in THEMES if t["name"] == puzzle["round"])
+            if llm.describe(puzzle, solution, theme, level):
+                puzzle["described"] = True
+        lock(rsecret, puzzle, level)
+        seal(secret, ds, solution, level)
+        print("locked", ds, level)
+    for root, _, files in os.walk(LOCKED):
+        for f in files:
+            published = os.path.normpath(os.path.join(DOCS, "puzzles", os.path.relpath(root, LOCKED), f))
+            if f.endswith(".json") and f[:-5] < ds and os.path.exists(published):
+                os.remove(os.path.join(root, f))
 
 
 def redescribe(secret, path, date, level):
@@ -702,7 +781,17 @@ def publish_solutions(secret):
             if ds < dates[-1]:
                 write_json(spath, sol)
                 print("wrote", spath)
-    write_json(os.path.join(pdir, "index.json"), {"latest": dates[-1], "puzzles": index})
+    # Locked rounds still to come: the site unlocks them through the API at 00:00 UTC.
+    upcoming = []
+    if os.path.isdir(LOCKED):
+        for f in sorted(os.listdir(LOCKED)):
+            if f.endswith(".json") and f[:-5] > dates[-1]:
+                ds = f[:-5]
+                upcoming.append({"date": ds, "levels": [l for l in LEVELS if os.path.exists(_locked_path(ds, l))]})
+    out = {"latest": dates[-1], "puzzles": index}
+    if upcoming:
+        out["upcoming"] = upcoming
+    write_json(os.path.join(pdir, "index.json"), out)
 
 
 if __name__ == "__main__":

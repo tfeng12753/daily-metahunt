@@ -7,7 +7,7 @@
 // a solve only counts if the player actually sent the right word. Times are
 // measured from the round's release (00:00 UTC on its date).
 import { createServer } from "node:http";
-import { createHash, randomBytes } from "node:crypto";
+import { createHash, createHmac, randomBytes } from "node:crypto";
 import { readFile } from "node:fs/promises";
 import { extname, join, normalize } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -27,21 +27,49 @@ const LEVELS = ["hard", "medium", "easy"];
 const level = (d) => (LEVELS.includes(d) ? d : "hard");
 const norm = (s) => String(s || "").toUpperCase().replace(/[^A-Z]/g, "");
 
+// ---------- locked rounds ----------
+// Tomorrow's round is committed early, encrypted (generator/generate.py: lock()). From 00:00 UTC
+// on its date this server hands out the key, so the round opens on time even when the daily
+// GitHub run starts late. RELEASE_SECRET must match the GitHub Actions secret of the same name.
+const RELEASE_SECRET = process.env.RELEASE_SECRET || "";
+const releaseTime = (date) => Date.parse(date + "T00:00:00Z");
+const saltOf = (date, difficulty) => (difficulty === "hard" ? date : `${date}/${difficulty}`);
+const releaseKey = (salt) => createHmac("sha256", RELEASE_SECRET).update("release|" + salt).digest();
+function decryptLocked(box, salt) {
+  const data = Buffer.from(box.data, "base64");
+  const key = releaseKey(salt);
+  const out = Buffer.alloc(data.length);
+  for (let i = 0; i < data.length; i += 32) {
+    const block = createHash("sha256").update(Buffer.concat([key, Buffer.from(":" + i / 32)])).digest();
+    for (let j = 0; j < 32 && i + j < data.length; j++) out[i + j] = data[i + j] ^ block[j];
+  }
+  return JSON.parse(out.toString("utf8"));
+}
+
 // ---------- puzzle lookup (local files first, then the live static site) ----------
 const puzzleCache = new Map();
-async function loadRound(date, difficulty) {
-  if (!/^\d{4}-\d{2}-\d{2}$/.test(date) || !LEVELS.includes(difficulty)) return null;
-  const rel = difficulty === "hard" ? `puzzles/${date}.json` : `puzzles/${difficulty}/${date}.json`;
-  const hit = puzzleCache.get(rel);
-  if (hit && Date.now() - hit.at < 10 * 60e3) return hit.round;
-  let round = null;
+async function readJSON(rel) {
   try {
-    round = JSON.parse(await readFile(join(DOCS, rel), "utf8"));
+    return JSON.parse(await readFile(join(DOCS, rel), "utf8"));
   } catch {
     try {
       const r = await fetch(`${STATIC_BASE}/${rel}`);
-      if (r.ok) round = await r.json();
+      if (r.ok) return await r.json();
     } catch {}
+  }
+  return null;
+}
+async function loadRound(date, difficulty) {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(date) || !LEVELS.includes(difficulty)) return null;
+  const sub = difficulty === "hard" ? "" : `${difficulty}/`;
+  const rel = `puzzles/${sub}${date}.json`;
+  const hit = puzzleCache.get(rel);
+  if (hit && Date.now() - hit.at < 10 * 60e3) return hit.round;
+  let round = await readJSON(rel);
+  if (!round && RELEASE_SECRET && Date.now() >= releaseTime(date)) {
+    // Released but not yet published in the clear: read the locked copy.
+    const box = await readJSON(`locked/${sub}${date}.json`);
+    try { if (box) round = decryptLocked(box, saltOf(date, difficulty)); } catch {}
   }
   if (round) puzzleCache.set(rel, { round, at: Date.now() });
   return round;
@@ -85,15 +113,23 @@ async function playerFrom(body) {
   return store.playerByTokenHash(sha(body.token));
 }
 
-const releaseTime = (date) => Date.parse(date + "T00:00:00Z");
-
 // ---------- routes ----------
 async function api(req, res, url) {
   const ip = (req.headers["x-forwarded-for"] || req.socket.remoteAddress || "").split(",")[0].trim();
   if (req.method === "OPTIONS") return send(res, 204, {});
   if (limited("ip:" + ip, 120)) return send(res, 429, { error: "Slow down a little." });
 
-  if (url.pathname === "/api/health") return send(res, 200, { ok: true, store: store.kind });
+  if (url.pathname === "/api/health") return send(res, 200, { ok: true, store: store.kind, release: !!RELEASE_SECRET });
+
+  // The key to a locked round, from 00:00 UTC on its date and never before.
+  if (url.pathname === "/api/unlock" && req.method === "GET") {
+    const date = url.searchParams.get("date") || "";
+    const difficulty = level(url.searchParams.get("difficulty"));
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) return send(res, 400, { error: "Bad date." });
+    if (!RELEASE_SECRET) return send(res, 503, { error: "Early release isn't set up on this server." });
+    if (Date.now() < releaseTime(date)) return send(res, 403, { error: "Not yet.", opensAt: new Date(releaseTime(date)).toISOString() });
+    return send(res, 200, { date, difficulty, key: releaseKey(saltOf(date, difficulty)).toString("hex") });
+  }
 
   if (url.pathname === "/api/players" && req.method === "POST") {
     if (limited("join:" + ip, 5)) return send(res, 429, { error: "Too many sign-ups from here." });

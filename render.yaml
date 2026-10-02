@@ -3,6 +3,8 @@
 #   daily-metahunt-api  leaderboard API (server/index.mjs)
 # Rounds are generated and committed by .github/workflows/daily.yml at 00:02 UTC;
 # each commit redeploys both services, so the API always has the new round.
+# A midday run also commits tomorrow's round encrypted (docs/locked/); the API
+# releases its key at 00:00 UTC, so a late GitHub run no longer delays the round.
 services:
   - type: web
     name: daily-metahunt
@@ -16,6 +18,9 @@ services:
         name: Cache-Control
         value: no-cache
       - path: /solutions/*
+        name: Cache-Control
+        value: no-cache
+      - path: /locked/*
         name: Cache-Control
         value: no-cache
       - path: /*
@@ -38,4 +43,8 @@ services:
       # Postgres connection string (e.g. a free Neon or Supabase database).
       # Without it the API still runs, but scores reset whenever it restarts.
       - key: DATABASE_URL
+        sync: false
+      # Same value as the RELEASE_SECRET GitHub Actions secret. With it, the API hands out the
+      # key to tomorrow's locked round at 00:00 UTC; without it, rounds wait for the daily build.
+      - key: RELEASE_SECRET
         sync: false
