@@ -1,0 +1,364 @@
+{
+ "date": "2026-10-02",
+ "difficulty": "medium",
+ "salt": "2026-10-02/medium",
+ "number": 6,
+ "round": "Isobars",
+ "intro": "The weather station on the summit has been automated for forty years. This morning its printer woke up and produced something that is definitely not a forecast: a sheaf of old-style telegrams, each bearing a single line of weather jargon followed by one stray, clearly out-of-place letter at the bottom margin. The forecasters gathered round, passing the pages down the table like parish notices, one of them remarking that the margins look like a roll call taken in the wet. The station log confirms the machine has only ever printed observations, never prose, yet every sheet is dated today, and none of them predicts rain. One junior observer has begun carefully clipping each odd letter onto a strip of card, saying nothing, her tongue between her teeth. Out of habit, the senior forecaster checked the barometer twice, though it has not moved in decades.",
+ "echo": "Dorothy's house left Kansas in one.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Shipping Forecast",
+   "flavor": "Everything in its place, and nothing twice.",
+   "blocks": [
+    {
+     "type": "sudoku",
+     "size": 9,
+     "rows": [
+      "....A.W..",
+      "...H..VT.",
+      ".E....H..",
+      ".WHF.N...",
+      "A....V.H.",
+      "...R..N..",
+      "..WET....",
+      "HF.V.....",
+      ".....R..."
+     ],
+     "alphabet": "AEFHNRTVW",
+     "marks": [
+      [
+       1,
+       0
+      ],
+      [
+       0,
+       5
+      ],
+      [
+       2,
+       7
+      ],
+      [
+       4,
+       3
+      ],
+      [
+       8,
+       8
+      ],
+      [
+       7,
+       7
+      ],
+      [
+       0,
+       0
+      ],
+      [
+       3,
+       7
+      ],
+      [
+       5,
+       7
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       4,
+       2
+      ],
+      [
+       4,
+       6
+      ]
+     ]
+    }
+   ],
+   "hash": "5f3ccf2a293f453b6444a6cf7b2d4dbe6ebb2fa322991e4fae4d2107999f98bc",
+   "partials": {
+    "187af03afe7945ee6b26b6abc9215d6c37cc92a9d7f27fa74233d05ddccd934c": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "A familiar grid puzzle in unfamiliar clothes. Once it's done, are some squares more important than others?",
+    "Solve it like a sudoku, then read the numbered squares in order."
+   ],
+   "length": 11
+  },
+  {
+   "id": 2,
+   "title": "Eye Of The Storm",
+   "flavor": "The sprocket keeps count; the holes do the talking.",
+   "blocks": [
+    {
+     "type": "tape",
+     "rows": [
+      [
+       1,
+       0,
+       0,
+       1,
+       0,
+       0,
+       0
+      ],
+      [
+       1,
+       0,
+       0,
+       0,
+       1,
+       0,
+       1
+      ],
+      [
+       1,
+       0,
+       0,
+       0,
+       0,
+       0,
+       1
+      ],
+      [
+       1,
+       0,
+       1,
+       0,
+       1,
+       0,
+       0
+      ],
+      [
+       1,
+       0,
+       1,
+       0,
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       0,
+       0,
+       0,
+       0,
+       0,
+       1
+      ],
+      [
+       1,
+       0,
+       1,
+       0,
+       1,
+       1,
+       0
+      ],
+      [
+       1,
+       0,
+       0,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       0,
+       0,
+       0,
+       1,
+       0,
+       1
+      ]
+     ]
+    }
+   ],
+   "hash": "990c43f19f341d184ae19090123cf6182ba1721db34c668b782fb0a62a2fb717",
+   "partials": {
+    "660159d798fdf2de6329c60aaecd94e0e2de84b37685438ed6e87cee1375f1c3": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Seven positions a row, each punched or not. What were seven bits once enough for?",
+    "Seven-bit ASCII: a hole is 1, the leftmost hole is the highest bit."
+   ],
+   "length": 8
+  },
+  {
+   "id": 3,
+   "title": "Veering",
+   "flavor": "Only one page survived. It was the only page anyone needed. Start from the end; that's where it started.",
+   "blocks": [
+    {
+     "type": "prose",
+     "text": "The weather station on the summit has been automated for forty years. This morning its printer woke up and produced something that is definitely not a forecast.",
+     "paper": true
+    },
+    {
+     "type": "list",
+     "items": [
+      "21.1",
+      "6.2",
+      "16.5",
+      "20.2",
+      "9.6",
+      "2.7",
+      "13.1",
+      "12.5"
+     ],
+     "inline": true
+    }
+   ],
+   "hash": "667e00f80b9ffde7842eadd034dce5724e3460fdcbaac8b68b38e08b712fe49b",
+   "partials": {
+    "9feb1e060e46aa5076e42f56c9649a23cd12e04504bc15db7bd698624b9a6c5a": "You've decoded it, but it's not finished. One more layer.",
+    "15efd5538b8e1508aa70c0a62265934d08ef53603d2fe965e940ca6124b903fd": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "The first number in each pair never goes past the number of words on the page. What does the second count? And if what you get still isn't a word, reread the flavour text.",
+    "The first number finds a word on the page; the second finds a letter in it. Then one more layer: Read what you get backwards."
+   ],
+   "length": 7
+  },
+  {
+   "id": 4,
+   "title": "Wind Chill",
+   "flavor": "Everything that belongs is in there somewhere. Some things don't belong.",
+   "blocks": [
+    {
+     "type": "caption",
+     "text": "Hidden in the grid: 10 words to do with the weather station."
+    },
+    {
+     "type": "board",
+     "rows": [
+      "TNIOPWED",
+      "HUMIDITY",
+      "LSNOWHEL",
+      "IFLTGTZL",
+      "ANSUSAEA",
+      "HIOOKEEU",
+      "MRRADARQ",
+      "DFELAGBS"
+     ],
+     "plain": true,
+     "words": [
+      "BREEZE",
+      "DEWPOINT",
+      "DROUGHT",
+      "FROST",
+      "GALE",
+      "HAIL",
+      "HUMIDITY",
+      "MIST",
+      "RADAR",
+      "SQUALL"
+     ]
+    }
+   ],
+   "hash": "93093e64dadc3658d972f56d7e53a11e1497487f728b48f40c5f3ca181655090",
+   "partials": {
+    "e1ae9b7f980f4e996d996b51b934a0364d33b91c15373722f30fe1fdafe9ad46": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Once every theme word is found, is anything left unclaimed? Read it in order.",
+    "Find the theme words; the letters no word uses, read row by row, are the answer.",
+    "The hidden words are: BREEZE, DEWPOINT, DROUGHT, FROST, GALE, HAIL, HUMIDITY, MIST, RADAR, SQUALL."
+   ],
+   "length": 9
+  },
+  {
+   "id": 5,
+   "title": "Inversion",
+   "flavor": "Moths got into the inventory.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "BALLOO_",
+      "HUMID_TY",
+      "JETSTRE_M",
+      "ANE_OMETER",
+      "ISO_AR",
+      "CIRR_S",
+      "FORECA_T"
+     ],
+     "ordered": true,
+     "mono": true
+    }
+   ],
+   "hash": "b55fe2d73f0a0d80c5cbd1748ad21a44acb7ac492c9d7f94bce0fe98acb61b4d",
+   "partials": {
+    "e6fa5e4df738349527554e774e562d30db1e0672ac2471614b15308c06c5866e": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Every gap takes exactly one letter. Is there a pattern in what you filled in?",
+    "Read the letters you supplied, in order."
+   ],
+   "length": 6
+  },
+  {
+   "id": 6,
+   "title": "Squall Line",
+   "flavor": "Everyone moved along by the same number of seats.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "XYLYNI OHZOMDON KXIYXO DY QOD DRSC PKB CY DRO ZBSJO SC TECD YXO GYBN CNVOOD",
+     "wide": true,
+     "solver": "substitution"
+    }
+   ],
+   "hash": "04f02cb9b99e7a6c1476e51d17c96a1a69da7c0acdfbc4190cf33502fcb4b04c",
+   "partials": {
+    "d3b0aad5d63328dc3e1adf95d5f2326cbb3aa7da58a16f6c61404c7aaecb4de3": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Try moving every letter the same distance. How far turns the short words into English?",
+    "A Caesar shift: find the one shift that fixes a short word, then apply it everywhere."
+   ],
+   "length": 5
+  },
+  {
+   "id": 7,
+   "title": "Occluded Front",
+   "flavor": "Walk the fence; don't read it.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "WORNR BLIHC UARSO OSSUG ELZAE RCIAT DETTN WBZOT HIREW GLCEA IODAD TEDOR SRR",
+     "wide": true,
+     "rails": 5
+    }
+   ],
+   "hash": "eb38172b57670cbf33620b5eea6943bdd9c897433f729931e7ee050823536a45",
+   "partials": {
+    "8c2f90da688da34a243c5afa8a5a9cf78b42d8ffba5a75083044b2931bf5e1e2": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "All the right letters are here, just out of order. Could they have been written along a path that goes up and down?",
+    "Rail fence: written in a zigzag over a few rows, then copied out row by row. Try two to five rows."
+   ],
+   "length": 8
+  }
+ ],
+ "meta": {
+  "title": "Meta: Isobars",
+  "flavor": "Everything arrived a little heavier than it left.",
+  "blocks": [],
+  "length": 7,
+  "hash": "6d46af6e3e07c42afda9dae0aac16c7d6b560939b2fdeba12f6772fbed8a0059",
+  "hints": [
+   "Did every answer come out the right size the first time? Each had one letter too many. Did you keep them?",
+   "Take the extra letter from each feeder, in puzzle order."
+  ]
+ },
+ "described": true
+}

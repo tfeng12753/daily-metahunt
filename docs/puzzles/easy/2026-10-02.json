@@ -1,0 +1,455 @@
+{
+ "date": "2026-10-02",
+ "difficulty": "easy",
+ "salt": "2026-10-02/easy",
+ "number": 6,
+ "round": "Isobars",
+ "intro": "The weather station on the summit has been automated for forty years, and this morning its printer woke up and produced something that is definitely not a forecast: a grid, rows of blank squares waiting to be filled, like an old chart with all the ink washed away. The forecasters gathered round, cups of tea in hand, and found that each of their solved notes seemed to belong on its own row, measured just so by the length of the words. They began slipping them in, one by one, and as each answer settled into place, a few squares took on a shade of grey, as if the chart were remembering where the pressure changed. Upper air charts always told the story in the lines and the hollows, the draughtsmen used to say, and so the team leaned in, watching which cells darkened and trusting the order they formed, top to bottom, to speak at last.",
+ "echo": "The winds turn anticlockwise here, and clockwise on the other side of the world.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Veering",
+   "flavor": "Somebody shook the sentence and all the letters fell to the bottom of their columns.",
+   "blocks": [
+    {
+     "type": "dropquote",
+     "cols": [
+      "HMOW",
+      "EENO",
+      "LOTV",
+      "EHLWW",
+      "EO",
+      "DQRW",
+      "DNORU",
+      "EIIN",
+      "EEGTX",
+      "AETT",
+      "LLY",
+      "DEOOY",
+      "NOU",
+      "AEOW",
+      "MNNN",
+      "AD",
+      "TTY"
+     ],
+     "mask": [
+      "....#....#...#...",
+      "#...#.....#....#.",
+      "..#....#....#...#",
+      "....#.......#..#.",
+      ".#...#....#...###"
+     ]
+    }
+   ],
+   "hash": "c7521cf1bda166e2aae8830d4a826250c6e00141d2035b3bbfbc87a14925baec",
+   "partials": {},
+   "hints": [
+    "A drop quote: each column's letters (shown alphabetised above it) drop into that column of the grid below. Black squares are spaces; words can wrap between rows. The sentence tells you the answer.",
+    "To check you're on track: the answer begins with G."
+   ],
+   "technique": "Drop quote",
+   "length": 4
+  },
+  {
+   "id": 2,
+   "title": "Eye Of The Storm",
+   "flavor": "Turn the wheel until the words come back.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "QYFF XIHY SIO GUS HIQ QLCNY XIQH NBY QILX WCLLOM UHX GIPY KOCYNFS IH NI NBY HYRN IHY",
+     "wide": true,
+     "solver": "substitution",
+     "wheel": true
+    }
+   ],
+   "hash": "0a319735d9556522974d8f7ae2d676b4d34583bcbde525a3c13b7b7fbbabf92f",
+   "partials": {},
+   "hints": [
+    "Every letter of the sentence was shifted along the alphabet by the same amount. Find the shift; the sentence tells you the answer.",
+    "To check you're on track: the answer begins with C."
+   ],
+   "technique": "Caesar shift",
+   "length": 6
+  },
+  {
+   "id": 3,
+   "title": "Dew Point",
+   "flavor": "The harbourmaster says the ship is dressed overall, but that's not what the flags are saying.",
+   "blocks": [
+    {
+     "type": "flags",
+     "items": [
+      "H",
+      "U",
+      "M",
+      "I",
+      "D",
+      "I",
+      "T",
+      "Y"
+     ]
+    }
+   ],
+   "hash": "73b26b71c969340b6a54f983b1dd42f9b6434c43346b3c614e3fdcaeba8da3b3",
+   "partials": {},
+   "hints": [
+    "International maritime signal flags, one letter each.",
+    "To check you're on track: the answer begins with H."
+   ],
+   "technique": "Maritime signal flags",
+   "length": 8
+  },
+  {
+   "id": 4,
+   "title": "Shipping Forecast",
+   "flavor": "The engineer colour-coded everything, then numbered the alphabet.",
+   "blocks": [
+    {
+     "type": "resistors",
+     "items": [
+      [
+       "brown",
+       "white",
+       "black",
+       "gold"
+      ],
+      [
+       "brown",
+       "yellow",
+       "black",
+       "gold"
+      ],
+      [
+       "brown",
+       "green",
+       "black",
+       "gold"
+      ],
+      [
+       "red",
+       "orange",
+       "black",
+       "gold"
+      ],
+      [
+       "black",
+       "blue",
+       "black",
+       "gold"
+      ],
+      [
+       "brown",
+       "red",
+       "black",
+       "gold"
+      ],
+      [
+       "black",
+       "brown",
+       "black",
+       "gold"
+      ],
+      [
+       "brown",
+       "brown",
+       "black",
+       "gold"
+      ],
+      [
+       "black",
+       "green",
+       "black",
+       "gold"
+      ]
+     ]
+    }
+   ],
+   "hash": "75d0a90602e843676ddb955170825a6411a7be9c30b1f8bdfca00c06876c0990",
+   "partials": {},
+   "hints": [
+    "Read the first two bands of each resistor as digits (black 0 … white 9) and use the number as a letter position.",
+    "To check you're on track: the answer begins with S."
+   ],
+   "technique": "Resistor colour bands",
+   "length": 9
+  },
+  {
+   "id": 5,
+   "title": "Red Sky At Night",
+   "flavor": "Paint by numbers. The picture is worth exactly one word.",
+   "blocks": [
+    {
+     "type": "nonogram",
+     "rows": [
+      [
+       5,
+       4,
+       3,
+       1,
+       1,
+       5
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       2,
+       1,
+       1
+      ],
+      [
+       4,
+       4,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       2,
+       1
+      ],
+      [
+       1,
+       1,
+       1,
+       3,
+       1,
+       1,
+       1
+      ]
+     ],
+     "cols": [
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       3
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       3
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       5
+      ],
+      [],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ],
+     "givens": [
+      [
+       1,
+       16,
+       1
+      ],
+      [
+       4,
+       15,
+       1
+      ]
+     ]
+    }
+   ],
+   "hash": "ef8f90ac8e0670d33dfa134bb3f62c1575e0368c630cdef156bdd70fb3d8022f",
+   "partials": {},
+   "hints": [
+    "A nonogram (paint-by-numbers). The filled picture is the answer written in 5×5 block letters.",
+    "To check you're on track: the answer begins with F."
+   ],
+   "technique": "Nonogram",
+   "length": 5
+  },
+  {
+   "id": 6,
+   "title": "Occluded Front",
+   "flavor": "The fence around the weather station zigzags between three rails. Walk it, don't read it.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "TPHET CFVLT AHETL THSAE AKPIS ERTOA EYOGI ENTAS CEICI AEIGS TSERR NMDTR SM",
+     "wide": true,
+     "rails": 3
+    }
+   ],
+   "hash": "487ca7fb20b8ebbe286aa4a131465882c8598b1a4d6be52b58ddb87120f5a085",
+   "partials": {},
+   "hints": [
+    "Rail-fence transposition of a sentence with the spaces removed. Try 2 to 5 rails; the sentence tells you the answer.",
+    "To check you're on track: the answer begins with C."
+   ],
+   "technique": "Rail fence (cluephrase)",
+   "length": 7
+  },
+  {
+   "id": 7,
+   "title": "Low Pressure",
+   "flavor": "Every word at the weather station went through the blender, but each one came out whole.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "OYRU",
+      "RWNASE",
+      "OFR",
+      "ISTH",
+      "ZEPZUL",
+      "SI",
+      "NREAOEMMTE",
+      "BTU",
+      "OD",
+      "NTO",
+      "LLET",
+      "ETH",
+      "EOSHTR",
+      "WHO",
+      "OUY",
+      "TGO",
+      "TI"
+     ],
+     "inline": true,
+     "tray": "word"
+    }
+   ],
+   "hash": "7a8913cc3a9d49044d1931f9832d1e9494d830b7371f76c3d7a036b8180c5d1c",
+   "partials": {},
+   "hints": [
+    "Each word of a sentence has had its letters shuffled. Unscramble them; the sentence tells you the answer.",
+    "To check you're on track: the answer begins with A."
+   ],
+   "technique": "Scrambled sentence",
+   "length": 10
+  }
+ ],
+ "meta": {
+  "title": "Meta: Isobars",
+  "flavor": "Pigeonholes, each cut to fit one thing, and some of them marked.",
+  "blocks": [
+   {
+    "type": "fitgrid",
+    "rows": [
+     {
+      "len": 7,
+      "shade": 0
+     },
+     {
+      "len": 8,
+      "shade": 7
+     },
+     {
+      "len": 6,
+      "shade": 0
+     },
+     {
+      "len": 9,
+      "shade": 5
+     },
+     {
+      "len": 10,
+      "shade": 4
+     },
+     {
+      "len": 5,
+      "shade": 3
+     },
+     {
+      "len": 4,
+      "shade": 3
+     }
+    ]
+   }
+  ],
+  "length": 7,
+  "hash": "30f5cd55417b2d0aa557e7269e7d043d09cc425e18fb89ca95837da5eed7de74",
+  "hints": [
+   "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+   "To check you're on track: the final answer begins with C."
+  ]
+ },
+ "described": true
+}

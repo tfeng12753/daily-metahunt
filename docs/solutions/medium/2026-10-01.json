@@ -1,0 +1,55 @@
+{
+ "date": "2026-10-01",
+ "number": 5,
+ "difficulty": "medium",
+ "final": "PANACEA",
+ "metaType": "logbook",
+ "explain": "Each entry is (puzzle number, letter number): index into that puzzle's answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Albedo",
+   "answer": "HOMUNCULUS",
+   "mechanism": "Anagrams with an extra letter",
+   "transform": null,
+   "encoded": "HOMUNCULUS",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Athanor",
+   "answer": "SERPENT",
+   "mechanism": "Missing letters",
+   "transform": null,
+   "encoded": "SERPENT",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "The Green Lion",
+   "answer": "ATHANOR",
+   "mechanism": "Drop quote",
+   "transform": null,
+   "encoded": "ATHANOR",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Rubedo",
+   "answer": "PHOENIX",
+   "mechanism": "Scrambled sentence",
+   "transform": null,
+   "encoded": "PHOENIX",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "As Above So Below",
+   "answer": "SUBLIMATE",
+   "mechanism": "Mixed number bases",
+   "transform": "Reversal",
+   "encoded": "ETAMILBUS",
+   "mutated": null
+  }
+ ]
+}

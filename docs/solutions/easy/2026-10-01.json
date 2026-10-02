@@ -1,0 +1,64 @@
+{
+ "date": "2026-10-01",
+ "number": 5,
+ "difficulty": "easy",
+ "final": "ELIXIR",
+ "metaType": "fitin",
+ "explain": "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Aqua Regia",
+   "answer": "EMBER",
+   "mechanism": "Punched tape",
+   "transform": null,
+   "encoded": "EMBER",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "The Red King",
+   "answer": "ANTIMONY",
+   "mechanism": "Word search leftovers",
+   "transform": null,
+   "encoded": "ANTIMONY",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "The Green Lion",
+   "answer": "SILVER",
+   "mechanism": "Keyboard shift",
+   "transform": null,
+   "encoded": "SILVER",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "As Above So Below",
+   "answer": "OUROBOROS",
+   "mechanism": "Nonogram",
+   "transform": null,
+   "encoded": "OUROBOROS",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Solve Et Coagula",
+   "answer": "PHOENIX",
+   "mechanism": "Shredded sentence",
+   "transform": null,
+   "encoded": "PHOENIX",
+   "mutated": null
+  },
+  {
+   "id": 6,
+   "title": "Emerald Tablet",
+   "answer": "QUICKSILVER",
+   "mechanism": "Drop quote",
+   "transform": null,
+   "encoded": "QUICKSILVER",
+   "mutated": null
+  }
+ ]
+}

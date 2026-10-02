@@ -1,0 +1,91 @@
+{
+ "date": "2026-10-01",
+ "number": 5,
+ "difficulty": "hard",
+ "final": "TRANSMUTE",
+ "metaType": "fitin",
+ "explain": "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Aqua Regia",
+   "answer": "SUN",
+   "mechanism": "Shredded sentence",
+   "transform": null,
+   "encoded": "SUN",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Ouroboros",
+   "answer": "SUBLIMATE",
+   "mechanism": "Drop quote",
+   "transform": null,
+   "encoded": "SUBLIMATE",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Emerald Tablet",
+   "answer": "HOMUNCULUS",
+   "mechanism": "Knight's path",
+   "transform": null,
+   "encoded": "HOMUNCULUS",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Albedo",
+   "answer": "CAULDRON",
+   "mechanism": "Braille as numbers",
+   "transform": null,
+   "encoded": "CAULDRON",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "The Green Lion",
+   "answer": "QUICKSILVER",
+   "mechanism": "Resistor colour bands",
+   "transform": "Atbash (A↔Z mirror)",
+   "encoded": "JFRXPHROEVI",
+   "mutated": null
+  },
+  {
+   "id": 6,
+   "title": "Calcination",
+   "answer": "COPPER",
+   "mechanism": "Keyboard shift",
+   "transform": "ROT13",
+   "encoded": "PBCCRE",
+   "mutated": null
+  },
+  {
+   "id": 7,
+   "title": "The Red King",
+   "answer": "VITRIOL",
+   "mechanism": "Hex colour ASCII",
+   "transform": null,
+   "encoded": "VITRIOL",
+   "mutated": null
+  },
+  {
+   "id": 8,
+   "title": "Nigredo",
+   "answer": "LEAD",
+   "mechanism": "Binary codons",
+   "transform": null,
+   "encoded": "LEAD",
+   "mutated": null
+  },
+  {
+   "id": 9,
+   "title": "As Above So Below",
+   "answer": "ASHES",
+   "mechanism": "Book cipher",
+   "transform": null,
+   "encoded": "ASHES",
+   "mutated": null
+  }
+ ]
+}
