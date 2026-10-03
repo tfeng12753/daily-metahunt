@@ -1,0 +1,397 @@
+{
+ "date": "2026-10-03",
+ "difficulty": "hard",
+ "salt": "2026-10-03",
+ "number": 7,
+ "round": "Cold Storage, Freezer B",
+ "intro": "Someone left the minus-eighty open overnight, and the postdocs arrived to find half the samples ruined, the other half muttering under their foil. Dr Okafor says the DNA never lies, but the freezers have started gossiping, and nobody trusts a clean read now. In the corner, a whiteboard lists the night's corrections in neat red pen, each struck line replaced by something almost right. The postdocs keep their failed runs in labelled tubes along the back shelf, a quiet archive of near-misses folded into their gloves and lab books. You can still hear the samples talking if you stand still long enough; the trick is learning which voice to ignore.",
+ "echo": "Somewhere in this building, everything is read three letters at a time.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Central Dogma",
+   "flavor": "Six switches at a time, some pressed, some not. Whoever copied it out was standing in front of a mirror.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "011110",
+      "101011",
+      "101101",
+      "111001",
+      "110110",
+      "111001"
+     ],
+     "inline": true
+    }
+   ],
+   "hash": "fb71246a9276c795b801a44dab5ff8bb2378e8d2652311182480c1c3e53c0168",
+   "partials": {
+    "32a39a8e4f1b770b8e56b621d6da1010dac64e87201f5a87255ff7485cd1a88c": "You've decoded it, but it's not finished. One more layer.",
+    "e60cbd927111cd221950f45619346d3b62d5b9b4ef1dec72bfa4f66ab648e3fe": "So close. Exactly one thing is wrong here. Fix it (and remember what you fixed)."
+   },
+   "hints": [
+    "Write each number in binary. Six yes-or-no choices: is there an alphabet built from exactly that? And if what you get still isn't a word, reread the flavour text."
+   ]
+  },
+  {
+   "id": 2,
+   "title": "Knockout",
+   "flavor": "The labels matter more than the colours.",
+   "blocks": [
+    {
+     "type": "swatches",
+     "items": [
+      "#524550",
+      "#4C4943",
+      "#415449",
+      "#4F4F20"
+     ]
+    }
+   ],
+   "hash": "122d1822bdbc271f3486b96ae60a372f29fd71ab369145cf32d30b2ad6c5e121",
+   "partials": {
+    "265a93a498cfe7b307c8cc135ed4a4e3adab193bfd744242c40387f07514ee3b": "So close. Exactly one thing is wrong here. Fix it (and remember what you fixed)."
+   },
+   "hints": [
+    "Split each colour code into three pairs of hex digits. What else is a two-digit hex number?"
+   ]
+  },
+  {
+   "id": 3,
+   "title": "Point Mutation",
+   "flavor": "Somebody leaned on a few of these.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "852 Hz + 1209 Hz  ×1",
+      "697 Hz + 1477 Hz  ×2",
+      "852 Hz + 1209 Hz  ×1",
+      "852 Hz + 1336 Hz  ×1",
+      "770 Hz + 1209 Hz  ×3",
+      "697 Hz + 1477 Hz  ×1",
+      "697 Hz + 1477 Hz  ×1"
+     ],
+     "mono": true
+    }
+   ],
+   "hash": "c3d70f45ffc683a81990238646939f330781040e7161f420acda9f0d97a4429e",
+   "partials": {
+    "a0f46df56a1746378595eff147bc6025566fa4199804bc252a939bf845f4b4f4": "So close. Exactly one thing is wrong here. Fix it (and remember what you fixed)."
+   },
+   "hints": [
+    "Two frequencies at once is the sound of a phone key being pressed. What letters did those keys carry?"
+   ]
+  },
+  {
+   "id": 4,
+   "title": "Reading Frame",
+   "flavor": "Same quantities, different fingers. The tape was spooled back onto the wrong reel.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "10₅",
+      "120₃",
+      "21₄",
+      "24₅",
+      "1₆",
+      "19₁₂",
+      "111₂"
+     ],
+     "inline": true
+    }
+   ],
+   "hash": "d4d7eddff94602eb7ad5596a52f6f38c4c1703e50548ff0131b35a5d0f090550",
+   "partials": {
+    "e954e3039e9750359d24bca73beb6961c3f290fe123af2dc5d16c70a9ee63ea1": "You've decoded it, but it's not finished. One more layer.",
+    "23585830b613b021792f4d34a94277d54485044898ad38e87263a5735242b79d": "So close. Exactly one thing is wrong here. Fix it (and remember what you fixed)."
+   },
+   "hints": [
+    "The subscript is a base. Once everything is in ordinary decimal, what range are the numbers in? And if what you get still isn't a word, reread the flavour text."
+   ]
+  },
+  {
+   "id": 5,
+   "title": "Silent Substitution",
+   "flavor": "The picture is worth exactly one word.",
+   "blocks": [
+    {
+     "type": "nonogram",
+     "rows": [
+      [
+       4,
+       5,
+       3,
+       1,
+       1,
+       5,
+       1,
+       1,
+       1,
+       1,
+       5
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       2,
+       1,
+       2,
+       1,
+       1
+      ],
+      [
+       3,
+       4,
+       1,
+       1,
+       1,
+       1,
+       1,
+       4,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       4
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       2,
+       1,
+       2,
+       1
+      ],
+      [
+       4,
+       5,
+       2,
+       1,
+       3,
+       5,
+       1,
+       1,
+       1,
+       1,
+       5
+      ]
+     ],
+     "cols": [
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       3
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       2,
+       1
+      ],
+      [],
+      [
+       4
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       4
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       5
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       5
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "givens": [
+      [
+       0,
+       18,
+       1
+      ],
+      [
+       4,
+       4,
+       0
+      ],
+      [
+       0,
+       4,
+       1
+      ]
+     ]
+    }
+   ],
+   "hash": "bae3253e4ea2b8295c3f7bc6a3334572a6d6ada03ce566a40c2ebbf405ef578f",
+   "partials": {
+    "1dcb0537e854f82cc8a85a73a533df2993e7bbad17eb27bcf7a8f24f9d98c2ec": "So close. Exactly one thing is wrong here. Fix it (and remember what you fixed)."
+   },
+   "hints": [
+    "The numbers describe runs of filled squares. What picture could they be drawing?"
+   ]
+  }
+ ],
+ "meta": {
+  "title": "Meta: Cold Storage, Freezer B",
+  "flavor": "Every report is one slip away from perfect.",
+  "blocks": [],
+  "length": 5,
+  "hash": "7ed7b6c01ada5885737e32b0aa54e9ee1de83bc934690bbb5a149b4b410198df",
+  "hints": [
+   "Did every answer come out clean the first time? Each had exactly one wrong letter. Did you keep them?"
+  ]
+ },
+ "described": true
+}

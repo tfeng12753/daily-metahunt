@@ -1,0 +1,73 @@
+{
+ "date": "2026-10-02",
+ "number": 6,
+ "difficulty": "easy",
+ "final": "CYCLONE",
+ "metaType": "fitin",
+ "explain": "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Veering",
+   "answer": "GALE",
+   "mechanism": "Drop quote",
+   "transform": null,
+   "encoded": "GALE",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Eye Of The Storm",
+   "answer": "CIRRUS",
+   "mechanism": "Caesar shift",
+   "transform": null,
+   "encoded": "CIRRUS",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Dew Point",
+   "answer": "HUMIDITY",
+   "mechanism": "Maritime signal flags",
+   "transform": null,
+   "encoded": "HUMIDITY",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Shipping Forecast",
+   "answer": "SNOWFLAKE",
+   "mechanism": "Resistor colour bands",
+   "transform": null,
+   "encoded": "SNOWFLAKE",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Red Sky At Night",
+   "answer": "FRONT",
+   "mechanism": "Nonogram",
+   "transform": null,
+   "encoded": "FRONT",
+   "mutated": null
+  },
+  {
+   "id": 6,
+   "title": "Occluded Front",
+   "answer": "CLIMATE",
+   "mechanism": "Rail fence (cluephrase)",
+   "transform": null,
+   "encoded": "CLIMATE",
+   "mutated": null
+  },
+  {
+   "id": 7,
+   "title": "Low Pressure",
+   "answer": "ANEMOMETER",
+   "mechanism": "Scrambled sentence",
+   "transform": null,
+   "encoded": "ANEMOMETER",
+   "mutated": null
+  }
+ ]
+}

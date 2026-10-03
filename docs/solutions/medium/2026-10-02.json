@@ -1,0 +1,73 @@
+{
+ "date": "2026-10-02",
+ "number": 6,
+ "difficulty": "medium",
+ "final": "TORNADO",
+ "metaType": "stowaway",
+ "explain": "Each feeder decodes to its answer plus one inserted letter. The inserted letters, in puzzle order, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Shipping Forecast",
+   "answer": "WEATHERVANE",
+   "mechanism": "Letter sudoku",
+   "transform": null,
+   "encoded": "WEATHETRVANE",
+   "mutated": "WEATHETRVANE"
+  },
+  {
+   "id": 2,
+   "title": "Eye Of The Storm",
+   "answer": "HEATWAVE",
+   "mechanism": "Punched tape",
+   "transform": null,
+   "encoded": "HEATWAVOE",
+   "mutated": "HEATWAVOE"
+  },
+  {
+   "id": 3,
+   "title": "Veering",
+   "answer": "STRATUS",
+   "mechanism": "Book cipher",
+   "transform": "Reversal",
+   "encoded": "SUTRARTS",
+   "mutated": "STRARTUS"
+  },
+  {
+   "id": 4,
+   "title": "Wind Chill",
+   "answer": "SNOWFLAKE",
+   "mechanism": "Word search leftovers",
+   "transform": null,
+   "encoded": "SNOWFLNAKE",
+   "mutated": "SNOWFLNAKE"
+  },
+  {
+   "id": 5,
+   "title": "Inversion",
+   "answer": "NIMBUS",
+   "mechanism": "Missing letters",
+   "transform": null,
+   "encoded": "NIAMBUS",
+   "mutated": "NIAMBUS"
+  },
+  {
+   "id": 6,
+   "title": "Squall Line",
+   "answer": "SLEET",
+   "mechanism": "Caesar shift",
+   "transform": null,
+   "encoded": "SDLEET",
+   "mutated": "SDLEET"
+  },
+  {
+   "id": 7,
+   "title": "Occluded Front",
+   "answer": "BLIZZARD",
+   "mechanism": "Rail fence (cluephrase)",
+   "transform": null,
+   "encoded": "BLIZZARDO",
+   "mutated": "BLIZZARDO"
+  }
+ ]
+}

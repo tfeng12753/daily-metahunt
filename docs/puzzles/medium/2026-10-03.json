@@ -1,0 +1,274 @@
+{
+ "date": "2026-10-03",
+ "difficulty": "medium",
+ "salt": "2026-10-03/medium",
+ "number": 7,
+ "round": "Cold Storage, Freezer B",
+ "intro": "Someone left the minus-eighty open overnight. Half the samples are ruined; the other half have started talking. The postdocs are filing incident reports in triplicate, each sheet stamped with a different freezer-log code, and Dr Okafor keeps the master copy of the cryo-register under her desk in a long narrow tray with one row of slots per sample, the short ones at the top and the long ones down below. Amid the smell of thawing ampules and warm nitrogen, the talking samples have begun finishing one another's sentences, as though they remember, dimly, which of them used to sit together. A whiteboard near the door lists the affected racks in no obvious order, though someone has added, in fresh marker, a tally like a seating plan with a gap where the longest entry belongs. The sequencing core has promised results by morning, and the director has asked, pointedly, whether anyone checked the door's latch before leaving.",
+ "echo": "A few of the mice in cage four are two animals at once, and perfectly happy about it.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Reading Frame",
+   "flavor": "The words are nonsense. The typesetting isn't.",
+   "blocks": [
+    {
+     "type": "prose",
+     "text": "zYGOTe bActEriA ALlelE mEmbrane EXoN micRosCope MITosis."
+    }
+   ],
+   "hash": "c99ca892c6ceae3466f010a609d0d43b64e90b7c7a55f4c935fdc8ff91fbcf06",
+   "partials": {},
+   "hints": [
+    "Two kinds of letter, big and small. How many of them would you need to spell twenty-six different things?",
+    "Baconian cipher: groups of five, lowercase = a, uppercase = b; aaaaa is A."
+   ],
+   "length": 9
+  },
+  {
+   "id": 2,
+   "title": "Knockout",
+   "flavor": "Everything came out of the wash with a little something extra.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "CNRITNO",
+      "TEAHMEG",
+      "TREPPEIT",
+      "EOPDPTEI",
+      "ECTISYONM",
+      "NEEZOMY",
+      "OTVRSCE",
+      "UCSUELON",
+      "EOLSSMYMO",
+      "ATRTEI"
+     ],
+     "ordered": true,
+     "mono": true
+    }
+   ],
+   "hash": "9afdf25446216dbdcfaca7ffa212a42c9285762e60faa11f9c05d74d5bb14ce9",
+   "partials": {},
+   "hints": [
+    "Each jumble is almost a word from this round, but with a letter to spare. Which letter, every time?",
+    "Rearrange each into a theme word; the spare letters, in order, are the answer."
+   ],
+   "length": 10
+  },
+  {
+   "id": 3,
+   "title": "Wild Type",
+   "flavor": "A voicemail with no voice. Alpha and Omega traded places before this was written down.",
+   "blocks": [
+    {
+     "type": "audio",
+     "kind": "dtmf",
+     "groups": [
+      "55",
+      "444",
+      "777",
+      "66",
+      "888",
+      "444"
+     ]
+    }
+   ],
+   "hash": "9d4778cb947610cc750bbd462c024869c131350d8ea29ff26875ed932a1b3248",
+   "partials": {
+    "b964b5cebc9fe2fbbb6682cc53c44cfb1435e4bfc2ed26f23c8d30234db2a22a": "You've decoded it, but it's not finished. One more layer."
+   },
+   "hints": [
+    "Two frequencies at once is the sound of a phone key being pressed. What letters did those keys carry? And if what you get still isn't a word, reread the flavour text.",
+    "Old phone keypads: find each key, then press it the number of times shown to move along its letters. Then one more layer: Turn the alphabet end to end: A for Z, B for Y."
+   ],
+   "length": 6
+  },
+  {
+   "id": 4,
+   "title": "Central Dogma",
+   "flavor": "Nothing is missing. Nothing is where it was.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "UYOR",
+      "NSRWEA",
+      "OFR",
+      "HIST",
+      "ZELZPU",
+      "SI",
+      "MDAIOORTINCH",
+      "TUB",
+      "OD",
+      "OTN",
+      "LELT",
+      "EHT",
+      "SOTERH",
+      "OHW",
+      "UOY",
+      "GTO",
+      "TI"
+     ],
+     "inline": true,
+     "tray": "word"
+    }
+   ],
+   "hash": "de9b187bb3fdc4ce97fdcb4d0a871f1e8fe258642f6a92765f2ab1a53de1f9bc",
+   "partials": {},
+   "hints": [
+    "Each word is complete but shuffled. Start with the shortest ones: does a sentence appear?",
+    "Unscramble each word where it stands; the sentence tells you what to submit."
+   ],
+   "length": 12
+  },
+  {
+   "id": 5,
+   "title": "Primer Dimer",
+   "flavor": "The spy always carried a novel. This page will have to do.",
+   "blocks": [
+    {
+     "type": "prose",
+     "text": "Someone left the minus-eighty open overnight. Half the samples are ruined; the other half have started talking.",
+     "paper": true
+    },
+    {
+     "type": "list",
+     "items": [
+      "5.2",
+      "7.3",
+      "10.1",
+      "9.7",
+      "4.1",
+      "17.5",
+      "11.6"
+     ],
+     "inline": true
+    }
+   ],
+   "hash": "5242a64026ebdcbd3e0d440ae11d17510f4ae2568bec6867576d9464c6741f77",
+   "partials": {},
+   "hints": [
+    "The first number in each pair never goes past the number of words on the page. What does the second count?",
+    "The first number finds a word on the page; the second finds a letter in it."
+   ],
+   "length": 7
+  },
+  {
+   "id": 6,
+   "title": "Backup Copy",
+   "flavor": "A sentence that came loose from its lines.",
+   "blocks": [
+    {
+     "type": "dropquote",
+     "cols": [
+      "EFST",
+      "EHOPT",
+      "CIIRT",
+      "MRS",
+      "AEEI",
+      "PTT",
+      "AASV",
+      "EGIN",
+      "DERSS",
+      "EY",
+      "CCHT",
+      "AHLLR",
+      "AEOOS",
+      "NNTT",
+      "EGK"
+     ],
+     "mask": [
+      "....#....#...#.",
+      "...#...#......#",
+      "...#.#....#....",
+      "#....#...#....#",
+      "......#..#....."
+     ]
+    }
+   ],
+   "hash": "4a16ed97f2b3a004ed50deb2e3d8b06dff63111953c3f59a82048263742e2257",
+   "partials": {},
+   "hints": [
+    "Black squares are spaces. Which two- and three-letter words fit, using only the letters each column allows?",
+    "Each column's letters drop into that column of the grid; cross them off as you place them. The sentence tells you what to submit."
+   ],
+   "length": 5
+  },
+  {
+   "id": 7,
+   "title": "Stop Codon",
+   "flavor": "The labels in the sequencing lab have faded.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "_ISTONE",
+      "CENTRIFUG_",
+      "URACI_",
+      "M_CROSCOPE",
+      "BA_TERIA",
+      "GU_NINE",
+      "LY_OSOME",
+      "_MBRYO"
+     ],
+     "ordered": true,
+     "mono": true
+    }
+   ],
+   "hash": "d4a0b328ac32339b3a18f79967b9cb77c71892ebeb17789da3fa681e93618a6f",
+   "partials": {},
+   "hints": [
+    "Every gap takes exactly one letter. Is there a pattern in what you filled in?",
+    "Read the letters you supplied, in order."
+   ],
+   "length": 8
+  }
+ ],
+ "meta": {
+  "title": "Meta: Cold Storage, Freezer B",
+  "flavor": "Pigeonholes, each cut to fit one thing only.",
+  "blocks": [
+   {
+    "type": "fitgrid",
+    "rows": [
+     {
+      "len": 5,
+      "shade": 0
+     },
+     {
+      "len": 10,
+      "shade": 1
+     },
+     {
+      "len": 8,
+      "shade": 3
+     },
+     {
+      "len": 7,
+      "shade": 4
+     },
+     {
+      "len": 9,
+      "shade": 1
+     },
+     {
+      "len": 6,
+      "shade": 1
+     },
+     {
+      "len": 12,
+      "shade": 11
+     }
+    ]
+   }
+  ],
+  "length": 7,
+  "hash": "cb1b251834cf9d5e1f9950bcb3165fa6ebb9f556b43931eb58f47e628e42bf70",
+  "hints": [
+   "The grid's rows are all different lengths. So are your answers.",
+   "Put each answer in the row its length fits; read the shaded squares top to bottom."
+  ]
+ },
+ "described": true
+}

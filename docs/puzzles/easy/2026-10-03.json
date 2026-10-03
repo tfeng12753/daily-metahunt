@@ -1,0 +1,190 @@
+{
+ "date": "2026-10-03",
+ "difficulty": "easy",
+ "salt": "2026-10-03/easy",
+ "number": 7,
+ "round": "Cold Storage, Freezer B",
+ "intro": "Someone left the minus-eighty open overnight, and when the postdocs arrived the chamber was half a graveyard and half a chorus: ruined vials sat in silence while the surviving samples had begun to talk. Each chatty tube seems to know its own place on the rack and its own contents, volunteering fragments like 'the fourth base of the one in slot three' or 'the twelfth letter of my neighbour's sequence'. The conversations overlap and cross-reference, as if every sample is pointing not at itself but at some particular strand within another's answer. The postdocs have started laying the tubes out in order, hoping the positional whispers will line up into something coherent. Somewhere in that tangled chatter lies the single word the round is after, hidden in the letters each sample gestures towards.",
+ "echo": "Two railings, one staircase, and a photograph in 1952 that someone else took.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Primer Dimer",
+   "flavor": "Up and down, up and down: five rows, one long sentence, and not a single space left.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "THPYR EDHTI OETPO ENWAW NETNE RREFT IEEAO LSGHA ODEHL NDSXA TTBET E",
+     "wide": true,
+     "rails": 5
+    }
+   ],
+   "hash": "251df6850b53f360eb4f0e50adbaea5031839baa606cee57af8063c4702e68ae",
+   "partials": {},
+   "hints": [
+    "Rail-fence transposition of a sentence with the spaces removed. Try 2 to 5 rails; the sentence tells you the answer.",
+    "To check you're on track: the answer begins with E."
+   ],
+   "technique": "Rail fence (cluephrase)",
+   "length": 4
+  },
+  {
+   "id": 2,
+   "title": "Stop Codon",
+   "flavor": "Three letters to a strip. The strips are in order; the sentence isn't.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "ARS",
+      "ASM",
+      "DPL",
+      "ECT",
+      "EDA",
+      "EPR",
+      "EXP",
+      "ID",
+      "ISF",
+      "ISJ",
+      "IZE",
+      "NET",
+      "NOB",
+      "NYO",
+      "ODY",
+      "OGE",
+      "ONE",
+      "OTH",
+      "TTH",
+      "UST",
+      "WOR"
+     ],
+     "inline": true,
+     "tiles": true
+    },
+    {
+     "type": "prose",
+     "text": "Word lengths: (6 8 6 2 3 4 3 2 3 5 2 4 3 4 7)"
+    }
+   ],
+   "hash": "c3eabc031b1140407a5aed03ff3ad76810bd6fa7d55aeb3756b46c0c4a5c833a",
+   "partials": {},
+   "hints": [
+    "The sentence was cut into three-letter fragments (spaces removed) and alphabetised. Reassemble it using the word lengths; it tells you the answer.",
+    "To check you're on track: the answer begins with P."
+   ],
+   "technique": "Shredded sentence",
+   "length": 7
+  },
+  {
+   "id": 3,
+   "title": "Transcription Factor",
+   "flavor": "The labels in the sequencing lab have faded. Each one lost exactly one letter.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "ENZY_E",
+      "P_PETTE",
+      "MI_OSIS",
+      "REPLICATI_N",
+      "_YTOPLASM",
+      "_ELICASE",
+      "LYS_SOME",
+      "KI_ASE",
+      "PEPTI_E",
+      "CENT_IFUGE",
+      "PETR_DISH",
+      "BACTERI_"
+     ],
+     "ordered": true,
+     "mono": true
+    }
+   ],
+   "hash": "5803901a306457f6cd347bdb3001a1461930d6ee66f84f70632e6c8568a7e31b",
+   "partials": {},
+   "hints": [
+    "Each theme word is missing one letter. The missing letters, in order, spell the answer.",
+    "To check you're on track: the answer begins with M."
+   ],
+   "technique": "Missing letters",
+   "length": 12
+  },
+  {
+   "id": 4,
+   "title": "Gel Electrophoresis",
+   "flavor": "Two forward, one across. Remember where you land.",
+   "blocks": [
+    {
+     "type": "board",
+     "rows": [
+      "OSXBZEKJ",
+      "INKJDRWI",
+      "BRCLVHNH",
+      "XCHGLHJU",
+      "HKOYCLXV",
+      "YLPFJTNT",
+      "BGLJIOBL",
+      "XDNRJEEB"
+     ]
+    },
+    {
+     "type": "prose",
+     "text": "The knight sets out from a4: Nc3 Nd1 Nf2 Nh3 Ng1 Ne2 Ng3."
+    }
+   ],
+   "hash": "08a8167aa22fd6a3b60196a8d9abfbdef8778e9d7049d65bc7556b7c01282b18",
+   "partials": {},
+   "hints": [
+    "Start on the given square and follow the knight moves; read the letter on each square it lands on.",
+    "To check you're on track: the answer begins with P."
+   ],
+   "technique": "Knight's path",
+   "length": 7
+  },
+  {
+   "id": 5,
+   "title": "Central Dogma",
+   "flavor": "The newspaper's puzzle page, the one your grandmother did in pen, every single morning.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "ZAWX XAG KIQSFGS KWSSFGO ZWU TIX HIEO IS UGKSGXU MQX W UFTHEG ZISO KGTXSINGSG",
+     "wide": true,
+     "solver": "substitution"
+    }
+   ],
+   "hash": "498881eb671b600e3078582cb63d27b909dc153b8ca7d1fe428c1c136ea77f6b",
+   "partials": {},
+   "hints": [
+    "Simple monoalphabetic substitution with word breaks kept. Solve the sentence; it tells you the answer.",
+    "To check you're on track: the answer begins with C."
+   ],
+   "technique": "Cryptogram (cluephrase)",
+   "length": 10
+  }
+ ],
+ "meta": {
+  "title": "Meta: Cold Storage, Freezer B",
+  "flavor": "The porter only ever noted where each passenger boarded. Every car holds one letter.",
+  "blocks": [
+   {
+    "type": "list",
+    "items": [
+     "Platform 3, car 6",
+     "Platform 5, car 10",
+     "Platform 2, car 2",
+     "Platform 4, car 6",
+     "Platform 1, car 2"
+    ],
+    "ordered": true
+   }
+  ],
+  "length": 5,
+  "hash": "51be50ac10fae7e5b367cd48c9ff36801518eb1eb7cf16a1db28c5a1c11c2302",
+  "hints": [
+   "Each entry is (puzzle number, letter number): index into that puzzle's answer.",
+   "To check you're on track: the final answer begins with H."
+  ]
+ },
+ "described": true
+}

@@ -1,0 +1,64 @@
+{
+ "date": "2026-10-02",
+ "number": 6,
+ "difficulty": "hard",
+ "final": "MONSOON",
+ "metaType": "initials",
+ "explain": "The ciphertext is Vigenère-encrypted with the first letters of the feeder answers (in puzzle order) as the key.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Occluded Front",
+   "answer": "RADAR",
+   "mechanism": "Book cipher",
+   "transform": null,
+   "encoded": "RADAR",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Squall Line",
+   "answer": "NIMBUS",
+   "mechanism": "Punched tape",
+   "transform": "ROT13",
+   "encoded": "AVZOHF",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Shipping Forecast",
+   "answer": "THUNDER",
+   "mechanism": "Prime indices in Roman numerals",
+   "transform": null,
+   "encoded": "THUNDER",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Beaufort Twelve",
+   "answer": "GUST",
+   "mechanism": "Drop quote",
+   "transform": null,
+   "encoded": "GUST",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Wind Chill",
+   "answer": "HEATWAVE",
+   "mechanism": "Baconian cipher",
+   "transform": null,
+   "encoded": "HEATWAVE",
+   "mutated": null
+  },
+  {
+   "id": 6,
+   "title": "Inversion",
+   "answer": "THERMOMETER",
+   "mechanism": "Shredded sentence",
+   "transform": null,
+   "encoded": "THERMOMETER",
+   "mutated": null
+  }
+ ]
+}
