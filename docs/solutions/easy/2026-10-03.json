@@ -1,0 +1,55 @@
+{
+ "date": "2026-10-03",
+ "number": 7,
+ "difficulty": "easy",
+ "final": "HELIX",
+ "metaType": "logbook",
+ "explain": "Each entry is (puzzle number, letter number): index into that puzzle's answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Primer Dimer",
+   "answer": "EXON",
+   "mechanism": "Rail fence (cluephrase)",
+   "transform": null,
+   "encoded": "EXON",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Stop Codon",
+   "answer": "PLASMID",
+   "mechanism": "Shredded sentence",
+   "transform": null,
+   "encoded": "PLASMID",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Transcription Factor",
+   "answer": "MITOCHONDRIA",
+   "mechanism": "Missing letters",
+   "transform": null,
+   "encoded": "MITOCHONDRIA",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Gel Electrophoresis",
+   "answer": "PROTEIN",
+   "mechanism": "Knight's path",
+   "transform": null,
+   "encoded": "PROTEIN",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Central Dogma",
+   "answer": "CENTROMERE",
+   "mechanism": "Cryptogram (cluephrase)",
+   "transform": null,
+   "encoded": "CENTROMERE",
+   "mutated": null
+  }
+ ]
+}

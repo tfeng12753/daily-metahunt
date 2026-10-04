@@ -1,0 +1,234 @@
+{
+ "date": "2026-10-04",
+ "difficulty": "easy",
+ "salt": "2026-10-04/easy",
+ "number": 8,
+ "round": "The Glasshouse",
+ "intro": "Every plant in the botanic garden's glasshouse bloomed on the same night, and the labels in the pots had all been rewritten. The gardeners moved through the mist between the beds, turning the little cards over and over in their fingers, frowning at the strange notations now curling there in neat copperplate. Each card bore a pair of numbers, as though something had catalogued not just the name of the plant but a place within it — a position in the word it wore like a coat. The head gardener stood at the long bench with her spectacles low, muttering that the labels seemed to expect her to read each plant's name and then reach inside it, pluck out a single letter from a spot only the numbers could know. Outside, the moon was full and white above the roof glass, and the seedlings rustled as if they were whispering their secrets to one another, waiting for someone to listen closely enough to hear the answer hidden in the middle of them.",
+ "echo": "The Victorians sent collectors to die in jungles for a single rare bloom.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Hothouse",
+   "flavor": "A pub quiz where every answer is a count. Keep a tally, then keep counting.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "Lines in a villanelle",
+      "Pawns on a chessboard at the start of a game",
+      "Players on a rugby union side",
+      "Holes on a full golf course",
+      "Sides of a pentagon"
+     ],
+     "ordered": true,
+     "tray": "letter"
+    }
+   ],
+   "hash": "d4a917ee7d94feb8447cbca02298a9356268e6e24d3c305bedc9dbef1a666f7c",
+   "partials": {},
+   "hints": [
+    "Each line is a number from 1 to 26. Turn each number into a letter (A = 1, B = 2, …).",
+    "To check you're on track: the answer begins with S."
+   ],
+   "technique": "Number trivia",
+   "length": 5
+  },
+  {
+   "id": 2,
+   "title": "Taproot",
+   "flavor": "Two directions at a time, and never a destination.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "SE & W",
+      "NE & S",
+      "NE & S",
+      "N & S"
+     ],
+     "inline": true
+    }
+   ],
+   "hash": "e3b214f62561d6c70075ac395220a846a87cd6eaa27d13cd26bb17a630a7193c",
+   "partials": {},
+   "hints": [
+    "Flag semaphore, with each arm given as a compass direction as you face the signaller (N = straight up).",
+    "To check you're on track: the answer begins with S."
+   ],
+   "technique": "Semaphore (compass bearings)",
+   "length": 4
+  },
+  {
+   "id": 3,
+   "title": "Latin Names",
+   "flavor": "The labels in the glasshouse have faded. Each one lost exactly one letter.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "_HLOROPHYLL",
+      "ST_MEN",
+      "_OMPOST",
+      "_UBER",
+      "S_CCULENT",
+      "_UNFLOWER"
+     ],
+     "ordered": true,
+     "mono": true
+    }
+   ],
+   "hash": "df33f66844b050ab0e04b4e44a686dfd56649562937684669470a45719ed76f3",
+   "partials": {},
+   "hints": [
+    "Each theme word is missing one letter. The missing letters, in order, spell the answer.",
+    "To check you're on track: the answer begins with C."
+   ],
+   "technique": "Missing letters",
+   "length": 6
+  },
+  {
+   "id": 4,
+   "title": "Photoperiod",
+   "flavor": "Every row in the glasshouse holds one of everything. So does every column, and every box. Then read the numbered squares.",
+   "blocks": [
+    {
+     "type": "sudoku",
+     "size": 9,
+     "rows": [
+      "..NGO..HR",
+      "J....R..U",
+      "R....UN..",
+      ".EGJUNR.S",
+      "S..ORG.UH",
+      "....HE.J.",
+      ".REU..J.O",
+      ".JU.GS...",
+      "..HE.O..G"
+     ],
+     "alphabet": "EGHJNORSU",
+     "marks": [
+      [
+       5,
+       6
+      ],
+      [
+       8,
+       7
+      ],
+      [
+       4,
+       6
+      ],
+      [
+       1,
+       4
+      ],
+      [
+       5,
+       8
+      ],
+      [
+       3,
+       0
+      ],
+      [
+       7,
+       0
+      ],
+      [
+       5,
+       0
+      ],
+      [
+       2,
+       4
+      ],
+      [
+       0,
+       0
+      ]
+     ]
+    }
+   ],
+   "hash": "69cc62efdc08f37ecdc6c7da2f091e1d2ea370f07a1b748fa8d04a0e9a08ccf9",
+   "partials": {},
+   "hints": [
+    "Sudoku using the letters shown instead of digits (each row, column and box uses each letter once). Read the numbered squares in order.",
+    "To check you're on track: the answer begins with G."
+   ],
+   "technique": "Letter sudoku",
+   "length": 10
+  },
+  {
+   "id": 5,
+   "title": "Cross-Pollination",
+   "flavor": "Cross off everything you recognise. What nobody claims is what you came for.",
+   "blocks": [
+    {
+     "type": "caption",
+     "text": "Hidden in the grid: 10 words to do with the glasshouse (lengths 4, 4, 4, 4, 4, 4, 5, 5, 5, 5), running in any direction."
+    },
+    {
+     "type": "board",
+     "rows": [
+      "WKTOORB",
+      "NREFPSU",
+      "IASITFL",
+      "TBLOAEB",
+      "RUMELYX",
+      "TALENIV",
+      "ILAPESA"
+     ],
+     "plain": true,
+     "words": [
+      "BARK",
+      "BULB",
+      "FERN",
+      "LEAF",
+      "ROOT",
+      "SEPAL",
+      "STOMA",
+      "TULIP",
+      "VINE",
+      "XYLEM"
+     ]
+    }
+   ],
+   "hash": "c074c449a51a965f12722fae16b1bb4681181fd13989eb211d07df12c95c8773",
+   "partials": {},
+   "hints": [
+    "Find every hidden word (any of 8 directions). The unused letters, read left-to-right, top-to-bottom, spell the answer.",
+    "The hidden words are: BARK, BULB, FERN, LEAF, ROOT, SEPAL, STOMA, TULIP, VINE, XYLEM.",
+    "To check you're on track: the answer begins with W."
+   ],
+   "technique": "Word search leftovers",
+   "length": 8
+  }
+ ],
+ "meta": {
+  "title": "Meta: The Glasshouse",
+  "flavor": "Tonight's seating chart. Every seat is one letter wide.",
+  "blocks": [
+   {
+    "type": "list",
+    "items": [
+     "Row 1, seat 3",
+     "Row 5, seat 6",
+     "Row 3, seat 3",
+     "Row 4, seat 6",
+     "Row 5, seat 2",
+     "Row 2, seat 4"
+    ],
+    "ordered": true
+   }
+  ],
+  "length": 6,
+  "hash": "95eff49e208c2a899817db1c35633ea51f6a836d96f57c72b236844a24d67369",
+  "hints": [
+   "Each entry is (puzzle number, letter number): index into that puzzle's answer.",
+   "To check you're on track: the final answer begins with O."
+  ]
+ },
+ "described": true
+}

@@ -1,0 +1,615 @@
+{
+ "date": "2026-10-04",
+ "difficulty": "medium",
+ "salt": "2026-10-04/medium",
+ "number": 8,
+ "round": "The Glasshouse",
+ "intro": "Every plant in the botanic garden's glasshouse bloomed on the same night, and the labels in the pots had all been rewritten. The gardeners arrived to find the glasshouse full of unfamiliar names, though the horticulture matched each pot exactly—one familiar and one foreign, side by side, as if the plants had signed in twice. Head gardener Marlowe asked them to collect the labels and set the odd ones aside, and the shed wall now holds eight neat rows of paper, each row carrying one letter folded into its neighbour. She said the extra letters would not go to waste, and that when the time came, they would read in the order the rows were pinned. The glasshouse has not stopped blooming, and still no one has found the gardener who did the pinning.",
+ "echo": "Pull it from the soil and its scream, they say, will kill you.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Photoperiod",
+   "flavor": "Pairs of numbers pencilled in the margin.",
+   "blocks": [
+    {
+     "type": "prose",
+     "text": "Every plant in the botanic garden's glasshouse bloomed on the same night. The labels in the pots had all been rewritten.",
+     "paper": true
+    },
+    {
+     "type": "list",
+     "items": [
+      "7.2",
+      "5.4",
+      "1.2",
+      "16.3",
+      "11.3",
+      "9.2",
+      "18.3",
+      "6.5",
+      "21.4"
+     ],
+     "inline": true
+    }
+   ],
+   "hash": "362743439c80121a72cd823529cf4dfa33b9781fd2cde49158860f6bce7a097c",
+   "partials": {
+    "ae4e24ae901f9d49f4e86a802d298a89c41285c56b13ec6ba65a7e7724db1b00": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "The first number in each pair never goes past the number of words on the page. What does the second count?",
+    "The first number finds a word on the page; the second finds a letter in it."
+   ],
+   "length": 8
+  },
+  {
+   "id": 2,
+   "title": "Cross-Pollination",
+   "flavor": "Numbers that nothing divides, written the old way.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "XIII",
+      "XLVII",
+      "LXXXIX",
+      "XVII",
+      "II",
+      "XXXVII",
+      "XLVII",
+      "LXXIX",
+      "XI"
+     ],
+     "inline": true
+    }
+   ],
+   "hash": "9edeb801f294fb84a7cb3d630bc121416eba4d5692d001b9322c5a8567249f9b",
+   "partials": {
+    "f6a5a18998391f022bdeb6ed366e8e6694e69711ffe246ff4ec92148ec72f672": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Read the numerals. They're all prime. Is there a natural way to number the primes?",
+    "Find each prime's place in the list of primes (2 is 1st, 3 is 2nd…), then count through the alphabet."
+   ],
+   "length": 8
+  },
+  {
+   "id": 3,
+   "title": "Hardening Off",
+   "flavor": "A sentence in disguise, and not a very good disguise.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "QVJK RWTC VWK FCRQ JQK KCYBCQ UPB W DCBM APET QJGC WEI QVWQ KCYBCQ JK HMAECG",
+     "wide": true,
+     "solver": "substitution"
+    }
+   ],
+   "hash": "30a1b124cbdf67fd0d16fb48f5ff7e9700c214d5f4016b723f485fffc33234fd",
+   "partials": {
+    "8a01753efc748bed3cc23d90023d9d1fac59a6c3f4df244b282252634826205b": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Which short words are most common in English? Could any of them be hiding here?",
+    "Each symbol always stands for the same letter. The finished sentence tells you what to submit."
+   ],
+   "length": 5
+  },
+  {
+   "id": 4,
+   "title": "Germination",
+   "flavor": "The sprocket keeps count; the holes do the talking.",
+   "blocks": [
+    {
+     "type": "tape",
+     "rows": [
+      [
+       1,
+       0,
+       1,
+       0,
+       0,
+       1,
+       1
+      ],
+      [
+       1,
+       0,
+       1,
+       0,
+       1,
+       0,
+       1
+      ],
+      [
+       1,
+       0,
+       0,
+       1,
+       1,
+       1,
+       0
+      ],
+      [
+       1,
+       0,
+       0,
+       0,
+       1,
+       1,
+       0
+      ],
+      [
+       1,
+       0,
+       0,
+       1,
+       1,
+       0,
+       0
+      ],
+      [
+       1,
+       0,
+       0,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       0,
+       1,
+       0,
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       0,
+       0,
+       0,
+       1,
+       0,
+       1
+      ],
+      [
+       1,
+       0,
+       1,
+       0,
+       0,
+       1,
+       0
+      ],
+      [
+       1,
+       0,
+       0,
+       0,
+       1,
+       0,
+       0
+      ]
+     ]
+    }
+   ],
+   "hash": "66e7b98585a2ccfbf8ca348f957375ac916ad0fe7a2606fd5b76cd1b1e611023",
+   "partials": {
+    "5e126ade21a822e8cb2af95b65f5b72d86ea7e67708c5da1c1316c3b065181a4": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Seven positions a row, each punched or not. What were seven bits once enough for?",
+    "Seven-bit ASCII: a hole is 1, the leftmost hole is the highest bit."
+   ],
+   "length": 9
+  },
+  {
+   "id": 5,
+   "title": "Pollinator",
+   "flavor": "The picture is worth exactly one word.",
+   "blocks": [
+    {
+     "type": "nonogram",
+     "rows": [
+      [
+       4,
+       1,
+       1,
+       5,
+       5,
+       3,
+       1,
+       1,
+       4,
+       5
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       2,
+       2,
+       1,
+       1,
+       1
+      ],
+      [
+       4,
+       5,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       4,
+       4
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       5,
+       5,
+       3,
+       1,
+       1,
+       1,
+       1,
+       5
+      ]
+     ],
+     "cols": [
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       5
+      ],
+      [],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       3
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       3
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       5
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "givens": [
+      [
+       3,
+       28,
+       1
+      ],
+      [
+       4,
+       28,
+       0
+      ]
+     ]
+    }
+   ],
+   "hash": "a2569564dd779f61e98bad2a1c1c2c82e130cad8363ea82955b0f58029900650",
+   "partials": {
+    "6706276f8f24fbc4ec9b95027d2f312740cd2ee45c4e215f2ff54cbf2c0436fc": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "The numbers describe runs of filled squares. What picture could they be drawing?",
+    "Paint by numbers. The picture is written, not drawn."
+   ],
+   "length": 7
+  },
+  {
+   "id": 6,
+   "title": "Taproot",
+   "flavor": "Two directions at a time, and never a destination.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "W & SE",
+      "S & NE",
+      "N & W",
+      "S & SW",
+      "SW & S",
+      "NE & SW"
+     ],
+     "inline": true
+    }
+   ],
+   "hash": "8151802dba9ba40b8d2c9907fe8e7cf8be79e2aeac19e828c5278738d1cd0486",
+   "partials": {
+    "589604032875ea96d7a21588cf3d473cd94fd4b4c92cfa0933c863d4612ca81f": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Imagine each of these as a person holding two flags out at arm's length. Sailors had an alphabet for that.",
+    "Flag semaphore: the two hands are the two arms, and each pair of angles is a letter."
+   ],
+   "length": 5
+  },
+  {
+   "id": 7,
+   "title": "Seed Bank",
+   "flavor": "Take stock of everything you recognise.",
+   "blocks": [
+    {
+     "type": "caption",
+     "text": "Hidden in the grid: 11 words to do with the glasshouse."
+    },
+    {
+     "type": "board",
+     "rows": [
+      "TFAELBT",
+      "SMETSUH",
+      "ETTRKLO",
+      "EMOSSBR",
+      "DOOMWAN",
+      "FERNARE",
+      "SPOREKL"
+     ],
+     "plain": true,
+     "words": [
+      "BARK",
+      "BULB",
+      "FERN",
+      "LEAF",
+      "MOSS",
+      "ROOT",
+      "SEED",
+      "SPORE",
+      "STEM",
+      "STOMA",
+      "THORN"
+     ]
+    }
+   ],
+   "hash": "78a9436a5870222e1f0b29b4bee6f77a72c6f5ec0f1520d44ede60ad2cadbb64",
+   "partials": {
+    "61a202cbcbaab6c22d4ecf3dc4103d48cfe69a511bdec17894c6c3255b1c6747": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Once every theme word is found, is anything left unclaimed? Read it in order.",
+    "Find the theme words; the letters no word uses, read row by row, are the answer.",
+    "The hidden words are: BARK, BULB, FERN, LEAF, MOSS, ROOT, SEED, SPORE, STEM, STOMA, THORN."
+   ],
+   "length": 6
+  },
+  {
+   "id": 8,
+   "title": "Hothouse",
+   "flavor": "No duplicates anywhere.",
+   "blocks": [
+    {
+     "type": "sudoku",
+     "size": 9,
+     "rows": [
+      ".E.......",
+      "O..X...P.",
+      "L....U.T.",
+      "AX......E",
+      "...P.....",
+      "..UYX....",
+      "X..UL...Y",
+      "..O..A.LX",
+      "....E..U."
+     ],
+     "alphabet": "AELOPTUXY",
+     "marks": [
+      [
+       5,
+       8
+      ],
+      [
+       2,
+       3
+      ],
+      [
+       5,
+       0
+      ],
+      [
+       0,
+       3
+      ],
+      [
+       5,
+       5
+      ],
+      [
+       0,
+       8
+      ]
+     ]
+    }
+   ],
+   "hash": "61b1176cc1c963ff0f409b01958cb853e1e146a8256fd2593791c15d9ebed47c",
+   "partials": {
+    "54a74773ac7c2f8669c1f5fb01d01abf4db3cefd25df9f0e3271479a9a2a6bc8": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "A familiar grid puzzle in unfamiliar clothes. Once it's done, are some squares more important than others?",
+    "Solve it like a sudoku, then read the numbered squares in order."
+   ],
+   "length": 5
+  }
+ ],
+ "meta": {
+  "title": "Meta: The Glasshouse",
+  "flavor": "Count heads at the gangway.",
+  "blocks": [],
+  "length": 8,
+  "hash": "45a65cc5f44c382585bf7f01a819163e7932365387946eff3cd0a3aedb907604",
+  "hints": [
+   "Did every answer come out the right size the first time? Each had one letter too many. Did you keep them?",
+   "Take the extra letter from each feeder, in puzzle order."
+  ]
+ },
+ "described": true
+}

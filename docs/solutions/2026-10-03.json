@@ -1,0 +1,55 @@
+{
+ "date": "2026-10-03",
+ "number": 7,
+ "difficulty": "hard",
+ "final": "CODON",
+ "metaType": "mutation",
+ "explain": "Each feeder decodes to its answer with a single wrong letter. Those substituted letters, in puzzle order, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Central Dogma",
+   "answer": "GAMETE",
+   "mechanism": "Braille as bit strings",
+   "transform": "Atbash (A↔Z mirror)",
+   "encoded": "TZXVGV",
+   "mutated": "GACETE"
+  },
+  {
+   "id": 2,
+   "title": "Knockout",
+   "answer": "REPLICATION",
+   "mechanism": "Hex colour ASCII",
+   "transform": null,
+   "encoded": "REPLICATIOO",
+   "mutated": "REPLICATIOO"
+  },
+  {
+   "id": 3,
+   "title": "Point Mutation",
+   "answer": "PEPTIDE",
+   "mechanism": "DTMF multi-tap",
+   "transform": null,
+   "encoded": "PEPTIDD",
+   "mutated": "PEPTIDD"
+  },
+  {
+   "id": 4,
+   "title": "Reading Frame",
+   "answer": "GUANINE",
+   "mechanism": "Mixed number bases",
+   "transform": "Reversal",
+   "encoded": "EOINAUG",
+   "mutated": "GUANIOE"
+  },
+  {
+   "id": 5,
+   "title": "Silent Substitution",
+   "answer": "SEQUENCE",
+   "mechanism": "Nonogram",
+   "transform": null,
+   "encoded": "SEQUENNE",
+   "mutated": "SEQUENNE"
+  }
+ ]
+}

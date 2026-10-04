@@ -1,0 +1,73 @@
+{
+ "date": "2026-10-03",
+ "number": 7,
+ "difficulty": "medium",
+ "final": "CHIMERA",
+ "metaType": "fitin",
+ "explain": "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Reading Frame",
+   "answer": "PETRIDISH",
+   "mechanism": "Baconian cipher",
+   "transform": null,
+   "encoded": "PETRIDISH",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Knockout",
+   "answer": "CHROMOSOME",
+   "mechanism": "Anagrams with an extra letter",
+   "transform": null,
+   "encoded": "CHROMOSOME",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Wild Type",
+   "answer": "PRIMER",
+   "mechanism": "DTMF multi-tap (audio)",
+   "transform": "Atbash (A↔Z mirror)",
+   "encoded": "KIRNVI",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Central Dogma",
+   "answer": "MITOCHONDRIA",
+   "mechanism": "Scrambled sentence",
+   "transform": null,
+   "encoded": "MITOCHONDRIA",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Primer Dimer",
+   "answer": "PLASMID",
+   "mechanism": "Book cipher",
+   "transform": null,
+   "encoded": "PLASMID",
+   "mutated": null
+  },
+  {
+   "id": 6,
+   "title": "Backup Copy",
+   "answer": "CLONE",
+   "mechanism": "Drop quote",
+   "transform": null,
+   "encoded": "CLONE",
+   "mutated": null
+  },
+  {
+   "id": 7,
+   "title": "Stop Codon",
+   "answer": "HELICASE",
+   "mechanism": "Missing letters",
+   "transform": null,
+   "encoded": "HELICASE",
+   "mutated": null
+  }
+ ]
+}
