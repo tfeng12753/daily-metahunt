@@ -1,0 +1,55 @@
+{
+ "date": "2026-10-04",
+ "number": 8,
+ "difficulty": "hard",
+ "final": "TERRARIUM",
+ "metaType": "initials",
+ "explain": "The ciphertext is Vigenère-encrypted with the first letters of the feeder answers (in puzzle order) as the key.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Taproot",
+   "answer": "STEM",
+   "mechanism": "Knight's path",
+   "transform": "Atbash (A↔Z mirror)",
+   "encoded": "HGVN",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Latin Names",
+   "answer": "PETAL",
+   "mechanism": "Drop quote",
+   "transform": null,
+   "encoded": "PETAL",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Seed Bank",
+   "answer": "CHLOROPHYLL",
+   "mechanism": "Shredded sentence",
+   "transform": null,
+   "encoded": "CHLOROPHYLL",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Deadheading",
+   "answer": "XYLEM",
+   "mechanism": "Semaphore (compass bearings)",
+   "transform": "Atbash (A↔Z mirror)",
+   "encoded": "CBOVN",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Bolting",
+   "answer": "SAP",
+   "mechanism": "Cryptogram (cluephrase)",
+   "transform": null,
+   "encoded": "SAP",
+   "mutated": null
+  }
+ ]
+}

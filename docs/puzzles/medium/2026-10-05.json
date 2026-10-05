@@ -1,0 +1,264 @@
+{
+ "date": "2026-10-05",
+ "difficulty": "medium",
+ "salt": "2026-10-05/medium",
+ "number": 9,
+ "round": "Capture The Flag",
+ "intro": "The honeypot caught something at 03:14. It was not an attacker. It was a message, split across every protocol the intruder could find, and the red team have been pulling it apart since first light. Seven feeds, seven fragments, each one decoded and laid out on the bench under the humming racks. No two fragments look alike, but each sits oddly in the hand, a perfect fit except for one letter that seems to have been slipped in where it does not belong. The night shift kept a log of what they found, taping each decoded scrap to the wall above the server racks in the order it came in; the extra letters, one per scrap, are all still there, waiting to be lifted off and read in sequence. The message was never in any single protocol at all. It was in the leftovers.",
+ "echo": "The intruder didn't just get in. They moved in, and hid the furniture.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Privilege Escalation",
+   "flavor": "Everyone moved along by the same number of seats.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "AQWT CPUYGT HQT VJKU RWBBNG KU DQTVPGV DWV FQ PQV VGNN VJG QVJGTU JQY AQW IQV KV",
+     "wide": true,
+     "solver": "substitution"
+    }
+   ],
+   "hash": "ce57dc4ff488094d5adc038ed359d64801b6f16df6a451da308bde901e37c091",
+   "partials": {
+    "45200befecc667d052285177f65ed8837907a2925cb42ff792410a7f6f4f538c": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Try moving every letter the same distance. How far turns the short words into English?",
+    "A Caesar shift: find the one shift that fixes a short word, then apply it everywhere."
+   ],
+   "length": 6
+  },
+  {
+   "id": 2,
+   "title": "Rubber Ducky",
+   "flavor": "The spy always carried a novel. This page will have to do.",
+   "blocks": [
+    {
+     "type": "prose",
+     "text": "The honeypot caught something at 03:14. It was not an attacker. It was a message, split across every protocol the intruder could find.",
+     "paper": true
+    },
+    {
+     "type": "list",
+     "items": [
+      "2.6",
+      "11.4",
+      "9.3",
+      "3.1",
+      "17.4",
+      "20.2"
+     ],
+     "inline": true
+    }
+   ],
+   "hash": "0513297a2e7582a821353e5ac748ea7f028a3a1fdebcc2a81a4a92be73675d0f",
+   "partials": {
+    "0b9711ad4ede474ae52918111903aa5234a794e0461ae109e2a02adc85808500": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "The first number in each pair never goes past the number of words on the page. What does the second count?",
+    "The first number finds a word on the page; the second finds a letter in it."
+   ],
+   "length": 5
+  },
+  {
+   "id": 3,
+   "title": "Air Gap",
+   "flavor": "Fenced in, and copied out in a hurry.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "STTIE HLOHO LHDHO ELNHW GAPEF RTEDV FOOLI NFLTT RNNSA EGTWR ERWUS AOODS EOO",
+     "wide": true,
+     "rails": 4
+    }
+   ],
+   "hash": "2f4b785ae6f62776816e8c1e0265d16ff6ff6b9123cef23a09a4a0b35afdb015",
+   "partials": {
+    "c5ec33b1c38d9b8aa5754ad25bb2f25aa189c992950ac30542fed14164d23b44": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "All the right letters are here, just out of order. Could they have been written along a path that goes up and down?",
+    "Rail fence: written in a zigzag over a few rows, then copied out row by row. Try two to five rows."
+   ],
+   "length": 8
+  },
+  {
+   "id": 4,
+   "title": "Zero Day",
+   "flavor": "Each column remembers what it held, but not in what order.",
+   "blocks": [
+    {
+     "type": "dropquote",
+     "cols": [
+      "NN",
+      "FIOPY",
+      "AABOS",
+      "CNOR",
+      "DEJK",
+      "ESUY",
+      "OSTT",
+      "EOTT",
+      "TX",
+      "GHOP",
+      "EEEN",
+      "CET",
+      "PT",
+      "ERTW",
+      "DHIO",
+      "IRZ",
+      "ADES"
+     ],
+     "mask": [
+      "......#........#.",
+      ".....#..#...#....",
+      "#...#..#...#.....",
+      "#..#....#...#....",
+      "#.......#########"
+     ]
+    }
+   ],
+   "hash": "53a14cdd7fdfdcdfc31b8f883a9e5b5be4913e3688b9194f21c8c5803f2bb257",
+   "partials": {
+    "5a767cb7a7bcd147d0d8457ddbc453bd0f7ca4e65f1bf3b82c5c97687fec855a": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Black squares are spaces. Which two- and three-letter words fit, using only the letters each column allows?",
+    "Each column's letters drop into that column of the grid; cross them off as you place them. The sentence tells you what to submit."
+   ],
+   "length": 6
+  },
+  {
+   "id": 5,
+   "title": "Dead Drop",
+   "flavor": "Everyone here counts differently. The little number says how.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "13₁₆",
+      "33₆",
+      "2₄",
+      "15₉",
+      "5₇",
+      "110₄",
+      "21₅"
+     ],
+     "inline": true
+    }
+   ],
+   "hash": "5c23b7f65a4f1e7729de45bb75652588142ce3c82be274b033ccda413fa3c5b5",
+   "partials": {
+    "7337fc06daa4741d7daec5f6fb1defae7fcb4350f4cd3c4946bbc2ccd0771173": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "The subscript is a base. Once everything is in ordinary decimal, what range are the numbers in?",
+    "Convert each one to base ten; each is a letter position (A = 1)."
+   ],
+   "length": 6
+  },
+  {
+   "id": 6,
+   "title": "Salted Hash",
+   "flavor": "Every part here resists a little, and never more than twenty-six. Unlucky for some: the letters were all nudged by the same unlucky amount.",
+   "blocks": [
+    {
+     "type": "resistors",
+     "items": [
+      [
+       "black",
+       "blue",
+       "black",
+       "gold"
+      ],
+      [
+       "brown",
+       "yellow",
+       "black",
+       "gold"
+      ],
+      [
+       "black",
+       "brown",
+       "black",
+       "gold"
+      ],
+      [
+       "red",
+       "red",
+       "black",
+       "gold"
+      ],
+      [
+       "brown",
+       "violet",
+       "black",
+       "gold"
+      ],
+      [
+       "brown",
+       "green",
+       "black",
+       "gold"
+      ],
+      [
+       "black",
+       "red",
+       "black",
+       "gold"
+      ],
+      [
+       "brown",
+       "brown",
+       "black",
+       "gold"
+      ]
+     ]
+    }
+   ],
+   "hash": "2e7b4360c422522dddbd39a2beadce234fcc0c14749f9545a9c7666575f89ce4",
+   "partials": {
+    "93ede7eaf66eee1987bd9abc5fa283c7f371009ed99b727da99c2be27f36e31f": "You've decoded it, but it's not finished. One more layer.",
+    "70c10fd4f02f47ad3d61e80bea68ae452e3b5c12cc4de8741d1dbd234f1c1305": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Engineers read stripes like these as numbers. What number does each part give, and what is a number up to 26? And if what you get still isn't a word, reread the flavour text.",
+    "Resistor colour code: the first two bands are two digits; that number is a letter position. Then one more layer: Shift every letter 13 places (A↔N)."
+   ],
+   "length": 7
+  },
+  {
+   "id": 7,
+   "title": "Side Channel",
+   "flavor": "The words are nonsense. The typesetting isn't.",
+   "blocks": [
+    {
+     "type": "prose",
+     "text": "ciPher KErNEl hANdshAkE pasSWOrd roUTER PhiSH pHish cERTifICaTe."
+    }
+   ],
+   "hash": "9dc99e91ae8fdd5bb7f16de02cdb06ebd4642894cd06d4713f1bf24a67ba4e87",
+   "partials": {
+    "8608952291541a47d7009c692c5faef0c7ea8dd4bbbab788837434eb910d403e": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Two kinds of letter, big and small. How many of them would you need to spell twenty-six different things?",
+    "Baconian cipher: groups of five, lowercase = a, uppercase = b; aaaaa is A."
+   ],
+   "length": 10
+  }
+ ],
+ "meta": {
+  "title": "Meta: Capture The Flag",
+  "flavor": "Count heads at the gangway.",
+  "blocks": [],
+  "length": 7,
+  "hash": "46ab3c929e33f025051e769768ff0e64d0003609db670fd3684fd4601e4b9e42",
+  "hints": [
+   "Did every answer come out the right size the first time? Each had one letter too many. Did you keep them?",
+   "Take the extra letter from each feeder, in puzzle order."
+  ]
+ },
+ "described": true
+}

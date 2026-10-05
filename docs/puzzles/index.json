@@ -1,5 +1,5 @@
 {
- "latest": "2026-10-04",
+ "latest": "2026-10-05",
  "puzzles": [
   {
    "date": "2026-09-27",
@@ -90,6 +90,18 @@
     "hard": 5,
     "medium": 8,
     "easy": 5
+   },
+   "medium": true,
+   "easy": true
+  },
+  {
+   "date": "2026-10-05",
+   "number": 9,
+   "round": "Capture The Flag",
+   "count": {
+    "hard": 8,
+    "medium": 7,
+    "easy": 7
    },
    "medium": true,
    "easy": true

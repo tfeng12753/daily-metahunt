@@ -1,0 +1,302 @@
+{
+ "date": "2026-10-05",
+ "difficulty": "hard",
+ "salt": "2026-10-05",
+ "number": 9,
+ "round": "Capture The Flag",
+ "intro": "The honeypot caught something at 03:14. It was not an attacker. It was a message, split across every protocol the intruder could find.",
+ "echo": "Leave something sweet out, and watch who comes to take it.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Null Byte",
+   "flavor": "Shredded, then sorted by a very tidy intern.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "ARS",
+      "ASS",
+      "D",
+      "DPH",
+      "ECT",
+      "EDA",
+      "EPR",
+      "EXP",
+      "ISF",
+      "ISJ",
+      "IZE",
+      "NET",
+      "NOB",
+      "NYO",
+      "ODY",
+      "OGE",
+      "ONE",
+      "OTH",
+      "TTH",
+      "UST",
+      "WOR",
+      "WOR"
+     ],
+     "inline": true,
+     "tiles": true
+    },
+    {
+     "type": "prose",
+     "text": "Word lengths: (6 8 6 2 3 4 3 2 3 5 2 4 3 4 9)"
+    }
+   ],
+   "hash": "74fc97fe6c3cb03f35fd85ae67d4573c0ff540d30102c0c6fbcb21dc5674bd56",
+   "partials": {
+    "ec6943fbd6b8784057f7883dc319c3184de3c93672adb4682ae33e73b81e6da4": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "The strips are alphabetised, not in order. The word lengths say where the breaks fall. Which strip could start the sentence?"
+   ]
+  },
+  {
+   "id": 2,
+   "title": "Air Gap",
+   "flavor": "Two directions at a time, and never a destination.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "S & NE",
+      "SE & SW",
+      "S & NW",
+      "W & E",
+      "NW & E",
+      "N & W",
+      "N & NW",
+      "SW & NW",
+      "NW & W",
+      "NW & W",
+      "SE & SW"
+     ],
+     "inline": true
+    }
+   ],
+   "hash": "d44df12c5b829e43f5dfe867145b1670a0bbb3929db926c93453e58a370004fe",
+   "partials": {
+    "ec8f4db08fc25ba0dcc83836d9ae5092bf1d572e0b9e3d743de6b95c9cecb067": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Imagine each of these as a person holding two flags out at arm's length. Sailors had an alphabet for that."
+   ]
+  },
+  {
+   "id": 3,
+   "title": "Cold Boot",
+   "flavor": "Fences and corners; some have an animal inside. Half a turn of the wheel and you'd have it.",
+   "blocks": [
+    {
+     "type": "pigpen",
+     "items": [
+      {
+       "g": "hash",
+       "p": 1,
+       "dot": false
+      },
+      {
+       "g": "hash",
+       "p": 8,
+       "dot": false
+      },
+      {
+       "g": "hash",
+       "p": 8,
+       "dot": true
+      },
+      {
+       "g": "hash",
+       "p": 0,
+       "dot": false
+      },
+      {
+       "g": "hash",
+       "p": 4,
+       "dot": false
+      },
+      {
+       "g": "x",
+       "p": 0,
+       "dot": false
+      },
+      {
+       "g": "x",
+       "p": 2,
+       "dot": true
+      },
+      {
+       "g": "hash",
+       "p": 1,
+       "dot": false
+      },
+      {
+       "g": "hash",
+       "p": 0,
+       "dot": true
+      }
+     ]
+    }
+   ],
+   "hash": "3fe968b3f51086aed5f092816ab6feac2dc1e52e1bf1e256237d74045c0efbbf",
+   "partials": {
+    "3ee066e40d7d306b1810910fe677a0f47376fdc4717ae8fb42a5b63480067837": "You've decoded it, but it's not finished. One more layer.",
+    "589da8cf13bce478f80c48f0039dac5f9cb2c89f4038d8a3b591fa9f827a6b16": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Picture the alphabet written into a couple of #-grids and X-grids. Which cell would each shape be? And if what you get still isn't a word, reread the flavour text."
+   ]
+  },
+  {
+   "id": 4,
+   "title": "Heap Spray",
+   "flavor": "The spaces, at least, are honest.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "PWDH HWQ BKOEYQE BDEEYQI PDG LKH ZKUI KE GQBEQHG NOH D GYLZUQ PKEI WQDLIGWDRQ",
+     "wide": true,
+     "solver": "substitution"
+    }
+   ],
+   "hash": "ab37617c5ed2afd1060c581906a1411e0ccbaa05fe62f60e19b4db5e36c58ffd",
+   "partials": {
+    "47af5cc22e3087e5fcbf3f97a5ee0b829fe377bf208b6c22ba753b6a088a34ed": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Which short words are most common in English? Could any of them be hiding here?"
+   ]
+  },
+  {
+   "id": 5,
+   "title": "Rainbow Table",
+   "flavor": "Nothing is missing. Nothing is where it was.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "DNEHDI",
+      "SSYA",
+      "ASW",
+      "PLSYMI",
+      "AOLGN",
+      "HGSTI",
+      "TEH",
+      "SMSEEAG",
+      "NI",
+      "APNIL",
+      "FCUTRRYBEOE",
+      "LLA",
+      "DAN",
+      "TI"
+     ],
+     "inline": true,
+     "tray": "word"
+    }
+   ],
+   "hash": "de5d60cbf51de142612182d151e937aa02fe7d8f33e08c88ca44c99e2da56eca",
+   "partials": {
+    "05488f959feae121e7b6ec23f82bcb81d84163ab8ec06c7e3968c347d3369c06": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Each word is complete but shuffled. Start with the shortest ones: does a sentence appear?"
+   ]
+  },
+  {
+   "id": 6,
+   "title": "Rubber Ducky",
+   "flavor": "Every answer is small, and none is bigger than it needs to be.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "Lines in a villanelle",
+      "Moons orbiting Earth",
+      "Days in a fortnight",
+      "Suits in a deck of cards",
+      "Pawns on a chessboard at the start of a game",
+      "Wheels on a bicycle",
+      "Red balls racked at the start of a snooker frame",
+      "Hours in a day"
+     ],
+     "ordered": true,
+     "tray": "letter"
+    }
+   ],
+   "hash": "25771b5a93223091a02b766cc57fa6a4560a3e106e1fa0b23e76dacf5440e010",
+   "partials": {
+    "eb25749f0802c45bdf761c93648d682b47c7b8e9d12eb3cc268ca48f855593e6": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Every line has a number for an answer. Could those numbers be counting through something else?"
+   ]
+  },
+  {
+   "id": 7,
+   "title": "Dead Drop",
+   "flavor": "Dressed overall, and saying far more than hello. Something in here has been through the looking glass.",
+   "blocks": [
+    {
+     "type": "flags",
+     "items": [
+      "H",
+      "K",
+      "B",
+      "L",
+      "D",
+      "Z",
+      "I",
+      "V"
+     ]
+    }
+   ],
+   "hash": "1196e67d510014043418693c9c05da96818463cb57faf4f69ba11588cdc33e60",
+   "partials": {
+    "0e12f466dc3bed022a9a1008ddbc63f1efff6b279184a27453482da41ce27671": "You've decoded it, but it's not finished. One more layer.",
+    "569c6f00a3667e4491155e6cc1efbb3848a57c2e61f8e997e566218b476341db": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Ships carry a flag for every letter of the alphabet. Do you know them? And if what you get still isn't a word, reread the flavour text."
+   ]
+  },
+  {
+   "id": 8,
+   "title": "Man In The Middle",
+   "flavor": "Heard over the radio from the other side of the glass.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "Kilo",
+      "Zulu",
+      "X-ray",
+      "Papa",
+      "Victor",
+      "Golf",
+      "Golf"
+     ]
+    }
+   ],
+   "hash": "b642a3c8899f63857255b24f75bf94678453265dae5c497bd435c598ba4ada9b",
+   "partials": {
+    "4e508baadb04c2213d3ebd08c318302d8c06bff7f6923a31576cb2205e2ba076": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Each word stands for a letter, the way radio operators spell. Do those letters read? If not, try the alphabet backwards."
+   ]
+  }
+ ],
+ "meta": {
+  "title": "Meta: Capture The Flag",
+  "flavor": "Everything arrived a little heavier than it left.",
+  "blocks": [],
+  "length": 8,
+  "hash": "c0d4fa108a35f509c0d66995f4fa2c8136bed41512d53fce5bbe5b56c109b8b1",
+  "hints": [
+   "Did every answer come out the right size the first time? Each had one letter too many. Did you keep them?"
+  ]
+ }
+}

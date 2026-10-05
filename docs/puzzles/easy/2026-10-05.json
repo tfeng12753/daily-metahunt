@@ -1,0 +1,290 @@
+{
+ "date": "2026-10-05",
+ "difficulty": "easy",
+ "salt": "2026-10-05/easy",
+ "number": 9,
+ "round": "Capture The Flag",
+ "intro": "The honeypot caught something at 03:14. It was not an attacker. It was a message, split across every protocol the intruder could find, and by the time the red team peeled the headers off, seven fragments had surfaced, each one its own little artefact. They pinned the fragments to the corkboard above the server racks, and as the night wore on the fragments began to sort themselves into neat horizontal bands, each one settling into the only row whose width it could possibly fill. One of the interns shaded in a few squares as a joke and then went very quiet, because the marks ran down the board like a ladder and, read top to bottom, spelled something nobody had ever typed. Nobody had sent anything at all, the lead said slowly, the board sent it. The red team stared at the grid of protocols and fragments and realised the answers had been arranging the sender all along.",
+ "echo": "Software with bad intentions, which is all its name means.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Rainbow Table",
+   "flavor": "Three letters to a strip. The strips are in order; the sentence isn't.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "AKE",
+      "AND",
+      "AYS",
+      "DDE",
+      "DSH",
+      "EWA",
+      "HAN",
+      "IGH",
+      "IMP",
+      "INS",
+      "ITS",
+      "LAL",
+      "LYS",
+      "MES",
+      "NIN",
+      "ONG",
+      "PLA",
+      "SAG",
+      "SHI",
+      "TAL",
+      "THE"
+     ],
+     "inline": true,
+     "tiles": true
+    },
+    {
+     "type": "prose",
+     "text": "Word lengths: (3 7 3 6 2 5 5 3 5 3 2 6 4 9)"
+    }
+   ],
+   "hash": "4f2c7aea23b4ef58afc1bba3339d6dd809580f7550ee6bef1f44272821e702c9",
+   "partials": {},
+   "hints": [
+    "The sentence was cut into three-letter fragments (spaces removed) and alphabetised. Reassemble it using the word lengths; it tells you the answer.",
+    "To check you're on track: the answer begins with H."
+   ],
+   "technique": "Shredded sentence",
+   "length": 9
+  },
+  {
+   "id": 2,
+   "title": "Cold Boot",
+   "flavor": "Someone wrote this out in a zigzag across four lines of the ledger, then copied each line out in turn.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "TSSNI TOILB OHSAA HEIAN HALND TPYSA OREEG WIDNL SGLAG NSMSY CDMED PILAI AK",
+     "wide": true,
+     "rails": 4
+    }
+   ],
+   "hash": "21b85226750bc3e562f88c4bb2b72d7fe9a1310c399f2d139d9f9d5504dc73d5",
+   "partials": {},
+   "hints": [
+    "Rail-fence transposition of a sentence with the spaces removed. Try 2 to 5 rails; the sentence tells you the answer.",
+    "To check you're on track: the answer begins with B."
+   ],
+   "technique": "Rail fence (cluephrase)",
+   "length": 8
+  },
+  {
+   "id": 3,
+   "title": "Man In The Middle",
+   "flavor": "Scrambled inventory. Each entry picked up one hitchhiker on the way through the machine.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "EPBNSTU",
+      "PHCATR",
+      "NEIMLATRO",
+      "EXRTUOR",
+      "TKAYCEP"
+     ],
+     "ordered": true,
+     "mono": true
+    }
+   ],
+   "hash": "71a4e50bb48262257f714619882e9dbab409e421ced27667f2400aebb040f1c9",
+   "partials": {},
+   "hints": [
+    "Each jumble is an anagram of a word from this round's theme plus one extra letter. The extra letters, in order, spell the answer.",
+    "To check you're on track: the answer begins with P."
+   ],
+   "technique": "Anagrams with an extra letter",
+   "length": 5
+  },
+  {
+   "id": 4,
+   "title": "Heap Spray",
+   "flavor": "A pub quiz where every answer is a count. Keep a tally, then keep counting.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "Continents on a standard world map",
+      "Moons orbiting Earth",
+      "Things in a score",
+      "Sides of a pentagon",
+      "Pairs of chromosomes in a typical human cell",
+      "Wheels on a unicycle",
+      "Years of marriage marked by a silver anniversary"
+     ],
+     "ordered": true,
+     "tray": "letter"
+    }
+   ],
+   "hash": "24095c5ce9ac828165c582ab22026293839544aa138125d4f330f44adfcd7a3b",
+   "partials": {},
+   "hints": [
+    "Each line is a number from 1 to 26. Turn each number into a letter (A = 1, B = 2, …).",
+    "To check you're on track: the answer begins with G."
+   ],
+   "technique": "Number trivia",
+   "length": 7
+  },
+  {
+   "id": 5,
+   "title": "Rubber Ducky",
+   "flavor": "A strip of paper tape, seven holes wide, fed through the teletype in the server room.",
+   "blocks": [
+    {
+     "type": "tape",
+     "rows": [
+      [
+       1,
+       0,
+       1,
+       0,
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       0,
+       0,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       0,
+       1,
+       0,
+       0,
+       1,
+       0
+      ],
+      [
+       1,
+       0,
+       0,
+       1,
+       1,
+       0,
+       1
+      ]
+     ]
+    }
+   ],
+   "hash": "5d8c218a9e1a25a3d80a7f3e271a5dc9eec324ed93808733dd7a8816ed990b0c",
+   "partials": {},
+   "hints": [
+    "Each row of the paper tape is a 7-bit ASCII character (hole = 1, most significant bit on the left).",
+    "To check you're on track: the answer begins with W."
+   ],
+   "technique": "Punched tape",
+   "length": 4
+  },
+  {
+   "id": 6,
+   "title": "Salted Hash",
+   "flavor": "Every flag on this line has a meaning on its own. Together, they have one more.",
+   "blocks": [
+    {
+     "type": "flags",
+     "items": [
+      "C",
+      "E",
+      "R",
+      "T",
+      "I",
+      "F",
+      "I",
+      "C",
+      "A",
+      "T",
+      "E"
+     ]
+    }
+   ],
+   "hash": "a7d2b4474ab490433bdbf7fe95db51cd3ee0f40f38f5e5736f2452a4cc329533",
+   "partials": {},
+   "hints": [
+    "International maritime signal flags, one letter each.",
+    "To check you're on track: the answer begins with C."
+   ],
+   "technique": "Maritime signal flags",
+   "length": 11
+  },
+  {
+   "id": 7,
+   "title": "Side Channel",
+   "flavor": "Paint chips left behind in the server room. The labels matter more than the colours.",
+   "blocks": [
+    {
+     "type": "swatches",
+     "items": [
+      "#4B4552",
+      "#4E454C"
+     ]
+    }
+   ],
+   "hash": "21ce5da4547cdc40c4ee7d82c512d35b223aa6d589d38d7eff2ced32182a0059",
+   "partials": {},
+   "hints": [
+    "Each hex colour code is three ASCII bytes.",
+    "To check you're on track: the answer begins with K."
+   ],
+   "technique": "Hex colour ASCII",
+   "length": 6
+  }
+ ],
+ "meta": {
+  "title": "Meta: Capture The Flag",
+  "flavor": "Everything in the server room has a place, and every place is exactly the right size.",
+  "blocks": [
+   {
+    "type": "fitgrid",
+    "rows": [
+     {
+      "len": 4,
+      "shade": 3
+     },
+     {
+      "len": 8,
+      "shade": 1
+     },
+     {
+      "len": 6,
+      "shade": 5
+     },
+     {
+      "len": 7,
+      "shade": 4
+     },
+     {
+      "len": 11,
+      "shade": 8
+     },
+     {
+      "len": 5,
+      "shade": 1
+     },
+     {
+      "len": 9,
+      "shade": 8
+     }
+    ]
+   }
+  ],
+  "length": 7,
+  "hash": "fc6097fea3d0ad3368f4055ec11fd9c8b30fd6c9b1482a1f1cdf253b0f120983",
+  "hints": [
+   "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+   "To check you're on track: the final answer begins with M."
+  ]
+ },
+ "described": true
+}

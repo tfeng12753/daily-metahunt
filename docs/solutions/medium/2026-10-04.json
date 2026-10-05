@@ -1,0 +1,82 @@
+{
+ "date": "2026-10-04",
+ "number": 8,
+ "difficulty": "medium",
+ "final": "MANDRAKE",
+ "metaType": "stowaway",
+ "explain": "Each feeder decodes to its answer plus one inserted letter. The inserted letters, in puzzle order, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Photoperiod",
+   "answer": "LAVENDER",
+   "mechanism": "Book cipher",
+   "transform": null,
+   "encoded": "LAVEMNDER",
+   "mutated": "LAVEMNDER"
+  },
+  {
+   "id": 2,
+   "title": "Cross-Pollination",
+   "answer": "FOXGLOVE",
+   "mechanism": "Prime indices in Roman numerals",
+   "transform": null,
+   "encoded": "FOXGALOVE",
+   "mutated": "FOXGALOVE"
+  },
+  {
+   "id": 3,
+   "title": "Hardening Off",
+   "answer": "XYLEM",
+   "mechanism": "Cryptogram (cluephrase)",
+   "transform": null,
+   "encoded": "XYLNEM",
+   "mutated": "XYLNEM"
+  },
+  {
+   "id": 4,
+   "title": "Germination",
+   "answer": "SUNFLOWER",
+   "mechanism": "Punched tape",
+   "transform": null,
+   "encoded": "SUNFLOWERD",
+   "mutated": "SUNFLOWERD"
+  },
+  {
+   "id": 5,
+   "title": "Pollinator",
+   "answer": "RHIZOME",
+   "mechanism": "Nonogram",
+   "transform": null,
+   "encoded": "RHIZOMRE",
+   "mutated": "RHIZOMRE"
+  },
+  {
+   "id": 6,
+   "title": "Taproot",
+   "answer": "SEPAL",
+   "mechanism": "Semaphore (compass bearings)",
+   "transform": null,
+   "encoded": "SEPAAL",
+   "mutated": "SEPAAL"
+  },
+  {
+   "id": 7,
+   "title": "Seed Bank",
+   "answer": "TROWEL",
+   "mechanism": "Word search leftovers",
+   "transform": null,
+   "encoded": "TRKOWEL",
+   "mutated": "TRKOWEL"
+  },
+  {
+   "id": 8,
+   "title": "Hothouse",
+   "answer": "PETAL",
+   "mechanism": "Letter sudoku",
+   "transform": null,
+   "encoded": "PETAEL",
+   "mutated": "PETAEL"
+  }
+ ]
+}
