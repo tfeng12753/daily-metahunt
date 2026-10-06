@@ -1,0 +1,73 @@
+{
+ "date": "2026-10-05",
+ "number": 9,
+ "difficulty": "easy",
+ "final": "MALWARE",
+ "metaType": "fitin",
+ "explain": "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Rainbow Table",
+   "answer": "HANDSHAKE",
+   "mechanism": "Shredded sentence",
+   "transform": null,
+   "encoded": "HANDSHAKE",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Cold Boot",
+   "answer": "BACKDOOR",
+   "mechanism": "Rail fence (cluephrase)",
+   "transform": null,
+   "encoded": "BACKDOOR",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Man In The Middle",
+   "answer": "PROXY",
+   "mechanism": "Anagrams with an extra letter",
+   "transform": null,
+   "encoded": "PROXY",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Heap Spray",
+   "answer": "GATEWAY",
+   "mechanism": "Number trivia",
+   "transform": null,
+   "encoded": "GATEWAY",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Rubber Ducky",
+   "answer": "WORM",
+   "mechanism": "Punched tape",
+   "transform": null,
+   "encoded": "WORM",
+   "mutated": null
+  },
+  {
+   "id": 6,
+   "title": "Salted Hash",
+   "answer": "CERTIFICATE",
+   "mechanism": "Maritime signal flags",
+   "transform": null,
+   "encoded": "CERTIFICATE",
+   "mutated": null
+  },
+  {
+   "id": 7,
+   "title": "Side Channel",
+   "answer": "KERNEL",
+   "mechanism": "Hex colour ASCII",
+   "transform": null,
+   "encoded": "KERNEL",
+   "mutated": null
+  }
+ ]
+}

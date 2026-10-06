@@ -1,0 +1,227 @@
+{
+ "date": "2026-10-06",
+ "difficulty": "hard",
+ "salt": "2026-10-06",
+ "number": 10,
+ "round": "The Oracle Is Closed",
+ "intro": "The Pythia has fallen silent at Delphi, and the pilgrims crowd the Sacred Way with questions no longer answered from the laurel-dark vapour. In her place she has left five riddles, each sworn upon a different god, their words carved as firmly as oaths into the temple's trembling stones. The suppliants wander from tripod to tripod, murmuring the verses to the bronze turnovers and the laurel leaves, hoping some hidden breath will turn them into guidance. Before they leave, every traveller presses a small stamped disk of his own mark into the base of the omphalos, as if to leave a part of his name with the silence. Night settles over the Castalian spring, and the unanswered press their ears to the stones, waiting for a meaning to gather itself out of the marks they have made.",
+ "echo": "The journey home took ten years, and every long journey since has borrowed its name.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Nothing In Excess",
+   "flavor": "Three letters to a strip, and a note of how long each word was.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "ASK",
+      "ATS",
+      "AVE",
+      "DTH",
+      "EAN",
+      "ECR",
+      "EPT",
+      "ETI",
+      "FOR",
+      "GEH",
+      "ITS",
+      "ONG",
+      "RET",
+      "RSE",
+      "RYL",
+      "SEC",
+      "SPA",
+      "SPE",
+      "THI",
+      "TIM",
+      "US"
+     ],
+     "inline": true,
+     "tiles": true
+    },
+    {
+     "type": "prose",
+     "text": "Word lengths: (4 4 3 4 3 6 3 1 4 4 4 3 4 6 2 7)"
+    }
+   ],
+   "hash": "1ed3c7e7bf7ad296b6687b1118d7a15decf166bb925244c222317baf8d163096",
+   "partials": {},
+   "hints": [
+    "The strips are alphabetised, not in order. The word lengths say where the breaks fall. Which strip could start the sentence?"
+   ]
+  },
+  {
+   "id": 2,
+   "title": "Twelve Labours",
+   "flavor": "No duplicates anywhere. Unlucky for some, and the same distance either way.",
+   "blocks": [
+    {
+     "type": "sudoku",
+     "size": 9,
+     "rows": [
+      "...VK.CZ.",
+      "..K.F..V.",
+      ".........",
+      "..X......",
+      ".U..C....",
+      ".Z...UXGF",
+      "Z....G..C",
+      "A.....U..",
+      ".F.CV...."
+     ],
+     "alphabet": "ACFGKUVXZ",
+     "marks": [
+      [
+       6,
+       3
+      ],
+      [
+       2,
+       5
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       0,
+       8
+      ],
+      [
+       4,
+       7
+      ]
+     ]
+    }
+   ],
+   "hash": "7a37846871e052f6ef247db59f7630b1d5f0291d788f6310d0dde9a58f2dd813",
+   "partials": {
+    "c40375665ba27a68470f01e7c91e35c367a45e67da9ec50aa31280e73c693802": "You've decoded it, but it's not finished. One more layer."
+   },
+   "hints": [
+    "A familiar grid puzzle in unfamiliar clothes. Once it's done, are some squares more important than others? And if what you get still isn't a word, reread the flavour text."
+   ]
+  },
+  {
+   "id": 3,
+   "title": "Know Thyself",
+   "flavor": "The spaces, at least, are honest.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "OLK ZGWO OLESD OLK TNKFGOTF OMNKR HKJTFK OLK ZESK VKSO RKGR VGW EPGFBW",
+     "wide": true,
+     "solver": "substitution"
+    }
+   ],
+   "hash": "9e1dd3c6c626ac6e242af2c5c2af6f4448c841b91d4a265ab6eff0b73747d563",
+   "partials": {},
+   "hints": [
+    "Which short words are most common in English? Could any of them be hiding here?"
+   ]
+  },
+  {
+   "id": 4,
+   "title": "The Golden Fleece",
+   "flavor": "Everything that belongs is in there somewhere. Some things don't belong.",
+   "blocks": [
+    {
+     "type": "caption",
+     "text": "Somewhere in here: things to do with Delphi."
+    },
+    {
+     "type": "board",
+     "rows": [
+      "PSUEZEG",
+      "SARESSA",
+      "IAREHAS",
+      "RYORTLU",
+      "EANEHTA",
+      "NSSEDAH",
+      "SUESEHT"
+     ],
+     "plain": true,
+     "words": [
+      "ARES",
+      "ATHENA",
+      "ATLAS",
+      "HADES",
+      "HERA",
+      "SIREN",
+      "THESEUS",
+      "TROY",
+      "ZEUS"
+     ]
+    }
+   ],
+   "hash": "521582009e327eace5b4bfaabfa72a03d982bf573894d566250d801f30dffe04",
+   "partials": {},
+   "hints": [
+    "Once every theme word is found, is anything left unclaimed? Read it in order.",
+    "The hidden words are: ARES, ATHENA, ATLAS, HADES, HERA, SIREN, THESEUS, TROY, ZEUS."
+   ]
+  },
+  {
+   "id": 5,
+   "title": "Wine-Dark Sea",
+   "flavor": "A sentence that came loose from its lines.",
+   "blocks": [
+    {
+     "type": "dropquote",
+     "cols": [
+      "EMPRT",
+      "EHTT",
+      "AI",
+      "AIIS",
+      "NSTV",
+      "DEPS",
+      "AHR",
+      "EGSTY",
+      "EEHR",
+      "ACCL",
+      "HORTU",
+      "AELN",
+      "EGSST",
+      "ES",
+      "CFKT",
+      "EIOR"
+     ],
+     "mask": [
+      "....#....#...#..",
+      "..#...#......#..",
+      ".#.#....#....#..",
+      "..#...#....#....",
+      "..#..#........##"
+     ]
+    }
+   ],
+   "hash": "1f1015e03b211d32f08d42f56cd531a2663b53de37529f6a5d8074bb71c918b0",
+   "partials": {},
+   "hints": [
+    "Black squares are spaces. Which two- and three-letter words fit, using only the letters each column allows?"
+   ]
+  }
+ ],
+ "meta": {
+  "title": "Meta: The Oracle Is Closed",
+  "flavor": "The last lock takes every signature at once.",
+  "blocks": [
+   {
+    "type": "mono",
+    "text": "DVGHZTQ",
+    "big": true
+   }
+  ],
+  "length": 7,
+  "hash": "98267c240eb618c7fc754552b45a8f41f3de3d4bfe9442168ca8446cdbd17b72",
+  "hints": [
+   "Blaise de Vigenère needed a key to open this. Has every answer signed its work?"
+  ]
+ },
+ "described": true
+}

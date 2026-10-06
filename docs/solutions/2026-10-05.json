@@ -1,0 +1,82 @@
+{
+ "date": "2026-10-05",
+ "number": 9,
+ "difficulty": "hard",
+ "final": "HONEYPOT",
+ "metaType": "stowaway",
+ "explain": "Each feeder decodes to its answer plus one inserted letter. The inserted letters, in puzzle order, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Null Byte",
+   "answer": "PASSWORD",
+   "mechanism": "Shredded sentence",
+   "transform": null,
+   "encoded": "PHASSWORD",
+   "mutated": "PHASSWORD"
+  },
+  {
+   "id": 2,
+   "title": "Air Gap",
+   "answer": "ENCRYPTION",
+   "mechanism": "Semaphore (compass bearings)",
+   "transform": null,
+   "encoded": "ENCRYPTIOON",
+   "mutated": "ENCRYPTIOON"
+  },
+  {
+   "id": 3,
+   "title": "Cold Boot",
+   "answer": "OVERFLOW",
+   "mechanism": "Pigpen cipher",
+   "transform": "ROT13",
+   "encoded": "BIRAESYBJ",
+   "mutated": "OVENRFLOW"
+  },
+  {
+   "id": 4,
+   "title": "Heap Spray",
+   "answer": "HANDSHAKE",
+   "mechanism": "Cryptogram (cluephrase)",
+   "transform": null,
+   "encoded": "HEANDSHAKE",
+   "mutated": "HEANDSHAKE"
+  },
+  {
+   "id": 5,
+   "title": "Rainbow Table",
+   "answer": "BRUTEFORCE",
+   "mechanism": "Scrambled sentence",
+   "transform": null,
+   "encoded": "BRYUTEFORCE",
+   "mutated": "BRYUTEFORCE"
+  },
+  {
+   "id": 6,
+   "title": "Rubber Ducky",
+   "answer": "SANDBOX",
+   "mechanism": "Number trivia",
+   "transform": null,
+   "encoded": "SANDPBOX",
+   "mutated": "SANDPBOX"
+  },
+  {
+   "id": 7,
+   "title": "Dead Drop",
+   "answer": "SPYWARE",
+   "mechanism": "Maritime signal flags",
+   "transform": "Atbash (A↔Z mirror)",
+   "encoded": "HKBLDZIV",
+   "mutated": "SPYOWARE"
+  },
+  {
+   "id": 8,
+   "title": "Man In The Middle",
+   "answer": "PACKET",
+   "mechanism": "Mirrored NATO",
+   "transform": null,
+   "encoded": "PACKETT",
+   "mutated": "PACKETT"
+  }
+ ]
+}

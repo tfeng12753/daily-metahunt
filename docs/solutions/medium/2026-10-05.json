@@ -1,0 +1,73 @@
+{
+ "date": "2026-10-05",
+ "number": 9,
+ "difficulty": "medium",
+ "final": "ROOTKIT",
+ "metaType": "stowaway",
+ "explain": "Each feeder decodes to its answer plus one inserted letter. The inserted letters, in puzzle order, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Privilege Escalation",
+   "answer": "BOTNET",
+   "mechanism": "Caesar shift",
+   "transform": null,
+   "encoded": "BORTNET",
+   "mutated": "BORTNET"
+  },
+  {
+   "id": 2,
+   "title": "Rubber Ducky",
+   "answer": "PATCH",
+   "mechanism": "Book cipher",
+   "transform": null,
+   "encoded": "PATCOH",
+   "mutated": "PATCOH"
+  },
+  {
+   "id": 3,
+   "title": "Air Gap",
+   "answer": "OVERFLOW",
+   "mechanism": "Rail fence (cluephrase)",
+   "transform": null,
+   "encoded": "OVEORFLOW",
+   "mutated": "OVEORFLOW"
+  },
+  {
+   "id": 4,
+   "title": "Zero Day",
+   "answer": "PACKET",
+   "mechanism": "Drop quote",
+   "transform": null,
+   "encoded": "PACKETT",
+   "mutated": "PACKETT"
+  },
+  {
+   "id": 5,
+   "title": "Dead Drop",
+   "answer": "SUBNET",
+   "mechanism": "Mixed number bases",
+   "transform": null,
+   "encoded": "SUBNETK",
+   "mutated": "SUBNETK"
+  },
+  {
+   "id": 6,
+   "title": "Salted Hash",
+   "answer": "SANDBOX",
+   "mechanism": "Resistor colour bands",
+   "transform": "ROT13",
+   "encoded": "FNAVQOBK",
+   "mutated": "SANIDBOX"
+  },
+  {
+   "id": 7,
+   "title": "Side Channel",
+   "answer": "ENCRYPTION",
+   "mechanism": "Baconian cipher",
+   "transform": null,
+   "encoded": "ENTCRYPTION",
+   "mutated": "ENTCRYPTION"
+  }
+ ]
+}

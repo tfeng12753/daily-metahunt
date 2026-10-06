@@ -1,0 +1,245 @@
+{
+ "date": "2026-10-06",
+ "difficulty": "easy",
+ "salt": "2026-10-06/easy",
+ "number": 10,
+ "round": "The Oracle Is Closed",
+ "intro": "The smoke has ceased to curl from the tripod, and the Pythia's voice has gone out as though the gods had sealed her lips. In her place, six riddles lie in the laurel-coir, each sworn by a different god and each demanding a word that matches its oath. Pilgrims shuffle in from the road, some with barley, some with tears, all hoping the silence is a trial rather than a verdict. Old Croesus of the temple says the answers will not answer alone: set them upon the long stone the way a mason sets blocks, and the letters the gods have scratched out will begin to speak. Until then the omphalos gleams, unmarked, and the faithful wait for a sign that is not a prophecy but a reading.",
+ "echo": "At Delphi, a priestess breathed the vapours and answered only in riddles.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "The Golden Fleece",
+   "flavor": "Samuel would have recognised the rhythm at once, whatever it happened to be wearing.",
+   "blocks": [
+    {
+     "type": "glyphs",
+     "groups": [
+      "🔱⚡",
+      "⚡",
+      "🔱⚡🔱🔱",
+      "🔱⚡",
+      "🔱🔱🔱"
+     ],
+     "legend": [
+      "🔱",
+      "⚡"
+     ]
+    }
+   ],
+   "hash": "193ec1402d4b7ea6cdb1c4d7dde6ece4fc0f41b772303978199d68c49c9c4804",
+   "partials": {},
+   "hints": [
+    "Morse code: two symbols stand for dot and dash; gaps separate letters.",
+    "To check you're on track: the answer begins with A."
+   ],
+   "technique": "Morse code",
+   "length": 5
+  },
+  {
+   "id": 2,
+   "title": "Tartarus",
+   "flavor": "Find them all. The letters nobody used are the only ones that were talking to you.",
+   "blocks": [
+    {
+     "type": "caption",
+     "text": "Hidden in the grid: 9 words to do with Delphi (lengths 4, 4, 4, 5, 6, 6, 6, 6, 6), running in any direction."
+    },
+    {
+     "type": "board",
+     "rows": [
+      "SATHENA",
+      "ICYYORT",
+      "RATRAPS",
+      "EICARUS",
+      "NCRLEOP",
+      "MEDUSAS",
+      "HHERMES"
+     ],
+     "plain": true,
+     "words": [
+      "ARES",
+      "ATHENA",
+      "HERA",
+      "HERMES",
+      "ICARUS",
+      "MEDUSA",
+      "SIREN",
+      "SPARTA",
+      "TROY"
+     ]
+    }
+   ],
+   "hash": "76e37cb042192558f5203f0b4144d349c404f7afb649e0eba977045b37cf87c2",
+   "partials": {},
+   "hints": [
+    "Find every hidden word (any of 8 directions). The unused letters, read left-to-right, top-to-bottom, spell the answer.",
+    "The hidden words are: ARES, ATHENA, HERA, HERMES, ICARUS, MEDUSA, SIREN, SPARTA, TROY.",
+    "To check you're on track: the answer begins with C."
+   ],
+   "technique": "Word search leftovers",
+   "length": 7
+  },
+  {
+   "id": 3,
+   "title": "Elysian Fields",
+   "flavor": "Every letter here is wearing someone else's coat. The spaces, at least, are honest.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "SN GFK YMU CZMX BESL LZUBZUYZ BEZU GFK EMJZ MOCZMXG NFKUX BEZ MULQZC QESYE SL MYESOOZL",
+     "wide": true,
+     "solver": "substitution"
+    }
+   ],
+   "hash": "2d176b3a82b291ed573adb3092bb89368c314e3750c6aa6c2b5cd5ac21cc3826",
+   "partials": {},
+   "hints": [
+    "Simple monoalphabetic substitution with word breaks kept. Solve the sentence; it tells you the answer.",
+    "To check you're on track: the answer begins with A."
+   ],
+   "technique": "Cryptogram (cluephrase)",
+   "length": 8
+  },
+  {
+   "id": 4,
+   "title": "Pandora's Jar",
+   "flavor": "Up and down, up and down: three rows, one long sentence, and not a single space left.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "TPHET CFVLT AHETE RHSAE AKPIS ERTOA EYOGI ENTAS CEINC AIGST SERRN MDTRS T",
+     "wide": true,
+     "rails": 3
+    }
+   ],
+   "hash": "0a22b3217141bc401587c4d1409def3603e410d5d279f6be4e91dba0ed151faa",
+   "partials": {},
+   "hints": [
+    "Rail-fence transposition of a sentence with the spaces removed. Try 2 to 5 rails; the sentence tells you the answer.",
+    "To check you're on track: the answer begins with N."
+   ],
+   "technique": "Rail fence (cluephrase)",
+   "length": 6
+  },
+  {
+   "id": 5,
+   "title": "Apple Of Discord",
+   "flavor": "The typesetter shook each word like a box of tiles, one word at a time.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "UDSOLH",
+      "ITHS",
+      "ETON",
+      "AFLL",
+      "NOTI",
+      "HTE",
+      "ORWNG",
+      "HNSDA",
+      "ESAPEL",
+      "GOTRFE",
+      "TEH",
+      "DWOR",
+      "SUZE"
+     ],
+     "inline": true,
+     "tray": "word"
+    }
+   ],
+   "hash": "a9db4372d143e1d51899dfe6a7bf7fb960cea6e06cb0316b79de2ab33dc58fd2",
+   "partials": {},
+   "hints": [
+    "Each word of a sentence has had its letters shuffled. Unscramble them; the sentence tells you the answer.",
+    "To check you're on track: the answer begins with Z."
+   ],
+   "technique": "Scrambled sentence",
+   "length": 4
+  },
+  {
+   "id": 6,
+   "title": "Twelve Labours",
+   "flavor": "The typesetter dropped the tray. Every letter landed in the right column, at least.",
+   "blocks": [
+    {
+     "type": "dropquote",
+     "cols": [
+      "EHHTT",
+      "AEEHTY",
+      "DEHPU",
+      "EELS",
+      "DILW",
+      "AANO",
+      "BEPSS",
+      "EET",
+      "FPRW",
+      "AEORT",
+      "HNORT",
+      "EIMOT",
+      "ENR",
+      "DGTT"
+     ],
+     "mask": [
+      "...#....#.....",
+      "#...#........#",
+      ".....#......#.",
+      "..#....#....#.",
+      "...#...#......",
+      "....##########"
+     ]
+    }
+   ],
+   "hash": "de79442160ca0cff6fc5a6252b48a293c8059d82e6743dfde615daf9c04fdef6",
+   "partials": {},
+   "hints": [
+    "A drop quote: each column's letters (shown alphabetised above it) drop into that column of the grid below. Black squares are spaces; words can wrap between rows. The sentence tells you the answer.",
+    "To check you're on track: the answer begins with P."
+   ],
+   "technique": "Drop quote",
+   "length": 10
+  }
+ ],
+ "meta": {
+  "title": "Meta: The Oracle Is Closed",
+  "flavor": "Everything at Delphi has a place, and every place is exactly the right size.",
+  "blocks": [
+   {
+    "type": "fitgrid",
+    "rows": [
+     {
+      "len": 7,
+      "shade": 4
+     },
+     {
+      "len": 10,
+      "shade": 1
+     },
+     {
+      "len": 6,
+      "shade": 4
+     },
+     {
+      "len": 8,
+      "shade": 1
+     },
+     {
+      "len": 5,
+      "shade": 2
+     },
+     {
+      "len": 4,
+      "shade": 1
+     }
+    ]
+   }
+  ],
+  "length": 6,
+  "hash": "19cb060670263557ce1a2504a025a8e65d6392abd34c2af85bb27368fbb55a22",
+  "hints": [
+   "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+   "To check you're on track: the final answer begins with O."
+  ]
+ },
+ "described": true
+}

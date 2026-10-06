@@ -1,0 +1,186 @@
+{
+ "date": "2026-10-06",
+ "difficulty": "medium",
+ "salt": "2026-10-06/medium",
+ "number": 10,
+ "round": "The Oracle Is Closed",
+ "intro": "The Pythia has fallen silent, and in her stead the temple walls bear five riddles, each sealed with its own god's name. Pilgrims murmur that she does not refuse them so much as test them, that the answers she once gave in vapour and trance must now be wrested from stone and leaf and thread. The treasurers keep the temple's records in long cedar drawers, each a small cedar box labelled with a number, and within each box a row of tiny waxed tablets, each tablet marked with a letter pressed into the wax. A scribe passes among the supplicants with a list of the day's consultations, checking off names beside columns of figures, humming. The omphalos, dark and egg-shaped at the centre of the floor, shows no crack, but those who circle it say the old paths still run beneath it, waiting to be followed in the right order.",
+ "echo": "Before the gods there were their parents, and they were very large.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Nothing In Excess",
+   "flavor": "Shaken, one word at a time.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "FI",
+      "OUY",
+      "ANC",
+      "DEAR",
+      "IHTS",
+      "SNENTECE",
+      "ETNH",
+      "YUO",
+      "VEHA",
+      "RAADYEL",
+      "UDFON",
+      "ETH",
+      "WANRES",
+      "HICWH",
+      "SI",
+      "SHHUPSEETA"
+     ],
+     "inline": true,
+     "tray": "word"
+    }
+   ],
+   "hash": "95db3f343a24c2d0e075661dd5f65df0d1da4c95ca56bd5faa2c19ff5b061ca4",
+   "partials": {},
+   "hints": [
+    "Each word is complete but shuffled. Start with the shortest ones: does a sentence appear?",
+    "Unscramble each word where it stands; the sentence tells you what to submit."
+   ],
+   "length": 10
+  },
+  {
+   "id": 2,
+   "title": "The Styx",
+   "flavor": "Everything that belongs is in there somewhere. Some things don't belong.",
+   "blocks": [
+    {
+     "type": "caption",
+     "text": "Hidden in the grid: 10 words to do with Delphi."
+    },
+    {
+     "type": "board",
+     "rows": [
+      "STRIDENT",
+      "SEOLLOPA",
+      "HULSYORT",
+      "EAEUUTNH",
+      "RURSCEND",
+      "MERERRZB",
+      "EOLISEET",
+      "SUSAGEPH"
+     ],
+     "plain": true,
+     "words": [
+      "APOLLO",
+      "ARES",
+      "HERCULES",
+      "HERMES",
+      "PEGASUS",
+      "PERSEUS",
+      "SIREN",
+      "TRIDENT",
+      "TROY",
+      "ZEUS"
+     ]
+    }
+   ],
+   "hash": "14218a6f34a1513d001671149ea97949506555b5a04630340448bb94bc07c8c3",
+   "partials": {},
+   "hints": [
+    "Once every theme word is found, is anything left unclaimed? Read it in order.",
+    "Find the theme words; the letters no word uses, read row by row, are the answer.",
+    "The hidden words are: APOLLO, ARES, HERCULES, HERMES, PEGASUS, PERSEUS, SIREN, TRIDENT, TROY, ZEUS."
+   ],
+   "length": 11
+  },
+  {
+   "id": 3,
+   "title": "Elysian Fields",
+   "flavor": "Typed in the dark, with one hand resting a key out of place.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "MRVYST",
+     "big": true,
+     "shift": 1
+    }
+   ],
+   "hash": "8a7083a9054c4c64439f9432caf4a98399aa17478a1127170fa2bc92dd588fd5",
+   "partials": {},
+   "hints": [
+    "Every letter is close to the right one. Close on what? Look down at your hands.",
+    "QWERTY: every letter was typed one key to the side. Try shifting each one back, both directions."
+   ],
+   "length": 6
+  },
+  {
+   "id": 4,
+   "title": "Know Thyself",
+   "flavor": "Pay attention to how it stands, not what it says.",
+   "blocks": [
+    {
+     "type": "prose",
+     "text": "icARUs aRes PromEtheus."
+    }
+   ],
+   "hash": "8de03bbcad20887435028aebc79fe7c8c860e2688344c00298d2dbc8ec818c7a",
+   "partials": {},
+   "hints": [
+    "Two kinds of letter, big and small. How many of them would you need to spell twenty-six different things?",
+    "Baconian cipher: groups of five, lowercase = a, uppercase = b; aaaaa is A."
+   ],
+   "length": 4
+  },
+  {
+   "id": 5,
+   "title": "Ambrosia",
+   "flavor": "Two forward, one across.",
+   "blocks": [
+    {
+     "type": "board",
+     "rows": [
+      "WSDRGXWR",
+      "OOPQRLZE",
+      "DCEIONSU",
+      "SOBAKBMQ",
+      "WJFVDZXS",
+      "NPWVPUDA",
+      "JVLSXIRU",
+      "YYQXHBGR"
+     ]
+    },
+    {
+     "type": "prose",
+     "text": "The knight sets out from a7: Nc8 Nd6 Nb5 Na3 Nb1 Nd2 Nf3 Nh4."
+    }
+   ],
+   "hash": "3e64ae71bcfcd2c941fb3170a4e6a393b6494a1a36ec08bc3c15a170c55454b2",
+   "partials": {},
+   "hints": [
+    "Those are chess moves. Which squares does the piece land on, and what's written there?",
+    "Start on the given square, play each move, and read the letter on every square it lands on."
+   ],
+   "length": 8
+  }
+ ],
+ "meta": {
+  "title": "Meta: The Oracle Is Closed",
+  "flavor": "Someone underlined a few verses.",
+  "blocks": [
+   {
+    "type": "list",
+    "items": [
+     "Ch. 1 v. 8",
+     "Ch. 5 v. 2",
+     "Ch. 2 v. 1",
+     "Ch. 4 v. 4",
+     "Ch. 3 v. 1"
+    ],
+    "ordered": true
+   }
+  ],
+  "length": 5,
+  "hash": "830bd677a08a2f513c2332c92e29db4acd79b1692e089c920f5d55ad65c95b9f",
+  "hints": [
+   "Every entry has two numbers. What in this round is numbered, and what could the second number count?",
+   "The first number picks a puzzle; the second picks a letter inside its answer."
+  ]
+ },
+ "described": true
+}
