@@ -1,0 +1,55 @@
+{
+ "date": "2026-10-06",
+ "number": 10,
+ "difficulty": "medium",
+ "final": "TITAN",
+ "metaType": "logbook",
+ "explain": "Each entry is (puzzle number, letter number): index into that puzzle's answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Nothing In Excess",
+   "answer": "HEPHAESTUS",
+   "mechanism": "Scrambled sentence",
+   "transform": null,
+   "encoded": "HEPHAESTUS",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "The Styx",
+   "answer": "THUNDERBOLT",
+   "mechanism": "Word search leftovers",
+   "transform": null,
+   "encoded": "THUNDERBOLT",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Elysian Fields",
+   "answer": "NECTAR",
+   "mechanism": "Keyboard shift",
+   "transform": null,
+   "encoded": "NECTAR",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Know Thyself",
+   "answer": "HERA",
+   "mechanism": "Baconian cipher",
+   "transform": null,
+   "encoded": "HERA",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Ambrosia",
+   "answer": "DIONYSUS",
+   "mechanism": "Knight's path",
+   "transform": null,
+   "encoded": "DIONYSUS",
+   "mutated": null
+  }
+ ]
+}

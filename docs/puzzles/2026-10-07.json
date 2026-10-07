@@ -1,0 +1,471 @@
+{
+ "date": "2026-10-07",
+ "difficulty": "hard",
+ "salt": "2026-10-07",
+ "number": 11,
+ "round": "Valley Of The Kings",
+ "intro": "The excavators broke the seal on a tomb that appears on no dynasty list, its entrance hidden behind a false wall of limestone that had withstood the attentions of tomb robbers for millennia. Every chamber they cleared was empty but for a single inscription, carved in a script that is not quite hieroglyphic, its signs shifting shape when the lamplight moved across them. The head scribe was a creature of habit, pressing his personal seal at the head of every record before setting quill to papyrus. Dust lay thick on the flagstones, and the air tasted of old incense and the dry rubs of linen wrappings. Somewhere in the dark, a sealed door that an early survey had missed clicked shut behind them, and the torches guttered as if the tomb itself had drawn a breath.",
+ "echo": "The title meant only 'great house', but the house was the king.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Canopic Jars",
+   "flavor": "Shaken, one word at a time.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "SMEAEGS",
+      "TI",
+      "PINLA",
+      "SHGIT",
+      "MILYSP",
+      "BISI",
+      "HET",
+      "NAD",
+      "LAOGN",
+      "LAL",
+      "SAW",
+      "EDNHDI",
+      "ASYS",
+      "NI"
+     ],
+     "inline": true,
+     "tray": "word"
+    }
+   ],
+   "hash": "278581ae5c9da565bdef85d9c220b581212182bf3e124406cae3a3240950387e",
+   "partials": {},
+   "hints": [
+    "Each word is complete but shuffled. Start with the shortest ones: does a sentence appear?"
+   ]
+  },
+  {
+   "id": 2,
+   "title": "Solar Barque",
+   "flavor": "Count everything. Then count again, differently. The tape was spooled back onto the wrong reel.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "Lines in a villanelle",
+      "Squares in a noughts-and-crosses grid",
+      "Lines in a villanelle",
+      "Wheels on a unicycle",
+      "Players on a rugby union side"
+     ],
+     "ordered": true,
+     "tray": "letter"
+    }
+   ],
+   "hash": "ff438daf0aab6748920f6ec10201cd42986fef7d26b1bc661bb806f786d7a4bc",
+   "partials": {
+    "f1dbb56689d8247f9b43b9761f299772359b9f84433661e6ee0321a9fd12e4ec": "You've decoded it, but it's not finished. One more layer."
+   },
+   "hints": [
+    "Every line has a number for an answer. Could those numbers be counting through something else? And if what you get still isn't a word, reread the flavour text."
+   ]
+  },
+  {
+   "id": 3,
+   "title": "Curse Of The Tomb",
+   "flavor": "Fences and corners; some have an animal inside.",
+   "blocks": [
+    {
+     "type": "pigpen",
+     "items": [
+      {
+       "g": "x",
+       "p": 0,
+       "dot": false
+      },
+      {
+       "g": "hash",
+       "p": 0,
+       "dot": false
+      },
+      {
+       "g": "hash",
+       "p": 8,
+       "dot": true
+      },
+      {
+       "g": "hash",
+       "p": 2,
+       "dot": false
+      },
+      {
+       "g": "hash",
+       "p": 5,
+       "dot": true
+      },
+      {
+       "g": "hash",
+       "p": 6,
+       "dot": true
+      },
+      {
+       "g": "hash",
+       "p": 7,
+       "dot": false
+      },
+      {
+       "g": "hash",
+       "p": 0,
+       "dot": false
+      },
+      {
+       "g": "hash",
+       "p": 6,
+       "dot": false
+      },
+      {
+       "g": "x",
+       "p": 2,
+       "dot": false
+      },
+      {
+       "g": "x",
+       "p": 0,
+       "dot": false
+      }
+     ]
+    }
+   ],
+   "hash": "9697cb8c7cc376083ad6c3ff4594f36012cc3ba9fe3e52dcc7765bc747b8cf32",
+   "partials": {},
+   "hints": [
+    "Picture the alphabet written into a couple of #-grids and X-grids. Which cell would each shape be?"
+   ]
+  },
+  {
+   "id": 4,
+   "title": "Opening Of The Mouth",
+   "flavor": "Only the count of each run was kept. Something in here has been through the looking glass.",
+   "blocks": [
+    {
+     "type": "nonogram",
+     "rows": [
+      [
+       1,
+       1,
+       4,
+       5,
+       5,
+       4,
+       1,
+       4
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       3,
+       1,
+       1,
+       4,
+       1,
+       1,
+       2
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       4,
+       5,
+       5,
+       1,
+       1,
+       5,
+       4
+      ]
+     ],
+     "cols": [
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [],
+      [
+       3
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       3
+      ]
+     ],
+     "givens": [
+      [
+       1,
+       2,
+       0
+      ],
+      [
+       0,
+       3,
+       0
+      ],
+      [
+       4,
+       10,
+       0
+      ],
+      [
+       4,
+       1,
+       0
+      ],
+      [
+       0,
+       0,
+       1
+      ],
+      [
+       1,
+       10,
+       0
+      ],
+      [
+       3,
+       3,
+       1
+      ],
+      [
+       2,
+       4,
+       0
+      ],
+      [
+       2,
+       0,
+       0
+      ]
+     ]
+    }
+   ],
+   "hash": "b280ca4ae05d4a26b13fbcc929a580e9a8195c2450139d65306e987f808527b0",
+   "partials": {
+    "e091fd7cdfc8ab56087555b5497e645bca4de575b85d21e410cdc2421954d960": "You've decoded it, but it's not finished. One more layer."
+   },
+   "hints": [
+    "The numbers describe runs of filled squares. What picture could they be drawing? And if what you get still isn't a word, reread the flavour text."
+   ]
+  },
+  {
+   "id": 5,
+   "title": "The Rosetta Problem",
+   "flavor": "An inventory, tangled. Whoever copied it out was standing in front of a mirror.",
+   "blocks": [
+    {
+     "type": "caption",
+     "text": "Somewhere in here: things to do with the tomb."
+    },
+    {
+     "type": "board",
+     "rows": [
+      "ELEMACIG",
+      "LVATLEDI",
+      "ITRESEDZ",
+      "NEBIRCSA",
+      "THOTHVIN",
+      "OSIRISSK",
+      "MLINENIH",
+      "BWSESMAR"
+     ],
+     "plain": true,
+     "words": [
+      "ANKH",
+      "CAMEL",
+      "DELTA",
+      "DESERT",
+      "GIZA",
+      "ISIS",
+      "LINEN",
+      "NILE",
+      "OSIRIS",
+      "RAMSES",
+      "SCRIBE",
+      "THOTH",
+      "TOMB"
+     ]
+    }
+   ],
+   "hash": "baba292488e501db5464d06093b6eed1ff4774fd6833345e54a76352a1465833",
+   "partials": {
+    "1b79a7815476329bfe701cd5919b227c644069fb66a31ae70f9ba33f5eaa57fc": "You've decoded it, but it's not finished. One more layer."
+   },
+   "hints": [
+    "Once every theme word is found, is anything left unclaimed? Read it in order. And if what you get still isn't a word, reread the flavour text.",
+    "The hidden words are: ANKH, CAMEL, DELTA, DESERT, GIZA, ISIS, LINEN, NILE, OSIRIS, RAMSES, SCRIBE, THOTH, TOMB."
+   ]
+  }
+ ],
+ "meta": {
+  "title": "Meta: Valley Of The Kings",
+  "flavor": "Every report is signed with a single initial. Blaise would know what to do with them.",
+  "blocks": [
+   {
+    "type": "mono",
+    "text": "XVSTRWV",
+    "big": true
+   }
+  ],
+  "length": 7,
+  "hash": "7b76c4f26ced08191859d6aef4627656fc712fb95f392ea1aae03fb7e8b4ac5e",
+  "hints": [
+   "Blaise de Vigenère needed a key to open this. Has every answer signed its work?"
+  ]
+ },
+ "described": true
+}

@@ -1,0 +1,220 @@
+{
+ "date": "2026-10-07",
+ "difficulty": "medium",
+ "salt": "2026-10-07/medium",
+ "number": 11,
+ "round": "Valley Of The Kings",
+ "intro": "The excavators broke the seal on a tomb that appears on no dynasty list. Every chamber is empty except for a single inscription, carved in a script that is not quite hieroglyphic.",
+ "echo": "The beetle rolls its ball across the sand the way Khepri rolls the sun.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Book Of The Dead",
+   "flavor": "Some letters stand tall; most stay low.",
+   "blocks": [
+    {
+     "type": "prose",
+     "text": "ThoTH LuXor TemPLe amuleT NiLe NeFertITI lotus cANopIc NefeRTiTi."
+    }
+   ],
+   "hash": "a869305e42c38c2e5ae1d53f032a4fc00d23d4e89d44569f17b18d0b26717715",
+   "partials": {},
+   "hints": [
+    "Two kinds of letter, big and small. How many of them would you need to spell twenty-six different things?",
+    "Baconian cipher: groups of five, lowercase = a, uppercase = b; aaaaa is A."
+   ],
+   "length": 11
+  },
+  {
+   "id": 2,
+   "title": "The Inundation",
+   "flavor": "Everything fell straight down, and landed in the right column.",
+   "blocks": [
+    {
+     "type": "dropquote",
+     "cols": [
+      "GILT",
+      "DEHHI",
+      "DEOTT",
+      "EP",
+      "AAMNS",
+      "EILT",
+      "ILMRS",
+      "ANPS",
+      "AAL",
+      "GLPY",
+      "ELO",
+      "ANS",
+      "AGIW",
+      "ANY",
+      "ASS",
+      "NS",
+      "CDHI"
+     ],
+     "mask": [
+      "...#.......#...#.",
+      ".....#..#.....#..",
+      "...#...#.....#...",
+      "#..#......#....#.",
+      "........#########"
+     ]
+    }
+   ],
+   "hash": "5e888a225876afdd1b654bc39eeb53d1e558af8a0c9bb8c7894ec261f916741e",
+   "partials": {},
+   "hints": [
+    "Black squares are spaces. Which two- and three-letter words fit, using only the letters each column allows?",
+    "Each column's letters drop into that column of the grid; cross them off as you place them. The sentence tells you what to submit."
+   ],
+   "length": 9
+  },
+  {
+   "id": 3,
+   "title": "Hall Of Records",
+   "flavor": "Only one page survived. It was the only page anyone needed.",
+   "blocks": [
+    {
+     "type": "prose",
+     "text": "The excavators broke the seal on a tomb that appears on no dynasty list. Every chamber is empty except for a single inscription, carved in a script that is not quite hieroglyphic.",
+     "paper": true
+    },
+    {
+     "type": "list",
+     "items": [
+      "24.6",
+      "13.7",
+      "12.1",
+      "10.5",
+      "23.3",
+      "1.1",
+      "13.2"
+     ],
+     "inline": true
+    }
+   ],
+   "hash": "c120f121d5a2e125c72fc063e01ef9272c03e5176b830123f59986706df8a62d",
+   "partials": {},
+   "hints": [
+    "The first number in each pair never goes past the number of words on the page. What does the second count?",
+    "The first number finds a word on the page; the second finds a letter in it."
+   ],
+   "length": 7
+  },
+  {
+   "id": 4,
+   "title": "The Rosetta Problem",
+   "flavor": "Not a single letter on the page, and yet it says something.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "✿♠ ☆☀★ ○♦♪ ♣◇♦✚ ■☂✿♥ ♥◇♪■◇♪○◇ ■☂◇♪ ☆☀★ ☂♦☾◇ ♦□♣◇♦✚☆ ♠☀★♪✚ ■☂◇ ♦♪♥♫◇♣ ♫☂✿○☂ ✿♥ ■☀⚑◆",
+     "wide": true,
+     "solver": "substitution"
+    }
+   ],
+   "hash": "1eceae30947950e04ca1a2e4415de24080c1d123b4f3c88dd07f6956626eba01",
+   "partials": {},
+   "hints": [
+    "Which short words are most common in English? Could any of them be hiding here?",
+    "Each symbol always stands for the same letter. The finished sentence tells you what to submit."
+   ],
+   "length": 4
+  },
+  {
+   "id": 5,
+   "title": "Weighing Of The Heart",
+   "flavor": "An emperor's idea of privacy.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "QEFP MXDB EXP HBMQ FQP PBZOBQ CLO X SBOV ILKD QFJB XKA QEXQ PBZOBQ FP OXJPBP",
+     "wide": true,
+     "solver": "substitution"
+    }
+   ],
+   "hash": "7934a333c7063fcde992a41a07b1863a033acb90ac1ccd04747038a8a8883dde",
+   "partials": {},
+   "hints": [
+    "Try moving every letter the same distance. How far turns the short words into English?",
+    "A Caesar shift: find the one shift that fixes a short word, then apply it everywhere."
+   ],
+   "length": 6
+  },
+  {
+   "id": 6,
+   "title": "False Door",
+   "flavor": "Nothing is missing. Nothing is where it was.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "HTAW",
+      "HET",
+      "IRRCEUO",
+      "DRCAERI",
+      "ASW",
+      "OTN",
+      "DLOG",
+      "RO",
+      "ETCRSES",
+      "UBT",
+      "A",
+      "INGESL",
+      "OWDR",
+      "ACMLE"
+     ],
+     "inline": true,
+     "tray": "word"
+    }
+   ],
+   "hash": "15bee98650c6311bb13c55fe741c22a1c65a941bf2d4aacacc35cb78443c1f04",
+   "partials": {},
+   "hints": [
+    "Each word is complete but shuffled. Start with the shortest ones: does a sentence appear?",
+    "Unscramble each word where it stands; the sentence tells you what to submit."
+   ],
+   "length": 5
+  }
+ ],
+ "meta": {
+  "title": "Meta: Valley Of The Kings",
+  "flavor": "Pigeonholes, each cut to fit one thing only.",
+  "blocks": [
+   {
+    "type": "fitgrid",
+    "rows": [
+     {
+      "len": 7,
+      "shade": 4
+     },
+     {
+      "len": 5,
+      "shade": 0
+     },
+     {
+      "len": 11,
+      "shade": 3
+     },
+     {
+      "len": 6,
+      "shade": 0
+     },
+     {
+      "len": 9,
+      "shade": 8
+     },
+     {
+      "len": 4,
+      "shade": 3
+     }
+    ]
+   }
+  ],
+  "length": 6,
+  "hash": "5652d15df5de77957beb7cc2f9b6f8acc7b72dd9bdafd5e31d973a4373550c9c",
+  "hints": [
+   "The grid's rows are all different lengths. So are your answers.",
+   "Put each answer in the row its length fits; read the shaded squares top to bottom."
+  ]
+ }
+}

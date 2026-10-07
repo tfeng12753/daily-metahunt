@@ -1,0 +1,55 @@
+{
+ "date": "2026-10-06",
+ "number": 10,
+ "difficulty": "hard",
+ "final": "ODYSSEY",
+ "metaType": "initials",
+ "explain": "The ciphertext is Vigenère-encrypted with the first letters of the feeder answers (in puzzle order) as the key.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Nothing In Excess",
+   "answer": "PERSEUS",
+   "mechanism": "Shredded sentence",
+   "transform": null,
+   "encoded": "PERSEUS",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Twelve Labours",
+   "answer": "SPHINX",
+   "mechanism": "Letter sudoku",
+   "transform": "ROT13",
+   "encoded": "FCUVAK",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Know Thyself",
+   "answer": "ICARUS",
+   "mechanism": "Cryptogram (cluephrase)",
+   "transform": null,
+   "encoded": "ICARUS",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "The Golden Fleece",
+   "answer": "PEGASUS",
+   "mechanism": "Word search leftovers",
+   "transform": null,
+   "encoded": "PEGASUS",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Wine-Dark Sea",
+   "answer": "HERCULES",
+   "mechanism": "Drop quote",
+   "transform": null,
+   "encoded": "HERCULES",
+   "mutated": null
+  }
+ ]
+}

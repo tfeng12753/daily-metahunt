@@ -1,0 +1,64 @@
+{
+ "date": "2026-10-06",
+ "number": 10,
+ "difficulty": "easy",
+ "final": "ORACLE",
+ "metaType": "fitin",
+ "explain": "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "The Golden Fleece",
+   "answer": "ATLAS",
+   "mechanism": "Morse code",
+   "transform": null,
+   "encoded": "ATLAS",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Tartarus",
+   "answer": "CYCLOPS",
+   "mechanism": "Word search leftovers",
+   "transform": null,
+   "encoded": "CYCLOPS",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Elysian Fields",
+   "answer": "ACHILLES",
+   "mechanism": "Cryptogram (cluephrase)",
+   "transform": null,
+   "encoded": "ACHILLES",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Pandora's Jar",
+   "answer": "NECTAR",
+   "mechanism": "Rail fence (cluephrase)",
+   "transform": null,
+   "encoded": "NECTAR",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Apple Of Discord",
+   "answer": "ZEUS",
+   "mechanism": "Scrambled sentence",
+   "transform": null,
+   "encoded": "ZEUS",
+   "mutated": null
+  },
+  {
+   "id": 6,
+   "title": "Twelve Labours",
+   "answer": "PROMETHEUS",
+   "mechanism": "Drop quote",
+   "transform": null,
+   "encoded": "PROMETHEUS",
+   "mutated": null
+  }
+ ]
+}

@@ -1,0 +1,232 @@
+{
+ "date": "2026-10-07",
+ "difficulty": "easy",
+ "salt": "2026-10-07/easy",
+ "number": 11,
+ "round": "Valley Of The Kings",
+ "intro": "The excavators broke the seal on a tomb that appears on no dynasty list. Every chamber is empty except for a single inscription, carved in a script that is not quite hieroglyphic, and beside it five smaller marks, each like a finger pointing. The team spent the morning sketching every stroke, and by dusk they agreed the marks read not as words but as directions: each one seemed to say, in its own quiet way, look here, then there, within the work we have already done. One junior archaeologist, still learning the trade, confessed aloud that she kept expecting the tomb to hand her its secret all at once; instead it seemed to want her to collect the answers first, then let each answer give back just one chosen piece. The senior Egyptologist smiled and told her that some tombs do not keep their treasure in the centre, but hide it in the way they ask you to look again.",
+ "echo": "A single needle of granite; London, Paris and New York each carried one home.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "False Door",
+   "flavor": "The quartermaster insists on a perfect distribution: no duplicates, anywhere. The numbered bins are the ones that matter.",
+   "blocks": [
+    {
+     "type": "sudoku",
+     "size": 6,
+     "rows": [
+      "WSR.IT",
+      "T.ORS.",
+      "R..W.I",
+      "..TS..",
+      "......",
+      ".RIT.O"
+     ],
+     "alphabet": "IORSTW",
+     "marks": [
+      [
+       4,
+       0
+      ],
+      [
+       4,
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       4,
+       4
+      ],
+      [
+       4,
+       3
+      ],
+      [
+       2,
+       2
+      ]
+     ]
+    }
+   ],
+   "hash": "17fbfbf02d31e26f9ce8d6520505f9f6c36d4b58fc34b1467695a43a6c982e5b",
+   "partials": {},
+   "hints": [
+    "Sudoku using the letters shown instead of digits (each row, column and box uses each letter once). Read the numbered squares in order.",
+    "To check you're on track: the answer begins with O."
+   ],
+   "technique": "Letter sudoku",
+   "length": 6
+  },
+  {
+   "id": 2,
+   "title": "Curse Of The Tomb",
+   "flavor": "Confetti, sorted alphabetically by a very tidy intern. Put it back together.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "ARS",
+      "DLI",
+      "ECT",
+      "EDA",
+      "EPR",
+      "EXP",
+      "ISF",
+      "ISJ",
+      "IZE",
+      "NEN",
+      "NET",
+      "NOB",
+      "NYO",
+      "ODY",
+      "OGE",
+      "ONE",
+      "OTH",
+      "TTH",
+      "UST",
+      "WOR"
+     ],
+     "inline": true,
+     "tiles": true
+    },
+    {
+     "type": "prose",
+     "text": "Word lengths: (6 8 6 2 3 4 3 2 3 5 2 4 3 4 5)"
+    }
+   ],
+   "hash": "d659aec776c33539f83cf612937049709230eee854914d81e957877e2b81da0d",
+   "partials": {},
+   "hints": [
+    "The sentence was cut into three-letter fragments (spaces removed) and alphabetised. Reassemble it using the word lengths; it tells you the answer.",
+    "To check you're on track: the answer begins with L."
+   ],
+   "technique": "Shredded sentence",
+   "length": 5
+  },
+  {
+   "id": 3,
+   "title": "Hall Of Records",
+   "flavor": "Somebody shook the sentence and all the letters fell to the bottom of their columns.",
+   "blocks": [
+    {
+     "type": "dropquote",
+     "cols": [
+      "NORS",
+      "ADGHTT",
+      "EEHNOS",
+      "ETUU",
+      "BFLP",
+      "ADILTW",
+      "EHLRS",
+      "AELOT",
+      "HNS",
+      "EGIIW",
+      "NOS",
+      "FHRT",
+      "ADNOO"
+     ],
+     "mask": [
+      "......#....#.",
+      "...#....#....",
+      "#...#.....#..",
+      "...#......#..",
+      "....#...#....",
+      "#......######"
+     ]
+    }
+   ],
+   "hash": "2a852f87dc99b841c30181dec0cb7711c125bb7d2ef0e4b8c6f21ba9907729b2",
+   "partials": {},
+   "hints": [
+    "A drop quote: each column's letters (shown alphabetised above it) drop into that column of the grid below. Black squares are spaces; words can wrap between rows. The sentence tells you the answer.",
+    "To check you're on track: the answer begins with A."
+   ],
+   "technique": "Drop quote",
+   "length": 6
+  },
+  {
+   "id": 4,
+   "title": "Cartouche",
+   "flavor": "Every letter here is wearing someone else's coat. The spaces, at least, are honest.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "BD CAJ GLM YFLT EPBK KFMEFMGF EPFM CAJ PLUF LHYFLTC DAJMT EPF LMKOFY OPBGP BK ZLYMLZ",
+     "wide": true,
+     "solver": "substitution"
+    }
+   ],
+   "hash": "3001973c6a6182aab7dab937055da11c1551e2f953c0f1b4eeb91b7a96ede513",
+   "partials": {},
+   "hints": [
+    "Simple monoalphabetic substitution with word breaks kept. Solve the sentence; it tells you the answer.",
+    "To check you're on track: the answer begins with K."
+   ],
+   "technique": "Cryptogram (cluephrase)",
+   "length": 6
+  },
+  {
+   "id": 5,
+   "title": "Seal Unbroken",
+   "flavor": "The scale is very precise; the list is very short.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "39.098",
+      "1.008",
+      "39.95",
+      "6.94",
+      "30.974",
+      "32.06",
+      "15.999",
+      "1.008",
+      "14.007",
+      "44.956",
+      "39.098"
+     ],
+     "inline": true,
+     "variant": "masses"
+    }
+   ],
+   "hash": "be4f9673c81c4f0c4c770f6a4ec6fa987cc72bae156e955e08949677a41522d1",
+   "partials": {},
+   "hints": [
+    "Standard atomic masses: identify each element, then use its atomic number as a letter position.",
+    "To check you're on track: the answer begins with S."
+   ],
+   "technique": "Atomic numbers (by mass)",
+   "length": 11
+  }
+ ],
+ "meta": {
+  "title": "Meta: Valley Of The Kings",
+  "flavor": "The porter only ever noted where each passenger boarded. Every car holds one letter.",
+  "blocks": [
+   {
+    "type": "list",
+    "items": [
+     "Platform 5, car 5",
+     "Platform 3, car 4",
+     "Platform 2, car 4",
+     "Platform 2, car 1",
+     "Platform 2, car 2",
+     "Platform 1, car 6",
+     "Platform 4, car 6"
+    ],
+    "ordered": true
+   }
+  ],
+  "length": 7,
+  "hash": "376dd950d4779323aedbade8e6683924814259b4f1fdafec74e70fe232069189",
+  "hints": [
+   "Each entry is (puzzle number, letter number): index into that puzzle's answer.",
+   "To check you're on track: the final answer begins with O."
+  ]
+ },
+ "described": true
+}
