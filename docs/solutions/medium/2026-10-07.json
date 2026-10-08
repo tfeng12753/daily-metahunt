@@ -1,0 +1,64 @@
+{
+ "date": "2026-10-07",
+ "number": 11,
+ "difficulty": "medium",
+ "final": "SCARAB",
+ "metaType": "fitin",
+ "explain": "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Book Of The Dead",
+   "answer": "TUTANKHAMUN",
+   "mechanism": "Baconian cipher",
+   "transform": null,
+   "encoded": "TUTANKHAMUN",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "The Inundation",
+   "answer": "CLEOPATRA",
+   "mechanism": "Drop quote",
+   "transform": null,
+   "encoded": "CLEOPATRA",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Hall Of Records",
+   "answer": "DYNASTY",
+   "mechanism": "Book cipher",
+   "transform": null,
+   "encoded": "DYNASTY",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "The Rosetta Problem",
+   "answer": "TOMB",
+   "mechanism": "Symbol cryptogram",
+   "transform": null,
+   "encoded": "TOMB",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Weighing Of The Heart",
+   "answer": "RAMSES",
+   "mechanism": "Caesar shift",
+   "transform": null,
+   "encoded": "RAMSES",
+   "mutated": null
+  },
+  {
+   "id": 6,
+   "title": "False Door",
+   "answer": "CAMEL",
+   "mechanism": "Scrambled sentence",
+   "transform": null,
+   "encoded": "CAMEL",
+   "mutated": null
+  }
+ ]
+}

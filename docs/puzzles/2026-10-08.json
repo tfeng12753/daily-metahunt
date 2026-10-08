@@ -1,0 +1,377 @@
+{
+ "date": "2026-10-08",
+ "difficulty": "hard",
+ "salt": "2026-10-08",
+ "number": 12,
+ "round": "Seismograph",
+ "intro": "The needle on the seismograph has started drawing letters. The observatory has twelve hours before the mountain says whatever it is trying to say.",
+ "echo": "When the mountain empties itself, the summit falls in and leaves a cauldron.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Lahar",
+   "flavor": "Everything came out of the wash with a little something extra. Half a turn of the wheel and you'd have it.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "PGUSNEIO",
+      "VERARCT",
+      "EATALS",
+      "RQATGEN",
+      "EULOAMRRF",
+      "FLUAET"
+     ],
+     "ordered": true,
+     "mono": true
+    }
+   ],
+   "hash": "13f1c66f2991d90796fa88af07f1931bea125199186dc9023ba5124050ebe400",
+   "partials": {
+    "e583dcd2617dc7a2228ae8afea2e138bf002208cd4b08d0a40226807c2d69517": "You've decoded it, but it's not finished. One more layer."
+   },
+   "hints": [
+    "Each jumble is almost a word from this round, but with a letter to spare. Which letter, every time? And if what you get still isn't a word, reread the flavour text."
+   ]
+  },
+  {
+   "id": 2,
+   "title": "Aftershock",
+   "flavor": "Up and down, up and down, and not a single space left.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "IRSTA DHWUF NESEE HHVAY TERHS LYAAI NCEUE EFDAE ISFOC DHTNN OARON NWCIU UTEYL USHR",
+     "wide": true,
+     "rails": 5
+    }
+   ],
+   "hash": "5ab084a0c247a5fc1a78623ec66605ee89c1ddca1b3660960e24a1c3ba7abb34",
+   "partials": {},
+   "hints": [
+    "All the right letters are here, just out of order. Could they have been written along a path that goes up and down?"
+   ]
+  },
+  {
+   "id": 3,
+   "title": "Pyroclastic",
+   "flavor": "Beeps, pauses and more beeps, from a payphone that should be disconnected.",
+   "blocks": [
+    {
+     "type": "audio",
+     "kind": "dtmf",
+     "groups": [
+      "77",
+      "88",
+      "2",
+      "777",
+      "8",
+      "9999"
+     ]
+    }
+   ],
+   "hash": "5001ac2daf9b36195254dca08fbaa613e7be1c16c77cf578ce23a70aea60ac53",
+   "partials": {},
+   "hints": [
+    "Two frequencies at once is the sound of a phone key being pressed. What letters did those keys carry?"
+   ]
+  },
+  {
+   "id": 4,
+   "title": "Aa",
+   "flavor": "Some squares have been given to you for free.",
+   "blocks": [
+    {
+     "type": "nonogram",
+     "rows": [
+      [
+       4,
+       4,
+       1,
+       1,
+       4,
+       5,
+       3,
+       1
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       4,
+       1,
+       3,
+       1,
+       5,
+       1
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       4,
+       1,
+       1,
+       1,
+       4,
+       1,
+       1,
+       1,
+       5
+      ]
+     ],
+     "cols": [
+      [
+       3
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       3
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [],
+      [
+       4
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       4
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ],
+     "givens": [
+      [
+       4,
+       16,
+       0
+      ],
+      [
+       0,
+       12,
+       1
+      ],
+      [
+       0,
+       18,
+       0
+      ],
+      [
+       4,
+       14,
+       1
+      ],
+      [
+       0,
+       0,
+       0
+      ],
+      [
+       0,
+       30,
+       0
+      ],
+      [
+       4,
+       22,
+       0
+      ],
+      [
+       1,
+       16,
+       0
+      ]
+     ]
+    }
+   ],
+   "hash": "37a07249b68253c4f519267f722d2c0f08d80aec9446fa41a174fbbe2299710a",
+   "partials": {},
+   "hints": [
+    "The numbers describe runs of filled squares. What picture could they be drawing?"
+   ]
+  },
+  {
+   "id": 5,
+   "title": "Pahoehoe",
+   "flavor": "Only one page survived. It was the only page anyone needed.",
+   "blocks": [
+    {
+     "type": "prose",
+     "text": "The needle on the seismograph has started drawing letters. The observatory has twelve hours before the mountain says whatever it is trying to say.",
+     "paper": true
+    },
+    {
+     "type": "list",
+     "items": [
+      "5.5",
+      "23.2",
+      "13.4",
+      "22.1",
+      "9.2",
+      "2.1"
+     ],
+     "inline": true
+    }
+   ],
+   "hash": "3b1ee0e2fe8b9d5af48af175b0e3f58fde4400b2464ecc4b1f6e7f369d14e024",
+   "partials": {},
+   "hints": [
+    "The first number in each pair never goes past the number of words on the page. What does the second count?"
+   ]
+  }
+ ],
+ "meta": {
+  "title": "Meta: Seismograph",
+  "flavor": "Someone underlined a few verses.",
+  "blocks": [
+   {
+    "type": "list",
+    "items": [
+     "Ch. 4 v. 1",
+     "Ch. 3 v. 3",
+     "Ch. 2 v. 3",
+     "Ch. 1 v. 4",
+     "Ch. 5 v. 5",
+     "Ch. 2 v. 6",
+     "Ch. 4 v. 6"
+    ],
+    "ordered": true
+   }
+  ],
+  "length": 7,
+  "hash": "258fad3775341cf168f5cbdde335b9081c326fd896cfb39d7aba88f2d70cbb10",
+  "hints": [
+   "Every entry has two numbers. What in this round is numbered, and what could the second number count?"
+  ]
+ }
+}

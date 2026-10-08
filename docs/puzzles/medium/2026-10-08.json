@@ -1,0 +1,565 @@
+{
+ "date": "2026-10-08",
+ "difficulty": "medium",
+ "salt": "2026-10-08/medium",
+ "number": 12,
+ "round": "Seismograph",
+ "intro": "The needle on the seismograph has started drawing letters. The observatory has twelve hours before the mountain says whatever it is trying to say. Dr Venn has pinned the prints to the corkboard in the order they came in, and beneath each one she's scribbled the revised reading in the margin, though no one has asked her to. The new lab tech asked whether the extra stroke in each word was a smudge or a signal, and she only smiled, tapping the edge of the seismometer's idle roller where she keeps the offcuts. Outside, the summit vent hums low, like it's waiting for something. Somewhere in the logbook, the duty officer has already written the word 'monitor' three times, each time with one letter inked more heavily than the rest, as though the pen itself has decided it knows more than the hand does.",
+ "echo": "Pliny's uncle sailed toward it for a better look, and did not come back.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Tephra",
+   "flavor": "Fenced in, and copied out in a hurry.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "YESSE NHHTO WRIPI LONOO TESOO IUSFH UEITE DTLOR WGTRN OTZLM SBTTL TEYUA RZEUE HO",
+     "wide": true,
+     "rails": 5
+    }
+   ],
+   "hash": "aaaaa09d7424f4e15c0cf1ce776568459b5b66e468e2580c03870f0b9585dbcb",
+   "partials": {
+    "811e9ab8d58a1d31134187d7535428ad6b385a95526d7c33dc27be16333cde6c": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "All the right letters are here, just out of order. Could they have been written along a path that goes up and down?",
+    "Rail fence: written in a zigzag over a few rows, then copied out row by row. Try two to five rows."
+   ],
+   "length": 9
+  },
+  {
+   "id": 2,
+   "title": "Ring Of Fire",
+   "flavor": "Confetti, alphabetised.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "ASI",
+      "DSW",
+      "EIS",
+      "EVE",
+      "EWO",
+      "HEW",
+      "HIS",
+      "HUN",
+      "IR",
+      "ITH",
+      "NAM",
+      "NDT",
+      "NGL",
+      "OMT",
+      "OOD",
+      "ORD",
+      "PAG",
+      "RDA",
+      "RYG",
+      "TEN",
+      "TFR",
+      "TSU",
+      "WAN",
+      "YOU"
+     ],
+     "inline": true,
+     "tiles": true
+    },
+    {
+     "type": "prose",
+     "text": "Word lengths: (5 4 4 4 4 1 6 4 3 3 4 3 4 4 4 4 2 8)"
+    }
+   ],
+   "hash": "222be71638f04dbf7a8d90e9a885d63ea655a886312acc0f9f5b2d805ef44c35",
+   "partials": {
+    "14727134c8ebdf273fbfba7218455ab21b05cb03630be5a28b6f79f20478fe74": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "The strips are alphabetised, not in order. The word lengths say where the breaks fall. Which strip could start the sentence?",
+    "Chain the strips into one string and split it by the word lengths; the sentence tells you what to submit."
+   ],
+   "length": 7
+  },
+  {
+   "id": 3,
+   "title": "Pahoehoe",
+   "flavor": "Call signs, reflected.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "Hotel",
+      "Oscar",
+      "Zulu",
+      "Golf",
+      "Foxtrot",
+      "Victor"
+     ]
+    }
+   ],
+   "hash": "62a15b048d7695453920f9fd50965bf152839b92bec0eeaa7798b4cf5b7ef11f",
+   "partials": {
+    "51e7c18cbb5fb81d308e58ec0be029d96e24efa8ce7f922be943cd94c7dffee1": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Each word stands for a letter, the way radio operators spell. Do those letters read? If not, try the alphabet backwards.",
+    "Take the NATO call signs' initials, then swap each letter for its mirror: A for Z, B for Y."
+   ],
+   "length": 5
+  },
+  {
+   "id": 4,
+   "title": "Plate Boundary",
+   "flavor": "Nothing was lost; everything simply moved over.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "AWSUNWOBR",
+     "big": true,
+     "shift": -1
+    }
+   ],
+   "hash": "8b2533dc60fc1a24f913343eccdd8008c0096262926c51eaddbb9f602e487daa",
+   "partials": {
+    "88d3a1e99c9ee033b33052420e9f708c954cc19168ebedf521a88c07603e2d94": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Every letter is close to the right one. Close on what? Look down at your hands.",
+    "QWERTY: every letter was typed one key to the side. Try shifting each one back, both directions."
+   ],
+   "length": 8
+  },
+  {
+   "id": 5,
+   "title": "Hot Spot",
+   "flavor": "Turn the wheel until it talks.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "GOVV NYXO IYE WKI XYG GBSDO NYGX DRO GYBN POVNDCZKB KXN WYFO AESODVI YX DY DRO XOHD YXO",
+     "wide": true,
+     "solver": "substitution"
+    }
+   ],
+   "hash": "3c28a92aa39d3fadf713c000aed8a6018bc0dfb663ed4d6b2e96e5a3d0640dae",
+   "partials": {
+    "5aa900b26e4e8eebbdc41e69b6bf93893ecfe7d0600f7783e1ac41c4404affa1": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Try moving every letter the same distance. How far turns the short words into English?",
+    "A Caesar shift: find the one shift that fixes a short word, then apply it everywhere."
+   ],
+   "length": 8
+  },
+  {
+   "id": 6,
+   "title": "Richter",
+   "flavor": "Only one page survived. It was the only page anyone needed.",
+   "blocks": [
+    {
+     "type": "prose",
+     "text": "The needle on the seismograph has started drawing letters. The observatory has twelve hours before the mountain says whatever it is trying to say.",
+     "paper": true
+    },
+    {
+     "type": "list",
+     "items": [
+      "15.3",
+      "23.2",
+      "5.4",
+      "9.7",
+      "20.1",
+      "5.3",
+      "13.4"
+     ],
+     "inline": true
+    }
+   ],
+   "hash": "337b6823a1e05f6d2d82c6d7e26b7c1f8537569d1768ab3a4823c92e9e57c4eb",
+   "partials": {
+    "1cc2564e3e461ddeec2d66c5e78660368b101a9dffffef40894deeb0af887a07": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "The first number in each pair never goes past the number of words on the page. What does the second count?",
+    "The first number finds a word on the page; the second finds a letter in it."
+   ],
+   "length": 6
+  },
+  {
+   "id": 7,
+   "title": "Aftershock",
+   "flavor": "Five rows, five columns, and one letter nobody needed. Start from the end; that's where it started.",
+   "blocks": [
+    {
+     "type": "taps",
+     "groups": [
+      [
+       "•",
+       "•••••"
+      ],
+      [
+       "•••",
+       "•"
+      ],
+      [
+       "•••",
+       "••••"
+      ],
+      [
+       "••••",
+       "••"
+      ],
+      [
+       "•",
+       "•"
+      ],
+      [
+       "•••",
+       "••••"
+      ],
+      [
+       "•••",
+       "••"
+      ],
+      [
+       "••••",
+       "•••••"
+      ],
+      [
+       "••",
+       "•"
+      ]
+     ]
+    }
+   ],
+   "hash": "deb8d687543e5fa6fac1268614990c6c9da29f47676436fa42edc2fdf8494b1a",
+   "partials": {
+    "26fa060e0199a8ffb6f5f8fd3d13aa90eba5ab08e138964bf2d307ac615b96fd": "You've decoded it, but it's not finished. One more layer.",
+    "5873afe5778b0232cc50d60a04a20b9c7015e8268d1df7f5ed53f1d5b13581fc": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Always two numbers, never more than five. How would two prisoners spell through a wall with a 5×5 grid? And if what you get still isn't a word, reread the flavour text.",
+    "Tap code: the first count is the row, the second the column, in a 5×5 alphabet with no K. Then one more layer: Read what you get backwards."
+   ],
+   "length": 8
+  },
+  {
+   "id": 8,
+   "title": "Aa",
+   "flavor": "The picture is worth exactly one word. Alpha and Omega traded places before this was written down.",
+   "blocks": [
+    {
+     "type": "nonogram",
+     "rows": [
+      [
+       1,
+       1,
+       5,
+       5,
+       4,
+       1,
+       1,
+       1,
+       1,
+       5
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       2,
+       2,
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       2,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       5,
+       5,
+       4,
+       1,
+       1,
+       1,
+       5
+      ]
+     ],
+     "cols": [
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       3
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       3
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       5
+      ],
+      [],
+      [
+       3
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       3
+      ],
+      [],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "givens": [
+      [
+       2,
+       4,
+       0
+      ],
+      [
+       0,
+       26,
+       0
+      ],
+      [
+       3,
+       2,
+       0
+      ],
+      [
+       4,
+       31,
+       0
+      ],
+      [
+       1,
+       31,
+       0
+      ],
+      [
+       4,
+       4,
+       1
+      ],
+      [
+       0,
+       0,
+       1
+      ],
+      [
+       1,
+       3,
+       1
+      ],
+      [
+       4,
+       1,
+       0
+      ],
+      [
+       0,
+       32,
+       0
+      ],
+      [
+       1,
+       33,
+       0
+      ],
+      [
+       2,
+       32,
+       0
+      ],
+      [
+       1,
+       34,
+       1
+      ],
+      [
+       2,
+       2,
+       1
+      ],
+      [
+       1,
+       30,
+       1
+      ],
+      [
+       3,
+       33,
+       1
+      ],
+      [
+       3,
+       31,
+       1
+      ]
+     ]
+    }
+   ],
+   "hash": "592109e41ef08101fc6e63501cf63654767211e42f5ca9009dc2446e7c26fb46",
+   "partials": {
+    "4c40519c0850855bf94ca020d6efe7c8183a3210f20bd334935ce28c21453ca1": "You've decoded it, but it's not finished. One more layer.",
+    "f538363255092dc01f63a2c09d3722606f2cf2bba76515fa94ff4ae27d26c370": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "The numbers describe runs of filled squares. What picture could they be drawing? And if what you get still isn't a word, reread the flavour text.",
+    "Paint by numbers. The picture is written, not drawn. Then one more layer: Turn the alphabet end to end: A for Z, B for Y."
+   ],
+   "length": 6
+  }
+ ],
+ "meta": {
+  "title": "Meta: Seismograph",
+  "flavor": "Everything arrived a little heavier than it left.",
+  "blocks": [],
+  "length": 8,
+  "hash": "ee03d77c8e61487b0d0cae143c16142e07f8ddd74c6439608f695588f7c9b526",
+  "hints": [
+   "Did every answer come out the right size the first time? Each had one letter too many. Did you keep them?",
+   "Take the extra letter from each feeder, in puzzle order."
+  ]
+ },
+ "described": true
+}

@@ -1,0 +1,55 @@
+{
+ "date": "2026-10-07",
+ "number": 11,
+ "difficulty": "easy",
+ "final": "OBELISK",
+ "metaType": "logbook",
+ "explain": "Each entry is (puzzle number, letter number): index into that puzzle's answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "False Door",
+   "answer": "OSIRIS",
+   "mechanism": "Letter sudoku",
+   "transform": null,
+   "encoded": "OSIRIS",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Curse Of The Tomb",
+   "answer": "LINEN",
+   "mechanism": "Shredded sentence",
+   "transform": null,
+   "encoded": "LINEN",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Hall Of Records",
+   "answer": "ANUBIS",
+   "mechanism": "Drop quote",
+   "transform": null,
+   "encoded": "ANUBIS",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Cartouche",
+   "answer": "KARNAK",
+   "mechanism": "Cryptogram (cluephrase)",
+   "transform": null,
+   "encoded": "KARNAK",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Seal Unbroken",
+   "answer": "SARCOPHAGUS",
+   "mechanism": "Atomic numbers (by mass)",
+   "transform": null,
+   "encoded": "SARCOPHAGUS",
+   "mutated": null
+  }
+ ]
+}

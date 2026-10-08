@@ -1,0 +1,393 @@
+{
+ "date": "2026-10-08",
+ "difficulty": "easy",
+ "salt": "2026-10-08/easy",
+ "number": 12,
+ "round": "Seismograph",
+ "intro": "The needle on the seismograph has started drawing letters. The observatory has twelve hours before the mountain says whatever it is trying to say. Dr. Elara Voss says the tremor isn't random: each spike and lull seems to follow a pattern, and when the recordings are lined up by how long each burst lasts, the gaps between the marks begin to line up too, as if the mountain were filling in a grid one row at a time. The twelve seismograms are no longer just data; they are a message being set in rows, and somewhere in the shaded parts of the chart, the shape of the answer is taking form. The volcanologists pass the printouts between them like a game of patience, waiting to see what the mountain is spelling out.",
+ "echo": "Below the crust it has another name; it only earns the word lava when it reaches the air.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Tephra",
+   "flavor": "The typesetter dropped the tray. Every letter landed in the right column, at least.",
+   "blocks": [
+    {
+     "type": "dropquote",
+     "cols": [
+      "AAIIST",
+      "CHILM",
+      "EEHNOP",
+      "ILN",
+      "DGMSY",
+      "DEI",
+      "AEGSS",
+      "AHNNS",
+      "ADTY",
+      "GIS",
+      "AEIN",
+      "LPT",
+      "LPUW",
+      "ALMS"
+     ],
+     "mask": [
+      "...#.......#..",
+      ".#......#..#..",
+      "...#.....#...#",
+      ".....#...#..#.",
+      ".....#....#...",
+      "...###########"
+     ]
+    }
+   ],
+   "hash": "7eca33b7e4730679f6f1e888d4f64f2c96657215204eb9a504d22264bdd04001",
+   "partials": {},
+   "hints": [
+    "A drop quote: each column's letters (shown alphabetised above it) drop into that column of the grid below. Black squares are spaces; words can wrap between rows. The sentence tells you the answer.",
+    "To check you're on track: the answer begins with P."
+   ],
+   "technique": "Drop quote",
+   "length": 6
+  },
+  {
+   "id": 2,
+   "title": "Lahar",
+   "flavor": "Scrambled inventory. Each entry picked up one hitchhiker on the way through the machine.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "CHSTIQS",
+      "ECRDIUN",
+      "TASCYALR",
+      "EARGKTNI",
+      "LERAMEB"
+     ],
+     "ordered": true,
+     "mono": true
+    }
+   ],
+   "hash": "debd3303ac1ea3082150f532a8bef65b3b1db4008eecda748774ee3909363288",
+   "partials": {},
+   "hints": [
+    "Each jumble is an anagram of a word from this round's theme plus one extra letter. The extra letters, in order, spell the answer.",
+    "To check you're on track: the answer begins with Q."
+   ],
+   "technique": "Anagrams with an extra letter",
+   "length": 5
+  },
+  {
+   "id": 3,
+   "title": "Pahoehoe",
+   "flavor": "Every row at the observatory holds one of everything. So does every column, and every box. Then read the numbered squares.",
+   "blocks": [
+    {
+     "type": "sudoku",
+     "size": 9,
+     "rows": [
+      "MG.R..A..",
+      "ER.FA.G.O",
+      "A.FM....E",
+      ".....LOR.",
+      "..RG.OU..",
+      ".....RME.",
+      "G.AE.F.O.",
+      "RL....FAU",
+      "FMOLU.E.."
+     ],
+     "alphabet": "AEFGLMORU",
+     "marks": [
+      [
+       0,
+       8
+      ],
+      [
+       6,
+       1
+      ],
+      [
+       1,
+       7
+      ],
+      [
+       3,
+       3
+      ],
+      [
+       6,
+       4
+      ],
+      [
+       0,
+       4
+      ],
+      [
+       2,
+       4
+      ],
+      [
+       3,
+       4
+      ]
+     ]
+    }
+   ],
+   "hash": "fbdc5af2dfc00ee11be3f8549fa14b5779cc1bca336e6f5b00036a69af428681",
+   "partials": {},
+   "hints": [
+    "Sudoku using the letters shown instead of digits (each row, column and box uses each letter once). Read the numbered squares in order.",
+    "To check you're on track: the answer begins with F."
+   ],
+   "technique": "Letter sudoku",
+   "length": 8
+  },
+  {
+   "id": 4,
+   "title": "Ring Of Fire",
+   "flavor": "Two forward, one across. Remember where you land.",
+   "blocks": [
+    {
+     "type": "board",
+     "rows": [
+      "GDEIALRJ",
+      "GFTWOGAR",
+      "BSWNRLVR",
+      "OILUICYI",
+      "DPIIIJNF",
+      "EWCSPGDN",
+      "CHUWWCAD",
+      "LLJXFDSC"
+     ]
+    },
+    {
+     "type": "prose",
+     "text": "The knight sets out from b7: Nd8 Nf7 Nd6 Nc8 Ne7 Nd5 Nb6."
+    }
+   ],
+   "hash": "774c38b56ba39f4b006f1a8a7e0166c634594e2c3591254c5fce78d1bb6051a3",
+   "partials": {},
+   "hints": [
+    "Start on the given square and follow the knight moves; read the letter on each square it lands on.",
+    "To check you're on track: the answer begins with I."
+   ],
+   "technique": "Knight's path",
+   "length": 7
+  },
+  {
+   "id": 5,
+   "title": "Harmonic Tremor",
+   "flavor": "Paint by numbers. The picture is worth exactly one word.",
+   "blocks": [
+    {
+     "type": "nonogram",
+     "rows": [
+      [
+       1,
+       3,
+       1,
+       1,
+       3
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       5,
+       1,
+       1,
+       5
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       5,
+       1,
+       1,
+       1,
+       1,
+       1
+      ]
+     ],
+     "cols": [
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [],
+      [
+       4
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       4
+      ],
+      [],
+      [
+       3
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       3
+      ],
+      [],
+      [
+       4
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       4
+      ]
+     ],
+     "givens": [
+      [
+       0,
+       20,
+       1
+      ],
+      [
+       0,
+       18,
+       0
+      ],
+      [
+       1,
+       12,
+       1
+      ],
+      [
+       4,
+       16,
+       0
+      ],
+      [
+       4,
+       7,
+       0
+      ],
+      [
+       0,
+       14,
+       0
+      ],
+      [
+       3,
+       14,
+       0
+      ],
+      [
+       3,
+       13,
+       1
+      ],
+      [
+       3,
+       15,
+       1
+      ]
+     ]
+    }
+   ],
+   "hash": "db38494eaa5f7583ee5fe54e922bde91376f8b588f4cbd333f13c689f3d6122f",
+   "partials": {},
+   "hints": [
+    "A nonogram (paint-by-numbers). The filled picture is the answer written in 5×5 block letters.",
+    "To check you're on track: the answer begins with L."
+   ],
+   "technique": "Nonogram",
+   "length": 4
+  }
+ ],
+ "meta": {
+  "title": "Meta: Seismograph",
+  "flavor": "Everything at the observatory has a place, and every place is exactly the right size.",
+  "blocks": [
+   {
+    "type": "fitgrid",
+    "rows": [
+     {
+      "len": 8,
+      "shade": 2
+     },
+     {
+      "len": 5,
+      "shade": 2
+     },
+     {
+      "len": 7,
+      "shade": 1
+     },
+     {
+      "len": 6,
+      "shade": 2
+     },
+     {
+      "len": 4,
+      "shade": 3
+     }
+    ]
+   }
+  ],
+  "length": 5,
+  "hash": "aff6cc596bcefd54421a88d86754b05463aba6fa9d63512a064af58dff302faa",
+  "hints": [
+   "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+   "To check you're on track: the final answer begins with M."
+  ]
+ },
+ "described": true
+}

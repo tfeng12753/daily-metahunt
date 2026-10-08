@@ -1,0 +1,55 @@
+{
+ "date": "2026-10-07",
+ "number": 11,
+ "difficulty": "hard",
+ "final": "PHARAOH",
+ "metaType": "initials",
+ "explain": "The ciphertext is Vigenère-encrypted with the first letters of the feeder answers (in puzzle order) as the key.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Canopic Jars",
+   "answer": "IBIS",
+   "mechanism": "Scrambled sentence",
+   "transform": null,
+   "encoded": "IBIS",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Solar Barque",
+   "answer": "OASIS",
+   "mechanism": "Number trivia",
+   "transform": "Reversal",
+   "encoded": "SISAO",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Curse Of The Tomb",
+   "answer": "SARCOPHAGUS",
+   "mechanism": "Pigpen cipher",
+   "transform": null,
+   "encoded": "SARCOPHAGUS",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Opening Of The Mouth",
+   "answer": "CHARIOT",
+   "mechanism": "Nonogram",
+   "transform": "Atbash (A↔Z mirror)",
+   "encoded": "XSZIRLG",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "The Rosetta Problem",
+   "answer": "REED",
+   "mechanism": "Word search leftovers",
+   "transform": "Atbash (A↔Z mirror)",
+   "encoded": "IVVW",
+   "mutated": null
+  }
+ ]
+}
