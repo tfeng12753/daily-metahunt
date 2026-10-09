@@ -1,0 +1,217 @@
+{
+ "date": "2026-10-09",
+ "difficulty": "hard",
+ "salt": "2026-10-09",
+ "number": 13,
+ "round": "The Night Train",
+ "intro": "Somewhere between two stations that no longer exist, the night train stopped. When it started again, every ticket had been replaced with a puzzle.",
+ "echo": "Agatha Christie booked a murder on the fastest train out of Istanbul.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Terminus Approaching",
+   "flavor": "Not a single letter on the page, and yet it says something.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "▽◇ ☆★⚑ ▲○☁ ♪♣○■ ♥☂▽✚ ✚♣☁♥♣☁▲♣ ♥☂♣☁ ☆★⚑ ☂○♦♣ ○△♪♣○■☆ ◇★⚑☁■ ♥☂♣ ○☁✚☾♣♪ ☾☂▽▲☂ ▽✚ ▲★☀▼○♪♥☀♣☁♥",
+     "wide": true,
+     "solver": "substitution"
+    }
+   ],
+   "hash": "66c508d81392c95c2dbcf11b6b366b7ecf2ffc5a4afcc75be4d6c7679474e01c",
+   "partials": {},
+   "hints": [
+    "Which short words are most common in English? Could any of them be hiding here?"
+   ]
+  },
+  {
+   "id": 2,
+   "title": "Night Mail",
+   "flavor": "Tidy up the inventory.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "TNRLTSAEBU",
+      "TRRPEOE",
+      "ASNIOTMT",
+      "PLCNAUGOI",
+      "PBREILO",
+      "EUBRFFH",
+      "WLESTIOH",
+      "GEUGLRGA",
+      "CAAIEEGRR"
+     ],
+     "ordered": true,
+     "mono": true
+    }
+   ],
+   "hash": "07ee97e883292673e8ec22c1e8ad6e78fea53a4b74e0519c2bbdbf3a289c3e40",
+   "partials": {},
+   "hints": [
+    "Each jumble is almost a word from this round, but with a letter to spare. Which letter, every time?"
+   ]
+  },
+  {
+   "id": 3,
+   "title": "Platform Nine",
+   "flavor": "Typed in the dark, with one hand resting a key out of place.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "BOSFIVY",
+     "big": true,
+     "shift": 1
+    }
+   ],
+   "hash": "6e27be207389facb193a871698750768845b641a170ff600643963515b33958b",
+   "partials": {},
+   "hints": [
+    "Every letter is close to the right one. Close on what? Look down at your hands."
+   ]
+  },
+  {
+   "id": 4,
+   "title": "Rolling Stock",
+   "flavor": "Confetti, alphabetised.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "ARS",
+      "DTU",
+      "ECT",
+      "EDA",
+      "EPR",
+      "EXP",
+      "ISF",
+      "ISJ",
+      "IZE",
+      "L",
+      "NET",
+      "NNE",
+      "NOB",
+      "NYO",
+      "ODY",
+      "OGE",
+      "ONE",
+      "OTH",
+      "TTH",
+      "UST",
+      "WOR"
+     ],
+     "inline": true,
+     "tiles": true
+    },
+    {
+     "type": "prose",
+     "text": "Word lengths: (6 8 6 2 3 4 3 2 3 5 2 4 3 4 6)"
+    }
+   ],
+   "hash": "99f1a312debbc8152f286bfe4d45d27c945cd27279e73d9d4dfefdc7e3aaee9b",
+   "partials": {},
+   "hints": [
+    "The strips are alphabetised, not in order. The word lengths say where the breaks fall. Which strip could start the sentence?"
+   ]
+  },
+  {
+   "id": 5,
+   "title": "Last Call",
+   "flavor": "Pairs of numbers pencilled in the margin.",
+   "blocks": [
+    {
+     "type": "prose",
+     "text": "Somewhere between two stations that no longer exist, the night train stopped. When it started again, every ticket had been replaced with a puzzle.",
+     "paper": true
+    },
+    {
+     "type": "list",
+     "items": [
+      "5.1",
+      "4.5",
+      "18.3",
+      "18.4",
+      "17.1",
+      "5.4"
+     ],
+     "inline": true
+    }
+   ],
+   "hash": "94e76b4c621758ee910b74fc4f5f67377fec027453b0e770cc99daa7ee3d9bdb",
+   "partials": {},
+   "hints": [
+    "The first number in each pair never goes past the number of words on the page. What does the second count?"
+   ]
+  },
+  {
+   "id": 6,
+   "title": "Leaves On The Line",
+   "flavor": "Through the wall: bursts of knocks, always in pairs.",
+   "blocks": [
+    {
+     "type": "taps",
+     "groups": [
+      [
+       "•",
+       "•••"
+      ],
+      [
+       "•••",
+       "••••"
+      ],
+      [
+       "•••",
+       "•••"
+      ],
+      [
+       "•",
+       "••••"
+      ],
+      [
+       "••••",
+       "•••••"
+      ],
+      [
+       "•",
+       "•••"
+      ],
+      [
+       "••••",
+       "••••"
+      ],
+      [
+       "•••",
+       "••••"
+      ],
+      [
+       "••••",
+       "••"
+      ]
+     ]
+    }
+   ],
+   "hash": "ccce57f452241f62eddb4e9f11f30377a48737484f82186c2b3bf879b35e51b0",
+   "partials": {},
+   "hints": [
+    "Always two numbers, never more than five. How would two prisoners spell through a wall with a 5×5 grid?"
+   ]
+  }
+ ],
+ "meta": {
+  "title": "Meta: The Night Train",
+  "flavor": "Every report is signed with a single initial. Blaise would know what to do with them.",
+  "blocks": [
+   {
+    "type": "mono",
+    "text": "GPKKXUU",
+    "big": true
+   }
+  ],
+  "length": 7,
+  "hash": "866a20252b08e4d1f5ec1d1112919e8b866398e1811ca7916f006931f67dd3a4",
+  "hints": [
+   "Blaise de Vigenère needed a key to open this. Has every answer signed its work?"
+  ]
+ }
+}

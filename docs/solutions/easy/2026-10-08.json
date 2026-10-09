@@ -1,0 +1,55 @@
+{
+ "date": "2026-10-08",
+ "number": 12,
+ "difficulty": "easy",
+ "final": "MAGMA",
+ "metaType": "fitin",
+ "explain": "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Tephra",
+   "answer": "PUMICE",
+   "mechanism": "Drop quote",
+   "transform": null,
+   "encoded": "PUMICE",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Lahar",
+   "answer": "QUAKE",
+   "mechanism": "Anagrams with an extra letter",
+   "transform": null,
+   "encoded": "QUAKE",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Pahoehoe",
+   "answer": "FUMAROLE",
+   "mechanism": "Letter sudoku",
+   "transform": null,
+   "encoded": "FUMAROLE",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Ring Of Fire",
+   "answer": "IGNEOUS",
+   "mechanism": "Knight's path",
+   "transform": null,
+   "encoded": "IGNEOUS",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Harmonic Tremor",
+   "answer": "LAVA",
+   "mechanism": "Nonogram",
+   "transform": null,
+   "encoded": "LAVA",
+   "mutated": null
+  }
+ ]
+}

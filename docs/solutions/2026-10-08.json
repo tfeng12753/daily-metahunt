@@ -1,0 +1,55 @@
+{
+ "date": "2026-10-08",
+ "number": 12,
+ "difficulty": "hard",
+ "final": "CALDERA",
+ "metaType": "logbook",
+ "explain": "Each entry is (puzzle number, letter number): index into that puzzle's answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Lahar",
+   "answer": "CINDER",
+   "mechanism": "Anagrams with an extra letter",
+   "transform": "ROT13",
+   "encoded": "PVAQRE",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Aftershock",
+   "answer": "SULFUR",
+   "mechanism": "Rail fence (cluephrase)",
+   "transform": null,
+   "encoded": "SULFUR",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Pyroclastic",
+   "answer": "QUARTZ",
+   "mechanism": "DTMF multi-tap (audio)",
+   "transform": null,
+   "encoded": "QUARTZ",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Aa",
+   "answer": "CRYSTAL",
+   "mechanism": "Nonogram",
+   "transform": null,
+   "encoded": "CRYSTAL",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Pahoehoe",
+   "answer": "MOLTEN",
+   "mechanism": "Book cipher",
+   "transform": null,
+   "encoded": "MOLTEN",
+   "mutated": null
+  }
+ ]
+}

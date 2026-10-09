@@ -1,0 +1,228 @@
+{
+ "date": "2026-10-09",
+ "difficulty": "easy",
+ "salt": "2026-10-09/easy",
+ "number": 13,
+ "round": "The Night Train",
+ "intro": "Somewhere between two stations that no longer exist, the night train stopped. When it started again, every ticket had been replaced with a puzzle. The passengers looked round at one another in the dim corridor—some clutching cryptic crosswords, others unfolding maps of the stars stitched into their seat covers—but no one knew how to leave, only how to keep moving. By morning the conductor was nowhere to be found, yet each compartment held a fresh slip of paper, and each slip, when solved, seemed to point onward: at a seat, at a drawer, at the very berth you might have slept in. The trick, the old woman in 4B murmured as she stirred her tea, is that the answers are not the journey—they are the addresses. Every solved puzzle tells you where to look next, and the only way off the train is to follow every clue to its letter, one at a time, until the whole carriage has spoken.",
+ "echo": "The last car of the freight train, where the brakeman kept his stove.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Night Mail",
+   "flavor": "Pulled from a burnt-out board. Only the first two stripes on each part were ever meant to be read.",
+   "blocks": [
+    {
+     "type": "resistors",
+     "items": [
+      [
+       "black",
+       "yellow",
+       "black",
+       "gold"
+      ],
+      [
+       "black",
+       "green",
+       "black",
+       "gold"
+      ],
+      [
+       "brown",
+       "blue",
+       "black",
+       "gold"
+      ],
+      [
+       "brown",
+       "green",
+       "black",
+       "gold"
+      ],
+      [
+       "red",
+       "black",
+       "black",
+       "gold"
+      ]
+     ]
+    }
+   ],
+   "hash": "56c42a378022712a813f33a5a9eba529001a864b37e0c4f80c53a55659dd8e27",
+   "partials": {},
+   "hints": [
+    "Read the first two bands of each resistor as digits (black 0 … white 9) and use the number as a letter position.",
+    "To check you're on track: the answer begins with D."
+   ],
+   "technique": "Resistor colour bands",
+   "length": 5
+  },
+  {
+   "id": 2,
+   "title": "Rolling Stock",
+   "flavor": "One alphabet was traded for another, one for one, and nobody bothered to hide where the words begin and end.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "HDUU ILXD BLA FTB XLH HWVJD ILHX JMD HLWI NAGGDW TXI FLKD OAVDJUB LX JL JMD XDZJ LXD",
+     "wide": true,
+     "solver": "substitution"
+    }
+   ],
+   "hash": "6517b9ed96af45d20ecd9402d2473db4df58a074d98e2d2991b5e69751355e47",
+   "partials": {},
+   "hints": [
+    "Simple monoalphabetic substitution with word breaks kept. Solve the sentence; it tells you the answer.",
+    "To check you're on track: the answer begins with B."
+   ],
+   "technique": "Cryptogram (cluephrase)",
+   "length": 6
+  },
+  {
+   "id": 3,
+   "title": "Dining Car",
+   "flavor": "Cross off everything you recognise. What nobody claims is what you came for.",
+   "blocks": [
+    {
+     "type": "caption",
+     "text": "Hidden in the grid: 7 words to do with the sleeper car (lengths 6, 6, 6, 6, 6, 6, 6), running in any direction."
+    },
+    {
+     "type": "board",
+     "rows": [
+      "RELIOBT",
+      "SSRWGRU",
+      "IWEHNEN",
+      "GIDIITN",
+      "NTNSDRE",
+      "ACETIOL",
+      "LHTLSPE"
+     ],
+     "plain": true,
+     "words": [
+      "BOILER",
+      "PORTER",
+      "SIDING",
+      "SIGNAL",
+      "SWITCH",
+      "TENDER",
+      "TUNNEL"
+     ]
+    }
+   ],
+   "hash": "3777051dc4c7fa5d75c24baca235b131747507f47bd12d0dc8b5642bbcc98dff",
+   "partials": {},
+   "hints": [
+    "Find every hidden word (any of 8 directions). The unused letters, read left-to-right, top-to-bottom, spell the answer.",
+    "The hidden words are: BOILER, PORTER, SIDING, SIGNAL, SWITCH, TENDER, TUNNEL.",
+    "To check you're on track: the answer begins with W."
+   ],
+   "technique": "Word search leftovers",
+   "length": 7
+  },
+  {
+   "id": 4,
+   "title": "Points Failure",
+   "flavor": "Every clock in the sleeper car stopped at a different moment, and not one of them can agree which hand is which.",
+   "blocks": [
+    {
+     "type": "clocks",
+     "items": [
+      [
+       4,
+       7
+      ],
+      [
+       7,
+       6
+      ],
+      [
+       5,
+       4
+      ],
+      [
+       1,
+       5
+      ]
+     ]
+    }
+   ],
+   "hash": "cb2a322e722a83e1795a4fdc9fbbd5578f50bf0262e9234d06645f02523bcc77",
+   "partials": {},
+   "hints": [
+    "Each clock's two hands are the two arms of a flag-semaphore signaller (hand length doesn't matter).",
+    "To check you're on track: the answer begins with C."
+   ],
+   "technique": "Semaphore clocks",
+   "length": 4
+  },
+  {
+   "id": 5,
+   "title": "Mind The Gap",
+   "flavor": "Somebody shook the sentence and all the letters fell to the bottom of their columns.",
+   "blocks": [
+    {
+     "type": "dropquote",
+     "cols": [
+      "BEILOY",
+      "HLORTU",
+      "IOTU",
+      "RSTTW",
+      "DHH",
+      "AEFIOY",
+      "INOS",
+      "NORSU",
+      "EOPTW",
+      "EGHMTU",
+      "AEORZ",
+      "NRTTZ",
+      "EFLS"
+     ],
+     "mask": [
+      "....#......#.",
+      "..#....#.....",
+      ".#..#.......#",
+      "...#..#...#..",
+      "..#...#......",
+      "#...#...#...#",
+      "..###########"
+     ]
+    }
+   ],
+   "hash": "b88dc97d88bf240bcf7de3f0ff15edb898d1018650a718a4b52b967056325286",
+   "partials": {},
+   "hints": [
+    "A drop quote: each column's letters (shown alphabetised above it) drop into that column of the grid below. Black squares are spaces; words can wrap between rows. The sentence tells you the answer.",
+    "To check you're on track: the answer begins with F."
+   ],
+   "technique": "Drop quote",
+   "length": 7
+  }
+ ],
+ "meta": {
+  "title": "Meta: The Night Train",
+  "flavor": "The watch-keeper wrote down nothing but the day and the bell. Every day was one of your puzzles.",
+  "blocks": [
+   {
+    "type": "list",
+    "items": [
+     "Day 4, 1 bells",
+     "Day 4, 3 bells",
+     "Day 2, 1 bells",
+     "Day 1, 4 bells",
+     "Day 4, 2 bells",
+     "Day 3, 4 bells",
+     "Day 5, 4 bells"
+    ],
+    "ordered": true
+   }
+  ],
+  "length": 7,
+  "hash": "818049e3524a6cb438f34444f7021ca45c29c72493aaa4f45c41662bea074634",
+  "hints": [
+   "Each entry is (puzzle number, letter number): index into that puzzle's answer.",
+   "To check you're on track: the final answer begins with C."
+  ]
+ },
+ "described": true
+}

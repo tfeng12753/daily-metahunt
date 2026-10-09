@@ -1,0 +1,82 @@
+{
+ "date": "2026-10-08",
+ "number": 12,
+ "difficulty": "medium",
+ "final": "ERUPTION",
+ "metaType": "stowaway",
+ "explain": "Each feeder decodes to its answer plus one inserted letter. The inserted letters, in puzzle order, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Tephra",
+   "answer": "LIMESTONE",
+   "mechanism": "Rail fence (cluephrase)",
+   "transform": null,
+   "encoded": "LIMESTOENE",
+   "mutated": "LIMESTOENE"
+  },
+  {
+   "id": 2,
+   "title": "Ring Of Fire",
+   "answer": "TSUNAMI",
+   "mechanism": "Shredded sentence",
+   "transform": null,
+   "encoded": "TSUNAMIR",
+   "mutated": "TSUNAMIR"
+  },
+  {
+   "id": 3,
+   "title": "Pahoehoe",
+   "answer": "SLATE",
+   "mechanism": "Mirrored NATO",
+   "transform": null,
+   "encoded": "SLATUE",
+   "mutated": "SLATUE"
+  },
+  {
+   "id": 4,
+   "title": "Plate Boundary",
+   "answer": "SEDIMENT",
+   "mechanism": "Keyboard shift",
+   "transform": null,
+   "encoded": "SEDIMEPNT",
+   "mutated": "SEDIMEPNT"
+  },
+  {
+   "id": 5,
+   "title": "Hot Spot",
+   "answer": "FELDSPAR",
+   "mechanism": "Caesar shift",
+   "transform": null,
+   "encoded": "FELDTSPAR",
+   "mutated": "FELDTSPAR"
+  },
+  {
+   "id": 6,
+   "title": "Richter",
+   "answer": "FOSSIL",
+   "mechanism": "Book cipher",
+   "transform": null,
+   "encoded": "FOSSIIL",
+   "mutated": "FOSSIIL"
+  },
+  {
+   "id": 7,
+   "title": "Aftershock",
+   "answer": "FUMAROLE",
+   "mechanism": "Tap code",
+   "transform": "Reversal",
+   "encoded": "ELORAOMUF",
+   "mutated": "FUMOAROLE"
+  },
+  {
+   "id": 8,
+   "title": "Aa",
+   "answer": "CRATER",
+   "mechanism": "Nonogram",
+   "transform": "Atbash (A↔Z mirror)",
+   "encoded": "XIZGMVI",
+   "mutated": "CRATNER"
+  }
+ ]
+}

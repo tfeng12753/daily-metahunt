@@ -1,0 +1,184 @@
+{
+ "date": "2026-10-09",
+ "difficulty": "medium",
+ "salt": "2026-10-09/medium",
+ "number": 13,
+ "round": "The Night Train",
+ "intro": "Somewhere between two stations that no longer exist, the night train stopped. When it started again, every ticket had been replaced with a puzzle, tucked into the overhead rack above each berth, addressed to the passenger below by name. The porter moved down the aisle with his lantern and his notebook, ticking off the sleeping car one berth at a time, muttering each number as if it were a name. At the far end, a woman sat up in her berth and turned her ticket over in her fingers: on the back, someone had written two numbers in small, careful figures, and she had never seen the face of the man who wrote them. Beyond her window, the dark tracks unspooled into something like a list, one item after another, each waiting its turn under the light. Somewhere in the next car, a pen scratched, and another name was crossed off.",
+ "echo": "The whole railway runs on a printed promise about when things will happen.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Night Mail",
+   "flavor": "A sentence that came loose from its lines.",
+   "blocks": [
+    {
+     "type": "dropquote",
+     "cols": [
+      "EIILT",
+      "FHRST",
+      "AEEH",
+      "AINNSY",
+      "DEOSS",
+      "MUWYY",
+      "AEOS",
+      "CEFPRU",
+      "AHNO",
+      "HNOTUW",
+      "AEHNR",
+      "DEINRV",
+      "CCEE",
+      "AEHT",
+      "ADH"
+     ],
+     "mask": [
+      "..#...#...#....",
+      "#....#........#",
+      "....#...#....#.",
+      "......#.....#..",
+      ".#......#.....#",
+      "..#.........###"
+     ]
+    }
+   ],
+   "hash": "05b3a5824ce83848dd8dadf5cb8704d398f236e050aa4350ff6e481f2f7177db",
+   "partials": {},
+   "hints": [
+    "Black squares are spaces. Which two- and three-letter words fit, using only the letters each column allows?",
+    "Each column's letters drop into that column of the grid; cross them off as you place them. The sentence tells you what to submit."
+   ],
+   "length": 9
+  },
+  {
+   "id": 2,
+   "title": "Dining Car",
+   "flavor": "It never travels in a straight line, and neither does the truth.",
+   "blocks": [
+    {
+     "type": "board",
+     "rows": [
+      "RTXOFFIB",
+      "ZFVQJQQH",
+      "JEDYYKRN",
+      "RDTFEKCZ",
+      "LGRJZBZS",
+      "EAIIKJOF",
+      "HNZROMAU",
+      "DJQTPGBX"
+     ]
+    },
+    {
+     "type": "prose",
+     "text": "The knight sets out from h3: Ng1 Ne2 Nc3 Na4 Nb6 Nc4."
+    }
+   ],
+   "hash": "8a40ab7f41f89bcb8121e8d3151b9b94bbe6fce08ce825a59b0e750001d32d2d",
+   "partials": {},
+   "hints": [
+    "Those are chess moves. Which squares does the piece land on, and what's written there?",
+    "Start on the given square, play each move, and read the letter on every square it lands on."
+   ],
+   "length": 6
+  },
+  {
+   "id": 3,
+   "title": "Points Failure",
+   "flavor": "Same quantities, different fingers.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "2₇",
+      "102₄",
+      "1₂",
+      "1011₂",
+      "5₈",
+      "14₉",
+      "1₄",
+      "16₈"
+     ],
+     "inline": true
+    }
+   ],
+   "hash": "391b2409649cb90e81f1ac6511c5a295f6c0a8e1a1b3da2ca6681ecada522c0f",
+   "partials": {},
+   "hints": [
+    "The subscript is a base. Once everything is in ordinary decimal, what range are the numbers in?",
+    "Convert each one to base ten; each is a letter position (A = 1)."
+   ],
+   "length": 8
+  },
+  {
+   "id": 4,
+   "title": "Last Call",
+   "flavor": "The words are nonsense. The typesetting isn't.",
+   "blocks": [
+    {
+     "type": "prose",
+     "text": "pisTon tickEt coAL freIgHt gauge a comPArtmEnt."
+    }
+   ],
+   "hash": "2da9c82abb22d603e3fce32afb7c13ab0229918b3e4084cb90eef5824e50f8ec",
+   "partials": {},
+   "hints": [
+    "Two kinds of letter, big and small. How many of them would you need to spell twenty-six different things?",
+    "Baconian cipher: groups of five, lowercase = a, uppercase = b; aaaaa is A."
+   ],
+   "length": 8
+  },
+  {
+   "id": 5,
+   "title": "Leaves On The Line",
+   "flavor": "Each entry picked up a hitchhiker on the way.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "SOEDBRR",
+      "GIANLTS",
+      "RNTNEELA",
+      "WAITSHC",
+      "ITTKCEM"
+     ],
+     "ordered": true,
+     "mono": true
+    }
+   ],
+   "hash": "c45ed33fef8b80ddbc5b806c9db652a96683da02d0e46766812d7771f00ad37b",
+   "partials": {},
+   "hints": [
+    "Each jumble is almost a word from this round, but with a letter to spare. Which letter, every time?",
+    "Rearrange each into a theme word; the spare letters, in order, are the answer."
+   ],
+   "length": 5
+  }
+ ],
+ "meta": {
+  "title": "Meta: The Night Train",
+  "flavor": "Someone underlined a few verses.",
+  "blocks": [
+   {
+    "type": "list",
+    "items": [
+     "Ch. 5 v. 2",
+     "Ch. 4 v. 5",
+     "Ch. 3 v. 6",
+     "Ch. 1 v. 2",
+     "Ch. 5 v. 2",
+     "Ch. 3 v. 3",
+     "Ch. 2 v. 1",
+     "Ch. 2 v. 4",
+     "Ch. 1 v. 2"
+    ],
+    "ordered": true
+   }
+  ],
+  "length": 9,
+  "hash": "0232a586ee20906dfd8c253ae2b0c5c4ff0806a3525c77314829d7082e774ca9",
+  "hints": [
+   "Every entry has two numbers. What in this round is numbered, and what could the second number count?",
+   "The first number picks a puzzle; the second picks a letter inside its answer."
+  ]
+ },
+ "described": true
+}
