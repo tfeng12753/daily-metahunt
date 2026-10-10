@@ -1,0 +1,64 @@
+{
+ "date": "2026-10-09",
+ "number": 13,
+ "difficulty": "hard",
+ "final": "EXPRESS",
+ "metaType": "initials",
+ "explain": "The ciphertext is Vigenère-encrypted with the first letters of the feeder answers (in puzzle order) as the key.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Terminus Approaching",
+   "answer": "COMPARTMENT",
+   "mechanism": "Symbol cryptogram",
+   "transform": null,
+   "encoded": "COMPARTMENT",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Night Mail",
+   "answer": "SEMAPHORE",
+   "mechanism": "Anagrams with an extra letter",
+   "transform": null,
+   "encoded": "SEMAPHORE",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Platform Nine",
+   "answer": "VIADUCT",
+   "mechanism": "Keyboard shift",
+   "transform": null,
+   "encoded": "VIADUCT",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Rolling Stock",
+   "answer": "TUNNEL",
+   "mechanism": "Shredded sentence",
+   "transform": null,
+   "encoded": "TUNNEL",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Last Call",
+   "answer": "TICKET",
+   "mechanism": "Book cipher",
+   "transform": null,
+   "encoded": "TICKET",
+   "mutated": null
+  },
+  {
+   "id": 6,
+   "title": "Leaves On The Line",
+   "answer": "CONDUCTOR",
+   "mechanism": "Tap code",
+   "transform": null,
+   "encoded": "CONDUCTOR",
+   "mutated": null
+  }
+ ]
+}

@@ -1,0 +1,233 @@
+{
+ "date": "2026-10-10",
+ "difficulty": "hard",
+ "salt": "2026-10-10",
+ "number": 14,
+ "round": "The Travelling Show",
+ "intro": "The circus arrived overnight in a town that isn't on any map, its striped canvas rising between the clock tower and the river as though it had grown there. Admission is free, but the ticket-taker only lets you in if you can read your ticket, and half the crowd squints at the looping script as if it were a second language. Inside, the performers go about their business with a strange tidiness, each one sealing their act inside a small glass box and clipping a brass key to the lid. The ringmaster says nobody leaves until the boxes are opened, and the keys all hum like they know a tune. Between shows, the acrobats sit in a circle mending nets, humming fragments of songs that never quite finish, as if each voice were a word in a longer sentence spoken by someone else.",
+ "echo": "The daring young man flew through the air with the greatest of ease.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Strongman",
+   "flavor": "Three letters to a strip, and a note of how long each word was.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "ALL",
+      "DSP",
+      "ETT",
+      "EWR",
+      "HAN",
+      "HEW",
+      "INT",
+      "LEA",
+      "LTS",
+      "ONG",
+      "ORD",
+      "ORG",
+      "OTH",
+      "SEF",
+      "SHO",
+      "SNO",
+      "STI",
+      "TEF",
+      "THI",
+      "ULD"
+     ],
+     "inline": true,
+     "tiles": true
+    },
+    {
+     "type": "prose",
+     "text": "Word lengths: (6 4 4 4 4 3 5 5 6 6 3 4 6)"
+    }
+   ],
+   "hash": "28d9cea7b5764304b3f2058c98b5e688fcc23f9a62831dc9160038b8f64c952c",
+   "partials": {},
+   "hints": [
+    "The strips are alphabetised, not in order. The word lengths say where the breaks fall. Which strip could start the sentence?"
+   ]
+  },
+  {
+   "id": 2,
+   "title": "Grand Finale",
+   "flavor": "Shaken, one word at a time.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "WNRESA",
+      "NETH",
+      "DNOFU",
+      "NCA",
+      "ENSENTCE",
+      "UOY",
+      "UYO",
+      "HET",
+      "ICHHW",
+      "HIST",
+      "SI",
+      "EVHA",
+      "FI",
+      "EADR",
+      "YEALRAD",
+      "CWNOL"
+     ],
+     "inline": true,
+     "tray": "word"
+    }
+   ],
+   "hash": "442884e0e59b2f0e5fe49377e3c362c73ea3cbef214bde25497e85d7b4c0993e",
+   "partials": {},
+   "hints": [
+    "Each word is complete but shuffled. Start with the shortest ones: does a sentence appear?"
+   ]
+  },
+  {
+   "id": 3,
+   "title": "The Human Cannonball",
+   "flavor": "Fences and corners; some have an animal inside. Half a turn of the wheel and you'd have it.",
+   "blocks": [
+    {
+     "type": "pigpen",
+     "items": [
+      {
+       "g": "hash",
+       "p": 6,
+       "dot": false
+      },
+      {
+       "g": "hash",
+       "p": 4,
+       "dot": true
+      },
+      {
+       "g": "x",
+       "p": 3,
+       "dot": true
+      },
+      {
+       "g": "hash",
+       "p": 8,
+       "dot": true
+      },
+      {
+       "g": "hash",
+       "p": 4,
+       "dot": false
+      }
+     ]
+    }
+   ],
+   "hash": "8717c9ba75a5e7c9fed349b4b30467a0575f967256cb9671cdef6496242167f5",
+   "partials": {
+    "bd99b9a1a17541f59948aac141ba1462a2bbc177023d88e72f43312152810d8c": "You've decoded it, but it's not finished. One more layer."
+   },
+   "hints": [
+    "Picture the alphabet written into a couple of #-grids and X-grids. Which cell would each shape be? And if what you get still isn't a word, reread the flavour text."
+   ]
+  },
+  {
+   "id": 4,
+   "title": "Hall Of Mirrors",
+   "flavor": "Everything that belongs is in there somewhere. Some things don't belong.",
+   "blocks": [
+    {
+     "type": "caption",
+     "text": "Somewhere in here: things to do with the big top."
+    },
+    {
+     "type": "board",
+     "rows": [
+      "RJESTERP",
+      "ETOPEFPM",
+      "KITRKOAI",
+      "RGNECRRR",
+      "AEETITBR",
+      "BRTZTUEO",
+      "CORENNZR",
+      "NOILSEAL"
+     ],
+     "plain": true,
+     "words": [
+      "BARKER",
+      "FORTUNE",
+      "JESTER",
+      "LION",
+      "MIRROR",
+      "PRETZEL",
+      "SEAL",
+      "TENT",
+      "TICKET",
+      "TIGER",
+      "ZEBRA"
+     ]
+    }
+   ],
+   "hash": "93f2f9f5421390e65155655b2affbf3f3063b4c5e12cefaff0379b0f723905e7",
+   "partials": {},
+   "hints": [
+    "Once every theme word is found, is anything left unclaimed? Read it in order.",
+    "The hidden words are: BARKER, FORTUNE, JESTER, LION, MIRROR, PRETZEL, SEAL, TENT, TICKET, TIGER, ZEBRA."
+   ]
+  },
+  {
+   "id": 5,
+   "title": "Two Shows Daily",
+   "flavor": "Every letter here is wearing someone else's coat.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "TDRDNW VJSVOPVN FTWDTV PD HVP PXQA GFY AD PXV SYQUV QA EZAP DTV MDYN XDDS",
+     "wide": true,
+     "solver": "substitution"
+    }
+   ],
+   "hash": "fb8550862796e14b8c6fdfc5e3656e8a4a2109dde718161df983717fd2003496",
+   "partials": {},
+   "hints": [
+    "Which short words are most common in English? Could any of them be hiding here?"
+   ]
+  },
+  {
+   "id": 6,
+   "title": "Midway",
+   "flavor": "A paint chart for a room nobody will ever decorate.",
+   "blocks": [
+    {
+     "type": "swatches",
+     "items": [
+      "#464552",
+      "#524953",
+      "#574845",
+      "#454C20"
+     ]
+    }
+   ],
+   "hash": "c69d97546ca271c471a8437a633f41ab2027489acc049fb6e4997b1de633a735",
+   "partials": {},
+   "hints": [
+    "Split each colour code into three pairs of hex digits. What else is a two-digit hex number?"
+   ]
+  }
+ ],
+ "meta": {
+  "title": "Meta: The Travelling Show",
+  "flavor": "The last lock takes every signature at once.",
+  "blocks": [
+   {
+    "type": "mono",
+    "text": "LTTELEW",
+    "big": true
+   }
+  ],
+  "length": 7,
+  "hash": "74216b9c02322a3ca29484b6c8bc6309e22ec3ada23afa1eb00dcb78e596874a",
+  "hints": [
+   "Blaise de Vigenère needed a key to open this. Has every answer signed its work?"
+  ]
+ },
+ "described": true
+}

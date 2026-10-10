@@ -1,0 +1,55 @@
+{
+ "date": "2026-10-09",
+ "number": 13,
+ "difficulty": "medium",
+ "final": "TIMETABLE",
+ "metaType": "logbook",
+ "explain": "Each entry is (puzzle number, letter number): index into that puzzle's answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Night Mail",
+   "answer": "SEMAPHORE",
+   "mechanism": "Drop quote",
+   "transform": null,
+   "encoded": "SEMAPHORE",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Dining Car",
+   "answer": "BOILER",
+   "mechanism": "Knight's path",
+   "transform": null,
+   "encoded": "BOILER",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Points Failure",
+   "answer": "BRAKEMAN",
+   "mechanism": "Mixed number bases",
+   "transform": null,
+   "encoded": "BRAKEMAN",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Last Call",
+   "answer": "CARRIAGE",
+   "mechanism": "Baconian cipher",
+   "transform": null,
+   "encoded": "CARRIAGE",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Leaves On The Line",
+   "answer": "STEAM",
+   "mechanism": "Anagrams with an extra letter",
+   "transform": null,
+   "encoded": "STEAM",
+   "mutated": null
+  }
+ ]
+}

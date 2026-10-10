@@ -1,0 +1,314 @@
+{
+ "date": "2026-10-10",
+ "difficulty": "easy",
+ "salt": "2026-10-10/easy",
+ "number": 14,
+ "round": "The Travelling Show",
+ "intro": "The circus arrived overnight in a town that isn't on any map, its striped canvas glowing against the dark like a lantern nobody lit. Admission is free, but the ticket-taker only lets you in if you can read your ticket. Inside, the air smells of sawdust and burnt sugar, and each of the four showmasters has something small in hand: a folded programme, a bundle of letters, a gilt-edged envelope, a scrap of sheet music. The master of ceremonies leans close and whispers that the true show happens backstage, where every act leaves behind a clue tucked into its own performer's hat. He says the way through is to see each act as its own little answer, and then reach back into the right one at the right moment, as if choosing the exact letter someone left for you in a crowd. The audience gathers, breath held, waiting for the trick of knowing which pockets to empty.",
+ "echo": "Five things in the air, and only two hands.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "The Human Cannonball",
+   "flavor": "Fill in the blanks, literally. Some squares have been given to you for free.",
+   "blocks": [
+    {
+     "type": "nonogram",
+     "rows": [
+      [
+       4,
+       1,
+       1,
+       4,
+       4,
+       5,
+       5
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       4,
+       1,
+       1,
+       4,
+       4,
+       4,
+       1
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       3,
+       1,
+       1,
+       5,
+       1
+      ]
+     ],
+     "cols": [
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1
+      ],
+      [],
+      [
+       4
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       4
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ],
+     "givens": [
+      [
+       4,
+       6,
+       0
+      ]
+     ]
+    }
+   ],
+   "hash": "b888626bea3f98e23a7f775435c4af34e661fbe5f1ff7d65720e4427644840c8",
+   "partials": {},
+   "hints": [
+    "A nonogram (paint-by-numbers). The filled picture is the answer written in 5×5 block letters.",
+    "To check you're on track: the answer begins with P."
+   ],
+   "technique": "Nonogram",
+   "length": 6
+  },
+  {
+   "id": 2,
+   "title": "Strongman",
+   "flavor": "Confetti, sorted alphabetically by a very tidy intern. Put it back together.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "AND",
+      "AYS",
+      "CYC",
+      "DDE",
+      "EWA",
+      "IGH",
+      "IMP",
+      "INS",
+      "ITS",
+      "LAL",
+      "LE",
+      "LYS",
+      "MES",
+      "NIN",
+      "ONG",
+      "PLA",
+      "SAG",
+      "SHI",
+      "TAL",
+      "THE",
+      "UNI"
+     ],
+     "inline": true,
+     "tiles": true
+    },
+    {
+     "type": "prose",
+     "text": "Word lengths: (3 7 3 6 2 5 5 3 5 3 2 6 4 8)"
+    }
+   ],
+   "hash": "1c7693513dbdc9df6723a2dcaea6b3695f812b015a7c5f59a3c39a910cdb2eb6",
+   "partials": {},
+   "hints": [
+    "The sentence was cut into three-letter fragments (spaces removed) and alphabetised. Reassemble it using the word lengths; it tells you the answer.",
+    "To check you're on track: the answer begins with U."
+   ],
+   "technique": "Shredded sentence",
+   "length": 8
+  },
+  {
+   "id": 3,
+   "title": "Sawdust",
+   "flavor": "One alphabet was traded for another, one for one, and nobody bothered to hide where the words begin and end.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "BZKX XZL YUMTALT YKTTALC BKE DUX FUOC UT ELYTLXE NMX K EADFOL BUTC RLEXLT",
+     "wide": true,
+     "solver": "substitution"
+    }
+   ],
+   "hash": "e1e1b497de4980a4769200a71638e817de2d6c1ab0f5f0a04171225bba4246a2",
+   "partials": {},
+   "hints": [
+    "Simple monoalphabetic substitution with word breaks kept. Solve the sentence; it tells you the answer.",
+    "To check you're on track: the answer begins with J."
+   ],
+   "technique": "Cryptogram (cluephrase)",
+   "length": 6
+  },
+  {
+   "id": 4,
+   "title": "Grand Finale",
+   "flavor": "Julius would have read this before breakfast.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "YMJ QFXY YMNSL YMJ TUJWFYTW YDUJI GJKTWJ YMJ QNSJ BJSY IJFI BFX RFLNHNFS",
+     "wide": true,
+     "solver": "substitution",
+     "wheel": true
+    }
+   ],
+   "hash": "22f6b0fbed193675a45c7e2df47ef0d0cad92e421a5b3c1f2eab2d6c5a675d86",
+   "partials": {},
+   "hints": [
+    "Every letter of the sentence was shifted along the alphabet by the same amount. Find the shift; the sentence tells you the answer.",
+    "To check you're on track: the answer begins with M."
+   ],
+   "technique": "Caesar shift",
+   "length": 8
+  }
+ ],
+ "meta": {
+  "title": "Meta: The Travelling Show",
+  "flavor": "The porter only ever noted where each passenger boarded. Every car holds one letter.",
+  "blocks": [
+   {
+    "type": "list",
+    "items": [
+     "Platform 3, car 1",
+     "Platform 1, car 2",
+     "Platform 4, car 3",
+     "Platform 4, car 3",
+     "Platform 2, car 7",
+     "Platform 1, car 5",
+     "Platform 3, car 6"
+    ],
+    "ordered": true
+   }
+  ],
+  "length": 7,
+  "hash": "3fde5fa2ccae95dfbcd3eed1ef71a1e54c940f292dd4e85404ddc1986305b0a1",
+  "hints": [
+   "Each entry is (puzzle number, letter number): index into that puzzle's answer.",
+   "To check you're on track: the final answer begins with J."
+  ]
+ },
+ "described": true
+}
