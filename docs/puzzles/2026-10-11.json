@@ -1,0 +1,210 @@
+{
+ "date": "2026-10-11",
+ "difficulty": "hard",
+ "salt": "2026-10-11",
+ "number": 15,
+ "round": "Opening Night",
+ "intro": "Ten minutes before curtain, every part in the pit was swapped for something else. The conductor refuses to go on until the real score is found.",
+ "echo": "Gershwin wrote his in blue; Queen set theirs in Bohemia.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Tuning Note",
+   "flavor": "The spaces, at least, are honest.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "FDYX XDR VNJLBRL VYLLBRS FYM WNX KNES NL MRVLRXM IJX Y MBWKER FNLS VEYLBWRX",
+     "wide": true,
+     "solver": "substitution"
+    }
+   ],
+   "hash": "63d0ef2f19055a990439841f11e89d4d4f8ef4bf20712d03b5853d2f92a41b29",
+   "partials": {},
+   "hints": [
+    "Which short words are most common in English? Could any of them be hiding here?"
+   ]
+  },
+  {
+   "id": 2,
+   "title": "Fermata",
+   "flavor": "No duplicates anywhere. Half a turn of the wheel and you'd have it.",
+   "blocks": [
+    {
+     "type": "sudoku",
+     "size": 9,
+     "rows": [
+      "RA....ZV.",
+      ".....ZB.A",
+      ".....V.R.",
+      "B........",
+      "..N..E...",
+      ".VO.NG..E",
+      "Z..V..G..",
+      ".OE..B...",
+      "..B...A.."
+     ],
+     "alphabet": "ABEGNORVZ",
+     "marks": [
+      [
+       1,
+       7
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       0
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       3,
+       7
+      ],
+      [
+       4,
+       4
+      ],
+      [
+       7,
+       3
+      ],
+      [
+       8,
+       5
+      ]
+     ]
+    }
+   ],
+   "hash": "486c1f0a37a005c4338898ca2073de90da90cab8b2c028e117c9f9f885479741",
+   "partials": {
+    "24bd0c82bf1f2d256de70fa187dad9db75035f620ba03edd2bba43144cb401a8": "You've decoded it, but it's not finished. One more layer."
+   },
+   "hints": [
+    "A familiar grid puzzle in unfamiliar clothes. Once it's done, are some squares more important than others? And if what you get still isn't a word, reread the flavour text."
+   ]
+  },
+  {
+   "id": 3,
+   "title": "Tutti",
+   "flavor": "Pairs of numbers pencilled in the margin.",
+   "blocks": [
+    {
+     "type": "prose",
+     "text": "Ten minutes before curtain, every part in the pit was swapped for something else. The conductor refuses to go on until the real score is found.",
+     "paper": true
+    },
+    {
+     "type": "list",
+     "items": [
+      "6.4",
+      "21.1",
+      "3.1",
+      "4.5"
+     ],
+     "inline": true
+    }
+   ],
+   "hash": "f912aea61956b257da62f5e5e4a2c2829ba4b1dd1daeff9ea3b83892565a636c",
+   "partials": {},
+   "hints": [
+    "The first number in each pair never goes past the number of words on the page. What does the second count?"
+   ]
+  },
+  {
+   "id": 4,
+   "title": "First Chair",
+   "flavor": "The radio operator had everything back to front, but only from A to Z.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "Golf",
+      "India",
+      "Foxtrot",
+      "November",
+      "Kilo",
+      "Victor",
+      "Golf"
+     ]
+    }
+   ],
+   "hash": "516c3bc078f0e0049ce7459fdee1886120a5fca2614a5d694a6a45e6f9ecea88",
+   "partials": {},
+   "hints": [
+    "Each word stands for a letter, the way radio operators spell. Do those letters read? If not, try the alphabet backwards."
+   ]
+  },
+  {
+   "id": 5,
+   "title": "Grand Pause",
+   "flavor": "Tidy up the inventory. Half a turn of the wheel and you'd have it.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "ETBOMONRF",
+      "LTEBGOA",
+      "NCEROT",
+      "RCOCOENET",
+      "AVLNIO",
+      "ASOINR",
+      "BBTANO"
+     ],
+     "ordered": true,
+     "mono": true
+    }
+   ],
+   "hash": "126aef28764ab302c7ee426855d716a9cba69a32a39edd479157e90b23987f14",
+   "partials": {
+    "dabbe12bff21ff06936670fd7b15d20849bca6b8e1acbb4ffb8dec730909a9dd": "You've decoded it, but it's not finished. One more layer."
+   },
+   "hints": [
+    "Each jumble is almost a word from this round, but with a letter to spare. Which letter, every time? And if what you get still isn't a word, reread the flavour text."
+   ]
+  },
+  {
+   "id": 6,
+   "title": "Con Sordino",
+   "flavor": "Bunting on the halyard, and not for a celebration.",
+   "blocks": [
+    {
+     "type": "flags",
+     "items": [
+      "S",
+      "C",
+      "O",
+      "R",
+      "E"
+     ]
+    }
+   ],
+   "hash": "3352ce646a5d911b833beae9da73a8c3b7a400ef8aa25348639eef071b6e4d1e",
+   "partials": {},
+   "hints": [
+    "Ships carry a flag for every letter of the alphabet. Do you know them?"
+   ]
+  }
+ ],
+ "meta": {
+  "title": "Meta: Opening Night",
+  "flavor": "The last lock takes every signature at once.",
+  "blocks": [
+   {
+    "type": "mono",
+    "text": "TITIKGFZ",
+    "big": true
+   }
+  ],
+  "length": 8,
+  "hash": "207b370a627c59c226183f12e6c2e1b844adc389bc6648e7e7cd8bcac58d55fb",
+  "hints": [
+   "Blaise de Vigenère needed a key to open this. Has every answer signed its work?"
+  ]
+ }
+}

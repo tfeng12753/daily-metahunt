@@ -1,0 +1,64 @@
+{
+ "date": "2026-10-10",
+ "number": 14,
+ "difficulty": "hard",
+ "final": "TRAPEZE",
+ "metaType": "initials",
+ "explain": "The ciphertext is Vigenère-encrypted with the first letters of the feeder answers (in puzzle order) as the key.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Strongman",
+   "answer": "STILTS",
+   "mechanism": "Shredded sentence",
+   "transform": null,
+   "encoded": "STILTS",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Grand Finale",
+   "answer": "CLOWN",
+   "mechanism": "Scrambled sentence",
+   "transform": null,
+   "encoded": "CLOWN",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "The Human Cannonball",
+   "answer": "TAMER",
+   "mechanism": "Pigpen cipher",
+   "transform": "ROT13",
+   "encoded": "GNZRE",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Hall Of Mirrors",
+   "answer": "POPCORN",
+   "mechanism": "Word search leftovers",
+   "transform": null,
+   "encoded": "POPCORN",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Two Shows Daily",
+   "answer": "HOOP",
+   "mechanism": "Cryptogram (cluephrase)",
+   "transform": null,
+   "encoded": "HOOP",
+   "mutated": null
+  },
+  {
+   "id": 6,
+   "title": "Midway",
+   "answer": "FERRISWHEEL",
+   "mechanism": "Hex colour ASCII",
+   "transform": null,
+   "encoded": "FERRISWHEEL",
+   "mutated": null
+  }
+ ]
+}

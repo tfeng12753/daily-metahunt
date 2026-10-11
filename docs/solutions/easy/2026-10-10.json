@@ -1,0 +1,46 @@
+{
+ "date": "2026-10-10",
+ "number": 14,
+ "difficulty": "easy",
+ "final": "JUGGLER",
+ "metaType": "logbook",
+ "explain": "Each entry is (puzzle number, letter number): index into that puzzle's answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "The Human Cannonball",
+   "answer": "PUPPET",
+   "mechanism": "Nonogram",
+   "transform": null,
+   "encoded": "PUPPET",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Strongman",
+   "answer": "UNICYCLE",
+   "mechanism": "Shredded sentence",
+   "transform": null,
+   "encoded": "UNICYCLE",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Sawdust",
+   "answer": "JESTER",
+   "mechanism": "Cryptogram (cluephrase)",
+   "transform": null,
+   "encoded": "JESTER",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Grand Finale",
+   "answer": "MAGICIAN",
+   "mechanism": "Caesar shift",
+   "transform": null,
+   "encoded": "MAGICIAN",
+   "mutated": null
+  }
+ ]
+}

@@ -1,0 +1,265 @@
+{
+ "date": "2026-10-11",
+ "difficulty": "easy",
+ "salt": "2026-10-11/easy",
+ "number": 15,
+ "round": "Opening Night",
+ "intro": "Ten minutes before curtain, every instrument in the pit had been quietly switched for another—flutes where trombones should be, violins stashed inside timpani cases—while the real scores were spirited away somewhere among the programmes, the coat racks, the dim green corridors. The conductor stood at the podium, baton lowered, plainly refusing to lift it again until the true parts were back in the right hands. It seemed the hall itself had conspired to misplace the music, scattering clues like loose sheet-music pages through the usher's cupboard and the greenroom piano. Reassembling the evening would mean putting each piece back where it belonged, and only then would the overture make sense. Somewhere in the recovered notes, the opening bars of something hidden waited to be read aloud.",
+ "echo": "The one person on stage who makes no sound at all.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Dal Segno",
+   "flavor": "Scrambled inventory. Each entry picked up one hitchhiker on the way through the machine.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "LAEINTRCM",
+      "LDUREPEE",
+      "APITON",
+      "MRTOERNOB",
+      "EFOTRO",
+      "PHNONLXYOE",
+      "PMORTUET",
+      "SNBOAOMS",
+      "NLCYAOBE"
+     ],
+     "ordered": true,
+     "mono": true
+    }
+   ],
+   "hash": "9c18c3a2a0e88c6df996c655075ac316e0f387d9029a20e671a028be0f587803",
+   "partials": {},
+   "hints": [
+    "Each jumble is an anagram of a word from this round's theme plus one extra letter. The extra letters, in order, spell the answer.",
+    "To check you're on track: the answer begins with M."
+   ],
+   "technique": "Anagrams with an extra letter",
+   "length": 9
+  },
+  {
+   "id": 2,
+   "title": "Da Capo",
+   "flavor": "The spy's handbook said to always carry a novel. It never said which one; this page will have to do.",
+   "blocks": [
+    {
+     "type": "prose",
+     "text": "Ten minutes before curtain, every part in the pit was swapped for something else. The conductor refuses to go on until the real score is found.",
+     "paper": true
+    },
+    {
+     "type": "list",
+     "items": [
+      "10.2",
+      "23.1",
+      "7.1",
+      "6.2"
+     ],
+     "inline": true
+    }
+   ],
+   "hash": "34b084b955300cf90ae9105ce21369e6b944b913a1a3967384b65a94ed17fff7",
+   "partials": {},
+   "hints": [
+    "Each pair is word.letter into the recovered page (words split on spaces; punctuation ignored).",
+    "To check you're on track: the answer begins with A."
+   ],
+   "technique": "Book cipher",
+   "length": 4
+  },
+  {
+   "id": 3,
+   "title": "Tacet",
+   "flavor": "The knight never moves in a straight line, and neither does the truth in the concert hall.",
+   "blocks": [
+    {
+     "type": "board",
+     "rows": [
+      "FCWZPJBK",
+      "XFHBJNLP",
+      "PULJBDNZ",
+      "ZPXVNELH",
+      "OXMIPNJL",
+      "EEOSXXWA",
+      "OMFVCIPM",
+      "WRNOTGOY"
+     ]
+    },
+    {
+     "type": "prose",
+     "text": "The knight sets out from c5: Nb3 Nc1 Ne2 Nc3 Nb1 Na3."
+    }
+   ],
+   "hash": "9607f7860be96194330a7ffc2b58e7ed5a3919aa62972a4e877aaeaf6f858ba8",
+   "partials": {},
+   "hints": [
+    "Start on the given square and follow the knight moves; read the letter on each square it lands on.",
+    "To check you're on track: the answer begins with E."
+   ],
+   "technique": "Knight's path",
+   "length": 6
+  },
+  {
+   "id": 4,
+   "title": "First Chair",
+   "flavor": "Somebody shook the sentence and all the letters fell to the bottom of their columns.",
+   "blocks": [
+    {
+     "type": "dropquote",
+     "cols": [
+      "NORS",
+      "DGHSTT",
+      "CEEHOS",
+      "EOTU",
+      "FLPR",
+      "ADELTW",
+      "EHLR",
+      "AELOT",
+      "HNS",
+      "EGIIW",
+      "NOS",
+      "FHRT",
+      "ADNOO"
+     ],
+     "mask": [
+      "......#....#.",
+      "...#....#....",
+      "#...#.....#..",
+      "...#......#..",
+      "....#...#....",
+      "#.....#######"
+     ]
+    }
+   ],
+   "hash": "0bf73d8d0dc9066898bf37ac683c5851bde0d54cadd3903d2b126b62adb40bdc",
+   "partials": {},
+   "hints": [
+    "A drop quote: each column's letters (shown alphabetised above it) drop into that column of the grid below. Black squares are spaces; words can wrap between rows. The sentence tells you the answer.",
+    "To check you're on track: the answer begins with S."
+   ],
+   "technique": "Drop quote",
+   "length": 5
+  },
+  {
+   "id": 5,
+   "title": "Tutti",
+   "flavor": "The typesetter shook each word like a box of tiles, one word at a time.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "HET",
+      "LSTA",
+      "HGTIN",
+      "HTE",
+      "ROREPOTA",
+      "TDEYP",
+      "EBFREO",
+      "ETH",
+      "EILN",
+      "NEWT",
+      "DDAE",
+      "AWS",
+      "UTAB"
+     ],
+     "inline": true,
+     "tray": "word"
+    }
+   ],
+   "hash": "f03c28c623ab94ac970faa8870b5512aa3d11bbf5ce7165e6c305da976df8a6d",
+   "partials": {},
+   "hints": [
+    "Each word of a sentence has had its letters shuffled. Unscramble them; the sentence tells you the answer.",
+    "To check you're on track: the answer begins with T."
+   ],
+   "technique": "Scrambled sentence",
+   "length": 4
+  },
+  {
+   "id": 6,
+   "title": "Cadenza",
+   "flavor": "How many? How many? How many? The answers go somewhere after that.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "Holes on a full golf course",
+      "Players on a rugby union side",
+      "Lines in a villanelle",
+      "Squares in a noughts-and-crosses grid",
+      "Days in a fortnight"
+     ],
+     "ordered": true,
+     "tray": "letter"
+    }
+   ],
+   "hash": "7fddbef0718efc3fdb727250a0004ff2208201ee022bcd5b096c107b5f52bf8b",
+   "partials": {},
+   "hints": [
+    "Each line is a number from 1 to 26. Turn each number into a letter (A = 1, B = 2, …).",
+    "To check you're on track: the answer begins with R."
+   ],
+   "technique": "Number trivia",
+   "length": 5
+  },
+  {
+   "id": 7,
+   "title": "Rehearsal Mark",
+   "flavor": "A familiar grid, an unfamiliar alphabet.",
+   "blocks": [
+    {
+     "type": "sudoku",
+     "size": 6,
+     "rows": [
+      "O..K.B",
+      "K..P..",
+      "LP....",
+      "EKBOPL",
+      "...EO.",
+      "...LBK"
+     ],
+     "alphabet": "BEKLOP",
+     "marks": [
+      [
+       1,
+       5
+      ],
+      [
+       4,
+       0
+      ],
+      [
+       2,
+       2
+      ],
+      [
+       5,
+       2
+      ]
+     ]
+    }
+   ],
+   "hash": "aa277ad816155c94e9e1d602e352cb47b857a19fd739eca7b0a574c0c1ad0599",
+   "partials": {},
+   "hints": [
+    "Sudoku using the letters shown instead of digits (each row, column and box uses each letter once). Read the numbered squares in order.",
+    "To check you're on track: the answer begins with O."
+   ],
+   "technique": "Letter sudoku",
+   "length": 4
+  }
+ ],
+ "meta": {
+  "title": "Meta: Opening Night",
+  "flavor": "Everyone in the concert hall introduces themselves in turn. Listen to how each of them begins.",
+  "blocks": [],
+  "length": 7,
+  "hash": "794ddb746b9c0a38ec354ef802945e80a19d74bb07fe336986711db48b3eeb07",
+  "hints": [
+   "Take the first letter of each feeder answer, in puzzle order.",
+   "To check you're on track: the final answer begins with M."
+  ]
+ },
+ "described": true
+}

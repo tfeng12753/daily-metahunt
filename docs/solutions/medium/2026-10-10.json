@@ -1,0 +1,82 @@
+{
+ "date": "2026-10-10",
+ "number": 14,
+ "difficulty": "medium",
+ "final": "CAROUSEL",
+ "metaType": "stowaway",
+ "explain": "Each feeder decodes to its answer plus one inserted letter. The inserted letters, in puzzle order, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "The Flying Act",
+   "answer": "CALLIOPE",
+   "mechanism": "Braille as bit strings",
+   "transform": "Atbash (A↔Z mirror)",
+   "encoded": "XXZOORLKV",
+   "mutated": "CCALLIOPE"
+  },
+  {
+   "id": 2,
+   "title": "The Human Cannonball",
+   "answer": "JESTER",
+   "mechanism": "Shredded sentence",
+   "transform": null,
+   "encoded": "JESTEAR",
+   "mutated": "JESTEAR"
+  },
+  {
+   "id": 3,
+   "title": "Midway",
+   "answer": "PARADE",
+   "mechanism": "Tap code",
+   "transform": null,
+   "encoded": "PARADRE",
+   "mutated": "PARADRE"
+  },
+  {
+   "id": 4,
+   "title": "Without A Net",
+   "answer": "CONTORTIONIST",
+   "mechanism": "Rail fence (cluephrase)",
+   "transform": null,
+   "encoded": "CONTORTIOONIST",
+   "mutated": "CONTORTIOONIST"
+  },
+  {
+   "id": 5,
+   "title": "Roll Up",
+   "answer": "MAGICIAN",
+   "mechanism": "Number trivia",
+   "transform": null,
+   "encoded": "MAGUICIAN",
+   "mutated": "MAGUICIAN"
+  },
+  {
+   "id": 6,
+   "title": "Two Shows Daily",
+   "answer": "SAFETYNET",
+   "mechanism": "Symbol cryptogram",
+   "transform": null,
+   "encoded": "SASFETYNET",
+   "mutated": "SASFETYNET"
+  },
+  {
+   "id": 7,
+   "title": "Grand Finale",
+   "answer": "TIGER",
+   "mechanism": "Caesar shift",
+   "transform": null,
+   "encoded": "TIGEER",
+   "mutated": "TIGEER"
+  },
+  {
+   "id": 8,
+   "title": "Strongman",
+   "answer": "DRUMROLL",
+   "mechanism": "Punched tape",
+   "transform": "ROT13",
+   "encoded": "QEHZEBYYY",
+   "mutated": "DRUMROLLL"
+  }
+ ]
+}

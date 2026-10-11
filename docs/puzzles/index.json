@@ -1,5 +1,5 @@
 {
- "latest": "2026-10-10",
+ "latest": "2026-10-11",
  "puzzles": [
   {
    "date": "2026-09-27",
@@ -162,6 +162,18 @@
     "hard": 6,
     "medium": 8,
     "easy": 4
+   },
+   "medium": true,
+   "easy": true
+  },
+  {
+   "date": "2026-10-11",
+   "number": 15,
+   "round": "Opening Night",
+   "count": {
+    "hard": 6,
+    "medium": 8,
+    "easy": 7
    },
    "medium": true,
    "easy": true

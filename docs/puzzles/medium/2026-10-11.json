@@ -1,0 +1,588 @@
+{
+ "date": "2026-10-11",
+ "difficulty": "medium",
+ "salt": "2026-10-11/medium",
+ "number": 15,
+ "round": "Opening Night",
+ "intro": "Ten minutes before curtain, every part in the pit was swapped for something else. The conductor refuses to go on until the real score is found.",
+ "echo": "No soloists tonight: everyone plays together, or nobody does.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Tuning Note",
+   "flavor": "Not a single letter on the page, and yet it says something.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "♣☆★△ ☁⚑◆✿♦△ ✚☆△ ☀☾♪◆ □★♫♫▽♦ ♪◆ □♪▲▲☆▽☆♦ ◇★☀ ☂☆ ⚑☆☀ ☀♦▽▽ ☀☾♦ ☆☀☾♦△◆ ☾☆✿ ♣☆★ ○☆☀ ♪☀",
+     "wide": true,
+     "solver": "substitution"
+    }
+   ],
+   "hash": "4d079cc47e67c20c185d74cc030c737f2037c2407695d3fcd7ceeecf84008941",
+   "partials": {
+    "6594bf6bdcaafe65264af77632ce03e2b139c7be81bb42d5f03072ffa67c60a8": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Which short words are most common in English? Could any of them be hiding here?",
+    "Each symbol always stands for the same letter. The finished sentence tells you what to submit."
+   ],
+   "length": 7
+  },
+  {
+   "id": 2,
+   "title": "Tacet",
+   "flavor": "Everything that belongs is in there somewhere. Some things don't belong.",
+   "blocks": [
+    {
+     "type": "caption",
+     "text": "Hidden in the grid: 8 words to do with the concert hall."
+    },
+    {
+     "type": "board",
+     "rows": [
+      "GLOCMBK",
+      "EHNSUAS",
+      "VROUTTP",
+      "IOLREOA",
+      "OSLONNB",
+      "LIEHNIU",
+      "ANCCELT"
+     ],
+     "plain": true,
+     "words": [
+      "BATON",
+      "CELLO",
+      "CHORUS",
+      "HORN",
+      "MUTE",
+      "ROSIN",
+      "TUBA",
+      "VIOLA"
+     ]
+    }
+   ],
+   "hash": "ed93c52259ea2e6c1c78e72f18d2fd789b7b0afc1159429e178e736ede87c608",
+   "partials": {
+    "865bb29fc06357184b62fd11caf3c586f3ca882bc37dfd080848dbf85037aea7": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Once every theme word is found, is anything left unclaimed? Read it in order.",
+    "Find the theme words; the letters no word uses, read row by row, are the answer.",
+    "The hidden words are: BATON, CELLO, CHORUS, HORN, MUTE, ROSIN, TUBA, VIOLA."
+   ],
+   "length": 12
+  },
+  {
+   "id": 3,
+   "title": "Dal Segno",
+   "flavor": "Typed in the dark, with one hand resting a key out of place.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "VPMVRTYDP",
+     "big": true,
+     "shift": 1
+    }
+   ],
+   "hash": "547fdb804766769d7f8b2338cd89b52c420c10c2493ecc6c7b48c296bf7a026a",
+   "partials": {
+    "b4f010750a650a8dd010adc3c71e37749fd8434e31af571d437c0a1617825278": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Every letter is close to the right one. Close on what? Look down at your hands.",
+    "QWERTY: every letter was typed one key to the side. Try shifting each one back, both directions."
+   ],
+   "length": 8
+  },
+  {
+   "id": 4,
+   "title": "Coda",
+   "flavor": "Three letters to a strip, and a note of how long each word was.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "ADY",
+      "ANR",
+      "EAD",
+      "ERW",
+      "FOU",
+      "HEA",
+      "HIC",
+      "HIS",
+      "IFY",
+      "LRE",
+      "NCE",
+      "NDT",
+      "NSW",
+      "NTE",
+      "NYO",
+      "ORE",
+      "OUC",
+      "SEC",
+      "SSE",
+      "THE",
+      "THI",
+      "UHA",
+      "VEA"
+     ],
+     "inline": true,
+     "tiles": true
+    },
+    {
+     "type": "prose",
+     "text": "Word lengths: (2 3 3 4 4 8 4 3 4 7 5 3 6 5 2 6)"
+    }
+   ],
+   "hash": "1855f809c32bb5a92050cefddaf8469910ad817cff87a9fe51c9682299f43f23",
+   "partials": {
+    "5d2031034f621b19022d327c06951a25ea49db0dc1b766873e7ad84b080566ca": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "The strips are alphabetised, not in order. The word lengths say where the breaks fall. Which strip could start the sentence?",
+    "Chain the strips into one string and split it by the word lengths; the sentence tells you what to submit."
+   ],
+   "length": 5
+  },
+  {
+   "id": 5,
+   "title": "Con Sordino",
+   "flavor": "Only the count of each run was kept.",
+   "blocks": [
+    {
+     "type": "nonogram",
+     "rows": [
+      [
+       4,
+       1,
+       1,
+       1,
+       1,
+       4,
+       3,
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1,
+       2,
+       2,
+       1,
+       1,
+       1,
+       1,
+       2,
+       2,
+       1
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       4,
+       5,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       4,
+       1,
+       1,
+       1,
+       4,
+       1,
+       1,
+       1,
+       1,
+       5
+      ]
+     ],
+     "cols": [
+      [
+       3
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       3
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       5
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       4
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       4
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       5
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ],
+     "givens": [
+      [
+       4,
+       8,
+       1
+      ],
+      [
+       0,
+       25,
+       1
+      ],
+      [
+       3,
+       0,
+       1
+      ],
+      [
+       1,
+       9,
+       1
+      ],
+      [
+       2,
+       10,
+       0
+      ],
+      [
+       2,
+       6,
+       0
+      ],
+      [
+       0,
+       6,
+       1
+      ]
+     ]
+    }
+   ],
+   "hash": "dde5c2879230b30bddcf36805aa8be1778a6d302f3a7d6f41a3d1ca3eb556347",
+   "partials": {
+    "b5d4852acb9f8f7438a99fbf85213f63e2cd4cee284bf037dcf1b0320ee4bab0": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "The numbers describe runs of filled squares. What picture could they be drawing?",
+    "Paint by numbers. The picture is written, not drawn."
+   ],
+   "length": 6
+  },
+  {
+   "id": 6,
+   "title": "Tutti",
+   "flavor": "Fences and corners; some have an animal inside.",
+   "blocks": [
+    {
+     "type": "pigpen",
+     "items": [
+      {
+       "g": "hash",
+       "p": 8,
+       "dot": false
+      },
+      {
+       "g": "hash",
+       "p": 4,
+       "dot": true
+      },
+      {
+       "g": "x",
+       "p": 1,
+       "dot": false
+      },
+      {
+       "g": "hash",
+       "p": 4,
+       "dot": false
+      },
+      {
+       "g": "hash",
+       "p": 8,
+       "dot": true
+      },
+      {
+       "g": "hash",
+       "p": 3,
+       "dot": true
+      },
+      {
+       "g": "hash",
+       "p": 8,
+       "dot": false
+      },
+      {
+       "g": "x",
+       "p": 0,
+       "dot": false
+      },
+      {
+       "g": "x",
+       "p": 0,
+       "dot": false
+      },
+      {
+       "g": "hash",
+       "p": 8,
+       "dot": false
+      },
+      {
+       "g": "hash",
+       "p": 1,
+       "dot": false
+      },
+      {
+       "g": "hash",
+       "p": 5,
+       "dot": true
+      },
+      {
+       "g": "hash",
+       "p": 4,
+       "dot": true
+      }
+     ]
+    }
+   ],
+   "hash": "ed24a49a258ea574ffc7e829f56a1e62575c1f53d0f0c3ea996b118871fbd149",
+   "partials": {
+    "8750ed2d1f6dc6e0a5b9917a59525779a79f36fb7ae5cb393d639b117bcb0abd": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Picture the alphabet written into a couple of #-grids and X-grids. Which cell would each shape be?",
+    "Pigpen cipher: the shape of each cell, and whether it has a dot, picks the letter."
+   ],
+   "length": 12
+  },
+  {
+   "id": 7,
+   "title": "Cadenza",
+   "flavor": "No duplicates anywhere. Unlucky for some: the letters were all nudged by the same unlucky amount.",
+   "blocks": [
+    {
+     "type": "sudoku",
+     "size": 9,
+     "rows": [
+      ".....Y.B.",
+      "R.FG..UP.",
+      "..Q......",
+      "FR..B....",
+      "Q......N.",
+      "..P..G...",
+      ".Y.RF...B",
+      "..RPY..U.",
+      "U....B..."
+     ],
+     "alphabet": "BFGNPQRUY",
+     "marks": [
+      [
+       8,
+       1
+      ],
+      [
+       8,
+       4
+      ],
+      [
+       8,
+       2
+      ],
+      [
+       4,
+       8
+      ],
+      [
+       0,
+       4
+      ],
+      [
+       2,
+       0
+      ],
+      [
+       1,
+       4
+      ],
+      [
+       2,
+       6
+      ],
+      [
+       1,
+       1
+      ]
+     ]
+    }
+   ],
+   "hash": "ef1370ed712efd35f605d2f646867a078560b751af5d17228ce663ba7859c808",
+   "partials": {
+    "b4db15d74f7a9704bd9bd202cf9fb4c79446e36b1801a35a1c147992e9e992fe": "You've decoded it, but it's not finished. One more layer.",
+    "f1a68f8f9debf1f47b1b3234f44a62aace0d6d7a43c828c437fd3d698f70e2b2": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "A familiar grid puzzle in unfamiliar clothes. Once it's done, are some squares more important than others? And if what you get still isn't a word, reread the flavour text.",
+    "Solve it like a sudoku, then read the numbered squares in order. Then one more layer: Shift every letter 13 places (A↔N)."
+   ],
+   "length": 8
+  },
+  {
+   "id": 8,
+   "title": "Rehearsal Mark",
+   "flavor": "An emperor's idea of privacy.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "SAHH ZKJA UKQ IWU JKS SNEPA ZKSJ PDA SKNZ PAAJKN WJZ IKRA MQEAPHU KJ PK PDA JATP KJA",
+     "wide": true,
+     "solver": "substitution"
+    }
+   ],
+   "hash": "4c23a6b9c8a17f9866eedfd0e97d27e0192c38244fda557e0e0e22919de422fd",
+   "partials": {
+    "cc5a8650069fae343137f6bb16304c8da98405554d0b76277472777e4cafabef": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Try moving every letter the same distance. How far turns the short words into English?",
+    "A Caesar shift: find the one shift that fixes a short word, then apply it everywhere."
+   ],
+   "length": 5
+  }
+ ],
+ "meta": {
+  "title": "Meta: Opening Night",
+  "flavor": "Count heads at the gangway.",
+  "blocks": [],
+  "length": 8,
+  "hash": "bf3d47665609f65ad3740a8baf642fa2f30fdeef70e996d6c4d049761c9a04ba",
+  "hints": [
+   "Did every answer come out the right size the first time? Each had one letter too many. Did you keep them?",
+   "Take the extra letter from each feeder, in puzzle order."
+  ]
+ }
+}
