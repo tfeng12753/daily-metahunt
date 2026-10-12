@@ -4,7 +4,7 @@
  "salt": "2026-10-12/easy",
  "number": 16,
  "round": "The Endgame Study",
- "intro": "A grandmaster resigned in a winning position, left the hall, and never played again. His scoresheet was not a game at all.",
+ "intro": "The club’s founder kept a letterpress type case in the trophy room, and the senior players still treat the odd sheets as sorts: every compartment has a place of exactly the right depth, and a piece dropped into the wrong one wobbles or leaves a gap. When the champion who resigned in a won position left the hall and never played again, his scoresheet was not put among the recorded games; it was laid across the case and then, after a long silence, slid into the one compartment that took it flush. The backing papers in the case are thin sheets of laid paper, and in every row one backing has been stained amber where the rest are cream. Apprentices are told that the case does not care about the beauty of a move, only about whether a sort belongs where it sits, and that the stained backs are the part to watch when the sorting is done. The sheet that was not a game at all has been waiting there since the ink was still wet.",
  "echo": "Every good opening starts by giving something away.",
  "puzzles": [
   {
@@ -281,5 +281,6 @@
    "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
    "To check you're on track: the final answer begins with G."
   ]
- }
+ },
+ "described": true
 }

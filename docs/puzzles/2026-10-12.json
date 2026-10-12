@@ -4,7 +4,7 @@
  "salt": "2026-10-12",
  "number": 16,
  "round": "The Endgame Study",
- "intro": "A grandmaster resigned in a winning position, left the hall, and never played again. His scoresheet was not a game at all.",
+ "intro": "She found the resignation slip tucked between the score pads in the umpire's drawer, and it was not resignation at all but a list of every move he had ever played, written in a hand she knew from childhood, in ink that had not dried in twenty years. The grandmasters who passed her in the corridor that evening wore their usual masks of calm, but each one touched his own breast pocket exactly once as he went by, the way a man checks for a ticket he has already burned. In the chapel of the tournament hall, where the old players pray over the boards before dawn, the candles burned low and the pages of the prayer book had been turned to the same psalm for three nights running, though no one admitted to turning them.",
  "echo": "Any move at all will lose, and passing is not allowed.",
  "puzzles": [
   {
@@ -563,5 +563,6 @@
   "hints": [
    "Did every answer come out clean the first time? Each had exactly one wrong letter. Did you keep them?"
   ]
- }
+ },
+ "described": true
 }
