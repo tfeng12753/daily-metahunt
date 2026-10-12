@@ -1,0 +1,285 @@
+{
+ "date": "2026-10-12",
+ "difficulty": "easy",
+ "salt": "2026-10-12/easy",
+ "number": 16,
+ "round": "The Endgame Study",
+ "intro": "A grandmaster resigned in a winning position, left the hall, and never played again. His scoresheet was not a game at all.",
+ "echo": "Every good opening starts by giving something away.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Queen's Gambit",
+   "flavor": "Find them all. The letters nobody used are the only ones that were talking to you.",
+   "blocks": [
+    {
+     "type": "caption",
+     "text": "Hidden in the grid: 11 words to do with the tournament hall (lengths 4, 4, 4, 4, 4, 5, 5, 5, 6, 7, 7), running in any direction."
+    },
+    {
+     "type": "board",
+     "rows": [
+      "GCFFORKP",
+      "EHRIANAD",
+      "NEKMLWAS",
+      "DCCTNEER",
+      "GKOROOKA",
+      "ARLQUEEN",
+      "MHCNERFK",
+      "ERETIBRA"
+     ],
+     "plain": true,
+     "words": [
+      "ARBITER",
+      "CHECK",
+      "CLOCK",
+      "ENDGAME",
+      "FILE",
+      "FORK",
+      "FRENCH",
+      "PAWN",
+      "QUEEN",
+      "RANK",
+      "ROOK"
+     ]
+    }
+   ],
+   "hash": "1c8afee9250b992ec899ddd81ec006b629af674f9aa0fd87f420229b221865e6",
+   "partials": {},
+   "hints": [
+    "Find every hidden word (any of 8 directions). The unused letters, read left-to-right, top-to-bottom, spell the answer.",
+    "The hidden words are: ARBITER, CHECK, CLOCK, ENDGAME, FILE, FORK, FRENCH, PAWN, QUEEN, RANK, ROOK.",
+    "To check you're on track: the answer begins with G."
+   ],
+   "technique": "Word search leftovers",
+   "length": 11
+  },
+  {
+   "id": 2,
+   "title": "Opposition",
+   "flavor": "The spy's handbook said to always carry a novel. It never said which one; this page will have to do.",
+   "blocks": [
+    {
+     "type": "prose",
+     "text": "A grandmaster resigned in a winning position, left the hall, and never played again. His scoresheet was not a game at all.",
+     "paper": true
+    },
+    {
+     "type": "list",
+     "items": [
+      "16.1",
+      "20.2",
+      "16.2",
+      "2.2",
+      "7.6",
+      "8.3",
+      "14.4",
+      "16.2",
+      "9.3"
+     ],
+     "inline": true
+    }
+   ],
+   "hash": "c19fa56fb04009f716af26c953a949db8e3aa01be5c48e7bce37b0d6c12060a6",
+   "partials": {},
+   "hints": [
+    "Each pair is word.letter into the recovered page (words split on spaces; punctuation ignored).",
+    "To check you're on track: the answer begins with S."
+   ],
+   "technique": "Book cipher",
+   "length": 9
+  },
+  {
+   "id": 3,
+   "title": "Time Trouble",
+   "flavor": "Someone on the pier is trying very hard to get your attention.",
+   "blocks": [
+    {
+     "type": "semaphore",
+     "items": [
+      [
+       4,
+       6
+      ],
+      [
+       6,
+       7
+      ],
+      [
+       5,
+       4
+      ],
+      [
+       6,
+       2
+      ],
+      [
+       4,
+       0
+      ]
+     ]
+    }
+   ],
+   "hash": "ae91e07b7bd211bf1a5ae104316ae0f9434761969edfda56519af1a6e227cdf7",
+   "partials": {},
+   "hints": [
+    "Flag semaphore: read each figure's arm positions.",
+    "To check you're on track: the answer begins with B."
+   ],
+   "technique": "Semaphore (figures)",
+   "length": 5
+  },
+  {
+   "id": 4,
+   "title": "Adjournment",
+   "flavor": "Somebody shook the sentence and all the letters fell to the bottom of their columns.",
+   "blocks": [
+    {
+     "type": "dropquote",
+     "cols": [
+      "FNNOS",
+      "AGGHR",
+      "GLO",
+      "EHLU",
+      "ALT",
+      "DIN",
+      "DNT",
+      "HSTT",
+      "EHO",
+      "IP",
+      "LSTW",
+      "EHO",
+      "AENR",
+      "DOS",
+      "ETW",
+      "EKR",
+      "FIO"
+     ],
+     "mask": [
+      "......#....#....#",
+      "....#....#...#...",
+      "..#.....#......#.",
+      ".....#...#....#..",
+      "..###############"
+     ]
+    }
+   ],
+   "hash": "6660be15ef0d6c443e722f89de71868f2d963e01218e575613ca1331c6c3001c",
+   "partials": {},
+   "hints": [
+    "A drop quote: each column's letters (shown alphabetised above it) drop into that column of the grid below. Black squares are spaces; words can wrap between rows. The sentence tells you the answer.",
+    "To check you're on track: the answer begins with K."
+   ],
+   "technique": "Drop quote",
+   "length": 4
+  },
+  {
+   "id": 5,
+   "title": "Smothered Mate",
+   "flavor": "Every letter here is wearing someone else's coat. The spaces, at least, are honest.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "GMGHW QCCS UOID GISE AVDU Y EVIQNG ACHS YIS DUG ACHS WCO AYID THCZ DUVE XYQG VE KYDYNYI",
+     "wide": true,
+     "solver": "substitution"
+    }
+   ],
+   "hash": "75abcbb2e99b755cefafba7375f67deeed24d7b4c031530f929007f74ce77991",
+   "partials": {},
+   "hints": [
+    "Simple monoalphabetic substitution with word breaks kept. Solve the sentence; it tells you the answer.",
+    "To check you're on track: the answer begins with C."
+   ],
+   "technique": "Cryptogram (cluephrase)",
+   "length": 7
+  },
+  {
+   "id": 6,
+   "title": "Fianchetto",
+   "flavor": "Three letters to a strip. The strips are in order; the sentence isn't.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "ARR",
+      "BIS",
+      "DOR",
+      "ECO",
+      "ERC",
+      "GOL",
+      "HOP",
+      "IED",
+      "ING",
+      "LEW",
+      "NOT",
+      "ORD",
+      "RET",
+      "SBU",
+      "SEC",
+      "TAS",
+      "TTH",
+      "URI",
+      "WAS",
+      "WHA"
+     ],
+     "inline": true,
+     "tiles": true
+    },
+    {
+     "type": "prose",
+     "text": "Word lengths: (4 3 7 7 3 3 4 2 7 3 1 6 4 6)"
+    }
+   ],
+   "hash": "c9a12ae247a7a1a0f6c515f51fa28a6f2e1bc40eb302be6042691aae4c884450",
+   "partials": {},
+   "hints": [
+    "The sentence was cut into three-letter fragments (spaces removed) and alphabetised. Reassemble it using the word lengths; it tells you the answer.",
+    "To check you're on track: the answer begins with B."
+   ],
+   "technique": "Shredded sentence",
+   "length": 6
+  }
+ ],
+ "meta": {
+  "title": "Meta: The Endgame Study",
+  "flavor": "Everything in the tournament hall has a place, and every place is exactly the right size.",
+  "blocks": [
+   {
+    "type": "fitgrid",
+    "rows": [
+     {
+      "len": 4,
+      "shade": 3
+     },
+     {
+      "len": 9,
+      "shade": 1
+     },
+     {
+      "len": 11,
+      "shade": 5
+     },
+     {
+      "len": 5,
+      "shade": 0
+     },
+     {
+      "len": 6,
+      "shade": 1
+     },
+     {
+      "len": 7,
+      "shade": 2
+     }
+    ]
+   }
+  ],
+  "length": 6,
+  "hash": "663b7c946eb3b9b296e3776ec8571a195a8c88fc8a21ed613b3affd3af37e5da",
+  "hints": [
+   "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+   "To check you're on track: the final answer begins with G."
+  ]
+ }
+}

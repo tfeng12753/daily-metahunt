@@ -1,0 +1,64 @@
+{
+ "date": "2026-10-11",
+ "number": 15,
+ "difficulty": "hard",
+ "final": "RHAPSODY",
+ "metaType": "initials",
+ "explain": "The ciphertext is Vigenère-encrypted with the first letters of the feeder answers (in puzzle order) as the key.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Tuning Note",
+   "answer": "CLARINET",
+   "mechanism": "Cryptogram (cluephrase)",
+   "transform": null,
+   "encoded": "CLARINET",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Fermata",
+   "answer": "BARITONE",
+   "mechanism": "Letter sudoku",
+   "transform": "ROT13",
+   "encoded": "ONEVGBAR",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Tutti",
+   "answer": "TUBA",
+   "mechanism": "Book cipher",
+   "transform": null,
+   "encoded": "TUBA",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "First Chair",
+   "answer": "TRUMPET",
+   "mechanism": "Mirrored NATO",
+   "transform": null,
+   "encoded": "TRUMPET",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Grand Pause",
+   "answer": "SOPRANO",
+   "mechanism": "Anagrams with an extra letter",
+   "transform": "ROT13",
+   "encoded": "FBCENAB",
+   "mutated": null
+  },
+  {
+   "id": 6,
+   "title": "Con Sordino",
+   "answer": "SCORE",
+   "mechanism": "Maritime signal flags",
+   "transform": null,
+   "encoded": "SCORE",
+   "mutated": null
+  }
+ ]
+}

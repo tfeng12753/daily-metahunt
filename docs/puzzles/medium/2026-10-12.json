@@ -1,0 +1,209 @@
+{
+ "date": "2026-10-12",
+ "difficulty": "medium",
+ "salt": "2026-10-12/medium",
+ "number": 16,
+ "round": "The Endgame Study",
+ "intro": "The hall still keeps his scorebook in a glass case by the door, the one with the blank grid and the ink blotted once, halfway down. They say nobody has touched that seat since the night he stood, folded his rook into his sleeve, and walked out with a won position on the board. The other grandmasters keep their own scorebooks, of course, each one numbered in the corner by the arbiter, and each page ruled into neat little boxes that hold exactly one letter's worth of room. Sometimes, on quiet evenings, the archivist lets them listen to the old recordings: game by game, move by move, the voice of the hall announcing not who won, but who was present. One by one they call the names, and the silence where his should be is almost louder than the applause.",
+ "echo": "The Persian shah was never killed; he was simply left with nowhere to go.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Lucena Position",
+   "flavor": "The radio operator had everything back to front, but only from A to Z.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "Hotel",
+      "Papa",
+      "Victor",
+      "Delta",
+      "Victor",
+      "India"
+     ]
+    }
+   ],
+   "hash": "9d143526c56d2d071b877c277b1e27efe5d149d4d51bb85c25dab565ca6b8735",
+   "partials": {},
+   "hints": [
+    "Each word stands for a letter, the way radio operators spell. Do those letters read? If not, try the alphabet backwards.",
+    "Take the NATO call signs' initials, then swap each letter for its mirror: A for Z, B for Y."
+   ],
+   "length": 6
+  },
+  {
+   "id": 2,
+   "title": "Desperado",
+   "flavor": "Take stock of everything you recognise.",
+   "blocks": [
+    {
+     "type": "caption",
+     "text": "Hidden in the grid: 10 words to do with the tournament hall."
+    },
+    {
+     "type": "board",
+     "rows": [
+      "KPKNWAP",
+      "KROKING",
+      "CEOHXCK",
+      "OHRFSNA",
+      "LNIGAIE",
+      "CLDRAOB",
+      "EFRENCH"
+     ],
+     "plain": true,
+     "words": [
+      "BISHOP",
+      "BOARD",
+      "CLOCK",
+      "FILE",
+      "FORK",
+      "FRENCH",
+      "KING",
+      "PAWN",
+      "RANK",
+      "ROOK"
+     ]
+    }
+   ],
+   "hash": "13c75c1908c34e0d64f54558ea5f1670816752592934f75034f548aee9a067d5",
+   "partials": {},
+   "hints": [
+    "Once every theme word is found, is anything left unclaimed? Read it in order.",
+    "Find the theme words; the letters no word uses, read row by row, are the answer.",
+    "The hidden words are: BISHOP, BOARD, CLOCK, FILE, FORK, FRENCH, KING, PAWN, RANK, ROOK."
+   ],
+   "length": 8
+  },
+  {
+   "id": 3,
+   "title": "Queen's Gambit",
+   "flavor": "Only one page survived. It was the only page anyone needed.",
+   "blocks": [
+    {
+     "type": "prose",
+     "text": "A grandmaster resigned in a winning position, left the hall, and never played again. His scoresheet was not a game at all.",
+     "paper": true
+    },
+    {
+     "type": "list",
+     "items": [
+      "16.2",
+      "21.1",
+      "16.10",
+      "10.2",
+      "22.2",
+      "22.1",
+      "11.2"
+     ],
+     "inline": true
+    }
+   ],
+   "hash": "fc7b484e3703c930e1bb4db7bc3aa357b951414de38bf2ce0c11ab983602df51",
+   "partials": {},
+   "hints": [
+    "The first number in each pair never goes past the number of words on the page. What does the second count?",
+    "The first number finds a word on the page; the second finds a letter in it."
+   ],
+   "length": 7
+  },
+  {
+   "id": 4,
+   "title": "Time Trouble",
+   "flavor": "Up and down, up and down, and not a single space left.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "WLDNY UANWR TDWTE ODLTA DOEUE LOTTE ETNEL OEOMY OWIEO NHWRB IZNMV QITYN OHNXO E",
+     "wide": true,
+     "rails": 2
+    }
+   ],
+   "hash": "3b5718e2754d54dc5dd8ed45aa5f29423e0353f5390886ae217d14e8fb358ec4",
+   "partials": {},
+   "hints": [
+    "All the right letters are here, just out of order. Could they have been written along a path that goes up and down?",
+    "Rail fence: written in a zigzag over a few rows, then copied out row by row. Try two to five rows."
+   ],
+   "length": 5
+  },
+  {
+   "id": 5,
+   "title": "Opposition",
+   "flavor": "No duplicates anywhere.",
+   "blocks": [
+    {
+     "type": "sudoku",
+     "size": 6,
+     "rows": [
+      ".E....",
+      "..T..O",
+      "...E.M",
+      "..P...",
+      "T..O..",
+      ".....Z"
+     ],
+     "alphabet": "EMOPTZ",
+     "marks": [
+      [
+       2,
+       1
+      ],
+      [
+       1,
+       4
+      ],
+      [
+       0,
+       2
+      ],
+      [
+       2,
+       4
+      ],
+      [
+       5,
+       1
+      ]
+     ]
+    }
+   ],
+   "hash": "9dae575627d75a6ff12827e204d622101620bcbf0f55c361e77ef6583dd8c399",
+   "partials": {},
+   "hints": [
+    "A familiar grid puzzle in unfamiliar clothes. Once it's done, are some squares more important than others?",
+    "Solve it like a sudoku, then read the numbered squares in order."
+   ],
+   "length": 5
+  }
+ ],
+ "meta": {
+  "title": "Meta: The Endgame Study",
+  "flavor": "The porter only ever noted where each passenger boarded.",
+  "blocks": [
+   {
+    "type": "list",
+    "items": [
+     "Platform 3, car 1",
+     "Platform 2, car 4",
+     "Platform 5, car 2",
+     "Platform 2, car 3",
+     "Platform 1, car 2",
+     "Platform 5, car 3",
+     "Platform 2, car 5",
+     "Platform 4, car 4",
+     "Platform 1, car 5"
+    ],
+    "ordered": true
+   }
+  ],
+  "length": 9,
+  "hash": "ae93f3bd25475e63ce73c2f25abb2fb226613c51329d7b1c593b602276807001",
+  "hints": [
+   "Every entry has two numbers. What in this round is numbered, and what could the second number count?",
+   "The first number picks a puzzle; the second picks a letter inside its answer."
+  ]
+ },
+ "described": true
+}

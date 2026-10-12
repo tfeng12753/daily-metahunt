@@ -1,0 +1,82 @@
+{
+ "date": "2026-10-11",
+ "number": 15,
+ "difficulty": "medium",
+ "final": "ENSEMBLE",
+ "metaType": "stowaway",
+ "explain": "Each feeder decodes to its answer plus one inserted letter. The inserted letters, in puzzle order, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Tuning Note",
+   "answer": "PICCOLO",
+   "mechanism": "Symbol cryptogram",
+   "transform": null,
+   "encoded": "PICCOLOE",
+   "mutated": "PICCOLOE"
+  },
+  {
+   "id": 2,
+   "title": "Tacet",
+   "answer": "GLOCKENSPIEL",
+   "mechanism": "Word search leftovers",
+   "transform": null,
+   "encoded": "GLOCKENSPNIEL",
+   "mutated": "GLOCKENSPNIEL"
+  },
+  {
+   "id": 3,
+   "title": "Dal Segno",
+   "answer": "CONCERTO",
+   "mechanism": "Keyboard shift",
+   "transform": null,
+   "encoded": "CONCERTSO",
+   "mutated": "CONCERTSO"
+  },
+  {
+   "id": 4,
+   "title": "Coda",
+   "answer": "SCORE",
+   "mechanism": "Shredded sentence",
+   "transform": null,
+   "encoded": "SECORE",
+   "mutated": "SECORE"
+  },
+  {
+   "id": 5,
+   "title": "Con Sordino",
+   "answer": "CYMBAL",
+   "mechanism": "Nonogram",
+   "transform": null,
+   "encoded": "CYMBAML",
+   "mutated": "CYMBAML"
+  },
+  {
+   "id": 6,
+   "title": "Tutti",
+   "answer": "INTERMISSION",
+   "mechanism": "Pigpen cipher",
+   "transform": null,
+   "encoded": "INTERMISSIBON",
+   "mutated": "INTERMISSIBON"
+  },
+  {
+   "id": 7,
+   "title": "Cadenza",
+   "answer": "STACCATO",
+   "mechanism": "Letter sudoku",
+   "transform": "ROT13",
+   "encoded": "FGNPPYNGB",
+   "mutated": "STACCLATO"
+  },
+  {
+   "id": 8,
+   "title": "Rehearsal Mark",
+   "answer": "TENOR",
+   "mechanism": "Caesar shift",
+   "transform": null,
+   "encoded": "TEENOR",
+   "mutated": "TEENOR"
+  }
+ ]
+}

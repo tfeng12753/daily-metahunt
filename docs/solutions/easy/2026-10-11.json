@@ -1,0 +1,73 @@
+{
+ "date": "2026-10-11",
+ "number": 15,
+ "difficulty": "easy",
+ "final": "MAESTRO",
+ "metaType": "first_letters",
+ "explain": "Take the first letter of each feeder answer, in puzzle order.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Dal Segno",
+   "answer": "METRONOME",
+   "mechanism": "Anagrams with an extra letter",
+   "transform": null,
+   "encoded": "METRONOME",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Da Capo",
+   "answer": "ARIA",
+   "mechanism": "Book cipher",
+   "transform": null,
+   "encoded": "ARIA",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Tacet",
+   "answer": "ENCORE",
+   "mechanism": "Knight's path",
+   "transform": null,
+   "encoded": "ENCORE",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "First Chair",
+   "answer": "SCORE",
+   "mechanism": "Drop quote",
+   "transform": null,
+   "encoded": "SCORE",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Tutti",
+   "answer": "TUBA",
+   "mechanism": "Scrambled sentence",
+   "transform": null,
+   "encoded": "TUBA",
+   "mutated": null
+  },
+  {
+   "id": 6,
+   "title": "Cadenza",
+   "answer": "ROSIN",
+   "mechanism": "Number trivia",
+   "transform": null,
+   "encoded": "ROSIN",
+   "mutated": null
+  },
+  {
+   "id": 7,
+   "title": "Rehearsal Mark",
+   "answer": "OBOE",
+   "mechanism": "Letter sudoku",
+   "transform": null,
+   "encoded": "OBOE",
+   "mutated": null
+  }
+ ]
+}

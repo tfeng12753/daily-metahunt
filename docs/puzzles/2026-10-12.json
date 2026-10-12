@@ -1,0 +1,567 @@
+{
+ "date": "2026-10-12",
+ "difficulty": "hard",
+ "salt": "2026-10-12",
+ "number": 16,
+ "round": "The Endgame Study",
+ "intro": "A grandmaster resigned in a winning position, left the hall, and never played again. His scoresheet was not a game at all.",
+ "echo": "Any move at all will lose, and passing is not allowed.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Zugzwang",
+   "flavor": "Call signs, reflected.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "Golf",
+      "Lima",
+      "Alfa",
+      "India",
+      "Mike",
+      "Zulu",
+      "November",
+      "Victor",
+      "Mike",
+      "Golf"
+     ]
+    }
+   ],
+   "hash": "67e0b4e6bc23e4ce7e6c312290a204ffec913b71e90e181a7a16c7349e93eecd",
+   "partials": {
+    "8cd0d8a0b95cc559d11e90a7de1a6ae135395733511c58033b8e2c1eaaccaa50": "So close. Exactly one thing is wrong here. Fix it (and remember what you fixed)."
+   },
+   "hints": [
+    "Each word stands for a letter, the way radio operators spell. Do those letters read? If not, try the alphabet backwards."
+   ]
+  },
+  {
+   "id": 2,
+   "title": "Zwischenzug",
+   "flavor": "The picture is worth exactly one word. Something in here has been through the looking glass.",
+   "blocks": [
+    {
+     "type": "nonogram",
+     "rows": [
+      [
+       1,
+       1,
+       1,
+       4,
+       5,
+       4,
+       4,
+       1,
+       1,
+       1
+      ],
+      [
+       2,
+       2,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       2,
+       2
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       2,
+       4,
+       1,
+       2,
+       4,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       5,
+       4,
+       1,
+       4,
+       1,
+       1,
+       5,
+       1,
+       1
+      ]
+     ],
+     "cols": [
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       5
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [],
+      [
+       3
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       3
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1
+      ],
+      [],
+      [
+       3
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       3
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       5
+      ]
+     ],
+     "givens": []
+    }
+   ],
+   "hash": "7310dd3256b4d25c1cd568d1470521f9ebdf4ba462a71d28a960080f78e4c4e1",
+   "partials": {
+    "9b56aac8135a7308d3da70bc204c39da53d579a69b64ca057201e00b37fe56e2": "You've decoded it, but it's not finished. One more layer.",
+    "49c29341235b52f90a32937a5f1d7e3438716c3749bc49b726a18af5215a834b": "So close. Exactly one thing is wrong here. Fix it (and remember what you fixed)."
+   },
+   "hints": [
+    "The numbers describe runs of filled squares. What picture could they be drawing? And if what you get still isn't a word, reread the flavour text."
+   ]
+  },
+  {
+   "id": 3,
+   "title": "Lucena Position",
+   "flavor": "A strip of paper full of holes, seven across. Whoever copied it out was standing in front of a mirror.",
+   "blocks": [
+    {
+     "type": "tape",
+     "rows": [
+      [
+       1,
+       0,
+       0,
+       1,
+       0,
+       0,
+       0
+      ],
+      [
+       1,
+       0,
+       1,
+       0,
+       0,
+       0,
+       0
+      ],
+      [
+       1,
+       0,
+       1,
+       0,
+       1,
+       1,
+       0
+      ],
+      [
+       1,
+       0,
+       0,
+       0,
+       1,
+       0,
+       0
+      ],
+      [
+       1,
+       0,
+       1,
+       0,
+       1,
+       0,
+       0
+      ],
+      [
+       1,
+       0,
+       0,
+       1,
+       0,
+       0,
+       1
+      ]
+     ]
+    }
+   ],
+   "hash": "64fe0da09b5c5cdbdc1160a208cad8af9c659b30a725fa2e7ff8f7cca718c0c1",
+   "partials": {
+    "aaea7ad0a4255e8d06189b3cf6f80b5d2ec2539bdc05f1a73b083cebe836ea64": "You've decoded it, but it's not finished. One more layer.",
+    "a255515255f0c725dc3f0336b653277f6982145efeea6b5fea49709e7cd2f057": "So close. Exactly one thing is wrong here. Fix it (and remember what you fixed)."
+   },
+   "hints": [
+    "Seven positions a row, each punched or not. What were seven bits once enough for? And if what you get still isn't a word, reread the flavour text."
+   ]
+  },
+  {
+   "id": 4,
+   "title": "Sealed Move",
+   "flavor": "Nothing is missing. Nothing is where it was.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "NO",
+      "NAD",
+      "WDRO",
+      "ONED",
+      "OT",
+      "YAM",
+      "NOE",
+      "TEH",
+      "OEMV",
+      "FEZNRC",
+      "EXNT",
+      "ELLW",
+      "YUO",
+      "WTIRE",
+      "OWN",
+      "HET",
+      "WDON",
+      "YIEUQLT"
+     ],
+     "inline": true,
+     "tray": "word"
+    }
+   ],
+   "hash": "98065718f796a2d14044279454e986d4f982ec280e13cf0624bcc7c49e125884",
+   "partials": {
+    "b3a3ee62a5a55c513a698ca46a413d0101eeee6773941480072b566ef92a0bbf": "So close. Exactly one thing is wrong here. Fix it (and remember what you fixed)."
+   },
+   "hints": [
+    "Each word is complete but shuffled. Start with the shortest ones: does a sentence appear?"
+   ]
+  },
+  {
+   "id": 5,
+   "title": "Poisoned Pawn",
+   "flavor": "A familiar grid, an unfamiliar alphabet.",
+   "blocks": [
+    {
+     "type": "sudoku",
+     "size": 9,
+     "rows": [
+      "...WNM...",
+      "T.SC..A.W",
+      ".......MC",
+      "NA...H...",
+      "W.T..S..A",
+      "......M..",
+      "A.....WS.",
+      "H....W.A.",
+      "..L.T...."
+     ],
+     "alphabet": "ACHLMNSTW",
+     "marks": [
+      [
+       3,
+       6
+      ],
+      [
+       8,
+       1
+      ],
+      [
+       6,
+       1
+      ],
+      [
+       0,
+       2
+      ],
+      [
+       3,
+       3
+      ],
+      [
+       5,
+       4
+      ],
+      [
+       7,
+       2
+      ]
+     ]
+    }
+   ],
+   "hash": "0a52a73fa0a74f0158c75d439a836b89eb588ce4142104e30e685043952e095c",
+   "partials": {
+    "5d2fda2bef357868c1a239c9b459fe0c8ebac552e0d7f9b49a34490302f8cb54": "So close. Exactly one thing is wrong here. Fix it (and remember what you fixed)."
+   },
+   "hints": [
+    "A familiar grid puzzle in unfamiliar clothes. Once it's done, are some squares more important than others?"
+   ]
+  },
+  {
+   "id": 6,
+   "title": "Fianchetto",
+   "flavor": "Pairs of numbers pencilled in the margin.",
+   "blocks": [
+    {
+     "type": "prose",
+     "text": "A grandmaster resigned in a winning position, left the hall, and never played again. His scoresheet was not a game at all.",
+     "paper": true
+    },
+    {
+     "type": "list",
+     "items": [
+      "15.3",
+      "16.2",
+      "18.2",
+      "2.11",
+      "8.2",
+      "7.3",
+      "10.2",
+      "16.9",
+      "3.7",
+      "9.1"
+     ],
+     "inline": true
+    }
+   ],
+   "hash": "0213cdd98d694a835287807492125eca2671034e54dafed1f435857555a30839",
+   "partials": {
+    "a25761d29f53da70b466d46500c5f669ecd3b87ce697a59b695ff5da3cd9be17": "So close. Exactly one thing is wrong here. Fix it (and remember what you fixed)."
+   },
+   "hints": [
+    "The first number in each pair never goes past the number of words on the page. What does the second count?"
+   ]
+  },
+  {
+   "id": 7,
+   "title": "Adjournment",
+   "flavor": "A parts list read aloud by someone who only knew the stripes. Something in here has been through the looking glass.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "black–grey",
+      "brown–black",
+      "black–blue",
+      "brown–orange",
+      "black–white",
+      "red–red"
+     ]
+    }
+   ],
+   "hash": "b4abb0409fc380261fe6e831efb9aeb75364dbfc6971b91df2c7a5522ac27c32",
+   "partials": {
+    "53ff5587e5e3d404d2e59fb87aa21a3a6749083f72d1b29775c1fa0ecb0de5be": "You've decoded it, but it's not finished. One more layer.",
+    "ffad0440db0c99951fc4c899acb2c0ad543185ca0b6b0e949cd7dd6c4bf161eb": "So close. Exactly one thing is wrong here. Fix it (and remember what you fixed)."
+   },
+   "hints": [
+    "Engineers read stripes like these as numbers. What number does each part give, and what is a number up to 26? And if what you get still isn't a word, reread the flavour text."
+   ]
+  },
+  {
+   "id": 8,
+   "title": "Smothered Mate",
+   "flavor": "An inventory, tangled.",
+   "blocks": [
+    {
+     "type": "caption",
+     "text": "Somewhere in here: things to do with the tournament hall."
+    },
+    {
+     "type": "board",
+     "rows": [
+      "SBLITZRK",
+      "TEMPOOCB",
+      "ANCGOEOP",
+      "EDKKHAKO",
+      "LGRCRRGH",
+      "IAADONIS",
+      "FMNFILFI",
+      "IEKKCECB"
+     ],
+     "plain": true,
+     "words": [
+      "BISHOP",
+      "BLITZ",
+      "BOARD",
+      "CHECK",
+      "CLOCK",
+      "ENDGAME",
+      "FILE",
+      "FORK",
+      "KING",
+      "RANK",
+      "ROOK",
+      "TEMPO"
+     ]
+    }
+   ],
+   "hash": "626d7d38ce754eb950736156e033e240338ca3e67da86fa86345f5363f4bfc0a",
+   "partials": {
+    "65e87c598d20499d3603abba895c086bbe4524d1ff45421e5c7dd8781bd2bf3a": "So close. Exactly one thing is wrong here. Fix it (and remember what you fixed)."
+   },
+   "hints": [
+    "Once every theme word is found, is anything left unclaimed? Read it in order.",
+    "The hidden words are: BISHOP, BLITZ, BOARD, CHECK, CLOCK, ENDGAME, FILE, FORK, KING, RANK, ROOK, TEMPO."
+   ]
+  }
+ ],
+ "meta": {
+  "title": "Meta: The Endgame Study",
+  "flavor": "Nothing reached the tournament hall undamaged. The damage, though, was remarkably consistent.",
+  "blocks": [],
+  "length": 8,
+  "hash": "ca1c34915643bf30c93574282270cc009582225778d60ac00b5d62c2f250dc87",
+  "hints": [
+   "Did every answer come out clean the first time? Each had exactly one wrong letter. Did you keep them?"
+  ]
+ }
+}
