@@ -67,7 +67,7 @@ def pick_model(key):
 
 
 def chat(key, model, messages):
-    body = {"model": model, "messages": messages, "temperature": 0.9, "max_tokens": 4000,
+    body = {"model": model, "messages": messages, "temperature": 0.9, "max_tokens": 8000,
             "chat_template_kwargs": {"reasoning_effort": "low"}}
     try:
         resp = _request("/chat/completions", body, key)
@@ -82,7 +82,15 @@ def chat(key, model, messages):
 def parse_json(text):
     text = re.sub(r"^```(?:json)?|```$", "", text.strip(), flags=re.M)
     start, end = text.find("{"), text.rfind("}")
-    return json.loads(text[start:end + 1])
+    try:
+        return json.loads(text[start:end + 1])
+    except ValueError:
+        # A reply cut short, or with a stray quote, can still hold usable drafts: salvage every
+        # complete "intro" string rather than losing the whole attempt.
+        intros = [json.loads('"%s"' % m) for m in re.findall(r'"intro"\s*:\s*"((?:[^"\\]|\\.)*)"', text)]
+        if intros:
+            return {"candidates": [{"intro": t} for t in intros]}
+        raise
 
 
 # ---------------------------------------------------------------------------
@@ -225,10 +233,15 @@ def describe(puzzle, solution, theme, level="hard", attempts=2):
     forbidden = {solution["final"]}
     for q in solution["puzzles"]:
         forbidden |= {q["answer"], q["encoded"]} | ({q["mutated"]} if q.get("mutated") else set())
+    # Words in the round's name or setting ("the tournament hall") are printed all over the page
+    # already, in every puzzle's flavour text, so using them reveals nothing new; and the model
+    # can hardly describe the setting without them.
+    public = set(re.findall(r"[a-z]+", " ".join((puzzle["round"], theme["place"], theme["crew"], theme["at"])).lower()))
+    forbidden = {w for w in forbidden if w.lower() not in public}
     truth, images = META_IMAGERY.get(solution["metaType"], (solution["explain"], []))
     # The answers are ordinary theme words ("tent", "seal"), so a story set in the same place reaches
     # for them naturally. Tell the model which ones are off limits instead of discarding its drafts.
-    avoid = sorted({solution["final"]} | {q["answer"] for q in solution["puzzles"]})
+    avoid = sorted(w for w in {solution["final"]} | {q["answer"] for q in solution["puzzles"]} if w in forbidden)
     banned_here = sorted(set(HARD_TELLS)) if level == "hard" else []
     ex_what, ex_text = EXAMPLES[level]
     n = len(puzzle["puzzles"])
