@@ -22,16 +22,16 @@ function memoryStore() {
     async playerByTokenHash(h) {
       return players.find((p) => p.tokenHash === h) || null;
     },
-    async recordSolve(key) {
-      if (!solves.has(k(key))) solves.set(k(key), Date.now());
+    async recordSolve(key, at = Date.now()) {
+      if (!solves.has(k(key))) solves.set(k(key), at);
       return solves.get(k(key));
     },
     async recordHint(key) {
       hints.add(k(key));
     },
-    async recordStart({ playerId, date, difficulty }) {
+    async recordStart({ playerId, date, difficulty }, at = Date.now()) {
       const key = [playerId, date, difficulty].join("|");
-      if (!starts.has(key)) starts.set(key, Date.now());
+      if (!starts.has(key)) starts.set(key, at);
       return starts.get(key);
     },
     async playerByName(name) {
@@ -71,13 +71,15 @@ function memoryStore() {
     async roundRows(date, difficulty) {
       const rows = new Map();
       const row = (id) => {
-        if (!rows.has(id)) rows.set(id, { name: players[id - 1].name, feeders: 0, metaAt: null, hints: 0, startedAt: starts.get([id, date, difficulty].join("|")) || null });
+        if (!rows.has(id)) rows.set(id, { name: players[id - 1].name, feeders: 0, metaAt: null, firstAt: null, hints: 0, startedAt: starts.get([id, date, difficulty].join("|")) || null });
         return rows.get(id);
       };
       for (const [key, at] of solves) {
         const [id, d, diff, puzzle] = key.split("|");
         if (d !== date || diff !== difficulty) continue;
-        if (puzzle === "meta") row(+id).metaAt = at;
+        const r = row(+id);
+        if (r.firstAt == null || at < r.firstAt) r.firstAt = at;
+        if (puzzle === "meta") r.metaAt = at;
         else row(+id).feeders++;
       }
       for (const key of hints) {
@@ -148,10 +150,10 @@ async function pgStore(url) {
       const { rows } = await pool.query("select id, name from players where token_hash = $1", [h]);
       return rows[0] || null;
     },
-    async recordSolve({ playerId, date, difficulty, puzzle }) {
+    async recordSolve({ playerId, date, difficulty, puzzle }, at = Date.now()) {
       await pool.query(
-        "insert into solves (player_id, date, difficulty, puzzle) values ($1, $2, $3, $4) on conflict do nothing",
-        [playerId, date, difficulty, puzzle]);
+        "insert into solves (player_id, date, difficulty, puzzle, solved_at) values ($1, $2, $3, $4, to_timestamp($5 / 1000.0)) on conflict do nothing",
+        [playerId, date, difficulty, puzzle, at]);
       const { rows } = await pool.query(
         "select solved_at from solves where player_id = $1 and date = $2 and difficulty = $3 and puzzle = $4",
         [playerId, date, difficulty, puzzle]);
@@ -162,8 +164,8 @@ async function pgStore(url) {
         "insert into hints (player_id, date, difficulty, puzzle) values ($1, $2, $3, $4) on conflict do nothing",
         [playerId, date, difficulty, puzzle]);
     },
-    async recordStart({ playerId, date, difficulty }) {
-      await pool.query("insert into starts (player_id, date, difficulty) values ($1, $2, $3) on conflict do nothing", [playerId, date, difficulty]);
+    async recordStart({ playerId, date, difficulty }, at = Date.now()) {
+      await pool.query("insert into starts (player_id, date, difficulty, started_at) values ($1, $2, $3, to_timestamp($4 / 1000.0)) on conflict do nothing", [playerId, date, difficulty, at]);
       const { rows } = await pool.query("select started_at from starts where player_id = $1 and date = $2 and difficulty = $3", [playerId, date, difficulty]);
       return rows[0].started_at.getTime();
     },
@@ -205,13 +207,14 @@ async function pgStore(url) {
                (select started_at from starts t where t.player_id = p.id and t.date = $1 and t.difficulty = $2) as started_at,
                count(*) filter (where s.puzzle <> 'meta')::int as feeders,
                max(s.solved_at) filter (where s.puzzle = 'meta') as meta_at,
+               min(s.solved_at) as first_at,
                (select count(*)::int from hints h
                  where h.player_id = p.id and h.date = $1 and h.difficulty = $2) as hints
           from solves s join players p on p.id = s.player_id
          where s.date = $1 and s.difficulty = $2
          group by p.id, p.name`, [date, difficulty]);
       return rows.map((r) => ({ name: r.name, feeders: r.feeders, metaAt: r.meta_at ? r.meta_at.getTime() : null, hints: r.hints,
-        startedAt: r.started_at ? r.started_at.getTime() : null }));
+        firstAt: r.first_at ? r.first_at.getTime() : null, startedAt: r.started_at ? r.started_at.getTime() : null }));
     },
     async allTime(difficulty) {
       const { rows } = await pool.query(`

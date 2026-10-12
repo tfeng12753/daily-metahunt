@@ -47,6 +47,8 @@ titles and shape of the data are the only clues.
   | Numbers in mixed bases | Anagrams with an extra letter | Letter sudoku (numbered squares) |
   | Drop quote | Shredded sentence | Missing letters (not on Hard) |
   | Number trivia | Scrambled sentence | Caesar shift (not on Hard) |
+  | Seating plan: a logic puzzle, then seat k gives letter k | Gapless Morse: find the theme word, then index into it | Element spelling: atomic numbers as symbols |
+  | Playfair keyed by the title (Hard only) | Spiral route through a letter grid | |
 
   Word and logic puzzles are weighted to appear about three times as often as
   pure encodings. Classic codes also come in variations: Morse as symbols, a
@@ -89,9 +91,18 @@ still runs as a mirror; delete its last three steps if you only want Render.
 
 Players pick a display name (no accounts). Each correct answer is sent to the
 API, which re-checks it against the round's hash before recording it, so only
-real solves count. Times run from 00:00 UTC on the round's date, and each hint
-adds a five-minute penalty (once per puzzle, however many hint tiers you open). There are per-round and all-time boards for each
-difficulty.
+real solves count. The round board ranks each player on **their own clock**, from
+pressing Begin to solving the meta, plus a five-minute penalty for each puzzle
+they took a hint on, so nobody is punished for living far from UTC. A run whose
+solves were sent the moment its player joined (they'd played before signing up)
+wasn't timed by the server, so it's listed after the timed runs, by time since
+the round opened. There are per-round and all-time boards for each difficulty.
+
+Results go through an outbox in the browser: if the free server is asleep or the
+connection drops, they're kept and resent (with the moment they happened, which
+the server accepts if it's under three minutes old). The page wakes the server as
+soon as it opens, notices if the server has forgotten a player and signs them
+back in under the same name, and says plainly when the server has no database.
 
 Everyone also gets a **personal timer**. It starts the first time you open a
 round and records a split at every solve. When you finish, you get a split
@@ -107,9 +118,16 @@ Easy/Medium/Hard status, and a list of each round's solves, clock and hints. The
 picker marks rounds ✓ (solved) or ◐ (in progress). Progress can be exported
 to a JSON file and imported on another device; imports merge and never delete.
 
-Scores live in Postgres via the `DATABASE_URL` environment variable on the API
-service (a free Neon or Supabase database works). Without it the API keeps
-scores in memory, which is fine locally but resets on every restart or deploy.
+**Scores need a database.** Without one the API keeps scores in memory, and Render
+restarts it on every daily deploy and whenever the free plan sleeps (after about
+15 idle minutes), so the board keeps emptying. To make it permanent:
+
+1. Create a free Postgres database at [neon.tech](https://neon.tech) (or Supabase).
+2. Copy its connection string (`postgresql://…?sslmode=require`).
+3. On Render, open the `daily-metahunt-api` service → Environment → add
+   `DATABASE_URL` with that value. The tables are created on first start.
+
+`/api/health` on the API reports `"store": "postgres"` once it's working.
 `docs/config.js` holds the API's URL.
 
 ## How it runs
@@ -146,8 +164,11 @@ OpenAI-compatible) writes each new round's opening story: a longer paragraph in
 the voice of the theme that also hints at how the meta works. The hint is faint
 on Hard, light on Medium and noticeable on Easy, and the model is given the meta's
 first hint as a ceiling the story must stay below. The model is told how
-the meta works but never sees it printed; a description is rejected (and retried,
-then the template kept) if it mentions an answer, describes what a solved grid
+the meta works, given a few images that point at that mechanism truthfully, the
+puzzles' titles, and a calibration example at the right strength, and writes three
+candidates. A second call judges them for leaks, accuracy against the real
+mechanism, hint strength (1–5, with a target band per level) and prose, and the
+best one in band wins. A candidate is dropped before judging if it mentions an answer, describes what a solved grid
 looks like, falls outside 250–1200 characters, or, on Medium and Hard, names a
 technique. Clue lines are never rewritten: when they were, the model explained
 methods outright and once stated a wrong fact about one, so clues stay

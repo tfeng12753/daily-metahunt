@@ -23,19 +23,106 @@
 
   // ---------- leaderboard API ----------
   const API = ["localhost", "127.0.0.1"].includes(location.hostname) ? "" : (window.METAHUNT_API || "");
+  const HAS_BOARD = !!API || ["localhost", "127.0.0.1"].includes(location.hostname);
   const me = () => { try { return JSON.parse(localStorage.getItem("mh:player")); } catch { return null; } };
-  async function api(path, body) {
-    const r = await fetch(API + path, body ? { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(body) } : {});
-    const data = await r.json().catch(() => ({}));
-    if (!r.ok) throw new Error(data.error || `HTTP ${r.status}`);
-    return data;
+  const setMe = (p) => { try { p ? localStorage.setItem("mh:player", JSON.stringify(p)) : localStorage.removeItem("mh:player"); } catch {} };
+  async function api(path, body, timeout = 75000) {
+    // The free host sleeps when idle and can take most of a minute to wake, so be patient.
+    const ctl = new AbortController();
+    const timer = setTimeout(() => ctl.abort(), timeout);
+    try {
+      const r = await fetch(API + path, { signal: ctl.signal, ...(body ? { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(body) } : {}) });
+      const data = await r.json().catch(() => ({}));
+      if (!r.ok) throw Object.assign(new Error(data.error || `HTTP ${r.status}`), { status: r.status });
+      return data;
+    } finally {
+      clearTimeout(timer);
+    }
   }
-  function report(kind, puzzleId, answer) {
+
+  // Wake the server as soon as the page opens, so it's up by the time anyone solves something.
+  const server = { up: false, store: null, waking: null };
+  function wake() {
+    if (!HAS_BOARD || server.up) return Promise.resolve(server.up);
+    server.waking = server.waking || api("/api/health")
+      .then((d) => { server.up = true; server.store = d.store; return true; })
+      .catch(() => false)
+      .finally(() => { server.waking = null; });
+    return server.waking;
+  }
+
+  // Reports go through an outbox in localStorage: nothing is lost if the server is asleep, the
+  // connection drops or the page closes. Each carries when it happened; the server accepts that
+  // time if the report arrives within a few minutes.
+  const OUTBOX = "mh:outbox";
+  const readBox = () => { try { return JSON.parse(localStorage.getItem(OUTBOX)) || []; } catch { return []; } };
+  const writeBox = (b) => { try { localStorage.setItem(OUTBOX, JSON.stringify(b)); } catch {} };
+  let boardNotice = "";
+  function queue(item) {
+    const same = (x) => x.kind === item.kind && x.date === item.date && x.difficulty === item.difficulty && String(x.puzzle) === String(item.puzzle);
+    writeBox([...readBox().filter((x) => !same(x)), item]);
+  }
+  function report(kind, puzzleId, answer, at = Date.now()) {
+    if (!me()) return;
+    queue({ kind, date: puzzle.date, difficulty, puzzle: puzzleId, answer, at });
+    flush();
+  }
+  let flushing = null;
+  function flush() {
+    if (flushing || !HAS_BOARD) return flushing;
+    flushing = (async () => {
+      let sent = false;
+      for (let guard = 0; guard < 200; guard++) {
+        const item = readBox()[0], p = me();
+        if (!item || !p) break;
+        try {
+          await api("/api/" + item.kind, { token: p.token, ...item });
+          sent = true;
+        } catch (e) {
+          if (e.status === 401) { if (await recover()) continue; break; }
+          if (!(e.status === 400 || e.status === 404)) break; // asleep, offline or rate-limited: retry later
+          // 400/404: the round or puzzle doesn't exist on the server; drop it rather than retry forever
+        }
+        writeBox(readBox().slice(1));
+      }
+      server.up = server.up || sent;
+      return sent;
+    })().finally(() => { flushing = null; });
+    flushing.then((sent) => { if (sent) renderLeaderboard(); });
+    return flushing;
+  }
+  setInterval(() => { if (readBox().length) flush(); }, 30000);
+
+  // Queue this round's saved progress (used after joining, and after the server forgets a player).
+  function resync() {
+    if (!puzzle) return;
+    const st = load(rk());
+    if (!st.start && !Object.keys(st.solved).length) return;
+    queue({ kind: "start", date: puzzle.date, difficulty, at: Date.now() });
+    Object.entries(st.solved).forEach(([id, v]) => queue({ kind: "solve", date: puzzle.date, difficulty, puzzle: Number(id), answer: v, at: (st.times && st.times[id]) || Date.now() }));
+    st.hints.forEach((id) => queue({ kind: "hint", date: puzzle.date, difficulty, puzzle: id, at: Date.now() }));
+    if (st.meta) queue({ kind: "solve", date: puzzle.date, difficulty, puzzle: "meta", answer: st.meta, at: (st.times && st.times.meta) || Date.now() });
+  }
+
+  // The server no longer knows our token (it restarted without a database, say): sign back in
+  // under the same name and resend this round's progress.
+  async function recover() {
     const p = me();
-    if (!p) return;
-    api("/api/" + kind, { token: p.token, date: puzzle.date, difficulty, puzzle: puzzleId, answer })
-      .then(() => { if (kind === "solve") renderLeaderboard(); })
-      .catch(() => {});
+    if (!p) return false;
+    try {
+      const res = await api("/api/players", { name: p.name });
+      setMe(res);
+      boardNotice = `The leaderboard server had forgotten you (it restarted), so you've been signed back in as ${res.name} and this round's progress was resent.`;
+      resync();
+      return true;
+    } catch (e) {
+      if (e.status === 409) {
+        setMe(null);
+        boardNotice = `Your leaderboard sign-in expired and the name "${p.name}" is now taken. Pick a name to rejoin; your progress is still saved here.`;
+        renderLeaderboard();
+      }
+      return false;
+    }
   }
 
   // ---------- personal timer & sharing ----------
@@ -141,6 +228,7 @@
     if (!c || b.tray === false) return 0;
     if (b.tray === "word") return 16;
     if (b.tray === "letter") return 1;
+    if (typeof b.tray === "number") return b.tray;
     if (["clocks", "semaphore", "flags", "resistors", "pigpen", "braille", "glyphs", "numbers", "taps", "lamp", "tape"].includes(b.type)) return 1;
     if (b.type === "swatches") return 3;
     if (b.type === "mono" && b.big) return 1;
@@ -388,6 +476,111 @@
     box.append(row, out);
     show();
     return box;
+  }
+
+  // Seating plan: choose a guest for each seat; the chart is saved and duplicates are flagged.
+  function seating(b, c) {
+    const s = notes(c);
+    const plan = s.get("seats", []);
+    const wrap = el("div", "seating");
+    const guests = el("p", "note");
+    guests.append(el("strong", null, "Guests: "), b.names.join(", "));
+    const clues = el("ol", "plain-list");
+    b.clues.forEach((t) => clues.append(el("li", null, t)));
+    const row = el("div", "seat-row");
+    const selects = [];
+    const check = () => {
+      const count = {};
+      selects.forEach((x) => { if (x.value) count[x.value] = (count[x.value] || 0) + 1; });
+      selects.forEach((x) => x.classList.toggle("dup", !!x.value && count[x.value] > 1));
+    };
+    for (let k = 0; k < b.seats; k++) {
+      const seat = el("label", "seat");
+      seat.append(el("span", "seat-num", `Seat ${k + 1}`));
+      const sel = el("select");
+      sel.append(el("option", null, "—"));
+      sel.options[0].value = "";
+      b.names.forEach((n) => { const o = el("option", null, n); o.value = n; sel.append(o); });
+      sel.value = plan[k] || "";
+      sel.addEventListener("change", () => { s.set("seats", selects.map((x) => x.value)); check(); });
+      selects.push(sel);
+      seat.append(sel);
+      row.append(seat);
+    }
+    wrap.append(guests, clues, el("p", "note", "Seats are numbered from the left. Pick who sits where:"), row);
+    check();
+    return wrap;
+  }
+
+  // Gapless Morse: one line per word, with its letter count, the position to read, and a note box.
+  function morselines(b, c) {
+    const wrap = el("div");
+    if (b.bank) {
+      const bank = el("p", "note");
+      bank.append(el("strong", null, "Word bank: "), b.bank.join(", "));
+      wrap.append(bank);
+    }
+    const s = notes(c);
+    const vals = s.get("tray", []);
+    const list = el("ol", "plain-list morse-lines");
+    const inputs = [];
+    b.items.forEach((it, k) => {
+      const li = el("li");
+      const word = el("input", "slot-in wide");
+      word.maxLength = it.len;
+      word.style.width = `calc(${it.len}ch + 14px)`;
+      word.value = vals[k] || "";
+      word.placeholder = "·".repeat(it.len);
+      word.autocomplete = "off";
+      word.spellcheck = false;
+      word.setAttribute("aria-label", `Word for line ${k + 1}`);
+      word.addEventListener("input", () => { word.value = word.value.toUpperCase().replace(/[^A-Z]/g, ""); s.set("tray", inputs.map((i) => i.value)); });
+      inputs.push(word);
+      li.append(el("code", "morse-code", it.code), el("span", "morse-meta", ` (${it.len}) → letter ${it.index} `), word);
+      list.append(li);
+    });
+    wrap.append(list);
+    return wrap;
+  }
+
+  // A plain letter grid you can click through in order (spiral routes and the like).
+  function lettergrid(b, c) {
+    const s = notes(c);
+    let path = s.get("path", []);
+    const t = el("table", "board lettergrid");
+    const cells = {};
+    const read = el("p", "ws-read");
+    const paint = () => {
+      Object.values(cells).forEach((td) => td.classList.remove("visited"));
+      path.forEach((k) => cells[k] && cells[k].classList.add("visited"));
+      read.replaceChildren(el("span", "fitread-label", "Letters you've clicked, in order:"), el("span", "ws-left", path.map((k) => cells[k]?.textContent || "").join("") || "—"));
+    };
+    b.rows.forEach((row, r) => {
+      const tr = el("tr");
+      [...row].forEach((ch, col) => {
+        const k = `${r},${col}`;
+        const td = el("td", ch === "·" ? "pad" : null, ch);
+        td.tabIndex = 0;
+        const toggle = () => {
+          const i = path.indexOf(k);
+          if (i >= 0) path.splice(i, 1); else path.push(k);
+          s.set("path", path);
+          paint();
+        };
+        td.addEventListener("click", toggle);
+        td.addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") { toggle(); e.preventDefault(); } });
+        cells[k] = td;
+        tr.append(td);
+      });
+      t.append(tr);
+    });
+    const clear = el("button", "btn secondary small", "Clear");
+    clear.type = "button";
+    clear.addEventListener("click", () => { path = []; s.set("path", path); paint(); });
+    const wrap = el("div");
+    wrap.append(t, el("p", "note", "Click letters to collect them in order; click again to drop one."), read, clear);
+    paint();
+    return wrap;
   }
 
   // ---------- block renderers ----------
@@ -888,6 +1081,9 @@
         return el("pre", "mono" + (b.big ? " big" : "") + (b.wide ? " wide" : ""), b.text);
       case "prose": return el("p", "prose", b.text);
       case "caption": return el("p", "caption", b.text);
+      case "seating": return seating(b, c);
+      case "morselines": return morselines(b, c);
+      case "lettergrid": return lettergrid(b, c);
       case "board": return board(b, c);
       case "nonogram": return nonogram(b);
       case "fitgrid": return fitgrid(b);
@@ -1238,7 +1434,7 @@
 
   async function renderLeaderboard() {
     const box = $("#leaderboard");
-    if (!box || (!API && !["localhost", "127.0.0.1"].includes(location.hostname))) return;
+    if (!box || !HAS_BOARD || !puzzle) return;
     const card = el("article", "card board-card");
     const head = el("div", "card-head");
     head.append(el("span", "num", "LEADERBOARD · " + difficulty.toUpperCase()));
@@ -1251,7 +1447,8 @@
     });
     head.append(tabs);
     card.append(head);
-    const status = el("p", "note", "Loading… (the leaderboard server may take a moment to wake up)");
+    if (boardNotice) card.append(el("p", "feedback warn", boardNotice));
+    const status = el("p", "note", server.up ? "Loading…" : "Waking the leaderboard server… Free hosting sleeps when nobody's around, so this can take up to a minute.");
     card.append(status);
 
     const player = me();
@@ -1267,25 +1464,26 @@
       form.append(input, btn);
       form.addEventListener("submit", async (e) => {
         e.preventDefault();
+        btn.disabled = true;
+        fb.className = "feedback";
+        fb.textContent = server.up ? "Joining…" : "Joining… (waking the server)";
         try {
-          const res = await api("/api/players", { name: input.value });
-          try { localStorage.setItem("mh:player", JSON.stringify(res)); } catch {}
-          // Anything already solved this round counts from now.
-          const st = load(rk());
-          // The server's clock starts now: it only trusts times it witnessed itself.
-          await api("/api/start", { token: res.token, date: puzzle.date, difficulty }).catch(() => {});
-          Object.entries(st.solved).forEach(([id, v]) => report("solve", Number(id), v));
-          st.hints.forEach((id) => report("hint", id));
-          if (st.meta) report("solve", "meta", st.meta);
+          setMe(await api("/api/players", { name: input.value }));
+          boardNotice = "";
+          // The server times you from now; anything you'd already solved is recorded, but the run
+          // is ranked by time since release rather than on your own clock.
+          resync();
+          await flush();
           renderLeaderboard();
         } catch (err) {
+          btn.disabled = false;
           fb.className = "feedback bad";
-          fb.textContent = err.message;
+          fb.textContent = err.name === "AbortError" ? "The leaderboard server didn't answer. Try again in a minute." : err.message;
         }
       });
       card.append(form, fb);
     } else {
-      const note = el("p", "note", `Playing as ${player.name}. "Meta" is timed from 00:00 UTC on the round's date plus 5 minutes per hint; "Your clock" runs from when you first opened the round. `);
+      const note = el("p", "note", `Playing as ${player.name}. Ranked on your own clock, from Begin to the meta, plus 5 minutes per hint. Runs that joined partway through are listed after, by time since the round opened. `);
       const a = el("a", null, "Your stats →");
       a.href = "share.html?player=" + encodeURIComponent(player.name);
       note.append(a);
@@ -1293,20 +1491,30 @@
     }
     box.replaceChildren(card);
 
+    const shown = rk() + boardView;
     try {
+      if (player) {
+        // Notice a forgotten identity now, rather than after a solve goes nowhere.
+        await api("/api/me", { token: player.token }).catch(async (e) => { if (e.status === 401 && await recover()) await flush(); else if (e.status !== 401) throw e; });
+        if (readBox().length) await flush();
+      }
       const q = `difficulty=${difficulty}`;
       const data = boardView === "today"
         ? await api(`/api/leaderboard?date=${puzzle.date}&${q}`)
         : await api(`/api/alltime?${q}`);
+      server.up = true;
+      if (shown !== rk() + boardView || !card.isConnected) return; // navigated away meanwhile
       const t = el("table", "sol-table board-table");
       const hr = el("tr");
-      const cols = boardView === "today" ? ["#", "Name", "Meta", "Your clock", "Feeders", "Hints"] : ["#", "Name", "Metas solved"];
+      const cols = boardView === "today" ? ["#", "Name", "Time", "Since opening", "Feeders", "Hints"] : ["#", "Name", "Metas solved"];
       cols.forEach((h) => hr.append(el("th", null, h)));
       t.append(hr);
+      const me2 = me();
       data.rows.forEach((r, i) => {
-        const tr = el("tr", player && r.name === player.name ? "me" : null);
+        const tr = el("tr", me2 && r.name === me2.name ? "me" : null);
+        const time = r.score != null ? hms(r.score) : r.meta ? "joined late" : "—";
         const cells = boardView === "today"
-          ? [i + 1, r.name, r.meta ? fmtTime(r.score) : "—", r.personal != null ? hms(r.personal) : "—", `${r.feeders}/${r.total}`, r.hints]
+          ? [i + 1, r.name, time, r.meta ? fmtTime(r.seconds) : "—", `${r.feeders}/${r.total}`, r.hints]
           : [i + 1, r.name, r.metas];
         cells.forEach((c, j) => {
           const td = el("td");
@@ -1320,8 +1528,17 @@
         t.append(tr);
       });
       status.replaceWith(data.rows.length ? t : el("p", "note", "Nobody on the board yet. Be the first."));
+      if ((data.store || server.store) === "memory") {
+        card.append(el("p", "note", "Heads up: this server has no database yet, so the board resets whenever the server restarts."));
+      }
+      if (readBox().length) card.append(el("p", "note", `${readBox().length} result${readBox().length === 1 ? "" : "s"} waiting to be sent; they'll go as soon as the server answers.`));
     } catch {
-      status.textContent = "The leaderboard is offline right now; your progress is still saved in this browser.";
+      if (!card.isConnected) return;
+      status.textContent = "The leaderboard server isn't answering right now. Your progress is saved in this browser and will be sent when it's back. ";
+      const retry = el("button", "btn secondary small", "Try again");
+      retry.type = "button";
+      retry.addEventListener("click", () => renderLeaderboard());
+      status.append(retry);
     }
   }
 
@@ -1451,7 +1668,7 @@
         const fresh = load(key);
         fresh.start = fresh.start || Date.now();
         save(key, fresh);
-        if (me()) api("/api/start", { token: me().token, date: puzzle.date, difficulty }).catch(() => {});
+        if (me()) report("start", undefined, undefined, fresh.start);
         renderRound(fresh);
         tickTimer();
         $("#puzzles").scrollIntoView({ behavior: "smooth", block: "start" });
@@ -1561,6 +1778,7 @@
       $("#round").textContent = "No puzzles yet";
       return;
     }
+    wake().then(() => flush());
     await addUpcoming();
     const sel = $("#archive");
     [...index.puzzles].reverse().forEach((p) => {

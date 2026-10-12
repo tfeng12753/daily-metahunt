@@ -19,6 +19,12 @@ const PORT = Number(process.env.PORT || process.argv[2] || 8791);
 const STATIC_BASE = (process.env.STATIC_BASE || "https://daily-metahunt.onrender.com").replace(/\/$/, "");
 const SERVE_STATIC = process.env.SERVE_STATIC !== "0";
 const HINT_PENALTY = 300; // seconds per hint
+// A solve can reach us late (the free host was asleep, or the player was briefly offline), so the
+// browser sends when it happened. We accept that time if it is at most this old, never older.
+const LATE_REPORT_MS = 3 * 60e3;
+// A run whose first solve lands within this long of its start was replayed when the player joined
+// mid-round, not played against our clock, so it can't be ranked on time.
+const CLEAN_START_MS = 10e3;
 const TYPES = { ".html": "text/html; charset=utf-8", ".js": "text/javascript", ".css": "text/css", ".json": "application/json" };
 
 const store = await createStore(process.env.DATABASE_URL);
@@ -144,6 +150,13 @@ async function api(req, res, url) {
     return send(res, 200, { name: player.name, token });
   }
 
+  // Is this token still known? (Lets the page notice a lost identity instead of failing silently.)
+  if (url.pathname === "/api/me" && req.method === "POST") {
+    const player = await playerFrom(await readBody(req));
+    if (!player) return send(res, 401, { error: "Unknown player; join the leaderboard again." });
+    return send(res, 200, { name: player.name, store: store.kind });
+  }
+
   if (url.pathname === "/api/start" && req.method === "POST") {
     const body = await readBody(req);
     const player = await playerFrom(body);
@@ -151,7 +164,9 @@ async function api(req, res, url) {
     const difficulty = level(body.difficulty);
     const round = await loadRound(String(body.date), difficulty);
     if (!round) return send(res, 404, { error: "No such round." });
-    const at = await store.recordStart({ playerId: player.id, date: round.date, difficulty });
+    const now = Date.now(), claimed = Number(body.at);
+    const when = Number.isFinite(claimed) && claimed <= now && now - claimed <= LATE_REPORT_MS ? claimed : now;
+    const at = await store.recordStart({ playerId: player.id, date: round.date, difficulty }, when);
     return send(res, 200, { startedAt: at });
   }
 
@@ -218,7 +233,9 @@ async function api(req, res, url) {
     if (limited(`solve:${player.id}:${round.date}:${which}`, 20)) return send(res, 429, { error: "Too many guesses." });
     const salt = round.salt || round.date;
     if (sha(`metahunt|${salt}|${norm(body.answer)}`) !== target.hash) return send(res, 200, { correct: false });
-    const at = await store.recordSolve(key);
+    const now = Date.now(), claimed = Number(body.at);
+    const when = Number.isFinite(claimed) && claimed <= now && now - claimed <= LATE_REPORT_MS ? claimed : now;
+    const at = await store.recordSolve(key, when);
     return send(res, 200, { correct: true, seconds: Math.max(0, Math.round((at - releaseTime(round.date)) / 1000)) });
   }
 
@@ -227,8 +244,12 @@ async function api(req, res, url) {
     const difficulty = level(url.searchParams.get("difficulty"));
     const round = await loadRound(date, difficulty);
     if (!round) return send(res, 404, { error: "No such round." });
+    // Ranked on each player's own clock (Begin to meta, plus hint penalties), so nobody is
+    // punished for living far from UTC. Runs we didn't see start come after, by time since release.
     const rows = (await store.roundRows(date, difficulty)).map((r) => {
       const seconds = r.metaAt ? Math.max(0, Math.round((r.metaAt - releaseTime(date)) / 1000)) : null;
+      const clean = r.startedAt != null && r.firstAt != null && r.firstAt - r.startedAt >= CLEAN_START_MS;
+      const personal = clean && r.metaAt ? Math.round((r.metaAt - r.startedAt) / 1000) : null;
       return {
         name: r.name,
         feeders: r.feeders,
@@ -236,12 +257,17 @@ async function api(req, res, url) {
         meta: seconds !== null,
         seconds,
         hints: r.hints,
-        score: seconds === null ? null : seconds + HINT_PENALTY * r.hints,
-        personal: r.metaAt && r.startedAt ? Math.round((r.metaAt - r.startedAt) / 1000) : null,
+        clean,
+        personal,
+        score: personal === null ? null : personal + HINT_PENALTY * r.hints,
       };
     });
-    rows.sort((a, b) => (a.score ?? Infinity) - (b.score ?? Infinity) || b.feeders - a.feeders || a.hints - b.hints);
-    return send(res, 200, { date, difficulty, hintPenalty: HINT_PENALTY, rows: rows.slice(0, 100) });
+    const rank = (r) => (r.score != null ? [0, r.score] : r.meta ? [1, r.seconds + HINT_PENALTY * r.hints] : [2, -r.feeders]);
+    rows.sort((a, b) => {
+      const x = rank(a), y = rank(b);
+      return x[0] - y[0] || x[1] - y[1] || a.hints - b.hints || a.name.localeCompare(b.name);
+    });
+    return send(res, 200, { date, difficulty, hintPenalty: HINT_PENALTY, store: store.kind, rows: rows.slice(0, 100) });
   }
 
   if (url.pathname === "/api/alltime" && req.method === "GET") {

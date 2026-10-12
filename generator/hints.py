@@ -157,6 +157,26 @@ FEEDER = {
         "Try moving every letter the same distance. How far turns the short words into English?",
         "A Caesar shift: find the one shift that fixes a short word, then apply it everywhere.",
     ),
+    "seating": (
+        "Only one arrangement satisfies every clue; start from whoever has an end seat or a fixed neighbour. Once they're seated, why might the seat numbers matter?",
+        "Solve the seating, then take the k-th letter of the name in seat k, left to right.",
+    ),
+    "morse_gapless": (
+        "Two symbols, no spaces, and a letter count. Which old code is it, and which word from this round fits each line?",
+        "Each line is a theme word in Morse with the letter gaps removed; find it, then take the letter at the position shown.",
+    ),
+    "element_spell": (
+        "Several of these numbers are bigger than 26, so they can't be letter positions. What else has a number that high?",
+        "Atomic numbers: write each element's symbol and run the symbols together into one word.",
+    ),
+    "playfair": (
+        "An even number of letters, read in pairs, and no pair is ever a double. Which cipher works on pairs, and where's its key?",
+        "Playfair, with the 5×5 square keyed by this puzzle's title (I and J share a cell).",
+    ),
+    "spiral": (
+        "All the letters of a sentence are here, but not in rows. Try walking the grid the way a snail would.",
+        "Start in one corner and spiral inward along the edges; one corner and one direction read as a sentence.",
+    ),
 }
 
 

@@ -24,7 +24,7 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import hints  # noqa: E402
 import llm  # noqa: E402
-from hunt_mechanisms import MECHANISMS  # noqa: E402
+from deep_mechanisms import MECHANISMS  # noqa: E402
 from mechanisms import ALPHA, TRANSFORMS  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
