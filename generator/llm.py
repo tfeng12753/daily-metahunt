@@ -163,25 +163,33 @@ STRENGTH = {
 }
 
 
-def ok_description(text, forbidden, level):
+def rejection(text, forbidden, level):
+    """Why a description can't be used, or None if it can."""
     if not isinstance(text, str):
-        return False
+        return "not text"
     t = text.strip()
     if not 250 <= len(t) <= 1200:
-        return False
+        return "length %d" % len(t)
     low = t.lower()
     letters = re.sub(r"[^a-z]", "", low)
     words = set(re.findall(r"[a-z]+", low))
     for w in forbidden:
         w = w.lower()
         if (len(w) >= 6 and w in letters) or w in words:
-            return False
-    if any(x in low for x in OUTPUT_TELLS):
-        return False
-    if level == "hard" and words & set(HARD_TELLS):
-        return False
+            return "answer %s" % w.upper()
+    tell = next((x for x in OUTPUT_TELLS if x in low), None)
+    if tell:
+        return "output tell '%s'" % tell
+    hard = sorted(words & set(HARD_TELLS)) if level == "hard" else []
+    if hard:
+        return "explains ('%s')" % hard[0]
     # Easy names its techniques on the page anyway; the other levels must not.
-    return level == "easy" or not any(b in low for b in BANNED)
+    named = next((b for b in BANNED if b in low), None) if level != "easy" else None
+    return "names '%s'" % named if named else None
+
+
+def ok_description(text, forbidden, level):
+    return rejection(text, forbidden, level) is None
 
 
 def _pick(cands, scores, level):
@@ -218,6 +226,10 @@ def describe(puzzle, solution, theme, level="hard", attempts=2):
     for q in solution["puzzles"]:
         forbidden |= {q["answer"], q["encoded"]} | ({q["mutated"]} if q.get("mutated") else set())
     truth, images = META_IMAGERY.get(solution["metaType"], (solution["explain"], []))
+    # The answers are ordinary theme words ("tent", "seal"), so a story set in the same place reaches
+    # for them naturally. Tell the model which ones are off limits instead of discarding its drafts.
+    avoid = sorted({solution["final"]} | {q["answer"] for q in solution["puzzles"]})
+    banned_here = sorted(set(HARD_TELLS)) if level == "hard" else []
     ex_what, ex_text = EXAMPLES[level]
     n = len(puzzle["puzzles"])
     user = ("Round: %s\nSetting: %s; the people there are %s.\nCurrent opening (keep its facts and mood, expand it): %s\n"
@@ -227,12 +239,17 @@ def describe(puzzle, solution, theme, level="hard", attempts=2):
             "Hint strength: %s\nCeiling: the solver can later open this hint about the final step. Your story must "
             "say clearly less than it, never as much: \"%s\"\n"
             "Don't state how many messages, notes or puzzles there are unless the number is exactly %d.\n"
+            "Never use any of these words, in any form, even in passing (they are answers); if the current opening "
+            "uses one, rephrase that part: %s.\n"
+            "%s"
             "For calibration, a story at this strength for a different round (%s):\n\"%s\"\n"
             "Write three different candidates, each built around a different image. Return JSON "
             "{\"candidates\": [{\"intro\": \"...\", \"image\": \"the image you used\"}, ...]}."
             % (puzzle["round"], theme["place"], theme["crew"], theme["intro"],
                ", ".join(p["title"] for p in puzzle["puzzles"]), truth, "; ".join(images) or "your choice",
-               STRENGTH[level], puzzle["meta"]["hints"][0], n, ex_what, ex_text))
+               STRENGTH[level], puzzle["meta"]["hints"][0], n, ", ".join(avoid),
+               ("Also never use these words: %s.\n" % ", ".join(banned_here)) if banned_here else "",
+               ex_what, ex_text))
     try:
         model = pick_model(key)
     except Exception as e:
@@ -247,7 +264,12 @@ def describe(puzzle, solution, theme, level="hard", attempts=2):
         except Exception as e:  # network, auth, bad JSON: try again, then keep the template
             print("llm describe attempt failed: %s" % e, file=sys.stderr)
             continue
-        cands = [c["intro"].strip() for c in raw if isinstance(c, dict) and ok_description(c.get("intro"), forbidden, level)]
+        cands, why = [], []
+        for c in raw:
+            r = rejection(c.get("intro") if isinstance(c, dict) else None, forbidden, level)
+            (why.append(r) if r else cands.append(c["intro"].strip()))
+        if why:
+            print("llm describe (%s): dropped %d of %d drafts: %s" % (level, len(why), len(raw), "; ".join(why)), file=sys.stderr)
         if not cands:
             continue
         fallback = fallback or cands[0]
