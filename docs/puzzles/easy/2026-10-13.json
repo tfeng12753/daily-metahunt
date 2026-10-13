@@ -1,0 +1,314 @@
+{
+ "date": "2026-10-13",
+ "difficulty": "easy",
+ "salt": "2026-10-13/easy",
+ "number": 17,
+ "round": "Hut Eight",
+ "intro": "A drawer at Bletchley Park was found to have a false bottom. Beneath it: a stack of intercepts that were never logged, each one pinned to a different page of a crossword. The pages have been brought into the workroom and laid out under the glass of the big layout table, the sort of thing the clerks use for long plans, and someone has taken a pencil to the glass and drawn a row of boxes along the top edge, each box just long enough to hold one page end to end. The codebreakers are in the habit of fitting things into boxes, you see; the room runs on pigeonholes and labelled trays and the quiet pleasure of a thing that fits where it is put. Some pages lie short of their box and some press right up to the edge, and Mr Herivel says the boxes are not for reading but for remembering, that the shape of what fits where will tell you more than the words on the page ever could.",
+ "echo": "A nobody, a zero and a secret, all spelled the same way.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "The Crib",
+   "flavor": "All the right letters, all in the right words, none in the right places.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "ETH",
+      "TLSA",
+      "THNGI",
+      "TEH",
+      "ROPTAROE",
+      "PEYDT",
+      "REFBEO",
+      "HTE",
+      "LEIN",
+      "WNET",
+      "AEDD",
+      "SAW",
+      "DRTYECP"
+     ],
+     "inline": true,
+     "tray": "word"
+    }
+   ],
+   "hash": "f42a6ee42ebec3e13e05ec5893a1c324b0e8a1fcd8632e9be177fc6e321845de",
+   "partials": {},
+   "hints": [
+    "Each word of a sentence has had its letters shuffled. Unscramble them; the sentence tells you the answer.",
+    "To check you're on track: the answer begins with D."
+   ],
+   "technique": "Scrambled sentence",
+   "length": 7
+  },
+  {
+   "id": 2,
+   "title": "Room Forty",
+   "flavor": "Turn the wheel until the words come back.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "SJSFM UCCR VIBH SBRG KWHV O GWBUZS KCFR OBR HVS KCFR MCI KOBH TFCA HVWG DOUS WG KVSSZ",
+     "wide": true,
+     "solver": "substitution",
+     "wheel": true
+    }
+   ],
+   "hash": "8a260be22d36a48fdc5445cf8a176bbc15e7b72e4b7fb68e32fbc7af13a418f3",
+   "partials": {},
+   "hints": [
+    "Every letter of the sentence was shifted along the alphabet by the same amount. Find the shift; the sentence tells you the answer.",
+    "To check you're on track: the answer begins with W."
+   ],
+   "technique": "Caesar shift",
+   "length": 5
+  },
+  {
+   "id": 3,
+   "title": "Depth",
+   "flavor": "A parts list read aloud by someone who only knew the stripes.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "brown–grey",
+      "black–white",
+      "black–red",
+      "black–red",
+      "brown–green",
+      "brown–yellow"
+     ]
+    }
+   ],
+   "hash": "7acf410b2e07908052b5fa3e3e2a30004d6a12cc18018dccb00cbf647a0eaf4d",
+   "partials": {},
+   "hints": [
+    "Resistor colour code: each pair of colours is two digits (black 0 … white 9), a letter position.",
+    "To check you're on track: the answer begins with R."
+   ],
+   "technique": "Resistor colour code (written)",
+   "length": 6
+  },
+  {
+   "id": 4,
+   "title": "Rodding",
+   "flavor": "Somebody shook the sentence and all the letters fell to the bottom of their columns.",
+   "blocks": [
+    {
+     "type": "dropquote",
+     "cols": [
+      "CIOTW",
+      "AHLS",
+      "AADPR",
+      "ART",
+      "IOST",
+      "CEIRT",
+      "DHHN",
+      "EGS",
+      "ELW",
+      "ACCE",
+      "ORS",
+      "EUW",
+      "NORT",
+      "IORS",
+      "DET",
+      "BR",
+      "DGU"
+     ],
+     "mask": [
+      "....#...#.......#",
+      ".......#...#...#.",
+      "...#..#.......#..",
+      ".#.#......#....#.",
+      ".......##########"
+     ]
+    }
+   ],
+   "hash": "40e78233713939570ad65a2bfe31f6927fbd646519001c28d27c20e0026eb42f",
+   "partials": {},
+   "hints": [
+    "A drop quote: each column's letters (shown alphabetised above it) drop into that column of the grid below. Black squares are spaces; words can wrap between rows. The sentence tells you the answer.",
+    "To check you're on track: the answer begins with D."
+   ],
+   "technique": "Drop quote",
+   "length": 8
+  },
+  {
+   "id": 5,
+   "title": "Weather Report",
+   "flavor": "The machine spoke American Standard. Every row is one character.",
+   "blocks": [
+    {
+     "type": "tape",
+     "rows": [
+      [
+       1,
+       0,
+       0,
+       0,
+       1,
+       1,
+       0
+      ],
+      [
+       1,
+       0,
+       1,
+       0,
+       0,
+       1,
+       0
+      ],
+      [
+       1,
+       0,
+       0,
+       0,
+       1,
+       0,
+       1
+      ],
+      [
+       1,
+       0,
+       1,
+       0,
+       0,
+       0,
+       1
+      ],
+      [
+       1,
+       0,
+       1,
+       0,
+       1,
+       0,
+       1
+      ],
+      [
+       1,
+       0,
+       0,
+       0,
+       1,
+       0,
+       1
+      ],
+      [
+       1,
+       0,
+       0,
+       1,
+       1,
+       1,
+       0
+      ],
+      [
+       1,
+       0,
+       0,
+       0,
+       0,
+       1,
+       1
+      ],
+      [
+       1,
+       0,
+       1,
+       1,
+       0,
+       0,
+       1
+      ]
+     ]
+    }
+   ],
+   "hash": "0b6154d94ceca04021e24e619dbce256d954ea356a6b4641795a0945519cdc9b",
+   "partials": {},
+   "hints": [
+    "Each row of the paper tape is a 7-bit ASCII character (hole = 1, most significant bit on the left).",
+    "To check you're on track: the answer begins with F."
+   ],
+   "technique": "Punched tape",
+   "length": 9
+  },
+  {
+   "id": 6,
+   "title": "Herivel Tip",
+   "flavor": "Moths got into the inventory: one letter eaten out of every entry.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "INTERCEP_",
+      "K_YSPACE",
+      "SIGNA_",
+      "T_LEGRAM",
+      "O_ERATOR",
+      "PUNCHCA_D",
+      "CARR_ER",
+      "_OTCH",
+      "SET_ING",
+      "LOR_NZ",
+      "CROSSWO_D"
+     ],
+     "ordered": true,
+     "mono": true
+    }
+   ],
+   "hash": "cc0a2bcc0969959f25b28cff3e04033a9ee1e340b52a253dc45f64a3b4e1a5d1",
+   "partials": {},
+   "hints": [
+    "Each theme word is missing one letter. The missing letters, in order, spell the answer.",
+    "To check you're on track: the answer begins with T."
+   ],
+   "technique": "Missing letters",
+   "length": 11
+  }
+ ],
+ "meta": {
+  "title": "Meta: Hut Eight",
+  "flavor": "Everything in Hut Eight has a place, and every place is exactly the right size.",
+  "blocks": [
+   {
+    "type": "fitgrid",
+    "rows": [
+     {
+      "len": 7,
+      "shade": 2
+     },
+     {
+      "len": 8,
+      "shade": 1
+     },
+     {
+      "len": 11,
+      "shade": 4
+     },
+     {
+      "len": 5,
+      "shade": 1
+     },
+     {
+      "len": 9,
+      "shade": 5
+     },
+     {
+      "len": 6,
+      "shade": 0
+     }
+    ]
+   }
+  ],
+  "length": 6,
+  "hash": "5eeb929db915b4ae5d15d6cb5422aa6f75fb05ab875023c6fa858eabe52fc872",
+  "hints": [
+   "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+   "To check you're on track: the final answer begins with C."
+  ]
+ },
+ "described": true
+}

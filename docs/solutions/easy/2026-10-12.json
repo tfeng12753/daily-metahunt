@@ -1,0 +1,64 @@
+{
+ "date": "2026-10-12",
+ "number": 16,
+ "difficulty": "easy",
+ "final": "GAMBIT",
+ "metaType": "fitin",
+ "explain": "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Queen's Gambit",
+   "answer": "GRANDMASTER",
+   "mechanism": "Word search leftovers",
+   "transform": null,
+   "encoded": "GRANDMASTER",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Opposition",
+   "answer": "SACRIFICE",
+   "mechanism": "Book cipher",
+   "transform": null,
+   "encoded": "SACRIFICE",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Time Trouble",
+   "answer": "BOARD",
+   "mechanism": "Semaphore (figures)",
+   "transform": null,
+   "encoded": "BOARD",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Adjournment",
+   "answer": "KING",
+   "mechanism": "Drop quote",
+   "transform": null,
+   "encoded": "KING",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Smothered Mate",
+   "answer": "CATALAN",
+   "mechanism": "Cryptogram (cluephrase)",
+   "transform": null,
+   "encoded": "CATALAN",
+   "mutated": null
+  },
+  {
+   "id": 6,
+   "title": "Fianchetto",
+   "answer": "BISHOP",
+   "mechanism": "Shredded sentence",
+   "transform": null,
+   "encoded": "BISHOP",
+   "mutated": null
+  }
+ ]
+}

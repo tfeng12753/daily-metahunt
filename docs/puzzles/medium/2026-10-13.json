@@ -1,0 +1,296 @@
+{
+ "date": "2026-10-13",
+ "difficulty": "medium",
+ "salt": "2026-10-13/medium",
+ "number": 17,
+ "round": "Hut Eight",
+ "intro": "The intercepts beneath the false bottom were not filed away in any order anyone could later recover; each was pinned to a page of a crossword in a way that seemed arbitrary until you noticed the pins had been moved from their original holes, leaving a ring of empty brass. The pages themselves were all different sizes, trimmed to fit some unseen measure, and the codebreakers who had pinned them there spoke of it as routine, as if every page had always been exactly the size it needed to be. One of them, a man who had never been known to sort anything, kept his own intercepts in a card rack beside the lamp, each card cut to its own peculiar length and slid into a slot that held nothing else. He would tap the rack after each shift, as though checking that everything was still where it belonged.",
+ "echo": "Elgar wrote variations on it; the Kriegsmarine typed on it.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Kiss",
+   "flavor": "Each entry picked up a hitchhiker on the way.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "RCMRAIRE",
+      "CNOHET",
+      "ZONRESL",
+      "AOMINNSS",
+      "AEAEKYPCS",
+      "RPOAULBGGD",
+      "EGSNIAL"
+     ],
+     "ordered": true,
+     "mono": true
+    }
+   ],
+   "hash": "63ad63dec1d4a76039a7760a49eb0d27785abe8f5ec77ca6ff45c397c6485cb6",
+   "partials": {},
+   "hints": [
+    "Each jumble is almost a word from this round, but with a letter to spare. Which letter, every time?",
+    "Rearrange each into a theme word; the spare letters, in order, are the answer."
+   ],
+   "length": 7
+  },
+  {
+   "id": 2,
+   "title": "Depth",
+   "flavor": "Each column remembers what it held, but not in what order.",
+   "blocks": [
+    {
+     "type": "dropquote",
+     "cols": [
+      "AHLYY",
+      "IOOT",
+      "STUU",
+      "BHR",
+      "EGPU",
+      "AOTU",
+      "NOTZ",
+      "DSTZ",
+      "HILOW",
+      "EEET",
+      "NRR",
+      "IOS",
+      "FST",
+      "HO",
+      "ORTU",
+      "BEW",
+      "LOT"
+     ],
+     "mask": [
+      "....#......#...#.",
+      "...#......#..#...",
+      "..#...#..#...#...",
+      ".#...#......#...#",
+      "...#...#..#######"
+     ]
+    }
+   ],
+   "hash": "fabbfccf3f212f90aa8fdc7ef5a7a09de82ca56ebb24e60b86e96bb113179caa",
+   "partials": {},
+   "hints": [
+    "Black squares are spaces. Which two- and three-letter words fit, using only the letters each column allows?",
+    "Each column's letters drop into that column of the grid; cross them off as you place them. The sentence tells you what to submit."
+   ],
+   "length": 5
+  },
+  {
+   "id": 3,
+   "title": "Herivel Tip",
+   "flavor": "A sentence in disguise, and not a very good disguise.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "HNW SWOOQVW CQO NATTWB AB LFQAB OAVNH QFF QFDBV QBT AH OASLFG OQGO HWFWVJQS",
+     "wide": true,
+     "solver": "substitution"
+    }
+   ],
+   "hash": "5632c39a2ffdfb8d7ca6d253e9011227988e359e6958344d11852040e735f822",
+   "partials": {},
+   "hints": [
+    "Which short words are most common in English? Could any of them be hiding here?",
+    "Each symbol always stands for the same letter. The finished sentence tells you what to submit."
+   ],
+   "length": 8
+  },
+  {
+   "id": 4,
+   "title": "Cillies",
+   "flavor": "Pairs of numbers pencilled in the margin.",
+   "blocks": [
+    {
+     "type": "prose",
+     "text": "A drawer at Bletchley Park was found to have a false bottom. Beneath it: a stack of intercepts that were never logged, each one pinned to a different page of a crossword.",
+     "paper": true
+    },
+    {
+     "type": "list",
+     "items": [
+      "25.1",
+      "7.3",
+      "13.3",
+      "23.3",
+      "19.2",
+      "32.1",
+      "2.3",
+      "32.2",
+      "25.6"
+     ],
+     "inline": true
+    }
+   ],
+   "hash": "e16499500c2b6a98c1c2935b6fbbfc67ffaf48de8bfb79e05803dc8e52429abe",
+   "partials": {},
+   "hints": [
+    "The first number in each pair never goes past the number of words on the page. What does the second count?",
+    "The first number finds a word on the page; the second finds a letter in it."
+   ],
+   "length": 9
+  },
+  {
+   "id": 5,
+   "title": "Weather Report",
+   "flavor": "Three letters to a strip, and a note of how long each word was.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "AYN",
+      "EDO",
+      "EPR",
+      "ERA",
+      "ETL",
+      "EXT",
+      "HEN",
+      "HEW",
+      "INT",
+      "LDO",
+      "NDM",
+      "NEY",
+      "ONE",
+      "ORD",
+      "OUM",
+      "OVE",
+      "OWW",
+      "QUI",
+      "RIT",
+      "TEL",
+      "TOT",
+      "WEL",
+      "WNT",
+      "YON"
+     ],
+     "inline": true,
+     "tiles": true
+    },
+    {
+     "type": "prose",
+     "text": "Word lengths: (4 4 3 3 3 5 4 3 4 11 3 4 7 2 2 3 4 3)"
+    }
+   ],
+   "hash": "15203616df063b1a83f524968a8e71bca325e467abc12669ea394f5f93c10fa8",
+   "partials": {},
+   "hints": [
+    "The strips are alphabetised, not in order. The word lengths say where the breaks fall. Which strip could start the sentence?",
+    "Chain the strips into one string and split it by the word lengths; the sentence tells you what to submit."
+   ],
+   "length": 11
+  },
+  {
+   "id": 6,
+   "title": "The Crib",
+   "flavor": "The host was particular about the seating, and more particular still about what each chair was worth.",
+   "blocks": [
+    {
+     "type": "seating",
+     "seats": 6,
+     "names": [
+      "Vivienne",
+      "Helena",
+      "Penelope",
+      "Ingrid",
+      "Nicholas",
+      "Duncan"
+     ],
+     "clues": [
+      "Exactly one person sits between Helena and Vivienne.",
+      "Nicholas sits somewhere between Duncan and Penelope.",
+      "Penelope sits somewhere to the left of Ingrid.",
+      "Duncan has an end seat.",
+      "Exactly 2 people sit between Duncan and Ingrid.",
+      "Helena sits somewhere between Nicholas and Vivienne."
+     ],
+     "logic": [
+      [
+       "gap",
+       "HELENA",
+       "VIVIENNE",
+       1
+      ],
+      [
+       "between",
+       "DUNCAN",
+       "NICHOLAS",
+       "PENELOPE"
+      ],
+      [
+       "left_of",
+       "PENELOPE",
+       "INGRID"
+      ],
+      [
+       "end",
+       "DUNCAN"
+      ],
+      [
+       "gap",
+       "DUNCAN",
+       "INGRID",
+       2
+      ],
+      [
+       "between",
+       "NICHOLAS",
+       "HELENA",
+       "VIVIENNE"
+      ]
+     ]
+    }
+   ],
+   "hash": "c37ab738f7b688c7097645dbfc2684b188146a0d8da8f40252292faebc3adfde",
+   "partials": {},
+   "hints": [
+    "Only one arrangement satisfies every clue; start from whoever has an end seat or a fixed neighbour. Once they're seated, why might the seat numbers matter?",
+    "Solve the seating, then take the k-th letter of the name in seat k, left to right."
+   ],
+   "length": 6
+  }
+ ],
+ "meta": {
+  "title": "Meta: Hut Eight",
+  "flavor": "Everything in Hut Eight has a place.",
+  "blocks": [
+   {
+    "type": "fitgrid",
+    "rows": [
+     {
+      "len": 11,
+      "shade": 9
+     },
+     {
+      "len": 9,
+      "shade": 2
+     },
+     {
+      "len": 6,
+      "shade": 1
+     },
+     {
+      "len": 7,
+      "shade": 5
+     },
+     {
+      "len": 8,
+      "shade": 7
+     },
+     {
+      "len": 5,
+      "shade": 3
+     }
+    ]
+   }
+  ],
+  "length": 6,
+  "hash": "6b48f21e13177ac4a47a8d610c6a868e97c6a7954a1cf17a0e708d9c54d7ae47",
+  "hints": [
+   "The grid's rows are all different lengths. So are your answers.",
+   "Put each answer in the row its length fits; read the shaded squares top to bottom."
+  ]
+ },
+ "described": true
+}

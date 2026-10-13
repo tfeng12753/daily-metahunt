@@ -1,0 +1,82 @@
+{
+ "date": "2026-10-12",
+ "number": 16,
+ "difficulty": "hard",
+ "final": "ZUGZWANG",
+ "metaType": "mutation",
+ "explain": "Each feeder decodes to its answer with a single wrong letter. Those substituted letters, in puzzle order, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Zugzwang",
+   "answer": "TOURNAMENT",
+   "mechanism": "Mirrored NATO",
+   "transform": null,
+   "encoded": "TOZRNAMENT",
+   "mutated": "TOZRNAMENT"
+  },
+  {
+   "id": 2,
+   "title": "Zwischenzug",
+   "answer": "NOTATION",
+   "mechanism": "Nonogram",
+   "transform": "Atbash (A↔Z mirror)",
+   "encoded": "MLGFGRLM",
+   "mutated": "NOTUTION"
+  },
+  {
+   "id": 3,
+   "title": "Lucena Position",
+   "answer": "SKEWER",
+   "mechanism": "Punched tape",
+   "transform": "Atbash (A↔Z mirror)",
+   "encoded": "HPVDTI",
+   "mutated": "SKEWGR"
+  },
+  {
+   "id": 4,
+   "title": "Sealed Move",
+   "answer": "FRENCH",
+   "mechanism": "Scrambled sentence",
+   "transform": null,
+   "encoded": "FRENCZ",
+   "mutated": "FRENCZ"
+  },
+  {
+   "id": 5,
+   "title": "Poisoned Pawn",
+   "answer": "CATALAN",
+   "mechanism": "Letter sudoku",
+   "transform": null,
+   "encoded": "CWTALAN",
+   "mutated": "CWTALAN"
+  },
+  {
+   "id": 6,
+   "title": "Fianchetto",
+   "answer": "SCORESHEET",
+   "mechanism": "Book cipher",
+   "transform": null,
+   "encoded": "SCORESAEET",
+   "mutated": "SCORESAEET"
+  },
+  {
+   "id": 7,
+   "title": "Adjournment",
+   "answer": "SQUARE",
+   "mechanism": "Resistor colour code (written)",
+   "transform": "Atbash (A↔Z mirror)",
+   "encoded": "HJFMIV",
+   "mutated": "SQUNRE"
+  },
+  {
+   "id": 8,
+   "title": "Smothered Mate",
+   "answer": "SACRIFICE",
+   "mechanism": "Word search leftovers",
+   "transform": null,
+   "encoded": "SACGIFICE",
+   "mutated": "SACGIFICE"
+  }
+ ]
+}

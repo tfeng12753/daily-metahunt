@@ -1,0 +1,240 @@
+{
+ "date": "2026-10-13",
+ "difficulty": "hard",
+ "salt": "2026-10-13",
+ "number": 17,
+ "round": "Hut Eight",
+ "intro": "A drawer at Bletchley Park was found to have a false bottom. Beneath it: a stack of intercepts that were never logged, each one pinned to a different page of a crossword. The codebreakers who filed them were men of habits, and among their habits the strangest was how they signed their work—never a full name, never a seal, but a single stroke on the corner, the same stroke they used on the margins of their own notebooks, the same stroke they would sometimes press into the blotting paper left on the desk. One of them, they say, could read the whole room by that mark alone, and would nod to himself when the day’s last sheet bore the right one. The papers have sat there ever since, waiting for the hand that knows them.",
+ "echo": "One wonder of the ancient world stood astride the harbour at Rhodes; its namesake stood in Block H.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "The Crib",
+   "flavor": "Fenced in, and copied out in a hurry.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "NEENT AEIOD EOYXT DOEET FRHPE STNRF UNBDP CAYTG HSSTR ZJSEO RQCOE NOIOI UWEY",
+     "wide": true,
+     "rails": 4
+    }
+   ],
+   "hash": "2bdc7259566de56f20a898d36fdddd3e965fcae58cb337751651ea69ff9b2e86",
+   "partials": {},
+   "hints": [
+    "All the right letters are here, just out of order. Could they have been written along a path that goes up and down?"
+   ]
+  },
+  {
+   "id": 2,
+   "title": "Herivel Tip",
+   "flavor": "Three letters to a strip, and a note of how long each word was.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "CTO",
+      "EOT",
+      "FLE",
+      "HER",
+      "ISP",
+      "LEI",
+      "LTH",
+      "NOT",
+      "RAN",
+      "RBU",
+      "RFO",
+      "RTH",
+      "SHO",
+      "SRE",
+      "SWE",
+      "TDO",
+      "TEL",
+      "TIT",
+      "UGO",
+      "UZZ",
+      "WYO",
+      "YOU"
+     ],
+     "inline": true,
+     "tiles": true
+    },
+    {
+     "type": "prose",
+     "text": "Word lengths: (4 6 3 4 6 2 9 3 2 3 4 3 6 3 3 3 2)"
+    }
+   ],
+   "hash": "dc207ebfc15ee2c1b16c9c80c16f76fb063c818c18a2bb978d6313bdd0f587a6",
+   "partials": {},
+   "hints": [
+    "The strips are alphabetised, not in order. The word lengths say where the breaks fall. Which strip could start the sentence?"
+   ]
+  },
+  {
+   "id": 3,
+   "title": "Menu",
+   "flavor": "The operator never once took a breath. Whatever you find, it was said on the way out, not the way in.",
+   "blocks": [
+    {
+     "type": "morselines",
+     "items": [
+      {
+       "code": "..-.-..-.-.-...--.-",
+       "len": 9,
+       "index": 3
+      },
+      {
+       "code": ".--..-....---.-...---.-.-.-..",
+       "len": 9,
+       "index": 1
+      },
+      {
+       "code": "-....-...--.-......-...-.--",
+       "len": 9,
+       "index": 9
+      },
+      {
+       "code": ".--..--...-..-.-..--.--",
+       "len": 9,
+       "index": 5
+      },
+      {
+       "code": "-.-..-...-...",
+       "len": 4,
+       "index": 1
+      },
+      {
+       "code": ".-..---.-..-.--..",
+       "len": 6,
+       "index": 4
+      },
+      {
+       "code": "..-.-...-..-",
+       "len": 5,
+       "index": 3
+      }
+     ]
+    }
+   ],
+   "hash": "b3a4cc4a61deb9b5e04507d1d877f37e88e46bdde0ff8a24b09d53b389a12869",
+   "partials": {
+    "5c7720a9cdbf01be3cd016d66bd59c0052d3f6ea5c34d403f416fd589d216893": "You've decoded it, but it's not finished. One more layer."
+   },
+   "hints": [
+    "Two symbols, no spaces, and a letter count. Which old code is it, and which word from this round fits each line? And if what you get still isn't a word, reread the flavour text."
+   ]
+  },
+  {
+   "id": 4,
+   "title": "Kiss",
+   "flavor": "An inventory of the stores, in order of arrival. The tape was spooled back onto the wrong reel.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "manganese",
+      "phosphorus",
+      "titanium",
+      "silicon",
+      "phosphorus",
+      "lithium"
+     ]
+    }
+   ],
+   "hash": "02519af6730bc345a0b34220b4929cfe4fa1b4e3d28d12188724aa6279a26b50",
+   "partials": {
+    "0d4796c0b2ef4e8e26c7dddb733bed2696fbb80a8c7ac5ca8482c0793309780c": "You've decoded it, but it's not finished. One more layer."
+   },
+   "hints": [
+    "Everything here has a number in a famous chemical line-up. What number does each one have? And if what you get still isn't a word, reread the flavour text."
+   ]
+  },
+  {
+   "id": 5,
+   "title": "Cillies",
+   "flavor": "No duplicates anywhere. The tape was spooled back onto the wrong reel.",
+   "blocks": [
+    {
+     "type": "sudoku",
+     "size": 9,
+     "rows": [
+      ".X...Z...",
+      "Y..Q..BA.",
+      "..Q..A.Y.",
+      ".U.B...Z.",
+      "O.X..UA..",
+      "...A.T...",
+      ".......OX",
+      "ZY.......",
+      "..B.Z...."
+     ],
+     "alphabet": "ABOQTUXYZ",
+     "marks": [
+      [
+       2,
+       1
+      ],
+      [
+       6,
+       4
+      ],
+      [
+       3,
+       8
+      ],
+      [
+       0,
+       0
+      ],
+      [
+       7,
+       4
+      ]
+     ]
+    }
+   ],
+   "hash": "ac5e273e2b001977829f518cd39716f3a1ee2a51a442e5c1b4d9fa81f5e22d35",
+   "partials": {
+    "f5a09666d6a98ea60e69cbc932a51519b845bfa1d52acc642a0df482a94abba2": "You've decoded it, but it's not finished. One more layer."
+   },
+   "hints": [
+    "A familiar grid puzzle in unfamiliar clothes. Once it's done, are some squares more important than others? And if what you get still isn't a word, reread the flavour text."
+   ]
+  },
+  {
+   "id": 6,
+   "title": "Banburismus",
+   "flavor": "A negative, hung upside down, of something that only reads in threes. Whatever you find, it was said on the way out, not the way in.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "5′–CATTTCACTACTGGCCCCCTC–3′"
+    }
+   ],
+   "hash": "d9e9c9aff824ae9227f14604f01e96bfa5c456d13e0125533e439e4275e0268e",
+   "partials": {
+    "2a5f98792cb4e6691e5697e962b7fb946f709d0ac1714dde8eb80b5053f72d5a": "You've decoded it, but it's not finished. One more layer."
+   },
+   "hints": [
+    "This is DNA, but not the strand a cell would read. What is its partner, and which end does reading start from? And if what you get still isn't a word, reread the flavour text."
+   ]
+  }
+ ],
+ "meta": {
+  "title": "Meta: Hut Eight",
+  "flavor": "The last lock takes every signature at once.",
+  "blocks": [
+   {
+    "type": "mono",
+    "text": "HFOQMEZJ",
+    "big": true
+   }
+  ],
+  "length": 8,
+  "hash": "783465fb2a1210b0a61e948e42b715e1dde8e57803b9bfe30af9502d32240b16",
+  "hints": [
+   "Blaise de Vigenère needed a key to open this. Has every answer signed its work?"
+  ]
+ },
+ "described": true
+}

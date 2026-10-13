@@ -1,0 +1,55 @@
+{
+ "date": "2026-10-12",
+ "number": 16,
+ "difficulty": "medium",
+ "final": "CHECKMATE",
+ "metaType": "logbook",
+ "explain": "Each entry is (puzzle number, letter number): index into that puzzle's answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Lucena Position",
+   "answer": "SKEWER",
+   "mechanism": "Mirrored NATO",
+   "transform": null,
+   "encoded": "SKEWER",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Desperado",
+   "answer": "EXCHANGE",
+   "mechanism": "Word search leftovers",
+   "transform": null,
+   "encoded": "EXCHANGE",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Queen's Gambit",
+   "answer": "CATALAN",
+   "mechanism": "Book cipher",
+   "transform": null,
+   "encoded": "CATALAN",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Time Trouble",
+   "answer": "BLITZ",
+   "mechanism": "Rail fence (cluephrase)",
+   "transform": null,
+   "encoded": "BLITZ",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Opposition",
+   "answer": "TEMPO",
+   "mechanism": "Letter sudoku",
+   "transform": null,
+   "encoded": "TEMPO",
+   "mutated": null
+  }
+ ]
+}
