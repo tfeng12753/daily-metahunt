@@ -1,0 +1,64 @@
+{
+ "date": "2026-10-13",
+ "number": 17,
+ "difficulty": "hard",
+ "final": "COLOSSUS",
+ "metaType": "initials",
+ "explain": "The ciphertext is Vigenère-encrypted with the first letters of the feeder answers (in puzzle order) as the key.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "The Crib",
+   "answer": "FREQUENCY",
+   "mechanism": "Rail fence (cluephrase)",
+   "transform": null,
+   "encoded": "FREQUENCY",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Herivel Tip",
+   "answer": "REFLECTOR",
+   "mechanism": "Shredded sentence",
+   "transform": null,
+   "encoded": "REFLECTOR",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Menu",
+   "answer": "DECRYPT",
+   "mechanism": "Gapless Morse",
+   "transform": "Reversal",
+   "encoded": "TPYRCED",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Kiss",
+   "answer": "CONVOY",
+   "mechanism": "Atomic numbers",
+   "transform": "Reversal",
+   "encoded": "YOVNOC",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Cillies",
+   "answer": "UBOAT",
+   "mechanism": "Letter sudoku",
+   "transform": "Reversal",
+   "encoded": "TAOBU",
+   "mutated": null
+  },
+  {
+   "id": 6,
+   "title": "Banburismus",
+   "answer": "MESSAGE",
+   "mechanism": "Template strand",
+   "transform": "Reversal",
+   "encoded": "EGASSEM",
+   "mutated": null
+  }
+ ]
+}

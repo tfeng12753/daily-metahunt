@@ -1,0 +1,279 @@
+{
+ "date": "2026-10-14",
+ "difficulty": "easy",
+ "salt": "2026-10-14/easy",
+ "number": 18,
+ "round": "Dead Men's Chest",
+ "intro": "The commander died with the map in his head; luckily he had been a paranoid man, and the chart was sewn in pieces onto every hand. The bosun’s sea-chest holds not rum but seven foolscap folders, and each folder wears a brass tab with its title written on the slant so the title can be read while the drawer is pulled. The crew’s work is to pull the drawer and go through the folders as they lie, left to right by title, taking from each one letter the way a man takes a coin from a row. The point is not the letter alone but that no folder may be read out of its filed place.",
+ "echo": "Every year the Spanish fleet sailed home low in the water, heavy with silver.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Shiver Me Timbers",
+   "flavor": "Short, long, short: no spaces. Match each run to a word from the list, then count along it.",
+   "blocks": [
+    {
+     "type": "morselines",
+     "items": [
+      {
+       "code": "-...---.....--.",
+       "len": 5,
+       "index": 3
+      },
+      {
+       "code": ".-...--.-..-.-.",
+       "len": 7,
+       "index": 2
+      },
+      {
+       "code": ".-....--.",
+       "len": 4,
+       "index": 2
+      },
+      {
+       "code": ".-...---.-------.",
+       "len": 6,
+       "index": 1
+      }
+     ],
+     "bank": [
+      "BOSUN",
+      "HOOK",
+      "KEEL",
+      "LAGOON",
+      "LANTERN",
+      "LIME",
+      "PARROT",
+      "SPYGLASS"
+     ]
+    }
+   ],
+   "hash": "2e56a6497fe81e34c4f81108d0db1a6c0ef88b2268831a8f76d819aa372b13f1",
+   "partials": {},
+   "hints": [
+    "Each line is a word from this round's theme in Morse code with the gaps between letters lost. Work out which word fits the dots, dashes and letter count, then take the letter at the position shown.",
+    "To check you're on track: the answer begins with S."
+   ],
+   "technique": "Gapless Morse",
+   "length": 4
+  },
+  {
+   "id": 2,
+   "title": "Davy Jones",
+   "flavor": "Somebody shook the sentence and all the letters fell to the bottom of their columns.",
+   "blocks": [
+    {
+     "type": "dropquote",
+     "cols": [
+      "BEET",
+      "EHN",
+      "EFOT",
+      "OP",
+      "DELR",
+      "AEER",
+      "AAS",
+      "DTTT",
+      "HO",
+      "ERTW",
+      "AH",
+      "ILST",
+      "INY",
+      "GHNP",
+      "EEU",
+      "DLT",
+      "HLW"
+     ],
+     "mask": [
+      "...#....#.....#..",
+      ".#........#.....#",
+      "......#...#....#.",
+      "...#....#...#...."
+     ]
+    }
+   ],
+   "hash": "674eb0664921c9f869e59403180e2a303a22b74f2157f565635fbbc6671135e4",
+   "partials": {},
+   "hints": [
+    "A drop quote: each column's letters (shown alphabetised above it) drop into that column of the grid below. Black squares are spaces; words can wrap between rows. The sentence tells you the answer.",
+    "To check you're on track: the answer begins with H."
+   ],
+   "technique": "Drop quote",
+   "length": 4
+  },
+  {
+   "id": 3,
+   "title": "The Brig",
+   "flavor": "The note aboard the ship was written round and round the page, from the edge towards the middle.",
+   "blocks": [
+    {
+     "type": "lettergrid",
+     "rows": [
+      "TPEKSAHE",
+      "IMITGNOG",
+      "TESITELA",
+      "SAB··RYP",
+      "SNA·LCRS",
+      "EDRREEEI",
+      "CTHATSVH",
+      "RETFORAT"
+     ]
+    }
+   ],
+   "hash": "d0eea51aab3e634fd8c6819de71a32a00969b976a9904aa6a5c0f9a140f680fc",
+   "partials": {},
+   "hints": [
+    "A sentence was written into the grid along a spiral, starting in one corner and winding inward. Find the corner and the direction, read the sentence (dots are padding), and it tells you the answer.",
+    "To check you're on track: the answer begins with B."
+   ],
+   "technique": "Spiral route",
+   "length": 6
+  },
+  {
+   "id": 4,
+   "title": "Walk The Plank",
+   "flavor": "The typesetter shook each word like a box of tiles, one word at a time.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "UHSOLD",
+      "STHI",
+      "OETN",
+      "ALFL",
+      "ONIT",
+      "TEH",
+      "NWGOR",
+      "NHSDA",
+      "PSELAE",
+      "EOTRFG",
+      "HET",
+      "RODW",
+      "LOUOBNDO"
+     ],
+     "inline": true,
+     "tray": "word"
+    }
+   ],
+   "hash": "9796e5d01f20f0026e5198e96e01023047794e86ed9c334cfc338d0fe8d29b6e",
+   "partials": {},
+   "hints": [
+    "Each word of a sentence has had its letters shuffled. Unscramble them; the sentence tells you the answer.",
+    "To check you're on track: the answer begins with D."
+   ],
+   "technique": "Scrambled sentence",
+   "length": 8
+  },
+  {
+   "id": 5,
+   "title": "Articles",
+   "flavor": "Not a single letter on the page, and yet it says something.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "⚑♣✚ ✈✚♥♥♦▼✚ □♦♥ ♣✿△△✚▲ ✿▲ ♠◇♦✿▲ ♥✿▼♣⚑ ♦◇◇ ♦◇●▲▼ ♦▲△ ✿⚑ ♥✿✈♠◇♫ ♥♦♫♥ ▼☾▲♠●□△✚◆",
+     "wide": true,
+     "solver": "substitution"
+    }
+   ],
+   "hash": "83310c26fc430f026ea365d2bdeee5899ca46d2a0eb242fd8251db37d16d0f74",
+   "partials": {},
+   "hints": [
+    "Each symbol stands for one letter (a simple substitution); word breaks are kept. Solve the sentence; it tells you the answer.",
+    "To check you're on track: the answer begins with G."
+   ],
+   "technique": "Symbol cryptogram",
+   "length": 9
+  },
+  {
+   "id": 6,
+   "title": "Black Spot",
+   "flavor": "Every flag on this line has a meaning on its own. Together, they have one more.",
+   "blocks": [
+    {
+     "type": "flags",
+     "items": [
+      "M",
+      "A",
+      "S",
+      "T"
+     ]
+    }
+   ],
+   "hash": "6660d77989d2bf76aa5eefe23465426aeddd264deccf91bb72c60a8987178596",
+   "partials": {},
+   "hints": [
+    "International maritime signal flags, one letter each.",
+    "To check you're on track: the answer begins with M."
+   ],
+   "technique": "Maritime signal flags",
+   "length": 4
+  },
+  {
+   "id": 7,
+   "title": "X Marks The Spot",
+   "flavor": "Fences and corners. Some of them have an animal inside.",
+   "blocks": [
+    {
+     "type": "pigpen",
+     "items": [
+      {
+       "g": "hash",
+       "p": 2,
+       "dot": false
+      },
+      {
+       "g": "hash",
+       "p": 0,
+       "dot": false
+      },
+      {
+       "g": "hash",
+       "p": 6,
+       "dot": true
+      },
+      {
+       "g": "x",
+       "p": 1,
+       "dot": false
+      },
+      {
+       "g": "hash",
+       "p": 0,
+       "dot": false
+      },
+      {
+       "g": "hash",
+       "p": 8,
+       "dot": false
+      },
+      {
+       "g": "hash",
+       "p": 4,
+       "dot": true
+      }
+     ]
+    }
+   ],
+   "hash": "59584d261ab1a83d54dfcd109091704e6263b6896922d74f0f6d4a0e9e07fe68",
+   "partials": {},
+   "hints": [
+    "Pigpen (Freemason's) cipher: A–I in a # grid, J–R the same with dots, S–V in an X, W–Z the X with dots.",
+    "To check you're on track: the answer begins with C."
+   ],
+   "technique": "Pigpen cipher",
+   "length": 7
+  }
+ ],
+ "meta": {
+  "title": "Meta: Dead Men's Chest",
+  "flavor": "Shelved by title, and read on the slant.",
+  "blocks": [],
+  "length": 7,
+  "hash": "5b1c449bf284d547c9999dde8331d5c8c7048f7ec4a5d5caaf3f91e751899124",
+  "hints": [
+   "Order the puzzles alphabetically by title; take the k-th letter of the k-th answer.",
+   "To check you're on track: the final answer begins with G."
+  ]
+ },
+ "described": true
+}

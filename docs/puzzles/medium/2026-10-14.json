@@ -1,0 +1,193 @@
+{
+ "date": "2026-10-14",
+ "difficulty": "medium",
+ "salt": "2026-10-14/medium",
+ "number": 18,
+ "round": "Dead Men's Chest",
+ "intro": "The captain died with the map in his head, and because he trusted ink more than paper the sea-charts were divided among the crew as tattoos. The bosun's mate swears the Black Spot was already a name on the muster before he ever felt the needle; the lookout from the crow's nest still cannot look down at a chart without seeing the rigging. In the captain's sea-chest the purser found a voyage book ruled for this trip: every line carries two small figures, the owner in the captain's numbering and the number of the mark upon him. The crew are not talking about the brig or shore leave; they are talking about whether the ink still means anything now the captain's breath has gone over the side.",
+ "echo": "A short, heavy blade: far better below decks than any rapier.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "The Brig",
+   "flavor": "Heard over the radio from the other side of the glass.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "November",
+      "Foxtrot",
+      "Hotel",
+      "Papa",
+      "Victor",
+      "Golf"
+     ]
+    }
+   ],
+   "hash": "2e4f088509c7e1753ddc83ff2adc491cb0b13fa6a99d3484d34f3b2d40dc9ee6",
+   "partials": {},
+   "hints": [
+    "Each word stands for a letter, the way radio operators spell. Do those letters read? If not, try the alphabet backwards.",
+    "Take the NATO call signs' initials, then swap each letter for its mirror: A for Z, B for Y."
+   ],
+   "length": 6
+  },
+  {
+   "id": 2,
+   "title": "Crow's Nest",
+   "flavor": "Nothing is missing. Nothing is where it was.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "LWEL",
+      "NEOD",
+      "OUY",
+      "YAM",
+      "NWO",
+      "EWTIR",
+      "ONDW",
+      "ETH",
+      "WRDO",
+      "ORAPRT",
+      "DAN",
+      "MVOE",
+      "UYILQET",
+      "NO",
+      "OT",
+      "HET",
+      "NXTE",
+      "ENO"
+     ],
+     "inline": true,
+     "tray": "word"
+    }
+   ],
+   "hash": "89001e3d914e2765d9ca8bf479f6a3a1a350006bf429951f258d3bdb6cd034f8",
+   "partials": {},
+   "hints": [
+    "Each word is complete but shuffled. Start with the shortest ones: does a sentence appear?",
+    "Unscramble each word where it stands; the sentence tells you what to submit."
+   ],
+   "length": 6
+  },
+  {
+   "id": 3,
+   "title": "Black Spot",
+   "flavor": "A voicemail with no voice.",
+   "blocks": [
+    {
+     "type": "audio",
+     "kind": "dtmf",
+     "groups": [
+      "7777",
+      "55",
+      "88",
+      "555",
+      "555"
+     ]
+    }
+   ],
+   "hash": "de8e228524606a14cd284771d7adf65994963eac16260c10f5b17f17cd02a1f5",
+   "partials": {},
+   "hints": [
+    "Two frequencies at once is the sound of a phone key being pressed. What letters did those keys carry?",
+    "Old phone keypads: find each key, then press it the number of times shown to move along its letters."
+   ],
+   "length": 5
+  },
+  {
+   "id": 4,
+   "title": "Keelhauled",
+   "flavor": "Each column remembers what it held, but not in what order.",
+   "blocks": [
+    {
+     "type": "dropquote",
+     "cols": [
+      "ENORW",
+      "DEMOV",
+      "ADELNT",
+      "EHLOOY",
+      "QUW",
+      "DLNNTU",
+      "HILOO",
+      "EENTW",
+      "AEHT",
+      "ELNNW",
+      "DERYY",
+      "IOWX",
+      "MOOTTU"
+     ],
+     "mask": [
+      "....#....#...",
+      "#...#...#....",
+      ".#....#...#..",
+      "..#....#...#.",
+      "...#.......#.",
+      ".#..#...#....",
+      "#...#########"
+     ]
+    }
+   ],
+   "hash": "8823889b68a68e0ada421f2a897510253d014b23c1e2a93b47c7c6f80fe9245a",
+   "partials": {},
+   "hints": [
+    "Black squares are spaces. Which two- and three-letter words fit, using only the letters each column allows?",
+    "Each column's letters drop into that column of the grid; cross them off as you place them. The sentence tells you what to submit."
+   ],
+   "length": 4
+  },
+  {
+   "id": 5,
+   "title": "Shore Leave",
+   "flavor": "Each entry picked up a hitchhiker on the way.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "EOUPGDRWNC",
+      "SRCUVYH",
+      "LEBODUNOO",
+      "IEGSBL",
+      "SALNDTI"
+     ],
+     "ordered": true,
+     "mono": true
+    }
+   ],
+   "hash": "fd4b37a18c394c1cbaf3c3aea6ed6e61004c609b0764fa1a4f90423ed8d0fbee",
+   "partials": {},
+   "hints": [
+    "Each jumble is almost a word from this round, but with a letter to spare. Which letter, every time?",
+    "Rearrange each into a theme word; the spare letters, in order, are the answer."
+   ],
+   "length": 5
+  }
+ ],
+ "meta": {
+  "title": "Meta: Dead Men's Chest",
+  "flavor": "The watch-keeper wrote down nothing but the day and the bell.",
+  "blocks": [
+   {
+    "type": "list",
+    "items": [
+     "Day 5, 1 bells",
+     "Day 3, 3 bells",
+     "Day 2, 6 bells",
+     "Day 4, 4 bells",
+     "Day 2, 2 bells",
+     "Day 1, 3 bells",
+     "Day 3, 1 bells"
+    ],
+    "ordered": true
+   }
+  ],
+  "length": 7,
+  "hash": "8ccf644fcb1daedb98d0268a852bbad51883f2a9b06951b433f96cb474d621e2",
+  "hints": [
+   "Every entry has two numbers. What in this round is numbered, and what could the second number count?",
+   "The first number picks a puzzle; the second picks a letter inside its answer."
+  ]
+ },
+ "described": true
+}

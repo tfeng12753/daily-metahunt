@@ -1,0 +1,243 @@
+{
+ "date": "2026-10-14",
+ "difficulty": "hard",
+ "salt": "2026-10-14",
+ "number": 18,
+ "round": "Dead Men's Chest",
+ "intro": "The captain died with the map in his head, and the crew were left with a dead man's silence and a living puzzle. Lucky for them he was a paranoid man, and he had the chart tattooed, in pieces, on each of them, the ink raised like sea-itches under salt and grog. The bosun keeps the old ledger below decks, the one the captain trusted more than his eyes; every entry is two strokes of ink, a day and a bell, and the watch-keeper adds nothing else. The mates stand in line for the tattoos to be read, but the captain never taught them how the pieces fit, only that the sea remembers what the skin forgets. Somewhere between the groans of the timbers and the smell of tar, the answer waits for a crew that can finish the captain's habit.",
+ "echo": "The first of them smoked meat on wooden frames in Hispaniola.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Black Spot",
+   "flavor": "Everything that belongs is in there somewhere. Some things don't belong.",
+   "blocks": [
+    {
+     "type": "caption",
+     "text": "Somewhere in here: things to do with the ship."
+    },
+    {
+     "type": "board",
+     "rows": [
+      "KCOMMAHKB",
+      "ENOOGALRI",
+      "MBOSUNKAL",
+      "ISKULLOKL",
+      "LDECKIOEE",
+      "KTSAMAHNR",
+      "GECHESTER",
+      "EYEPATCHA",
+      "SSALGYPSB"
+     ],
+     "plain": true,
+     "words": [
+      "BARREL",
+      "BOSUN",
+      "CHEST",
+      "DECK",
+      "EYEPATCH",
+      "HAMMOCK",
+      "HOOK",
+      "KEEL",
+      "KRAKEN",
+      "LAGOON",
+      "LIME",
+      "MAST",
+      "SAIL",
+      "SKULL",
+      "SPYGLASS"
+     ]
+    }
+   ],
+   "hash": "084e739f55269ebcd8417bc8678f6b0e4d1f9a9734b1fbd61e296a27c68867d1",
+   "partials": {},
+   "hints": [
+    "Once every theme word is found, is anything left unclaimed? Read it in order.",
+    "The hidden words are: BARREL, BOSUN, CHEST, DECK, EYEPATCH, HAMMOCK, HOOK, KEEL, KRAKEN, LAGOON, LIME, MAST, SAIL, SKULL, SPYGLASS."
+   ]
+  },
+  {
+   "id": 2,
+   "title": "The Brig",
+   "flavor": "Walk the fence; don't read it.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "YUASE FRHSU ZESAN NUDNT ELHOH RHWOG TTORN WROTI PZLIC NOBTO OTLTE TESOY UOI",
+     "wide": true,
+     "rails": 2
+    }
+   ],
+   "hash": "e68bbc847202ed20ac05a60b1288352b98a607f08551acc32f44db39df08d101",
+   "partials": {},
+   "hints": [
+    "All the right letters are here, just out of order. Could they have been written along a path that goes up and down?"
+   ]
+  },
+  {
+   "id": 3,
+   "title": "Letter Of Marque",
+   "flavor": "Confetti, alphabetised.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "EOT",
+      "HER",
+      "ISP",
+      "LEI",
+      "LTH",
+      "NOT",
+      "RAN",
+      "RFO",
+      "RTH",
+      "SHO",
+      "SSC",
+      "SWE",
+      "TDO",
+      "TEL",
+      "TIT",
+      "UGO",
+      "URV",
+      "UZZ",
+      "WYO",
+      "YBU",
+      "YOU"
+     ],
+     "inline": true,
+     "tiles": true
+    },
+    {
+     "type": "prose",
+     "text": "Word lengths: (4 6 3 4 6 2 6 3 2 3 4 3 6 3 3 3 2)"
+    }
+   ],
+   "hash": "99c87c13cead027cd6460ed28f22513b18610ee23b18cd38517a7e881a6625ef",
+   "partials": {},
+   "hints": [
+    "The strips are alphabetised, not in order. The word lengths say where the breaks fall. Which strip could start the sentence?"
+   ]
+  },
+  {
+   "id": 4,
+   "title": "Walk The Plank",
+   "flavor": "The host was particular about the seating, and more particular still about what each chair was worth.",
+   "blocks": [
+    {
+     "type": "seating",
+     "seats": 6,
+     "names": [
+      "Ivanka",
+      "Edmund",
+      "Isaac",
+      "Orlando",
+      "Miranda",
+      "Yolanda"
+     ],
+     "clues": [
+      "Miranda sits somewhere to the left of Edmund.",
+      "Edmund and Miranda are not neighbours.",
+      "Exactly one person sits between Isaac and Miranda.",
+      "Isaac is not in seat 4.",
+      "Isaac sits somewhere between Ivanka and Miranda.",
+      "Miranda sits somewhere between Ivanka and Yolanda."
+     ],
+     "logic": [
+      [
+       "left_of",
+       "MIRANDA",
+       "EDMUND"
+      ],
+      [
+       "apart",
+       "EDMUND",
+       "MIRANDA"
+      ],
+      [
+       "gap",
+       "ISAAC",
+       "MIRANDA",
+       1
+      ],
+      [
+       "not_at",
+       "ISAAC",
+       4
+      ],
+      [
+       "between",
+       "IVANKA",
+       "ISAAC",
+       "MIRANDA"
+      ],
+      [
+       "between",
+       "IVANKA",
+       "MIRANDA",
+       "YOLANDA"
+      ]
+     ]
+    }
+   ],
+   "hash": "f6fb40ce6cebd74c7bbcaf074a03064e55bbd74120909a057d96890fc7490058",
+   "partials": {},
+   "hints": [
+    "Only one arrangement satisfies every clue; start from whoever has an end seat or a fixed neighbour. Once they're seated, why might the seat numbers matter?"
+   ]
+  },
+  {
+   "id": 5,
+   "title": "Dead Reckoning",
+   "flavor": "Each entry picked up a hitchhiker on the way. Something in here has been through the looking glass.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "AGKSYPLSS",
+      "PNGUWOVRDE",
+      "GTROUTAT",
+      "KNLPOA",
+      "LNRVETAN",
+      "TITANPCA"
+     ],
+     "ordered": true,
+     "mono": true
+    }
+   ],
+   "hash": "d375718ce0c9edfc58f9b4930ba7639953c8a275fb4af3a9b4e110de6c3b0bab",
+   "partials": {
+    "fc1af72ad0b84d54a03732dc574249ce0fe984291e9b55a29e235b2939869f6b": "You've decoded it, but it's not finished. One more layer."
+   },
+   "hints": [
+    "Each jumble is almost a word from this round, but with a letter to spare. Which letter, every time? And if what you get still isn't a word, reread the flavour text."
+   ]
+  }
+ ],
+ "meta": {
+  "title": "Meta: Dead Men's Chest",
+  "flavor": "Someone underlined a few verses.",
+  "blocks": [
+   {
+    "type": "list",
+    "items": [
+     "Ch. 1 v. 1",
+     "Ch. 3 v. 3",
+     "Ch. 2 v. 1",
+     "Ch. 3 v. 2",
+     "Ch. 4 v. 4",
+     "Ch. 4 v. 5",
+     "Ch. 5 v. 5",
+     "Ch. 5 v. 5",
+     "Ch. 3 v. 4"
+    ],
+    "ordered": true
+   }
+  ],
+  "length": 9,
+  "hash": "3b5b064dcd00e13f7f07747623d2abe4a1ee5d3d88a4b592a055601673f24055",
+  "hints": [
+   "Every entry has two numbers. What in this round is numbered, and what could the second number count?"
+  ]
+ },
+ "described": true
+}

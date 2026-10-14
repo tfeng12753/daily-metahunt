@@ -1,0 +1,64 @@
+{
+ "date": "2026-10-13",
+ "number": 17,
+ "difficulty": "easy",
+ "final": "CIPHER",
+ "metaType": "fitin",
+ "explain": "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "The Crib",
+   "answer": "DECRYPT",
+   "mechanism": "Scrambled sentence",
+   "transform": null,
+   "encoded": "DECRYPT",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Room Forty",
+   "answer": "WHEEL",
+   "mechanism": "Caesar shift",
+   "transform": null,
+   "encoded": "WHEEL",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Depth",
+   "answer": "RIBBON",
+   "mechanism": "Resistor colour code (written)",
+   "transform": null,
+   "encoded": "RIBBON",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Rodding",
+   "answer": "DISPATCH",
+   "mechanism": "Drop quote",
+   "transform": null,
+   "encoded": "DISPATCH",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Weather Report",
+   "answer": "FREQUENCY",
+   "mechanism": "Punched tape",
+   "transform": null,
+   "encoded": "FREQUENCY",
+   "mutated": null
+  },
+  {
+   "id": 6,
+   "title": "Herivel Tip",
+   "answer": "TELEPRINTER",
+   "mechanism": "Missing letters",
+   "transform": null,
+   "encoded": "TELEPRINTER",
+   "mutated": null
+  }
+ ]
+}

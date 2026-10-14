@@ -1,0 +1,64 @@
+{
+ "date": "2026-10-13",
+ "number": 17,
+ "difficulty": "medium",
+ "final": "ENIGMA",
+ "metaType": "fitin",
+ "explain": "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Kiss",
+   "answer": "MESSAGE",
+   "mechanism": "Anagrams with an extra letter",
+   "transform": null,
+   "encoded": "MESSAGE",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Depth",
+   "answer": "UBOAT",
+   "mechanism": "Drop quote",
+   "transform": null,
+   "encoded": "UBOAT",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Herivel Tip",
+   "answer": "TELEGRAM",
+   "mechanism": "Cryptogram (cluephrase)",
+   "transform": null,
+   "encoded": "TELEGRAM",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Cillies",
+   "answer": "PUNCHCARD",
+   "mechanism": "Book cipher",
+   "transform": null,
+   "encoded": "PUNCHCARD",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Weather Report",
+   "answer": "TELEPRINTER",
+   "mechanism": "Shredded sentence",
+   "transform": null,
+   "encoded": "TELEPRINTER",
+   "mutated": null
+  },
+  {
+   "id": 6,
+   "title": "The Crib",
+   "answer": "PIGEON",
+   "mechanism": "Seating plan (logic)",
+   "transform": null,
+   "encoded": "PIGEON",
+   "mutated": null
+  }
+ ]
+}
