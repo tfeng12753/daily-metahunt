@@ -1,0 +1,200 @@
+{
+ "date": "2026-10-15",
+ "difficulty": "hard",
+ "salt": "2026-10-15",
+ "number": 19,
+ "round": "The Inside Job",
+ "intro": "The plan was perfect, which is why nobody wrote it down. Each member of the crew hid their part of it somewhere only the others would think to look, and the house has never once suspected a thing. The doorman keeps a brass tally-box behind the pit, dented from years of being slammed and opened, and nobody has ever seen him shut it without a full set of thumbprints on the cover. Every shift, each of us presses a print into its face before walking in, and it stays sealed until all the prints are there together.",
+ "echo": "One of the crew sands their fingertips before every job, to feel the tumblers fall.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Getaway Driver",
+   "flavor": "No duplicates anywhere. Whatever you find, it was said on the way out, not the way in.",
+   "blocks": [
+    {
+     "type": "sudoku",
+     "size": 9,
+     "rows": [
+      ".....O.V.",
+      "..L..TU..",
+      "R...A...B",
+      "..BO.UT..",
+      ".A....VO.",
+      ".T..R....",
+      "..RE..B..",
+      ".........",
+      "...VUA.E."
+     ],
+     "alphabet": "ABELORTUV",
+     "marks": [
+      [
+       7,
+       5
+      ],
+      [
+       5,
+       0
+      ],
+      [
+       0,
+       8
+      ],
+      [
+       0,
+       6
+      ],
+      [
+       3,
+       4
+      ],
+      [
+       4,
+       2
+      ],
+      [
+       6,
+       5
+      ],
+      [
+       1,
+       4
+      ]
+     ]
+    }
+   ],
+   "hash": "ebcfcc6c84f9209acfdcd71481184c51bff935e20eee330310ecaf3dfe64ca24",
+   "partials": {
+    "1879a07ca5edc73100d97e6742225e4a5e7b9b834cf00a03edc9993c6bf536b5": "You've decoded it, but it's not finished. One more layer."
+   },
+   "hints": [
+    "A familiar grid puzzle in unfamiliar clothes. Once it's done, are some squares more important than others? And if what you get still isn't a word, reread the flavour text."
+   ]
+  },
+  {
+   "id": 2,
+   "title": "Shift Change",
+   "flavor": "Some of these are far too big to be letters.",
+   "blocks": [
+    {
+     "type": "numbers",
+     "items": [
+      5,
+      89,
+      6,
+      18,
+      85
+     ],
+     "tray": 2
+    }
+   ],
+   "hash": "418fb8b283756008d6ef604abffb21e5ab8e0119f33842da3a101aad3989ade7",
+   "partials": {},
+   "hints": [
+    "Several of these numbers are bigger than 26, so they can't be letter positions. What else has a number that high?"
+   ]
+  },
+  {
+   "id": 3,
+   "title": "Casing The Joint",
+   "flavor": "An accountant who changes currency every line, but never the amount. Whoever copied it out was standing in front of a mirror.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "13₁₂",
+      "20₆",
+      "15₇",
+      "100₄",
+      "10₁₂",
+      "110₂",
+      "21₃"
+     ],
+     "inline": true
+    }
+   ],
+   "hash": "e09b96a3fc1cc1970b5402df263ebbccaec15d4e858575250b2101e5130edf42",
+   "partials": {
+    "1cd8056c29a63b7a1c3e544881d483004ad06fce1ddd6ab0be46ad19a6d4ea7c": "You've decoded it, but it's not finished. One more layer."
+   },
+   "hints": [
+    "The subscript is a base. Once everything is in ordinary decimal, what range are the numbers in? And if what you get still isn't a word, reread the flavour text."
+   ]
+  },
+  {
+   "id": 4,
+   "title": "Cold Deck",
+   "flavor": "Everything that belongs is in there somewhere. Some things don't belong.",
+   "blocks": [
+    {
+     "type": "caption",
+     "text": "Somewhere in here: things to do with the casino."
+    },
+    {
+     "type": "board",
+     "rows": [
+      "CHDRILL",
+      "RABWORC",
+      "DRACYEK",
+      "CAMERAE",
+      "DEALERF",
+      "IGOLDPA",
+      "DECOYSS"
+     ],
+     "plain": true,
+     "words": [
+      "CAMERA",
+      "CROWBAR",
+      "DEALER",
+      "DECOY",
+      "DRILL",
+      "GOLD",
+      "KEYCARD",
+      "SAFE"
+     ]
+    }
+   ],
+   "hash": "aa9925d0323b47aafec348acd6b9063c132260c82aa2f1e89c9383e568e9e28a",
+   "partials": {},
+   "hints": [
+    "Once every theme word is found, is anything left unclaimed? Read it in order.",
+    "The hidden words are: CAMERA, CROWBAR, DEALER, DECOY, DRILL, GOLD, KEYCARD, SAFE."
+   ]
+  },
+  {
+   "id": 5,
+   "title": "The Vault Door",
+   "flavor": "The clerk ran out of alphabet and kept going anyway.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "□♦★★ ♥△○♦ ◆△☁ ♫▲◆ ○△□ □♣☀▼♦ ♥△□○ ▼☆♦ □△♣♥ ✚☆☁●●★♦ ▲○♥ ♫△☂♦ ✈☁☀♦▼★◆ △○ ▼△ ▼☆♦ ○♦☾▼ △○♦",
+     "wide": true,
+     "solver": "substitution"
+    }
+   ],
+   "hash": "8fc16fafdd1db7a6a67de2b0b9fb5e3b81454bd698503b48d232c64b7a86c0e4",
+   "partials": {},
+   "hints": [
+    "Which short words are most common in English? Could any of them be hiding here?"
+   ]
+  }
+ ],
+ "meta": {
+  "title": "Meta: The Inside Job",
+  "flavor": "Every report is signed with a single initial. Blaise would know what to do with them.",
+  "blocks": [
+   {
+    "type": "mono",
+    "text": "WBQGUVBNMWV",
+    "big": true
+   }
+  ],
+  "length": 11,
+  "hash": "d3ab88555942d2e17b2da42018d49b770afdcf15da19ccaa280e23261b700160",
+  "hints": [
+   "Blaise de Vigenère needed a key to open this. Has every answer signed its work?"
+  ]
+ },
+ "described": true
+}

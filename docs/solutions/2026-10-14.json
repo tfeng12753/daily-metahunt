@@ -1,0 +1,55 @@
+{
+ "date": "2026-10-14",
+ "number": 18,
+ "difficulty": "hard",
+ "final": "BUCCANEER",
+ "metaType": "logbook",
+ "explain": "Each entry is (puzzle number, letter number): index into that puzzle's answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Black Spot",
+   "answer": "BILGE",
+   "mechanism": "Word search leftovers",
+   "transform": null,
+   "encoded": "BILGE",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "The Brig",
+   "answer": "CANNON",
+   "mechanism": "Rail fence (cluephrase)",
+   "transform": null,
+   "encoded": "CANNON",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Letter Of Marque",
+   "answer": "SCURVY",
+   "mechanism": "Shredded sentence",
+   "transform": null,
+   "encoded": "SCURVY",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Walk The Plank",
+   "answer": "ISLAND",
+   "mechanism": "Seating plan (logic)",
+   "transform": null,
+   "encoded": "ISLAND",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Dead Reckoning",
+   "answer": "PEGLEG",
+   "mechanism": "Anagrams with an extra letter",
+   "transform": "Atbash (A↔Z mirror)",
+   "encoded": "KVTOVT",
+   "mutated": null
+  }
+ ]
+}

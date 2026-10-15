@@ -1,0 +1,331 @@
+{
+ "date": "2026-10-15",
+ "difficulty": "medium",
+ "salt": "2026-10-15/medium",
+ "number": 19,
+ "round": "The Inside Job",
+ "intro": "The plan was perfect, which is why nobody wrote it down. Instead, each member of the crew hid their part of it somewhere only the others would think to look: behind the velvet curtain of the staff changing rooms, in the pigeonhole rack that has hung there since the casino was a railway hotel. The holes are not uniform; the tall narrow ones were made for race cards, the shallow wide ones for betting slips, and the brass numbers are worn to the shape of fingernails rather than to their figures. Whoever collects the slips in the small hours never sorts them by name or by table, only by which hole they fit without bending. The talc-dusted air smells of old tickets and hair oil, and the duty man reads the rack the way a reader reads a sentence he has already heard.",
+ "echo": "The driver has been idling around the corner since before any of this began.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Getaway Driver",
+   "flavor": "An inventory, tangled.",
+   "blocks": [
+    {
+     "type": "caption",
+     "text": "Hidden in the grid: 9 words to do with the casino."
+    },
+    {
+     "type": "board",
+     "rows": [
+      "GTKULLS",
+      "AISDLAP",
+      "YMALISI",
+      "OEMOREH",
+      "CRRGDRC",
+      "ESEVOLG",
+      "DDPOKER"
+     ],
+     "plain": true,
+     "words": [
+      "CHIPS",
+      "DECOY",
+      "DRILL",
+      "GLOVES",
+      "GOLD",
+      "LASER",
+      "MASK",
+      "POKER",
+      "TIMER"
+     ]
+    }
+   ],
+   "hash": "ccfc62a3584db39ad1387f579733d39d4a3c8261d13e9f1610101f75ed456e89",
+   "partials": {},
+   "hints": [
+    "Once every theme word is found, is anything left unclaimed? Read it in order.",
+    "Find the theme words; the letters no word uses, read row by row, are the answer.",
+    "The hidden words are: CHIPS, DECOY, DRILL, GLOVES, GOLD, LASER, MASK, POKER, TIMER."
+   ],
+   "length": 5
+  },
+  {
+   "id": 2,
+   "title": "House Edge",
+   "flavor": "Some letters stand tall; most stay low. Alpha and Omega traded places before this was written down.",
+   "blocks": [
+    {
+     "type": "prose",
+     "text": "glOVES GloVEs DisGuIsE."
+    }
+   ],
+   "hash": "9ae8846811b1a21f83eb8b50ff2a1a70fc15f29b949d1d3a2297f031aa3d18be",
+   "partials": {
+    "1909645dd6a73b586afbfb3fb62e364f7f0605d3994b931b73d317e008bf1153": "You've decoded it, but it's not finished. One more layer."
+   },
+   "hints": [
+    "Two kinds of letter, big and small. How many of them would you need to spell twenty-six different things? And if what you get still isn't a word, reread the flavour text.",
+    "Baconian cipher: groups of five, lowercase = a, uppercase = b; aaaaa is A. Then one more layer: Turn the alphabet end to end: A for Z, B for Y."
+   ],
+   "length": 4
+  },
+  {
+   "id": 3,
+   "title": "The Vault Door",
+   "flavor": "Same quantities, different fingers.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "2₇",
+      "22₈",
+      "1001₂",
+      "5₁₂",
+      "20₃",
+      "3₁₂",
+      "1₅",
+      "17₁₂",
+      "5₆"
+     ],
+     "inline": true
+    }
+   ],
+   "hash": "c5c86d5063c352ba918c163acdd16b299144b8392a8a6dbffcf3f029394401d8",
+   "partials": {},
+   "hints": [
+    "The subscript is a base. Once everything is in ordinary decimal, what range are the numbers in?",
+    "Convert each one to base ten; each is a letter position (A = 1)."
+   ],
+   "length": 9
+  },
+  {
+   "id": 4,
+   "title": "The Mark",
+   "flavor": "Only the first two stripes on each were ever meant to be read.",
+   "blocks": [
+    {
+     "type": "resistors",
+     "items": [
+      [
+       "black",
+       "orange",
+       "black",
+       "gold"
+      ],
+      [
+       "brown",
+       "grey",
+       "black",
+       "gold"
+      ],
+      [
+       "brown",
+       "green",
+       "black",
+       "gold"
+      ],
+      [
+       "red",
+       "orange",
+       "black",
+       "gold"
+      ],
+      [
+       "black",
+       "red",
+       "black",
+       "gold"
+      ],
+      [
+       "black",
+       "brown",
+       "black",
+       "gold"
+      ],
+      [
+       "brown",
+       "grey",
+       "black",
+       "gold"
+      ]
+     ]
+    }
+   ],
+   "hash": "24ea20b33aad9fb8283fe22d05b7102c45e1322330a52de712e93e28e046b771",
+   "partials": {},
+   "hints": [
+    "Engineers read stripes like these as numbers. What number does each part give, and what is a number up to 26?",
+    "Resistor colour code: the first two bands are two digits; that number is a letter position."
+   ],
+   "length": 7
+  },
+  {
+   "id": 5,
+   "title": "Double Cross",
+   "flavor": "No duplicates anywhere.",
+   "blocks": [
+    {
+     "type": "sudoku",
+     "size": 9,
+     "rows": [
+      "...TV..I.",
+      "......O..",
+      ".O.AS...L",
+      "LT.......",
+      ".S.O.T...",
+      "....L.I.V",
+      "A...TN...",
+      "..N.....T",
+      "..IV...AN"
+     ],
+     "alphabet": "AEILNOSTV",
+     "marks": [
+      [
+       4,
+       2
+      ],
+      [
+       8,
+       5
+      ],
+      [
+       2,
+       7
+      ],
+      [
+       8,
+       0
+      ],
+      [
+       4,
+       0
+      ],
+      [
+       7,
+       6
+      ],
+      [
+       0,
+       1
+      ],
+      [
+       2,
+       6
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       5,
+       2
+      ],
+      [
+       5,
+       1
+      ]
+     ]
+    }
+   ],
+   "hash": "b06ea7667ad7fb61eca43aa3ec790cca2159828b5a05f1d1e5bb49d1bfab7bc9",
+   "partials": {},
+   "hints": [
+    "A familiar grid puzzle in unfamiliar clothes. Once it's done, are some squares more important than others?",
+    "Solve it like a sudoku, then read the numbered squares in order."
+   ],
+   "length": 11
+  },
+  {
+   "id": 6,
+   "title": "Loaded Dice",
+   "flavor": "Not a single letter on the page, and yet it says something.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "☁☂△ ♥☀●☁ ☁☂⚑□☆ ☁☂△ ★☾△♪☀☁★♪ ☁♦☾△♠ ✈△▽★♪△ ☁☂△ ♥⚑□△ ♫△□☁ ♠△☀♠ ♫☀● ●△▲◇♪⚑☁♦",
+     "wide": true,
+     "solver": "substitution"
+    }
+   ],
+   "hash": "8ccfdd146b484ea30be6a3f7ce4255a6d1e6b1f10b9ffb87983c44eaa4f3ec12",
+   "partials": {},
+   "hints": [
+    "Which short words are most common in English? Could any of them be hiding here?",
+    "Each symbol always stands for the same letter. The finished sentence tells you what to submit."
+   ],
+   "length": 8
+  },
+  {
+   "id": 7,
+   "title": "Casing The Joint",
+   "flavor": "Heard over the radio from the other side of the glass.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "X-ray",
+      "Zulu",
+      "November",
+      "Victor",
+      "India",
+      "Zulu"
+     ]
+    }
+   ],
+   "hash": "becfeaaf43d9646c6095af293307c1368af821e6e3dbbc1b178a800431785a57",
+   "partials": {},
+   "hints": [
+    "Each word stands for a letter, the way radio operators spell. Do those letters read? If not, try the alphabet backwards.",
+    "Take the NATO call signs' initials, then swap each letter for its mirror: A for Z, B for Y."
+   ],
+   "length": 6
+  }
+ ],
+ "meta": {
+  "title": "Meta: The Inside Job",
+  "flavor": "Pigeonholes, each cut to fit one thing only.",
+  "blocks": [
+   {
+    "type": "fitgrid",
+    "rows": [
+     {
+      "len": 5,
+      "shade": 0
+     },
+     {
+      "len": 9,
+      "shade": 3
+     },
+     {
+      "len": 11,
+      "shade": 7
+     },
+     {
+      "len": 4,
+      "shade": 1
+     },
+     {
+      "len": 7,
+      "shade": 3
+     },
+     {
+      "len": 6,
+      "shade": 5
+     },
+     {
+      "len": 8,
+      "shade": 7
+     }
+    ]
+   }
+  ],
+  "length": 7,
+  "hash": "18224cd767d392391be84f5139474f952b438fbf01419833c699a4977710a3bc",
+  "hints": [
+   "The grid's rows are all different lengths. So are your answers.",
+   "Put each answer in the row its length fits; read the shaded squares top to bottom."
+  ]
+ },
+ "described": true
+}

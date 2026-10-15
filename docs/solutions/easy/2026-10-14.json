@@ -1,0 +1,73 @@
+{
+ "date": "2026-10-14",
+ "number": 18,
+ "difficulty": "easy",
+ "final": "GALLEON",
+ "metaType": "title_diagonal",
+ "explain": "Order the puzzles alphabetically by title; take the k-th letter of the k-th answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Shiver Me Timbers",
+   "answer": "SAIL",
+   "mechanism": "Gapless Morse",
+   "transform": null,
+   "encoded": "SAIL",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Davy Jones",
+   "answer": "HULL",
+   "mechanism": "Drop quote",
+   "transform": null,
+   "encoded": "HULL",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "The Brig",
+   "answer": "BARREL",
+   "mechanism": "Spiral route",
+   "transform": null,
+   "encoded": "BARREL",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Walk The Plank",
+   "answer": "DOUBLOON",
+   "mechanism": "Scrambled sentence",
+   "transform": null,
+   "encoded": "DOUBLOON",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Articles",
+   "answer": "GUNPOWDER",
+   "mechanism": "Symbol cryptogram",
+   "transform": null,
+   "encoded": "GUNPOWDER",
+   "mutated": null
+  },
+  {
+   "id": 6,
+   "title": "Black Spot",
+   "answer": "MAST",
+   "mechanism": "Maritime signal flags",
+   "transform": null,
+   "encoded": "MAST",
+   "mutated": null
+  },
+  {
+   "id": 7,
+   "title": "X Marks The Spot",
+   "answer": "CAPTAIN",
+   "mechanism": "Pigpen cipher",
+   "transform": null,
+   "encoded": "CAPTAIN",
+   "mutated": null
+  }
+ ]
+}

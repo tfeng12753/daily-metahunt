@@ -1,0 +1,334 @@
+{
+ "date": "2026-10-15",
+ "difficulty": "easy",
+ "salt": "2026-10-15/easy",
+ "number": 19,
+ "round": "The Inside Job",
+ "intro": "The plan was perfect, which is why nobody wrote it down. Instead, each member of the crew hid their part of it somewhere only the others would think to look. Their last hiding place was the staff cloakroom, where a rack of cubbies runs along the wall and no two cubbies are the same length. When the recovered strips come out of pockets and boots, each one has to be eased into the single cubby cut to its exact length, because a strip that overlaps or rattles has been forced. A few cubbies are lined in dark velvet, and the crew's understanding is that, once every strip is home, the papers in those shadowed cubbies will read as the final word.",
+ "echo": "Three cherries in a row, and every light and bell in the building goes off.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Inside Man",
+   "flavor": "A familiar grid, an unfamiliar alphabet.",
+   "blocks": [
+    {
+     "type": "sudoku",
+     "size": 9,
+     "rows": [
+      "J.......L",
+      "LMKVS.WE.",
+      "VA.L.J...",
+      ".KWAVL.J.",
+      ".JL..E..S",
+      "..MJK..W.",
+      ".L.M.VES.",
+      ".E.SJ..LV",
+      "WS.....A."
+     ],
+     "alphabet": "AEJKLMSVW",
+     "marks": [
+      [
+       3,
+       6
+      ],
+      [
+       6,
+       4
+      ],
+      [
+       2,
+       6
+      ],
+      [
+       2,
+       8
+      ]
+     ]
+    }
+   ],
+   "hash": "aaf3f65d70ad1df04bc6e9c49a134e5183c86c90de332ab76fad662aed8cdc16",
+   "partials": {},
+   "hints": [
+    "Sudoku using the letters shown instead of digits (each row, column and box uses each letter once). Read the numbered squares in order.",
+    "To check you're on track: the answer begins with M."
+   ],
+   "technique": "Letter sudoku",
+   "length": 4
+  },
+  {
+   "id": 2,
+   "title": "Cold Deck",
+   "flavor": "Heard through the wall of the next cell: bursts of knocks, always in pairs, and a grid of twenty-five that someone kept in their head.",
+   "blocks": [
+    {
+     "type": "taps",
+     "groups": [
+      [
+       "•••••",
+       "•"
+      ],
+      [
+       "•",
+       "•••••"
+      ],
+      [
+       "•••",
+       "•••"
+      ],
+      [
+       "••••",
+       "••••"
+      ],
+      [
+       "••",
+       "••••"
+      ],
+      [
+       "•••",
+       "•"
+      ],
+      [
+       "•",
+       "•"
+      ],
+      [
+       "••••",
+       "••••"
+      ],
+      [
+       "••",
+       "••••"
+      ],
+      [
+       "•••",
+       "••••"
+      ],
+      [
+       "•••",
+       "•••"
+      ]
+     ]
+    }
+   ],
+   "hash": "f72593cb1900223f1167597c5aa6cacc1f8de94972587ff5709a1e86504a9f31",
+   "partials": {},
+   "hints": [
+    "Tap code: first burst = row, second = column, in a 5×5 grid without K.",
+    "To check you're on track: the answer begins with V."
+   ],
+   "technique": "Tap code",
+   "length": 11
+  },
+  {
+   "id": 3,
+   "title": "The Vault Door",
+   "flavor": "Every word inside the casino went through the blender, but each one came out whole.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "REVEY",
+      "GDOO",
+      "TNUH",
+      "SDEN",
+      "HWTI",
+      "A",
+      "LGNISE",
+      "OWRD",
+      "ADN",
+      "HTE",
+      "OWDR",
+      "UYO",
+      "ATNW",
+      "MROF",
+      "ISTH",
+      "PAEG",
+      "SI",
+      "BCKKJACLA"
+     ],
+     "inline": true,
+     "tray": "word"
+    }
+   ],
+   "hash": "f6181eb67556a9f8fbe506249ac6bcc4a37d7bec02f41a829c1e407d8eb68ae8",
+   "partials": {},
+   "hints": [
+    "Each word of a sentence has had its letters shuffled. Unscramble them; the sentence tells you the answer.",
+    "To check you're on track: the answer begins with B."
+   ],
+   "technique": "Scrambled sentence",
+   "length": 9
+  },
+  {
+   "id": 4,
+   "title": "Shift Change",
+   "flavor": "Recovered from the shredder inside the casino. Somebody at least had the decency to note how long each word was.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "AND",
+      "AYS",
+      "DDE",
+      "ER",
+      "EWA",
+      "IGH",
+      "IMP",
+      "INS",
+      "ITS",
+      "LAL",
+      "LYS",
+      "MES",
+      "NIN",
+      "ONG",
+      "PLA",
+      "POK",
+      "SAG",
+      "SHI",
+      "TAL",
+      "THE"
+     ],
+     "inline": true,
+     "tiles": true
+    },
+    {
+     "type": "prose",
+     "text": "Word lengths: (3 7 3 6 2 5 5 3 5 3 2 6 4 5)"
+    }
+   ],
+   "hash": "39e7dd2e293a40d5b5e5e8d47bc15946436e998674e1c2af4a420138e40beddb",
+   "partials": {},
+   "hints": [
+    "The sentence was cut into three-letter fragments (spaces removed) and alphabetised. Reassemble it using the word lengths; it tells you the answer.",
+    "To check you're on track: the answer begins with P."
+   ],
+   "technique": "Shredded sentence",
+   "length": 5
+  },
+  {
+   "id": 5,
+   "title": "Plan B",
+   "flavor": "Every letter here is wearing someone else's coat. The spaces, at least, are honest.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "WRHRCP QKEQUNQC YWPRWQ NR LQN NFDI XYO IR NFQ EODJQ DI ZMIN RWQ AROC GRUTEDUT",
+     "wide": true,
+     "solver": "substitution"
+    }
+   ],
+   "hash": "76fd801473709ef4800cf7f0c684b00e9b407e9ec4cd9314a5d58f357b3def6d",
+   "partials": {},
+   "hints": [
+    "Simple monoalphabetic substitution with word breaks kept. Solve the sentence; it tells you the answer.",
+    "To check you're on track: the answer begins with L."
+   ],
+   "technique": "Cryptogram (cluephrase)",
+   "length": 8
+  },
+  {
+   "id": 6,
+   "title": "Alibi",
+   "flavor": "The labels inside the casino have faded. Each one lost exactly one letter.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "PEN_HOUSE",
+      "BL_EPRINT",
+      "SLOTMACHI_E",
+      "RA_SOM",
+      "TUMBL_R",
+      "_OOKOUT"
+     ],
+     "ordered": true,
+     "mono": true
+    }
+   ],
+   "hash": "8b8c9411cbea6acfc1cd1c717abf2cd97b3a3aded7f371de2439d0810dc61db7",
+   "partials": {},
+   "hints": [
+    "Each theme word is missing one letter. The missing letters, in order, spell the answer.",
+    "To check you're on track: the answer begins with T."
+   ],
+   "technique": "Missing letters",
+   "length": 6
+  },
+  {
+   "id": 7,
+   "title": "The Mark",
+   "flavor": "Scrambled inventory. Each entry picked up one hitchhiker on the way through the machine.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "MTEURLCB",
+      "AENEUSHOPT",
+      "CSBRAACTA",
+      "KLUTOOHO",
+      "MOSANRI",
+      "RUESYCITE",
+      "SIHPCR"
+     ],
+     "ordered": true,
+     "mono": true
+    }
+   ],
+   "hash": "dc9b09a2234d6ed0d7153fe33f6ee1673bffeecc7de59021142e7a824d014eab",
+   "partials": {},
+   "hints": [
+    "Each jumble is an anagram of a word from this round's theme plus one extra letter. The extra letters, in order, spell the answer.",
+    "To check you're on track: the answer begins with C."
+   ],
+   "technique": "Anagrams with an extra letter",
+   "length": 7
+  }
+ ],
+ "meta": {
+  "title": "Meta: The Inside Job",
+  "flavor": "Everything inside the casino has a place, and every place is exactly the right size.",
+  "blocks": [
+   {
+    "type": "fitgrid",
+    "rows": [
+     {
+      "len": 9,
+      "shade": 5
+     },
+     {
+      "len": 4,
+      "shade": 1
+     },
+     {
+      "len": 7,
+      "shade": 0
+     },
+     {
+      "len": 5,
+      "shade": 2
+     },
+     {
+      "len": 8,
+      "shade": 4
+     },
+     {
+      "len": 11,
+      "shade": 9
+     },
+     {
+      "len": 6,
+      "shade": 0
+     }
+    ]
+   }
+  ],
+  "length": 7,
+  "hash": "b2b0145a32283a03916f19843864f5bec003f76ccbcfd1a306d10c8d47bbf29b",
+  "hints": [
+   "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+   "To check you're on track: the final answer begins with J."
+  ]
+ },
+ "described": true
+}
