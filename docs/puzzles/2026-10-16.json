@@ -1,0 +1,219 @@
+{
+ "date": "2026-10-16",
+ "difficulty": "hard",
+ "salt": "2026-10-16",
+ "number": 20,
+ "round": "The Bathysphere Logs",
+ "intro": "Eleven hundred metres down, the cable went slack and the radio went strange. What came back up the line was not speech. The divers say the deep hums through the hull at night, low enough to feel in the fillings of your teeth, and that the only way to sleep through it is to let the sound find its own shape in your skull. In the mess, every cup and tin hangs from its own hook above the table, and each hook has been shaved and bent by hand until the thing it holds sits level and still, no two alike. Their hands remember the fit of the copper rod, the wrench, the dented pot, better than their own names.",
+ "echo": "Tennyson wrote that it sleeps below the thunders of the upper deep, and will rise only once.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Black Smoker",
+   "flavor": "Fenced in, and copied out in a hurry.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "YESSD LRGOW RIPIC TOLTE SUOUS FHUER UNEHH HOTRN OTZLA BOTET OYIAR ZBTOW T",
+     "wide": true,
+     "rails": 5
+    }
+   ],
+   "hash": "39424d0dae7cd296e232825bf60b800468e91eefca25c057a3e1fb0a69a378ab",
+   "partials": {},
+   "hints": [
+    "All the right letters are here, just out of order. Could they have been written along a path that goes up and down?"
+   ]
+  },
+  {
+   "id": 2,
+   "title": "Lantern Hours",
+   "flavor": "Shaken, one word at a time.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "HET",
+      "GAEP",
+      "VEREY",
+      "WNTA",
+      "FMRO",
+      "DRWO",
+      "OYU",
+      "DAN",
+      "SI",
+      "ODGO",
+      "ORDW",
+      "NGILSE",
+      "NSDE",
+      "SHRKA",
+      "ISTH",
+      "WIHT",
+      "A",
+      "HTUN"
+     ],
+     "inline": true,
+     "tray": "word"
+    }
+   ],
+   "hash": "da91950759fd5761ae80ebd920e0e3cd772dcfdad417afa56ce60b793015fcde",
+   "partials": {},
+   "hints": [
+    "Each word is complete but shuffled. Start with the shortest ones: does a sentence appear?"
+   ]
+  },
+  {
+   "id": 3,
+   "title": "Marine Snow",
+   "flavor": "Only one page survived. It was the only page anyone needed.",
+   "blocks": [
+    {
+     "type": "prose",
+     "text": "Eleven hundred metres down, the cable went slack and the radio went strange. What came back up the line was not speech.",
+     "paper": true
+    },
+    {
+     "type": "list",
+     "items": [
+      "15.3",
+      "14.3",
+      "11.1",
+      "11.4",
+      "6.2",
+      "7.3",
+      "16.2"
+     ],
+     "inline": true
+    }
+   ],
+   "hash": "acc8b5f99ada014ed516fa1fa9bfdf812dee146141f924f140379b67132fc783",
+   "partials": {},
+   "hints": [
+    "The first number in each pair never goes past the number of words on the page. What does the second count?"
+   ]
+  },
+  {
+   "id": 4,
+   "title": "Ballast",
+   "flavor": "Listen to the rhythm, not the picture. Unlucky for some, and the same distance either way.",
+   "blocks": [
+    {
+     "type": "glyphs",
+     "groups": [
+      "🐋🫧🐋🫧",
+      "🫧🐋🫧",
+      "🫧",
+      "🫧🫧🫧🐋",
+      "🫧🫧🐋🫧",
+      "🫧🐋🐋🫧",
+      "🐋🫧🫧🫧",
+      "🐋🫧🐋🫧",
+      "🫧🐋🫧"
+     ],
+     "legend": [
+      "🫧",
+      "🐋"
+     ]
+    }
+   ],
+   "hash": "2393ee4bfcc2958ef080cd880b45a067cc1bfd948d85e22e2cc4355394fce2e0",
+   "partials": {
+    "2ffec19a356ba3b18d4a3df4a047fb60883842e193e7ba4d498ecd0e29bbad51": "You've decoded it, but it's not finished. One more layer."
+   },
+   "hints": [
+    "Only two kinds of mark, in groups of one to four. Which old alphabet is built from exactly that? And if what you get still isn't a word, reread the flavour text."
+   ]
+  },
+  {
+   "id": 5,
+   "title": "Thermocline",
+   "flavor": "A formula no chemist would sign.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "S",
+      "Mg",
+      "H",
+      "Si",
+      "Na",
+      "Ca",
+      "P",
+      "Si"
+     ],
+     "inline": true,
+     "variant": "symbols"
+    }
+   ],
+   "hash": "1f316a758c8ba65ed080fdb101797746fcdc6c7f0695bfe9ef41c8338934170d",
+   "partials": {},
+   "hints": [
+    "Everything here has a number in a famous chemical line-up. What number does each one have?"
+   ]
+  },
+  {
+   "id": 6,
+   "title": "Pressure Hull",
+   "flavor": "Bunting on the halyard, and not for a celebration.",
+   "blocks": [
+    {
+     "type": "flags",
+     "items": [
+      "A",
+      "N",
+      "C",
+      "H",
+      "O",
+      "R"
+     ]
+    }
+   ],
+   "hash": "700b51e6522429c1830580b023a44d0c4f26e0a0e43e1d3ad3d630ea5e8996e7",
+   "partials": {},
+   "hints": [
+    "Ships carry a flag for every letter of the alphabet. Do you know them?"
+   ]
+  }
+ ],
+ "meta": {
+  "title": "Meta: The Bathysphere Logs",
+  "flavor": "Pigeonholes, each cut to fit one thing only.",
+  "blocks": [
+   {
+    "type": "fitgrid",
+    "rows": [
+     {
+      "len": 5,
+      "shade": 4
+     },
+     {
+      "len": 4,
+      "shade": 1
+     },
+     {
+      "len": 7,
+      "shade": 6
+     },
+     {
+      "len": 8,
+      "shade": 4
+     },
+     {
+      "len": 9,
+      "shade": 1
+     },
+     {
+      "len": 6,
+      "shade": 1
+     }
+    ]
+   }
+  ],
+  "length": 6,
+  "hash": "a64d5dcae58662dc68232f79fa4a0264ac3eba479d73252880d07b30db574c14",
+  "hints": [
+   "The grid's rows are all different lengths. So are your answers."
+  ]
+ },
+ "described": true
+}

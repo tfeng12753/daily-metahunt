@@ -1,0 +1,73 @@
+{
+ "date": "2026-10-15",
+ "number": 19,
+ "difficulty": "medium",
+ "final": "GETAWAY",
+ "metaType": "fitin",
+ "explain": "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Getaway Driver",
+   "answer": "GUARD",
+   "mechanism": "Word search leftovers",
+   "transform": null,
+   "encoded": "GUARD",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "House Edge",
+   "answer": "SAFE",
+   "mechanism": "Baconian cipher",
+   "transform": "Atbash (A↔Z mirror)",
+   "encoded": "HZUV",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "The Vault Door",
+   "answer": "BRIEFCASE",
+   "mechanism": "Mixed number bases",
+   "transform": null,
+   "encoded": "BRIEFCASE",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "The Mark",
+   "answer": "CROWBAR",
+   "mechanism": "Resistor colour bands",
+   "transform": null,
+   "encoded": "CROWBAR",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Double Cross",
+   "answer": "VENTILATION",
+   "mechanism": "Letter sudoku",
+   "transform": null,
+   "encoded": "VENTILATION",
+   "mutated": null
+  },
+  {
+   "id": 6,
+   "title": "Loaded Dice",
+   "answer": "SECURITY",
+   "mechanism": "Symbol cryptogram",
+   "transform": null,
+   "encoded": "SECURITY",
+   "mutated": null
+  },
+  {
+   "id": 7,
+   "title": "Casing The Joint",
+   "answer": "CAMERA",
+   "mechanism": "Mirrored NATO",
+   "transform": null,
+   "encoded": "CAMERA",
+   "mutated": null
+  }
+ ]
+}

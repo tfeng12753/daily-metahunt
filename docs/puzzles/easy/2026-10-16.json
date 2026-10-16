@@ -1,0 +1,305 @@
+{
+ "date": "2026-10-16",
+ "difficulty": "easy",
+ "salt": "2026-10-16/easy",
+ "number": 20,
+ "round": "The Bathysphere Logs",
+ "intro": "Eleven hundred metres down, the cable went slack and the radio went strange. What came back up the line was not speech.",
+ "echo": "Soldiers once lived for years in long ditches; the sea keeps one seven miles deep.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Siphon",
+   "flavor": "Up and down, up and down: three rows, one long sentence, and not a single space left.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "TAHTP TYBRE ETDDR HLSTI GHOEA OTPDE OEHLN WNDAW SIEET NERRE FTIEE AV",
+     "wide": true,
+     "rails": 3
+    }
+   ],
+   "hash": "a42f2a6a0dc691c46589d30304b931e5787ef69446cd3412305b2c7136cc86fc",
+   "partials": {},
+   "hints": [
+    "Rail-fence transposition of a sentence with the spaces removed. Try 2 to 5 rails; the sentence tells you the answer.",
+    "To check you're on track: the answer begins with D."
+   ],
+   "technique": "Rail fence (cluephrase)",
+   "length": 5
+  },
+  {
+   "id": 2,
+   "title": "Thermocline",
+   "flavor": "The spy's handbook said to always carry a novel. It never said which one; this page will have to do.",
+   "blocks": [
+    {
+     "type": "prose",
+     "text": "Eleven hundred metres down, the cable went slack and the radio went strange. What came back up the line was not speech.",
+     "paper": true
+    },
+    {
+     "type": "list",
+     "items": [
+      "16.1",
+      "20.2",
+      "11.1",
+      "1.6",
+      "6.2",
+      "6.1",
+      "8.2",
+      "13.7"
+     ],
+     "inline": true
+    }
+   ],
+   "hash": "fffd015229231640ccf5792b73648d89a98539146b6e798ff4e58b76d99108f3",
+   "partials": {},
+   "hints": [
+    "Each pair is word.letter into the recovered page (words split on spaces; punctuation ignored).",
+    "To check you're on track: the answer begins with B."
+   ],
+   "technique": "Book cipher",
+   "length": 8
+  },
+  {
+   "id": 3,
+   "title": "Marine Snow",
+   "flavor": "Three letters to a strip. The strips are in order; the sentence isn't.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "ALL",
+      "CUT",
+      "DSP",
+      "ETT",
+      "EWR",
+      "FIS",
+      "H",
+      "HAN",
+      "HEW",
+      "INT",
+      "LEA",
+      "ONG",
+      "ORD",
+      "ORG",
+      "OTH",
+      "SEF",
+      "SHO",
+      "SNO",
+      "TEF",
+      "THI",
+      "TLE",
+      "ULD"
+     ],
+     "inline": true,
+     "tiles": true
+    },
+    {
+     "type": "prose",
+     "text": "Word lengths: (6 4 4 4 4 3 5 5 6 6 3 4 10)"
+    }
+   ],
+   "hash": "7084aed4e79fc21b075b3a6a4c9efd82ebaa9ece59a3c4f073fac3031a0654db",
+   "partials": {},
+   "hints": [
+    "The sentence was cut into three-letter fragments (spaces removed) and alphabetised. Reassemble it using the word lengths; it tells you the answer.",
+    "To check you're on track: the answer begins with C."
+   ],
+   "technique": "Shredded sentence",
+   "length": 10
+  },
+  {
+   "id": 4,
+   "title": "Sounding Line",
+   "flavor": "Cross off everything you recognise. What nobody claims is what you came for.",
+   "blocks": [
+    {
+     "type": "caption",
+     "text": "Hidden in the grid: 9 words to do with the bathysphere (lengths 4, 4, 5, 5, 5, 5, 5, 6, 7), running in any direction."
+    },
+    {
+     "type": "board",
+     "rows": [
+      "CSQUIDU",
+      "RUCHIRN",
+      "LAROCOC",
+      "SHARKHR",
+      "KELPECA",
+      "SONARNB",
+      "WHALEAT"
+     ],
+     "plain": true,
+     "words": [
+      "ANCHOR",
+      "CORAL",
+      "CRAB",
+      "CURRENT",
+      "KELP",
+      "SHARK",
+      "SONAR",
+      "SQUID",
+      "WHALE"
+     ]
+    }
+   ],
+   "hash": "9c5c41f1a8616d5bc005c8b5bbb8db6493ad8d5e2e21e5a034028208cf0a8219",
+   "partials": {},
+   "hints": [
+    "Find every hidden word (any of 8 directions). The unused letters, read left-to-right, top-to-bottom, spell the answer.",
+    "The hidden words are: ANCHOR, CORAL, CRAB, CURRENT, KELP, SHARK, SONAR, SQUID, WHALE.",
+    "To check you're on track: the answer begins with U."
+   ],
+   "technique": "Word search leftovers",
+   "length": 6
+  },
+  {
+   "id": 5,
+   "title": "Snow That Falls Upward",
+   "flavor": "Seat them correctly first. Then each guest owes you the letter of their name that matches their seat number.",
+   "blocks": [
+    {
+     "type": "seating",
+     "seats": 7,
+     "names": [
+      "Anita",
+      "Dominic",
+      "Xanthe",
+      "Antonia",
+      "Hector",
+      "Bertrand",
+      "Humphrey"
+     ],
+     "clues": [
+      "Anita sits somewhere to the left of Humphrey.",
+      "Bertrand and Humphrey are not neighbours.",
+      "Antonia sits somewhere between Bertrand and Dominic.",
+      "Xanthe sits somewhere to the left of Antonia.",
+      "Exactly 3 people sit between Dominic and Xanthe.",
+      "Exactly 4 people sit between Dominic and Hector.",
+      "Humphrey sits somewhere between Anita and Antonia."
+     ],
+     "logic": [
+      [
+       "left_of",
+       "ANITA",
+       "HUMPHREY"
+      ],
+      [
+       "apart",
+       "BERTRAND",
+       "HUMPHREY"
+      ],
+      [
+       "between",
+       "BERTRAND",
+       "ANTONIA",
+       "DOMINIC"
+      ],
+      [
+       "left_of",
+       "XANTHE",
+       "ANTONIA"
+      ],
+      [
+       "gap",
+       "DOMINIC",
+       "XANTHE",
+       3
+      ],
+      [
+       "gap",
+       "DOMINIC",
+       "HECTOR",
+       4
+      ],
+      [
+       "between",
+       "ANITA",
+       "HUMPHREY",
+       "ANTONIA"
+      ]
+     ]
+    }
+   ],
+   "hash": "0e8cfdf12b82dbfd9517e52b07af4faf3004b8a92731e908e9554f852354cab1",
+   "partials": {},
+   "hints": [
+    "A logic puzzle: use the clues to find the one seating that works (seats are numbered 1 to n from the left). Then the guest in seat k gives the k-th letter of their name.",
+    "To check you're on track: the answer begins with B."
+   ],
+   "technique": "Seating plan (logic)",
+   "length": 7
+  },
+  {
+   "id": 6,
+   "title": "Pressure Hull",
+   "flavor": "The note aboard the bathysphere was written round and round the page, from the edge towards the middle.",
+   "blocks": [
+    {
+     "type": "lettergrid",
+     "rows": [
+      "FETONSIH",
+      "AAELPSDT",
+      "LSJDROND",
+      "LEEHSWAL",
+      "IFL·IEHU",
+      "NOLYFHGO",
+      "TRGETTNH",
+      "OTHEWROS"
+     ]
+    }
+   ],
+   "hash": "a040896b8111d5a8daf4200427b5da152e0f102254697fda338415576f6bca9e",
+   "partials": {},
+   "hints": [
+    "A sentence was written into the grid along a spiral, starting in one corner and winding inward. Find the corner and the direction, read the sentence (dots are padding), and it tells you the answer.",
+    "To check you're on track: the answer begins with J."
+   ],
+   "technique": "Spiral route",
+   "length": 9
+  }
+ ],
+ "meta": {
+  "title": "Meta: The Bathysphere Logs",
+  "flavor": "Everything aboard the bathysphere has a place, and every place is exactly the right size.",
+  "blocks": [
+   {
+    "type": "fitgrid",
+    "rows": [
+     {
+      "len": 10,
+      "shade": 2
+     },
+     {
+      "len": 5,
+      "shade": 4
+     },
+     {
+      "len": 7,
+      "shade": 1
+     },
+     {
+      "len": 8,
+      "shade": 3
+     },
+     {
+      "len": 6,
+      "shade": 2
+     },
+     {
+      "len": 9,
+      "shade": 8
+     }
+    ]
+   }
+  ],
+  "length": 6,
+  "hash": "e325e55a1e013f43f84a36ac521072a10258d5ff4e74710ff6313b2f3b1765bb",
+  "hints": [
+   "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+   "To check you're on track: the final answer begins with T."
+  ]
+ }
+}

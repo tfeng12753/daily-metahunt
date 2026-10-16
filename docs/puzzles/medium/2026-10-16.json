@@ -1,0 +1,582 @@
+{
+ "date": "2026-10-16",
+ "difficulty": "medium",
+ "salt": "2026-10-16/medium",
+ "number": 20,
+ "round": "The Bathysphere Logs",
+ "intro": "Eleven hundred metres down, the cable went slack and the radio went strange. What came back up the line was not speech, but a list of names, read slowly, each one repeated twice, as if the log itself could not decide who had really been aboard. The divers kept their own tally in the control room, where a coat hook stood empty beside eight filled ones, and no one could recall whose it was. Mrs Okafor found the discrepancy first, while sorting the return manifests, and she noticed the same thing in every one: a name too many, signed in a hand that matched no crew member. She has begun setting aside the extras, one page at a time, in a drawer that no one else is allowed to open.",
+ "echo": "Every ten metres down, the sea leans a little harder on the hull, and the hull remembers every one.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Dead Reckoning",
+   "flavor": "A sentence in disguise, and not a very good disguise.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "MRUV NKBH RKV YHNM UMV VHGZHM TCZ K WHZS PCXB MUJH KXQ MRKM VHGZHM UV WUNHZNTUVR",
+     "wide": true,
+     "solver": "substitution"
+    }
+   ],
+   "hash": "6a7283954519596ac5c77b3b70cc0dc8104a77342abd6ad7750b5eb46c5496a0",
+   "partials": {
+    "fe6c9203a5f5cf142715b9ebfeecd18ddd4eb13c3ce9d4edddebcf9a1ad7c410": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Which short words are most common in English? Could any of them be hiding here?",
+    "Each symbol always stands for the same letter. The finished sentence tells you what to submit."
+   ],
+   "length": 9
+  },
+  {
+   "id": 2,
+   "title": "Siphon",
+   "flavor": "Chords from a very dull instrument that everyone once owned.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "697 Hz + 1336 Hz  ×2",
+      "697 Hz + 1336 Hz  ×1",
+      "852 Hz + 1209 Hz  ×3",
+      "770 Hz + 1477 Hz  ×2",
+      "697 Hz + 1336 Hz  ×1",
+      "697 Hz + 1336 Hz  ×3",
+      "770 Hz + 1336 Hz  ×3",
+      "852 Hz + 1209 Hz  ×3",
+      "697 Hz + 1477 Hz  ×2"
+     ],
+     "mono": true
+    }
+   ],
+   "hash": "45d1a2f74454cc0e0f993ac69f041ae8806c00d5beaff90ea4795d06cba79256",
+   "partials": {
+    "cf7fcd70eb2daecc7770ce0db6c6cb326ca17ac40dd45c7a0b7daf9313df9e55": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Two frequencies at once is the sound of a phone key being pressed. What letters did those keys carry?",
+    "Old phone keypads: find each key, then press it the number of times shown to move along its letters."
+   ],
+   "length": 8
+  },
+  {
+   "id": 3,
+   "title": "Cold Seep",
+   "flavor": "Everyone here counts differently. The little number says how.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "22₅",
+      "1₉",
+      "32₄",
+      "22₉",
+      "12₃",
+      "12₁₆",
+      "101₂",
+      "15₉",
+      "110₂",
+      "9₁₂",
+      "17₁₂",
+      "8₁₂"
+     ],
+     "inline": true
+    }
+   ],
+   "hash": "2cc8d56e73b8336a93ce5ea04930247a10648ff7917fe590d5b199d66d548004",
+   "partials": {
+    "6a71fce7728d845d969f09822ec31450444e33b0e95e0f20e58e7753ccfe6dbc": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "The subscript is a base. Once everything is in ordinary decimal, what range are the numbers in?",
+    "Convert each one to base ten; each is a letter position (A = 1)."
+   ],
+   "length": 11
+  },
+  {
+   "id": 4,
+   "title": "Thermocline",
+   "flavor": "A sentence that came loose from its lines.",
+   "blocks": [
+    {
+     "type": "dropquote",
+     "cols": [
+      "DEHIN",
+      "DISVW",
+      "EHOSSY",
+      "ORRS",
+      "DPUWY",
+      "AI",
+      "AGGTW",
+      "AEHNO",
+      "DNO",
+      "ADIT",
+      "ST",
+      "FHHS",
+      "EIRSU",
+      "NNOT",
+      "AGMTW",
+      "LOR",
+      "EEFRT"
+     ],
+     "mask": [
+      ".....#....#....#.",
+      "...#....#.#......",
+      "#....#...#...#...",
+      ".#...#....#....#.",
+      "...#....#..#.....",
+      "....#############"
+     ]
+    }
+   ],
+   "hash": "655971d52e443b7888d482d85dca17047656778788ee8327fe4d4aa0c80119a9",
+   "partials": {
+    "5338bc65eb1fbb8b42af6718be6cb766eb27a9d665e911dc9d66301595ae7c5d": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Black squares are spaces. Which two- and three-letter words fit, using only the letters each column allows?",
+    "Each column's letters drop into that column of the grid; cross them off as you place them. The sentence tells you what to submit."
+   ],
+   "length": 8
+  },
+  {
+   "id": 5,
+   "title": "Snow That Falls Upward",
+   "flavor": "The picture is worth exactly one word.",
+   "blocks": [
+    {
+     "type": "nonogram",
+     "rows": [
+      [
+       4,
+       1,
+       1,
+       5,
+       5,
+       4,
+       1,
+       5,
+       5,
+       5,
+       4,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       3,
+       1,
+       4,
+       4,
+       1,
+       3,
+       5
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       4,
+       3,
+       1,
+       1,
+       4,
+       5,
+       5,
+       1,
+       5,
+       4,
+       1,
+       1
+      ]
+     ],
+     "cols": [
+      [
+       3
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       4
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       4
+      ],
+      [],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1
+      ],
+      [],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       5
+      ]
+     ],
+     "givens": [
+      [
+       4,
+       28,
+       0
+      ],
+      [
+       4,
+       58,
+       0
+      ],
+      [
+       1,
+       0,
+       1
+      ],
+      [
+       0,
+       7,
+       0
+      ],
+      [
+       0,
+       28,
+       1
+      ],
+      [
+       0,
+       58,
+       1
+      ]
+     ]
+    }
+   ],
+   "hash": "1046006bd8224ad26e0595dafe521885a00f7e57853b2dfa91285c11c5ef6690",
+   "partials": {
+    "2f6142780522d677690b07af1d9060800d4e80156530379713ec24c5b6d6fa56": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "The numbers describe runs of filled squares. What picture could they be drawing?",
+    "Paint by numbers. The picture is written, not drawn."
+   ],
+   "length": 10
+  },
+  {
+   "id": 6,
+   "title": "Pressure Hull",
+   "flavor": "Pairs of numbers pencilled in the margin.",
+   "blocks": [
+    {
+     "type": "prose",
+     "text": "Eleven hundred metres down, the cable went slack and the radio went strange. What came back up the line was not speech.",
+     "paper": true
+    },
+    {
+     "type": "list",
+     "items": [
+      "21.2",
+      "16.3",
+      "12.4",
+      "21.2",
+      "17.1",
+      "22.2",
+      "17.1",
+      "22.1"
+     ],
+     "inline": true
+    }
+   ],
+   "hash": "ef094769b042ed0dc8ac4d12d08d2d7a4247ea4d9988381d2cbd21c8ef3c2568",
+   "partials": {
+    "20db6cd77b235f4e8fa19fb0ae2d1507bddc2f6ee07ed6c2894d39648408daed": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "The first number in each pair never goes past the number of words on the page. What does the second count?",
+    "The first number finds a word on the page; the second finds a letter in it."
+   ],
+   "length": 7
+  },
+  {
+   "id": 7,
+   "title": "Porthole",
+   "flavor": "Moths got into the inventory.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "_UBMARINE",
+      "TORP_DO",
+      "N_UTILUS",
+      "MANTA_AY",
+      "JELLYFIS_",
+      "HYDR_THERMAL",
+      "SA_DINE",
+      "I_OPOD",
+      "CHALL_NGER"
+     ],
+     "ordered": true,
+     "mono": true
+    }
+   ],
+   "hash": "36c9e1e8ae3365ec57e864ff1e3443604b4fed3bc89a65499327cb65fb8785cf",
+   "partials": {
+    "5cd90ae96b4cea1ee30bc7fe969575f0a36ec7d93ce292c6a02f110821edd87d": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Every gap takes exactly one letter. Is there a pattern in what you filled in?",
+    "Read the letters you supplied, in order."
+   ],
+   "length": 8
+  },
+  {
+   "id": 8,
+   "title": "Marine Snow",
+   "flavor": "Walk the fence; don't read it.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "TPHET CFVLT AHETA AHSAE AKPIS ERTOA EYOGI ENTAS CEIMR ENIGS TSERR NMDTR SIA",
+     "wide": true,
+     "rails": 3
+    }
+   ],
+   "hash": "3a530ec49c6610cffcc2b50a17cad44bd45bdad02d035d8c234b6fac057434e8",
+   "partials": {
+    "28fcee1486269e21c3fa5dd11e348330ebbdc8d64a275c7ec0ed74c8e35735c2": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "All the right letters are here, just out of order. Could they have been written along a path that goes up and down?",
+    "Rail fence: written in a zigzag over a few rows, then copied out row by row. Try two to five rows."
+   ],
+   "length": 7
+  }
+ ],
+ "meta": {
+  "title": "Meta: The Bathysphere Logs",
+  "flavor": "Everything arrived a little heavier than it left.",
+  "blocks": [],
+  "length": 8,
+  "hash": "3860c98103b9c7d9f2050ef78f9e27bdbd97ab97be1466934c5941d37491339b",
+  "hints": [
+   "Did every answer come out the right size the first time? Each had one letter too many. Did you keep them?",
+   "Take the extra letter from each feeder, in puzzle order."
+  ]
+ },
+ "described": true
+}

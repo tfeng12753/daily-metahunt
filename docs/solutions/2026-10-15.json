@@ -1,0 +1,55 @@
+{
+ "date": "2026-10-15",
+ "number": 19,
+ "difficulty": "hard",
+ "final": "SAFECRACKER",
+ "metaType": "initials",
+ "explain": "The ciphertext is Vigenère-encrypted with the first letters of the feeder answers (in puzzle order) as the key.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Getaway Driver",
+   "answer": "ELEVATOR",
+   "mechanism": "Letter sudoku",
+   "transform": "Reversal",
+   "encoded": "ROTAVELE",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Shift Change",
+   "answer": "BACCARAT",
+   "mechanism": "Element spelling",
+   "transform": null,
+   "encoded": "BACCARAT",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Casing The Joint",
+   "answer": "LOOKOUT",
+   "mechanism": "Mixed number bases",
+   "transform": "Atbash (A↔Z mirror)",
+   "encoded": "OLLPLFG",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Cold Deck",
+   "answer": "CHIPS",
+   "mechanism": "Word search leftovers",
+   "transform": null,
+   "encoded": "CHIPS",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "The Vault Door",
+   "answer": "SHUFFLE",
+   "mechanism": "Symbol cryptogram",
+   "transform": null,
+   "encoded": "SHUFFLE",
+   "mutated": null
+  }
+ ]
+}
