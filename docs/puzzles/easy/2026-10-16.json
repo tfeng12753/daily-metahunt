@@ -4,7 +4,7 @@
  "salt": "2026-10-16/easy",
  "number": 20,
  "round": "The Bathysphere Logs",
- "intro": "Eleven hundred metres down, the cable went slack and the radio went strange. What came back up the line was not speech.",
+ "intro": "Eleven hundred metres down, the cable went slack and the radio went strange. What came back up the line was not speech but a sequence of clipped tones and paper-thin clicks, and the watch has taken to filing the returns in the brass pigeon cabinet bolted beside the hatch. It is not a random pigeonhole box: the rows are cut to different depths, and a return belongs in the one compartment whose size takes it without sliding or sticking out. The cabinet fronts are little windows arranged in a grid, some blackened and some left clear, and the blackened windows are the ones the watch keeps glancing at as the box fills. The pressure makes the brass hum, but the cabinet gives no clue which return goes first.",
  "echo": "Soldiers once lived for years in long ditches; the sea keeps one seven miles deep.",
  "puzzles": [
   {
@@ -301,5 +301,6 @@
    "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
    "To check you're on track: the final answer begins with T."
   ]
- }
+ },
+ "described": true
 }
