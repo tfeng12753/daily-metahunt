@@ -1,0 +1,370 @@
+{
+ "date": "2026-10-17",
+ "difficulty": "easy",
+ "salt": "2026-10-17/easy",
+ "number": 21,
+ "round": "The Clockmaker's Will",
+ "intro": "The old clockmaker left everything to whichever apprentice could finish the last clock, and nothing else. It sits on the oak bench with no face and no way to mark the hours, only fourteen narrow drawers that click open like sighs. The apprentices have five stalled movements around the room, each waiting for its answer to be settled before the final works can be wound. Above the bench hangs the will itself, a great ledger whose every line is two numbers: first the bench a piece belongs to, then a place inside that piece. The clockmaker's note says the estate stays locked until someone reads the ledger the way he always read it—each pair as a single instruction, not two facts. No one yet knows what the pairs are asking for, but every apprentice has stopped polishing and started counting.",
+ "echo": "The oldest clock in the garden is useless after dark and honest all day.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Moonphase",
+   "flavor": "Every letter here is wearing someone else's coat. The spaces, at least, are honest.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "UJ GVD ZHS BIHW NKUF FISNISZI NKIS GVD KHCI HPBIHWG JVDSW NKI HSFMIB MKUZK UF KHSW",
+     "wide": true,
+     "solver": "substitution"
+    }
+   ],
+   "hash": "0a514c105aebe635d902264deed876b500247c83c0e6cbc3732a3288140fec9d",
+   "partials": {},
+   "hints": [
+    "Simple monoalphabetic substitution with word breaks kept. Solve the sentence; it tells you the answer.",
+    "To check you're on track: the answer begins with H."
+   ],
+   "technique": "Cryptogram (cluephrase)",
+   "length": 4
+  },
+  {
+   "id": 2,
+   "title": "Complication",
+   "flavor": "Fill in the blanks, literally. Some squares have been given to you for free.",
+   "blocks": [
+    {
+     "type": "nonogram",
+     "rows": [
+      [
+       4,
+       4,
+       3,
+       4,
+       4
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       4,
+       4,
+       5,
+       3,
+       3
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       4,
+       1,
+       1,
+       1,
+       1,
+       4,
+       4
+      ]
+     ],
+     "cols": [
+      [
+       5
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       4
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       4
+      ],
+      [],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "givens": [
+      [
+       3,
+       18,
+       0
+      ],
+      [
+       4,
+       16,
+       1
+      ],
+      [
+       4,
+       28,
+       0
+      ],
+      [
+       1,
+       28,
+       0
+      ],
+      [
+       1,
+       18,
+       1
+      ]
+     ]
+    }
+   ],
+   "hash": "a7b0542252c9a672d968d20caecaf79ee2f312d2139f9862de7c30754794e887",
+   "partials": {},
+   "hints": [
+    "A nonogram (paint-by-numbers). The filled picture is the answer written in 5×5 block letters.",
+    "To check you're on track: the answer begins with B."
+   ],
+   "technique": "Nonogram",
+   "length": 5
+  },
+  {
+   "id": 3,
+   "title": "Minute Repeater",
+   "flavor": "Confetti, sorted alphabetically by a very tidy intern. Put it back together.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "AND",
+      "AYN",
+      "E",
+      "EDO",
+      "EQU",
+      "HEW",
+      "IET",
+      "ION",
+      "LDO",
+      "LYO",
+      "MOV",
+      "NEX",
+      "NEY",
+      "NTO",
+      "ORD",
+      "OUM",
+      "OWW",
+      "PIN",
+      "RIT",
+      "THE",
+      "TON",
+      "WEL",
+      "WNT"
+     ],
+     "inline": true,
+     "tiles": true
+    },
+    {
+     "type": "prose",
+     "text": "Word lengths: (4 4 3 3 3 5 4 3 4 6 3 4 7 2 2 3 4 3)"
+    }
+   ],
+   "hash": "f1e899716424a05cf248b319819d0116b029e852b7a27f3ddf0a034a0c2d25e0",
+   "partials": {},
+   "hints": [
+    "The sentence was cut into three-letter fragments (spaces removed) and alphabetised. Reassemble it using the word lengths; it tells you the answer.",
+    "To check you're on track: the answer begins with P."
+   ],
+   "technique": "Shredded sentence",
+   "length": 6
+  },
+  {
+   "id": 4,
+   "title": "Mainspring",
+   "flavor": "Samuel would have recognised the rhythm at once, whatever it happened to be wearing.",
+   "blocks": [
+    {
+     "type": "glyphs",
+     "groups": [
+      "⏳⏳",
+      "⚙⚙",
+      "⏳⚙",
+      "⚙⚙⏳",
+      "⏳",
+      "⚙"
+     ],
+     "legend": [
+      "⚙",
+      "⏳"
+     ]
+    }
+   ],
+   "hash": "d1bc249f9301c29ec271a5611622a0e83321366103c54251bc531e02bb23f163",
+   "partials": {},
+   "hints": [
+    "Morse code: two symbols stand for dot and dash; gaps separate letters.",
+    "To check you're on track: the answer begins with M."
+   ],
+   "technique": "Morse code",
+   "length": 6
+  },
+  {
+   "id": 5,
+   "title": "Perpetual Calendar",
+   "flavor": "A board full of noise, and one horseman who knows exactly where to step.",
+   "blocks": [
+    {
+     "type": "board",
+     "rows": [
+      "CFWZCSEZ",
+      "BJBUJCUY",
+      "WBXZUEVN",
+      "SQJTAWWM",
+      "CLLKICVN",
+      "VDQELATY",
+      "QPLVZBYB",
+      "NZSWVIUD"
+     ]
+    },
+    {
+     "type": "prose",
+     "text": "The knight sets out from h1: Nf2 Nd3 Nb4 Nc2."
+    }
+   ],
+   "hash": "a443cec3f067aa1b46424b586b1b4cf3ab521e30258d37f47758eb2858b50918",
+   "partials": {},
+   "hints": [
+    "Start on the given square and follow the knight moves; read the letter on each square it lands on.",
+    "To check you're on track: the answer begins with B."
+   ],
+   "technique": "Knight's path",
+   "length": 4
+  }
+ ],
+ "meta": {
+  "title": "Meta: The Clockmaker's Will",
+  "flavor": "Someone underlined a few verses. This page has its own chapters.",
+  "blocks": [
+   {
+    "type": "list",
+    "items": [
+     "Ch. 2 v. 4",
+     "Ch. 4 v. 4",
+     "Ch. 3 v. 6",
+     "Ch. 1 v. 4",
+     "Ch. 3 v. 2",
+     "Ch. 2 v. 3",
+     "Ch. 5 v. 3"
+    ],
+    "ordered": true
+   }
+  ],
+  "length": 7,
+  "hash": "9345d324522e709f31b5c49033ba73a08019758333de3595e2e25a3d56696ba1",
+  "hints": [
+   "Each entry is (puzzle number, letter number): index into that puzzle's answer.",
+   "To check you're on track: the final answer begins with S."
+  ]
+ },
+ "described": true
+}

@@ -1,0 +1,64 @@
+{
+ "date": "2026-10-16",
+ "number": 20,
+ "difficulty": "easy",
+ "final": "TRENCH",
+ "metaType": "fitin",
+ "explain": "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Siphon",
+   "answer": "DIVER",
+   "mechanism": "Rail fence (cluephrase)",
+   "transform": null,
+   "encoded": "DIVER",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Thermocline",
+   "answer": "BARNACLE",
+   "mechanism": "Book cipher",
+   "transform": null,
+   "encoded": "BARNACLE",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Marine Snow",
+   "answer": "CUTTLEFISH",
+   "mechanism": "Shredded sentence",
+   "transform": null,
+   "encoded": "CUTTLEFISH",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Sounding Line",
+   "answer": "URCHIN",
+   "mechanism": "Word search leftovers",
+   "transform": null,
+   "encoded": "URCHIN",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Snow That Falls Upward",
+   "answer": "BENTHIC",
+   "mechanism": "Seating plan (logic)",
+   "transform": null,
+   "encoded": "BENTHIC",
+   "mutated": null
+  },
+  {
+   "id": 6,
+   "title": "Pressure Hull",
+   "answer": "JELLYFISH",
+   "mechanism": "Spiral route",
+   "transform": null,
+   "encoded": "JELLYFISH",
+   "mutated": null
+  }
+ ]
+}

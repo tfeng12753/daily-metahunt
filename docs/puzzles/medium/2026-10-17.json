@@ -1,0 +1,363 @@
+{
+ "date": "2026-10-17",
+ "difficulty": "medium",
+ "salt": "2026-10-17/medium",
+ "number": 21,
+ "round": "The Clockmaker's Will",
+ "intro": "The old clockmaker left everything to whichever apprentice could finish the last clock, and it still sits on the horse with no face, no hands, and fourteen drawers along the wall. His successors have chalked the usual titles on the bench (Remontoire, Jewelled Bearing, Mainspring, Perpetual Calendar, Escapement), but the drawers keep their secrets. On the bench beside the oilstone lies the leather day-book, its pages ruled in twos, and nearly every line closes with a pair of tallies pressed close together. The tallies are not counts of parts; they are copied out beside the chalked titles and left there overnight. Apprentices come and go with files under their arms, but the ledger stays open at the same spread, as if waiting for the last pair to be copied out.",
+ "echo": "Some time can only be measured by watching it run out.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Remontoire",
+   "flavor": "Shaken, one word at a time.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "TEH",
+      "SGEMASE",
+      "WSA",
+      "DIDENH",
+      "NI",
+      "PANLI",
+      "IGHTS",
+      "LAL",
+      "OALNG",
+      "DAN",
+      "TI",
+      "SYPMLI",
+      "SSYA",
+      "LELB"
+     ],
+     "inline": true,
+     "tray": "word"
+    }
+   ],
+   "hash": "e054a735e44da7504a40cdf11c10c679a193705e248ae4f6642f4610234f357d",
+   "partials": {},
+   "hints": [
+    "Each word is complete but shuffled. Start with the shortest ones: does a sentence appear?",
+    "Unscramble each word where it stands; the sentence tells you what to submit."
+   ],
+   "length": 4
+  },
+  {
+   "id": 2,
+   "title": "Jewelled Bearing",
+   "flavor": "A sentence in disguise, and not a very good disguise.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "ZYKB QJCD YJB ADQZ KZB BDRLDZ NXL J MDLI UXSC ZKTD JSP ZYJZ BDRLDZ KB FDKCYZ",
+     "wide": true,
+     "solver": "substitution"
+    }
+   ],
+   "hash": "b3071bc674cc97116beee39e2741a46075c9603f173fd27077d0bcf808b66db6",
+   "partials": {},
+   "hints": [
+    "Which short words are most common in English? Could any of them be hiding here?",
+    "Each symbol always stands for the same letter. The finished sentence tells you what to submit."
+   ],
+   "length": 6
+  },
+  {
+   "id": 3,
+   "title": "Mainspring",
+   "flavor": "Only the count of each run was kept. Start from the end; that's where it started.",
+   "blocks": [
+    {
+     "type": "nonogram",
+     "rows": [
+      [
+       4,
+       1,
+       1,
+       3,
+       4,
+       5,
+       4
+      ],
+      [
+       1,
+       1,
+       2,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       4,
+       3
+      ],
+      [
+       1,
+       1,
+       1,
+       2,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       4,
+       1,
+       1,
+       3,
+       4,
+       5,
+       4
+      ]
+     ],
+     "cols": [
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       3
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       5
+      ],
+      [],
+      [
+       3
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       3
+      ],
+      [],
+      [
+       3
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "givens": [
+      [
+       1,
+       18,
+       1
+      ],
+      [
+       4,
+       13,
+       1
+      ],
+      [
+       4,
+       34,
+       0
+      ],
+      [
+       0,
+       13,
+       1
+      ],
+      [
+       0,
+       34,
+       1
+      ]
+     ]
+    }
+   ],
+   "hash": "b32682dfb0525257dbaee6680b3ba27580de994609aea57effbbf56971a3b3e6",
+   "partials": {
+    "78251fd9fd31ce9f215c2cc6b87810d85ff367726994b453ad75d967fca02772": "You've decoded it, but it's not finished. One more layer."
+   },
+   "hints": [
+    "The numbers describe runs of filled squares. What picture could they be drawing? And if what you get still isn't a word, reread the flavour text.",
+    "Paint by numbers. The picture is written, not drawn. Then one more layer: Read what you get backwards."
+   ],
+   "length": 6
+  },
+  {
+   "id": 4,
+   "title": "Perpetual Calendar",
+   "flavor": "Fill the gaps.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "_OVEMENT",
+      "SPR_NG",
+      "METRO_OME",
+      "LO_PE",
+      "RATCHE_",
+      "BALANC_"
+     ],
+     "ordered": true,
+     "mono": true
+    }
+   ],
+   "hash": "29cf3defb147ec26f2dcf016eccac03de4a0ac00dd5c60625745fb24deef7497",
+   "partials": {},
+   "hints": [
+    "Every gap takes exactly one letter. Is there a pattern in what you filled in?",
+    "Read the letters you supplied, in order."
+   ],
+   "length": 6
+  },
+  {
+   "id": 5,
+   "title": "Escapement",
+   "flavor": "Turn the wheel until it talks.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "BMFY YMJ HTZWNJW HFWWNJI BFX STY LTQI TW XJHWJYX GZY F XNSLQJ BTWI FQFWR",
+     "wide": true,
+     "solver": "substitution"
+    }
+   ],
+   "hash": "8de6e7dba9c0e45180aa621c2c47f68af92de106f592638bc789cb901b4872b5",
+   "partials": {},
+   "hints": [
+    "Try moving every letter the same distance. How far turns the short words into English?",
+    "A Caesar shift: find the one shift that fixes a short word, then apply it everywhere."
+   ],
+   "length": 5
+  }
+ ],
+ "meta": {
+  "title": "Meta: The Clockmaker's Will",
+  "flavor": "Tonight's seating chart.",
+  "blocks": [
+   {
+    "type": "list",
+    "items": [
+     "Row 2, seat 5",
+     "Row 3, seat 4",
+     "Row 4, seat 4",
+     "Row 5, seat 4",
+     "Row 2, seat 4",
+     "Row 1, seat 3",
+     "Row 5, seat 1",
+     "Row 3, seat 1",
+     "Row 3, seat 1"
+    ],
+    "ordered": true
+   }
+  ],
+  "length": 9,
+  "hash": "7860628445c8c31a1136c95fcd2b5ef8057677799863400a784c8ae65aa0b3ed",
+  "hints": [
+   "Every entry has two numbers. What in this round is numbered, and what could the second number count?",
+   "The first number picks a puzzle; the second picks a letter inside its answer."
+  ]
+ },
+ "described": true
+}

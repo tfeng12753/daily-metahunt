@@ -1,0 +1,64 @@
+{
+ "date": "2026-10-16",
+ "number": 20,
+ "difficulty": "hard",
+ "final": "KRAKEN",
+ "metaType": "fitin",
+ "explain": "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Black Smoker",
+   "answer": "CRAB",
+   "mechanism": "Rail fence (cluephrase)",
+   "transform": null,
+   "encoded": "CRAB",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Lantern Hours",
+   "answer": "SHARK",
+   "mechanism": "Scrambled sentence",
+   "transform": null,
+   "encoded": "SHARK",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Marine Snow",
+   "answer": "MARIANA",
+   "mechanism": "Book cipher",
+   "transform": null,
+   "encoded": "MARIANA",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Ballast",
+   "answer": "PERISCOPE",
+   "mechanism": "Morse code",
+   "transform": "ROT13",
+   "encoded": "CREVFPBCR",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Thermocline",
+   "answer": "PLANKTON",
+   "mechanism": "Atomic numbers (symbols)",
+   "transform": null,
+   "encoded": "PLANKTON",
+   "mutated": null
+  },
+  {
+   "id": 6,
+   "title": "Pressure Hull",
+   "answer": "ANCHOR",
+   "mechanism": "Maritime signal flags",
+   "transform": null,
+   "encoded": "ANCHOR",
+   "mutated": null
+  }
+ ]
+}

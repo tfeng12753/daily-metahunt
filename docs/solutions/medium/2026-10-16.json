@@ -1,0 +1,82 @@
+{
+ "date": "2026-10-16",
+ "number": 20,
+ "difficulty": "medium",
+ "final": "PRESSURE",
+ "metaType": "stowaway",
+ "explain": "Each feeder decodes to its answer plus one inserted letter. The inserted letters, in puzzle order, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Dead Reckoning",
+   "answer": "VIPERFISH",
+   "mechanism": "Cryptogram (cluephrase)",
+   "transform": null,
+   "encoded": "VIPERPFISH",
+   "mutated": "VIPERPFISH"
+  },
+  {
+   "id": 2,
+   "title": "Siphon",
+   "answer": "BARNACLE",
+   "mechanism": "DTMF multi-tap",
+   "transform": null,
+   "encoded": "BARNACLRE",
+   "mutated": "BARNACLRE"
+  },
+  {
+   "id": 3,
+   "title": "Cold Seep",
+   "answer": "LANTERNFISH",
+   "mechanism": "Mixed number bases",
+   "transform": null,
+   "encoded": "LANTERENFISH",
+   "mutated": "LANTERENFISH"
+  },
+  {
+   "id": 4,
+   "title": "Thermocline",
+   "answer": "STARFISH",
+   "mechanism": "Drop quote",
+   "transform": null,
+   "encoded": "STARFISHS",
+   "mutated": "STARFISHS"
+  },
+  {
+   "id": 5,
+   "title": "Snow That Falls Upward",
+   "answer": "CUTTLEFISH",
+   "mechanism": "Nonogram",
+   "transform": null,
+   "encoded": "CUTTSLEFISH",
+   "mutated": "CUTTSLEFISH"
+  },
+  {
+   "id": 6,
+   "title": "Pressure Hull",
+   "answer": "OCTOPUS",
+   "mechanism": "Book cipher",
+   "transform": null,
+   "encoded": "OCTOUPUS",
+   "mutated": "OCTOUPUS"
+  },
+  {
+   "id": 7,
+   "title": "Porthole",
+   "answer": "SEAHORSE",
+   "mechanism": "Missing letters",
+   "transform": null,
+   "encoded": "SEARHORSE",
+   "mutated": "SEARHORSE"
+  },
+  {
+   "id": 8,
+   "title": "Marine Snow",
+   "answer": "MARIANA",
+   "mechanism": "Rail fence (cluephrase)",
+   "transform": null,
+   "encoded": "MARIEANA",
+   "mutated": "MARIEANA"
+  }
+ ]
+}
