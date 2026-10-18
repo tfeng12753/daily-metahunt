@@ -1,0 +1,391 @@
+{
+ "date": "2026-10-18",
+ "difficulty": "hard",
+ "salt": "2026-10-18",
+ "number": 22,
+ "round": "Mission Control, Night Shift",
+ "intro": "The probe was declared lost in 1994. Last night, it phoned home, and it had clearly been practising. The night flight controllers keep a spare name badge on the pegboard, blank and slightly scuffed, and though the roster has no use for it they leave it hanging beside the real ones as if the room were expecting a visitor it cannot name. The air smells of paper tape and burnt toast, and the consoles flicker with the slow rhythm the old crew used to call the probe's breathing. Someone has left a cup of tea cooling on the manoeuvre desk, and the saucer is already ringed, so the next hand can take it without asking. Nobody turns the lights up; the dark is the part they trust.",
+ "echo": "Everything up there is falling. It just keeps missing.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Deep Space Network",
+   "flavor": "Two forward, one across.",
+   "blocks": [
+    {
+     "type": "board",
+     "rows": [
+      "ESPUBORT",
+      "VOCMHMCZ",
+      "ZFVIYFUP",
+      "EIIKGOQN",
+      "LPWIRYVO",
+      "LMZHBHOO",
+      "BXHOAOIE",
+      "YJUSVRMI"
+     ]
+    },
+    {
+     "type": "prose",
+     "text": "The knight sets out from g5: Ne4 Nf2 Ng4 Nh2 Nf1 Nd2."
+    }
+   ],
+   "hash": "a22607584510f4c01e8376bdef74351168ca8b61fd38107a4774021c93b128db",
+   "partials": {
+    "2fc78f1b7fd9bb2487f749eb6251df7516609c7d9680a121b4574457a9524ddf": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Those are chess moves. Which squares does the piece land on, and what's written there?"
+   ]
+  },
+  {
+   "id": 2,
+   "title": "Mission Elapsed Time",
+   "flavor": "All the right letters, none in the right places.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "SGEAMSE",
+      "ILSPYM",
+      "IESLRNTTLOCNOA",
+      "TI",
+      "HET",
+      "NI",
+      "SITGH",
+      "ASW",
+      "NAD",
+      "LLA",
+      "OALGN",
+      "NAIPL",
+      "NHIEDD",
+      "ASSY"
+     ],
+     "inline": true,
+     "tray": "word"
+    }
+   ],
+   "hash": "1e7734c0d948ef5831177c63ff8f0e45b4b83b0d6086417c5e9d329237329c03",
+   "partials": {
+    "d572007d7bb49a3b6c5a604730f3c4854d6baeb5791356e7bf0b45eac3711a2f": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Each word is complete but shuffled. Start with the shortest ones: does a sentence appear?"
+   ]
+  },
+  {
+   "id": 3,
+   "title": "Loss of Signal",
+   "flavor": "Count everything. Then count again, differently. Unlucky for some, and the same distance either way.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "Pawns on a chessboard at the start of a game",
+      "Red balls racked at the start of a snooker frame",
+      "Humps on a Bactrian camel",
+      "Legs on an insect",
+      "Letters in the English alphabet",
+      "Humps on a Bactrian camel",
+      "Legs on an insect"
+     ],
+     "ordered": true,
+     "tray": "letter"
+    }
+   ],
+   "hash": "dacc4c9238f31d554e75f814515217feab52f9361cc44155e96b54b12de9f4e0",
+   "partials": {
+    "368f0f998a6c7ab2b3fdbc002a62f453df5c0390c4ab41d7827c826979b9461e": "You've decoded it, but it's not finished. One more layer.",
+    "0a34106268b00fa7891f8334c4aaef9d67b7113e97ddd8d68fa0280e4b4a9d42": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Every line has a number for an answer. Could those numbers be counting through something else? And if what you get still isn't a word, reread the flavour text."
+   ]
+  },
+  {
+   "id": 4,
+   "title": "Telemetry",
+   "flavor": "Each entry picked up a hitchhiker on the way. Whoever copied it out was standing in front of a mirror.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "HEKOCTR",
+      "SVLNEU",
+      "OESPLUAC",
+      "RNTUSAZ",
+      "IISCELTOS",
+      "EMURDCYR",
+      "LXAARYG",
+      "IINEGMM",
+      "WODAITSER",
+      "XIUOQRNE"
+     ],
+     "ordered": true,
+     "mono": true
+    }
+   ],
+   "hash": "9cfe6734c2fd705073ecd968d242d564162a9a1b4c9244b4db9cbad715462ee2",
+   "partials": {
+    "e5e039a355739aa621920e05525145cdde3942f84fb9f7782cde70230d5dc3f6": "You've decoded it, but it's not finished. One more layer.",
+    "b50218b8dd76181f72faa5d8a47bfae3e8b4c7918cda2f982ab80e12926b1453": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Each jumble is almost a word from this round, but with a letter to spare. Which letter, every time? And if what you get still isn't a word, reread the flavour text."
+   ]
+  },
+  {
+   "id": 5,
+   "title": "Burn Window",
+   "flavor": "The picture is worth exactly one word.",
+   "blocks": [
+    {
+     "type": "nonogram",
+     "rows": [
+      [
+       4,
+       5,
+       4,
+       5,
+       5,
+       4,
+       5,
+       5
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       4,
+       4,
+       4,
+       1,
+       1,
+       1,
+       2,
+       4,
+       4
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       5,
+       1,
+       1,
+       1,
+       5,
+       4,
+       5,
+       5
+      ]
+     ],
+     "cols": [
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       3
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       3
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "givens": []
+    }
+   ],
+   "hash": "5d37c5f8a633cba70caacd0953a8d4b1a7895f06e56f30d14398724362c501f1",
+   "partials": {
+    "31ef79801a718aa54905980e904ede215e9c04403d22f84a85ffdace60be38d5": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "The numbers describe runs of filled squares. What picture could they be drawing?"
+   ]
+  }
+ ],
+ "meta": {
+  "title": "Meta: Mission Control, Night Shift",
+  "flavor": "Everything arrived a little heavier than it left.",
+  "blocks": [],
+  "length": 5,
+  "hash": "58f6a61f775cd6b4172c2feba1455cea8f0e40ccfb4156519c4c30f12c159223",
+  "hints": [
+   "Did every answer come out the right size the first time? Each had one letter too many. Did you keep them?"
+  ]
+ },
+ "described": true
+}

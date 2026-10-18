@@ -1,0 +1,64 @@
+{
+ "date": "2026-10-17",
+ "number": 21,
+ "difficulty": "hard",
+ "final": "CUCKOO",
+ "metaType": "fitin",
+ "explain": "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Power Reserve",
+   "answer": "COG",
+   "mechanism": "Knight's path",
+   "transform": null,
+   "encoded": "COG",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Fusee Chain",
+   "answer": "ANCHOR",
+   "mechanism": "Playfair keyed by the title",
+   "transform": null,
+   "encoded": "ANCHOR",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Escapement",
+   "answer": "LOUPE",
+   "mechanism": "Letter sudoku",
+   "transform": "Reversal",
+   "encoded": "EPUOL",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Remontoire",
+   "answer": "BALANCE",
+   "mechanism": "Drop quote",
+   "transform": null,
+   "encoded": "BALANCE",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Moonphase",
+   "answer": "CHRONOGRAPH",
+   "mechanism": "Book cipher",
+   "transform": null,
+   "encoded": "CHRONOGRAPH",
+   "mutated": null
+  },
+  {
+   "id": 6,
+   "title": "Complication",
+   "answer": "TOCK",
+   "mechanism": "Cryptogram (cluephrase)",
+   "transform": null,
+   "encoded": "TOCK",
+   "mutated": null
+  }
+ ]
+}

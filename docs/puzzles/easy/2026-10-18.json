@@ -1,0 +1,311 @@
+{
+ "date": "2026-10-18",
+ "difficulty": "easy",
+ "salt": "2026-10-18/easy",
+ "number": 22,
+ "round": "Mission Control, Night Shift",
+ "intro": "In the night-shift glow of Mission Control, the probe was meant to be only a footnote: declared lost in 1994, then silent for decades. Last night it phoned home, and after the first astonished silence the controllers noticed it had clearly been practising, because the bursts arrived in tidy numbered strips. Behind the consoles stands the old pigeonhole wall, every recess cut to take exactly one strip and no two alike, with lengths marked in worn pencil. The duty officer says the returned strips are to be laid against that wall by length alone, one strip to a recess, not by where they came from. Above the wall hangs a large status chart whose shaded panes have waited since the nineties; seat the strips correctly and those panes, read in order, will state what the probe was really reporting.",
+ "echo": "Stars are born in clouds, like most bad ideas.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Countdown",
+   "flavor": "The host at mission control fussed over the seating plan for days. Every guest pays for their chair with one letter of their name: the further along the row, the deeper into the name.",
+   "blocks": [
+    {
+     "type": "seating",
+     "seats": 5,
+     "names": [
+      "Sophia",
+      "Edward",
+      "Reginald",
+      "Lavinia",
+      "Meredith"
+     ],
+     "clues": [
+      "Sophia has seat 2.",
+      "Meredith sits immediately to the right of Lavinia.",
+      "Edward is not in seat 1.",
+      "Meredith sits somewhere between Edward and Reginald."
+     ],
+     "logic": [
+      [
+       "at",
+       "SOPHIA",
+       2
+      ],
+      [
+       "right_of",
+       "MEREDITH",
+       "LAVINIA"
+      ],
+      [
+       "not_at",
+       "EDWARD",
+       1
+      ],
+      [
+       "between",
+       "EDWARD",
+       "MEREDITH",
+       "REGINALD"
+      ]
+     ]
+    }
+   ],
+   "hash": "d0d928d760f6f817b1ed84442b300d07ddff92a7d63ede8f972c9920baaeb9d9",
+   "partials": {},
+   "hints": [
+    "A logic puzzle: use the clues to find the one seating that works (seats are numbered 1 to n from the left). Then the guest in seat k gives the k-th letter of their name.",
+    "To check you're on track: the answer begins with R."
+   ],
+   "technique": "Seating plan (logic)",
+   "length": 5
+  },
+  {
+   "id": 2,
+   "title": "Telemetry",
+   "flavor": "A board full of noise, and one horseman who knows exactly where to step.",
+   "blocks": [
+    {
+     "type": "board",
+     "rows": [
+      "RGUEFHPY",
+      "GNMFEEWA",
+      "UJAYAMJX",
+      "UOYCJKRE",
+      "UATWPYMZ",
+      "NQDONPNA",
+      "CLVPIOGQ",
+      "ARFMXENI"
+     ]
+    },
+    {
+     "type": "prose",
+     "text": "The knight sets out from h5: Ng3 Nf1 Nd2 Nc4 Na5 Nb7 Nd8."
+    }
+   ],
+   "hash": "ce2bf8129577734d8aaef07585a51c5d517b96a8cf0d26d9f08c321b56c4117f",
+   "partials": {},
+   "hints": [
+    "Start on the given square and follow the knight moves; read the letter on each square it lands on.",
+    "To check you're on track: the answer begins with N."
+   ],
+   "technique": "Knight's path",
+   "length": 7
+  },
+  {
+   "id": 3,
+   "title": "Re-entry",
+   "flavor": "The labels at mission control have faded. Each one lost exactly one letter.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "HELME_",
+      "LAUNC_",
+      "AST_ONAUT",
+      "_RANUS",
+      "SOL_TICE",
+      "SPACESUI_",
+      "LAND_R",
+      "BOOSTE_"
+     ],
+     "ordered": true,
+     "mono": true
+    }
+   ],
+   "hash": "6effd7e871a32adafff99bc51816358bcc588ca776a5efd0ede99109bb37a9bd",
+   "partials": {},
+   "hints": [
+    "Each theme word is missing one letter. The missing letters, in order, spell the answer.",
+    "To check you're on track: the answer begins with T."
+   ],
+   "technique": "Missing letters",
+   "length": 8
+  },
+  {
+   "id": 4,
+   "title": "Deep Space Network",
+   "flavor": "The typesetter shook each word like a box of tiles, one word at a time.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "SLDOHU",
+      "IHTS",
+      "TEON",
+      "ALFL",
+      "ITON",
+      "ETH",
+      "OGWNR",
+      "NDHSA",
+      "AEEPSL",
+      "GOFTER",
+      "HET",
+      "RDOW",
+      "ELSILEATT"
+     ],
+     "inline": true,
+     "tray": "word"
+    }
+   ],
+   "hash": "09d8b82fc8755f1bba7de1bf09606b813ce01b2865808ff2e6e9edbb70a9c081",
+   "partials": {},
+   "hints": [
+    "Each word of a sentence has had its letters shuffled. Unscramble them; the sentence tells you the answer.",
+    "To check you're on track: the answer begins with S."
+   ],
+   "technique": "Scrambled sentence",
+   "length": 9
+  },
+  {
+   "id": 5,
+   "title": "Dark Side",
+   "flavor": "The newspaper's puzzle page, the one your grandmother did in pen, every single morning.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "MXVS BLGZTS RXS CDOG AVJJYT OG DVPPYT PVC WX LXC CTYY CDT XCDTSG DXZ MXV NXC OC",
+     "wide": true,
+     "solver": "substitution"
+    }
+   ],
+   "hash": "4c46d86068ac7ccb16dd5dc30e9f9004badf9e0f5d5840904d9f50c55d815add",
+   "partials": {},
+   "hints": [
+    "Simple monoalphabetic substitution with word breaks kept. Solve the sentence; it tells you the answer.",
+    "To check you're on track: the answer begins with H."
+   ],
+   "technique": "Cryptogram (cluephrase)",
+   "length": 6
+  },
+  {
+   "id": 6,
+   "title": "Burn Window",
+   "flavor": "Every row at mission control holds one of everything. So does every column, and every box. Then read the numbered squares.",
+   "blocks": [
+    {
+     "type": "sudoku",
+     "size": 9,
+     "rows": [
+      "I..AN....",
+      "...S....A",
+      "CN.O.EITS",
+      "........N",
+      "..ET...SI",
+      ".A.LSOT..",
+      ".E.CI.SA.",
+      "AISE.LCN.",
+      "TC.NA.O.E"
+     ],
+     "alphabet": "ACEILNOST",
+     "marks": [
+      [
+       4,
+       4
+      ],
+      [
+       3,
+       7
+      ],
+      [
+       5,
+       0
+      ],
+      [
+       0,
+       1
+      ],
+      [
+       0,
+       2
+      ],
+      [
+       3,
+       4
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       6,
+       8
+      ],
+      [
+       2,
+       2
+      ],
+      [
+       3,
+       1
+      ],
+      [
+       3,
+       3
+      ],
+      [
+       7,
+       4
+      ],
+      [
+       1,
+       6
+      ]
+     ]
+    }
+   ],
+   "hash": "bf45f557904501179f38a6c5b1544b96c57311cb5bcd6d80f91bf98143fed2b3",
+   "partials": {},
+   "hints": [
+    "Sudoku using the letters shown instead of digits (each row, column and box uses each letter once). Read the numbered squares in order.",
+    "To check you're on track: the answer begins with C."
+   ],
+   "technique": "Letter sudoku",
+   "length": 13
+  }
+ ],
+ "meta": {
+  "title": "Meta: Mission Control, Night Shift",
+  "flavor": "Everything at mission control has a place, and every place is exactly the right size.",
+  "blocks": [
+   {
+    "type": "fitgrid",
+    "rows": [
+     {
+      "len": 7,
+      "shade": 0
+     },
+     {
+      "len": 5,
+      "shade": 3
+     },
+     {
+      "len": 6,
+      "shade": 2
+     },
+     {
+      "len": 8,
+      "shade": 3
+     },
+     {
+      "len": 9,
+      "shade": 5
+     },
+     {
+      "len": 13,
+      "shade": 8
+     }
+    ]
+   }
+  ],
+  "length": 6,
+  "hash": "60fe827a3c309da66affc9b4857dbee38533cd73afbcf8e500edde99f49ba730",
+  "hints": [
+   "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+   "To check you're on track: the final answer begins with N."
+  ]
+ },
+ "described": true
+}

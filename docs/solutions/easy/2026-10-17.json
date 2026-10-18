@@ -1,0 +1,55 @@
+{
+ "date": "2026-10-17",
+ "number": 21,
+ "difficulty": "easy",
+ "final": "SUNDIAL",
+ "metaType": "logbook",
+ "explain": "Each entry is (puzzle number, letter number): index into that puzzle's answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Moonphase",
+   "answer": "HAND",
+   "mechanism": "Cryptogram (cluephrase)",
+   "transform": null,
+   "encoded": "HAND",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Complication",
+   "answer": "BRASS",
+   "mechanism": "Nonogram",
+   "transform": null,
+   "encoded": "BRASS",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Minute Repeater",
+   "answer": "PINION",
+   "mechanism": "Shredded sentence",
+   "transform": null,
+   "encoded": "PINION",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Mainspring",
+   "answer": "MINUTE",
+   "mechanism": "Morse code",
+   "transform": null,
+   "encoded": "MINUTE",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Perpetual Calendar",
+   "answer": "BELL",
+   "mechanism": "Knight's path",
+   "transform": null,
+   "encoded": "BELL",
+   "mutated": null
+  }
+ ]
+}

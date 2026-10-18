@@ -1,0 +1,264 @@
+{
+ "date": "2026-10-18",
+ "difficulty": "medium",
+ "salt": "2026-10-18/medium",
+ "number": 22,
+ "round": "Mission Control, Night Shift",
+ "intro": "The probe was declared lost in 1994. Last night, it phoned home, and it had clearly been practising. Flight controllers who have spent years in the dark on the graveyard shift don't get spooked by much, but the burst of telemetry that arrived between the midnight handover and the coffee run felt less like a signal and more like a message left in a pigeonhole. On the console beside Alondra's keyboard, a row of five index cards is clipped to the desk rail, each one bearing a single entry in her cramped hand: a number, and beneath it another number, as if she were noting which chair a visitor took and which window they climbed in at. She will not say what the cards are for, only that the probe's first transmission ended in the same two figures, repeated like a door code.",
+ "echo": "For a few minutes, the day forgot to happen.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Loss of Signal",
+   "flavor": "Shaken, one word at a time.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "VREEY",
+      "DOGO",
+      "TNUH",
+      "SNDE",
+      "ITHW",
+      "A",
+      "ELSNIG",
+      "ORWD",
+      "NAD",
+      "HTE",
+      "DROW",
+      "UYO",
+      "WTAN",
+      "OFRM",
+      "HSTI",
+      "GPEA",
+      "SI",
+      "OTLSIECS"
+     ],
+     "inline": true,
+     "tray": "word"
+    }
+   ],
+   "hash": "41c12f6109e1b394bb7367a5e170f76f4b5430f92155c70570f681f5720a1e30",
+   "partials": {},
+   "hints": [
+    "Each word is complete but shuffled. Start with the shortest ones: does a sentence appear?",
+    "Unscramble each word where it stands; the sentence tells you what to submit."
+   ],
+   "length": 8
+  },
+  {
+   "id": 2,
+   "title": "Apogee",
+   "flavor": "Around the edges first; the point comes last.",
+   "blocks": [
+    {
+     "type": "lettergrid",
+     "rows": [
+      "TORTYPEDT",
+      "AENTDEABH",
+      "RWO···DEE",
+      "EET···WFL",
+      "PNULPSAOA",
+      "OILEHTERS",
+      "EHTGNIHTT"
+     ]
+    }
+   ],
+   "hash": "374b91a04b8728ba95b11edd73fc5bbb52d7812577b1300f01baf79a771d575d",
+   "partials": {},
+   "hints": [
+    "All the letters of a sentence are here, but not in rows. Try walking the grid the way a snail would.",
+    "Start in one corner and spiral inward along the edges; one corner and one direction read as a sentence."
+   ],
+   "length": 5
+  },
+  {
+   "id": 3,
+   "title": "Deep Space Network",
+   "flavor": "Every part here resists a little, and never more than twenty-six.",
+   "blocks": [
+    {
+     "type": "resistors",
+     "items": [
+      [
+       "black",
+       "brown",
+       "black",
+       "gold"
+      ],
+      [
+       "brown",
+       "white",
+       "black",
+       "gold"
+      ],
+      [
+       "red",
+       "black",
+       "black",
+       "gold"
+      ],
+      [
+       "black",
+       "green",
+       "black",
+       "gold"
+      ],
+      [
+       "brown",
+       "grey",
+       "black",
+       "gold"
+      ],
+      [
+       "brown",
+       "green",
+       "black",
+       "gold"
+      ],
+      [
+       "black",
+       "white",
+       "black",
+       "gold"
+      ],
+      [
+       "black",
+       "yellow",
+       "black",
+       "gold"
+      ]
+     ]
+    }
+   ],
+   "hash": "567b30b31478a8d4c541a45f481502edb83d59e7e37b279da8a6c3a7b2d3d32e",
+   "partials": {},
+   "hints": [
+    "Engineers read stripes like these as numbers. What number does each part give, and what is a number up to 26?",
+    "Resistor colour code: the first two bands are two digits; that number is a letter position."
+   ],
+   "length": 8
+  },
+  {
+   "id": 4,
+   "title": "Hohmann Transfer",
+   "flavor": "Scratched into the wall of a very old lodge.",
+   "blocks": [
+    {
+     "type": "pigpen",
+     "items": [
+      {
+       "g": "x",
+       "p": 1,
+       "dot": false
+      },
+      {
+       "g": "hash",
+       "p": 4,
+       "dot": false
+      },
+      {
+       "g": "hash",
+       "p": 2,
+       "dot": true
+      },
+      {
+       "g": "hash",
+       "p": 4,
+       "dot": false
+      },
+      {
+       "g": "x",
+       "p": 0,
+       "dot": false
+      },
+      {
+       "g": "hash",
+       "p": 2,
+       "dot": false
+      },
+      {
+       "g": "hash",
+       "p": 5,
+       "dot": true
+      },
+      {
+       "g": "hash",
+       "p": 6,
+       "dot": true
+      },
+      {
+       "g": "hash",
+       "p": 4,
+       "dot": false
+      }
+     ]
+    }
+   ],
+   "hash": "72ca021ffa73a265999bbc2b7e1f2a4ade17f8670b3d1f9a2a25aaa9e91582b3",
+   "partials": {},
+   "hints": [
+    "Picture the alphabet written into a couple of #-grids and X-grids. Which cell would each shape be?",
+    "Pigpen cipher: the shape of each cell, and whether it has a dot, picks the letter."
+   ],
+   "length": 9
+  },
+  {
+   "id": 5,
+   "title": "Slingshot",
+   "flavor": "Two forward, one across.",
+   "blocks": [
+    {
+     "type": "board",
+     "rows": [
+      "WQTPUZFO",
+      "KBPKVLKW",
+      "EZNYSIRO",
+      "CDAQVXXS",
+      "FTNCBRYN",
+      "HHEVSHNU",
+      "KVDLDLSF",
+      "HRFYBYFA"
+     ]
+    },
+    {
+     "type": "prose",
+     "text": "The knight sets out from d1: Nf2 Nh1 Ng3 Ne2 Nc3 Nb1."
+    }
+   ],
+   "hash": "081a545685363b507c852381caa97d8224ef440890c7755200b18479cf0c1893",
+   "partials": {},
+   "hints": [
+    "Those are chess moves. Which squares does the piece land on, and what's written there?",
+    "Start on the given square, play each move, and read the letter on every square it lands on."
+   ],
+   "length": 6
+  }
+ ],
+ "meta": {
+  "title": "Meta: Mission Control, Night Shift",
+  "flavor": "The porter only ever noted where each passenger boarded.",
+  "blocks": [
+   {
+    "type": "list",
+    "items": [
+     "Platform 4, car 9",
+     "Platform 1, car 7",
+     "Platform 5, car 1",
+     "Platform 3, car 7",
+     "Platform 2, car 1",
+     "Platform 1, car 4",
+     "Platform 4, car 9"
+    ],
+    "ordered": true
+   }
+  ],
+  "length": 7,
+  "hash": "eb32a3a94cb1968a3dc64ca0d59c5ed8577b65759d55964c374c4c76d1313607",
+  "hints": [
+   "Every entry has two numbers. What in this round is numbered, and what could the second number count?",
+   "The first number picks a puzzle; the second picks a letter inside its answer."
+  ]
+ },
+ "described": true
+}
