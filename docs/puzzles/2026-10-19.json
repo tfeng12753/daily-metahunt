@@ -1,0 +1,417 @@
+{
+ "date": "2026-10-19",
+ "difficulty": "hard",
+ "salt": "2026-10-19",
+ "number": 23,
+ "round": "Insert Coin",
+ "intro": "The cabinet in the back corner of the arcade has been unplugged since 1987. It still has a high-score table, and the names on it keep changing. Nobody who works here will say who types them, but the regulars all swear it's the same ghost, tapping away at three keys long after closing, when the lights are off and the only sound is the hum of the machines still drinking. The owner keeps a stack of old score sheets beside the change machine, and every so often a fresh one appears on top, written in pencil, with something pressed into the margin that nobody can quite explain.",
+ "echo": "One up, two up: somebody has to hold the controls.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Attract Mode",
+   "flavor": "Only the count of each run was kept. Half a turn of the wheel and you'd have it.",
+   "blocks": [
+    {
+     "type": "nonogram",
+     "rows": [
+      [
+       4,
+       1,
+       1,
+       4,
+       5,
+       4,
+       1,
+       1,
+       4
+      ],
+      [
+       1,
+       1,
+       2,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       4,
+       1,
+       1,
+       1,
+       1,
+       4,
+       1,
+       2,
+       1,
+       4
+      ],
+      [
+       1,
+       1,
+       2,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1,
+       4,
+       1,
+       4,
+       1,
+       1,
+       1
+      ]
+     ],
+     "cols": [
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       5
+      ],
+      [],
+      [
+       3
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1
+      ],
+      [],
+      [
+       3
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       3
+      ],
+      [],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       3
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "givens": [
+      [
+       4,
+       32,
+       1
+      ],
+      [
+       3,
+       9,
+       1
+      ],
+      [
+       1,
+       12,
+       1
+      ],
+      [
+       3,
+       34,
+       0
+      ],
+      [
+       0,
+       12,
+       0
+      ],
+      [
+       0,
+       31,
+       0
+      ],
+      [
+       1,
+       34,
+       0
+      ]
+     ]
+    }
+   ],
+   "hash": "6bd4577db20da7531ede314fffcea6d6f24fda786c128ac95b7f3b0ef7e14da9",
+   "partials": {
+    "e6ae215c63479658fd2d137699f93fbdd669990b98815cba7cce4fcda4d956b2": "You've decoded it, but it's not finished. One more layer.",
+    "d76f63c233e23ab515efaaeaf4ec42c2a9235ff71ecaab4547f52a49a89cc449": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "The numbers describe runs of filled squares. What picture could they be drawing? And if what you get still isn't a word, reread the flavour text."
+   ]
+  },
+  {
+   "id": 2,
+   "title": "Up Up Down Down",
+   "flavor": "Two forward, one across. Whatever you find, it was said on the way out, not the way in.",
+   "blocks": [
+    {
+     "type": "board",
+     "rows": [
+      "EEJYOXKU",
+      "ZGILODLW",
+      "LLVZRVES",
+      "CVCEFVJM",
+      "BZGJYTOI",
+      "LBBTRIFC",
+      "LZIGXNDL",
+      "WRZMLJYW"
+     ]
+    },
+    {
+     "type": "prose",
+     "text": "The knight sets out from c4: Nb6 Nd5 Nf6 Nd7 Nb8 Na6."
+    }
+   ],
+   "hash": "db5dcd8aaadbb230732d33cb585728f4ee51692842d3bd7463796b30b35d8e06",
+   "partials": {
+    "50642f82cc845e1fcdb8c6b6b7504feafcdce6f7ff157a3f57079cf56fb67f57": "You've decoded it, but it's not finished. One more layer.",
+    "805d5e0a50bf95263b7ac54993651c96ecd9281c3824738dc6ba054ac55f24a0": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Those are chess moves. Which squares does the piece land on, and what's written there? And if what you get still isn't a word, reread the flavour text."
+   ]
+  },
+  {
+   "id": 3,
+   "title": "Player Two",
+   "flavor": "Beeps, pauses and more beeps, from a payphone that should be disconnected.",
+   "blocks": [
+    {
+     "type": "audio",
+     "kind": "dtmf",
+     "groups": [
+      "222",
+      "2",
+      "33",
+      "66",
+      "8",
+      "444",
+      "7",
+      "33",
+      "3",
+      "33"
+     ]
+    }
+   ],
+   "hash": "77815136477a9727ab6e202936adeeb67d01ce85c8540f5d66eb1b580e58a50b",
+   "partials": {
+    "a414a0d9f2f21464332edb004033da40c504b1109bdd28a4c928f50273087709": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Two frequencies at once is the sound of a phone key being pressed. What letters did those keys carry?"
+   ]
+  },
+  {
+   "id": 4,
+   "title": "Extra Life",
+   "flavor": "Shaken, one word at a time.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "DNA",
+      "HET",
+      "LELW",
+      "EON",
+      "ENTX",
+      "EDON",
+      "NDWO",
+      "LIUETQY",
+      "NO",
+      "MYA",
+      "WDOR",
+      "OT",
+      "NWO",
+      "ETH",
+      "OEMV",
+      "OYU",
+      "PUMBLERY",
+      "TRWEI"
+     ],
+     "inline": true,
+     "tray": "word"
+    }
+   ],
+   "hash": "8fc162896ff6fb4d86fca3c9fbc35f8603e5984ec79e89fea7788d92bbb6336b",
+   "partials": {
+    "8dbe0c892073c852433808354b4405c4712c7bd08b93581dc6242c668c5d84de": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Each word is complete but shuffled. Start with the shortest ones: does a sentence appear?"
+   ]
+  },
+  {
+   "id": 5,
+   "title": "Frame Perfect",
+   "flavor": "It goes round and round, and only gets anywhere in the middle.",
+   "blocks": [
+    {
+     "type": "lettergrid",
+     "rows": [
+      "HINGTHE",
+      "TTHELIO",
+      "TECEONP",
+      "SRS·NEE",
+      "AOA·SWR",
+      "LFW·OEA",
+      "EEDELNT",
+      "HBAEDTO",
+      "TDEPYTR"
+     ]
+    }
+   ],
+   "hash": "e838b8958e85212ac577fee610145a6b7ab235de97975a6b8434cf3c64bf0e33",
+   "partials": {
+    "e7385229e7db6a6ee518a9aac9ba5c7400f37b17f871a9afc4e19835aa237a23": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "All the letters of a sentence are here, but not in rows. Try walking the grid the way a snail would."
+   ]
+  },
+  {
+   "id": 6,
+   "title": "Continue?",
+   "flavor": "Pay attention to how it stands, not what it says.",
+   "blocks": [
+    {
+     "type": "prose",
+     "text": "spaCeShip SpRITe sPRiTE coMBO donKeYKOng CrEDiT sPRitE caBineT."
+    }
+   ],
+   "hash": "1caf80d6d2a839d9d6152f6e39b0f2034a2d991f8511de4751b793043851a42b",
+   "partials": {
+    "8537e955c758f1fae59ad682712a92f2a49f1fd46c16a2ad468bdb6e95f7630f": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Two kinds of letter, big and small. How many of them would you need to spell twenty-six different things?"
+   ]
+  }
+ ],
+ "meta": {
+  "title": "Meta: Insert Coin",
+  "flavor": "Everything arrived a little heavier than it left.",
+  "blocks": [],
+  "length": 6,
+  "hash": "5d895340d10b58484140bb07344ebd85fb9a9ac98202effe485ea1d2a440fdf1",
+  "hints": [
+   "Did every answer come out the right size the first time? Each had one letter too many. Did you keep them?"
+  ]
+ },
+ "described": true
+}

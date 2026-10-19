@@ -1,0 +1,55 @@
+{
+ "date": "2026-10-18",
+ "number": 22,
+ "difficulty": "medium",
+ "final": "ECLIPSE",
+ "metaType": "logbook",
+ "explain": "Each entry is (puzzle number, letter number): index into that puzzle's answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Loss of Signal",
+   "answer": "SOLSTICE",
+   "mechanism": "Scrambled sentence",
+   "transform": null,
+   "encoded": "SOLSTICE",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Apogee",
+   "answer": "PLUTO",
+   "mechanism": "Spiral route",
+   "transform": null,
+   "encoded": "PLUTO",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Deep Space Network",
+   "answer": "ASTEROID",
+   "mechanism": "Resistor colour bands",
+   "transform": null,
+   "encoded": "ASTEROID",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Hohmann Transfer",
+   "answer": "TELESCOPE",
+   "mechanism": "Pigpen cipher",
+   "transform": null,
+   "encoded": "TELESCOPE",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Slingshot",
+   "answer": "LANDER",
+   "mechanism": "Knight's path",
+   "transform": null,
+   "encoded": "LANDER",
+   "mutated": null
+  }
+ ]
+}

@@ -1,0 +1,393 @@
+{
+ "date": "2026-10-19",
+ "difficulty": "medium",
+ "salt": "2026-10-19/medium",
+ "number": 23,
+ "round": "Insert Coin",
+ "intro": "The cabinet in the back corner of the arcade has been unplugged since 1987, and nobody has touched it since the power cut. Still, every morning the owner finds the high-score table rewritten, initials and scores in chalk, as if somebody played all night. Tucked behind the coin door is a pocket ledger, its pages filled with pairs of numbers: one, then another, then another, each line the same two-column shape. The players who linger by the machines swear the initials on the board are the same ones that appear in the ledger, though nobody can say where the chalk comes from. The owner keeps the ledger on the counter now, and some of the regulars have started copying its rows into their own notebooks.",
+ "echo": "If it didn't work, you blew on the contacts and tried again.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Continue?",
+   "flavor": "Some squares have been given to you for free. Whoever transcribed it held the alphabet up to a mirror.",
+   "blocks": [
+    {
+     "type": "nonogram",
+     "rows": [
+      [
+       3,
+       4,
+       5,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       4,
+       4,
+       1,
+       1,
+       5
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       3,
+       1,
+       1,
+       5,
+       1,
+       1,
+       1
+      ]
+     ],
+     "cols": [
+      [
+       3
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       3
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       3
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       3
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       5
+      ]
+     ],
+     "givens": [
+      [
+       4,
+       21,
+       0
+      ],
+      [
+       4,
+       0,
+       0
+      ],
+      [
+       1,
+       3,
+       0
+      ],
+      [
+       0,
+       22,
+       1
+      ],
+      [
+       1,
+       20,
+       0
+      ],
+      [
+       0,
+       18,
+       1
+      ]
+     ]
+    }
+   ],
+   "hash": "4c5954c672449eda88258efaa4b137f13a45c3be2af5e1d00db7620b5791ed40",
+   "partials": {
+    "f91be20c80d3da912b0fadae9a87d9f0d2079b1def81dfe840d1ce42e6baffca": "You've decoded it, but it's not finished. One more layer."
+   },
+   "hints": [
+    "The numbers describe runs of filled squares. What picture could they be drawing? And if what you get still isn't a word, reread the flavour text.",
+    "Paint by numbers. The picture is written, not drawn. Then one more layer: Turn the alphabet end to end: A for Z, B for Y."
+   ],
+   "length": 5
+  },
+  {
+   "id": 2,
+   "title": "Warp Zone",
+   "flavor": "An inventory, tangled.",
+   "blocks": [
+    {
+     "type": "caption",
+     "text": "Hidden in the grid: 11 words to do with the arcade."
+    },
+    {
+     "type": "board",
+     "rows": [
+      "CFROGGER",
+      "OEROCSZB",
+      "SPRITEAU",
+      "NSBOSSMT",
+      "DUNGEONT",
+      "KONAMIOO",
+      "POWERUPN",
+      "PLEVELLE"
+     ],
+     "plain": true,
+     "words": [
+      "BOSS",
+      "BUTTON",
+      "DUNGEON",
+      "FROGGER",
+      "KONAMI",
+      "LEVEL",
+      "MAZE",
+      "PONG",
+      "POWERUP",
+      "SCORE",
+      "SPRITE"
+     ]
+    }
+   ],
+   "hash": "35cf7627c0eee6b3a1e0f4e919b697a523beb12e41a8a366235f17b885952447",
+   "partials": {},
+   "hints": [
+    "Once every theme word is found, is anything left unclaimed? Read it in order.",
+    "Find the theme words; the letters no word uses, read row by row, are the answer.",
+    "The hidden words are: BOSS, BUTTON, DUNGEON, FROGGER, KONAMI, LEVEL, MAZE, PONG, POWERUP, SCORE, SPRITE."
+   ],
+   "length": 7
+  },
+  {
+   "id": 3,
+   "title": "Extra Life",
+   "flavor": "Shaken, one word at a time.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "REEYV",
+      "DOGO",
+      "NHTU",
+      "NDES",
+      "IWTH",
+      "A",
+      "NEILGS",
+      "RDWO",
+      "ADN",
+      "EHT",
+      "RDOW",
+      "OUY",
+      "WATN",
+      "ROMF",
+      "TSHI",
+      "AEGP",
+      "SI",
+      "OTHSG"
+     ],
+     "inline": true,
+     "tray": "word"
+    }
+   ],
+   "hash": "4910551e7578adc2dd0b4a003ac2bcdebae100ed506339bf0a7575c95935265f",
+   "partials": {},
+   "hints": [
+    "Each word is complete but shuffled. Start with the shortest ones: does a sentence appear?",
+    "Unscramble each word where it stands; the sentence tells you what to submit."
+   ],
+   "length": 5
+  },
+  {
+   "id": 4,
+   "title": "Kill Screen",
+   "flavor": "Everything fell straight down, and landed in the right column.",
+   "blocks": [
+    {
+     "type": "dropquote",
+     "cols": [
+      "HLTY",
+      "ILLOY",
+      "EOSU",
+      "RTU",
+      "BHP",
+      "AEGUU",
+      "NOTZ",
+      "OSTZ",
+      "DLTW",
+      "EEHIO",
+      "ERT",
+      "INR",
+      "FOSS",
+      "OT",
+      "CHR",
+      "AOT",
+      "ESTW"
+     ],
+     "mask": [
+      "....#......#...#.",
+      "...#......#..#...",
+      "...#...#..#...#..",
+      "..#...#......#...",
+      "#...#...#..######"
+     ]
+    }
+   ],
+   "hash": "cd75c96397f154379eb8bdb809d3c072a2ccdda93fb6def22f9f8ac1463745ad",
+   "partials": {},
+   "hints": [
+    "Black squares are spaces. Which two- and three-letter words fit, using only the letters each column allows?",
+    "Each column's letters drop into that column of the grid; cross them off as you place them. The sentence tells you what to submit."
+   ],
+   "length": 6
+  },
+  {
+   "id": 5,
+   "title": "Save State",
+   "flavor": "Caesar counted only things that could not be shared.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "II",
+      "LXVII",
+      "LXXI",
+      "XI",
+      "LXI",
+      "XLVII",
+      "XXIII",
+      "VII",
+      "LXVII"
+     ],
+     "inline": true
+    }
+   ],
+   "hash": "e60d16daf395dcfa4a28ba24deadf66d114ec528590dea0807fd7c73c7c3dae1",
+   "partials": {},
+   "hints": [
+    "Read the numerals. They're all prime. Is there a natural way to number the primes?",
+    "Find each prime's place in the list of primes (2 is 1st, 3 is 2nd…), then count through the alphabet."
+   ],
+   "length": 9
+  }
+ ],
+ "meta": {
+  "title": "Meta: Insert Coin",
+  "flavor": "Tonight's seating chart.",
+  "blocks": [
+   {
+    "type": "list",
+    "items": [
+     "Row 2, seat 1",
+     "Row 4, seat 2",
+     "Row 5, seat 5",
+     "Row 5, seat 3",
+     "Row 5, seat 5",
+     "Row 1, seat 2",
+     "Row 5, seat 8",
+     "Row 3, seat 1",
+     "Row 1, seat 4"
+    ],
+    "ordered": true
+   }
+  ],
+  "length": 9,
+  "hash": "ddbdc36305240917d92cc92148d1c875107dba397452412b5c098dd6f2923c7e",
+  "hints": [
+   "Every entry has two numbers. What in this round is numbered, and what could the second number count?",
+   "The first number picks a puzzle; the second picks a letter inside its answer."
+  ]
+ },
+ "described": true
+}

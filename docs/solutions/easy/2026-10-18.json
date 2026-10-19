@@ -1,0 +1,64 @@
+{
+ "date": "2026-10-18",
+ "number": 22,
+ "difficulty": "easy",
+ "final": "NEBULA",
+ "metaType": "fitin",
+ "explain": "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Countdown",
+   "answer": "ROVER",
+   "mechanism": "Seating plan (logic)",
+   "transform": null,
+   "encoded": "ROVER",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Telemetry",
+   "answer": "NEPTUNE",
+   "mechanism": "Knight's path",
+   "transform": null,
+   "encoded": "NEPTUNE",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Re-entry",
+   "answer": "THRUSTER",
+   "mechanism": "Missing letters",
+   "transform": null,
+   "encoded": "THRUSTER",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Deep Space Network",
+   "answer": "SATELLITE",
+   "mechanism": "Scrambled sentence",
+   "transform": null,
+   "encoded": "SATELLITE",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Dark Side",
+   "answer": "HUBBLE",
+   "mechanism": "Cryptogram (cluephrase)",
+   "transform": null,
+   "encoded": "HUBBLE",
+   "mutated": null
+  },
+  {
+   "id": 6,
+   "title": "Burn Window",
+   "answer": "CONSTELLATION",
+   "mechanism": "Letter sudoku",
+   "transform": null,
+   "encoded": "CONSTELLATION",
+   "mutated": null
+  }
+ ]
+}

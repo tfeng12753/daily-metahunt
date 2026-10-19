@@ -1,0 +1,55 @@
+{
+ "date": "2026-10-18",
+ "number": 22,
+ "difficulty": "hard",
+ "final": "ORBIT",
+ "metaType": "stowaway",
+ "explain": "Each feeder decodes to its answer plus one inserted letter. The inserted letters, in puzzle order, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Deep Space Network",
+   "answer": "ROVER",
+   "mechanism": "Knight's path",
+   "transform": null,
+   "encoded": "ROVERO",
+   "mutated": "ROVERO"
+  },
+  {
+   "id": 2,
+   "title": "Mission Elapsed Time",
+   "answer": "CONSTELLATION",
+   "mechanism": "Scrambled sentence",
+   "transform": null,
+   "encoded": "CONSTELLRATION",
+   "mutated": "CONSTELLRATION"
+  },
+  {
+   "id": 3,
+   "title": "Loss of Signal",
+   "answer": "COSMOS",
+   "mechanism": "Number trivia",
+   "transform": "ROT13",
+   "encoded": "POBFZBF",
+   "mutated": "CBOSMOS"
+  },
+  {
+   "id": 4,
+   "title": "Telemetry",
+   "answer": "SOLARWIND",
+   "mechanism": "Anagrams with an extra letter",
+   "transform": "Atbash (A↔Z mirror)",
+   "encoded": "HLOZIDRMWR",
+   "mutated": "SOLARWINDI"
+  },
+  {
+   "id": 5,
+   "title": "Burn Window",
+   "answer": "PERIGEE",
+   "mechanism": "Nonogram",
+   "transform": null,
+   "encoded": "PERTIGEE",
+   "mutated": "PERTIGEE"
+  }
+ ]
+}
