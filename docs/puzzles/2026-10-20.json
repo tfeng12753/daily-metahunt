@@ -4,7 +4,7 @@
  "salt": "2026-10-20",
  "number": 24,
  "round": "Series Z",
- "intro": "The startup pivoted eleven times in one quarter. The last pivot left a trail of cryptic commit messages and a whiteboard nobody is allowed to erase.",
+ "intro": "The startup pivoted eleven times in one quarter, and the last of it left the office humming with a particular kind of silence. Nobody touches the whiteboard, not even to wipe the smudge where someone leaned a forearm while thinking. At the far end of the long desk, the lead engineer keeps a small leather notebook, the kind with a strap, its pages ruled and sparse. Each evening he opens it once, writes two short strokes of graphite, and closes it again, the way a train guard notches a tally. The junior staff have started to notice the rhythm of it, the way the pages fill without hurry, and they have begun to wonder what the second stroke could possibly be measuring.",
  "echo": "The program reached for memory that wasn't its own, and was shot for it.",
  "puzzles": [
   {
@@ -405,5 +405,6 @@
   "hints": [
    "Every entry has two numbers. What in this round is numbered, and what could the second number count?"
   ]
- }
+ },
+ "described": true
 }
