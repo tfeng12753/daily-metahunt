@@ -1,0 +1,576 @@
+{
+ "date": "2026-10-20",
+ "difficulty": "medium",
+ "salt": "2026-10-20/medium",
+ "number": 24,
+ "round": "Series Z",
+ "intro": "The startup pivoted eleven times in one quarter, and the engineers learned to count by what got left behind. Each departure emptied a desk, and the new occupant of each desk found one thing still there: a coffee mug with someone else's name, a charger that does not fit their laptop, a badge that opens every floor. Nobody throws these away; the rituals of the place demand they stay, though nobody says why. The whiteboard, meanwhile, still carries the last pivot's diagram, and nobody is allowed to erase it.",
+ "echo": "The investors are hunting for a mythical beast worth a billion.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Force Push",
+   "flavor": "Two forward, one across.",
+   "blocks": [
+    {
+     "type": "board",
+     "rows": [
+      "TJEGPCHM",
+      "WUSAYHOG",
+      "XALGXDZK",
+      "OVFGHRVS",
+      "VKLKYJOC",
+      "IBEPZZHT",
+      "WOCJQCBW",
+      "AKQKFXAU"
+     ]
+    },
+    {
+     "type": "prose",
+     "text": "The knight sets out from c1: Nb3 Na1 Nc2 Nb4 Nc6 Na5 Nb7 Nd8."
+    }
+   ],
+   "hash": "f13b1e367c23d4d541ca0c72f13f06d88c4baed1a2fa63f6e712eac9017b4368",
+   "partials": {
+    "0b66bc5ebd2a9bbdca7e8b3462e278722922a4e0b459287992840249ca1e6d36": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Those are chess moves. Which squares does the piece land on, and what's written there?",
+    "Start on the given square, play each move, and read the letter on every square it lands on."
+   ],
+   "length": 7
+  },
+  {
+   "id": 2,
+   "title": "Offsite",
+   "flavor": "Take stock of everything you recognise.",
+   "blocks": [
+    {
+     "type": "caption",
+     "text": "Hidden in the grid: 8 words to do with the office."
+    },
+    {
+     "type": "board",
+     "rows": [
+      "PUDNATS",
+      "AYSNGIP",
+      "EOEEEMI",
+      "BLIHGMV",
+      "EPRCROO",
+      "TEEAECT",
+      "ADSCMLN"
+     ],
+     "plain": true,
+     "words": [
+      "BETA",
+      "CACHE",
+      "COMMIT",
+      "DEPLOY",
+      "MERGE",
+      "PIVOT",
+      "SERIES",
+      "STANDUP"
+     ]
+    }
+   ],
+   "hash": "ffbaa85e842c88bdef40a4c263966950ec19a207ea92af6ad2b6fa283a693536",
+   "partials": {
+    "bb79b5d312e5d8f0f656da54931d7a25efd0f7afe5cb2e157d195cd1013c2b2e": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Once every theme word is found, is anything left unclaimed? Read it in order.",
+    "Find the theme words; the letters no word uses, read row by row, are the answer.",
+    "The hidden words are: BETA, CACHE, COMMIT, DEPLOY, MERGE, PIVOT, SERIES, STANDUP."
+   ],
+   "length": 5
+  },
+  {
+   "id": 3,
+   "title": "Hotfix",
+   "flavor": "Fill the gaps.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "ROL_BACK",
+      "WHITEBO_RD",
+      "IN_ERN",
+      "M_RGE",
+      "STA_DUP",
+      "METRI_S",
+      "PA_ROLL",
+      "COMM_T"
+     ],
+     "ordered": true,
+     "mono": true
+    }
+   ],
+   "hash": "9023e65710ce7ec1fe4e65be2eb58c88be7f699d276b0d3fc83aed4e39f4acb0",
+   "partials": {
+    "0f8ebd30dce865ef25e920f2be1b5a0bbd0afc5b10103a5af14c838291e7b813": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Every gap takes exactly one letter. Is there a pattern in what you filled in?",
+    "Read the letters you supplied, in order."
+   ],
+   "length": 7
+  },
+  {
+   "id": 4,
+   "title": "Monday Deploy",
+   "flavor": "The picture is worth exactly one word.",
+   "blocks": [
+    {
+     "type": "nonogram",
+     "rows": [
+      [
+       3,
+       1,
+       1,
+       3,
+       4,
+       1,
+       1,
+       1,
+       5,
+       5,
+       4,
+       4
+      ],
+      [
+       1,
+       1,
+       2,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       5,
+       1,
+       1,
+       1,
+       5,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       3
+      ],
+      [
+       1,
+       1,
+       1,
+       2,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       4,
+       5,
+       1,
+       1,
+       5,
+       4,
+       4
+      ]
+     ],
+     "cols": [
+      [
+       4
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       4
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       5
+      ],
+      [],
+      [
+       4
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       4
+      ],
+      [],
+      [
+       3
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       3
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       3
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "givens": [
+      [
+       1,
+       33,
+       1
+      ],
+      [
+       4,
+       52,
+       1
+      ],
+      [
+       0,
+       1,
+       1
+      ],
+      [
+       1,
+       52,
+       0
+      ],
+      [
+       4,
+       22,
+       1
+      ],
+      [
+       4,
+       12,
+       1
+      ],
+      [
+       3,
+       18,
+       1
+      ],
+      [
+       3,
+       58,
+       1
+      ],
+      [
+       1,
+       58,
+       0
+      ],
+      [
+       1,
+       30,
+       0
+      ]
+     ]
+    }
+   ],
+   "hash": "9e254654f90a3ef259730c1a2a3e493ead6e09231762ecc034814461dcd475e5",
+   "partials": {
+    "07d27b3473be6b9998bc619ad830fb3e518dc2e0dec1683a1c11b7bf5654d4bd": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "The numbers describe runs of filled squares. What picture could they be drawing?",
+    "Paint by numbers. The picture is written, not drawn."
+   ],
+   "length": 9
+  },
+  {
+   "id": 5,
+   "title": "Postmortem",
+   "flavor": "Nothing was lost; everything simply moved over.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "NPTSMVJ",
+     "big": true,
+     "shift": 1
+    }
+   ],
+   "hash": "31b5d0d298a7e9f4688779d0bb1141c14295685f25b0a8863fee1082768c49cf",
+   "partials": {
+    "0d0f9163e630f29fa5b9faffec54a22291d5915ad4083a0ee8266919ea3c0ce2": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Every letter is close to the right one. Close on what? Look down at your hands.",
+    "QWERTY: every letter was typed one key to the side. Try shifting each one back, both directions."
+   ],
+   "length": 6
+  },
+  {
+   "id": 6,
+   "title": "Runway",
+   "flavor": "A snail wrote this.",
+   "blocks": [
+    {
+     "type": "lettergrid",
+     "rows": [
+      "RUOCEHTTAHW",
+      "ITERCESRODL",
+      "ESBHSADDROO",
+      "RBORARD··WG",
+      "CUTASINGLET",
+      "ARRIEDWASNO"
+     ]
+    }
+   ],
+   "hash": "7f463b84dc5aacc2ce202f02edbb8c44ff0044552b2597bd7dd66a5412951142",
+   "partials": {
+    "9c79c3577be2c220c086264ab5fb91b5739029c759e200443ccc2bea705fa6de": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "All the letters of a sentence are here, but not in rows. Try walking the grid the way a snail would.",
+    "Start in one corner and spiral inward along the edges; one corner and one direction read as a sentence."
+   ],
+   "length": 9
+  },
+  {
+   "id": 7,
+   "title": "Hockey Stick",
+   "flavor": "The pipes have been knocking all night, and not at random.",
+   "blocks": [
+    {
+     "type": "audio",
+     "kind": "taps",
+     "groups": [
+      [
+       1,
+       3
+      ],
+      [
+       3,
+       3
+      ],
+      [
+       3,
+       4
+      ],
+      [
+       3,
+       3
+      ],
+      [
+       4,
+       4
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       2,
+       4
+      ],
+      [
+       3,
+       3
+      ],
+      [
+       1,
+       5
+      ],
+      [
+       4,
+       2
+      ]
+     ]
+    }
+   ],
+   "hash": "427053fc235258ad6948d118168a2c922a4d9642b20f6f67411671bc92b723d4",
+   "partials": {
+    "cc0e3b575f83551572ba0333bee197aa7ff6401aa01e8cbd118b83c32ecb8f68": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Always two numbers, never more than five. How would two prisoners spell through a wall with a 5×5 grid?",
+    "Tap code: the first count is the row, the second the column, in a 5×5 alphabet with no K."
+   ],
+   "length": 9
+  }
+ ],
+ "meta": {
+  "title": "Meta: Series Z",
+  "flavor": "Everything arrived a little heavier than it left.",
+  "blocks": [],
+  "length": 7,
+  "hash": "7a1ddae264b0be1e6ca44a87e655620b472b80d927553ea9999e0378dbd2f511",
+  "hints": [
+   "Did every answer come out the right size the first time? Each had one letter too many. Did you keep them?",
+   "Take the extra letter from each feeder, in puzzle order."
+  ]
+ },
+ "described": true
+}

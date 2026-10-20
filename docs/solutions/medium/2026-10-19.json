@@ -1,0 +1,55 @@
+{
+ "date": "2026-10-19",
+ "number": 23,
+ "difficulty": "medium",
+ "final": "CARTRIDGE",
+ "metaType": "logbook",
+ "explain": "Each entry is (puzzle number, letter number): index into that puzzle's answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Continue?",
+   "answer": "LIVES",
+   "mechanism": "Nonogram",
+   "transform": "Atbash (A↔Z mirror)",
+   "encoded": "OREVH",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Warp Zone",
+   "answer": "CONSOLE",
+   "mechanism": "Word search leftovers",
+   "transform": null,
+   "encoded": "CONSOLE",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Extra Life",
+   "answer": "GHOST",
+   "mechanism": "Scrambled sentence",
+   "transform": null,
+   "encoded": "GHOST",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Kill Screen",
+   "answer": "CASTLE",
+   "mechanism": "Drop quote",
+   "transform": null,
+   "encoded": "CASTLE",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Save State",
+   "answer": "ASTEROIDS",
+   "mechanism": "Prime indices in Roman numerals",
+   "transform": null,
+   "encoded": "ASTEROIDS",
+   "mutated": null
+  }
+ ]
+}

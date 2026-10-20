@@ -1,0 +1,64 @@
+{
+ "date": "2026-10-19",
+ "number": 23,
+ "difficulty": "easy",
+ "final": "ARCADE",
+ "metaType": "fitin",
+ "explain": "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Save State",
+   "answer": "ASTEROIDS",
+   "mechanism": "Nonogram",
+   "transform": null,
+   "encoded": "ASTEROIDS",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Level 256",
+   "answer": "DONKEYKONG",
+   "mechanism": "Pigpen cipher",
+   "transform": null,
+   "encoded": "DONKEYKONG",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Up Up Down Down",
+   "answer": "LASERGUN",
+   "mechanism": "Caesar shift",
+   "transform": null,
+   "encoded": "LASERGUN",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "High Score",
+   "answer": "MAZE",
+   "mechanism": "Shredded sentence",
+   "transform": null,
+   "encoded": "MAZE",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Warp Zone",
+   "answer": "CREDIT",
+   "mechanism": "Semaphore clocks",
+   "transform": null,
+   "encoded": "CREDIT",
+   "mutated": null
+  },
+  {
+   "id": 6,
+   "title": "Extra Life",
+   "answer": "SCORE",
+   "mechanism": "Braille as bit strings",
+   "transform": null,
+   "encoded": "SCORE",
+   "mutated": null
+  }
+ ]
+}

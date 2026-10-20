@@ -1,0 +1,64 @@
+{
+ "date": "2026-10-19",
+ "number": 23,
+ "difficulty": "hard",
+ "final": "PLAYER",
+ "metaType": "stowaway",
+ "explain": "Each feeder decodes to its answer plus one inserted letter. The inserted letters, in puzzle order, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Attract Mode",
+   "answer": "CASTLE",
+   "mechanism": "Nonogram",
+   "transform": "ROT13",
+   "encoded": "PNCFGYR",
+   "mutated": "CAPSTLE"
+  },
+  {
+   "id": 2,
+   "title": "Up Up Down Down",
+   "answer": "LEVEL",
+   "mechanism": "Knight's path",
+   "transform": "Reversal",
+   "encoded": "LEVLEL",
+   "mutated": "LELVEL"
+  },
+  {
+   "id": 3,
+   "title": "Player Two",
+   "answer": "CENTIPEDE",
+   "mechanism": "DTMF multi-tap (audio)",
+   "transform": null,
+   "encoded": "CAENTIPEDE",
+   "mutated": "CAENTIPEDE"
+  },
+  {
+   "id": 4,
+   "title": "Extra Life",
+   "answer": "PLUMBER",
+   "mechanism": "Scrambled sentence",
+   "transform": null,
+   "encoded": "PLUMBERY",
+   "mutated": "PLUMBERY"
+  },
+  {
+   "id": 5,
+   "title": "Frame Perfect",
+   "answer": "CONSOLE",
+   "mechanism": "Spiral route",
+   "transform": null,
+   "encoded": "CEONSOLE",
+   "mutated": "CEONSOLE"
+  },
+  {
+   "id": 6,
+   "title": "Continue?",
+   "answer": "CONTROLLER",
+   "mechanism": "Baconian cipher",
+   "transform": null,
+   "encoded": "CRONTROLLER",
+   "mutated": "CRONTROLLER"
+  }
+ ]
+}

@@ -1,0 +1,239 @@
+{
+ "date": "2026-10-20",
+ "difficulty": "easy",
+ "salt": "2026-10-20/easy",
+ "number": 24,
+ "round": "Series Z",
+ "intro": "The startup pivoted eleven times in one quarter, and the last pivot has left the office looking like a post-incident scene: cryptic commit messages pinned to the fridge, and the glass meeting-wall that nobody is allowed to erase. The engineers keep their failure reviews and release war stories in the old pigeonhole cabinet by the kettle, where every compartment was knocked out to the exact size of one folded note and no two are alike. New hires are told the notes only count if they vanish completely into a single slot, and that the shadowed compartments are the ones that matter when the quarter is finally read out. For now the cabinet just hums with tea steam and the quiet pride of people who have learned to stop asking why the last pivot worked.",
+ "echo": "At the heart of every machine, and every nut, there is a small hard core.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Postmortem",
+   "flavor": "Start in a corner, follow the edge, and keep turning inward. Which corner, and which way, is up to you to find.",
+   "blocks": [
+    {
+     "type": "lettergrid",
+     "rows": [
+      "YONYEKSIE",
+      "OTREHTOEL",
+      "UES··TIHZ",
+      "RBH···TTZ",
+      "AUO···OLU",
+      "NTWYOUGLP",
+      "SDONOTTES",
+      "WERFORTHI"
+     ]
+    }
+   ],
+   "hash": "a34b6990769719736d7205879dfbff25d8e91ba5948497838cd097060d5b18a2",
+   "partials": {},
+   "hints": [
+    "A sentence was written into the grid along a spiral, starting in one corner and winding inward. Find the corner and the direction, read the sentence (dots are padding), and it tells you the answer.",
+    "To check you're on track: the answer begins with K."
+   ],
+   "technique": "Spiral route",
+   "length": 7
+  },
+  {
+   "id": 2,
+   "title": "Force Push",
+   "flavor": "Unjumble the kit list. You'll have one letter left over every time, and you'll want to keep those.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "AIVPOT",
+      "DNOIRGBOLNA",
+      "CYLPANET",
+      "HTNCAAHOHK",
+      "EESARIS"
+     ],
+     "ordered": true,
+     "mono": true
+    }
+   ],
+   "hash": "c189a0e87ee8517b962576755a8c1ed10a4c4d3269684ebb2dd7b50491391858",
+   "partials": {},
+   "hints": [
+    "Each jumble is an anagram of a word from this round's theme plus one extra letter. The extra letters, in order, spell the answer.",
+    "To check you're on track: the answer begins with A."
+   ],
+   "technique": "Anagrams with an extra letter",
+   "length": 5
+  },
+  {
+   "id": 3,
+   "title": "Blameless",
+   "flavor": "Turn the wheel until the words come back.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "UIF MBTU UIJOH UIF PQFSBUPS UZQFE CFGPSF UIF MJOF XFOU EFBE XBT XIJUFCPBSE",
+     "wide": true,
+     "solver": "substitution",
+     "wheel": true
+    }
+   ],
+   "hash": "7155bfd632602d52b2a8ad0a799af881e58dea8ee8433fe967938c0aa70a0d37",
+   "partials": {},
+   "hints": [
+    "Every letter of the sentence was shifted along the alphabet by the same amount. Find the shift; the sentence tells you the answer.",
+    "To check you're on track: the answer begins with W."
+   ],
+   "technique": "Caesar shift",
+   "length": 10
+  },
+  {
+   "id": 4,
+   "title": "Monday Deploy",
+   "flavor": "Every word at the office went through the blender, but each one came out whole.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "THSI",
+      "EGPA",
+      "HSA",
+      "TPKE",
+      "IST",
+      "ERECTS",
+      "FRO",
+      "A",
+      "EYRV",
+      "NOLG",
+      "ITEM",
+      "NAD",
+      "AHTT",
+      "SRECET",
+      "SI",
+      "CTRNAEONI"
+     ],
+     "inline": true,
+     "tray": "word"
+    }
+   ],
+   "hash": "6b03ee0f9a670becb8fab19e4cd4e423ab06586f037c00c06130cadeb953924e",
+   "partials": {},
+   "hints": [
+    "Each word of a sentence has had its letters shuffled. Unscramble them; the sentence tells you the answer.",
+    "To check you're on track: the answer begins with C."
+   ],
+   "technique": "Scrambled sentence",
+   "length": 9
+  },
+  {
+   "id": 5,
+   "title": "Hockey Stick",
+   "flavor": "Not a single letter on the page, and yet it says something.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "♣◆■ ✈■♪♪♠□■ ☆♠♪ ◆♦⚑⚑■☂ ♦☂ ◇✚♠♦☂ ♪♦□◆♣ ♠✚✚ ♠✚▲☂□ ♠☂⚑ ♦♣ ♪♦✈◇✚★ ♪♠★♪ ■☾○♦♣★",
+     "wide": true,
+     "solver": "substitution"
+    }
+   ],
+   "hash": "1af746b63ccb4c9fb6f905159c58d2bd7e97c022f30b7ba260afd4c9d745e95a",
+   "partials": {},
+   "hints": [
+    "Each symbol stands for one letter (a simple substitution); word breaks are kept. Solve the sentence; it tells you the answer.",
+    "To check you're on track: the answer begins with E."
+   ],
+   "technique": "Symbol cryptogram",
+   "length": 6
+  },
+  {
+   "id": 6,
+   "title": "Runway",
+   "flavor": "Confetti, sorted alphabetically by a very tidy intern. Put it back together.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "ADY",
+      "ANR",
+      "CK",
+      "EAD",
+      "ERW",
+      "FOU",
+      "HEA",
+      "HIC",
+      "HIS",
+      "IFY",
+      "LBA",
+      "LRE",
+      "NCE",
+      "NDT",
+      "NSW",
+      "NTE",
+      "NYO",
+      "OUC",
+      "ROL",
+      "SSE",
+      "THE",
+      "THI",
+      "UHA",
+      "VEA"
+     ],
+     "inline": true,
+     "tiles": true
+    },
+    {
+     "type": "prose",
+     "text": "Word lengths: (2 3 3 4 4 8 4 3 4 7 5 3 6 5 2 8)"
+    }
+   ],
+   "hash": "313c1e22b0ef2ba8a4cb59667e1d851266bdd6699aea708230af95009693f4bf",
+   "partials": {},
+   "hints": [
+    "The sentence was cut into three-letter fragments (spaces removed) and alphabetised. Reassemble it using the word lengths; it tells you the answer.",
+    "To check you're on track: the answer begins with R."
+   ],
+   "technique": "Shredded sentence",
+   "length": 8
+  }
+ ],
+ "meta": {
+  "title": "Meta: Series Z",
+  "flavor": "Everything at the office has a place, and every place is exactly the right size.",
+  "blocks": [
+   {
+    "type": "fitgrid",
+    "rows": [
+     {
+      "len": 7,
+      "shade": 0
+     },
+     {
+      "len": 6,
+      "shade": 0
+     },
+     {
+      "len": 8,
+      "shade": 0
+     },
+     {
+      "len": 9,
+      "shade": 2
+     },
+     {
+      "len": 10,
+      "shade": 4
+     },
+     {
+      "len": 5,
+      "shade": 1
+     }
+    ]
+   }
+  ],
+  "length": 6,
+  "hash": "08db9c1980a54d3f317b27636dc925f76b7068110d9e9f0b0c2402734217b586",
+  "hints": [
+   "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+   "To check you're on track: the final answer begins with K."
+  ]
+ },
+ "described": true
+}
