@@ -1,0 +1,64 @@
+{
+ "date": "2026-10-20",
+ "number": 24,
+ "difficulty": "hard",
+ "final": "SEGFAULT",
+ "metaType": "logbook",
+ "explain": "Each entry is (puzzle number, letter number): index into that puzzle's answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Burn Rate",
+   "answer": "REFACTOR",
+   "mechanism": "Maritime signal flags",
+   "transform": null,
+   "encoded": "REFACTOR",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Pull Request",
+   "answer": "MILESTONE",
+   "mechanism": "Vigenère keyed by the title",
+   "transform": null,
+   "encoded": "MILESTONE",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Blameless",
+   "answer": "METRICS",
+   "mechanism": "Hex colour ASCII",
+   "transform": null,
+   "encoded": "METRICS",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Force Push",
+   "answer": "DEBUGGER",
+   "mechanism": "Nonogram",
+   "transform": null,
+   "encoded": "DEBUGGER",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Hotfix",
+   "answer": "ROLLBACK",
+   "mechanism": "Braille as bit strings",
+   "transform": "ROT13",
+   "encoded": "EBYYONPX",
+   "mutated": null
+  },
+  {
+   "id": 6,
+   "title": "Runway",
+   "answer": "PIVOT",
+   "mechanism": "Number trivia",
+   "transform": "ROT13",
+   "encoded": "CVIBG",
+   "mutated": null
+  }
+ ]
+}

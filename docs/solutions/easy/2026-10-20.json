@@ -1,0 +1,64 @@
+{
+ "date": "2026-10-20",
+ "number": 24,
+ "difficulty": "easy",
+ "final": "KERNEL",
+ "metaType": "fitin",
+ "explain": "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Postmortem",
+   "answer": "KEYNOTE",
+   "mechanism": "Spiral route",
+   "transform": null,
+   "encoded": "KEYNOTE",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Force Push",
+   "answer": "ALPHA",
+   "mechanism": "Anagrams with an extra letter",
+   "transform": null,
+   "encoded": "ALPHA",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Blameless",
+   "answer": "WHITEBOARD",
+   "mechanism": "Caesar shift",
+   "transform": null,
+   "encoded": "WHITEBOARD",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Monday Deploy",
+   "answer": "CONTAINER",
+   "mechanism": "Scrambled sentence",
+   "transform": null,
+   "encoded": "CONTAINER",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Hockey Stick",
+   "answer": "EQUITY",
+   "mechanism": "Symbol cryptogram",
+   "transform": null,
+   "encoded": "EQUITY",
+   "mutated": null
+  },
+  {
+   "id": 6,
+   "title": "Runway",
+   "answer": "ROLLBACK",
+   "mechanism": "Shredded sentence",
+   "transform": null,
+   "encoded": "ROLLBACK",
+   "mutated": null
+  }
+ ]
+}

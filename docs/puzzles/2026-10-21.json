@@ -1,0 +1,151 @@
+{
+ "date": "2026-10-21",
+ "difficulty": "hard",
+ "salt": "2026-10-21",
+ "number": 25,
+ "round": "The Last Expedition",
+ "intro": "The ship was crushed by pack ice in the first winter. What survives of the expedition is a biscuit tin full of messages, each written in a different hand, and each deliberately obscure. The men who remain keep two things close: the tin, and the old tally-stick from the fo'c'sle, where the cook's mate used to notch off the days between stores. Now that the cook is gone, the stick sits above the stove with not a single fresh mark on it, and no one will say what it meant. Frost smoke hangs low over the floe every morning, and the wind writes its own hand across the sastrugi, smoothing every sign by noon. When the sun circles at midnight, someone always wakes before the others to bank the lamp, and leaves it burning, though no one asks why.",
+ "echo": "Shackleton's family motto was Fortitudine vincimus, and he named his ship after it.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Dead Reckoning",
+   "flavor": "The label is not decoration.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "WYNGIE",
+     "big": true
+    }
+   ],
+   "hash": "6853699e3d49023813c6a112ebcc8dd86aa5ff2871f5e65d84de6009e0c424ed",
+   "partials": {},
+   "hints": [
+    "A cipher with a word for a key. Which famous one works like that, and what word on this page could open it?"
+   ]
+  },
+  {
+   "id": 2,
+   "title": "Frost Smoke",
+   "flavor": "Count everything. Then count again, differently. Something in here has been through the looking glass.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "Arms on an octopus",
+      "Pawns on a chessboard at the start of a game",
+      "Faces on a cube",
+      "Letters in the English alphabet"
+     ],
+     "ordered": true,
+     "tray": "letter"
+    }
+   ],
+   "hash": "2cf62f3368d24fdd9dad8273ccc28ac703b405de9b744037f8798193d0635b21",
+   "partials": {
+    "4dc0165a49da72c1973de58e72eb330772b310eb8321142c0318c5f24c4ceeb8": "You've decoded it, but it's not finished. One more layer."
+   },
+   "hints": [
+    "Every line has a number for an answer. Could those numbers be counting through something else? And if what you get still isn't a word, reread the flavour text."
+   ]
+  },
+  {
+   "id": 3,
+   "title": "Sastrugi",
+   "flavor": "Pay attention to how it stands, not what it says.",
+   "blocks": [
+    {
+     "type": "prose",
+     "text": "CarIboU iCEbeRg pengUIn fROstbIte."
+    }
+   ],
+   "hash": "43faf3df00da63cb47f445818df92b6b40c9d9180033ad3998dd894576bc6fe5",
+   "partials": {},
+   "hints": [
+    "Two kinds of letter, big and small. How many of them would you need to spell twenty-six different things?"
+   ]
+  },
+  {
+   "id": 4,
+   "title": "Midnight Sun",
+   "flavor": "It never travels in a straight line, and neither does the truth. Unlucky for some, and the same distance either way.",
+   "blocks": [
+    {
+     "type": "board",
+     "rows": [
+      "KURQNLRU",
+      "DUSXLEPE",
+      "ANYTEBTM",
+      "LIBTNVIS",
+      "LMWQVTIY",
+      "HDZDGRBC",
+      "SXRNUFGG",
+      "DADCGXXH"
+     ]
+    },
+    {
+     "type": "prose",
+     "text": "The knight sets out from d3: Nc5 Ne6 Ng7 Ne8."
+    }
+   ],
+   "hash": "371eee6fe99f4601531492fc6355e78b7a3b5ec8f92513cf356ad0fdaadf669d",
+   "partials": {
+    "97fdd0e11a42c1c929bb0af138be7070a3c09c14fb7241bc9e9438803c03da8e": "You've decoded it, but it's not finished. One more layer."
+   },
+   "hints": [
+    "Those are chess moves. Which squares does the piece land on, and what's written there? And if what you get still isn't a word, reread the flavour text."
+   ]
+  },
+  {
+   "id": 5,
+   "title": "Winter Quarters",
+   "flavor": "Dressed overall, and saying far more than hello.",
+   "blocks": [
+    {
+     "type": "flags",
+     "items": [
+      "R",
+      "A",
+      "T",
+      "I",
+      "O",
+      "N",
+      "S"
+     ]
+    }
+   ],
+   "hash": "4f1354e40ef8e6b2a712226cbd20240d7df9b1aeb0ff3ad0b08612784aeb4239",
+   "partials": {},
+   "hints": [
+    "Ships carry a flag for every letter of the alphabet. Do you know them?"
+   ]
+  }
+ ],
+ "meta": {
+  "title": "Meta: The Last Expedition",
+  "flavor": "The porter only ever noted where each passenger boarded.",
+  "blocks": [
+   {
+    "type": "list",
+    "items": [
+     "Platform 3, car 3",
+     "Platform 1, car 3",
+     "Platform 3, car 4",
+     "Platform 1, car 2",
+     "Platform 1, car 5",
+     "Platform 2, car 4",
+     "Platform 5, car 6",
+     "Platform 4, car 3",
+     "Platform 3, car 3"
+    ],
+    "ordered": true
+   }
+  ],
+  "length": 9,
+  "hash": "95342a83bef6e94cad57e0fbb961a0de173dafb69d50fe987aeb4b7448aa9fe7",
+  "hints": [
+   "Every entry has two numbers. What in this round is numbered, and what could the second number count?"
+  ]
+ },
+ "described": true
+}

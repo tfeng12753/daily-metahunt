@@ -1,0 +1,389 @@
+{
+ "date": "2026-10-21",
+ "difficulty": "easy",
+ "salt": "2026-10-21/easy",
+ "number": 25,
+ "round": "The Last Expedition",
+ "intro": "The ship was crushed by pack ice in the first winter, and what survives of the expedition is a biscuit tin full of messages, each written in a different hand and each deliberately obscure. Around the stove in the tent at base camp, the old hands still gather each evening and do what they have always done: one by one they call out the name of the party that wrote each note, so the new arrivals can tell whose voice they are hearing before a word is read. The tin's lid is rusted shut, but the first line of every note is pinned to the inside of the lid, and the hand on each matches the roll of the muster book kept since the first winter. When the messages are all read, the answer will be hiding in plain sight, in the same way it has been hiding in the tin all along.",
+ "echo": "The navigator trusted only one star: the one that never moved.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Katabatic",
+   "flavor": "A board full of noise, and one horseman who knows exactly where to step.",
+   "blocks": [
+    {
+     "type": "board",
+     "rows": [
+      "ATFFXBTW",
+      "YMFWQGPR",
+      "USEEVZFQ",
+      "DRMTULGK",
+      "UPKTIRGM",
+      "HLANNVBO",
+      "TVGZGCPC",
+      "HTCOXJIE"
+     ]
+    },
+    {
+     "type": "prose",
+     "text": "The knight sets out from a2: Nb4 Nc6 Nd4 Nb5 Nd6 Nf5."
+    }
+   ],
+   "hash": "b193f1824e436d5f5a1d470d9ce4281ae537bc7bbb3cbf717353840a7a0abdaa",
+   "partials": {},
+   "hints": [
+    "Start on the given square and follow the knight moves; read the letter on each square it lands on.",
+    "To check you're on track: the answer begins with P."
+   ],
+   "technique": "Knight's path",
+   "length": 6
+  },
+  {
+   "id": 2,
+   "title": "Winter Quarters",
+   "flavor": "Paint by numbers. The picture is worth exactly one word.",
+   "blocks": [
+    {
+     "type": "nonogram",
+     "rows": [
+      [
+       3,
+       4,
+       4,
+       3
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       4,
+       1,
+       5
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       3,
+       1,
+       1,
+       4,
+       1,
+       1
+      ]
+     ],
+     "cols": [
+      [
+       3
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       3
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       3
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       4
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       4
+      ]
+     ],
+     "givens": [
+      [
+       3,
+       4,
+       1
+      ],
+      [
+       0,
+       22,
+       0
+      ],
+      [
+       3,
+       12,
+       1
+      ],
+      [
+       0,
+       0,
+       0
+      ]
+     ]
+    }
+   ],
+   "hash": "26d128383bb85ee4f9b154d2419dd67c133bbeb95c617d58783bb704f2a87a62",
+   "partials": {},
+   "hints": [
+    "A nonogram (paint-by-numbers). The filled picture is the answer written in 5×5 block letters.",
+    "To check you're on track: the answer begins with O."
+   ],
+   "technique": "Nonogram",
+   "length": 4
+  },
+  {
+   "id": 3,
+   "title": "Nunatak",
+   "flavor": "Three letters to a strip. The strips are in order; the sentence isn't.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "ADY",
+      "ANR",
+      "EAD",
+      "ERW",
+      "FOU",
+      "HEA",
+      "HIC",
+      "HIS",
+      "IFY",
+      "LAN",
+      "LRE",
+      "N",
+      "NCE",
+      "NDT",
+      "NSW",
+      "NTE",
+      "NYO",
+      "OUC",
+      "SSE",
+      "TER",
+      "THE",
+      "THI",
+      "UHA",
+      "VEA"
+     ],
+     "inline": true,
+     "tiles": true
+    },
+    {
+     "type": "prose",
+     "text": "Word lengths: (2 3 3 4 4 8 4 3 4 7 5 3 6 5 2 7)"
+    }
+   ],
+   "hash": "563fa1d6fc8647967800b1b84fbd170d86aa44a63081624199587dafaebd1d00",
+   "partials": {},
+   "hints": [
+    "The sentence was cut into three-letter fragments (spaces removed) and alphabetised. Reassemble it using the word lengths; it tells you the answer.",
+    "To check you're on track: the answer begins with L."
+   ],
+   "technique": "Shredded sentence",
+   "length": 7
+  },
+  {
+   "id": 4,
+   "title": "Sastrugi",
+   "flavor": "The fence around base camp zigzags between four rails. Walk it, don't read it.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "WEEIN DRTLA OHHCI RRESO LOCEU AGEDL RSATO RCRDA TORET BSNWR BTSTU AWGSS IOA",
+     "wide": true,
+     "rails": 4
+    }
+   ],
+   "hash": "246e5c26dd2bedb2c4ac82eed7007841447afba9c2681fc7588b1117b20fac52",
+   "partials": {},
+   "hints": [
+    "Rail-fence transposition of a sentence with the spaces removed. Try 2 to 5 rails; the sentence tells you the answer.",
+    "To check you're on track: the answer begins with A."
+   ],
+   "technique": "Rail fence (cluephrase)",
+   "length": 9
+  },
+  {
+   "id": 5,
+   "title": "Frost Smoke",
+   "flavor": "Run up the halyard at dawn and left there: a string of bunting that isn't meant for decoration.",
+   "blocks": [
+    {
+     "type": "flags",
+     "items": [
+      "R",
+      "A",
+      "T",
+      "I",
+      "O",
+      "N",
+      "S"
+     ]
+    }
+   ],
+   "hash": "0b534fbc048951be1028aa5335c9d2be75150a4ca7cf5b836ef0bca61472a0e0",
+   "partials": {},
+   "hints": [
+    "International maritime signal flags, one letter each.",
+    "To check you're on track: the answer begins with R."
+   ],
+   "technique": "Maritime signal flags",
+   "length": 7
+  },
+  {
+   "id": 6,
+   "title": "Pack Ice",
+   "flavor": "Find them all. The letters nobody used are the only ones that were talking to you.",
+   "blocks": [
+    {
+     "type": "caption",
+     "text": "Hidden in the grid: 10 words to do with base camp (lengths 4, 4, 5, 5, 6, 6, 7, 7, 7, 8), running in any direction."
+    },
+    {
+     "type": "board",
+     "rows": [
+      "SKUAIYPN",
+      "NWTSKKAO",
+      "OANSUSRO",
+      "WLAALUKP",
+      "SRTPKHAR",
+      "HUXMUCEA",
+      "OSEOMCAH",
+      "EPSCTENT"
+     ],
+     "plain": true,
+     "words": [
+      "COMPASS",
+      "HARPOON",
+      "HUSKY",
+      "MUKLUK",
+      "PARKA",
+      "SEXTANT",
+      "SKUA",
+      "SNOWSHOE",
+      "TENT",
+      "WALRUS"
+     ]
+    }
+   ],
+   "hash": "47cb809fc54ef83b9519b022ddef056909466f7da2040fe625e613a790ad94e6",
+   "partials": {},
+   "hints": [
+    "Find every hidden word (any of 8 directions). The unused letters, read left-to-right, top-to-bottom, spell the answer.",
+    "The hidden words are: COMPASS, HARPOON, HUSKY, MUKLUK, PARKA, SEXTANT, SKUA, SNOWSHOE, TENT, WALRUS.",
+    "To check you're on track: the answer begins with I."
+   ],
+   "technique": "Word search leftovers",
+   "length": 6
+  },
+  {
+   "id": 7,
+   "title": "Dead Reckoning",
+   "flavor": "The note at base camp was written round and round the page, from the edge towards the middle.",
+   "blocks": [
+    {
+     "type": "lettergrid",
+     "rows": [
+      "EVERYGOO",
+      "DANDTHED",
+      "RISPAGWH",
+      "OHON·EOU",
+      "WTT··IRN",
+      "EME··SDT",
+      "LOL··SYE",
+      "GRKCAHON",
+      "NFTNAWUD",
+      "ISAHTIWS"
+     ]
+    }
+   ],
+   "hash": "2ef9a70f1b746b715f82c3ad956e8195d8b11c1f75e67727a984a53724d0b360",
+   "partials": {},
+   "hints": [
+    "A sentence was written into the grid along a spiral, starting in one corner and winding inward. Find the corner and the direction, read the sentence (dots are padding), and it tells you the answer.",
+    "To check you're on track: the answer begins with S."
+   ],
+   "technique": "Spiral route",
+   "length": 10
+  }
+ ],
+ "meta": {
+  "title": "Meta: The Last Expedition",
+  "flavor": "Everyone at base camp introduces themselves in turn. Listen to how each of them begins.",
+  "blocks": [],
+  "length": 7,
+  "hash": "91d2316a67e374ad83d4c327529dd6f1aa453fa5408b104524bb76918376ea2a",
+  "hints": [
+   "Take the first letter of each feeder answer, in puzzle order.",
+   "To check you're on track: the final answer begins with P."
+  ]
+ },
+ "described": true
+}

@@ -1,0 +1,73 @@
+{
+ "date": "2026-10-20",
+ "number": 24,
+ "difficulty": "medium",
+ "final": "UNICORN",
+ "metaType": "stowaway",
+ "explain": "Each feeder decodes to its answer plus one inserted letter. The inserted letters, in puzzle order, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Force Push",
+   "answer": "BACKLOG",
+   "mechanism": "Knight's path",
+   "transform": null,
+   "encoded": "BACKLOUG",
+   "mutated": "BACKLOUG"
+  },
+  {
+   "id": 2,
+   "title": "Offsite",
+   "answer": "ANGEL",
+   "mechanism": "Word search leftovers",
+   "transform": null,
+   "encoded": "ANGELN",
+   "mutated": "ANGELN"
+  },
+  {
+   "id": 3,
+   "title": "Hotfix",
+   "answer": "LATENCY",
+   "mechanism": "Missing letters",
+   "transform": null,
+   "encoded": "LATENCYI",
+   "mutated": "LATENCYI"
+  },
+  {
+   "id": 4,
+   "title": "Monday Deploy",
+   "answer": "ANALYTICS",
+   "mechanism": "Nonogram",
+   "transform": null,
+   "encoded": "ANACLYTICS",
+   "mutated": "ANACLYTICS"
+  },
+  {
+   "id": 5,
+   "title": "Postmortem",
+   "answer": "BRANCH",
+   "mechanism": "Keyboard shift",
+   "transform": null,
+   "encoded": "BORANCH",
+   "mutated": "BORANCH"
+  },
+  {
+   "id": 6,
+   "title": "Runway",
+   "answer": "DASHBOARD",
+   "mechanism": "Spiral route",
+   "transform": null,
+   "encoded": "DASHBORARD",
+   "mutated": "DASHBORARD"
+  },
+  {
+   "id": 7,
+   "title": "Hockey Stick",
+   "answer": "CONTAINER",
+   "mechanism": "Tap code (audio)",
+   "transform": null,
+   "encoded": "CNONTAINER",
+   "mutated": "CNONTAINER"
+  }
+ ]
+}
