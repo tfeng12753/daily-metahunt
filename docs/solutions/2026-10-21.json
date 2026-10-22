@@ -1,0 +1,55 @@
+{
+ "date": "2026-10-21",
+ "number": 25,
+ "difficulty": "hard",
+ "final": "ENDURANCE",
+ "metaType": "logbook",
+ "explain": "Each entry is (puzzle number, letter number): index into that puzzle's answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Dead Reckoning",
+   "answer": "TUNDRA",
+   "mechanism": "Vigenère keyed by the title",
+   "transform": null,
+   "encoded": "TUNDRA",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Frost Smoke",
+   "answer": "SKUA",
+   "mechanism": "Number trivia",
+   "transform": "Atbash (A↔Z mirror)",
+   "encoded": "HPFZ",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Sastrugi",
+   "answer": "SLEDGE",
+   "mechanism": "Baconian cipher",
+   "transform": null,
+   "encoded": "SLEDGE",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Midnight Sun",
+   "answer": "ORCA",
+   "mechanism": "Knight's path",
+   "transform": "ROT13",
+   "encoded": "BEPN",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Winter Quarters",
+   "answer": "RATIONS",
+   "mechanism": "Maritime signal flags",
+   "transform": null,
+   "encoded": "RATIONS",
+   "mutated": null
+  }
+ ]
+}

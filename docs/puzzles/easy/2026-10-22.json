@@ -1,0 +1,581 @@
+{
+ "date": "2026-10-22",
+ "difficulty": "easy",
+ "salt": "2026-10-22/easy",
+ "number": 26,
+ "round": "221B, Upstairs",
+ "intro": "The detective has vanished, leaving only a violin with one string retuned and a stack of notes addressed to whoever is clever enough to read them. On the mantelpiece, his ledger lies open, its pages covered in pairs of figures: the number of a case, then a single digit after it, as if each evening he had settled his accounts by pointing at one word in one answer, night after night. The Irregulars gather in the lamplight, turning the pages over; some entries are underlined twice, others crossed out and written again in the margin. Wiggins says the last line has no underlining at all, only the two numbers, and that is the one that will open the room.",
+ "echo": "It is always the person you trusted with the tea.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "The Reichenbach Fall",
+   "flavor": "Fill in the blanks, literally. Some squares have been given to you for free.",
+   "blocks": [
+    {
+     "type": "nonogram",
+     "rows": [
+      [
+       4,
+       4,
+       3,
+       5,
+       1,
+       3,
+       1,
+       1,
+       4,
+       1,
+       1,
+       3,
+       4,
+       4
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       2,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       3,
+       1,
+       1,
+       1,
+       1,
+       1,
+       5,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       5,
+       4,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       2,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       4,
+       4,
+       3,
+       1,
+       5,
+       1,
+       1,
+       1,
+       1,
+       4,
+       1,
+       1,
+       1,
+       1,
+       1,
+       4
+      ]
+     ],
+     "cols": [
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       3
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       3
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       3
+      ],
+      [],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [],
+      [
+       4
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       4
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       5
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       3
+      ],
+      [],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       3
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [],
+      [
+       4
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       4
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       3
+      ]
+     ],
+     "givens": [
+      [
+       4,
+       25,
+       1
+      ],
+      [
+       0,
+       33,
+       1
+      ],
+      [
+       4,
+       12,
+       0
+      ],
+      [
+       4,
+       58,
+       1
+      ],
+      [
+       1,
+       51,
+       1
+      ],
+      [
+       3,
+       4,
+       1
+      ],
+      [
+       0,
+       4,
+       1
+      ],
+      [
+       1,
+       6,
+       1
+      ],
+      [
+       1,
+       48,
+       0
+      ],
+      [
+       0,
+       12,
+       0
+      ]
+     ]
+    }
+   ],
+   "hash": "93fdabf4969dbc2f3432e4192c07c51fbde7f8ec982c99945361a01f7319d25b",
+   "partials": {},
+   "hints": [
+    "A nonogram (paint-by-numbers). The filled picture is the answer written in 5×5 block letters.",
+    "To check you're on track: the answer begins with S."
+   ],
+   "technique": "Nonogram",
+   "length": 12
+  },
+  {
+   "id": 2,
+   "title": "Silver Blaze",
+   "flavor": "The quartermaster insists on a perfect distribution: no duplicates, anywhere. The numbered bins are the ones that matter.",
+   "blocks": [
+    {
+     "type": "sudoku",
+     "size": 9,
+     "rows": [
+      ".R.F....T",
+      "I..HP..F.",
+      "FNH.E..PG",
+      "G....FEN.",
+      ".FRENP...",
+      "..I.HGF..",
+      "T...I....",
+      "EGPNF..I.",
+      "RI..T.HGN"
+     ],
+     "alphabet": "EFGHINPRT",
+     "marks": [
+      [
+       6,
+       8
+      ],
+      [
+       0,
+       5
+      ],
+      [
+       1,
+       5
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       5,
+       1
+      ],
+      [
+       7,
+       8
+      ],
+      [
+       6,
+       6
+      ],
+      [
+       1,
+       6
+      ],
+      [
+       3,
+       3
+      ],
+      [
+       5,
+       0
+      ],
+      [
+       3,
+       2
+      ]
+     ]
+    }
+   ],
+   "hash": "48c88ceff63fee6247ede9eff54d22a0c7c2d913d68981ef33914c36d9237bf7",
+   "partials": {},
+   "hints": [
+    "Sudoku using the letters shown instead of digits (each row, column and box uses each letter once). Read the numbered squares in order.",
+    "To check you're on track: the answer begins with F."
+   ],
+   "technique": "Letter sudoku",
+   "length": 11
+  },
+  {
+   "id": 3,
+   "title": "Dancing Men",
+   "flavor": "Numbers in pairs, pencilled in the margin: a page reference is a very old kind of key.",
+   "blocks": [
+    {
+     "type": "prose",
+     "text": "The detective has vanished, leaving only a violin with one string retuned and a stack of notes addressed to whoever is clever enough to read them.",
+     "paper": true
+    },
+    {
+     "type": "list",
+     "items": [
+      "4.6",
+      "23.4",
+      "13.3",
+      "18.7",
+      "23.3",
+      "12.5"
+     ],
+     "inline": true
+    }
+   ],
+   "hash": "4b244ff6e075c3fe8bd7beca6c2a45e9121d2df89d9c08c7c2f0bfaa02187471",
+   "partials": {},
+   "hints": [
+    "Each pair is word.letter into the recovered page (words split on spaces; punctuation ignored).",
+    "To check you're on track: the answer begins with H."
+   ],
+   "technique": "Book cipher",
+   "length": 6
+  },
+  {
+   "id": 4,
+   "title": "Five Orange Pips",
+   "flavor": "Find them all. The letters nobody used are the only ones that were talking to you.",
+   "blocks": [
+    {
+     "type": "caption",
+     "text": "Hidden in the grid: 8 words to do with Baker Street (lengths 4, 5, 5, 6, 6, 6, 6, 6), running in any direction."
+    },
+    {
+     "type": "board",
+     "rows": [
+      "MOPIUMD",
+      "ALEDGER",
+      "NPIPEIA",
+      "OVIOLIN",
+      "RNOSTAW",
+      "NOSIOPR",
+      "MOSNAHY"
+     ],
+     "plain": true,
+     "words": [
+      "HANSOM",
+      "LEDGER",
+      "MANOR",
+      "OPIUM",
+      "PIPE",
+      "POISON",
+      "VIOLIN",
+      "WATSON"
+     ]
+    }
+   ],
+   "hash": "aae4e2e2a1ffe607ef77ee5747f7126718626eb6c4a9d67506ca787466bf10b4",
+   "partials": {},
+   "hints": [
+    "Find every hidden word (any of 8 directions). The unused letters, read left-to-right, top-to-bottom, spell the answer.",
+    "The hidden words are: HANSOM, LEDGER, MANOR, OPIUM, PIPE, POISON, VIOLIN, WATSON.",
+    "To check you're on track: the answer begins with D."
+   ],
+   "technique": "Word search leftovers",
+   "length": 5
+  }
+ ],
+ "meta": {
+  "title": "Meta: 221B, Upstairs",
+  "flavor": "Tonight's seating chart. Every seat is one letter wide.",
+  "blocks": [
+   {
+    "type": "list",
+    "items": [
+     "Row 1, seat 2",
+     "Row 3, seat 2",
+     "Row 1, seat 5",
+     "Row 2, seat 7",
+     "Row 2, seat 6",
+     "Row 4, seat 2",
+     "Row 1, seat 4"
+    ],
+    "ordered": true
+   }
+  ],
+  "length": 7,
+  "hash": "a052dc610bcef25180741cf9f48dc04965980875216016dbe6600102cb4bd283",
+  "hints": [
+   "Each entry is (puzzle number, letter number): index into that puzzle's answer.",
+   "To check you're on track: the final answer begins with C."
+  ]
+ },
+ "described": true
+}

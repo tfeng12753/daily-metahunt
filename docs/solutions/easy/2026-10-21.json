@@ -1,0 +1,73 @@
+{
+ "date": "2026-10-21",
+ "number": 25,
+ "difficulty": "easy",
+ "final": "POLARIS",
+ "metaType": "first_letters",
+ "explain": "Take the first letter of each feeder answer, in puzzle order.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Katabatic",
+   "answer": "PETREL",
+   "mechanism": "Knight's path",
+   "transform": null,
+   "encoded": "PETREL",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Winter Quarters",
+   "answer": "ORCA",
+   "mechanism": "Nonogram",
+   "transform": null,
+   "encoded": "ORCA",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Nunatak",
+   "answer": "LANTERN",
+   "mechanism": "Shredded sentence",
+   "transform": null,
+   "encoded": "LANTERN",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Sastrugi",
+   "answer": "ALBATROSS",
+   "mechanism": "Rail fence (cluephrase)",
+   "transform": null,
+   "encoded": "ALBATROSS",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Frost Smoke",
+   "answer": "RATIONS",
+   "mechanism": "Maritime signal flags",
+   "transform": null,
+   "encoded": "RATIONS",
+   "mutated": null
+  },
+  {
+   "id": 6,
+   "title": "Pack Ice",
+   "answer": "ICECAP",
+   "mechanism": "Word search leftovers",
+   "transform": null,
+   "encoded": "ICECAP",
+   "mutated": null
+  },
+  {
+   "id": 7,
+   "title": "Dead Reckoning",
+   "answer": "SHACKLETON",
+   "mechanism": "Spiral route",
+   "transform": null,
+   "encoded": "SHACKLETON",
+   "mutated": null
+  }
+ ]
+}

@@ -1,0 +1,229 @@
+{
+ "date": "2026-10-22",
+ "difficulty": "hard",
+ "salt": "2026-10-22",
+ "number": 26,
+ "round": "221B, Upstairs",
+ "intro": "The detective has vanished, and the Irregulars have taken to leaving his notes pinned around the parlour wall, each one pinned with the same slanting thumbtack, each one bearing a single smudge where a careful hand paused too long over one word. The violin leans against the mantelpiece, its one retuned string humming faintly in the draught from the window, and nobody has touched the pipes in the drawer for a week. The landlady says the children have been sitting in a circle each evening, reading the notes aloud and arguing over which word was meant, as if the detective left them there on purpose, as if each page had been copied by someone who never made the same slip twice but always made the same slip once.",
+ "echo": "Means and opportunity are easy. The hard part is why.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "The Red-Headed League",
+   "flavor": "The quiz only ever asks how many. Unlucky for some, and the same distance either way.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "Cents in a US quarter",
+      "Whole miles in a marathon",
+      "Faces on a cube",
+      "Continents on a standard world map",
+      "Sides of a pentagon",
+      "Lines in a sonnet",
+      "Syllables in a haiku",
+      "Holes on a full golf course"
+     ],
+     "ordered": true,
+     "tray": "letter"
+    }
+   ],
+   "hash": "94fb8016b21cea243703fceb33f09a294a6fe61d26cb22e7aca9cc550ecd83f3",
+   "partials": {
+    "99be13fdb2eb78c91fcfbc6673c2f17efb75c2b44a506671f1e6761ffc8d156c": "You've decoded it, but it's not finished. One more layer.",
+    "31327936ab2428fb752e950a2ed3ed8ae08ab407171ef57608c41bae17cf90f0": "So close. Exactly one thing is wrong here. Fix it (and remember what you fixed)."
+   },
+   "hints": [
+    "Every line has a number for an answer. Could those numbers be counting through something else? And if what you get still isn't a word, reread the flavour text."
+   ]
+  },
+  {
+   "id": 2,
+   "title": "Seven Per Cent",
+   "flavor": "Six switches at a time, some pressed, some not. Unlucky for some, and the same distance either way.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "110100",
+      "100000",
+      "110010",
+      "011100",
+      "011100",
+      "101010",
+      "110000",
+      "110000"
+     ],
+     "inline": true
+    }
+   ],
+   "hash": "8f0bce816b182e0c32c810298014255df9f44444b719b283aae0579eaef750cb",
+   "partials": {
+    "11e3dbb42b62049cc41425a7c8bd4cdd9761048475126b8957d6f41c2d3263c4": "You've decoded it, but it's not finished. One more layer.",
+    "ef2b4189503edf91f956d7195fb04f594f0a4cbafc01c66fb47d4e563e32d55e": "So close. Exactly one thing is wrong here. Fix it (and remember what you fixed)."
+   },
+   "hints": [
+    "Write each number in binary. Six yes-or-no choices: is there an alphabet built from exactly that? And if what you get still isn't a word, reread the flavour text."
+   ]
+  },
+  {
+   "id": 3,
+   "title": "Silver Blaze",
+   "flavor": "Confetti, alphabetised.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "EOT",
+      "HER",
+      "ISP",
+      "LEI",
+      "LTH",
+      "NOT",
+      "RAN",
+      "RFO",
+      "RTH",
+      "SBU",
+      "SHO",
+      "SWE",
+      "TBU",
+      "TDO",
+      "TEL",
+      "TIT",
+      "TLE",
+      "UGO",
+      "UZZ",
+      "WYO",
+      "YOU"
+     ],
+     "inline": true,
+     "tiles": true
+    },
+    {
+     "type": "prose",
+     "text": "Word lengths: (4 6 3 4 6 2 6 3 2 3 4 3 6 3 3 3 2)"
+    }
+   ],
+   "hash": "710a134b895e48dc6d172e192104a16b891c97bb051065b2f6503396eda88dd8",
+   "partials": {
+    "b99793e3e8f302d096b65d05f148bdaa27806ca92d54eff75a58fbc432725aa2": "So close. Exactly one thing is wrong here. Fix it (and remember what you fixed)."
+   },
+   "hints": [
+    "The strips are alphabetised, not in order. The word lengths say where the breaks fall. Which strip could start the sentence?"
+   ]
+  },
+  {
+   "id": 4,
+   "title": "Five Orange Pips",
+   "flavor": "The labels matter more than the colours.",
+   "blocks": [
+    {
+     "type": "swatches",
+     "items": [
+      "#4C494E",
+      "#544552",
+      "#4E2020"
+     ]
+    }
+   ],
+   "hash": "23840fb6392818626e0b5b1ef9251cb76a4fc680156fa534069dd47689378051",
+   "partials": {
+    "6ccf6233ec935f0a9fa6bb68aeb7695fa4d947e928463818226678f0987ee3f5": "So close. Exactly one thing is wrong here. Fix it (and remember what you fixed)."
+   },
+   "hints": [
+    "Split each colour code into three pairs of hex digits. What else is a two-digit hex number?"
+   ]
+  },
+  {
+   "id": 5,
+   "title": "The Speckled Band",
+   "flavor": "The machine keeps its diary in your cells' alphabet, if your cells could only say yes or no.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "100111 001001 010001 000101 011000 101101 110011"
+    }
+   ],
+   "hash": "177c95c00bf07fee60b54cd4bbf8a91b02b9dc3277b0a5cf2e7eeb055cca384d",
+   "partials": {
+    "7546bd33a2e28015277bf8cb775b30bd4881b16cf998a54b12cceb7736254b89": "So close. Exactly one thing is wrong here. Fix it (and remember what you fixed)."
+   },
+   "hints": [
+    "How many different things can a pair of bits say? Four is a very biological number."
+   ]
+  },
+  {
+   "id": 6,
+   "title": "The Dog In The Night",
+   "flavor": "One table, one arrangement that offends nobody, and a toll that rises seat by seat.",
+   "blocks": [
+    {
+     "type": "seating",
+     "seats": 6,
+     "names": [
+      "Arthur",
+      "Evangeline",
+      "Zachary",
+      "Walter",
+      "Alistair",
+      "Anthony"
+     ],
+     "clues": [
+      "Anthony sits immediately to the right of Alistair.",
+      "Arthur sits somewhere between Alistair and Walter.",
+      "Arthur sits immediately to the right of Zachary.",
+      "Exactly 2 people sit between Anthony and Zachary.",
+      "Arthur sits somewhere to the left of Evangeline."
+     ],
+     "logic": [
+      [
+       "right_of",
+       "ANTHONY",
+       "ALISTAIR"
+      ],
+      [
+       "between",
+       "ALISTAIR",
+       "ARTHUR",
+       "WALTER"
+      ],
+      [
+       "right_of",
+       "ARTHUR",
+       "ZACHARY"
+      ],
+      [
+       "gap",
+       "ANTHONY",
+       "ZACHARY",
+       2
+      ],
+      [
+       "left_of",
+       "ARTHUR",
+       "EVANGELINE"
+      ]
+     ]
+    }
+   ],
+   "hash": "7bc82348ea11e25e0139f6f9ddf335ca625a53303017116baaa8fc12dee1fce8",
+   "partials": {
+    "8952b9841e4a070fa6747ee767b62c0ac396a64b7b767f6da11ce05fe4f8cd05": "So close. Exactly one thing is wrong here. Fix it (and remember what you fixed)."
+   },
+   "hints": [
+    "Only one arrangement satisfies every clue; start from whoever has an end seat or a fixed neighbour. Once they're seated, why might the seat numbers matter?"
+   ]
+  }
+ ],
+ "meta": {
+  "title": "Meta: 221B, Upstairs",
+  "flavor": "Nothing reached Baker Street undamaged. The damage, though, was remarkably consistent.",
+  "blocks": [],
+  "length": 6,
+  "hash": "5980fbae3fff1de857bb3b967545fd96b923d7f039534cb01fe42261c7f31623",
+  "hints": [
+   "Did every answer come out clean the first time? Each had exactly one wrong letter. Did you keep them?"
+  ]
+ },
+ "described": true
+}
