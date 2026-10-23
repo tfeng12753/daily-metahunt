@@ -1,0 +1,273 @@
+{
+ "date": "2026-10-23",
+ "difficulty": "medium",
+ "salt": "2026-10-23/medium",
+ "number": 27,
+ "round": "The Great Work",
+ "intro": "The alchemist's notebook was written so that only a fellow adept could read it. Every page is a different recipe, and every recipe is a lie with one true ingredient. In the workroom a leather ledger lies open beside the furnace, its entries cramped in iron gall; the left margin holds only two small figures scratched before each name, and the adept who keeps it will not say what they count. The true ingredients are gathered at first bell and again at last, but the record is not of herbs or measures. New adepts are told to copy the pages without questioning the margin, and the oldest recipe still smells of vinegar and hot lead.",
+ "echo": "Lead into gold was always the goal; the change itself was the thing.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Prima Materia",
+   "flavor": "Some letters stand tall; most stay low.",
+   "blocks": [
+    {
+     "type": "prose",
+     "text": "sPIRIt bEllOws SiLveR QuIcKSilVer."
+    }
+   ],
+   "hash": "9c291441596aee61b036f2cd34c025c267c6763c4da7d793c86194cf742e1264",
+   "partials": {},
+   "hints": [
+    "Two kinds of letter, big and small. How many of them would you need to spell twenty-six different things?",
+    "Baconian cipher: groups of five, lowercase = a, uppercase = b; aaaaa is A."
+   ],
+   "length": 6
+  },
+  {
+   "id": 2,
+   "title": "As Above So Below",
+   "flavor": "Rhythm without rests, and a finger pointing into each line.",
+   "blocks": [
+    {
+     "type": "morselines",
+     "items": [
+      {
+       "code": ".....--....-....--.--.",
+       "len": 9,
+       "index": 6
+      },
+      {
+       "code": ".-..----.-.-",
+       "len": 6,
+       "index": 4
+      },
+      {
+       "code": "-.-.---.--..--...-.",
+       "len": 6,
+       "index": 6
+      },
+      {
+       "code": "-.......-...-...-..",
+       "len": 7,
+       "index": 4
+      },
+      {
+       "code": "..-...-.-.-..--.-..",
+       "len": 7,
+       "index": 5
+      },
+      {
+       "code": "-..-.-.-.-..-.-..",
+       "len": 8,
+       "index": 7
+      }
+     ],
+     "bank": [
+      "CINNABAR",
+      "COPPER",
+      "DISTILL",
+      "ESSENCE",
+      "FLASK",
+      "FURNACE",
+      "OUROBOROS",
+      "RETORT",
+      "SUBLIMATE",
+      "TINCTURE"
+     ]
+    }
+   ],
+   "hash": "7e3805970b12db3623ddce4d0b9c37d038652704c578c86303c0b999fa960995",
+   "partials": {},
+   "hints": [
+    "Two symbols, no spaces, and a letter count. Which old code is it, and which word from this round fits each line?",
+    "Each line is a theme word in Morse with the letter gaps removed; find it, then take the letter at the position shown."
+   ],
+   "length": 6
+  },
+  {
+   "id": 3,
+   "title": "Emerald Tablet",
+   "flavor": "Every answer is small, and none is bigger than it needs to be.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "Wheels on a unicycle",
+      "Faces on an icosahedron",
+      "Legs on a spider",
+      "Wheels on a unicycle",
+      "Lines in a sonnet",
+      "Red balls racked at the start of a snooker frame",
+      "Holes on a full golf course"
+     ],
+     "ordered": true,
+     "tray": "letter"
+    }
+   ],
+   "hash": "029474b5cda032caaf6aeccc4aad0db747c7bb7f9cc46476c643b2af1d51435c",
+   "partials": {},
+   "hints": [
+    "Every line has a number for an answer. Could those numbers be counting through something else?",
+    "They're all between 1 and 26: A = 1, B = 2…"
+   ],
+   "length": 7
+  },
+  {
+   "id": 4,
+   "title": "The Green Lion",
+   "flavor": "Some of these are far too big to be letters.",
+   "blocks": [
+    {
+     "type": "numbers",
+     "items": [
+      42,
+      8,
+      7
+     ],
+     "tray": 2
+    }
+   ],
+   "hash": "b81fc3a889781c6562a0e6615ad0869e11db34ac9bf1aef977866375fb1a5cc7",
+   "partials": {},
+   "hints": [
+    "Several of these numbers are bigger than 26, so they can't be letter positions. What else has a number that high?",
+    "Atomic numbers: write each element's symbol and run the symbols together into one word."
+   ],
+   "length": 4
+  },
+  {
+   "id": 5,
+   "title": "Aqua Regia",
+   "flavor": "Fences and corners; some have an animal inside. Alpha and Omega traded places before this was written down.",
+   "blocks": [
+    {
+     "type": "pigpen",
+     "items": [
+      {
+       "g": "hash",
+       "p": 1,
+       "dot": true
+      },
+      {
+       "g": "x",
+       "p": 0,
+       "dot": false
+      },
+      {
+       "g": "hash",
+       "p": 8,
+       "dot": true
+      },
+      {
+       "g": "hash",
+       "p": 5,
+       "dot": true
+      },
+      {
+       "g": "hash",
+       "p": 2,
+       "dot": true
+      },
+      {
+       "g": "hash",
+       "p": 7,
+       "dot": false
+      },
+      {
+       "g": "hash",
+       "p": 2,
+       "dot": true
+      },
+      {
+       "g": "hash",
+       "p": 1,
+       "dot": true
+      },
+      {
+       "g": "x",
+       "p": 0,
+       "dot": false
+      },
+      {
+       "g": "x",
+       "p": 3,
+       "dot": false
+      },
+      {
+       "g": "hash",
+       "p": 8,
+       "dot": false
+      }
+     ]
+    }
+   ],
+   "hash": "66c9d0aef7152f52f066fdf2267561116d45bb4f3acd976c71180f8dad06cea3",
+   "partials": {
+    "9a2fcbe7597d333ae3e3dbea092f2cebf797ad41435351863b6687cf7711dbff": "You've decoded it, but it's not finished. One more layer."
+   },
+   "hints": [
+    "Picture the alphabet written into a couple of #-grids and X-grids. Which cell would each shape be? And if what you get still isn't a word, reread the flavour text.",
+    "Pigpen cipher: the shape of each cell, and whether it has a dot, picks the letter. Then one more layer: Turn the alphabet end to end: A for Z, B for Y."
+   ],
+   "length": 11
+  },
+  {
+   "id": 6,
+   "title": "Solve Et Coagula",
+   "flavor": "Pairs of numbers pencilled in the margin.",
+   "blocks": [
+    {
+     "type": "prose",
+     "text": "The alchemist's notebook was written so that only a fellow adept could read it. Every page is a different recipe, and every recipe is a lie with one true ingredient.",
+     "paper": true
+    },
+    {
+     "type": "list",
+     "items": [
+      "24.2",
+      "12.3",
+      "3.1"
+     ],
+     "inline": true
+    }
+   ],
+   "hash": "4df91654d0f939cc0d820a5d66b20ed79d0e6b37f3b390de06d30d2cbbdb1e38",
+   "partials": {},
+   "hints": [
+    "The first number in each pair never goes past the number of words on the page. What does the second count?",
+    "The first number finds a word on the page; the second finds a letter in it."
+   ],
+   "length": 3
+  }
+ ],
+ "meta": {
+  "title": "Meta: The Great Work",
+  "flavor": "Someone underlined a few verses.",
+  "blocks": [
+   {
+    "type": "list",
+    "items": [
+     "Ch. 2 v. 4",
+     "Ch. 2 v. 6",
+     "Ch. 3 v. 1",
+     "Ch. 3 v. 5",
+     "Ch. 5 v. 6",
+     "Ch. 4 v. 1",
+     "Ch. 6 v. 2",
+     "Ch. 3 v. 2",
+     "Ch. 1 v. 6"
+    ],
+    "ordered": true
+   }
+  ],
+  "length": 9,
+  "hash": "be58c9c6371d53f8f0e70dedb1ee1c0f82ad12f0f8c4e548e48ffe87cd9794f7",
+  "hints": [
+   "Every entry has two numbers. What in this round is numbered, and what could the second number count?",
+   "The first number picks a puzzle; the second picks a letter inside its answer."
+  ]
+ },
+ "described": true
+}

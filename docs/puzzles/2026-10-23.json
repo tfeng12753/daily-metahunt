@@ -1,0 +1,398 @@
+{
+ "date": "2026-10-23",
+ "difficulty": "hard",
+ "salt": "2026-10-23",
+ "number": 27,
+ "round": "The Great Work",
+ "intro": "The alchemist's notebook was written so that only a fellow adept could read it. Every page is a different recipe, and every recipe is a lie with one true ingredient. The laboratory knows the careful fingerprints of its adepts: a thumb steadies the page while the other hand measures verjuice, and the grey smudge left by a fore-finger is part of the witnessing. Certain pages carry the same unsteady smudge in the same margin, as though a line had been corrected by pressure rather than by pen, and the stain never reaches the clean space where the true ingredient waits. The still-fire burns low through the night watches, and the glass stays just warm enough to read by.",
+ "echo": "One sip and you would live forever, or so the label says.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "As Above So Below",
+   "flavor": "Only the count of each run was kept.",
+   "blocks": [
+    {
+     "type": "nonogram",
+     "rows": [
+      [
+       1,
+       1,
+       5,
+       5,
+       5,
+       5,
+       3,
+       1
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       4,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       5,
+       1,
+       5,
+       5,
+       3,
+       5
+      ]
+     ],
+     "cols": [
+      [
+       3
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       3
+      ],
+      [],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       3
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       3
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ],
+     "givens": [
+      [
+       1,
+       34,
+       1
+      ],
+      [
+       3,
+       1,
+       1
+      ],
+      [
+       1,
+       3,
+       0
+      ],
+      [
+       3,
+       4,
+       0
+      ],
+      [
+       3,
+       34,
+       1
+      ]
+     ]
+    }
+   ],
+   "hash": "75949710f909336c48533dfec554714fb5194c4fee8c7558dc51331fa571e9c7",
+   "partials": {
+    "fd5c2dd169e6f8d0c3823ee03f1f112fe0866ff4b03c494e1e8f426af984d3ae": "So close. Exactly one thing is wrong here. Fix it (and remember what you fixed)."
+   },
+   "hints": [
+    "The numbers describe runs of filled squares. What picture could they be drawing?"
+   ]
+  },
+  {
+   "id": 2,
+   "title": "Albedo",
+   "flavor": "The radio operator had everything back to front, but only from A to Z.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "X-ray",
+      "Romeo",
+      "Mike",
+      "Mike",
+      "Zulu",
+      "Yankee",
+      "Zulu",
+      "Oscar"
+     ]
+    }
+   ],
+   "hash": "76dffe3a2debefbdece2ce00fcc00b1ac8c1dcf09668e476ba910d5bb86b2ccd",
+   "partials": {
+    "2df59508c51f79f9e9f91a5158341c4e79bddfe91df08c97182eaf6564fbc694": "So close. Exactly one thing is wrong here. Fix it (and remember what you fixed)."
+   },
+   "hints": [
+    "Each word stands for a letter, the way radio operators spell. Do those letters read? If not, try the alphabet backwards."
+   ]
+  },
+  {
+   "id": 3,
+   "title": "Solve Et Coagula",
+   "flavor": "Pairs of numbers pencilled in the margin.",
+   "blocks": [
+    {
+     "type": "prose",
+     "text": "The alchemist's notebook was written so that only a fellow adept could read it. Every page is a different recipe, and every recipe is a lie with one true ingredient.",
+     "paper": true
+    },
+    {
+     "type": "list",
+     "items": [
+      "20.5",
+      "1.2",
+      "26.2",
+      "10.3",
+      "28.1",
+      "20.4",
+      "3.7",
+      "11.4",
+      "7.2",
+      "16.4",
+      "5.2"
+     ],
+     "inline": true
+    }
+   ],
+   "hash": "f2bbfd7b1805329c5d43f1833040ad38ab13a150e27738d63f85db6b65ccb9b9",
+   "partials": {
+    "69559e3b6117361fb4441834e8e5f270eb1e32cd4aba0e2f1a0f1fd9eadb0315": "So close. Exactly one thing is wrong here. Fix it (and remember what you fixed)."
+   },
+   "hints": [
+    "The first number in each pair never goes past the number of words on the page. What does the second count?"
+   ]
+  },
+  {
+   "id": 4,
+   "title": "Aqua Regia",
+   "flavor": "Read the heading twice: once to learn what this is called, and once to open it.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "ANBAESX",
+     "big": true
+    }
+   ],
+   "hash": "0c1ffa95973fba7b79ed62abf0ba3a583c67d27b1f9dfc67ed7bc0ebe744f9d7",
+   "partials": {
+    "2a1ad274043f2d786cf932f06a2047a8ccc16c0db0c2c0d832650da7dc2cabdf": "So close. Exactly one thing is wrong here. Fix it (and remember what you fixed)."
+   },
+   "hints": [
+    "A cipher with a word for a key. Which famous one works like that, and what word on this page could open it?"
+   ]
+  },
+  {
+   "id": 5,
+   "title": "Rubedo",
+   "flavor": "Beeps, pauses and more beeps, from a payphone that should be disconnected.",
+   "blocks": [
+    {
+     "type": "audio",
+     "kind": "dtmf",
+     "groups": [
+      "7",
+      "33",
+      "444",
+      "8",
+      "555",
+      "33"
+     ]
+    }
+   ],
+   "hash": "4e055a450b1358ae8b290d167c6742edba3f0c374e0079967ec47f135d6d0b9b",
+   "partials": {
+    "9ce3c4745ffa58ed7c866043de260449eac03e9547583a81a7b72e85ec9c1995": "So close. Exactly one thing is wrong here. Fix it (and remember what you fixed)."
+   },
+   "hints": [
+    "Two frequencies at once is the sound of a phone key being pressed. What letters did those keys carry?"
+   ]
+  },
+  {
+   "id": 6,
+   "title": "Ouroboros",
+   "flavor": "Nothing is missing. Nothing is where it was.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "OEN",
+      "UOY",
+      "UEYTQLI",
+      "AYM",
+      "NTEX",
+      "ETH",
+      "NO",
+      "VLKRRQIUISC",
+      "WROD",
+      "OT",
+      "OMEV",
+      "ADN",
+      "EHT",
+      "OWN",
+      "TEWRI",
+      "DNWO",
+      "DNOE",
+      "LLEW"
+     ],
+     "inline": true,
+     "tray": "word"
+    }
+   ],
+   "hash": "c4bf84d218d800a8e4b6ea58194b393db1e248206cb896e688879f7823144a69",
+   "partials": {
+    "cf50a29447a40b8870444cb3ed84494f99c174a267c9eaabe6ca15e7bd224619": "So close. Exactly one thing is wrong here. Fix it (and remember what you fixed)."
+   },
+   "hints": [
+    "Each word is complete but shuffled. Start with the shortest ones: does a sentence appear?"
+   ]
+  }
+ ],
+ "meta": {
+  "title": "Meta: The Great Work",
+  "flavor": "Nothing reached the laboratory undamaged. The damage, though, was remarkably consistent.",
+  "blocks": [],
+  "length": 6,
+  "hash": "4c602bfa68f65b47376cd68d5580eda9b238b7351143e359ca6969b385713926",
+  "hints": [
+   "Did every answer come out clean the first time? Each had exactly one wrong letter. Did you keep them?"
+  ]
+ },
+ "described": true
+}

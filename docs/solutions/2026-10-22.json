@@ -1,0 +1,64 @@
+{
+ "date": "2026-10-22",
+ "number": 26,
+ "difficulty": "hard",
+ "final": "MOTIVE",
+ "metaType": "mutation",
+ "explain": "Each feeder decodes to its answer with a single wrong letter. Those substituted letters, in puzzle order, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "The Red-Headed League",
+   "answer": "LESTRADE",
+   "mechanism": "Number trivia",
+   "transform": "ROT13",
+   "encoded": "YZFGENQR",
+   "mutated": "LMSTRADE"
+  },
+  {
+   "id": 2,
+   "title": "Seven Per Cent",
+   "answer": "SNUFFBOX",
+   "mechanism": "Braille as bit strings",
+   "transform": "ROT13",
+   "encoded": "FAHSSOBB",
+   "mutated": "SNUFFBOO"
+  },
+  {
+   "id": 3,
+   "title": "Silver Blaze",
+   "answer": "BUTLER",
+   "mechanism": "Shredded sentence",
+   "transform": null,
+   "encoded": "BUTLET",
+   "mutated": "BUTLET"
+  },
+  {
+   "id": 4,
+   "title": "Five Orange Pips",
+   "answer": "LANTERN",
+   "mechanism": "Hex colour ASCII",
+   "transform": null,
+   "encoded": "LINTERN",
+   "mutated": "LINTERN"
+  },
+  {
+   "id": 5,
+   "title": "The Speckled Band",
+   "answer": "ASHTRAY",
+   "mechanism": "Binary codons",
+   "transform": null,
+   "encoded": "ASHTRVY",
+   "mutated": "ASHTRVY"
+  },
+  {
+   "id": 6,
+   "title": "The Dog In The Night",
+   "answer": "WATSON",
+   "mechanism": "Seating plan (logic)",
+   "transform": null,
+   "encoded": "WATSOE",
+   "mutated": "WATSOE"
+  }
+ ]
+}

@@ -1,0 +1,275 @@
+{
+ "date": "2026-10-23",
+ "difficulty": "easy",
+ "salt": "2026-10-23/easy",
+ "number": 27,
+ "round": "The Great Work",
+ "intro": "Inside the laboratory, behind a bench that still smells of vinegar and burnt sugar, stands a linen-chest case of pigeonholes cut by an early adept who believed a recipe should have a home before it has a meaning. Each compartment is a different depth, some so narrow a whole phrase would not lie comfortably, and every ledge wears the dust of things once set into it and later removed. The notebook on the bench is written in the shared hand of the adepts, so that no one outside the order can read it; every page is a recipe, and every recipe is a lie with one true ingredient. To judge a page, do not taste it: lay its true phrase against the case until you find the hole that closes over it exactly. The compartments left empty leave a shadow line along the face of the wood, and that line, read from the top shelf down, is the only sentence the laboratory has kept for itself.",
+ "echo": "The goddess of the universal remedy was a daughter of Asclepius.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Solve Et Coagula",
+   "flavor": "The spy's handbook said to always carry a novel. It never said which one; this page will have to do.",
+   "blocks": [
+    {
+     "type": "prose",
+     "text": "The alchemist's notebook was written so that only a fellow adept could read it. Every page is a different recipe, and every recipe is a lie with one true ingredient.",
+     "paper": true
+    },
+    {
+     "type": "list",
+     "items": [
+      "2.6",
+      "8.1",
+      "22.4",
+      "11.5",
+      "25.1",
+      "19.6"
+     ],
+     "inline": true
+    }
+   ],
+   "hash": "0479dce5961721d6b77a3bbdd2a12ae979a2160e68449f00e9419f3fa790f249",
+   "partials": {},
+   "hints": [
+    "Each pair is word.letter into the recovered page (words split on spaces; punctuation ignored).",
+    "To check you're on track: the answer begins with M."
+   ],
+   "technique": "Book cipher",
+   "length": 6
+  },
+  {
+   "id": 2,
+   "title": "Nigredo",
+   "flavor": "The quizmaster in the laboratory only ever asks questions with a number for an answer, and never a big one.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "Legs on a spider",
+      "Players on a rugby union side",
+      "Cards in one suit of a standard deck",
+      "Guns fired in a traditional royal salute",
+      "Days in a fortnight",
+      "Primary colours of light",
+      "Spots on a standard die, all faces added up",
+      "Signs of the Western zodiac",
+      "Guns fired in a traditional royal salute",
+      "Lines in a villanelle"
+     ],
+     "ordered": true,
+     "tray": "letter"
+    }
+   ],
+   "hash": "2ef07f946535b0ab2051c47bc2b1181a26e6fa7169e1c09dc802d57be624ecfd",
+   "partials": {},
+   "hints": [
+    "Each line is a number from 1 to 26. Turn each number into a letter (A = 1, B = 2, …).",
+    "To check you're on track: the answer begins with H."
+   ],
+   "technique": "Number trivia",
+   "length": 10
+  },
+  {
+   "id": 3,
+   "title": "Albedo",
+   "flavor": "Unjumble the kit list. You'll have one letter left over every time, and you'll want to keep those.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "FERBEM",
+      "INTYNLAMO",
+      "BOELASWL",
+      "ILIOSTVR",
+      "CENUFKAR"
+     ],
+     "ordered": true,
+     "mono": true
+    }
+   ],
+   "hash": "31711f2f4800b2ac920d259ce6c6348655feb4a73289cfff6910ed210cc45898",
+   "partials": {},
+   "hints": [
+    "Each jumble is an anagram of a word from this round's theme plus one extra letter. The extra letters, in order, spell the answer.",
+    "To check you're on track: the answer begins with F."
+   ],
+   "technique": "Anagrams with an extra letter",
+   "length": 5
+  },
+  {
+   "id": 4,
+   "title": "Aqua Regia",
+   "flavor": "The host in the laboratory fussed over the seating plan for days. Every guest pays for their chair with one letter of their name: the further along the row, the deeper into the name.",
+   "blocks": [
+    {
+     "type": "seating",
+     "seats": 4,
+     "names": [
+      "Isadora",
+      "Gerald",
+      "Leopold",
+      "Leander"
+     ],
+     "clues": [
+      "Gerald sits somewhere between Leander and Leopold.",
+      "Leander has seat 3."
+     ],
+     "logic": [
+      [
+       "between",
+       "LEANDER",
+       "GERALD",
+       "LEOPOLD"
+      ],
+      [
+       "at",
+       "LEANDER",
+       3
+      ]
+     ]
+    }
+   ],
+   "hash": "71702b626edc20d9f1b1a13075dc4540cbb34fc4fb4bedf929e0b67f0361cec2",
+   "partials": {},
+   "hints": [
+    "A logic puzzle: use the clues to find the one seating that works (seats are numbered 1 to n from the left). Then the guest in seat k gives the k-th letter of their name.",
+    "To check you're on track: the answer begins with L."
+   ],
+   "technique": "Seating plan (logic)",
+   "length": 4
+  },
+  {
+   "id": 5,
+   "title": "Calcination",
+   "flavor": "Someone wrote this out in a zigzag across four lines of the ledger, then copied each line out in turn.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "NEENT AEIOD BOYXT DOEET FRHPE STNRC AABDP CAYTG HSSTR ZJSEO INROE NOIOI UWN",
+     "wide": true,
+     "rails": 4
+    }
+   ],
+   "hash": "6acb781d2f401bcf9212f95c5f445364a99db6980bab388909afea571c48f846",
+   "partials": {},
+   "hints": [
+    "Rail-fence transposition of a sentence with the spaces removed. Try 2 to 5 rails; the sentence tells you the answer.",
+    "To check you're on track: the answer begins with C."
+   ],
+   "technique": "Rail fence (cluephrase)",
+   "length": 8
+  },
+  {
+   "id": 6,
+   "title": "The Green Lion",
+   "flavor": "Find them all. The letters nobody used are the only ones that were talking to you.",
+   "blocks": [
+    {
+     "type": "caption",
+     "text": "Hidden in the grid: 7 words to do with the laboratory (lengths 4, 5, 5, 7, 7, 7, 7), running in any direction."
+    },
+    {
+     "type": "board",
+     "rows": [
+      "ECNESSE",
+      "DISTILL",
+      "PHSEHSA",
+      "BISMUTH",
+      "SWOLLEB",
+      "MOONOEN",
+      "REBMEIX"
+     ],
+     "plain": true,
+     "words": [
+      "ASHES",
+      "BELLOWS",
+      "BISMUTH",
+      "DISTILL",
+      "EMBER",
+      "ESSENCE",
+      "MOON"
+     ]
+    }
+   ],
+   "hash": "1660125c5f9d199cc71c27281b167481e719528c780b9bc56ccf56d0389d19c7",
+   "partials": {},
+   "hints": [
+    "Find every hidden word (any of 8 directions). The unused letters, read left-to-right, top-to-bottom, spell the answer.",
+    "The hidden words are: ASHES, BELLOWS, BISMUTH, DISTILL, EMBER, ESSENCE, MOON.",
+    "To check you're on track: the answer begins with P."
+   ],
+   "technique": "Word search leftovers",
+   "length": 7
+  },
+  {
+   "id": 7,
+   "title": "As Above So Below",
+   "flavor": "Every letter in the laboratory took the same number of steps down the road, and none of them came back.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "IWXH EPVT WPH ZTEI XIH HTRGTI UDG P KTGN ADCV IXBT PCS IWPI HTRGTI XH EWXADHDEWTG",
+     "wide": true,
+     "solver": "substitution",
+     "wheel": true
+    }
+   ],
+   "hash": "af8aba89f27978419c4113786bf35d7e6acb0d26009091f3f10d1b5fabdcc953",
+   "partials": {},
+   "hints": [
+    "Every letter of the sentence was shifted along the alphabet by the same amount. Find the shift; the sentence tells you the answer.",
+    "To check you're on track: the answer begins with P."
+   ],
+   "technique": "Caesar shift",
+   "length": 11
+  }
+ ],
+ "meta": {
+  "title": "Meta: The Great Work",
+  "flavor": "Pigeonholes, each cut to fit one thing, and some of them marked.",
+  "blocks": [
+   {
+    "type": "fitgrid",
+    "rows": [
+     {
+      "len": 7,
+      "shade": 0
+     },
+     {
+      "len": 6,
+      "shade": 4
+     },
+     {
+      "len": 8,
+      "shade": 2
+     },
+     {
+      "len": 5,
+      "shade": 2
+     },
+     {
+      "len": 10,
+      "shade": 5
+     },
+     {
+      "len": 11,
+      "shade": 9
+     },
+     {
+      "len": 4,
+      "shade": 2
+     }
+    ]
+   }
+  ],
+  "length": 7,
+  "hash": "be15b0e83ab00cc3da68910447413aa06c4a593999753372062f5dab3a1d79c3",
+  "hints": [
+   "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+   "To check you're on track: the final answer begins with P."
+  ]
+ },
+ "described": true
+}
