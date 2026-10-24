@@ -1,0 +1,64 @@
+{
+ "date": "2026-10-23",
+ "number": 27,
+ "difficulty": "medium",
+ "final": "TRANSMUTE",
+ "metaType": "logbook",
+ "explain": "Each entry is (puzzle number, letter number): index into that puzzle's answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Prima Materia",
+   "answer": "PESTLE",
+   "mechanism": "Baconian cipher",
+   "transform": null,
+   "encoded": "PESTLE",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "As Above So Below",
+   "answer": "MORTAR",
+   "mechanism": "Gapless Morse",
+   "transform": null,
+   "encoded": "MORTAR",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Emerald Tablet",
+   "answer": "ATHANOR",
+   "mechanism": "Number trivia",
+   "transform": null,
+   "encoded": "ATHANOR",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "The Green Lion",
+   "answer": "MOON",
+   "mechanism": "Element spelling",
+   "transform": null,
+   "encoded": "MOON",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Aqua Regia",
+   "answer": "PHILOSOPHER",
+   "mechanism": "Pigpen cipher",
+   "transform": "Atbash (A↔Z mirror)",
+   "encoded": "KSROLHLKSVI",
+   "mutated": null
+  },
+  {
+   "id": 6,
+   "title": "Solve Et Coagula",
+   "answer": "SUN",
+   "mechanism": "Book cipher",
+   "transform": null,
+   "encoded": "SUN",
+   "mutated": null
+  }
+ ]
+}

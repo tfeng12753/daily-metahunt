@@ -1,0 +1,64 @@
+{
+ "date": "2026-10-23",
+ "number": 27,
+ "difficulty": "hard",
+ "final": "ELIXIR",
+ "metaType": "mutation",
+ "explain": "Each feeder decodes to its answer with a single wrong letter. Those substituted letters, in puzzle order, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "As Above So Below",
+   "answer": "VITRIOL",
+   "mechanism": "Nonogram",
+   "transform": null,
+   "encoded": "VITEIOL",
+   "mutated": "VITEIOL"
+  },
+  {
+   "id": 2,
+   "title": "Albedo",
+   "answer": "CINNABAR",
+   "mechanism": "Mirrored NATO",
+   "transform": null,
+   "encoded": "CINNABAL",
+   "mutated": "CINNABAL"
+  },
+  {
+   "id": 3,
+   "title": "Solve Et Coagula",
+   "answer": "PHILOSOPHER",
+   "mechanism": "Book cipher",
+   "transform": null,
+   "encoded": "PHILOIOPHER",
+   "mutated": "PHILOIOPHER"
+  },
+  {
+   "id": 4,
+   "title": "Aqua Regia",
+   "answer": "ATHANOR",
+   "mechanism": "Vigenère keyed by the title",
+   "transform": null,
+   "encoded": "AXHANOR",
+   "mutated": "AXHANOR"
+  },
+  {
+   "id": 5,
+   "title": "Rubedo",
+   "answer": "PESTLE",
+   "mechanism": "DTMF multi-tap (audio)",
+   "transform": null,
+   "encoded": "PEITLE",
+   "mutated": "PEITLE"
+  },
+  {
+   "id": 6,
+   "title": "Ouroboros",
+   "answer": "QUICKSILVER",
+   "mechanism": "Scrambled sentence",
+   "transform": null,
+   "encoded": "QUICKSILVRR",
+   "mutated": "QUICKSILVRR"
+  }
+ ]
+}

@@ -1,0 +1,310 @@
+{
+ "date": "2026-10-24",
+ "difficulty": "easy",
+ "salt": "2026-10-24/easy",
+ "number": 28,
+ "round": "Isobars",
+ "intro": "The summit station has been automated for forty years, but the old oak board beside the printer still holds seven pigeonholes sawn to different depths for the paper rolls nobody has used since the duty staff kept the logs by hand. This morning the printer woke with a grinding cough and produced seven strips that are plainly not the day's prediction, each trimmed by a different length. The retiring observer put every strip into the hole that took it without forcing, and the board was soon full. Only some of the holes are lined with black felt, and she says the felt is there to be looked at, not to hide anything. The air smells of toner, thin snow and the diesel heater starting an hour early.",
+ "echo": "The Arabic word meant simply 'season', and here the season means rain.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Squall Line",
+   "flavor": "The clerk ran out of alphabet and kept going anyway.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "★☂✚ ♠✚●●☁♫✚ ♦☁● ☂✿☾☾✚♪ ✿♪ ◇▽☁✿♪ ●✿♫☂★ ☁▽▽ ☁▽✈♪♫ ☁♪☾ ✿★ ●✿♠◇▽♥ ●☁♥● ♪✿♠△☀●",
+     "wide": true,
+     "solver": "substitution"
+    }
+   ],
+   "hash": "42e801d2c7002e1517ed983c8073e217b51a69aa2725506ac04d3e5dd9557861",
+   "partials": {},
+   "hints": [
+    "Each symbol stands for one letter (a simple substitution); word breaks are kept. Solve the sentence; it tells you the answer.",
+    "To check you're on track: the answer begins with N."
+   ],
+   "technique": "Symbol cryptogram",
+   "length": 6
+  },
+  {
+   "id": 2,
+   "title": "Occluded Front",
+   "flavor": "Up and down, up and down: five rows, one long sentence, and not a single space left.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "NPYTS ZOAOX ENOET ROIET NRIBE CANGH ATRIS EDNOY TDEOI FHPSU WRBWD ETSEJ OO",
+     "wide": true,
+     "rails": 5
+    }
+   ],
+   "hash": "fee36fe1f753fa5ef15996bc655a6422c9e54f588c297199ccacbd69b11f3004",
+   "partials": {},
+   "hints": [
+    "Rail-fence transposition of a sentence with the spaces removed. Try 2 to 5 rails; the sentence tells you the answer.",
+    "To check you're on track: the answer begins with R."
+   ],
+   "technique": "Rail fence (cluephrase)",
+   "length": 7
+  },
+  {
+   "id": 3,
+   "title": "Inversion",
+   "flavor": "Each column remembers what it held, but not in what order.",
+   "blocks": [
+    {
+     "type": "dropquote",
+     "cols": [
+      "HIT",
+      "FFIWY",
+      "HOOS",
+      "IUUY",
+      "CNOS",
+      "DEHHU",
+      "AN",
+      "CITTV",
+      "AEEHS",
+      "ENN",
+      "ACF",
+      "AELOR",
+      "ENRR",
+      "AEEST",
+      "ACDHW",
+      "ADEE",
+      "NRSTY"
+     ],
+     "mask": [
+      "..#...#...#....#.",
+      "...#........#....",
+      "#...#....#.......",
+      "#.....#...#......",
+      "#.....#..#.......",
+      ".################"
+     ]
+    }
+   ],
+   "hash": "ac38ac5bde18ae69359ff7026356fc23a454d1e62d9304fd3c15295b24b13a63",
+   "partials": {},
+   "hints": [
+    "A drop quote: each column's letters (shown alphabetised above it) drop into that column of the grid below. Black squares are spaces; words can wrap between rows. The sentence tells you the answer.",
+    "To check you're on track: the answer begins with F."
+   ],
+   "technique": "Drop quote",
+   "length": 8
+  },
+  {
+   "id": 4,
+   "title": "Beaufort Twelve",
+   "flavor": "Before phones were smart, you had to be patient with the seven key.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "770 Hz + 1336 Hz  ×1",
+      "697 Hz + 1477 Hz  ×2",
+      "852 Hz + 1336 Hz  ×1",
+      "852 Hz + 1209 Hz  ×4",
+      "852 Hz + 1336 Hz  ×1",
+      "852 Hz + 1209 Hz  ×3",
+      "697 Hz + 1477 Hz  ×2",
+      "697 Hz + 1336 Hz  ×1",
+      "770 Hz + 1477 Hz  ×1"
+     ],
+     "mono": true
+    }
+   ],
+   "hash": "62716a3f7eaedc18f813c74da25769c7f4b81c37b04cdf8fc5d2204451788f30",
+   "partials": {},
+   "hints": [
+    "Each frequency pair is a phone keypad key (DTMF). The ×n is how many times it was pressed: old-school multi-tap texting.",
+    "To check you're on track: the answer begins with J."
+   ],
+   "technique": "DTMF multi-tap",
+   "length": 9
+  },
+  {
+   "id": 5,
+   "title": "Veering",
+   "flavor": "A parts list read aloud by someone who only knew the stripes.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "black–brown",
+      "brown–yellow",
+      "black–green",
+      "brown–orange",
+      "brown–green",
+      "brown–orange",
+      "black–green",
+      "red–black",
+      "black–green",
+      "brown–grey"
+     ]
+    }
+   ],
+   "hash": "cb7e91b046e2ae9fab18cce0dc0fef20de6e9f754f78e796d4c69b04a4e339d0",
+   "partials": {},
+   "hints": [
+    "Resistor colour code: each pair of colours is two digits (black 0 … white 9), a letter position.",
+    "To check you're on track: the answer begins with A."
+   ],
+   "technique": "Resistor colour code (written)",
+   "length": 10
+  },
+  {
+   "id": 6,
+   "title": "Anvil Cloud",
+   "flavor": "Place cards, a long table and a host who counts: seat one, first letter; seat two, second letter; and so on down the row.",
+   "blocks": [
+    {
+     "type": "seating",
+     "seats": 5,
+     "names": [
+      "Kirsten",
+      "Georgina",
+      "Fiona",
+      "Alistair",
+      "Arthur"
+     ],
+     "clues": [
+      "Exactly one person sits between Georgina and Kirsten.",
+      "Georgina sits somewhere between Fiona and Kirsten.",
+      "Fiona is not in seat 2.",
+      "Kirsten is not in seat 1.",
+      "Georgina sits somewhere between Arthur and Kirsten."
+     ],
+     "logic": [
+      [
+       "gap",
+       "GEORGINA",
+       "KIRSTEN",
+       1
+      ],
+      [
+       "between",
+       "FIONA",
+       "GEORGINA",
+       "KIRSTEN"
+      ],
+      [
+       "not_at",
+       "FIONA",
+       2
+      ],
+      [
+       "not_at",
+       "KIRSTEN",
+       1
+      ],
+      [
+       "between",
+       "ARTHUR",
+       "GEORGINA",
+       "KIRSTEN"
+      ]
+     ]
+    }
+   ],
+   "hash": "f56089f59e5c68f08d4f9156ab4eb302a427f8918ec809d8d1d020e5d86efcd2",
+   "partials": {},
+   "hints": [
+    "A logic puzzle: use the clues to find the one seating that works (seats are numbered 1 to n from the left). Then the guest in seat k gives the k-th letter of their name.",
+    "To check you're on track: the answer begins with F."
+   ],
+   "technique": "Seating plan (logic)",
+   "length": 5
+  },
+  {
+   "id": 7,
+   "title": "Eye Of The Storm",
+   "flavor": "Cross off everything you recognise. What nobody claims is what you came for.",
+   "blocks": [
+    {
+     "type": "caption",
+     "text": "Hidden in the grid: 8 words to do with the weather station (lengths 4, 4, 4, 5, 5, 6, 6, 6), running in any direction."
+    },
+    {
+     "type": "board",
+     "rows": [
+      "IRADARE",
+      "SWEAEZL",
+      "OTTLEHL",
+      "BHAEAEA",
+      "AGRIERU",
+      "RBLVALQ",
+      "NEMISTS"
+     ],
+     "plain": true,
+     "words": [
+      "BREEZE",
+      "GALE",
+      "HAIL",
+      "ISOBAR",
+      "MIST",
+      "RADAR",
+      "SLEET",
+      "SQUALL"
+     ]
+    }
+   ],
+   "hash": "212f5ab6cfb6cf4a255678f8f47f623a248a5a1337cb4049156df5597737fd07",
+   "partials": {},
+   "hints": [
+    "Find every hidden word (any of 8 directions). The unused letters, read left-to-right, top-to-bottom, spell the answer.",
+    "The hidden words are: BREEZE, GALE, HAIL, ISOBAR, MIST, RADAR, SLEET, SQUALL.",
+    "To check you're on track: the answer begins with W."
+   ],
+   "technique": "Word search leftovers",
+   "length": 11
+  }
+ ],
+ "meta": {
+  "title": "Meta: Isobars",
+  "flavor": "Everything at the weather station has a place, and every place is exactly the right size.",
+  "blocks": [
+   {
+    "type": "fitgrid",
+    "rows": [
+     {
+      "len": 9,
+      "shade": 8
+     },
+     {
+      "len": 8,
+      "shade": 1
+     },
+     {
+      "len": 7,
+      "shade": 3
+     },
+     {
+      "len": 6,
+      "shade": 5
+     },
+     {
+      "len": 5,
+      "shade": 2
+     },
+     {
+      "len": 10,
+      "shade": 4
+     },
+     {
+      "len": 11,
+      "shade": 9
+     }
+    ]
+   }
+  ],
+  "length": 7,
+  "hash": "7ac25acc7d736dff02a278968652f1515fbdd5aa51574bc44cf18ed14bf5b59c",
+  "hints": [
+   "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+   "To check you're on track: the final answer begins with M."
+  ]
+ },
+ "described": true
+}

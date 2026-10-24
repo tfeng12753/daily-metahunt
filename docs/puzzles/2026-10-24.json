@@ -1,0 +1,591 @@
+{
+ "date": "2026-10-24",
+ "difficulty": "hard",
+ "salt": "2026-10-24",
+ "number": 28,
+ "round": "Isobars",
+ "intro": "The weather station on the summit has been automated for forty years. This morning its printer woke up and produced something that is definitely not a forecast. The forecasters, who still come up for the long nights out of habit, found the print-out lying under the teletype tray, where the morning's sheets always land, each slot in the rack fitted to receive just one width of paper. They stood around it a while, hands in pockets, not saying much — the kind of silence you get when something familiar has been arranged in a way nobody would call deliberate.",
+ "echo": "The winds turn anticlockwise here, and clockwise on the other side of the world.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Anvil Cloud",
+   "flavor": "Six switches at a time, some pressed, some not.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "100100",
+      "111000",
+      "010100",
+      "101100",
+      "100000",
+      "011110",
+      "100010"
+     ],
+     "inline": true
+    }
+   ],
+   "hash": "15a561aaf0fa3af7d17843564bc2efbd5740c6c71838ce896bb90da83438a052",
+   "partials": {},
+   "hints": [
+    "Write each number in binary. Six yes-or-no choices: is there an alphabet built from exactly that?"
+   ]
+  },
+  {
+   "id": 2,
+   "title": "Squall Line",
+   "flavor": "It goes round and round, and only gets anywhere in the middle.",
+   "blocks": [
+    {
+     "type": "lettergrid",
+     "rows": [
+      "ISNOTEF",
+      "HSPLEAA",
+      "TDRDHSL",
+      "DNO·UEL",
+      "LAWYMFI",
+      "UHETION",
+      "OGHIDRT",
+      "HNTTEGO",
+      "SORWEHT"
+     ]
+    }
+   ],
+   "hash": "f7f61b567e964fbde04edf1a71224458d4d1094c75c6c9a4e48f7089c3b562e6",
+   "partials": {},
+   "hints": [
+    "All the letters of a sentence are here, but not in rows. Try walking the grid the way a snail would."
+   ]
+  },
+  {
+   "id": 3,
+   "title": "Beaufort Twelve",
+   "flavor": "A familiar grid, an unfamiliar alphabet.",
+   "blocks": [
+    {
+     "type": "sudoku",
+     "size": 9,
+     "rows": [
+      "....A.IR.",
+      "...I.C...",
+      "..S.G..HA",
+      "KA.S.....",
+      "UG...H..I",
+      "....C....",
+      ".S...AR.H",
+      "I........",
+      ".KH....U."
+     ],
+     "alphabet": "ACGHIKRSU",
+     "marks": [
+      [
+       8,
+       8
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       5,
+       5
+      ],
+      [
+       8,
+       3
+      ],
+      [
+       6,
+       4
+      ],
+      [
+       5,
+       0
+      ]
+     ]
+    }
+   ],
+   "hash": "d37d3e6475b8f8d8b10747478c279fd97059a439e20c969e41dd316f5171cf9c",
+   "partials": {},
+   "hints": [
+    "A familiar grid puzzle in unfamiliar clothes. Once it's done, are some squares more important than others?"
+   ]
+  },
+  {
+   "id": 4,
+   "title": "Eye Of The Storm",
+   "flavor": "Three letters to a strip, and a note of how long each word was.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "ASK",
+      "ATS",
+      "AVE",
+      "DTH",
+      "EAN",
+      "ECR",
+      "EPT",
+      "ETI",
+      "FOR",
+      "GEH",
+      "ITS",
+      "ONG",
+      "ONT",
+      "RET",
+      "RYL",
+      "SEC",
+      "SFR",
+      "SPA",
+      "THI",
+      "TIM"
+     ],
+     "inline": true,
+     "tiles": true
+    },
+    {
+     "type": "prose",
+     "text": "Word lengths: (4 4 3 4 3 6 3 1 4 4 4 3 4 6 2 5)"
+    }
+   ],
+   "hash": "17e7c859900bc67358447f41dddbffa689b07fc0159e9b1bb45ee4008e4301e0",
+   "partials": {},
+   "hints": [
+    "The strips are alphabetised, not in order. The word lengths say where the breaks fall. Which strip could start the sentence?"
+   ]
+  },
+  {
+   "id": 5,
+   "title": "Rain Shadow",
+   "flavor": "Some squares have been given to you for free.",
+   "blocks": [
+    {
+     "type": "nonogram",
+     "rows": [
+      [
+       3,
+       1,
+       1,
+       5,
+       1,
+       1,
+       3,
+       1,
+       1,
+       5,
+       5,
+       5,
+       4
+      ],
+      [
+       1,
+       1,
+       2,
+       1,
+       1,
+       2,
+       2,
+       1,
+       1,
+       2,
+       2,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       5,
+       1,
+       1,
+       1,
+       4,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       4,
+       1,
+       4,
+       4
+      ],
+      [
+       1,
+       1,
+       1,
+       2,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       5,
+       1,
+       1,
+       3,
+       1,
+       1,
+       5,
+       1,
+       5,
+       1,
+       1
+      ]
+     ],
+     "cols": [
+      [
+       4
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       4
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       5
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       5
+      ],
+      [],
+      [
+       3
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       3
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       5
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "givens": [
+      [
+       4,
+       27,
+       1
+      ],
+      [
+       1,
+       27,
+       0
+      ],
+      [
+       4,
+       1,
+       0
+      ]
+     ]
+    }
+   ],
+   "hash": "1d0f3e1b00d35bdae0ad9727d5304fb1bb86a85bb46af0424aafed0d24173aec",
+   "partials": {},
+   "hints": [
+    "The numbers describe runs of filled squares. What picture could they be drawing?"
+   ]
+  },
+  {
+   "id": 6,
+   "title": "Veering",
+   "flavor": "An inventory, tangled. Half a turn of the wheel and you'd have it.",
+   "blocks": [
+    {
+     "type": "caption",
+     "text": "Somewhere in here: things to do with the weather station."
+    },
+    {
+     "type": "board",
+     "rows": [
+      "JTHRNGS",
+      "GSAURRL",
+      "AUIEIAE",
+      "LGLNADE",
+      "ETSIMAT",
+      "REZEERB",
+      "CUMULUS"
+     ],
+     "plain": true,
+     "words": [
+      "BREEZE",
+      "CUMULUS",
+      "GALE",
+      "GUST",
+      "HAIL",
+      "MIST",
+      "RADAR",
+      "SLEET"
+     ]
+    }
+   ],
+   "hash": "6992e9c36463ca56e4883cc1695bc5e6de4aa49c6e3156bab353de83f1b3a166",
+   "partials": {
+    "e6468e0fb893e81fed6785db450b9d98df7ec5e9e58b19b8bdbc4f33aabb3905": "You've decoded it, but it's not finished. One more layer."
+   },
+   "hints": [
+    "Once every theme word is found, is anything left unclaimed? Read it in order. And if what you get still isn't a word, reread the flavour text.",
+    "The hidden words are: BREEZE, CUMULUS, GALE, GUST, HAIL, MIST, RADAR, SLEET."
+   ]
+  },
+  {
+   "id": 7,
+   "title": "Occluded Front",
+   "flavor": "The spy always carried a novel. This page will have to do.",
+   "blocks": [
+    {
+     "type": "prose",
+     "text": "The weather station on the summit has been automated for forty years. This morning its printer woke up and produced something that is definitely not a forecast.",
+     "paper": true
+    },
+    {
+     "type": "list",
+     "items": [
+      "24.9",
+      "21.7",
+      "14.7",
+      "7.1",
+      "3.4",
+      "24.5",
+      "24.6",
+      "3.7",
+      "21.9"
+     ],
+     "inline": true
+    }
+   ],
+   "hash": "d1e60b10b7585f9050975201856c509497dafeadab155f4a2f36203e2f5d27b5",
+   "partials": {},
+   "hints": [
+    "The first number in each pair never goes past the number of words on the page. What does the second count?"
+   ]
+  }
+ ],
+ "meta": {
+  "title": "Meta: Isobars",
+  "flavor": "Everything at the weather station has a place.",
+  "blocks": [
+   {
+    "type": "fitgrid",
+    "rows": [
+     {
+      "len": 7,
+      "shade": 0
+     },
+     {
+      "len": 8,
+      "shade": 7
+     },
+     {
+      "len": 6,
+      "shade": 0
+     },
+     {
+      "len": 9,
+      "shade": 0
+     },
+     {
+      "len": 5,
+      "shade": 2
+     },
+     {
+      "len": 11,
+      "shade": 9
+     },
+     {
+      "len": 10,
+      "shade": 6
+     }
+    ]
+   }
+  ],
+  "length": 7,
+  "hash": "0fb8789178b4cd39a11bfb562f756aae34aab299353c7efd816c1531101dc99b",
+  "hints": [
+   "The grid's rows are all different lengths. So are your answers."
+  ]
+ },
+ "described": true
+}

@@ -1,0 +1,73 @@
+{
+ "date": "2026-10-23",
+ "number": 27,
+ "difficulty": "easy",
+ "final": "PANACEA",
+ "metaType": "fitin",
+ "explain": "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Solve Et Coagula",
+   "answer": "MORTAR",
+   "mechanism": "Book cipher",
+   "transform": null,
+   "encoded": "MORTAR",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Nigredo",
+   "answer": "HOMUNCULUS",
+   "mechanism": "Number trivia",
+   "transform": null,
+   "encoded": "HOMUNCULUS",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Albedo",
+   "answer": "FLASK",
+   "mechanism": "Anagrams with an extra letter",
+   "transform": null,
+   "encoded": "FLASK",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Aqua Regia",
+   "answer": "LEAD",
+   "mechanism": "Seating plan (logic)",
+   "transform": null,
+   "encoded": "LEAD",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Calcination",
+   "answer": "CINNABAR",
+   "mechanism": "Rail fence (cluephrase)",
+   "transform": null,
+   "encoded": "CINNABAR",
+   "mutated": null
+  },
+  {
+   "id": 6,
+   "title": "The Green Lion",
+   "answer": "PHOENIX",
+   "mechanism": "Word search leftovers",
+   "transform": null,
+   "encoded": "PHOENIX",
+   "mutated": null
+  },
+  {
+   "id": 7,
+   "title": "As Above So Below",
+   "answer": "PHILOSOPHER",
+   "mechanism": "Caesar shift",
+   "transform": null,
+   "encoded": "PHILOSOPHER",
+   "mutated": null
+  }
+ ]
+}
