@@ -30,6 +30,9 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Install the bank's crypto library
+        run: pip install --quiet cryptography
+
       - name: Self-test the generator
         run: cd generator && python selftest.py 60
 
@@ -39,6 +42,7 @@ jobs:
           IFM_API_KEY: ${{ secrets.IFM_API_KEY }}   # optional: K2 Horizon flavour polish
           IFM_MODEL: ${{ vars.IFM_MODEL }}          # optional: pin a model id
           RELEASE_SECRET: ${{ secrets.RELEASE_SECRET }}  # optional: lock tomorrow's round early (same value on the Render API)
+          BANK_PRIVATE_KEY: ${{ secrets.BANK_PRIVATE_KEY }}  # optional: read the private theme bank (generator/bank.py)
         run: |
           if [ -z "$PUZZLE_SECRET" ]; then
             echo "::error::Set the PUZZLE_SECRET repository secret first."; exit 1
@@ -50,6 +54,7 @@ jobs:
           git config user.name "metahunt-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add docs generator/sealed
+          if [ -d generator/bank ]; then git add generator/bank; fi
           if git diff --cached --quiet; then
             echo "Nothing new."
           else

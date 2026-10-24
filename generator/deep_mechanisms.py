@@ -17,7 +17,7 @@ puzzle before it ships.
 import itertools
 import random
 
-from hunt_mechanisms import CLUEPHRASES, MECHANISMS as HUNT_MECHANISMS, phrase_answer
+from hunt_mechanisms import MECHANISMS as HUNT_MECHANISMS, cluephrase, phrase_answer
 from mechanisms import ALPHA, MORSE, Mechanism
 
 
@@ -181,6 +181,9 @@ class SeatingPlan(Mechanism):
         "The host was particular about the seating, and more particular still about what each chair was worth.",
         "Everyone has a place. Everyone pays for it in their own name.",
         "One table, one arrangement that offends nobody, and a toll that rises seat by seat.",
+        'Dinner is served the moment everyone is happy with where they sit.',
+        'Name cards in a hat, and a host who already knows the answer.',
+        'Who sits beside whom is a matter of etiquette. What it costs is a matter of record.',
     ]
 
     def can(self, word, ctx=None):
@@ -433,7 +436,7 @@ class Playfair(Mechanism):
         return "J" not in word  # titles are assigned later, and every title has letters to key with
 
     def encode(self, word, rng, ctx):
-        plain = rng.choice([t for t in CLUEPHRASES if "J" not in t.replace("{W}", "")]).replace("{W}", word)
+        plain = cluephrase(word, rng, ctx, avoid="J")
         prepared = playfair_prepare(plain)
         ct = _playfair(prepared, playfair_square(ctx["title"]), 1)
         ctx["_plain"], ctx["_prepared"] = plain, prepared
@@ -443,7 +446,7 @@ class Playfair(Mechanism):
         ct = blocks[0]["text"].replace(" ", "")
         if _playfair(ct, playfair_square(ctx["title"]), -1) != ctx["_prepared"]:
             return None
-        return phrase_answer(ctx["_plain"])
+        return phrase_answer(ctx["_plain"], ctx)
 
 
 # --------------------------------------------------------------------------
@@ -489,7 +492,7 @@ class Spiral(Mechanism):
     ]
 
     def encode(self, word, rng, ctx):
-        plain = rng.choice(CLUEPHRASES).replace("{W}", word).replace(" ", "")
+        plain = cluephrase(word, rng, ctx).replace(" ", "")
         L = len(plain)
         for _ in range(50):
             C = rng.choice(range(max(5, int(L ** 0.5)), int(L ** 0.5) + 4))
@@ -501,21 +504,21 @@ class Spiral(Mechanism):
             for ch, (r, c) in zip(plain, spiral_path(R, C, corner, cw)):
                 grid[r][c] = ch
             rows = ["".join(row) for row in grid]
-            reads = {self._read(rows, k, d) for k in range(4) for d in (True, False)}
+            reads = {self._read(rows, k, d, ctx) for k in range(4) for d in (True, False)}
             if len([x for x in reads if x]) == 1:  # exactly one route reads as a sentence
                 ctx["_plain"] = plain
                 return [{"type": "lettergrid", "rows": rows}]
         raise RuntimeError("no spiral")
 
     @staticmethod
-    def _read(rows, corner, cw):
+    def _read(rows, corner, cw, ctx=None):
         R, C = len(rows), len(rows[0])
         text = "".join(rows[r][c] for r, c in spiral_path(R, C, corner, cw)).rstrip("·")
-        return phrase_answer(text) if "·" not in text else None
+        return phrase_answer(text, ctx) if "·" not in text else None
 
     def decode(self, blocks, ctx):
         rows = blocks[0]["rows"]
-        got = {self._read(rows, k, d) for k in range(4) for d in (True, False)} - {None}
+        got = {self._read(rows, k, d, ctx) for k in range(4) for d in (True, False)} - {None}
         return got.pop() if len(got) == 1 else None
 
 

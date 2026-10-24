@@ -73,8 +73,11 @@ titles and shape of the data are the only clues.
   under each item, and every puzzle has a notes pad. Older rounds get these tools too.
   Everything is saved in the browser.
 
-Answers are checked in the browser against salted SHA-256 hashes, so the page
-never contains them. Intermediate layers and uncorrected mutations get a
+Answers are checked in the browser against salted hashes, so the page never
+contains them. Rounds from late October 2026 on use PBKDF2 (100,000 rounds,
+`"hashv": 2` in the round file), so testing a word list against a round takes
+real time; older rounds keep the plain SHA-256 they were published with. Each
+round picks its meta at random from every meta type that fits its words. Intermediate layers and uncorrected mutations get a
 "keep going" response. Solutions are published the day after.
 
 ## Hosting on Render
@@ -195,12 +198,39 @@ npm install && node server/index.mjs        # site + leaderboard on http://local
 Without `PUZZLE_SECRET`, the generator falls back to an insecure dev secret.
 Don't commit rounds made that way.
 
-Add a theme by appending to `generator/themes.json`. Add a mechanism by
+Add a public theme by appending to `generator/themes.json`, or (better) a
+private one to the bank, below. Add a mechanism by
 subclassing `Mechanism` in `generator/mechanisms.py` with `encode` and
 `decode`, give it a nudge and pointer in `generator/hints.py`, then teach `docs/app.js`
 any new block type.
 
+## The private theme bank
+
+Every word in `themes.json` is public, so every answer drawn from it can be
+found by hashing the word list against the round, no solving needed. New
+themes go into an encrypted bank instead (`generator/bank.py`):
+
+- **Set-up (once).** `python3 generator/bank.py keygen --out ~/metahunt-bank-key.pem`
+  writes `generator/bank/public_key.pem` (commit it) and a private key outside
+  the repo. Put the private key's full text in an Actions secret named
+  `BANK_PRIVATE_KEY`, and keep a copy somewhere safe.
+- **Adding a theme.** Write a draft in the `themes.json` format, in `drafts/`
+  (git-ignored) or outside the repo, then `python3 generator/bank.py add drafts/x.json`.
+  It checks the draft (no final printed anywhere a player can read, enough
+  words, cluephrases that read one way only), test-builds every level, and
+  encrypts it to `generator/bank/themes/<random id>.json`. Only the public key is
+  needed, so a Claude Code session can write and add themes without any secret.
+  A draft can bring its own `cluephrases`, `flavors`/`easy_flavors` per puzzle
+  type and `meta_flavors`/`easy_meta_flavors`, so it reads as its own world;
+  see the docstring at the top of `bank.py`.
+- **Nightly.** Each new date takes an unused bank theme (one use by default;
+  `max_uses` allows more, each avoiding every answer already published) and
+  records it in `generator/bank/schedule.json`. With the bank empty, or no
+  key, rounds come from the public themes as before.
+- `bank.py list` and `bank.py check` (with `BANK_PRIVATE_KEY` set) show what's
+  left and re-test every theme.
+
 ## Honesty clause
 
-The theme bank is public, so a determined person could brute-force the final
-answer against its hash. Please don't. That's not what it's for.
+The public themes are public, so a determined person could still brute-force
+their answers against the hash. Please don't. That's not what it's for.

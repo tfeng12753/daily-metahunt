@@ -173,9 +173,20 @@
 
   // ---------- hashing ----------
   const norm = (s) => s.toUpperCase().replace(/[^A-Z]/g, "");
+  // Rounds from hashv 2 on use a slow PBKDF2 hash, so guessing answers from a word list costs
+  // real time; older rounds keep the plain salted SHA-256 they were published with.
+  const hexOf = (buf) => [...new Uint8Array(buf)].map((b) => b.toString(16).padStart(2, "0")).join("");
+  const hashCache = new Map();
   async function hash(date, word) {
-    const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(`metahunt|${date}|${word}`));
-    return [...new Uint8Array(buf)].map((b) => b.toString(16).padStart(2, "0")).join("");
+    const enc = new TextEncoder();
+    if ((puzzle.hashv || 1) < 2) return hexOf(await crypto.subtle.digest("SHA-256", enc.encode(`metahunt|${date}|${word}`)));
+    const k = `${date}|${word}`;
+    if (!hashCache.has(k)) {
+      const base = await crypto.subtle.importKey("raw", enc.encode(word), "PBKDF2", false, ["deriveBits"]);
+      hashCache.set(k, hexOf(await crypto.subtle.deriveBits(
+        { name: "PBKDF2", hash: "SHA-256", salt: enc.encode(`metahunt|${date}`), iterations: puzzle.iter }, base, 256)));
+    }
+    return hashCache.get(k);
   }
 
   // ---------- per-puzzle notes (scratch letters, marks, tiles), kept in this browser ----------

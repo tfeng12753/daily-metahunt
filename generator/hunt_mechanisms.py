@@ -24,21 +24,60 @@ CLUEPHRASES = [
     "SHOULD THIS NOTE FALL INTO THE WRONG HANDS PLEASE FORGET THE WORD {W}",
     "THE LAST THING THE OPERATOR TYPED BEFORE THE LINE WENT DEAD WAS {W}",
     "YOUR ANSWER FOR THIS PUZZLE IS {W} BUT DO NOT TELL THE OTHERS HOW YOU GOT IT",
+    "THE PASSWORD AT THE BACK DOOR CHANGES EVERY NIGHT AND TONIGHT IT IS {W}",
+    "WRITTEN ON THE BACK OF AN OLD RAILWAY TICKET IN FADED PENCIL WAS THE WORD {W}",
+    "THE PARROT ONLY EVER LEARNED TO SAY ONE THING AND THAT THING WAS {W}",
+    "WHEN THE SAFE WAS FINALLY OPENED THERE WAS NOTHING INSIDE BUT A CARD READING {W}",
+    "THE INSPECTOR CIRCLED ONE WORD IN RED INK AND UNDERLINED IT TWICE {W}",
+    "IT TOOK THREE CLERKS A FORTNIGHT TO AGREE THAT THE WORD WAS {W}",
+    "SCRATCHED INTO THE PAINT ON THE UNDERSIDE OF THE TABLE IS THE WORD {W}",
+    "THE TELEGRAM COST A SHILLING A WORD SO THE SENDER ONLY PAID FOR ONE {W}",
+    "ASK THE NIGHT PORTER WHAT HE SAW AND HE WILL ONLY SAY {W}",
+    "THE CROSSWORD WAS LEFT HALF FINISHED BUT ONE ANSWER WAS INKED IN BOLDLY {W}",
+    "THE MAP HAD NO PLACE NAMES AT ALL EXCEPT ONE WORD IN THE MARGIN {W}",
+    "SEVEN WITNESSES GAVE SEVEN STORIES BUT EVERY ONE OF THEM MENTIONED {W}",
+    "HIDDEN UNDER THE FLOORBOARD WAS A TIN BOX AND IN THE BOX A NOTE SAYING {W}",
+    "THE CODE BOOK WAS BURNED BUT SOMEONE REMEMBERED ITS LAST ENTRY {W}",
+    "BEFORE YOU GO ANY FURTHER PLEASE MAKE A NOTE OF THE WORD {W}",
+    "THE ANSWER YOU ARE LOOKING FOR IS {W} AND YOU SHOULD KEEP IT SAFE FOR LATER",
+    "THE WORD {W} IS WHAT YOU WANT HERE SO PUT IT IN THE BOX AND CARRY ON",
+    "IT IS NOT A TRICK AND IT IS NOT A TRAP THE ANSWER REALLY IS {W}",
+    "THE ORGANIST PLAYED THE SAME FOUR NOTES ALL EVENING AND THEY SPELLED {W}",
+    "AT THE BOTTOM OF THE LETTER BELOW THE SIGNATURE SOMEONE HAD ADDED {W}",
+    "THE STATIONMASTER CHALKED A SINGLE WORD ON THE BOARD AND WENT HOME {W}",
+    "THE ONLY WORD THE MACHINE WOULD PRINT NO MATTER WHAT ANYONE TYPED WAS {W}",
+    "TAKE THE WORD {W} WITH YOU BECAUSE YOU WILL NEED IT AT THE VERY END",
+    "THE LIGHTHOUSE KEEPER WROTE THE SAME WORD IN THE LOG EVERY NIGHT {W}",
+    "UNDERNEATH ALL THE NOISE THERE WAS ONLY EVER ONE WORD BEING SAID {W}",
+    "THE AUCTIONEER SOLD THE LAST LOT FOR A SINGLE WORD AND THE WORD WAS {W}",
+    "THE STAMP ON THE ENVELOPE WAS FORGED BUT THE WORD INSIDE WAS REAL {W}",
+    "THE CHILD WHO FOUND IT COULD NOT READ YET BUT COPIED OUT EVERY LETTER {W}",
+    "PRINTED VERY SMALL ON THE LAST PAGE WHERE NOBODY EVER LOOKS IS {W}",
+    "THE OLD SAILOR SWORE HE WOULD TAKE IT TO HIS GRAVE BUT HE TOLD US ANYWAY {W}",
 ]
 
 
-def cluephrase(word, rng):
-    return rng.choice(CLUEPHRASES).replace("{W}", word)
+def phrase_bank(ctx=None):
+    """Every cluephrase this round may use: the theme's own (if it brings any) and the shared ones."""
+    return list((ctx or {}).get("cluephrases") or []) + CLUEPHRASES
 
 
-def phrase_answer(text):
-    """Recover {W} from a plaintext cluephrase (spaces optional)."""
+def cluephrase(word, rng, ctx=None, avoid=""):
+    """A sentence ending in the answer. A theme's own phrases are preferred when it has them."""
+    ok = lambda t: not set(avoid) & set(t.replace("{W}", ""))
+    own = [t for t in (ctx or {}).get("cluephrases") or [] if ok(t)]
+    return rng.choice(own or [t for t in CLUEPHRASES if ok(t)]).replace("{W}", word)
+
+
+def phrase_answer(text, ctx=None):
+    """Recover {W} from a plaintext cluephrase (spaces optional); None unless exactly one reading fits."""
     flat = text.replace(" ", "")
-    for tmpl in CLUEPHRASES:
+    found = set()
+    for tmpl in phrase_bank(ctx):
         head, tail = tmpl.replace(" ", "").split("{W}")
         if flat.startswith(head) and flat.endswith(tail) and len(flat) > len(head) + len(tail):
-            return flat[len(head):len(flat) - len(tail)]
-    return None
+            found.add(flat[len(head):len(flat) - len(tail)])
+    return found.pop() if len(found) == 1 else None
 
 
 class Cryptogram(Mechanism):
@@ -61,6 +100,9 @@ class Cryptogram(Mechanism):
         "Every letter here is wearing someone else's coat.",
         'The spaces, at least, are honest.',
         'A sentence in disguise, and not a very good disguise.',
+        'Somebody swapped every nameplate in the building, but kept the doors where they were.',
+        'Familiar shapes in unfamiliar faces.',
+        "A letter home, written by someone who didn't trust the postman.",
     ]
 
     def encode(self, word, rng, ctx):
@@ -69,7 +111,7 @@ class Cryptogram(Mechanism):
             rng.shuffle(perm)
             if all(a != b for a, b in zip(ALPHA, perm)):
                 break
-        plain = cluephrase(word, rng)
+        plain = cluephrase(word, rng, ctx)
         if rng.random() < 0.4:
             # A variation on the newspaper cryptogram: no letters at all.
             symbols = list(self.SYMBOLS)
@@ -90,7 +132,7 @@ class Cryptogram(Mechanism):
                 return None
         if len(set(fwd.values())) != len(fwd):
             return None
-        return phrase_answer(plain)
+        return phrase_answer(plain, ctx)
 
 
 class RailFence(Mechanism):
@@ -109,6 +151,9 @@ class RailFence(Mechanism):
         'Fenced in, and copied out in a hurry.',
         'Up and down, up and down, and not a single space left.',
         "Walk the fence; don't read it.",
+        'Copied out line by line, by someone who had first written it in waves.',
+        'The tide came in, went out, and left everything in rows.',
+        'A sentence that zigzagged across the page before anyone straightened it.',
     ]
 
     @staticmethod
@@ -118,7 +163,7 @@ class RailFence(Mechanism):
 
     def encode(self, word, rng, ctx):
         rails = rng.choice([2, 3, 4, 5])
-        plain = cluephrase(word, rng).replace(" ", "")
+        plain = cluephrase(word, rng, ctx).replace(" ", "")
         pat = self._pattern(len(plain), rails)
         ct = "".join(plain[i] for r in range(rails) for i in range(len(plain)) if pat[i] == r)
         ctx["_flavor_n"] = self.NUMS[rails]
@@ -133,7 +178,7 @@ class RailFence(Mechanism):
         plain = [""] * len(ct)
         for c, i in zip(ct, order):
             plain[i] = c
-        return phrase_answer("".join(plain))
+        return phrase_answer("".join(plain), ctx)
 
 
 class BookCipher(Mechanism):
@@ -150,6 +195,9 @@ class BookCipher(Mechanism):
         'Only one page survived. It was the only page anyone needed.',
         'Pairs of numbers pencilled in the margin.',
         'The spy always carried a novel. This page will have to do.',
+        'The rest of the library burned. Nobody minded.',
+        'A reader who only ever remembered where things were, never what they said.',
+        'Coordinates, though not on any map.',
     ]
 
     @staticmethod
@@ -195,6 +243,9 @@ class KnightPath(Mechanism):
         'Two forward, one across.',
         'One horseman, and a field full of noise.',
         'It never travels in a straight line, and neither does the truth.',
+        'The cavalry never charges straight at anything.',
+        'Most of these squares are lying. Only the ones he visits matter.',
+        'A rider who turns a corner at every step.',
     ]
     FILES = "abcdefgh"
 
@@ -308,11 +359,15 @@ class WordSearch(Mechanism):
         'Take stock of everything you recognise.',
         'An inventory, tangled.',
         "Everything that belongs is in there somewhere. Some things don't belong.",
+        'After the clear-out, a few things nobody would claim.',
+        'Lost property, sorted.',
+        'Strike through everything you know; keep the rest.',
     ]
     DIRS = [(0, 1), (1, 0), (1, 1), (-1, 1), (0, -1), (-1, 0), (-1, -1), (1, -1)]
 
     def can(self, word, ctx=None):
-        return bool(ctx and len([w for w in ctx.get("carrier", []) if 4 <= len(w) <= 9]) >= 8)
+        # Three leftover squares in a 7x7-9x9 grid is too tight to hit reliably, so short answers go elsewhere.
+        return len(word) >= 4 and bool(ctx and len([w for w in ctx.get("carrier", []) if 4 <= len(w) <= 9]) >= 8)
 
     def _count(self, grid, w):
         R, C, n = len(grid), len(grid[0]), 0
@@ -527,6 +582,9 @@ class Nonogram(Mechanism):
         'The picture is worth exactly one word.',
         'Only the count of each run was kept.',
         'Some squares have been given to you for free.',
+        'The census only recorded how many lived on each street, and in which order.',
+        'A mosaic, described by someone who only ever counted.',
+        'Fill in the blanks, and the blanks fill in something else.',
     ]
 
     def encode(self, word, rng, ctx):
@@ -597,6 +655,9 @@ class AnagramExtras(Mechanism):
         'Everything came out of the wash with a little something extra.',
         'Each entry picked up a hitchhiker on the way.',
         "Tidy up the inventory.",
+        "Every package was resealed by someone who couldn't count.",
+        'Each of them got jumbled in transit, and none came back alone.',
+        'Shuffled, and one too many every time.',
     ]
 
     def can(self, word, ctx=None):
@@ -654,6 +715,9 @@ class MissingLetters(Mechanism):
         "The labels {at} have faded.",
         "Moths got into the inventory.",
         "Fill the gaps.",
+        'Some of the type fell out of the press.',
+        'Whole words, give or take.',
+        'The ink ran out at the worst possible moments.',
     ]
 
     def can(self, word, ctx=None):
@@ -710,10 +774,13 @@ class DropQuote(Mechanism):
         'Everything fell straight down, and landed in the right column.',
         'Each column remembers what it held, but not in what order.',
         'A sentence that came loose from its lines.',
+        'A typesetter dropped the tray, and every letter fell down its own slot.',
+        "The words were stacked in columns once. Now they're just stacked.",
+        'Gravity got to the sentence first.',
     ]
 
     def encode(self, word, rng, ctx):
-        plain = cluephrase(word, rng)
+        plain = cluephrase(word, rng, ctx)
         W = rng.choice([13, 14, 15, 16, 17])
         rows = [plain[i:i + W].ljust(W) for i in range(0, len(plain), W)]
         cols = ["".join(sorted(r[c] for r in rows if r[c] != " ")) for c in range(W)]
@@ -729,7 +796,7 @@ class DropQuote(Mechanism):
             return None
         if ["".join("#" if ch == " " else "." for ch in r) for r in rows] != b["mask"]:
             return None
-        return phrase_answer(plain)
+        return phrase_answer(plain, ctx)
 
 
 class Fragments(Mechanism):
@@ -747,10 +814,13 @@ class Fragments(Mechanism):
         'Shredded, then sorted by a very tidy intern.',
         'Three letters to a strip, and a note of how long each word was.',
         'Confetti, alphabetised.',
+        'What came out of the shredder was put back in the wrong order, but very neatly.',
+        'Strips on the floor of {place}, picked up in no particular hurry.',
+        'Torn into pieces of equal size, then filed as if that helped.',
     ]
 
     def encode(self, word, rng, ctx):
-        plain = cluephrase(word, rng)
+        plain = cluephrase(word, rng, ctx)
         flat = plain.replace(" ", "")
         chunks = [flat[i:i + 3] for i in range(0, len(flat), 3)]
         ctx["_plain"] = plain
@@ -764,7 +834,7 @@ class Fragments(Mechanism):
             return None
         if blocks[1]["text"] != "Word lengths: (%s)" % " ".join(str(len(w)) for w in plain.split()):
             return None
-        return phrase_answer(plain)
+        return phrase_answer(plain, ctx)
 
 
 # --------------------------------------------------------------------------
@@ -841,6 +911,9 @@ class LetterSudoku(Mechanism):
         'Everything in its place, and nothing twice.',
         'A familiar grid, an unfamiliar alphabet.',
         'No duplicates anywhere.',
+        'Nine rooms, nine guests, and nobody shares.',
+        'Every row has its rules. So does every block.',
+        'A grid with a strict sense of fairness.',
     ]
 
     def can(self, word, ctx=None):
@@ -957,6 +1030,9 @@ class Scramble(Mechanism):
         "All the right letters, none in the right places.",
         "Shaken, one word at a time.",
         "Nothing is missing. Nothing is where it was.",
+        'Every word survived the fall, but each one landed differently.',
+        'Each word has been stirred with a spoon.',
+        'The right words, very slightly drunk.',
     ]
 
     @staticmethod
@@ -972,7 +1048,7 @@ class Scramble(Mechanism):
         return w
 
     def encode(self, word, rng, ctx):
-        plain = cluephrase(word, rng)
+        plain = cluephrase(word, rng, ctx)
         words = [self._shuffle(w, rng) for w in plain.split()]
         if ctx.get("level", "hard") == "hard":
             rng.shuffle(words)  # the hard round loses the word order too
@@ -983,7 +1059,7 @@ class Scramble(Mechanism):
         plain = ctx["_plain"]
         if sorted("".join(sorted(w)) for w in blocks[0]["items"]) != sorted("".join(sorted(w)) for w in plain.split()):
             return None
-        return phrase_answer(plain)
+        return phrase_answer(plain, ctx)
 
 
 class Caesar(Mechanism):
@@ -1006,7 +1082,7 @@ class Caesar(Mechanism):
 
     def encode(self, word, rng, ctx):
         k = rng.choice([s for s in range(1, 26) if s != 13])
-        plain = cluephrase(word, rng)
+        plain = cluephrase(word, rng, ctx)
         ct = "".join(ALPHA[(idx(c) + k) % 26] if c in ALPHA else c for c in plain)
         ctx["_plain"] = plain
         block = {"type": "mono", "text": ct, "wide": True, "solver": "substitution"}
@@ -1019,7 +1095,7 @@ class Caesar(Mechanism):
         shifts = {(idx(a) - idx(b)) % 26 for a, b in zip(ct, plain) if a in ALPHA}
         if len(shifts) != 1 or len(ct) != len(plain):
             return None
-        return phrase_answer(plain)
+        return phrase_answer(plain, ctx)
 
 
 HUNT_MECHANISMS = [Cryptogram(), RailFence(), BookCipher(), KnightPath(), SignalFlags(),

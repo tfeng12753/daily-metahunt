@@ -7,7 +7,7 @@
 // a solve only counts if the player actually sent the right word. Times are
 // measured from the round's release (00:00 UTC on its date).
 import { createServer } from "node:http";
-import { createHash, createHmac, randomBytes } from "node:crypto";
+import { createHash, createHmac, pbkdf2, randomBytes } from "node:crypto";
 import { readFile } from "node:fs/promises";
 import { extname, join, normalize } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -29,6 +29,11 @@ const TYPES = { ".html": "text/html; charset=utf-8", ".js": "text/javascript", "
 
 const store = await createStore(process.env.DATABASE_URL);
 const sha = (s) => createHash("sha256").update(s).digest("hex");
+// Same scheme as generator/generate.py answer_hash(): PBKDF2 from hashv 2, plain SHA-256 before.
+const answerHash = (round, salt, word) => (round.hashv || 1) < 2
+  ? Promise.resolve(sha(`metahunt|${salt}|${word}`))
+  : new Promise((ok, fail) => pbkdf2(word, `metahunt|${salt}`, round.iter, 32, "sha256",
+    (err, key) => (err ? fail(err) : ok(key.toString("hex")))));
 const LEVELS = ["hard", "medium", "easy"];
 const level = (d) => (LEVELS.includes(d) ? d : "hard");
 const norm = (s) => String(s || "").toUpperCase().replace(/[^A-Z]/g, "");
@@ -232,7 +237,7 @@ async function api(req, res, url) {
     }
     if (limited(`solve:${player.id}:${round.date}:${which}`, 20)) return send(res, 429, { error: "Too many guesses." });
     const salt = round.salt || round.date;
-    if (sha(`metahunt|${salt}|${norm(body.answer)}`) !== target.hash) return send(res, 200, { correct: false });
+    if ((await answerHash(round, salt, norm(body.answer))) !== target.hash) return send(res, 200, { correct: false });
     const now = Date.now(), claimed = Number(body.at);
     const when = Number.isFinite(claimed) && claimed <= now && now - claimed <= LATE_REPORT_MS ? claimed : now;
     const at = await store.recordSolve(key, when);

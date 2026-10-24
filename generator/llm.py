@@ -317,7 +317,7 @@ if __name__ == "__main__":
     date = sys.argv[1] if len(sys.argv) > 1 else dt.date.today().isoformat()
     for level in generate.LEVELS:
         puzzle, solution = generate.build("dev-secret", date, level=level)
-        theme = next(t for t in generate.THEMES if t["name"] == puzzle["round"])
+        theme = generate.find_theme(puzzle["round"])
         if not describe(puzzle, solution, theme, level):
             sys.exit("no rewrite: is IFM_API_KEY set? (see message above)")
         print("\n## %s (%s)\n%s" % (puzzle["round"], level, puzzle["intro"]))

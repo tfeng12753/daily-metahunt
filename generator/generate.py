@@ -37,9 +37,30 @@ TRANSFORM_RATE = {"hard": 0.4, "medium": 0.15, "easy": 0.0}
 with open(os.path.join(ROOT, "generator", "themes.json")) as f:
     THEMES = json.load(f)
 
+# The private theme bank (generator/bank/, see bank.py). Its themes are only readable with
+# BANK_PRIVATE_KEY, so their answers can't be looked up in a public word list. main() loads it;
+# without the key it stays empty and every date uses the public themes above.
+BANK_DIR = os.path.join(ROOT, "generator", "bank")
+BANK = {"themes": {}, "schedule": {}}
+BANK_GAP = 14  # days before a bank theme may come round again (if its max_uses allows)
 
-def answer_hash(date, word):
-    return hashlib.sha256(("metahunt|%s|%s" % (date, word)).encode()).hexdigest()
+
+# Answers are checked in the browser against these hashes. Version 1 was a plain salted
+# SHA-256; version 2 is PBKDF2, so testing a word list against a round takes real time.
+# Old rounds say which version they use ("hashv"), and the site and API honour it.
+HASH_VERSION = 2
+HASH_ITER = 100_000  # selftest lowers this: it only checks rounds, it never publishes them
+
+
+def answer_hash(salt, word, version=None, iters=None):
+    if (version or HASH_VERSION) < 2:
+        return hashlib.sha256(("metahunt|%s|%s" % (salt, word)).encode()).hexdigest()
+    return hashlib.pbkdf2_hmac("sha256", word.encode(), ("metahunt|" + salt).encode(), iters or HASH_ITER).hex()
+
+
+def round_hash(puzzle, word):
+    """Hash a word the way an already-built round does (whatever version it was made with)."""
+    return answer_hash(puzzle.get("salt", puzzle["date"]), word, puzzle.get("hashv", 1), puzzle.get("iter"))
 
 
 def seed_for(secret, date, salt=""):
@@ -333,7 +354,15 @@ METAS_BY_LEVEL = {"hard": METAS, "medium": MEDIUM_METAS, "easy": EASY_METAS}
 # --------------------------------------------------------------------------
 
 def pick_theme_and_final(secret, date):
+    """(theme, hard final, round number, words to avoid) for a date.
+
+    A date the bank has scheduled (see bank.py) gets its private theme; every
+    other date cycles through the public themes in themes.json.
+    """
     day = (dt.date.fromisoformat(date) - EPOCH).days
+    tid = BANK["schedule"].get(date, {}).get("theme")
+    if tid in BANK["themes"]:
+        return bank_pick(secret, date, tid)
     order_rng = random.Random(seed_for(secret, "theme-order"))
     order = list(range(len(THEMES)))
     order_rng.shuffle(order)
@@ -341,7 +370,60 @@ def pick_theme_and_final(secret, date):
     cycle = day // len(order)
     finals = list(theme["finals"])
     random.Random(seed_for(secret, "finals-" + theme["id"])).shuffle(finals)
-    return theme, finals[cycle % len(finals)], day + 1
+    return theme, finals[cycle % len(finals)], day + 1, frozenset()
+
+
+def find_theme(name):
+    """A theme by its round name, public or bank."""
+    return next(t for t in THEMES + list(BANK["themes"].values()) if t["name"] == name)
+
+
+def bank_pick(secret, date, tid):
+    """The pick for a bank theme's next use. A reused theme avoids every answer it has already
+    published (feeders and finals, any level), since those are no longer secret."""
+    theme = BANK["themes"][tid]
+    exclude = set()
+    for d in sorted(d for d, e in BANK["schedule"].items() if e["theme"] == tid and d < date):
+        for level in LEVELS:
+            sol = unseal(secret, d, level)
+            if sol:
+                exclude |= {sol["final"]} | {q["answer"] for q in sol["puzzles"]}
+    finals = list(theme["finals"])
+    random.Random(seed_for(secret, "finals-" + theme["id"])).shuffle(finals)
+    fresh = [f for f in finals if f not in exclude]
+    if not fresh:
+        raise RuntimeError("bank theme %s has no unused final left" % tid)
+    return theme, fresh[0], (dt.date.fromisoformat(date) - EPOCH).days + 1, frozenset(exclude)
+
+
+def plan_day(secret, date, save=True):
+    """Schedule a bank theme for a date that hasn't been built yet, if one is free.
+
+    A theme is free when it has uses left (max_uses, default 1) and wasn't used in the last
+    BANK_GAP days. Every level is test-built first, so a theme that can't make a round is
+    skipped, never published half-made. With no free theme the date uses a public theme.
+    """
+    if not BANK["themes"] or date in BANK["schedule"]:
+        return
+    uses = {tid: [d for d, e in BANK["schedule"].items() if e["theme"] == tid] for tid in BANK["themes"]}
+    recent = (dt.date.fromisoformat(date) - dt.timedelta(days=BANK_GAP)).isoformat()
+    rank = random.Random(seed_for(secret, "bank-order"))
+    order = sorted(BANK["themes"], key=lambda t: (len(uses[t]), rank.random()))
+    for tid in order:
+        if len(uses[tid]) >= BANK["themes"][tid].get("max_uses", 1) or any(recent < d < date for d in uses[tid]):
+            continue
+        try:
+            pick = bank_pick(secret, date, tid)
+            for level in LEVELS:
+                build(secret, date, level=level, pick=pick)
+        except Exception as e:  # a theme that can't make today's round just waits
+            print("bank theme %s can't make %s: %s" % (tid, date, e), file=sys.stderr)
+            continue
+        BANK["schedule"][date] = {"theme": tid}
+        if save:
+            write_json(os.path.join(BANK_DIR, "schedule.json"), dict(sorted(BANK["schedule"].items())))
+        print("scheduled bank theme", tid, "for", date)
+        return
 
 
 def assign_mechanisms(feeders, rng, ctx, level="hard"):
@@ -382,41 +464,47 @@ def assign_mechanisms(feeders, rng, ctx, level="hard"):
 
 
 @functools.lru_cache(maxsize=64)
-def _easy_final(secret, date):
+def _easy_final_cached(secret, date):
     return build(secret, date, level="easy")[1]["final"]
 
 
-def build(secret, date, easy=False, level=None):
+def _easy_final(secret, date, pick=None):
+    if pick is None:
+        return _easy_final_cached(secret, date)
+    return build(secret, date, level="easy", pick=pick)[1]["final"]
+
+
+def build(secret, date, easy=False, level=None, pick=None):
+    """Build one level of a date's round. `pick` overrides pick_theme_and_final (bank.py uses it
+    to test-build a theme before it is ever scheduled)."""
     level = level or ("easy" if easy else "hard")
     easy = level == "easy"
-    theme, final, number = pick_theme_and_final(secret, date)
+    theme, final, number, exclude = pick or pick_theme_and_final(secret, date)
     salt = date if level == "hard" else date + "/" + level
     rng = random.Random(seed_for(secret, date, "" if level == "hard" else "|" + level))
     if easy:
         # Same theme, a different (shorter) final word; fall back through the
         # theme's other finals until an easy meta fits.
-        others = sorted((f for f in theme["finals"] if f != final), key=lambda f: (len(f), f))
+        others = sorted((f for f in theme["finals"] if f != final and f not in exclude), key=lambda f: (len(f), f))
         short = [f for f in others if len(f) <= 7]
         rng.shuffle(short)
         candidates = short + [f for f in others if f not in short]
     elif level == "medium":
         # A third final word: not the hard one, and not the easy one.
-        easy_final = _easy_final(secret, date)
-        others = sorted(f for f in theme["finals"] if f not in (final, easy_final))
+        easy_final = _easy_final(secret, date, pick)
+        others = sorted(f for f in theme["finals"] if f not in (final, easy_final) and f not in exclude)
         rng.shuffle(others)
         candidates = others + [easy_final]
     else:
         candidates = [final]
     meta = None
     for final in candidates:
-        pool = [w for w in theme["feeders"] if w != final and final not in w and w not in final]
-        metas = list(METAS_BY_LEVEL[level])
-        rng.shuffle(metas)
-        for fn in metas:
-            meta = fn(final, pool, rng)
-            if meta:
-                break
-        if meta:
+        pool = [w for w in theme["feeders"] if w != final and final not in w and w not in final and w not in exclude]
+        # Try every meta and pick among those that fit. Taking the first that fits let the
+        # metas that almost always fit (logbook, initials) crowd out the rest.
+        fits = [m for m in (fn(final, pool, rng) for fn in METAS_BY_LEVEL[level]) if m]
+        if fits:
+            meta = rng.choice(fits)
             break
     if not meta:
         raise RuntimeError("no meta fits %s" % final)
@@ -434,7 +522,7 @@ def build(secret, date, easy=False, level=None):
     carrier = [w for w in theme["feeders"] if w not in used_words]
     base_ctx = {"glyphs": theme["glyphs"], "carrier": carrier, "intro": theme["intro"],
                 "all_words": theme["feeders"] + theme["finals"], "easy": easy, "level": level,
-                "place": theme["place"]}
+                "place": theme["place"], "cluephrases": theme.get("cluephrases", [])}
     plan = assign_mechanisms(feeders, rng, base_ctx, level)
 
     puzzles, solutions = [], []
@@ -444,7 +532,9 @@ def build(secret, date, easy=False, level=None):
         # Only Easy gets the direct flavour. Medium keeps the oblique one, so its nudge and
         # pointer each add something (see hints.py for the ladder).
         direct = level == "easy" and mech.easy_flavors
-        pool_flavors = ctx.get("_flavors") or (mech.easy_flavors if direct else mech.flavors)
+        # A theme can bring its own lines for a puzzle type ("flavors" / "easy_flavors" by key).
+        own = theme.get("easy_flavors" if direct else "flavors", {}).get(mech.key)
+        pool_flavors = ctx.get("_flavors") or own or (mech.easy_flavors if direct else mech.flavors)
         flavor = fmt(rng.choice(pool_flavors), theme).replace("{n}", ctx.get("_flavor_n", ""))
         method = ctx.get("_hint", mech.hint)
         technique = ctx.get("_name", mech.name)
@@ -493,6 +583,8 @@ def build(secret, date, easy=False, level=None):
         "date": date,
         "difficulty": level,
         "salt": salt,
+        "hashv": HASH_VERSION,
+        "iter": HASH_ITER,
         "number": number,
         "round": theme["name"],
         "intro": theme["intro"],
@@ -500,7 +592,8 @@ def build(secret, date, easy=False, level=None):
         "puzzles": puzzles,
         "meta": {
             "title": "Meta: " + theme["name"],
-            "flavor": fmt(rng.choice(meta.get("easy_flavor", meta["flavor"]) if easy else meta["flavor"]), theme),
+            "flavor": fmt(rng.choice(theme.get("easy_meta_flavors" if easy else "meta_flavors", {}).get(meta["type"])
+                                     or (meta.get("easy_flavor", meta["flavor"]) if easy else meta["flavor"])), theme),
             "blocks": meta["body"],
             "length": len(final),
             "hash": answer_hash(salt, final),
@@ -675,6 +768,8 @@ def main():
 
     rsecret = os.environ.get("RELEASE_SECRET")
     end = dt.date.fromisoformat(args.date)
+    import bank
+    bank.load_into(BANK)
     for level in LEVELS:
         pdir = os.path.join(DOCS, "puzzles", *_sub(level))
         for k in range(args.days - 1, -1, -1):
@@ -687,12 +782,19 @@ def main():
                 if ds == args.date and not args.no_llm:
                     redescribe(secret, path, ds, level)
                 continue
-            puzzle, solution = build(secret, ds, level=level)
             early = unlock(rsecret, ds, level) if rsecret else None
-            if early and early["meta"]["hash"] == puzzle["meta"]["hash"]:
-                puzzle = early  # players may already be solving the locked copy: publish exactly that
-            elif not args.no_llm:
-                theme = next(t for t in THEMES if t["name"] == puzzle["round"])
+            sealed = unseal(secret, ds, level) if early else None
+            if early and sealed and round_hash(early, sealed["final"]) == early["meta"]["hash"]:
+                # Players may already be solving the locked copy: publish exactly that, with the
+                # solution sealed alongside it, even if the generator has changed since.
+                write_json(path, early)
+                print("wrote", path, "-", early["round"], "(from the locked copy)")
+                continue
+            if not built_anywhere(ds):
+                plan_day(secret, ds)
+            puzzle, solution = build(secret, ds, level=level)
+            if not args.no_llm:
+                theme = find_theme(puzzle["round"])
                 if llm.describe(puzzle, solution, theme, level):
                     puzzle["described"] = True
             write_json(path, puzzle)
@@ -703,15 +805,23 @@ def main():
     publish_solutions(secret)
 
 
+def built_anywhere(date):
+    """True once any level of a date has been published or locked: its theme is settled then."""
+    return any(os.path.exists(os.path.join(DOCS, "puzzles", *_sub(l), date + ".json"))
+               or os.path.exists(_locked_path(date, l)) for l in LEVELS)
+
+
 def lock_ahead(secret, rsecret, day, no_llm=False):
     """Build and lock the next day's rounds (once), and drop locked files already published."""
     ds = day.isoformat()
     for level in LEVELS:
         if os.path.exists(_locked_path(ds, level)):
             continue
+        if not built_anywhere(ds):
+            plan_day(secret, ds)
         puzzle, solution = build(secret, ds, level=level)
         if not no_llm:
-            theme = next(t for t in THEMES if t["name"] == puzzle["round"])
+            theme = find_theme(puzzle["round"])
             if llm.describe(puzzle, solution, theme, level):
                 puzzle["described"] = True
         lock(rsecret, puzzle, level)
@@ -737,7 +847,7 @@ def redescribe(secret, path, date, level):
     solution = unseal(secret, date, level)
     if solution is None:
         return
-    theme = next(t for t in THEMES if t["name"] == puzzle["round"])
+    theme = find_theme(puzzle["round"])
     if llm.describe(puzzle, solution, theme, level):
         puzzle["described"] = True
         write_json(path, puzzle)
@@ -772,7 +882,7 @@ def publish_solutions(secret):
                 with open(os.path.join(pdir, *sub, ds + ".json")) as f:
                     published = json.load(f)
                 _, sol = build(secret, ds, level=level)
-                if answer_hash(published.get("salt", ds), sol["final"]) != published["meta"]["hash"]:
+                if round_hash(published, sol["final"]) != published["meta"]["hash"]:
                     print("no solution for %s (%s): not sealed, and the generator changed since it was published"
                           % (ds, level), file=sys.stderr)
                     continue

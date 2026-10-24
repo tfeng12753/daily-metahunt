@@ -1,3 +1,6 @@
 __pycache__/
 .DS_Store
 node_modules/
+
+# Draft bank themes hold answers in the clear (see generator/bank.py)
+drafts/
