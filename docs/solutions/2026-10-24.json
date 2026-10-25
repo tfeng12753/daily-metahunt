@@ -1,0 +1,73 @@
+{
+ "date": "2026-10-24",
+ "number": 28,
+ "difficulty": "hard",
+ "final": "CYCLONE",
+ "metaType": "fitin",
+ "explain": "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Anvil Cloud",
+   "answer": "CLIMATE",
+   "mechanism": "Braille as bit strings",
+   "transform": null,
+   "encoded": "CLIMATE",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Squall Line",
+   "answer": "HUMIDITY",
+   "mechanism": "Spiral route",
+   "transform": null,
+   "encoded": "HUMIDITY",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Beaufort Twelve",
+   "answer": "CIRRUS",
+   "mechanism": "Letter sudoku",
+   "transform": null,
+   "encoded": "CIRRUS",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Eye Of The Storm",
+   "answer": "FRONT",
+   "mechanism": "Shredded sentence",
+   "transform": null,
+   "encoded": "FRONT",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Rain Shadow",
+   "answer": "ANEMOMETER",
+   "mechanism": "Nonogram",
+   "transform": null,
+   "encoded": "ANEMOMETER",
+   "mutated": null
+  },
+  {
+   "id": 6,
+   "title": "Veering",
+   "answer": "WEATHERVANE",
+   "mechanism": "Word search leftovers",
+   "transform": "ROT13",
+   "encoded": "JRNGUREINAR",
+   "mutated": null
+  },
+  {
+   "id": 7,
+   "title": "Occluded Front",
+   "answer": "LIGHTNING",
+   "mechanism": "Book cipher",
+   "transform": null,
+   "encoded": "LIGHTNING",
+   "mutated": null
+  }
+ ]
+}

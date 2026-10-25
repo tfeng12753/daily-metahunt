@@ -1,0 +1,91 @@
+{
+ "date": "2026-10-24",
+ "number": 28,
+ "difficulty": "medium",
+ "final": "MAELSTROM",
+ "metaType": "fitin",
+ "explain": "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Beaufort Twelve",
+   "answer": "NIMBUS",
+   "mechanism": "Nonogram",
+   "transform": null,
+   "encoded": "NIMBUS",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Inversion",
+   "answer": "HEATWAVE",
+   "mechanism": "Braille as numbers",
+   "transform": null,
+   "encoded": "HEATWAVE",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Rain Shadow",
+   "answer": "LIGHTNING",
+   "mechanism": "Knight's path",
+   "transform": null,
+   "encoded": "LIGHTNING",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Wind Chill",
+   "answer": "THERMOMETER",
+   "mechanism": "Shredded sentence",
+   "transform": null,
+   "encoded": "THERMOMETER",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Shipping Forecast",
+   "answer": "CUMULUS",
+   "mechanism": "Seating plan (logic)",
+   "transform": null,
+   "encoded": "CUMULUS",
+   "mutated": null
+  },
+  {
+   "id": 6,
+   "title": "Anvil Cloud",
+   "answer": "GUST",
+   "mechanism": "Word search leftovers",
+   "transform": null,
+   "encoded": "GUST",
+   "mutated": null
+  },
+  {
+   "id": 7,
+   "title": "Squall Line",
+   "answer": "RADAR",
+   "mechanism": "Caesar shift",
+   "transform": null,
+   "encoded": "RADAR",
+   "mutated": null
+  },
+  {
+   "id": 8,
+   "title": "Dew Point",
+   "answer": "ANEMOMETER",
+   "mechanism": "Mirrored NATO",
+   "transform": null,
+   "encoded": "ANEMOMETER",
+   "mutated": null
+  },
+  {
+   "id": 9,
+   "title": "Red Sky At Night",
+   "answer": "FOG",
+   "mechanism": "Scrambled sentence",
+   "transform": null,
+   "encoded": "FOG",
+   "mutated": null
+  }
+ ]
+}

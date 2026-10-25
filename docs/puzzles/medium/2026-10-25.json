@@ -1,0 +1,561 @@
+{
+ "date": "2026-10-25",
+ "difficulty": "medium",
+ "salt": "2026-10-25/medium",
+ "number": 29,
+ "round": "Cold Storage, Freezer B",
+ "intro": "At four in the morning the minus-eighty stood open, its light a thin blue blade across the tiles, and the usual low hum had flattened into something apologetic. The postdocs are moving between the racks with their sleeves pulled over their hands, not so much working as waiting for the thaw to finish explaining itself. Half the boxes are ruined, slush and paper labels; the other half have started talking, in low confident voices that only stop when someone approaches. In the office the damage log has already been opened, the same ruled book as every term. Someone has made a first entry for each affected box, and after every box name the page shows two short columns of figures, the second of which no one has needed to read before.",
+ "echo": "What the code says is one thing; what walks out of the incubator is another.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Point Mutation",
+   "flavor": "Fenced in, and copied out in a hurry.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "TIPGH SETTS CEFRV RLNTM ADHTE RTSNY EHSAE AKPIS ERTOA EYOGI ENTAS CEIEZ M",
+     "wide": true,
+     "rails": 2
+    }
+   ],
+   "hash": "9d4aca3038e01f952c60f50537514df11f8e411c4a300d08fcbff899b4cad1ae",
+   "partials": {},
+   "hints": [
+    "All the right letters are here, just out of order. Could they have been written along a path that goes up and down?",
+    "Rail fence: written in a zigzag over a few rows, then copied out row by row. Try two to five rows."
+   ],
+   "length": 6
+  },
+  {
+   "id": 2,
+   "title": "Central Dogma",
+   "flavor": "The picture is worth exactly one word.",
+   "blocks": [
+    {
+     "type": "nonogram",
+     "rows": [
+      [
+       4,
+       1,
+       1,
+       4,
+       3,
+       1,
+       1,
+       3,
+       4,
+       3,
+       1,
+       1,
+       5
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       2,
+       2,
+       1,
+       1,
+       1,
+       1,
+       1,
+       2,
+       2,
+       1
+      ],
+      [
+       1,
+       5,
+       4,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       3,
+       1,
+       1,
+       1,
+       1,
+       1,
+       4
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       4,
+       1,
+       1,
+       1,
+       1,
+       3,
+       1,
+       1,
+       3,
+       4,
+       3,
+       1,
+       1,
+       5
+      ]
+     ],
+     "cols": [
+      [
+       3
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       5
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       3
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       3
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       5
+      ],
+      [],
+      [
+       3
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       3
+      ],
+      [],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       3
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       3
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       5
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "givens": [
+      [
+       4,
+       36,
+       1
+      ],
+      [
+       4,
+       25,
+       0
+      ],
+      [
+       1,
+       21,
+       0
+      ],
+      [
+       1,
+       31,
+       0
+      ],
+      [
+       4,
+       45,
+       1
+      ],
+      [
+       0,
+       40,
+       1
+      ],
+      [
+       0,
+       0,
+       0
+      ],
+      [
+       0,
+       45,
+       1
+      ],
+      [
+       4,
+       18,
+       0
+      ],
+      [
+       3,
+       31,
+       0
+      ]
+     ]
+    }
+   ],
+   "hash": "93eb9f96cb5e2db67628ee9cfc552022b517627d516084cc1589fb715129e906",
+   "partials": {},
+   "hints": [
+    "The numbers describe runs of filled squares. What picture could they be drawing?",
+    "Paint by numbers. The picture is written, not drawn."
+   ],
+   "length": 10
+  },
+  {
+   "id": 3,
+   "title": "Backup Copy",
+   "flavor": "Count everything. Then count again, differently.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "Holes on a full golf course",
+      "Sides of a pentagon",
+      "Ounces in a pound",
+      "Months in a year",
+      "Players fielding for a baseball team",
+      "Sides of a triangle",
+      "Wheels on a unicycle",
+      "Things in a score",
+      "Squares in a noughts-and-crosses grid",
+      "Players on a rugby union side",
+      "Lines in a sonnet"
+     ],
+     "ordered": true,
+     "tray": "letter"
+    }
+   ],
+   "hash": "3d3364e6e11aa46e89c919fa91a5408a764576a278250c655c560b39503ee8ff",
+   "partials": {},
+   "hints": [
+    "Every line has a number for an answer. Could those numbers be counting through something else?",
+    "They're all between 1 and 26: A = 1, B = 2…"
+   ],
+   "length": 11
+  },
+  {
+   "id": 4,
+   "title": "Silent Substitution",
+   "flavor": "Three letters to a strip, and a note of how long each word was.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "ASI",
+      "DSW",
+      "EIS",
+      "EVE",
+      "EWO",
+      "HEW",
+      "HIS",
+      "HUN",
+      "ITH",
+      "MIT",
+      "NDT",
+      "NGL",
+      "OCH",
+      "OMT",
+      "OND",
+      "OOD",
+      "ORD",
+      "PAG",
+      "RDA",
+      "RIA",
+      "RYG",
+      "TEN",
+      "TFR",
+      "WAN",
+      "YOU"
+     ],
+     "inline": true,
+     "tiles": true
+    },
+    {
+     "type": "prose",
+     "text": "Word lengths: (5 4 4 4 4 1 6 4 3 3 4 3 4 4 4 4 2 12)"
+    }
+   ],
+   "hash": "c7bd44bc382e057e690ed075b7c0e1ea310cc233c590f2e86da90034f1bffa08",
+   "partials": {},
+   "hints": [
+    "The strips are alphabetised, not in order. The word lengths say where the breaks fall. Which strip could start the sentence?",
+    "Chain the strips into one string and split it by the word lengths; the sentence tells you what to submit."
+   ],
+   "length": 12
+  },
+  {
+   "id": 5,
+   "title": "Primer Dimer",
+   "flavor": "No duplicates anywhere.",
+   "blocks": [
+    {
+     "type": "sudoku",
+     "size": 9,
+     "rows": [
+      ".S.T.....",
+      "CM..O....",
+      "P....A...",
+      "L.M.S..P.",
+      ".......TM",
+      "..PO.L.Y.",
+      "....T..S.",
+      "TC...M...",
+      "..O...Y.."
+     ],
+     "alphabet": "ACLMOPSTY",
+     "marks": [
+      [
+       6,
+       8
+      ],
+      [
+       7,
+       3
+      ],
+      [
+       2,
+       2
+      ],
+      [
+       2,
+       8
+      ],
+      [
+       0,
+       8
+      ],
+      [
+       0,
+       4
+      ],
+      [
+       8,
+       7
+      ],
+      [
+       7,
+       2
+      ],
+      [
+       6,
+       6
+      ]
+     ]
+    }
+   ],
+   "hash": "2855dd9a87e52e452fb2f143d98cb006723537defaed5e9f6147bf45c2781332",
+   "partials": {},
+   "hints": [
+    "A familiar grid puzzle in unfamiliar clothes. Once it's done, are some squares more important than others?",
+    "Solve it like a sudoku, then read the numbered squares in order."
+   ],
+   "length": 9
+  }
+ ],
+ "meta": {
+  "title": "Meta: Cold Storage, Freezer B",
+  "flavor": "The porter only ever noted where each passenger boarded.",
+  "blocks": [
+   {
+    "type": "list",
+    "items": [
+     "Platform 3, car 3",
+     "Platform 2, car 2",
+     "Platform 2, car 10",
+     "Platform 3, car 11",
+     "Platform 4, car 4",
+     "Platform 3, car 8",
+     "Platform 1, car 4",
+     "Platform 5, car 5",
+     "Platform 3, car 2"
+    ],
+    "ordered": true
+   }
+  ],
+  "length": 9,
+  "hash": "8567c15705075adc9f1df4cc16833211877e680127ffd99a95db014d98a4a6a6",
+  "hints": [
+   "Every entry has two numbers. What in this round is numbered, and what could the second number count?",
+   "The first number picks a puzzle; the second picks a letter inside its answer."
+  ]
+ },
+ "described": true
+}

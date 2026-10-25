@@ -1,0 +1,178 @@
+{
+ "date": "2026-10-25",
+ "difficulty": "hard",
+ "salt": "2026-10-25",
+ "number": 29,
+ "round": "Cold Storage, Freezer B",
+ "intro": "The minus-eighty stood ajar until first light, and the genomics laboratory has not been the same since. Half the aliquots have thawed into ruin; the rest sit in their racks, murmuring in low, competing voices about contamination, missing controls and the postdoc who forgot the alarm. The postdocs in white coats are treating the noise as data, circling the benches with gloves and filling pads with phonetic transcriptions. A brass padlock on the cabinet stays fast until all five signatures are laid on it at once, which is the only reason the manager has not had the whole room emptied. Outside, the corridor lights hum, and nobody has touched the lunchbox someone left by the door.",
+ "echo": "A small factory, half built from the very kind of message it reads.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Gel Electrophoresis",
+   "flavor": "Matter, counted, and then spelled.",
+   "blocks": [
+    {
+     "type": "numbers",
+     "items": [
+      2,
+      3,
+      20,
+      34
+     ],
+     "tray": 2
+    }
+   ],
+   "hash": "7d5fa96b9300aaf3803678929cdda66e5a719db06d16a5c72b0f2f893c831e28",
+   "partials": {},
+   "hints": [
+    "Several of these numbers are bigger than 26, so they can't be letter positions. What else has a number that high?"
+   ]
+  },
+  {
+   "id": 2,
+   "title": "Knockout",
+   "flavor": "Shredded, then sorted by a very tidy intern.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "ANE",
+      "ARS",
+      "DME",
+      "ECT",
+      "EDA",
+      "EPR",
+      "EXP",
+      "ISF",
+      "ISJ",
+      "IZE",
+      "MBR",
+      "NET",
+      "NOB",
+      "NYO",
+      "ODY",
+      "OGE",
+      "ONE",
+      "OTH",
+      "TTH",
+      "UST",
+      "WOR"
+     ],
+     "inline": true,
+     "tiles": true
+    },
+    {
+     "type": "prose",
+     "text": "Word lengths: (6 8 6 2 3 4 3 2 3 5 2 4 3 4 8)"
+    }
+   ],
+   "hash": "5cf88fa25214f9504d2e64328adb03c32037eea27b89f844df6028319929bdbc",
+   "partials": {},
+   "hints": [
+    "The strips are alphabetised, not in order. The word lengths say where the breaks fall. Which strip could start the sentence?"
+   ]
+  },
+  {
+   "id": 3,
+   "title": "Primer Dimer",
+   "flavor": "Every letter here is wearing someone else's coat.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "ZAN UMIZ ZAHDL ZAN JTNXMZJX ZBTNO RNCJXN ZAN UHDN YNDZ ONMO YMI QXMEHU",
+     "wide": true,
+     "solver": "substitution"
+    }
+   ],
+   "hash": "4fd2ecccc83740735b5ad7bc6673c0e717dce635b1fdb3527fc6962ad977386f",
+   "partials": {},
+   "hints": [
+    "Which short words are most common in English? Could any of them be hiding here?"
+   ]
+  },
+  {
+   "id": 4,
+   "title": "Backup Copy",
+   "flavor": "Everything came out of the wash with a little something extra. Something in here has been through the looking glass.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "YXETNOCIS",
+      "EZMVEYN",
+      "NEMUINAG",
+      "GLSIEGA",
+      "LEEOMRETI",
+      "RCLCOESOIPM",
+      "EIRIPDTSHN",
+      "GEMATVE",
+      "MOHCSEIROOM",
+      "TEIPTVEP"
+     ],
+     "ordered": true,
+     "mono": true
+    }
+   ],
+   "hash": "859c45d759a0f12d740df1e2cb4c26a715820a80b7fa26acd0821971fe424756",
+   "partials": {
+    "63becedafc1b2317249f59f761bfa59cff413bd306eef1b18a958a6f711dec92": "You've decoded it, but it's not finished. One more layer."
+   },
+   "hints": [
+    "Each jumble is almost a word from this round, but with a letter to spare. Which letter, every time? And if what you get still isn't a word, reread the flavour text."
+   ]
+  },
+  {
+   "id": 5,
+   "title": "Stop Codon",
+   "flavor": "Pairs of numbers pencilled in the margin. Unlucky for some, and the same distance either way.",
+   "blocks": [
+    {
+     "type": "prose",
+     "text": "Someone left the minus-eighty open overnight. Half the samples are ruined; the other half have started talking.",
+     "paper": true
+    },
+    {
+     "type": "list",
+     "items": [
+      "5.2",
+      "16.4",
+      "7.2",
+      "4.8",
+      "2.2",
+      "15.3",
+      "16.1",
+      "15.1",
+      "12.1",
+      "10.2"
+     ],
+     "inline": true
+    }
+   ],
+   "hash": "86c1b88ee1102bcf8b3a9ac25745b6ab4f5a04b369a0266f6b6380832ba95f80",
+   "partials": {
+    "2dd34da15e6e51205219a379265d0c8ded284c0909bb87effa1aebbd890c41e3": "You've decoded it, but it's not finished. One more layer."
+   },
+   "hints": [
+    "The first number in each pair never goes past the number of words on the page. What does the second count? And if what you get still isn't a word, reread the flavour text."
+   ]
+  }
+ ],
+ "meta": {
+  "title": "Meta: Cold Storage, Freezer B",
+  "flavor": "The last lock takes every signature at once.",
+  "blocks": [
+   {
+    "type": "mono",
+    "text": "YUVQUVYY",
+    "big": true
+   }
+  ],
+  "length": 8,
+  "hash": "21da2672ea20db650fe1e34a2905cd4167ddc577d48258956967f0c223845a66",
+  "hints": [
+   "Blaise de Vigenère needed a key to open this. Has every answer signed its work?"
+  ]
+ },
+ "described": true
+}

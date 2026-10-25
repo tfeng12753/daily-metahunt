@@ -1,0 +1,246 @@
+{
+ "date": "2026-10-25",
+ "difficulty": "easy",
+ "salt": "2026-10-25/easy",
+ "number": 29,
+ "round": "Cold Storage, Freezer B",
+ "intro": "The minus-eighty stood ajar all night, and the postdocs arrived to find half their samples thawed and the other half whispering. Dr. Yew, who keeps the lab's chain-of-custody binder, only ever writes two numerals per line: the box number, then the rack. \"Everything worth finding in this place is a pair of coordinates,\" she says, tapping the cover. The ruined lanes and the talking ones alike will have to be logged the same way, each sample matched to its slot, and only then, she promises, will the freezer tell its story.",
+ "echo": "Two railings, one staircase, and a photograph in 1952 that someone else took.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Wild Type",
+   "flavor": "Cross off everything you recognise. What nobody claims is what you came for.",
+   "blocks": [
+    {
+     "type": "caption",
+     "text": "Hidden in the grid: 7 words to do with the sequencing lab (lengths 5, 6, 6, 6, 6, 7, 7), running in any direction."
+    },
+    {
+     "type": "board",
+     "rows": [
+      "NORTNIE",
+      "NREMIRP",
+      "ZVECTOR",
+      "NIETORP",
+      "TIARTYM",
+      "ENINAUG",
+      "ETOGYZE"
+     ],
+     "plain": true,
+     "words": [
+      "GUANINE",
+      "INTRON",
+      "PRIMER",
+      "PROTEIN",
+      "TRAIT",
+      "VECTOR",
+      "ZYGOTE"
+     ]
+    }
+   ],
+   "hash": "2483576b9832aef937d083b910a528f4eeb84c40a8dba194303ac5746f3ff1a2",
+   "partials": {},
+   "hints": [
+    "Find every hidden word (any of 8 directions). The unused letters, read left-to-right, top-to-bottom, spell the answer.",
+    "The hidden words are: GUANINE, INTRON, PRIMER, PROTEIN, TRAIT, VECTOR, ZYGOTE.",
+    "To check you're on track: the answer begins with E."
+   ],
+   "technique": "Word search leftovers",
+   "length": 6
+  },
+  {
+   "id": 2,
+   "title": "Point Mutation",
+   "flavor": "The telegraphist in the sequencing lab never paused between letters. You'll have to work out where one ends and the next begins, and the word bank will help.",
+   "blocks": [
+    {
+     "type": "morselines",
+     "items": [
+      {
+       "code": "-.-..-..-",
+       "len": 5,
+       "index": 1
+      },
+      {
+       "code": ".........-----..",
+       "len": 7,
+       "index": 1
+      },
+      {
+       "code": "--..-.----.----.",
+       "len": 6,
+       "index": 2
+      },
+      {
+       "code": ".---....-.-.-----",
+       "len": 6,
+       "index": 2
+      },
+      {
+       "code": "..-.-.-.----.",
+       "len": 6,
+       "index": 1
+      },
+      {
+       "code": "--...-.--...-..",
+       "len": 7,
+       "index": 4
+      },
+      {
+       "code": ".--..-.-...-...........",
+       "len": 9,
+       "index": 2
+      }
+     ],
+     "bank": [
+      "ADENINE",
+      "EMBRYO",
+      "GUANINE",
+      "HISTONE",
+      "INTRON",
+      "MEIOSIS",
+      "NUCLEUS",
+      "PETRIDISH",
+      "SEQUENCE",
+      "TRAIT",
+      "ZYGOTE"
+     ]
+    }
+   ],
+   "hash": "9c8cca495f1fb2f60700d335f504b2f9bca6ad990a4a7e679599343e7e93ca9b",
+   "partials": {},
+   "hints": [
+    "Each line is a word from this round's theme in Morse code with the gaps between letters lost. Work out which word fits the dots, dashes and letter count, then take the letter at the position shown.",
+    "To check you're on track: the answer begins with T."
+   ],
+   "technique": "Gapless Morse",
+   "length": 7
+  },
+  {
+   "id": 3,
+   "title": "Crossover Event",
+   "flavor": "Every flag on this line has a meaning on its own. Together, they have one more.",
+   "blocks": [
+    {
+     "type": "flags",
+     "items": [
+      "U",
+      "R",
+      "A",
+      "C",
+      "I",
+      "L"
+     ]
+    }
+   ],
+   "hash": "93e1a2068259125b32c845abb6b7694531cf9a48f35d7cfd2baaaf4487abd54b",
+   "partials": {},
+   "hints": [
+    "International maritime signal flags, one letter each.",
+    "To check you're on track: the answer begins with U."
+   ],
+   "technique": "Maritime signal flags",
+   "length": 6
+  },
+  {
+   "id": 4,
+   "title": "Transcription Factor",
+   "flavor": "The quartermaster insists on a perfect distribution: no duplicates, anywhere. The numbered bins are the ones that matter.",
+   "blocks": [
+    {
+     "type": "sudoku",
+     "size": 6,
+     "rows": [
+      "OB.T.N",
+      ".T.BO.",
+      "X...B.",
+      "B..N..",
+      "TO..E.",
+      "EXB.N."
+     ],
+     "alphabet": "BENOTX",
+     "marks": [
+      [
+       3,
+       1
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       5,
+       3
+      ],
+      [
+       4,
+       2
+      ]
+     ]
+    }
+   ],
+   "hash": "0f7a78e91a79c65f1e761de6aaac2b85cde447ca85deaa952a4d4f7b61be4f1a",
+   "partials": {},
+   "hints": [
+    "Sudoku using the letters shown instead of digits (each row, column and box uses each letter once). Read the numbered squares in order.",
+    "To check you're on track: the answer begins with E."
+   ],
+   "technique": "Letter sudoku",
+   "length": 4
+  },
+  {
+   "id": 5,
+   "title": "Knockout",
+   "flavor": "The note in the sequencing lab was written round and round the page, from the edge towards the middle.",
+   "blocks": [
+    {
+     "type": "lettergrid",
+     "rows": [
+      "CREIRUO",
+      "ATERCEC",
+      "RSPDRSE",
+      "RBE·ORH",
+      "IUP·WOT",
+      "ETTEEDT",
+      "DAIDLLA",
+      "WSINGOH",
+      "ASNOTGW"
+     ]
+    }
+   ],
+   "hash": "6dc661ea853e32c3421778b1582c74117d07ff87bb5ac49939817334a591747a",
+   "partials": {},
+   "hints": [
+    "A sentence was written into the grid along a spiral, starting in one corner and winding inward. Find the corner and the direction, read the sentence (dots are padding), and it tells you the answer.",
+    "To check you're on track: the answer begins with P."
+   ],
+   "technique": "Spiral route",
+   "length": 7
+  }
+ ],
+ "meta": {
+  "title": "Meta: Cold Storage, Freezer B",
+  "flavor": "The watch-keeper wrote down nothing but the day and the bell. Every day was one of your puzzles.",
+  "blocks": [
+   {
+    "type": "list",
+    "items": [
+     "Day 2, 2 bells",
+     "Day 1, 6 bells",
+     "Day 3, 6 bells",
+     "Day 5, 5 bells",
+     "Day 4, 2 bells"
+    ],
+    "ordered": true
+   }
+  ],
+  "length": 5,
+  "hash": "b132f778be46fc6ce346d431f95c842a8e892d9f1dbc07569eb5a7b10894069f",
+  "hints": [
+   "Each entry is (puzzle number, letter number): index into that puzzle's answer.",
+   "To check you're on track: the final answer begins with H."
+  ]
+ },
+ "described": true
+}

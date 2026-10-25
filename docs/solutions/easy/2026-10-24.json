@@ -1,0 +1,73 @@
+{
+ "date": "2026-10-24",
+ "number": 28,
+ "difficulty": "easy",
+ "final": "MONSOON",
+ "metaType": "fitin",
+ "explain": "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Squall Line",
+   "answer": "NIMBUS",
+   "mechanism": "Symbol cryptogram",
+   "transform": null,
+   "encoded": "NIMBUS",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Occluded Front",
+   "answer": "RAINBOW",
+   "mechanism": "Rail fence (cluephrase)",
+   "transform": null,
+   "encoded": "RAINBOW",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Inversion",
+   "answer": "FORECAST",
+   "mechanism": "Drop quote",
+   "transform": null,
+   "encoded": "FORECAST",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Beaufort Twelve",
+   "answer": "JETSTREAM",
+   "mechanism": "DTMF multi-tap",
+   "transform": null,
+   "encoded": "JETSTREAM",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Veering",
+   "answer": "ANEMOMETER",
+   "mechanism": "Resistor colour code (written)",
+   "transform": null,
+   "encoded": "ANEMOMETER",
+   "mutated": null
+  },
+  {
+   "id": 6,
+   "title": "Anvil Cloud",
+   "answer": "FROST",
+   "mechanism": "Seating plan (logic)",
+   "transform": null,
+   "encoded": "FROST",
+   "mutated": null
+  },
+  {
+   "id": 7,
+   "title": "Eye Of The Storm",
+   "answer": "WEATHERVANE",
+   "mechanism": "Word search leftovers",
+   "transform": null,
+   "encoded": "WEATHERVANE",
+   "mutated": null
+  }
+ ]
+}
