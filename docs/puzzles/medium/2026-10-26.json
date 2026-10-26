@@ -1,0 +1,201 @@
+{
+ "date": "2026-10-26",
+ "difficulty": "medium",
+ "salt": "2026-10-26/medium",
+ "number": 30,
+ "round": "The Glasshouse",
+ "intro": "Every plant in the botanic garden's glasshouse bloomed on the same night, and the labels in the pots had all been rewritten in the head gardener's hand, in ink that smelled of ferns. The head gardener was not an elegant man, but he kept a leather-bound ledger for everything: each entry a date, and beside it a single figure for how many buds he had expected that morning. Since the night of the bloom, though, his ledger has filled with pairs of numbers, and he will not say what the second column counts. The gardeners move through the glasshouse as if the air itself had been rewired, whispering at the trays and checking their own notes against his. The kettle in the corner has not been off the boil since dawn, and his spectacles sit on the open page, as though he had been called away mid-sum.",
+ "echo": "In Kyoto they hold parties just to watch the trees flower.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Germination",
+   "flavor": "Everyone moved along by the same number of seats.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "FNUU MXWN HXD VJH WXF FARCN MXFW CQN FXAM BCJVNW JWM VXEN ZDRNCUH XW CX CQN WNGC XWN",
+     "wide": true,
+     "solver": "substitution"
+    }
+   ],
+   "hash": "1f8a98c395df7dd8599465e0a8fe1adf7645ddc0aae256afba1ba28bbee93e9b",
+   "partials": {},
+   "hints": [
+    "Try moving every letter the same distance. How far turns the short words into English?",
+    "A Caesar shift: find the one shift that fixes a short word, then apply it everywhere."
+   ],
+   "length": 6
+  },
+  {
+   "id": 2,
+   "title": "Seed Bank",
+   "flavor": "Each column remembers what it held, but not in what order.",
+   "blocks": [
+    {
+     "type": "dropquote",
+     "cols": [
+      "EMPRT",
+      "EHTT",
+      "AI",
+      "AIIS",
+      "NSTV",
+      "DEPS",
+      "ARS",
+      "GPSTY",
+      "EEHO",
+      "ACLR",
+      "EHORT",
+      "AEN",
+      "GSST",
+      "E",
+      "CFKT",
+      "EIOR"
+     ],
+     "mask": [
+      "....#....#...#..",
+      "..#...#......#..",
+      ".#.#....#....#..",
+      "..#...#....#....",
+      "..#..#.....#####"
+     ]
+    }
+   ],
+   "hash": "7f668548fca5e2b2ad266d58285307d0e278b988a0dfa225200ab0b373eb7c82",
+   "partials": {},
+   "hints": [
+    "Black squares are spaces. Which two- and three-letter words fit, using only the letters each column allows?",
+    "Each column's letters drop into that column of the grid; cross them off as you place them. The sentence tells you what to submit."
+   ],
+   "length": 5
+  },
+  {
+   "id": 3,
+   "title": "Taproot",
+   "flavor": "Typed in the dark, with one hand resting a key out of place.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "VSVYID",
+     "big": true,
+     "shift": 1
+    }
+   ],
+   "hash": "944a715215a317d5dd31ba8544ac18446be21b2e0b745e599eb8ec99ca535b72",
+   "partials": {},
+   "hints": [
+    "Every letter is close to the right one. Close on what? Look down at your hands.",
+    "QWERTY: every letter was typed one key to the side. Try shifting each one back, both directions."
+   ],
+   "length": 6
+  },
+  {
+   "id": 4,
+   "title": "Grafting",
+   "flavor": "Labels peeled from bottles, in the order they were used.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "K",
+      "Sc",
+      "Li",
+      "Li",
+      "Sc",
+      "Mg",
+      "B",
+      "Si",
+      "Ca"
+     ],
+     "inline": true,
+     "variant": "symbols"
+    }
+   ],
+   "hash": "f09a6a0cdaf8d8e3934bb9f4612814f573f9f2f817453b3186533b76983bd3b7",
+   "partials": {},
+   "hints": [
+    "Everything here has a number in a famous chemical line-up. What number does each one have?",
+    "Atomic numbers, then count through the alphabet (hydrogen = 1 = A)."
+   ],
+   "length": 9
+  },
+  {
+   "id": 5,
+   "title": "Pollinator",
+   "flavor": "Tidy up the inventory. Whoever transcribed it held the alphabet up to a mirror.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "HWOETLR",
+      "NROGESUHEEZ",
+      "LLOPEKN"
+     ],
+     "ordered": true,
+     "mono": true
+    }
+   ],
+   "hash": "3a1f789a4416dae6e2991e8c3ddcc306ebef169f0ec3fb1a464aaf963f7e4688",
+   "partials": {
+    "3d5ae4c5ad2b7d0db5a1af6b00474c7192f23b9c4b0d6f39ebeb2ac54f82de78": "You've decoded it, but it's not finished. One more layer."
+   },
+   "hints": [
+    "Each jumble is almost a word from this round, but with a letter to spare. Which letter, every time? And if what you get still isn't a word, reread the flavour text.",
+    "Rearrange each into a theme word; the spare letters, in order, are the answer. Then one more layer: Turn the alphabet end to end: A for Z, B for Y."
+   ],
+   "length": 3
+  },
+  {
+   "id": 6,
+   "title": "Latin Names",
+   "flavor": "Count everything. Then count again, differently.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "Faces on an icosahedron",
+      "Guns fired in a traditional royal salute",
+      "Wheels on a bicycle",
+      "Rings on the Olympic flag",
+      "Holes on a full golf course"
+     ],
+     "ordered": true,
+     "tray": "letter"
+    }
+   ],
+   "hash": "e2be6297ea7e7b0ed2c78d444ac9d643b7883b255ca693610fed6610adb25ec9",
+   "partials": {},
+   "hints": [
+    "Every line has a number for an answer. Could those numbers be counting through something else?",
+    "They're all between 1 and 26: A = 1, B = 2…"
+   ],
+   "length": 5
+  }
+ ],
+ "meta": {
+  "title": "Meta: The Glasshouse",
+  "flavor": "The watch-keeper wrote down nothing but the day and the bell.",
+  "blocks": [
+   {
+    "type": "list",
+    "items": [
+     "Day 6, 3 bells",
+     "Day 4, 6 bells",
+     "Day 2, 3 bells",
+     "Day 5, 1 bells",
+     "Day 3, 6 bells",
+     "Day 2, 3 bells",
+     "Day 1, 4 bells"
+    ],
+    "ordered": true
+   }
+  ],
+  "length": 7,
+  "hash": "236e74152835614aebf4111b54c604b6acf9da1de69cf63b3046fc55ff20cdc6",
+  "hints": [
+   "Every entry has two numbers. What in this round is numbered, and what could the second number count?",
+   "The first number picks a puzzle; the second picks a letter inside its answer."
+  ]
+ },
+ "described": true
+}

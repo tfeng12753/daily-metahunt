@@ -1,0 +1,55 @@
+{
+ "date": "2026-10-25",
+ "number": 29,
+ "difficulty": "easy",
+ "final": "HELIX",
+ "metaType": "logbook",
+ "explain": "Each entry is (puzzle number, letter number): index into that puzzle's answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Wild Type",
+   "answer": "ENZYME",
+   "mechanism": "Word search leftovers",
+   "transform": null,
+   "encoded": "ENZYME",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Point Mutation",
+   "answer": "THYMINE",
+   "mechanism": "Gapless Morse",
+   "transform": null,
+   "encoded": "THYMINE",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Crossover Event",
+   "answer": "URACIL",
+   "mechanism": "Maritime signal flags",
+   "transform": null,
+   "encoded": "URACIL",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Transcription Factor",
+   "answer": "EXON",
+   "mechanism": "Letter sudoku",
+   "transform": null,
+   "encoded": "EXON",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Knockout",
+   "answer": "PEPTIDE",
+   "mechanism": "Spiral route",
+   "transform": null,
+   "encoded": "PEPTIDE",
+   "mutated": null
+  }
+ ]
+}

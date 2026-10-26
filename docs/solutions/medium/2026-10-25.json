@@ -1,0 +1,55 @@
+{
+ "date": "2026-10-25",
+ "number": 29,
+ "difficulty": "medium",
+ "final": "PHENOTYPE",
+ "metaType": "logbook",
+ "explain": "Each entry is (puzzle number, letter number): index into that puzzle's answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Point Mutation",
+   "answer": "ENZYME",
+   "mechanism": "Rail fence (cluephrase)",
+   "transform": null,
+   "encoded": "ENZYME",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Central Dogma",
+   "answer": "CHROMOSOME",
+   "mechanism": "Nonogram",
+   "transform": null,
+   "encoded": "CHROMOSOME",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Backup Copy",
+   "answer": "REPLICATION",
+   "mechanism": "Number trivia",
+   "transform": null,
+   "encoded": "REPLICATION",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Silent Substitution",
+   "answer": "MITOCHONDRIA",
+   "mechanism": "Shredded sentence",
+   "transform": null,
+   "encoded": "MITOCHONDRIA",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Primer Dimer",
+   "answer": "CYTOPLASM",
+   "mechanism": "Letter sudoku",
+   "transform": null,
+   "encoded": "CYTOPLASM",
+   "mutated": null
+  }
+ ]
+}

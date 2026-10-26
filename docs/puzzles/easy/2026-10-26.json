@@ -1,0 +1,189 @@
+{
+ "date": "2026-10-26",
+ "difficulty": "easy",
+ "salt": "2026-10-26/easy",
+ "number": 30,
+ "round": "The Glasshouse",
+ "intro": "Every plant in the botanic garden's glasshouse bloomed on the same night, and the labels in the pots had all been rewritten, each one now reading like a ticket: a carriage at the top, a seat beneath it. The gardeners moved through the glasshouse that morning with their usual quiet, and the one who keeps the visitors' log had already begun a fresh page, stamping each entry with the carriage and seat of the plant that had drawn the question, though no visitors had come. She says a bloom that arrives all at once is an arrival all the same, and arrivals must be logged. The head gardener watched her work from the doorway, then touched the stamp's inked face with a fingertip and nodded, as though the numbers meant something he already knew. The rain began on the glass, and the house filled with a sound like a hundred small footsteps settling.",
+ "echo": "The Victorians sent collectors to die in jungles for a single rare bloom.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Bolting",
+   "flavor": "Recovered from the shredder in the glasshouse. Somebody at least had the decency to note how long each word was.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "ASK",
+      "ATS",
+      "AVE",
+      "DER",
+      "DTH",
+      "EAN",
+      "ECR",
+      "EPT",
+      "ETI",
+      "FOR",
+      "GEH",
+      "ITS",
+      "ONG",
+      "RET",
+      "RYL",
+      "SEC",
+      "SLA",
+      "SPA",
+      "THI",
+      "TIM",
+      "VEN"
+     ],
+     "inline": true,
+     "tiles": true
+    },
+    {
+     "type": "prose",
+     "text": "Word lengths: (4 4 3 4 3 6 3 1 4 4 4 3 4 6 2 8)"
+    }
+   ],
+   "hash": "fb5bdf698335cb5fb5cbd2b92d3d1b58322f3337fce284711e37b5a398649d53",
+   "partials": {},
+   "hints": [
+    "The sentence was cut into three-letter fragments (spaces removed) and alphabetised. Reassemble it using the word lengths; it tells you the answer.",
+    "To check you're on track: the answer begins with L."
+   ],
+   "technique": "Shredded sentence",
+   "length": 8
+  },
+  {
+   "id": 2,
+   "title": "Taproot",
+   "flavor": "Two forward, one across. Remember where you land.",
+   "blocks": [
+    {
+     "type": "board",
+     "rows": [
+      "SILISWII",
+      "PSMINRGL",
+      "DOGLRRFC",
+      "IZLKTKSP",
+      "LMPRQVNL",
+      "FFIHWESE",
+      "IAIFMEWW",
+      "JJLOWQJM"
+     ]
+    },
+    {
+     "type": "prose",
+     "text": "The knight sets out from e2: Ng3 Nh5 Nf6 Ng8 Ne7 Nf5 Nh4 Nf3 Nd4."
+    }
+   ],
+   "hash": "b07ec3c60efc68e5de7ad2082b93f7dcac47192716e9acc9f83e55164b94a94d",
+   "partials": {},
+   "hints": [
+    "Start on the given square and follow the knight moves; read the letter on each square it lands on.",
+    "To check you're on track: the answer begins with S."
+   ],
+   "technique": "Knight's path",
+   "length": 9
+  },
+  {
+   "id": 3,
+   "title": "Photoperiod",
+   "flavor": "Unjumble the kit list. You'll have one letter left over every time, and you'll want to keep those.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "IHULPT",
+      "ELOGFXEOV",
+      "MORZEMHI",
+      "NBELOIGA",
+      "MOTAESN",
+      "LCTSOU",
+      "KYXMEL"
+     ],
+     "ordered": true,
+     "mono": true
+    }
+   ],
+   "hash": "b76cba8e84beddf1bc85aa879a552b099a7a9280603604f7c3f4595823d71c5e",
+   "partials": {},
+   "hints": [
+    "Each jumble is an anagram of a word from this round's theme plus one extra letter. The extra letters, in order, spell the answer.",
+    "To check you're on track: the answer begins with H."
+   ],
+   "technique": "Anagrams with an extra letter",
+   "length": 7
+  },
+  {
+   "id": 4,
+   "title": "Deadheading",
+   "flavor": "An inventory of the glasshouse, tangled up. Whatever is left over when every item is accounted for is yours.",
+   "blocks": [
+    {
+     "type": "caption",
+     "text": "Hidden in the grid: 10 words to do with the glasshouse (lengths 4, 4, 4, 4, 5, 5, 5, 5, 5, 6), running in any direction."
+    },
+    {
+     "type": "board",
+     "rows": [
+      "PTUVINE",
+      "EPOLLEN",
+      "TLAPESX",
+      "AOSSOMY",
+      "LLOTUSL",
+      "BBARKEE",
+      "RTULIPM"
+     ],
+     "plain": true,
+     "words": [
+      "BARK",
+      "LOTUS",
+      "MOSS",
+      "PETAL",
+      "POLLEN",
+      "ROOT",
+      "SEPAL",
+      "TULIP",
+      "VINE",
+      "XYLEM"
+     ]
+    }
+   ],
+   "hash": "6a9aeb66520ef46f0709f97fa3821bb2c9a6e2349d76463b27fd8d5f3918ef9d",
+   "partials": {},
+   "hints": [
+    "Find every hidden word (any of 8 directions). The unused letters, read left-to-right, top-to-bottom, spell the answer.",
+    "The hidden words are: BARK, LOTUS, MOSS, PETAL, POLLEN, ROOT, SEPAL, TULIP, VINE, XYLEM.",
+    "To check you're on track: the answer begins with T."
+   ],
+   "technique": "Word search leftovers",
+   "length": 5
+  }
+ ],
+ "meta": {
+  "title": "Meta: The Glasshouse",
+  "flavor": "Someone underlined a few verses. This page has its own chapters.",
+  "blocks": [
+   {
+    "type": "list",
+    "items": [
+     "Ch. 3 v. 5",
+     "Ch. 4 v. 5",
+     "Ch. 3 v. 6",
+     "Ch. 3 v. 1",
+     "Ch. 2 v. 4",
+     "Ch. 1 v. 6"
+    ],
+    "ordered": true
+   }
+  ],
+  "length": 6,
+  "hash": "c9123f68b61b9105ffd458cfd70f6c10084732ecc455f725875f1c2cd2875a72",
+  "hints": [
+   "Each entry is (puzzle number, letter number): index into that puzzle's answer.",
+   "To check you're on track: the final answer begins with O."
+  ]
+ },
+ "described": true
+}

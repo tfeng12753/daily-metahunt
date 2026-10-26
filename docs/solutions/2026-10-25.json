@@ -1,0 +1,55 @@
+{
+ "date": "2026-10-25",
+ "number": 29,
+ "difficulty": "hard",
+ "final": "RIBOSOME",
+ "metaType": "initials",
+ "explain": "The ciphertext is Vigenère-encrypted with the first letters of the feeder answers (in puzzle order) as the key.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Gel Electrophoresis",
+   "answer": "HELICASE",
+   "mechanism": "Element spelling",
+   "transform": null,
+   "encoded": "HELICASE",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Knockout",
+   "answer": "MEMBRANE",
+   "mechanism": "Shredded sentence",
+   "transform": null,
+   "encoded": "MEMBRANE",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Primer Dimer",
+   "answer": "URACIL",
+   "mechanism": "Cryptogram (cluephrase)",
+   "transform": null,
+   "encoded": "URACIL",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Backup Copy",
+   "answer": "CENTROMERE",
+   "mechanism": "Anagrams with an extra letter",
+   "transform": "Atbash (A↔Z mirror)",
+   "encoded": "XVMGILNVIV",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Stop Codon",
+   "answer": "CENTRIFUGE",
+   "mechanism": "Book cipher",
+   "transform": "ROT13",
+   "encoded": "PRAGEVSHTR",
+   "mutated": null
+  }
+ ]
+}
