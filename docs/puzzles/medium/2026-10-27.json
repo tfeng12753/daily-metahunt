@@ -1,0 +1,672 @@
+{
+ "date": "2026-10-27",
+ "difficulty": "medium",
+ "salt": "2026-10-27/medium",
+ "number": 31,
+ "round": "Capture The Flag",
+ "intro": "The honeypot caught something at 03:14. It was not an attacker. It was a message, split across every protocol the intruder could find. The red team marks the shift by calling the racks by name, and the duty officer keeps a tally sheet with a row for every cabinet and a column for 'unaccounted'. Recently the unaccounted column has never been empty: there is a neat dash in every row, even for cabinets whose doors have not been opened. The officer says the dashes are not findings, just an old habit of giving every rack one more line than it asked for, the way the census in the lobby counts the lift as a resident.",
+ "echo": "Builders put a brick barrier between houses to stop the flames spreading; the network keeps one too.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Zero Day",
+   "flavor": "All the right letters, none in the right places.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "WLLE",
+      "DENO",
+      "YUO",
+      "AMY",
+      "OWN",
+      "WIETR",
+      "DNWO",
+      "HTE",
+      "DRWO",
+      "ASREFWYP",
+      "NAD",
+      "OEMV",
+      "QITYULE",
+      "NO",
+      "OT",
+      "ETH",
+      "ETNX",
+      "OEN"
+     ],
+     "inline": true,
+     "tray": "word"
+    }
+   ],
+   "hash": "bc95aba0e39219a16a7f4d74bfca0916a3e4289592f1b17bc1fc4b1c1e4ac16f",
+   "partials": {
+    "6662a740024f83ae542bf978994ff8d647b8208915c8c6fdd6ae64bdb80d3f98": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Each word is complete but shuffled. Start with the shortest ones: does a sentence appear?",
+    "Unscramble each word where it stands; the sentence tells you what to submit."
+   ],
+   "length": 7
+  },
+  {
+   "id": 2,
+   "title": "Rainbow Table",
+   "flavor": "Everything in its place, and nothing twice.",
+   "blocks": [
+    {
+     "type": "sudoku",
+     "size": 6,
+     "rows": [
+      "RC....",
+      "....I.",
+      ".S....",
+      "U.....",
+      "VR...C",
+      "..C.S."
+     ],
+     "alphabet": "CIRSUV",
+     "marks": [
+      [
+       2,
+       2
+      ],
+      [
+       4,
+       3
+      ],
+      [
+       0,
+       2
+      ],
+      [
+       1,
+       5
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       3,
+       5
+      ]
+     ]
+    }
+   ],
+   "hash": "7c7df989ed2869820cd2c757360b009efaa9c879d0fa03a5bfb527edb3a01b11",
+   "partials": {
+    "b4cf5cae1d5f216d5ab8fc96b2e22a23f9ceb3699d9d61f1a5ce5c7c45e21f3f": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "A familiar grid puzzle in unfamiliar clothes. Once it's done, are some squares more important than others?",
+    "Solve it like a sudoku, then read the numbered squares in order."
+   ],
+   "length": 5
+  },
+  {
+   "id": 3,
+   "title": "Air Gap",
+   "flavor": "Fill the gaps. It was written down last letter first.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "B_UTEFORCE",
+      "DAE_ON",
+      "KEYLOGG_R",
+      "HAN_SHAKE",
+      "PASSW_RD",
+      "TER_INAL"
+     ],
+     "ordered": true,
+     "mono": true
+    }
+   ],
+   "hash": "e4f65148d055e002657cd4069ccf4eddf90942ea8c13c1c89027b376e6646c61",
+   "partials": {
+    "a1b9f52ea78823ed46ff01084f08c78625f2180826764f56fa9edaf3c30dba52": "You've decoded it, but it's not finished. One more layer.",
+    "600bc781364adedecff316b2faab32aece9a9507114f54d43ec2f7c856eae0b5": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Every gap takes exactly one letter. Is there a pattern in what you filled in? And if what you get still isn't a word, reread the flavour text.",
+    "Read the letters you supplied, in order. Then one more layer: Read what you get backwards."
+   ],
+   "length": 5
+  },
+  {
+   "id": 4,
+   "title": "Salted Hash",
+   "flavor": "The picture is worth exactly one word.",
+   "blocks": [
+    {
+     "type": "nonogram",
+     "rows": [
+      [
+       4,
+       3,
+       4,
+       5,
+       1,
+       1,
+       4,
+       3,
+       3,
+       4
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       4,
+       5,
+       1,
+       4,
+       3,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       4
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       4,
+       1,
+       1,
+       4,
+       5,
+       1,
+       1,
+       4,
+       3,
+       3,
+       1,
+       1
+      ]
+     ],
+     "cols": [
+      [
+       5
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       4
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       4
+      ],
+      [],
+      [
+       3
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       3
+      ],
+      [],
+      [
+       3
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       3
+      ],
+      [],
+      [
+       3
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       3
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "givens": [
+      [
+       4,
+       39,
+       1
+      ],
+      [
+       4,
+       16,
+       1
+      ],
+      [
+       3,
+       27,
+       1
+      ],
+      [
+       0,
+       45,
+       1
+      ],
+      [
+       3,
+       37,
+       0
+      ],
+      [
+       0,
+       9,
+       1
+      ],
+      [
+       3,
+       46,
+       1
+      ],
+      [
+       1,
+       28,
+       0
+      ]
+     ]
+    }
+   ],
+   "hash": "a636b681ab69d62d31dcaacf1b92ae22e01c22baf759eca0b2713a5148a4c6d5",
+   "partials": {
+    "7e970301741d017207b06973ffc94a8b8097d208a9640b64c707de48f01c8174": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "The numbers describe runs of filled squares. What picture could they be drawing?",
+    "Paint by numbers. The picture is written, not drawn."
+   ],
+   "length": 8
+  },
+  {
+   "id": 5,
+   "title": "Heap Spray",
+   "flavor": "A sensor that only knows up and down, six times over.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "011110",
+      "010111",
+      "101010",
+      "101000",
+      "100010",
+      "101110"
+     ],
+     "inline": true
+    }
+   ],
+   "hash": "c47b6fdea1284498f5d36532886d9f8e64ccd77110c3b64b17524abb946367a7",
+   "partials": {
+    "2b58b9e536899109ae9bcf8f6476d2241d331786068d883c5f99bf12ac0faaf7": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Write each number in binary. Six yes-or-no choices: is there an alphabet built from exactly that?",
+    "Braille: each bit is one of the six dots (1, 2, 4 down the left column; 8, 16, 32 down the right)."
+   ],
+   "length": 5
+  },
+  {
+   "id": 6,
+   "title": "Privilege Escalation",
+   "flavor": "What the teletype said, before anyone could read it.",
+   "blocks": [
+    {
+     "type": "tape",
+     "rows": [
+      [
+       1,
+       0,
+       1,
+       0,
+       0,
+       0,
+       0
+      ],
+      [
+       1,
+       0,
+       0,
+       0,
+       0,
+       0,
+       1
+      ],
+      [
+       1,
+       0,
+       0,
+       0,
+       0,
+       1,
+       1
+      ],
+      [
+       1,
+       0,
+       0,
+       1,
+       0,
+       1,
+       1
+      ],
+      [
+       1,
+       0,
+       0,
+       0,
+       1,
+       0,
+       1
+      ],
+      [
+       1,
+       0,
+       0,
+       0,
+       0,
+       0,
+       1
+      ],
+      [
+       1,
+       0,
+       1,
+       0,
+       1,
+       0,
+       0
+      ]
+     ]
+    }
+   ],
+   "hash": "ade8c632cad38285a5c80f541484628349d0066c6e356cd3fc7a124facd238d1",
+   "partials": {
+    "35fba0d254d6476431d97f109b4198b106a7f980af8420626677145fbc7eddfa": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Seven positions a row, each punched or not. What were seven bits once enough for?",
+    "Seven-bit ASCII: a hole is 1, the leftmost hole is the highest bit."
+   ],
+   "length": 6
+  },
+  {
+   "id": 7,
+   "title": "Null Byte",
+   "flavor": "Through the wall: bursts of knocks, always in pairs.",
+   "blocks": [
+    {
+     "type": "taps",
+     "groups": [
+      [
+       "•",
+       "•••••"
+      ],
+      [
+       "•••",
+       "•••"
+      ],
+      [
+       "•",
+       "•••"
+      ],
+      [
+       "••••",
+       "••"
+      ],
+      [
+       "•••••",
+       "••••"
+      ],
+      [
+       "•••",
+       "•••••"
+      ],
+      [
+       "•••",
+       "•"
+      ],
+      [
+       "••••",
+       "••••"
+      ],
+      [
+       "••",
+       "••••"
+      ],
+      [
+       "•••",
+       "••••"
+      ],
+      [
+       "•••",
+       "•••"
+      ]
+     ]
+    }
+   ],
+   "hash": "a3b1155a4397badfc5ff1f9c89ffd8b6db7d7b1689ff552e26f2efca1974ff66",
+   "partials": {
+    "db402db0723cdcbf22f7d3d07e4c0c9f3dc9a7c176cc1a53f0542608c161c0bd": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Always two numbers, never more than five. How would two prisoners spell through a wall with a 5×5 grid?",
+    "Tap code: the first count is the row, the second the column, in a 5×5 alphabet with no K."
+   ],
+   "length": 10
+  },
+  {
+   "id": 8,
+   "title": "Rubber Ducky",
+   "flavor": "A shopping list for a very small, very specific chemist.",
+   "blocks": [
+    {
+     "type": "numbers",
+     "items": [
+      16,
+      84,
+      8,
+      114
+     ],
+     "tray": 2
+    }
+   ],
+   "hash": "568fe04555b02b5905a65a59308339f4b5fa4226a62f1e8120bf7394851231e3",
+   "partials": {
+    "e2ae27c6075885b59e1dc1354625efda78cbd41b2eb18e3a8ef1eee850f88922": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Several of these numbers are bigger than 26, so they can't be letter positions. What else has a number that high?",
+    "Atomic numbers: write each element's symbol and run the symbols together into one word."
+   ],
+   "length": 5
+  }
+ ],
+ "meta": {
+  "title": "Meta: Capture The Flag",
+  "flavor": "Everything arrived a little heavier than it left.",
+  "blocks": [],
+  "length": 8,
+  "hash": "db78e361ef2ce9053523e1d742462fe0a8467e3dc2170782dac774f6739d06a0",
+  "hints": [
+   "Did every answer come out the right size the first time? Each had one letter too many. Did you keep them?",
+   "Take the extra letter from each feeder, in puzzle order."
+  ]
+ },
+ "described": true
+}

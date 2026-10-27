@@ -1,0 +1,491 @@
+{
+ "date": "2026-10-27",
+ "difficulty": "easy",
+ "salt": "2026-10-27/easy",
+ "number": 31,
+ "round": "Capture The Flag",
+ "intro": "The honeypot caught something at 03:14. It was not an attacker. It was a message, split across every protocol the intruder could find, each fragment arriving as a plain string of characters that the red team pinned to the war-room wall by the length of its silence. By dawn the wall had become a board of pigeonholes, each one cut by hand to take exactly a single fragment and nothing else, so that a fragment a letter too long or too short simply fell through or would not go in at all. The team stood back and studied the gaps between them, the empty spaces left by the holes whose tenants did not belong, and the pattern those gaps made when read down the board.",
+ "echo": "The intruder didn't just get in. They moved in, and hid the furniture.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Rainbow Table",
+   "flavor": "Only one page of the book survived. Luckily, it was the only page anyone needed.",
+   "blocks": [
+    {
+     "type": "prose",
+     "text": "The honeypot caught something at 03:14. It was not an attacker. It was a message, split across every protocol the intruder could find.",
+     "paper": true
+    },
+    {
+     "type": "list",
+     "items": [
+      "15.4",
+      "19.3",
+      "11.5",
+      "11.6",
+      "11.7",
+      "16.5"
+     ],
+     "inline": true
+    }
+   ],
+   "hash": "d45bb193717059d10e9de9d5e6b10d03bba938fda3b51257caa2144f706dc839",
+   "partials": {},
+   "hints": [
+    "Each pair is word.letter into the recovered page (words split on spaces; punctuation ignored).",
+    "To check you're on track: the answer begins with S."
+   ],
+   "technique": "Book cipher",
+   "length": 6
+  },
+  {
+   "id": 2,
+   "title": "Air Gap",
+   "flavor": "A mosaic in the server room was taken apart tile by tile, and all that was kept was the count of each run.",
+   "blocks": [
+    {
+     "type": "nonogram",
+     "rows": [
+      [
+       4,
+       1,
+       1,
+       5,
+       5,
+       5,
+       5,
+       4
+      ],
+      [
+       1,
+       2,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       3,
+       1,
+       1,
+       1,
+       1,
+       4,
+       4,
+       4,
+       4
+      ],
+      [
+       1,
+       1,
+       2,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       4,
+       1,
+       1,
+       5,
+       1,
+       1,
+       5,
+       1,
+       1
+      ]
+     ],
+     "cols": [
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       5
+      ],
+      [],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "givens": [
+      [
+       0,
+       0,
+       0
+      ],
+      [
+       3,
+       4,
+       1
+      ]
+     ]
+    }
+   ],
+   "hash": "a79c1f31037202e8f91f9719406bd04a76799427af4936b481d668a230514341",
+   "partials": {},
+   "hints": [
+    "A nonogram (paint-by-numbers). The filled picture is the answer written in 5×5 block letters.",
+    "To check you're on track: the answer begins with S."
+   ],
+   "technique": "Nonogram",
+   "length": 7
+  },
+  {
+   "id": 3,
+   "title": "Heap Spray",
+   "flavor": "Six switches at a time, some pressed, some not.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "110010",
+      "100000",
+      "101110",
+      "100110",
+      "011100",
+      "110010",
+      "100000",
+      "101000",
+      "100010"
+     ],
+     "inline": true
+    }
+   ],
+   "hash": "6d994c32290165819bdef5d7e7ef1af1dd58675862abfb44c6bd571661ec0ec8",
+   "partials": {},
+   "hints": [
+    "Six-bit strings: the k-th character is 1 if Braille dot k is raised (dots 1-2-3 down the left, 4-5-6 down the right).",
+    "To check you're on track: the answer begins with H."
+   ],
+   "technique": "Braille as bit strings",
+   "length": 9
+  },
+  {
+   "id": 4,
+   "title": "Cold Boot",
+   "flavor": "The fence around the server room zigzags between five rails. Walk it, don't read it.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "WORNR BLDHC UARSO OSSUG EOEAE RCIAT DETTN WMMTH IREWG LCEAI ODTED ORSR",
+     "wide": true,
+     "rails": 5
+    }
+   ],
+   "hash": "b5c35c5e49c8013159d0fafcc279c71a04afc2808594e78e65b6d625840d9e79",
+   "partials": {},
+   "hints": [
+    "Rail-fence transposition of a sentence with the spaces removed. Try 2 to 5 rails; the sentence tells you the answer.",
+    "To check you're on track: the answer begins with M."
+   ],
+   "technique": "Rail fence (cluephrase)",
+   "length": 5
+  },
+  {
+   "id": 5,
+   "title": "Man In The Middle",
+   "flavor": "Short, long, short: no spaces. Match each run to a word from the list, then count along it.",
+   "blocks": [
+    {
+     "type": "morselines",
+     "items": [
+      {
+       "code": "-.-....--.......-.",
+       "len": 6,
+       "index": 3
+      },
+      {
+       "code": "....-.-..-",
+       "len": 4,
+       "index": 2
+      },
+      {
+       "code": ".........-...-..",
+       "len": 5,
+       "index": 1
+      },
+      {
+       "code": ".....--..---",
+       "len": 4,
+       "index": 1
+      },
+      {
+       "code": "....--.-.--.--.-.-..",
+       "len": 7,
+       "index": 4
+      },
+      {
+       "code": "-.-.---.---.--.",
+       "len": 6,
+       "index": 3
+      },
+      {
+       "code": ".-.---..--..-.",
+       "len": 6,
+       "index": 1
+      },
+      {
+       "code": "-...-.------.",
+       "len": 6,
+       "index": 1
+      }
+     ],
+     "bank": [
+      "CIPHER",
+      "DAEMON",
+      "HASH",
+      "PROXY",
+      "ROUTER",
+      "SALT",
+      "SHELL",
+      "SPOOF",
+      "SPYWARE",
+      "SUDO",
+      "TROJAN",
+      "WORM"
+     ]
+    }
+   ],
+   "hash": "27112c76d6b2d207fc25453819c0560a2e0b6a89b4e0d784c30aba26a0934354",
+   "partials": {},
+   "hints": [
+    "Each line is a word from this round's theme in Morse code with the gaps between letters lost. Work out which word fits the dots, dashes and letter count, then take the letter at the position shown.",
+    "To check you're on track: the answer begins with P."
+   ],
+   "technique": "Gapless Morse",
+   "length": 8
+  },
+  {
+   "id": 6,
+   "title": "Replay Attack",
+   "flavor": "Look up each atomic number, keep the symbol, and run the symbols together.",
+   "blocks": [
+    {
+     "type": "numbers",
+     "items": [
+      6,
+      68,
+      22,
+      9,
+      53,
+      20,
+      52
+     ],
+     "tray": 2
+    }
+   ],
+   "hash": "d515ed6c0b16dbe2ad144ec9c1c2edf8248506f8556b3ad070cb6278d8600d6e",
+   "partials": {},
+   "hints": [
+    "Each number is an atomic number. Write down each element's chemical symbol and read the symbols together as one word.",
+    "To check you're on track: the answer begins with C."
+   ],
+   "technique": "Element spelling",
+   "length": 11
+  },
+  {
+   "id": 7,
+   "title": "Rubber Ducky",
+   "flavor": "One alphabet was traded for another, one for one, and nobody bothered to hide where the words begin and end.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "XYU LUIICPU HCI YRQQUA RA GJCRA IRPYX CJJ CJDAP CAQ RX IRLGJN ICNI UAVONGXRDA",
+     "wide": true,
+     "solver": "substitution"
+    }
+   ],
+   "hash": "70dcf44781ba9ff70bdb035a537acc2b33e29c9639cb7f9675b2369fe984e55c",
+   "partials": {},
+   "hints": [
+    "Simple monoalphabetic substitution with word breaks kept. Solve the sentence; it tells you the answer.",
+    "To check you're on track: the answer begins with E."
+   ],
+   "technique": "Cryptogram (cluephrase)",
+   "length": 10
+  }
+ ],
+ "meta": {
+  "title": "Meta: Capture The Flag",
+  "flavor": "Everything in the server room has a place, and every place is exactly the right size.",
+  "blocks": [
+   {
+    "type": "fitgrid",
+    "rows": [
+     {
+      "len": 8,
+      "shade": 6
+     },
+     {
+      "len": 5,
+      "shade": 1
+     },
+     {
+      "len": 6,
+      "shade": 1
+     },
+     {
+      "len": 11,
+      "shade": 9
+     },
+     {
+      "len": 9,
+      "shade": 7
+     },
+     {
+      "len": 7,
+      "shade": 2
+     },
+     {
+      "len": 10,
+      "shade": 6
+     }
+    ]
+   }
+  ],
+  "length": 7,
+  "hash": "b34288cb788a9eabe264d5e7a9cd7ff1e473e4b2e9be80473897db368fb5ff68",
+  "hints": [
+   "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+   "To check you're on track: the final answer begins with R."
+  ]
+ },
+ "described": true
+}

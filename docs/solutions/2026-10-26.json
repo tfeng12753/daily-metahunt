@@ -1,0 +1,55 @@
+{
+ "date": "2026-10-26",
+ "number": 30,
+ "difficulty": "hard",
+ "final": "MANDRAKE",
+ "metaType": "initials",
+ "explain": "The ciphertext is Vigenère-encrypted with the first letters of the feeder answers (in puzzle order) as the key.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Bolting",
+   "answer": "PISTIL",
+   "mechanism": "Book cipher",
+   "transform": null,
+   "encoded": "PISTIL",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Latin Names",
+   "answer": "IVY",
+   "mechanism": "Mirrored NATO",
+   "transform": null,
+   "encoded": "IVY",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Night Bloom",
+   "answer": "PHLOEM",
+   "mechanism": "Nonogram",
+   "transform": null,
+   "encoded": "PHLOEM",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Grafting",
+   "answer": "SUNFLOWER",
+   "mechanism": "Semaphore clocks",
+   "transform": null,
+   "encoded": "SUNFLOWER",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Hardening Off",
+   "answer": "GREENHOUSE",
+   "mechanism": "Symbol cryptogram",
+   "transform": null,
+   "encoded": "GREENHOUSE",
+   "mutated": null
+  }
+ ]
+}

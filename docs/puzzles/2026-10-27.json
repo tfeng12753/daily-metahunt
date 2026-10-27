@@ -1,0 +1,301 @@
+{
+ "date": "2026-10-27",
+ "difficulty": "hard",
+ "salt": "2026-10-27",
+ "number": 31,
+ "round": "Capture The Flag",
+ "intro": "The honeypot caught something at 03:14, and the red team knew at once it was not an attacker. It was a message, split across every protocol the intruder could find, carried on noise that made the LEDs shiver and the air taste of static. A half-finished cup of tea sat beside a keyboard sprayed with fingerprints, and the newest analyst kept rubbing sleep from her eyes. On the shelf above the bench sits a compositor's case, and the red team treats found artefacts the way an old printer treats its case: every piece has its place. They leave the pieces there overnight, trusting the room to keep its own counsel until morning.",
+ "echo": "Software with bad intentions, which is all its name means.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Null Byte",
+   "flavor": "Rubbings from a handrail. Unlucky for some, and the same distance either way.",
+   "blocks": [
+    {
+     "type": "braille",
+     "items": [
+      "100100",
+      "110000",
+      "100010",
+      "110110"
+     ]
+    }
+   ],
+   "hash": "7c1aa1c397557642bdc1d49b675e3005a4a464d0beca9ae4358d44be34ec4d74",
+   "partials": {
+    "784c623814d2dfb3bb6a65360a3f01dce118e10df792798ccadd3f944d656113": "You've decoded it, but it's not finished. One more layer."
+   },
+   "hints": [
+    "Write each number in binary. Six yes-or-no choices: is there an alphabet built from exactly that? And if what you get still isn't a word, reread the flavour text."
+   ]
+  },
+  {
+   "id": 2,
+   "title": "Rubber Ducky",
+   "flavor": "Each column remembers what it held, but not in what order.",
+   "blocks": [
+    {
+     "type": "dropquote",
+     "cols": [
+      "AEHTT",
+      "AEHLTY",
+      "DEHP",
+      "EEL",
+      "DILW",
+      "AANO",
+      "BEPSS",
+      "EET",
+      "FRTW",
+      "AEEOT",
+      "HNRRT",
+      "EIMOT",
+      "INR",
+      "DGNT"
+     ],
+     "mask": [
+      "...#....#.....",
+      "#...#........#",
+      ".....#......#.",
+      "..#....#....#.",
+      "...#...#......",
+      "..############"
+     ]
+    }
+   ],
+   "hash": "3e0ce13ac49bbfdef8274f5d93b2edc21e386e3168da91e9b9ac933ceb5ecaa9",
+   "partials": {},
+   "hints": [
+    "Black squares are spaces. Which two- and three-letter words fit, using only the letters each column allows?"
+   ]
+  },
+  {
+   "id": 3,
+   "title": "Privilege Escalation",
+   "flavor": "Bunting on the halyard, and not for a celebration.",
+   "blocks": [
+    {
+     "type": "flags",
+     "items": [
+      "K",
+      "E",
+      "R",
+      "N",
+      "E",
+      "L"
+     ]
+    }
+   ],
+   "hash": "6ce96e3370d427c250b2a2af88c501c04d1872d933019f3297b5c51295dbfbc5",
+   "partials": {},
+   "hints": [
+    "Ships carry a flag for every letter of the alphabet. Do you know them?"
+   ]
+  },
+  {
+   "id": 4,
+   "title": "Air Gap",
+   "flavor": "It never travels in a straight line, and neither does the truth. Something in here has been through the looking glass.",
+   "blocks": [
+    {
+     "type": "board",
+     "rows": [
+      "IHZKPGOP",
+      "DQMVHGGZ",
+      "HTNBQDHW",
+      "GODLTOTW",
+      "PZKBGWAQ",
+      "BZBPQBBK",
+      "DQQWOUWY",
+      "IBVFDIMD"
+     ]
+    },
+    {
+     "type": "prose",
+     "text": "The knight sets out from h3: Ng5 Nh7 Nf8 Nd7 Nc5 Nb3 Nd4."
+    }
+   ],
+   "hash": "e45fe0daeca19dad2ab7114b55dfcbba801546b1bb7cb25d18cd34cc1d71b436",
+   "partials": {
+    "299122c75a44a155a5dfee31e8e43431e83f4a54776a503b8a5a2c5182324bcd": "You've decoded it, but it's not finished. One more layer."
+   },
+   "hints": [
+    "Those are chess moves. Which squares does the piece land on, and what's written there? And if what you get still isn't a word, reread the flavour text."
+   ]
+  },
+  {
+   "id": 5,
+   "title": "Salted Hash",
+   "flavor": "Everything in its place, and nothing twice.",
+   "blocks": [
+    {
+     "type": "sudoku",
+     "size": 9,
+     "rows": [
+      "..C...E..",
+      ".YR..T.C.",
+      ".....YPI.",
+      "E..T.....",
+      ".....IO.C",
+      "R..Y...PT",
+      "..Y..O...",
+      "OP...E...",
+      "....R...."
+     ],
+     "alphabet": "CEINOPRTY",
+     "marks": [
+      [
+       6,
+       8
+      ],
+      [
+       2,
+       3
+      ],
+      [
+       3,
+       1
+      ],
+      [
+       3,
+       6
+      ],
+      [
+       8,
+       6
+      ],
+      [
+       8,
+       8
+      ],
+      [
+       8,
+       2
+      ],
+      [
+       3,
+       2
+      ],
+      [
+       0,
+       3
+      ],
+      [
+       7,
+       2
+      ]
+     ]
+    }
+   ],
+   "hash": "867f5918cbea2b422181d98835463fdfc9cb8cd6f72b6d3c91539d6b45afa178",
+   "partials": {},
+   "hints": [
+    "A familiar grid puzzle in unfamiliar clothes. Once it's done, are some squares more important than others?"
+   ]
+  },
+  {
+   "id": 6,
+   "title": "Man In The Middle",
+   "flavor": "Three letters to a strip, and a note of how long each word was.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "ASK",
+      "ATS",
+      "AVE",
+      "DEM",
+      "DTH",
+      "EAN",
+      "ECR",
+      "EPT",
+      "ETI",
+      "FOR",
+      "GEH",
+      "ITS",
+      "ONG",
+      "RET",
+      "RYL",
+      "SEC",
+      "SMO",
+      "SPA",
+      "THI",
+      "TIM"
+     ],
+     "inline": true,
+     "tiles": true
+    },
+    {
+     "type": "prose",
+     "text": "Word lengths: (4 4 3 4 3 6 3 1 4 4 4 3 4 6 2 5)"
+    }
+   ],
+   "hash": "5bb2b7491d7e8116d381d9dbdffa9525aa70140d7e95b1dc5c4cc19f619f0645",
+   "partials": {},
+   "hints": [
+    "The strips are alphabetised, not in order. The word lengths say where the breaks fall. Which strip could start the sentence?"
+   ]
+  },
+  {
+   "id": 7,
+   "title": "Rainbow Table",
+   "flavor": "The machine keeps its diary in your cells' alphabet, if your cells could only say yes or no.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "010011 100101 000011 100001 110111 010011 100100 000000 100000"
+    }
+   ],
+   "hash": "aae3e9f4510501b5797e13792661016a08b19f37dab136bbb635fb125fd7c46e",
+   "partials": {},
+   "hints": [
+    "How many different things can a pair of bits say? Four is a very biological number."
+   ]
+  }
+ ],
+ "meta": {
+  "title": "Meta: Capture The Flag",
+  "flavor": "Pigeonholes, each cut to fit one thing only.",
+  "blocks": [
+   {
+    "type": "fitgrid",
+    "rows": [
+     {
+      "len": 5,
+      "shade": 0
+     },
+     {
+      "len": 8,
+      "shade": 6
+     },
+     {
+      "len": 6,
+      "shade": 5
+     },
+     {
+      "len": 7,
+      "shade": 4
+     },
+     {
+      "len": 9,
+      "shade": 6
+     },
+     {
+      "len": 4,
+      "shade": 2
+     },
+     {
+      "len": 10,
+      "shade": 0
+     }
+    ]
+   }
+  ],
+  "length": 7,
+  "hash": "1c5bf3695ee714917a44bcd6013863353ae8e7f5141adcc3540871015b78c4af",
+  "hints": [
+   "The grid's rows are all different lengths. So are your answers."
+  ]
+ },
+ "described": true
+}

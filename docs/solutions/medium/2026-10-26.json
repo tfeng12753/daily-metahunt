@@ -1,0 +1,64 @@
+{
+ "date": "2026-10-26",
+ "number": 30,
+ "difficulty": "medium",
+ "final": "BLOSSOM",
+ "metaType": "logbook",
+ "explain": "Each entry is (puzzle number, letter number): index into that puzzle's answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Germination",
+   "answer": "STAMEN",
+   "mechanism": "Caesar shift",
+   "transform": null,
+   "encoded": "STAMEN",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Seed Bank",
+   "answer": "SPORE",
+   "mechanism": "Drop quote",
+   "transform": null,
+   "encoded": "SPORE",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Taproot",
+   "answer": "CACTUS",
+   "mechanism": "Keyboard shift",
+   "transform": null,
+   "encoded": "CACTUS",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Grafting",
+   "answer": "SUCCULENT",
+   "mechanism": "Atomic numbers (symbols)",
+   "transform": null,
+   "encoded": "SUCCULENT",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Pollinator",
+   "answer": "SAP",
+   "mechanism": "Anagrams with an extra letter",
+   "transform": "Atbash (A↔Z mirror)",
+   "encoded": "HZK",
+   "mutated": null
+  },
+  {
+   "id": 6,
+   "title": "Latin Names",
+   "answer": "TUBER",
+   "mechanism": "Number trivia",
+   "transform": null,
+   "encoded": "TUBER",
+   "mutated": null
+  }
+ ]
+}
