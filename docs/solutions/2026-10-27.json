@@ -1,0 +1,73 @@
+{
+ "date": "2026-10-27",
+ "number": 31,
+ "difficulty": "hard",
+ "final": "MALWARE",
+ "metaType": "fitin",
+ "explain": "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Null Byte",
+   "answer": "PORT",
+   "mechanism": "Braille (drawn)",
+   "transform": "ROT13",
+   "encoded": "CBEG",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Rubber Ducky",
+   "answer": "TERMINAL",
+   "mechanism": "Drop quote",
+   "transform": null,
+   "encoded": "TERMINAL",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Privilege Escalation",
+   "answer": "KERNEL",
+   "mechanism": "Maritime signal flags",
+   "transform": null,
+   "encoded": "KERNEL",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Air Gap",
+   "answer": "GATEWAY",
+   "mechanism": "Knight's path",
+   "transform": "Atbash (A↔Z mirror)",
+   "encoded": "TZGVDZB",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Salted Hash",
+   "answer": "ENCRYPTION",
+   "mechanism": "Letter sudoku",
+   "transform": null,
+   "encoded": "ENCRYPTION",
+   "mutated": null
+  },
+  {
+   "id": 6,
+   "title": "Man In The Middle",
+   "answer": "MODEM",
+   "mechanism": "Shredded sentence",
+   "transform": null,
+   "encoded": "MODEM",
+   "mutated": null
+  },
+  {
+   "id": 7,
+   "title": "Rainbow Table",
+   "answer": "HANDSHAKE",
+   "mechanism": "Binary codons",
+   "transform": null,
+   "encoded": "HANDSHAKE",
+   "mutated": null
+  }
+ ]
+}

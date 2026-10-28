@@ -1,0 +1,82 @@
+{
+ "date": "2026-10-27",
+ "number": 31,
+ "difficulty": "medium",
+ "final": "FIREWALL",
+ "metaType": "stowaway",
+ "explain": "Each feeder decodes to its answer plus one inserted letter. The inserted letters, in puzzle order, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Zero Day",
+   "answer": "SPYWARE",
+   "mechanism": "Scrambled sentence",
+   "transform": null,
+   "encoded": "SPFYWARE",
+   "mutated": "SPFYWARE"
+  },
+  {
+   "id": 2,
+   "title": "Rainbow Table",
+   "answer": "VIRUS",
+   "mechanism": "Letter sudoku",
+   "transform": null,
+   "encoded": "VIIRUS",
+   "mutated": "VIIRUS"
+  },
+  {
+   "id": 3,
+   "title": "Air Gap",
+   "answer": "MODEM",
+   "mechanism": "Missing letters",
+   "transform": "Reversal",
+   "encoded": "RMEDOM",
+   "mutated": "MODEMR"
+  },
+  {
+   "id": 4,
+   "title": "Salted Hash",
+   "answer": "BACKDOOR",
+   "mechanism": "Nonogram",
+   "transform": null,
+   "encoded": "BACEKDOOR",
+   "mutated": "BACEKDOOR"
+  },
+  {
+   "id": 5,
+   "title": "Heap Spray",
+   "answer": "TOKEN",
+   "mechanism": "Braille as bit strings",
+   "transform": null,
+   "encoded": "TWOKEN",
+   "mutated": "TWOKEN"
+  },
+  {
+   "id": 6,
+   "title": "Privilege Escalation",
+   "answer": "PACKET",
+   "mechanism": "Punched tape",
+   "transform": null,
+   "encoded": "PACKEAT",
+   "mutated": "PACKEAT"
+  },
+  {
+   "id": 7,
+   "title": "Null Byte",
+   "answer": "ENCRYPTION",
+   "mechanism": "Tap code",
+   "transform": null,
+   "encoded": "ENCRYPLTION",
+   "mutated": "ENCRYPLTION"
+  },
+  {
+   "id": 8,
+   "title": "Rubber Ducky",
+   "answer": "SPOOF",
+   "mechanism": "Element spelling",
+   "transform": null,
+   "encoded": "SPOOFL",
+   "mutated": "SPOOFL"
+  }
+ ]
+}

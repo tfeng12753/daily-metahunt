@@ -1,0 +1,73 @@
+{
+ "date": "2026-10-27",
+ "number": 31,
+ "difficulty": "easy",
+ "final": "ROOTKIT",
+ "metaType": "fitin",
+ "explain": "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Rainbow Table",
+   "answer": "SOCKET",
+   "mechanism": "Book cipher",
+   "transform": null,
+   "encoded": "SOCKET",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Air Gap",
+   "answer": "SNIFFER",
+   "mechanism": "Nonogram",
+   "transform": null,
+   "encoded": "SNIFFER",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Heap Spray",
+   "answer": "HANDSHAKE",
+   "mechanism": "Braille as bit strings",
+   "transform": null,
+   "encoded": "HANDSHAKE",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Cold Boot",
+   "answer": "MODEM",
+   "mechanism": "Rail fence (cluephrase)",
+   "transform": null,
+   "encoded": "MODEM",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Man In The Middle",
+   "answer": "PASSWORD",
+   "mechanism": "Gapless Morse",
+   "transform": null,
+   "encoded": "PASSWORD",
+   "mutated": null
+  },
+  {
+   "id": 6,
+   "title": "Replay Attack",
+   "answer": "CERTIFICATE",
+   "mechanism": "Element spelling",
+   "transform": null,
+   "encoded": "CERTIFICATE",
+   "mutated": null
+  },
+  {
+   "id": 7,
+   "title": "Rubber Ducky",
+   "answer": "ENCRYPTION",
+   "mechanism": "Cryptogram (cluephrase)",
+   "transform": null,
+   "encoded": "ENCRYPTION",
+   "mutated": null
+  }
+ ]
+}

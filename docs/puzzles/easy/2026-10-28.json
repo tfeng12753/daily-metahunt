@@ -1,0 +1,362 @@
+{
+ "date": "2026-10-28",
+ "difficulty": "easy",
+ "salt": "2026-10-28/easy",
+ "number": 32,
+ "round": "The Oracle Is Closed",
+ "intro": "The Oracle at Delphi has stopped answering questions; instead she has left a set of riddles, each one sworn upon a different god, and the pilgrim crowd now waits with tablets rather than requests. Along the temple wall hangs a rack of bronze slots, each one filed to a different width, and the custom forming among the suppliants is to solve a riddle and then slide its answer strip into the slot that takes it snugly. A strip forced into a wider slot is treated as the work of a careless seer, and a strip left beside the rack counts for nothing. Beneath every slot runs a narrow channel, and at the bottom of each channel someone has fixed a letter in dark pitch. The pilgrims say the pitch letters matter only when each slot holds exactly the length it was made for; then, they believe, the letters will speak in the Pythia's place.",
+ "echo": "The gods live nearly three thousand metres up, above the clouds of Thessaly.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Elysian Fields",
+   "flavor": "A strip of paper tape, seven holes wide, fed through the teletype at Delphi.",
+   "blocks": [
+    {
+     "type": "tape",
+     "rows": [
+      [
+       1,
+       0,
+       1,
+       0,
+       0,
+       0,
+       0
+      ],
+      [
+       1,
+       0,
+       1,
+       0,
+       0,
+       1,
+       0
+      ],
+      [
+       1,
+       0,
+       0,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       0,
+       0,
+       1,
+       1,
+       0,
+       1
+      ],
+      [
+       1,
+       0,
+       0,
+       0,
+       1,
+       0,
+       1
+      ],
+      [
+       1,
+       0,
+       1,
+       0,
+       1,
+       0,
+       0
+      ],
+      [
+       1,
+       0,
+       0,
+       1,
+       0,
+       0,
+       0
+      ],
+      [
+       1,
+       0,
+       0,
+       0,
+       1,
+       0,
+       1
+      ],
+      [
+       1,
+       0,
+       1,
+       0,
+       1,
+       0,
+       1
+      ],
+      [
+       1,
+       0,
+       1,
+       0,
+       0,
+       1,
+       1
+      ]
+     ]
+    }
+   ],
+   "hash": "aa98ac8ac79f5a90686ae0376e8baee108f406448ab88e2b4279b1693aa0a22e",
+   "partials": {},
+   "hints": [
+    "Each row of the paper tape is a 7-bit ASCII character (hole = 1, most significant bit on the left).",
+    "To check you're on track: the answer begins with P."
+   ],
+   "technique": "Punched tape",
+   "length": 10
+  },
+  {
+   "id": 2,
+   "title": "Know Thyself",
+   "flavor": "Not a single letter on the page, and yet it says something.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "♥◇☁△ ○♫♠★♦△ ♪◇△ ☀✚⚑♠ ■☁▽▽▼♦ ⚑♠ ○☀▼○♠ ▲☁☀ ☆◇ ♫◇☀ ☀♦▼▼ ☀✚♦ ◇☀✚♦△♠ ✚◇★ ♥◇☁ ☾◇☀ ⚑☀",
+     "wide": true,
+     "solver": "substitution"
+    }
+   ],
+   "hash": "89c3f4c6ce917db1413e04a82450eec0f20f4cd33fcafe8be3d89f6051d8b624",
+   "partials": {},
+   "hints": [
+    "Each symbol stands for one letter (a simple substitution); word breaks are kept. Solve the sentence; it tells you the answer.",
+    "To check you're on track: the answer begins with A."
+   ],
+   "technique": "Symbol cryptogram",
+   "length": 5
+  },
+  {
+   "id": 3,
+   "title": "The Golden Fleece",
+   "flavor": "Julius would have read this before breakfast.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "KSZZ RCBS MCI AOM BCK KFWHS RCKB HVS KCFR VSFASG OBR ACJS EIWSHZM CB HC HVS BSLH CBS",
+     "wide": true,
+     "solver": "substitution",
+     "wheel": true
+    }
+   ],
+   "hash": "30507e5fbf02c1be71f7a37422f904d19ab22a249e1244afb1d309d6ce23bdcb",
+   "partials": {},
+   "hints": [
+    "Every letter of the sentence was shifted along the alphabet by the same amount. Find the shift; the sentence tells you the answer.",
+    "To check you're on track: the answer begins with H."
+   ],
+   "technique": "Caesar shift",
+   "length": 6
+  },
+  {
+   "id": 4,
+   "title": "Twelve Labours",
+   "flavor": "A pub quiz where every answer is a count. Keep a tally, then keep counting.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "Faces on an icosahedron",
+      "Arms on an octopus",
+      "Guns fired in a traditional royal salute",
+      "Days in a fortnight",
+      "Suits in a deck of cards",
+      "Rings on the Olympic flag",
+      "Holes on a full golf course",
+      "Humps on a Bactrian camel",
+      "Red balls racked at the start of a snooker frame",
+      "Months in a year",
+      "Faces on an icosahedron"
+     ],
+     "ordered": true,
+     "tray": "letter"
+    }
+   ],
+   "hash": "f84fbd294c51613a47732fc69a6e4c8e42b97b0be5be317f0807fe5db1b7f800",
+   "partials": {},
+   "hints": [
+    "Each line is a number from 1 to 26. Turn each number into a letter (A = 1, B = 2, …).",
+    "To check you're on track: the answer begins with T."
+   ],
+   "technique": "Number trivia",
+   "length": 11
+  },
+  {
+   "id": 5,
+   "title": "Pandora's Jar",
+   "flavor": "Paint chips left behind at Delphi. The labels matter more than the colours.",
+   "blocks": [
+    {
+     "type": "swatches",
+     "items": [
+      "#484552",
+      "#43554C",
+      "#455320"
+     ]
+    }
+   ],
+   "hash": "03b7316a78e1b47ad446d5a734f09678b02b2305052d84f8171b8e854dd32d17",
+   "partials": {},
+   "hints": [
+    "Each hex colour code is three ASCII bytes.",
+    "To check you're on track: the answer begins with H."
+   ],
+   "technique": "Hex colour ASCII",
+   "length": 8
+  },
+  {
+   "id": 6,
+   "title": "The Judgement Of Paris",
+   "flavor": "Some numbers here are far too big for the alphabet. They're not too big for the periodic table.",
+   "blocks": [
+    {
+     "type": "numbers",
+     "items": [
+      6,
+      39,
+      17,
+      8,
+      15,
+      16
+     ],
+     "tray": 2
+    }
+   ],
+   "hash": "3859131ec6e3bccfedff3801e047ba7e09f03d37c68c766282635cf9f570645a",
+   "partials": {},
+   "hints": [
+    "Each number is an atomic number. Write down each element's chemical symbol and read the symbols together as one word.",
+    "To check you're on track: the answer begins with C."
+   ],
+   "technique": "Element spelling",
+   "length": 7
+  },
+  {
+   "id": 7,
+   "title": "Ambrosia",
+   "flavor": "A familiar grid, an unfamiliar alphabet.",
+   "blocks": [
+    {
+     "type": "sudoku",
+     "size": 9,
+     "rows": [
+      "N...CD.L.",
+      "L..US.C..",
+      "..RI.LAD.",
+      "SU......D",
+      "DL.SUC...",
+      "R.C.L..S.",
+      ".R.A.NDUL",
+      ".NLC.....",
+      ".D.LR.NAC"
+     ],
+     "alphabet": "ACDILNRSU",
+     "marks": [
+      [
+       3,
+       3
+      ],
+      [
+       0,
+       2
+      ],
+      [
+       1,
+       8
+      ],
+      [
+       6,
+       0
+      ],
+      [
+       0,
+       6
+      ],
+      [
+       8,
+       5
+      ],
+      [
+       7,
+       6
+      ],
+      [
+       7,
+       5
+      ],
+      [
+       0,
+       1
+      ]
+     ]
+    }
+   ],
+   "hash": "d8114f374434043605af34e5e9dcc40b9f6012313651ab7c49fb6dfe0da7daa9",
+   "partials": {},
+   "hints": [
+    "Sudoku using the letters shown instead of digits (each row, column and box uses each letter once). Read the numbered squares in order.",
+    "To check you're on track: the answer begins with N."
+   ],
+   "technique": "Letter sudoku",
+   "length": 9
+  }
+ ],
+ "meta": {
+  "title": "Meta: The Oracle Is Closed",
+  "flavor": "Everything at Delphi has a place, and every place is exactly the right size.",
+  "blocks": [
+   {
+    "type": "fitgrid",
+    "rows": [
+     {
+      "len": 11,
+      "shade": 8
+     },
+     {
+      "len": 8,
+      "shade": 5
+     },
+     {
+      "len": 7,
+      "shade": 1
+     },
+     {
+      "len": 6,
+      "shade": 3
+     },
+     {
+      "len": 10,
+      "shade": 0
+     },
+     {
+      "len": 9,
+      "shade": 7
+     },
+     {
+      "len": 5,
+      "shade": 4
+     }
+    ]
+   }
+  ],
+  "length": 7,
+  "hash": "aeac380298805cbf3caa78148c3f59977680f829f593f01e966cb3d67367ce5b",
+  "hints": [
+   "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+   "To check you're on track: the final answer begins with O."
+  ]
+ },
+ "described": true
+}

@@ -1,0 +1,260 @@
+{
+ "date": "2026-10-28",
+ "difficulty": "hard",
+ "salt": "2026-10-28",
+ "number": 32,
+ "round": "The Oracle Is Closed",
+ "intro": "The Oracle at Delphi has stopped answering questions. Instead she has left a set of riddles, each one sworn upon a different god, and the pilgrims take them to their inns and their temples and their workshops and turn them over in the lamplight. The copyists in the town have noticed something strange in their own work: every sheet they finish, however careful they are, carries exactly one slip, and the same slip never repeats. The slips have begun to pile up in a single ledger at the archives, bound and tied, and the keeper of the archives has started calling it the Oracle's errata because no one can say why such tidy errors should fall from the hands of the most careful writers in Greece.",
+ "echo": "Cut off one head and two grow back.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Elysian Fields",
+   "flavor": "Everything in its place, and nothing twice.",
+   "blocks": [
+    {
+     "type": "sudoku",
+     "size": 9,
+     "rows": [
+      "..E......",
+      "O........",
+      ".N....A.H",
+      "C..E..H..",
+      ".......O.",
+      "TAU.C...E",
+      "....E....",
+      "Q....UC..",
+      ".ET.NH..Q"
+     ],
+     "alphabet": "ACEHNOQTU",
+     "marks": [
+      [
+       8,
+       3
+      ],
+      [
+       4,
+       0
+      ],
+      [
+       6,
+       0
+      ],
+      [
+       0,
+       7
+      ],
+      [
+       3,
+       7
+      ],
+      [
+       1,
+       8
+      ],
+      [
+       6,
+       7
+      ]
+     ]
+    }
+   ],
+   "hash": "fc2a8af068e9c1058d4a57dd2e97d481cdbc6be3132db1117177c04afb79962e",
+   "partials": {
+    "73ab02fc284088b1ee539afaa2e528acf413ade13c2a873b66c3564ec100808a": "So close. Exactly one thing is wrong here. Fix it (and remember what you fixed)."
+   },
+   "hints": [
+    "A familiar grid puzzle in unfamiliar clothes. Once it's done, are some squares more important than others?"
+   ]
+  },
+  {
+   "id": 2,
+   "title": "Know Thyself",
+   "flavor": "Everything that belongs is in there somewhere. Some things don't belong. Half a turn of the wheel and you'd have it.",
+   "blocks": [
+    {
+     "type": "caption",
+     "text": "Somewhere in here: things to do with Delphi."
+    },
+    {
+     "type": "board",
+     "rows": [
+      "HERCULES",
+      "NERISMRH",
+      "YACEEAEB",
+      "ORLDTRZS",
+      "REUCMREE",
+      "TSEEGUUD",
+      "ANSRHFSA",
+      "SALTAREH"
+     ],
+     "plain": true,
+     "words": [
+      "ARES",
+      "ATLAS",
+      "HADES",
+      "HERA",
+      "HERCULES",
+      "HERMES",
+      "MEDUSA",
+      "NECTAR",
+      "SIREN",
+      "TROY",
+      "ZEUS"
+     ]
+    }
+   ],
+   "hash": "3a3f647c4d425fc69833bd0469491e800a7e25f5656efe70afbd7095cbbd6d3c",
+   "partials": {
+    "8d8d6fa5540083386c7fe41eb97ecb7891e3da24a3cf5d68759fc455f1ea2a1c": "You've decoded it, but it's not finished. One more layer.",
+    "4bfb9b33b0bcf318c144656730fb92fa6ce161b9618a56b5eda09875f4943d53": "So close. Exactly one thing is wrong here. Fix it (and remember what you fixed)."
+   },
+   "hints": [
+    "Once every theme word is found, is anything left unclaimed? Read it in order. And if what you get still isn't a word, reread the flavour text.",
+    "The hidden words are: ARES, ATLAS, HADES, HERA, HERCULES, HERMES, MEDUSA, NECTAR, SIREN, TROY, ZEUS."
+   ]
+  },
+  {
+   "id": 3,
+   "title": "The Golden Fleece",
+   "flavor": "Rhythm without rests, and a finger pointing into each line.",
+   "blocks": [
+    {
+     "type": "morselines",
+     "items": [
+      {
+       "code": ".-.-.--.----..-..--",
+       "len": 8,
+       "index": 8
+      },
+      {
+       "code": "......-.-.-...-.-......",
+       "len": 8,
+       "index": 1
+      },
+      {
+       "code": ".-.--......-.----....-.",
+       "len": 9,
+       "index": 9
+      },
+      {
+       "code": "-...--.-..-.",
+       "len": 7,
+       "index": 1
+      },
+      {
+       "code": "-..-.-.-.-.-.",
+       "len": 6,
+       "index": 2
+      },
+      {
+       "code": ".--..--..-.....-...",
+       "len": 7,
+       "index": 6
+      },
+      {
+       "code": "--.....-...",
+       "len": 4,
+       "index": 4
+      }
+     ]
+    }
+   ],
+   "hash": "bd850c72e15765e2031789c9c6c50b2b133d4d49134d6fd7b1f11c3ca5742be8",
+   "partials": {
+    "5f30fa60ee9b44862cef9fd7bc6515f5263f524c7388eef275d0dce1f3bf627a": "So close. Exactly one thing is wrong here. Fix it (and remember what you fixed)."
+   },
+   "hints": [
+    "Two symbols, no spaces, and a letter count. Which old code is it, and which word from this round fits each line?"
+   ]
+  },
+  {
+   "id": 4,
+   "title": "Laurel Wreath",
+   "flavor": "Every answer is small, and none is bigger than it needs to be. Whatever you find, it was said on the way out, not the way in.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "Holes on a full golf course",
+      "Months in a year",
+      "Signs of the Western zodiac",
+      "Red balls racked at the start of a snooker frame",
+      "Ounces in a pound",
+      "Wheels on a unicycle"
+     ],
+     "ordered": true,
+     "tray": "letter"
+    }
+   ],
+   "hash": "e81b75a026eedc42e37688dd20b635468bce7efc03734b0a3948393c70ed1dbb",
+   "partials": {
+    "90a69bdf40c620eb04cfaca04f5eca7c7cddc285777026589c4436242e4d4bc3": "You've decoded it, but it's not finished. One more layer.",
+    "7b8385b1539bac18c1c3b4e716abfed703774ee6e9850828239f0062655b19cd": "So close. Exactly one thing is wrong here. Fix it (and remember what you fixed)."
+   },
+   "hints": [
+    "Every line has a number for an answer. Could those numbers be counting through something else? And if what you get still isn't a word, reread the flavour text."
+   ]
+  },
+  {
+   "id": 5,
+   "title": "Apple Of Discord",
+   "flavor": "Shredded, then sorted by a very tidy intern.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "AOP",
+      "ASI",
+      "CYC",
+      "DSW",
+      "EIS",
+      "EVE",
+      "EWO",
+      "HEW",
+      "HIS",
+      "HUN",
+      "ITH",
+      "NDT",
+      "NGL",
+      "OMT",
+      "OOD",
+      "ORD",
+      "PAG",
+      "RDA",
+      "RYG",
+      "S",
+      "TEN",
+      "TFR",
+      "WAN",
+      "YOU"
+     ],
+     "inline": true,
+     "tiles": true
+    },
+    {
+     "type": "prose",
+     "text": "Word lengths: (5 4 4 4 4 1 6 4 3 3 4 3 4 4 4 4 2 7)"
+    }
+   ],
+   "hash": "f09c46cdd9c18603d9bf1015e9a19360f157fa41043daa4070b4ede39fa8251d",
+   "partials": {
+    "97d5bc9708d9d7ee3dd6f8a656fe576c0e695cf9d9335708816883d09cfe2ef9": "So close. Exactly one thing is wrong here. Fix it (and remember what you fixed)."
+   },
+   "hints": [
+    "The strips are alphabetised, not in order. The word lengths say where the breaks fall. Which strip could start the sentence?"
+   ]
+  }
+ ],
+ "meta": {
+  "title": "Meta: The Oracle Is Closed",
+  "flavor": "Nothing reached Delphi undamaged. The damage, though, was remarkably consistent.",
+  "blocks": [],
+  "length": 5,
+  "hash": "cd853a7b3499a1bb036d27d8ee83d09d87a5713d77b96e5c37b810676a48e0ba",
+  "hints": [
+   "Did every answer come out clean the first time? Each had exactly one wrong letter. Did you keep them?"
+  ]
+ },
+ "described": true
+}

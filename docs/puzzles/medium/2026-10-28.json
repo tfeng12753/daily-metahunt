@@ -1,0 +1,282 @@
+{
+ "date": "2026-10-28",
+ "difficulty": "medium",
+ "salt": "2026-10-28/medium",
+ "number": 32,
+ "round": "The Oracle Is Closed",
+ "intro": "The Oracle at Delphi has fallen silent, and the pilgrims who once came to ask their questions now stand in the outer court with bundles of supplication scrolls that no one will read. In her place, a series of riddles has been laid upon the thresholds of the temples, each sworn upon a different god. The temple scribes, told to file the pilgrims' offerings of bronze and oil, have been given no shelves to put them on, only a long stone wall with a row of shallow niches, each one cut a different depth, as if someone once measured whatever it was meant to hold and never said what.",
+ "echo": "The journey home took ten years, and every long journey since has borrowed its name.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Laurel Wreath",
+   "flavor": "Every answer is small, and none is bigger than it needs to be.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "Ounces in a pound",
+      "Sides of a pentagon",
+      "Holes on a full golf course",
+      "Lines in a villanelle",
+      "Sides of a pentagon",
+      "Pawns on a chessboard at the start of a game",
+      "Arms on an octopus",
+      "Red balls racked at the start of a snooker frame",
+      "Days in a fortnight",
+      "Sides of a pentagon"
+     ],
+     "ordered": true,
+     "tray": "letter"
+    }
+   ],
+   "hash": "ef9b1ea22cd8f19a4c0deb925951d543ba064797eea9e930801bad3882a4dd6f",
+   "partials": {},
+   "hints": [
+    "Every line has a number for an answer. Could those numbers be counting through something else?",
+    "They're all between 1 and 26: A = 1, B = 2…"
+   ],
+   "length": 10
+  },
+  {
+   "id": 2,
+   "title": "Pandora's Jar",
+   "flavor": "Not a single letter on the page, and yet it says something.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "●□▽♠☀■ ♣□☂● ♦▽♣☁ ♥◆☀☀ ☂♦♣▽ ♣□☁ ★○▽♦♪ □◆♦■● ◇☀☁◆●☁ ♥▽○♪☁♣ ♣□☁ ★▽○■ ■☂▽♦✚●♠●",
+     "wide": true,
+     "solver": "substitution"
+    }
+   ],
+   "hash": "513828a1124f82a9a8c80e0744307b3b39a8a5b5c8e88807b0b029251115f6bb",
+   "partials": {},
+   "hints": [
+    "Which short words are most common in English? Could any of them be hiding here?",
+    "Each symbol always stands for the same letter. The finished sentence tells you what to submit."
+   ],
+   "length": 8
+  },
+  {
+   "id": 3,
+   "title": "Nothing In Excess",
+   "flavor": "Two forward, one across.",
+   "blocks": [
+    {
+     "type": "board",
+     "rows": [
+      "BHRTXQSA",
+      "RSEKVGTN",
+      "KLVQRTNU",
+      "QYUVLUIG",
+      "TONOLCSG",
+      "IRQJEUFL",
+      "LYZXZFWK",
+      "FQXAHMTR"
+     ]
+    },
+    {
+     "type": "prose",
+     "text": "The knight sets out from h5: Ng7 Ne6 Nd4 Nb5."
+    }
+   ],
+   "hash": "55d75fd19ec6eae201e692ebccb730c9c847eba0dc22f6c106ca2263ec2765cf",
+   "partials": {},
+   "hints": [
+    "Those are chess moves. Which squares does the piece land on, and what's written there?",
+    "Start on the given square, play each move, and read the letter on every square it lands on."
+   ],
+   "length": 4
+  },
+  {
+   "id": 4,
+   "title": "Elysian Fields",
+   "flavor": "Everyone has a place. Everyone pays for it in their own name.",
+   "blocks": [
+    {
+     "type": "seating",
+     "seats": 6,
+     "names": [
+      "Hector",
+      "Nathaniel",
+      "Victoria",
+      "Gertrude",
+      "Cecilia",
+      "Hannah"
+     ],
+     "clues": [
+      "Exactly one person sits between Gertrude and Victoria.",
+      "Exactly 3 people sit between Gertrude and Hector.",
+      "Hannah sits somewhere between Hector and Nathaniel.",
+      "Nathaniel sits somewhere to the left of Gertrude.",
+      "Hannah sits immediately to the right of Victoria."
+     ],
+     "logic": [
+      [
+       "gap",
+       "GERTRUDE",
+       "VICTORIA",
+       1
+      ],
+      [
+       "gap",
+       "GERTRUDE",
+       "HECTOR",
+       3
+      ],
+      [
+       "between",
+       "HECTOR",
+       "HANNAH",
+       "NATHANIEL"
+      ],
+      [
+       "left_of",
+       "NATHANIEL",
+       "GERTRUDE"
+      ],
+      [
+       "right_of",
+       "HANNAH",
+       "VICTORIA"
+      ]
+     ]
+    }
+   ],
+   "hash": "4dc29b2d02fb4eab7a34bdf01a8c91d638cd88d39a04127f8606bb2058e54e85",
+   "partials": {},
+   "hints": [
+    "Only one arrangement satisfies every clue; start from whoever has an end seat or a fixed neighbour. Once they're seated, why might the seat numbers matter?",
+    "Solve the seating, then take the k-th letter of the name in seat k, left to right."
+   ],
+   "length": 6
+  },
+  {
+   "id": 5,
+   "title": "Ambrosia",
+   "flavor": "Bunting on the halyard, and not for a celebration.",
+   "blocks": [
+    {
+     "type": "flags",
+     "items": [
+      "D",
+      "E",
+      "M",
+      "E",
+      "T",
+      "E",
+      "R"
+     ]
+    }
+   ],
+   "hash": "bd7051ee500f3ab1107cd64219fb451a5351c23d4cd65df9690154652d3f92cd",
+   "partials": {},
+   "hints": [
+    "Ships carry a flag for every letter of the alphabet. Do you know them?",
+    "International maritime signal flags: one letter each, left to right."
+   ],
+   "length": 7
+  },
+  {
+   "id": 6,
+   "title": "Apple Of Discord",
+   "flavor": "A paint chart for a room nobody will ever decorate.",
+   "blocks": [
+    {
+     "type": "swatches",
+     "items": [
+      "#4E4152",
+      "#434953",
+      "#535553"
+     ]
+    }
+   ],
+   "hash": "56682aaa517ecaa9ce7512a5a65bb3e7a70a973488f3c990460fbeac6b8fb63b",
+   "partials": {},
+   "hints": [
+    "Split each colour code into three pairs of hex digits. What else is a two-digit hex number?",
+    "Each pair of hex digits is an ASCII code: three characters per colour."
+   ],
+   "length": 9
+  },
+  {
+   "id": 7,
+   "title": "Tartarus",
+   "flavor": "The labels at Delphi have faded.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "TRIDEN_",
+      "SP_INX",
+      "CENTA_R",
+      "MI_OTAUR",
+      "POSEI_ON",
+      "APHRODIT_",
+      "O_PHEUS",
+      "CER_ERUS",
+      "AP_LLO",
+      "AT_AS",
+      "SPAR_A"
+     ],
+     "ordered": true,
+     "mono": true
+    }
+   ],
+   "hash": "04a6ff1a3bc1af4ac71496e5749ecaa5ce13cfd26ad7d0d7b8622267bf47f6a5",
+   "partials": {},
+   "hints": [
+    "Every gap takes exactly one letter. Is there a pattern in what you filled in?",
+    "Read the letters you supplied, in order."
+   ],
+   "length": 11
+  }
+ ],
+ "meta": {
+  "title": "Meta: The Oracle Is Closed",
+  "flavor": "Everything at Delphi has a place.",
+  "blocks": [
+   {
+    "type": "fitgrid",
+    "rows": [
+     {
+      "len": 11,
+      "shade": 8
+     },
+     {
+      "len": 7,
+      "shade": 0
+     },
+     {
+      "len": 4,
+      "shade": 3
+     },
+     {
+      "len": 10,
+      "shade": 3
+     },
+     {
+      "len": 9,
+      "shade": 8
+     },
+     {
+      "len": 6,
+      "shade": 1
+     },
+     {
+      "len": 8,
+      "shade": 4
+     }
+    ]
+   }
+  ],
+  "length": 7,
+  "hash": "bb973cc913f576ac215a687745434b992ecbe32ae996598ebf7c8b0ca99a6ab7",
+  "hints": [
+   "The grid's rows are all different lengths. So are your answers.",
+   "Put each answer in the row its length fits; read the shaded squares top to bottom."
+  ]
+ },
+ "described": true
+}
