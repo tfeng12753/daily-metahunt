@@ -1,0 +1,73 @@
+{
+ "date": "2026-10-28",
+ "number": 32,
+ "difficulty": "easy",
+ "final": "OLYMPUS",
+ "metaType": "fitin",
+ "explain": "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Elysian Fields",
+   "answer": "PROMETHEUS",
+   "mechanism": "Punched tape",
+   "transform": null,
+   "encoded": "PROMETHEUS",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Know Thyself",
+   "answer": "ATLAS",
+   "mechanism": "Symbol cryptogram",
+   "transform": null,
+   "encoded": "ATLAS",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "The Golden Fleece",
+   "answer": "HERMES",
+   "mechanism": "Caesar shift",
+   "transform": null,
+   "encoded": "HERMES",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Twelve Labours",
+   "answer": "THUNDERBOLT",
+   "mechanism": "Number trivia",
+   "transform": null,
+   "encoded": "THUNDERBOLT",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Pandora's Jar",
+   "answer": "HERCULES",
+   "mechanism": "Hex colour ASCII",
+   "transform": null,
+   "encoded": "HERCULES",
+   "mutated": null
+  },
+  {
+   "id": 6,
+   "title": "The Judgement Of Paris",
+   "answer": "CYCLOPS",
+   "mechanism": "Element spelling",
+   "transform": null,
+   "encoded": "CYCLOPS",
+   "mutated": null
+  },
+  {
+   "id": 7,
+   "title": "Ambrosia",
+   "answer": "NARCISSUS",
+   "mechanism": "Letter sudoku",
+   "transform": null,
+   "encoded": "NARCISSUS",
+   "mutated": null
+  }
+ ]
+}

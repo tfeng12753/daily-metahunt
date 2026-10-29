@@ -1,0 +1,55 @@
+{
+ "date": "2026-10-28",
+ "number": 32,
+ "difficulty": "hard",
+ "final": "HYDRA",
+ "metaType": "mutation",
+ "explain": "Each feeder decodes to its answer with a single wrong letter. Those substituted letters, in puzzle order, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Elysian Fields",
+   "answer": "CENTAUR",
+   "mechanism": "Letter sudoku",
+   "transform": null,
+   "encoded": "CENTAUH",
+   "mutated": "CENTAUH"
+  },
+  {
+   "id": 2,
+   "title": "Know Thyself",
+   "answer": "PROMETHEUS",
+   "mechanism": "Word search leftovers",
+   "transform": "ROT13",
+   "encoded": "CEBLRGURHF",
+   "mutated": "PROYETHEUS"
+  },
+  {
+   "id": 3,
+   "title": "The Golden Fleece",
+   "answer": "THESEUS",
+   "mechanism": "Gapless Morse",
+   "transform": null,
+   "encoded": "THEDEUS",
+   "mutated": "THEDEUS"
+  },
+  {
+   "id": 4,
+   "title": "Laurel Wreath",
+   "answer": "APOLLO",
+   "mechanism": "Number trivia",
+   "transform": "Reversal",
+   "encoded": "RLLOPA",
+   "mutated": "APOLLR"
+  },
+  {
+   "id": 5,
+   "title": "Apple Of Discord",
+   "answer": "CYCLOPS",
+   "mechanism": "Shredded sentence",
+   "transform": null,
+   "encoded": "CYCAOPS",
+   "mutated": "CYCAOPS"
+  }
+ ]
+}

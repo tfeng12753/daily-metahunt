@@ -1,0 +1,462 @@
+{
+ "date": "2026-10-29",
+ "difficulty": "hard",
+ "salt": "2026-10-29",
+ "number": 33,
+ "round": "Valley Of The Kings",
+ "intro": "The excavators broke the seal on a tomb that appears on no dynasty list. They have walked the empty galleries until their boots sound like one long note, and still the only voice in the place is the single inscription, written in a script that is neither the old divine hand nor anything the scribes' workshops would teach. In the archive tent the lead excavator sorts the labels and the fragments into a wooden type case, every compartment fitted to one small thing; the glass bead sits apart from the bronze ring, and nothing is ever pushed into a compartment that has another shape. The air in the tomb is cool and tastes of copper, and the rain outside makes a sound like a deck of sticks being shuffled. At dusk one excavator reads the inscription aloud to the others, very slowly, as if the dark might settle differently afterwards.",
+ "echo": "The reeds by the river were split, pressed and dried into the first paper.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "The Rosetta Problem",
+   "flavor": "Only the count of each run was kept.",
+   "blocks": [
+    {
+     "type": "nonogram",
+     "rows": [
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       2,
+       2,
+       1,
+       1,
+       2,
+       2,
+       2,
+       2,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       3,
+       1,
+       1,
+       1,
+       1,
+       1
+      ]
+     ],
+     "cols": [
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       5
+      ],
+      [],
+      [
+       4
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       4
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       5
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       5
+      ],
+      [],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       3
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ],
+     "givens": [
+      [
+       0,
+       2,
+       0
+      ],
+      [
+       3,
+       25,
+       0
+      ],
+      [
+       0,
+       25,
+       0
+      ],
+      [
+       4,
+       14,
+       0
+      ],
+      [
+       3,
+       14,
+       0
+      ],
+      [
+       0,
+       7,
+       0
+      ],
+      [
+       4,
+       10,
+       0
+      ],
+      [
+       4,
+       25,
+       0
+      ],
+      [
+       0,
+       28,
+       1
+      ],
+      [
+       0,
+       14,
+       0
+      ],
+      [
+       2,
+       24,
+       0
+      ]
+     ]
+    }
+   ],
+   "hash": "2bd8372908a6b1580583b0fed46a75b01a14943d37135cc99c12c15bfa886ac6",
+   "partials": {},
+   "hints": [
+    "The numbers describe runs of filled squares. What picture could they be drawing?"
+   ]
+  },
+  {
+   "id": 2,
+   "title": "Canopic Jars",
+   "flavor": "Only one page survived. It was the only page anyone needed. Half a turn of the wheel and you'd have it.",
+   "blocks": [
+    {
+     "type": "prose",
+     "text": "The excavators broke the seal on a tomb that appears on no dynasty list. Every chamber is empty except for a single inscription, carved in a script that is not quite hieroglyphic.",
+     "paper": true
+    },
+    {
+     "type": "list",
+     "items": [
+      "24.4",
+      "12.2",
+      "2.5",
+      "20.1"
+     ],
+     "inline": true
+    }
+   ],
+   "hash": "89528731a7407a69cdd1415e4ea17ea3c33d69c15600eb2bbe7980b2bffbf4fc",
+   "partials": {
+    "40d71cca1593859776c9dba8743cf99906e03b30085e165cdecf542c014ef7d0": "You've decoded it, but it's not finished. One more layer."
+   },
+   "hints": [
+    "The first number in each pair never goes past the number of words on the page. What does the second count? And if what you get still isn't a word, reread the flavour text."
+   ]
+  },
+  {
+   "id": 3,
+   "title": "Field Of Reeds",
+   "flavor": "Every flag on this line means something on its own. Together they mean one more thing.",
+   "blocks": [
+    {
+     "type": "flags",
+     "items": [
+      "C",
+      "L",
+      "E",
+      "O",
+      "P",
+      "A",
+      "T",
+      "R",
+      "A"
+     ]
+    }
+   ],
+   "hash": "0c46fac90dec0bd8c3116a77e88f4ff189e9b4037ae4cfa049ba1abbebc5bb4a",
+   "partials": {},
+   "hints": [
+    "Ships carry a flag for every letter of the alphabet. Do you know them?"
+   ]
+  },
+  {
+   "id": 4,
+   "title": "The Inundation",
+   "flavor": "An inventory of the stores, in order of arrival.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "calcium",
+      "scandium",
+      "calcium",
+      "hydrogen",
+      "silicon",
+      "sodium",
+      "oxygen",
+      "hydrogen",
+      "aluminium",
+      "scandium",
+      "silicon"
+     ]
+    }
+   ],
+   "hash": "9d3b471a72d7c4cd6d3d8b7479740adb5d16192a8631de7fbde6cac7d475a9ea",
+   "partials": {},
+   "hints": [
+    "Everything here has a number in a famous chemical line-up. What number does each one have?"
+   ]
+  },
+  {
+   "id": 5,
+   "title": "Weighing Of The Heart",
+   "flavor": "The navigator keeps pointing two ways at once.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "SW & W",
+      "SW & NW",
+      "S & NE",
+      "W & E",
+      "W & NW",
+      "S & SE",
+      "SW & NE",
+      "E & NW",
+      "N & W",
+      "W & SW"
+     ],
+     "inline": true
+    }
+   ],
+   "hash": "4df447636ad750053d5d2c52ae8beff03c3f35411deea4221f0d92a3b9a80fa8",
+   "partials": {},
+   "hints": [
+    "Imagine each of these as a person holding two flags out at arm's length. Sailors had an alphabet for that."
+   ]
+  },
+  {
+   "id": 6,
+   "title": "Seal Unbroken",
+   "flavor": "Five rows, five columns, and one letter nobody needed.",
+   "blocks": [
+    {
+     "type": "taps",
+     "groups": [
+      [
+       "••••",
+       "••••"
+      ],
+      [
+       "•",
+       "•••••"
+      ],
+      [
+       "•••",
+       "••"
+      ],
+      [
+       "•••",
+       "•••••"
+      ],
+      [
+       "•••",
+       "•"
+      ],
+      [
+       "•",
+       "•••••"
+      ]
+     ]
+    }
+   ],
+   "hash": "68ef962b6d245fedc3fbd695fb88d8abe2331a978923e465db18c6a94ff677f4",
+   "partials": {},
+   "hints": [
+    "Always two numbers, never more than five. How would two prisoners spell through a wall with a 5×5 grid?"
+   ]
+  },
+  {
+   "id": 7,
+   "title": "Curse Of The Tomb",
+   "flavor": "Everything fell straight down, and landed in the right column.",
+   "blocks": [
+    {
+     "type": "dropquote",
+     "cols": [
+      "DERS",
+      "FHO",
+      "ACFNO",
+      "AGLOU",
+      "LLNR",
+      "DGHO",
+      "AEIP",
+      "INNTT",
+      "CDHT",
+      "IOST",
+      "HS",
+      "EPT",
+      "HLN",
+      "EEOW",
+      "AOT",
+      "ERSW"
+     ],
+     "mask": [
+      "......#....#....",
+      "#....#....#...#.",
+      "....#.....#.....",
+      ".#......#...#...",
+      ".#.......#######"
+     ]
+    }
+   ],
+   "hash": "79a430e633ba3bf92d0233d27a5de08dcbfddb842185c8ce6cc96909166d2d82",
+   "partials": {},
+   "hints": [
+    "Black squares are spaces. Which two- and three-letter words fit, using only the letters each column allows?"
+   ]
+  }
+ ],
+ "meta": {
+  "title": "Meta: Valley Of The Kings",
+  "flavor": "Pigeonholes, each cut to fit one thing only.",
+  "blocks": [
+   {
+    "type": "fitgrid",
+    "rows": [
+     {
+      "len": 6,
+      "shade": 3
+     },
+     {
+      "len": 9,
+      "shade": 8
+     },
+     {
+      "len": 7,
+      "shade": 4
+     },
+     {
+      "len": 5,
+      "shade": 4
+     },
+     {
+      "len": 10,
+      "shade": 3
+     },
+     {
+      "len": 11,
+      "shade": 1
+     },
+     {
+      "len": 4,
+      "shade": 3
+     }
+    ]
+   }
+  ],
+  "length": 7,
+  "hash": "5eb2ff0de4740258c1d1e9ca2b84267964145b76fa6e4275018e221e638ca82e",
+  "hints": [
+   "The grid's rows are all different lengths. So are your answers."
+  ]
+ },
+ "described": true
+}

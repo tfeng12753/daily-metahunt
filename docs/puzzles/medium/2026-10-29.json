@@ -1,0 +1,226 @@
+{
+ "date": "2026-10-29",
+ "difficulty": "medium",
+ "salt": "2026-10-29/medium",
+ "number": 33,
+ "round": "Valley Of The Kings",
+ "intro": "The excavators broke the seal on a tomb that appears on no dynasty list. Every chamber is empty except for a single inscription, carved in a script that is not quite hieroglyphic, and in each recess beside it a small clay token rests on a stone ledge, its face stamped with a single sign. One of the diggers, who keeps the season's accounts, has begun copying the signs into a ledger, and the ink is still damp where she notes that every token bears two marks: the mark of its chamber, and a second mark that grows larger as she moves deeper into the rock.",
+ "echo": "A single needle of granite; London, Paris and New York each carried one home.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "False Door",
+   "flavor": "Stopped hands, raised arms. It was written down last letter first.",
+   "blocks": [
+    {
+     "type": "clocks",
+     "items": [
+      [
+       1,
+       4
+      ],
+      [
+       1,
+       5
+      ],
+      [
+       7,
+       5
+      ],
+      [
+       3,
+       5
+      ]
+     ]
+    }
+   ],
+   "hash": "ad537ce760c77565328761a733b49edab29736790ed1d23ce848d56b18006ecd",
+   "partials": {
+    "0b653e36ae9c795b4eff34beae6bd20cb9ee18f9bb8e9706a2be6d1e7e6ccd27": "You've decoded it, but it's not finished. One more layer."
+   },
+   "hints": [
+    "Imagine each of these as a person holding two flags out at arm's length. Sailors had an alphabet for that. And if what you get still isn't a word, reread the flavour text.",
+    "Flag semaphore: the two hands are the two arms, and each pair of angles is a letter. Then one more layer: Read what you get backwards."
+   ],
+   "length": 4
+  },
+  {
+   "id": 2,
+   "title": "Field Of Reeds",
+   "flavor": "Thumbs, patience, and no predictive text.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "55",
+      "2",
+      "777",
+      "66",
+      "2",
+      "55"
+     ],
+     "inline": true,
+     "variant": "keys"
+    }
+   ],
+   "hash": "e69b4080e07700c8e74249f9762f297bcbefb555200c026192a09d8266e69708",
+   "partials": {},
+   "hints": [
+    "Two frequencies at once is the sound of a phone key being pressed. What letters did those keys carry?",
+    "Old phone keypads: find each key, then press it the number of times shown to move along its letters."
+   ],
+   "length": 6
+  },
+  {
+   "id": 3,
+   "title": "Weighing Of The Heart",
+   "flavor": "Each column remembers what it held, but not in what order.",
+   "blocks": [
+    {
+     "type": "dropquote",
+     "cols": [
+      "CNOTW",
+      "AHLU",
+      "AABDR",
+      "IRT",
+      "IOSS",
+      "EIRT",
+      "DHN",
+      "EGS",
+      "ELW",
+      "ACCE",
+      "ORS",
+      "EUW",
+      "NORT",
+      "IORS",
+      "DET",
+      "BR",
+      "AGU"
+     ],
+     "mask": [
+      "....#...#.......#",
+      ".......#...#...#.",
+      "...#..#.......#..",
+      ".#.#......#....#.",
+      ".....############"
+     ]
+    }
+   ],
+   "hash": "d1734976b37116f6b6af20e2ecaca91214b16e003d43f9e2a14b1dcba0acbace",
+   "partials": {},
+   "hints": [
+    "Black squares are spaces. Which two- and three-letter words fit, using only the letters each column allows?",
+    "Each column's letters drop into that column of the grid; cross them off as you place them. The sentence tells you what to submit."
+   ],
+   "length": 6
+  },
+  {
+   "id": 4,
+   "title": "The Rosetta Problem",
+   "flavor": "Pairs of numbers pencilled in the margin. Start from the end; that's where it started.",
+   "blocks": [
+    {
+     "type": "prose",
+     "text": "The excavators broke the seal on a tomb that appears on no dynasty list. Every chamber is empty except for a single inscription, carved in a script that is not quite hieroglyphic.",
+     "paper": true
+    },
+    {
+     "type": "list",
+     "items": [
+      "22.1",
+      "14.2",
+      "3.1",
+      "23.9"
+     ],
+     "inline": true
+    }
+   ],
+   "hash": "d777718ec01f27c71fd0c6daa393625b321c49c23a4c3bf4eb6c97299012e9d3",
+   "partials": {
+    "f828151241e1484917a37c445032a6b0ee2e69b673d00688a44798f5654847e0": "You've decoded it, but it's not finished. One more layer."
+   },
+   "hints": [
+    "The first number in each pair never goes past the number of words on the page. What does the second count? And if what you get still isn't a word, reread the flavour text.",
+    "The first number finds a word on the page; the second finds a letter in it. Then one more layer: Read what you get backwards."
+   ],
+   "length": 4
+  },
+  {
+   "id": 5,
+   "title": "Hall Of Records",
+   "flavor": "It never travels in a straight line, and neither does the truth.",
+   "blocks": [
+    {
+     "type": "board",
+     "rows": [
+      "HXNFEUVQ",
+      "IWLPWRAC",
+      "JBJUTOLZ",
+      "XCRZTFAP",
+      "TOMQVEWD",
+      "EDQAUKHB",
+      "ESODYWPV",
+      "GSXJUPAZ"
+     ]
+    },
+    {
+     "type": "prose",
+     "text": "The knight sets out from a7: Nb5 Nc7 Ne8 Nf6 Nh5 Ng7 Ne6 Nc5 Nd3."
+    }
+   ],
+   "hash": "ceb11b6702c3ef70114a566cd0ae5d5f1baf740dd0f9d4ace7fa6768fb98ae96",
+   "partials": {},
+   "hints": [
+    "Those are chess moves. Which squares does the piece land on, and what's written there?",
+    "Start on the given square, play each move, and read the letter on every square it lands on."
+   ],
+   "length": 9
+  },
+  {
+   "id": 6,
+   "title": "Canopic Jars",
+   "flavor": "Up and down, up and down, and not a single space left.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "WDYAW TWEDP NVIYO NOELO EOMYO WIEON HWRTM LADOE UELOT TEETN LNUNR DTOEE MQTNH XE",
+     "wide": true,
+     "rails": 3
+    }
+   ],
+   "hash": "a2c2faefb2d551f22fa9194de97ea83e79b710db3b8779c7cb907757b1489085",
+   "partials": {},
+   "hints": [
+    "All the right letters are here, just out of order. Could they have been written along a path that goes up and down?",
+    "Rail fence: written in a zigzag over a few rows, then copied out row by row. Try two to five rows."
+   ],
+   "length": 6
+  }
+ ],
+ "meta": {
+  "title": "Meta: Valley Of The Kings",
+  "flavor": "Tonight's seating chart.",
+  "blocks": [
+   {
+    "type": "list",
+    "items": [
+     "Row 5, seat 4",
+     "Row 3, seat 4",
+     "Row 1, seat 4",
+     "Row 6, seat 5",
+     "Row 4, seat 1",
+     "Row 4, seat 4",
+     "Row 2, seat 1"
+    ],
+    "ordered": true
+   }
+  ],
+  "length": 7,
+  "hash": "a0295432ddf496d32a3f4361294aca54df286db31374f36ef9ad1cfdb5dd33b4",
+  "hints": [
+   "Every entry has two numbers. What in this round is numbered, and what could the second number count?",
+   "The first number picks a puzzle; the second picks a letter inside its answer."
+  ]
+ },
+ "described": true
+}

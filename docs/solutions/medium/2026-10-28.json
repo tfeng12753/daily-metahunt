@@ -1,0 +1,73 @@
+{
+ "date": "2026-10-28",
+ "number": 32,
+ "difficulty": "medium",
+ "final": "ODYSSEY",
+ "metaType": "fitin",
+ "explain": "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Laurel Wreath",
+   "answer": "PERSEPHONE",
+   "mechanism": "Number trivia",
+   "transform": null,
+   "encoded": "PERSEPHONE",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Pandora's Jar",
+   "answer": "DIONYSUS",
+   "mechanism": "Symbol cryptogram",
+   "transform": null,
+   "encoded": "DIONYSUS",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Nothing In Excess",
+   "answer": "TROY",
+   "mechanism": "Knight's path",
+   "transform": null,
+   "encoded": "TROY",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Elysian Fields",
+   "answer": "NECTAR",
+   "mechanism": "Seating plan (logic)",
+   "transform": null,
+   "encoded": "NECTAR",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Ambrosia",
+   "answer": "DEMETER",
+   "mechanism": "Maritime signal flags",
+   "transform": null,
+   "encoded": "DEMETER",
+   "mutated": null
+  },
+  {
+   "id": 6,
+   "title": "Apple Of Discord",
+   "answer": "NARCISSUS",
+   "mechanism": "Hex colour ASCII",
+   "transform": null,
+   "encoded": "NARCISSUS",
+   "mutated": null
+  },
+  {
+   "id": 7,
+   "title": "Tartarus",
+   "answer": "THUNDERBOLT",
+   "mechanism": "Missing letters",
+   "transform": null,
+   "encoded": "THUNDERBOLT",
+   "mutated": null
+  }
+ ]
+}
