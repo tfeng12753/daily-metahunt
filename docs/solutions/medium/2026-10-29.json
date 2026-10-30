@@ -1,0 +1,64 @@
+{
+ "date": "2026-10-29",
+ "number": 33,
+ "difficulty": "medium",
+ "final": "OBELISK",
+ "metaType": "logbook",
+ "explain": "Each entry is (puzzle number, letter number): index into that puzzle's answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "False Door",
+   "answer": "NILE",
+   "mechanism": "Semaphore clocks",
+   "transform": "Reversal",
+   "encoded": "ELIN",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Field Of Reeds",
+   "answer": "KARNAK",
+   "mechanism": "Phone multi-tap",
+   "transform": null,
+   "encoded": "KARNAK",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Weighing Of The Heart",
+   "answer": "ANUBIS",
+   "mechanism": "Drop quote",
+   "transform": null,
+   "encoded": "ANUBIS",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "The Rosetta Problem",
+   "answer": "IBIS",
+   "mechanism": "Book cipher",
+   "transform": "Reversal",
+   "encoded": "SIBI",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Hall Of Records",
+   "answer": "CLEOPATRA",
+   "mechanism": "Knight's path",
+   "transform": null,
+   "encoded": "CLEOPATRA",
+   "mutated": null
+  },
+  {
+   "id": 6,
+   "title": "Canopic Jars",
+   "answer": "TEMPLE",
+   "mechanism": "Rail fence (cluephrase)",
+   "transform": null,
+   "encoded": "TEMPLE",
+   "mutated": null
+  }
+ ]
+}

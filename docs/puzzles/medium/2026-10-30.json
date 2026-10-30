@@ -1,0 +1,609 @@
+{
+ "date": "2026-10-30",
+ "difficulty": "medium",
+ "salt": "2026-10-30/medium",
+ "number": 34,
+ "round": "Seismograph",
+ "intro": "The needle on the seismograph has started drawing letters, and the volcanologists have taped the paper to the wall in six long strips, each one labelled with the name of the tremor that caused it. Beneath the machine, in a drawer the first keeper of the observatory filled, there is a ledger kept since the building was new: every entry is two numbers, one in the left margin and one in the body of the line, and no one has ever written a word beside them. The chief observer checks it each bell, more from habit than hope, and the pencil is still sharp. The mountain will finish its sentence by midnight, and the ledger awaits its next page.",
+ "echo": "The damage spreads out in rings from a single point on the surface.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Aftershock",
+   "flavor": "Fill the gaps. Start from the end; that's where it started.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "BASA_T",
+      "DI_MOND",
+      "C_ATER",
+      "F_LDSPAR",
+      "GRA_ITE",
+      "GNE_SS",
+      "_OLTEN"
+     ],
+     "ordered": true,
+     "mono": true
+    }
+   ],
+   "hash": "3f98ca6cbd9541b9d0a34f2ecb3994dab5ca310b811263919e784d1d14df33c6",
+   "partials": {
+    "322a9503c78f53dfdbc1db82a0294a6ab135762aef0a5f87a74d32880fd03747": "You've decoded it, but it's not finished. One more layer."
+   },
+   "hints": [
+    "Every gap takes exactly one letter. Is there a pattern in what you filled in? And if what you get still isn't a word, reread the flavour text.",
+    "Read the letters you supplied, in order. Then one more layer: Read what you get backwards."
+   ],
+   "length": 7
+  },
+  {
+   "id": 2,
+   "title": "Subduction",
+   "flavor": "No duplicates anywhere.",
+   "blocks": [
+    {
+     "type": "sudoku",
+     "size": 9,
+     "rows": [
+      "..I.....T",
+      "M...N.IQK",
+      "...Q..EM.",
+      "K.N....T.",
+      ".E.......",
+      "IL.N..M.Q",
+      "N...L....",
+      ".M...T...",
+      "..E....K."
+     ],
+     "alphabet": "AEIKLMNQT",
+     "marks": [
+      [
+       8,
+       3
+      ],
+      [
+       5,
+       7
+      ],
+      [
+       7,
+       8
+      ],
+      [
+       4,
+       3
+      ],
+      [
+       2,
+       0
+      ],
+      [
+       5,
+       4
+      ]
+     ]
+    }
+   ],
+   "hash": "cf8266f7d5723b1d3561a9ed81c806ed4c94e6b4aa1f74db364b545b4b2abe63",
+   "partials": {},
+   "hints": [
+    "A familiar grid puzzle in unfamiliar clothes. Once it's done, are some squares more important than others?",
+    "Solve it like a sudoku, then read the numbered squares in order."
+   ],
+   "length": 6
+  },
+  {
+   "id": 3,
+   "title": "Pyroclastic",
+   "flavor": "The picture is worth exactly one word.",
+   "blocks": [
+    {
+     "type": "nonogram",
+     "rows": [
+      [
+       4,
+       5,
+       5,
+       4,
+       1,
+       1,
+       3,
+       4,
+       4,
+       3,
+       4,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       2,
+       2,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       3,
+       4,
+       1,
+       3,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       2,
+       4,
+       5,
+       4,
+       5
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       4,
+       5,
+       5,
+       4,
+       1,
+       1,
+       3,
+       4,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ]
+     ],
+     "cols": [
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       5
+      ],
+      [],
+      [
+       3
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       3
+      ],
+      [],
+      [
+       3
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       3
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       4
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       4
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       5
+      ]
+     ],
+     "givens": [
+      [
+       1,
+       0,
+       1
+      ],
+      [
+       4,
+       22,
+       0
+      ],
+      [
+       1,
+       33,
+       0
+      ],
+      [
+       0,
+       22,
+       1
+      ],
+      [
+       4,
+       33,
+       1
+      ],
+      [
+       4,
+       4,
+       0
+      ],
+      [
+       4,
+       52,
+       1
+      ]
+     ]
+    }
+   ],
+   "hash": "9fb30fd93078d7a61cb04fcaf1c2b9d761147feb6dee445dd34784dc716b548a",
+   "partials": {},
+   "hints": [
+    "The numbers describe runs of filled squares. What picture could they be drawing?",
+    "Paint by numbers. The picture is written, not drawn."
+   ],
+   "length": 11
+  },
+  {
+   "id": 4,
+   "title": "Richter",
+   "flavor": "Every answer is small, and none is bigger than it needs to be.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "Lines in a villanelle",
+      "Sides of a pentagon",
+      "Strings on a violin",
+      "Players fielding for a baseball team",
+      "Cards in one suit of a standard deck",
+      "Sides of a pentagon",
+      "Days in a fortnight",
+      "Things in a score"
+     ],
+     "ordered": true,
+     "tray": "letter"
+    }
+   ],
+   "hash": "7c3c4b51602afacfec94e6ebda68581f927d0cc4682ca383f5506d67fc117143",
+   "partials": {},
+   "hints": [
+    "Every line has a number for an answer. Could those numbers be counting through something else?",
+    "They're all between 1 and 26: A = 1, B = 2…"
+   ],
+   "length": 8
+  },
+  {
+   "id": 5,
+   "title": "Tephra",
+   "flavor": "Numbers that nothing divides, written the old way.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "LXVII",
+      "V",
+      "XIX",
+      "XXIII",
+      "LXVII",
+      "LXXI"
+     ],
+     "inline": true
+    }
+   ],
+   "hash": "704e9b1701756296e75b893de6234618e8047572011f7c4d1ec8813ae79074fc",
+   "partials": {},
+   "hints": [
+    "Read the numerals. They're all prime. Is there a natural way to number the primes?",
+    "Find each prime's place in the list of primes (2 is 1st, 3 is 2nd…), then count through the alphabet."
+   ],
+   "length": 6
+  },
+  {
+   "id": 6,
+   "title": "Plate Boundary",
+   "flavor": "One table, one arrangement that offends nobody, and a toll that rises seat by seat.",
+   "blocks": [
+    {
+     "type": "seating",
+     "seats": 6,
+     "names": [
+      "Quentin",
+      "Lorenzo",
+      "Ivanka",
+      "Aurelio",
+      "Yvette",
+      "Alfred"
+     ],
+     "clues": [
+      "Alfred sits somewhere to the left of Lorenzo.",
+      "Exactly 2 people sit between Ivanka and Lorenzo.",
+      "Ivanka sits somewhere between Aurelio and Yvette.",
+      "Ivanka sits somewhere between Aurelio and Lorenzo.",
+      "Exactly 3 people sit between Quentin and Yvette."
+     ],
+     "logic": [
+      [
+       "left_of",
+       "ALFRED",
+       "LORENZO"
+      ],
+      [
+       "gap",
+       "IVANKA",
+       "LORENZO",
+       2
+      ],
+      [
+       "between",
+       "AURELIO",
+       "IVANKA",
+       "YVETTE"
+      ],
+      [
+       "between",
+       "AURELIO",
+       "IVANKA",
+       "LORENZO"
+      ],
+      [
+       "gap",
+       "QUENTIN",
+       "YVETTE",
+       3
+      ]
+     ]
+    }
+   ],
+   "hash": "068a53c731453a30a9ace828070fe49e4b6b1b869ca88804bea3d0bfd0856fac",
+   "partials": {},
+   "hints": [
+    "Only one arrangement satisfies every clue; start from whoever has an end seat or a fixed neighbour. Once they're seated, why might the seat numbers matter?",
+    "Solve the seating, then take the k-th letter of the name in seat k, left to right."
+   ],
+   "length": 6
+  }
+ ],
+ "meta": {
+  "title": "Meta: Seismograph",
+  "flavor": "The watch-keeper wrote down nothing but the day and the bell.",
+  "blocks": [
+   {
+    "type": "list",
+    "items": [
+     "Day 2, 6 bells",
+     "Day 3, 10 bells",
+     "Day 4, 4 bells",
+     "Day 5, 2 bells",
+     "Day 1, 4 bells",
+     "Day 2, 3 bells",
+     "Day 4, 8 bells",
+     "Day 6, 4 bells",
+     "Day 3, 2 bells"
+    ],
+    "ordered": true
+   }
+  ],
+  "length": 9,
+  "hash": "6ed23162fb2a35e464f75b1bba3e28793b1da4388caee8a8dbf3f6fef7aa2ff9",
+  "hints": [
+   "Every entry has two numbers. What in this round is numbered, and what could the second number count?",
+   "The first number picks a puzzle; the second picks a letter inside its answer."
+  ]
+ },
+ "described": true
+}

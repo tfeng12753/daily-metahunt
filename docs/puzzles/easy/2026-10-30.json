@@ -1,0 +1,334 @@
+{
+ "date": "2026-10-30",
+ "difficulty": "easy",
+ "salt": "2026-10-30/easy",
+ "number": 34,
+ "round": "Seismograph",
+ "intro": "The needle on the seismograph has started drawing letters. The observatory has twelve hours before the mountain says whatever it is trying to say. In the old pressroom, the duty volcanologist treats each line of the mountain's message like a piece of type, carrying it to the wooden case where every compartment has been cut for one exact length of line; a line is lowered in, and if it belongs, it lies flush, with no gap at either end. The case has a few compartments lined with black felt, worn thin in places, and those are the compartments the volcanologist counts on when the case is shut and the message has to be read back. Around the room, the other volcanologists are only pretending to look at the seismographs.",
+ "echo": "When the mountain empties itself, the summit falls in and leaves a cauldron.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Lahar",
+   "flavor": "Fences and corners. Some of them have an animal inside.",
+   "blocks": [
+    {
+     "type": "pigpen",
+     "items": [
+      {
+       "g": "hash",
+       "p": 0,
+       "dot": false
+      },
+      {
+       "g": "x",
+       "p": 0,
+       "dot": false
+      },
+      {
+       "g": "hash",
+       "p": 7,
+       "dot": false
+      }
+     ]
+    }
+   ],
+   "hash": "a9869062d8888acd7aeb87409496e5140d2cf6c4af4061396601fe5a5fdc5c62",
+   "partials": {},
+   "hints": [
+    "Pigpen (Freemason's) cipher: A–I in a # grid, J–R the same with dots, S–V in an X, W–Z the X with dots.",
+    "To check you're on track: the answer begins with A."
+   ],
+   "technique": "Pigpen cipher",
+   "length": 3
+  },
+  {
+   "id": 2,
+   "title": "Aa",
+   "flavor": "The labels at the observatory have faded. Each one lost exactly one letter.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "_RYSTAL",
+      "QUA_TZ",
+      "TS_NAMI",
+      "GEY_ER",
+      "BASAL_"
+     ],
+     "ordered": true,
+     "mono": true
+    }
+   ],
+   "hash": "a50407f360554dae8db774cecc0b3e24daf40a27b80647405c66bf3fbdda6f0f",
+   "partials": {},
+   "hints": [
+    "Each theme word is missing one letter. The missing letters, in order, spell the answer.",
+    "To check you're on track: the answer begins with C."
+   ],
+   "technique": "Missing letters",
+   "length": 5
+  },
+  {
+   "id": 3,
+   "title": "Pahoehoe",
+   "flavor": "Every word at the observatory went through the blender, but each one came out whole.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "FI",
+      "UOY",
+      "NCA",
+      "AEDR",
+      "ITSH",
+      "TNSEEENC",
+      "ETNH",
+      "OYU",
+      "VHEA",
+      "YEAALRD",
+      "FDUON",
+      "HET",
+      "SWEARN",
+      "WIHHC",
+      "SI",
+      "SPARDELF"
+     ],
+     "inline": true,
+     "tray": "word"
+    }
+   ],
+   "hash": "f4c496b27bfe7bcfd3aff9ea2616cb743c45350a7204ceb53722bd4a8977c6b5",
+   "partials": {},
+   "hints": [
+    "Each word of a sentence has had its letters shuffled. Unscramble them; the sentence tells you the answer.",
+    "To check you're on track: the answer begins with F."
+   ],
+   "technique": "Scrambled sentence",
+   "length": 8
+  },
+  {
+   "id": 4,
+   "title": "Harmonic Tremor",
+   "flavor": "Every flag on this line has a meaning on its own. Together, they have one more.",
+   "blocks": [
+    {
+     "type": "flags",
+     "items": [
+      "C",
+      "R",
+      "A",
+      "T",
+      "E",
+      "R"
+     ]
+    }
+   ],
+   "hash": "a35633c6be3b1a47e44c01f40240a26fe5a1b8c8c6cba90fa1499e8c655eb453",
+   "partials": {},
+   "hints": [
+    "International maritime signal flags, one letter each.",
+    "To check you're on track: the answer begins with C."
+   ],
+   "technique": "Maritime signal flags",
+   "length": 6
+  },
+  {
+   "id": 5,
+   "title": "Aftershock",
+   "flavor": "Every row at the observatory holds one of everything. So does every column, and every box. Then read the numbered squares.",
+   "blocks": [
+    {
+     "type": "sudoku",
+     "size": 9,
+     "rows": [
+      "NEI.R.AV.",
+      "MVRE....T",
+      "GATV...E.",
+      "T.AR.MV.E",
+      ".RVA...T.",
+      ".N.......",
+      "....A....",
+      "VMEI.R...",
+      "AIG.E.TMR"
+     ],
+     "alphabet": "AEGIMNRTV",
+     "marks": [
+      [
+       6,
+       5
+      ],
+      [
+       2,
+       6
+      ],
+      [
+       1,
+       5
+      ],
+      [
+       4,
+       5
+      ],
+      [
+       5,
+       0
+      ],
+      [
+       7,
+       4
+      ],
+      [
+       4,
+       0
+      ]
+     ]
+    }
+   ],
+   "hash": "c3a30ea2df188765d6f27130014edea08ed31c3ba818e230aa61d1394f8fe96f",
+   "partials": {},
+   "hints": [
+    "Sudoku using the letters shown instead of digits (each row, column and box uses each letter once). Read the numbered squares in order.",
+    "To check you're on track: the answer begins with G."
+   ],
+   "technique": "Letter sudoku",
+   "length": 7
+  },
+  {
+   "id": 6,
+   "title": "Pyroclastic",
+   "flavor": "Start in a corner, follow the edge, and keep turning inward. Which corner, and which way, is up to you to find.",
+   "blocks": [
+    {
+     "type": "lettergrid",
+     "rows": [
+      "EDWASNOTGW",
+      "IUTASINGOH",
+      "RBAVA··LLA",
+      "RSLDROWEDT",
+      "ATERCESROT",
+      "CREIRUOCEH"
+     ]
+    }
+   ],
+   "hash": "0b962ea2ceee9fee864b891f88d6a95aabcfe1cfde2620808d9220db5333ae3f",
+   "partials": {},
+   "hints": [
+    "A sentence was written into the grid along a spiral, starting in one corner and winding inward. Find the corner and the direction, read the sentence (dots are padding), and it tells you the answer.",
+    "To check you're on track: the answer begins with L."
+   ],
+   "technique": "Spiral route",
+   "length": 4
+  },
+  {
+   "id": 7,
+   "title": "Plate Boundary",
+   "flavor": "Knock, knock. Pause. Knock knock knock.",
+   "blocks": [
+    {
+     "type": "taps",
+     "groups": [
+      [
+       "••••",
+       "•••"
+      ],
+      [
+       "•",
+       "•••••"
+      ],
+      [
+       "••",
+       "••••"
+      ],
+      [
+       "••••",
+       "•••"
+      ],
+      [
+       "•••",
+       "••"
+      ],
+      [
+       "•••",
+       "••••"
+      ],
+      [
+       "••",
+       "••"
+      ],
+      [
+       "••••",
+       "••"
+      ],
+      [
+       "•",
+       "•"
+      ],
+      [
+       "•••",
+       "•••••"
+      ],
+      [
+       "••",
+       "•••"
+      ]
+     ]
+    }
+   ],
+   "hash": "1b63b1d89931696fb30527e98ae35697bfc55fd3caecb4c75b1ed36c34ba82c8",
+   "partials": {},
+   "hints": [
+    "Tap code: first burst = row, second = column, in a 5×5 grid without K.",
+    "To check you're on track: the answer begins with S."
+   ],
+   "technique": "Tap code",
+   "length": 11
+  }
+ ],
+ "meta": {
+  "title": "Meta: Seismograph",
+  "flavor": "Everything at the observatory has a place, and every place is exactly the right size.",
+  "blocks": [
+   {
+    "type": "fitgrid",
+    "rows": [
+     {
+      "len": 5,
+      "shade": 0
+     },
+     {
+      "len": 6,
+      "shade": 2
+     },
+     {
+      "len": 4,
+      "shade": 0
+     },
+     {
+      "len": 8,
+      "shade": 3
+     },
+     {
+      "len": 7,
+      "shade": 6
+     },
+     {
+      "len": 11,
+      "shade": 7
+     },
+     {
+      "len": 3,
+      "shade": 0
+     }
+    ]
+   }
+  ],
+  "length": 7,
+  "hash": "3bffc7dc883d7804ea9ae76cafdf258a931859ca9c53afb17194b303c3cfab1b",
+  "hints": [
+   "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+   "To check you're on track: the final answer begins with C."
+  ]
+ },
+ "described": true
+}

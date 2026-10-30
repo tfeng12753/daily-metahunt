@@ -1,0 +1,197 @@
+{
+ "date": "2026-10-30",
+ "difficulty": "hard",
+ "salt": "2026-10-30",
+ "number": 34,
+ "round": "Seismograph",
+ "intro": "At the high observatory, the needle has stopped tracing tremors and has begun to write. Outside, the slope is sweating in the thin air, and the volcanologists move among the glass cabinets with the quiet of people who have learned not to startle the mountain. The duty book by the stove still gets its usual entries: each mark is set down as a day and a bell, nothing more, as if the mountain only ever speaks on the edge between one watch and the next. Someone has laid out the five printouts on the long table—Pyroclastic, Subduction, Pahoehoe, Richter, Lahar—while the barometer hangs itself in slow, patient drops. No one has said the word aloud, but the coffee is already gone, and the ridge is holding its breath.",
+ "echo": "Pliny's uncle sailed toward it for a better look, and did not come back.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Pyroclastic",
+   "flavor": "An inventory, tangled.",
+   "blocks": [
+    {
+     "type": "caption",
+     "text": "Somewhere in here: things to do with the observatory."
+    },
+    {
+     "type": "board",
+     "rows": [
+      "MARBLESE",
+      "ISPLATES",
+      "PUMICECS",
+      "LLMOTHGR",
+      "AFSSIENG",
+      "VUUSCONE",
+      "ARTNEVAP",
+      "CHRETARC"
+     ],
+     "plain": true,
+     "words": [
+      "CONE",
+      "CRATER",
+      "CRUST",
+      "GNEISS",
+      "LAVA",
+      "MARBLE",
+      "PLATE",
+      "PUMICE",
+      "SCHIST",
+      "SULFUR",
+      "VENT"
+     ]
+    }
+   ],
+   "hash": "39b38d4b432d32a2cc0ad7366c1f114b5ce91b1df8531410b33ebf19dfc0d3a2",
+   "partials": {},
+   "hints": [
+    "Once every theme word is found, is anything left unclaimed? Read it in order.",
+    "The hidden words are: CONE, CRATER, CRUST, GNEISS, LAVA, MARBLE, PLATE, PUMICE, SCHIST, SULFUR, VENT."
+   ]
+  },
+  {
+   "id": 2,
+   "title": "Subduction",
+   "flavor": "Nothing is missing. Nothing is where it was.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "TLSA",
+      "HTE",
+      "BEROFE",
+      "EHT",
+      "TPEDY",
+      "ERROTAOP",
+      "NILE",
+      "WSA",
+      "DDAE",
+      "ETH",
+      "TNEW",
+      "GNHIT",
+      "EENTMSILO"
+     ],
+     "inline": true,
+     "tray": "word"
+    }
+   ],
+   "hash": "2f602ecba295a146a13e8f3af0ee9d690bd60dc0c7f0388b34354b6bfee267c8",
+   "partials": {},
+   "hints": [
+    "Each word is complete but shuffled. Start with the shortest ones: does a sentence appear?"
+   ]
+  },
+  {
+   "id": 3,
+   "title": "Pahoehoe",
+   "flavor": "A negative, hung upside down, of something that only reads in threes. Half a turn of the wheel and you'd have it.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "5′–CTCGCGAAACAGGCGGGT–3′"
+    }
+   ],
+   "hash": "4236663a822d06f8598bdc04c83cd7fca1242b9508396e74cd14e2a155f5851a",
+   "partials": {
+    "d9377af12185c66fc70ccdfcbdcd7be57aaaeeee95e4a792b9116ad10f67e671": "You've decoded it, but it's not finished. One more layer."
+   },
+   "hints": [
+    "This is DNA, but not the strand a cell would read. What is its partner, and which end does reading start from? And if what you get still isn't a word, reread the flavour text."
+   ]
+  },
+  {
+   "id": 4,
+   "title": "Richter",
+   "flavor": "Everyone has a place. Everyone pays for it in their own name.",
+   "blocks": [
+    {
+     "type": "seating",
+     "seats": 5,
+     "names": [
+      "Ezekiel",
+      "Eugene",
+      "Ivanka",
+      "Juliet",
+      "Quentin"
+     ],
+     "clues": [
+      "Ezekiel and Ivanka sit side by side.",
+      "Ivanka sits immediately to the right of Eugene.",
+      "Quentin has an end seat.",
+      "Eugene and Quentin sit side by side."
+     ],
+     "logic": [
+      [
+       "beside",
+       "EZEKIEL",
+       "IVANKA"
+      ],
+      [
+       "right_of",
+       "IVANKA",
+       "EUGENE"
+      ],
+      [
+       "end",
+       "QUENTIN"
+      ],
+      [
+       "beside",
+       "EUGENE",
+       "QUENTIN"
+      ]
+     ]
+    }
+   ],
+   "hash": "b7d0c22a2361e4d04e0d210d681b1455eba78fe1b3c2849e89d3de4831554af1",
+   "partials": {},
+   "hints": [
+    "Only one arrangement satisfies every clue; start from whoever has an end seat or a fixed neighbour. Once they're seated, why might the seat numbers matter?"
+   ]
+  },
+  {
+   "id": 5,
+   "title": "Lahar",
+   "flavor": "The machine keeps its diary in your cells' alphabet, if your cells could only say yes or no.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "011011 001101 111101 000111"
+    }
+   ],
+   "hash": "12f8929a9f6582bd9d1360be285a7616fda41b1e09390def818398937fa255b6",
+   "partials": {},
+   "hints": [
+    "How many different things can a pair of bits say? Four is a very biological number."
+   ]
+  }
+ ],
+ "meta": {
+  "title": "Meta: Seismograph",
+  "flavor": "Tonight's seating chart.",
+  "blocks": [
+   {
+    "type": "list",
+    "items": [
+     "Row 3, seat 5",
+     "Row 1, seat 8",
+     "Row 4, seat 2",
+     "Row 1, seat 10",
+     "Row 5, seat 4",
+     "Row 2, seat 2",
+     "Row 2, seat 7",
+     "Row 2, seat 8"
+    ],
+    "ordered": true
+   }
+  ],
+  "length": 8,
+  "hash": "ada74a4bd6bac11f5689155af64d3ea632eef90e80788398b429f3d29262b825",
+  "hints": [
+   "Every entry has two numbers. What in this round is numbered, and what could the second number count?"
+  ]
+ },
+ "described": true
+}

@@ -1,0 +1,73 @@
+{
+ "date": "2026-10-29",
+ "number": 33,
+ "difficulty": "hard",
+ "final": "PAPYRUS",
+ "metaType": "fitin",
+ "explain": "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "The Rosetta Problem",
+   "answer": "MUMMY",
+   "mechanism": "Nonogram",
+   "transform": null,
+   "encoded": "MUMMY",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Canopic Jars",
+   "answer": "IBIS",
+   "mechanism": "Book cipher",
+   "transform": "ROT13",
+   "encoded": "VOVF",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Field Of Reeds",
+   "answer": "CLEOPATRA",
+   "mechanism": "Maritime signal flags",
+   "transform": null,
+   "encoded": "CLEOPATRA",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "The Inundation",
+   "answer": "TUTANKHAMUN",
+   "mechanism": "Atomic numbers",
+   "transform": null,
+   "encoded": "TUTANKHAMUN",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Weighing Of The Heart",
+   "answer": "HIEROGLYPH",
+   "mechanism": "Semaphore (compass bearings)",
+   "transform": null,
+   "encoded": "HIEROGLYPH",
+   "mutated": null
+  },
+  {
+   "id": 6,
+   "title": "Seal Unbroken",
+   "answer": "TEMPLE",
+   "mechanism": "Tap code",
+   "transform": null,
+   "encoded": "TEMPLE",
+   "mutated": null
+  },
+  {
+   "id": 7,
+   "title": "Curse Of The Tomb",
+   "answer": "CANOPIC",
+   "mechanism": "Drop quote",
+   "transform": null,
+   "encoded": "CANOPIC",
+   "mutated": null
+  }
+ ]
+}

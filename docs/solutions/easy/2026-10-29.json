@@ -1,0 +1,64 @@
+{
+ "date": "2026-10-29",
+ "number": 33,
+ "difficulty": "easy",
+ "final": "SPHINX",
+ "metaType": "fitin",
+ "explain": "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Field Of Reeds",
+   "answer": "LUXOR",
+   "mechanism": "Letter sudoku",
+   "transform": null,
+   "encoded": "LUXOR",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Cartouche",
+   "answer": "ANKH",
+   "mechanism": "Anagrams with an extra letter",
+   "transform": null,
+   "encoded": "ANKH",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Hall Of Records",
+   "answer": "RAMSES",
+   "mechanism": "Seating plan (logic)",
+   "transform": null,
+   "encoded": "RAMSES",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Canopic Jars",
+   "answer": "SARCOPHAGUS",
+   "mechanism": "Nonogram",
+   "transform": null,
+   "encoded": "SARCOPHAGUS",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Solar Barque",
+   "answer": "HIEROGLYPH",
+   "mechanism": "Rail fence (cluephrase)",
+   "transform": null,
+   "encoded": "HIEROGLYPH",
+   "mutated": null
+  },
+  {
+   "id": 6,
+   "title": "The Inundation",
+   "answer": "CANOPIC",
+   "mechanism": "Spiral route",
+   "transform": null,
+   "encoded": "CANOPIC",
+   "mutated": null
+  }
+ ]
+}
