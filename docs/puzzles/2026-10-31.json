@@ -1,0 +1,562 @@
+{
+ "date": "2026-10-31",
+ "difficulty": "hard",
+ "salt": "2026-10-31",
+ "number": 35,
+ "round": "The Night Train",
+ "intro": "Somewhere between two stations that no longer exist, the night train stopped. When it started again, every ticket had been replaced with a puzzle. In the sleeper car the passengers settle as they always do: pressing their foreheads to the glass, murmuring the names of places they have left, and folding into their luggage anything the journey has given them that does not fit in a pocket. One woman keeps a tin of ink and a nib, and in the small hours she writes each new thing she finds in her berth onto a card, tucking the card away with the rest, keeping every extra thing she cannot explain. The train rocks on, and the cards grow thick in their box.",
+ "echo": "Two lines meet, and someone else decides which way you go.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Terminus Approaching",
+   "flavor": "Tidy up the inventory.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "ENVLATRN",
+      "THFRIIEG",
+      "PLEREEAS",
+      "DTMCVLIOEOO",
+      "RBTEALUTUN",
+      "ENRETDC",
+      "TRILOEB",
+      "AJGEGU"
+     ],
+     "ordered": true,
+     "mono": true
+    }
+   ],
+   "hash": "d07cb5c34452394a9ebd21748b1cbbf3cdbddb2eb80a5a5d0c0807f4a6da0273",
+   "partials": {
+    "dc7efebe417f118be5b8423ac2b9b024dac96098857e7c2dc0068b5885a1cad5": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Each jumble is almost a word from this round, but with a letter to spare. Which letter, every time?"
+   ]
+  },
+  {
+   "id": 2,
+   "title": "Platform Nine",
+   "flavor": "Every letter here is wearing someone else's coat.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "MWFF BAZW SAR NYS ZAM MICUW BAMZ UDW MAIB MDCLURFW YZB NAEW VRCWUFS AZ UA UDW ZWQU AZW",
+     "wide": true,
+     "solver": "substitution"
+    }
+   ],
+   "hash": "13f99292c0e5c7402173c174ad6f6fcba05a76256df67b0fcf138d665bc59354",
+   "partials": {
+    "2abba2182344434378588b9ab13c9bb9080ca9dea4c5e857b3418160d4b597b2": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Which short words are most common in English? Could any of them be hiding here?"
+   ]
+  },
+  {
+   "id": 3,
+   "title": "The Up Line",
+   "flavor": "Same quantities, different fingers. Unlucky for some, and the same distance either way.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "17₉",
+      "2₄",
+      "1₁₂",
+      "21₈",
+      "22₃",
+      "20₈",
+      "7₈",
+      "2₉",
+      "1₁₂",
+      "10₅"
+     ],
+     "inline": true
+    }
+   ],
+   "hash": "88ccd0f2901a401b48e2924663858541c70b892906744639d3f10f950641694f",
+   "partials": {
+    "9b025134d880f0f6cdcf3169b15aa83cab3cce01513aa79b8363ada28cd0645d": "You've decoded it, but it's not finished. One more layer.",
+    "00d0946dd2b2f0b260899a392e61b42db8120425e6e1639d2d88503084384fa8": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "The subscript is a base. Once everything is in ordinary decimal, what range are the numbers in? And if what you get still isn't a word, reread the flavour text."
+   ]
+  },
+  {
+   "id": 4,
+   "title": "Rolling Stock",
+   "flavor": "Every word ran into itself. The little numbers know where to look.",
+   "blocks": [
+    {
+     "type": "morselines",
+     "items": [
+      {
+       "code": "..-..-....--.....-",
+       "len": 7,
+       "index": 1
+      },
+      {
+       "code": "-.-.---..-.--..-....-.--.",
+       "len": 8,
+       "index": 6
+      },
+      {
+       "code": ".-..-...-..-.-..-.-.",
+       "len": 7,
+       "index": 7
+      },
+      {
+       "code": "-..-.-.-.-.-",
+       "len": 6,
+       "index": 3
+      },
+      {
+       "code": "-.-..-.-..-....---..",
+       "len": 8,
+       "index": 8
+      },
+      {
+       "code": "-....-..--.-.--.--.",
+       "len": 8,
+       "index": 6
+      },
+      {
+       "code": "-..-.-.-.-.--....-...",
+       "len": 9,
+       "index": 6
+      },
+      {
+       "code": "-.-.-....-.",
+       "len": 6,
+       "index": 3
+      }
+     ]
+    }
+   ],
+   "hash": "bfa806c42f5f0931c3ee01d1df3536ed2771e975cc177e6d4c9e19aeb22dec44",
+   "partials": {
+    "a3d7d257d656f81f644dcb8e98453a77cb6a596e30fa0b9564ac9d7e06aa193d": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Two symbols, no spaces, and a letter count. Which old code is it, and which word from this round fits each line?"
+   ]
+  },
+  {
+   "id": 5,
+   "title": "Leaves On The Line",
+   "flavor": "Rubbings from a handrail.",
+   "blocks": [
+    {
+     "type": "braille",
+     "items": [
+      "100110",
+      "100010",
+      "111100",
+      "101010",
+      "011110",
+      "011110"
+     ]
+    }
+   ],
+   "hash": "58302b0546121920751924a87d62fdda613ae2e3d441b5addb63f1cc4cee672e",
+   "partials": {
+    "6f932e000ca35097e0fde1ec9ae3f935fad38be5838ee15915216fd994c10cfd": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Write each number in binary. Six yes-or-no choices: is there an alphabet built from exactly that?"
+   ]
+  },
+  {
+   "id": 6,
+   "title": "Request Stop",
+   "flavor": "The picture is worth exactly one word.",
+   "blocks": [
+    {
+     "type": "nonogram",
+     "rows": [
+      [
+       4,
+       3,
+       4,
+       4,
+       4,
+       3,
+       4,
+       5,
+       5
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       4,
+       5,
+       3,
+       3,
+       4,
+       1,
+       1,
+       4,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1,
+       4,
+       4,
+       1,
+       3,
+       1,
+       1,
+       5,
+       1
+      ]
+     ],
+     "cols": [
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1
+      ],
+      [],
+      [
+       4
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       4
+      ],
+      [],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1
+      ],
+      [],
+      [
+       3
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       3
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ],
+     "givens": [
+      [
+       0,
+       9,
+       1
+      ],
+      [
+       0,
+       18,
+       0
+      ],
+      [
+       3,
+       31,
+       0
+      ],
+      [
+       3,
+       12,
+       0
+      ],
+      [
+       4,
+       30,
+       0
+      ],
+      [
+       3,
+       18,
+       0
+      ],
+      [
+       0,
+       12,
+       0
+      ]
+     ]
+    }
+   ],
+   "hash": "8e2b874165554d57fe89e2d3c2a4f1e91b21d1e7cc40498c3f47998cf3cbfb97",
+   "partials": {
+    "578f8692a5b092f72bc656ceb7841642ac89ae6b5ccce44f71bd59e8b020f2b7": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "The numbers describe runs of filled squares. What picture could they be drawing?"
+   ]
+  },
+  {
+   "id": 7,
+   "title": "Change Here",
+   "flavor": "Confetti, alphabetised.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "ARR",
+      "DOR",
+      "ECO",
+      "ERC",
+      "GOL",
+      "IED",
+      "ING",
+      "L",
+      "LEW",
+      "NNE",
+      "NOT",
+      "ORD",
+      "RET",
+      "SBU",
+      "SEC",
+      "TAS",
+      "TOU",
+      "TTH",
+      "URI",
+      "WAS",
+      "WHA"
+     ],
+     "inline": true,
+     "tiles": true
+    },
+    {
+     "type": "prose",
+     "text": "Word lengths: (4 3 7 7 3 3 4 2 7 3 1 6 4 7)"
+    }
+   ],
+   "hash": "c3cb3f5f7a6d583a001da380450ce3e2a417fa22639b0c17f235134849afd463",
+   "partials": {
+    "82d5b398cfe2cf55b99f3e2761845e085ec88a7a81426768ea2dd0e27e218aec": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "The strips are alphabetised, not in order. The word lengths say where the breaks fall. Which strip could start the sentence?"
+   ]
+  },
+  {
+   "id": 8,
+   "title": "Signal Failure",
+   "flavor": "Matter, counted, and then spelled.",
+   "blocks": [
+    {
+     "type": "numbers",
+     "items": [
+      86,
+      8,
+      92,
+      60,
+      67,
+      92,
+      34
+     ],
+     "tray": 2
+    }
+   ],
+   "hash": "7a68d9559383cc02e220812479187c0cd4898953e801fdc70a68d7ef249c79bd",
+   "partials": {
+    "262fe4ea7e1c575159758e983e46fde35ed4878f84e383e78d81580104e80e87": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Several of these numbers are bigger than 26, so they can't be letter positions. What else has a number that high?"
+   ]
+  }
+ ],
+ "meta": {
+  "title": "Meta: The Night Train",
+  "flavor": "Count heads at the gangway.",
+  "blocks": [],
+  "length": 8,
+  "hash": "7c35f334311d8138e40debb08df8d347d7a7f77e263f3e5bda9d76c8ea513ef3",
+  "hints": [
+   "Did every answer come out the right size the first time? Each had one letter too many. Did you keep them?"
+  ]
+ },
+ "described": true
+}

@@ -1,0 +1,73 @@
+{
+ "date": "2026-10-30",
+ "number": 34,
+ "difficulty": "easy",
+ "final": "CALDERA",
+ "metaType": "fitin",
+ "explain": "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Lahar",
+   "answer": "ASH",
+   "mechanism": "Pigpen cipher",
+   "transform": null,
+   "encoded": "ASH",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Aa",
+   "answer": "CRUST",
+   "mechanism": "Missing letters",
+   "transform": null,
+   "encoded": "CRUST",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Pahoehoe",
+   "answer": "FELDSPAR",
+   "mechanism": "Scrambled sentence",
+   "transform": null,
+   "encoded": "FELDSPAR",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Harmonic Tremor",
+   "answer": "CRATER",
+   "mechanism": "Maritime signal flags",
+   "transform": null,
+   "encoded": "CRATER",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Aftershock",
+   "answer": "GRANITE",
+   "mechanism": "Letter sudoku",
+   "transform": null,
+   "encoded": "GRANITE",
+   "mutated": null
+  },
+  {
+   "id": 6,
+   "title": "Pyroclastic",
+   "answer": "LAVA",
+   "mechanism": "Spiral route",
+   "transform": null,
+   "encoded": "LAVA",
+   "mutated": null
+  },
+  {
+   "id": 7,
+   "title": "Plate Boundary",
+   "answer": "SEISMOGRAPH",
+   "mechanism": "Tap code",
+   "transform": null,
+   "encoded": "SEISMOGRAPH",
+   "mutated": null
+  }
+ ]
+}

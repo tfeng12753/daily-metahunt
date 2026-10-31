@@ -1,0 +1,275 @@
+{
+ "date": "2026-10-31",
+ "difficulty": "easy",
+ "salt": "2026-10-31/easy",
+ "number": 35,
+ "round": "The Night Train",
+ "intro": "Somewhere between two stations that no longer exist, the night train stopped. When it started again, every ticket had been replaced with a puzzle. The sleeper car's sideboard holds a rack of brass ticket-slots of seven different lengths, each stamped with a station name that has never appeared on any map, and the passengers slide their completed puzzles into them one by one, amused to find that every puzzle finds its slot without forcing. A draught from the corridor rattles the door, and the clock above the rack has no hands.",
+ "echo": "The last car of the freight train, where the brakeman kept his stove.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Platform Nine",
+   "flavor": "Every row in the sleeper car holds one of everything. So does every column, and every box. Then read the numbered squares.",
+   "blocks": [
+    {
+     "type": "sudoku",
+     "size": 6,
+     "rows": [
+      "..X.CA",
+      ".O.X..",
+      "X.OL..",
+      ".NLC..",
+      ".X..O.",
+      ".ACNLX"
+     ],
+     "alphabet": "ACLNOX",
+     "marks": [
+      [
+       2,
+       1
+      ],
+      [
+       3,
+       5
+      ],
+      [
+       4,
+       3
+      ],
+      [
+       0,
+       1
+      ]
+     ]
+    }
+   ],
+   "hash": "7c6189500937b44e90a5c16e6ad817eba1a6b1168dd0001006a270c122b6e3e9",
+   "partials": {},
+   "hints": [
+    "Sudoku using the letters shown instead of digits (each row, column and box uses each letter once). Read the numbered squares in order.",
+    "To check you're on track: the answer begins with C."
+   ],
+   "technique": "Letter sudoku",
+   "length": 4
+  },
+  {
+   "id": 2,
+   "title": "Leaves On The Line",
+   "flavor": "Someone wrote this out in a zigzag across three lines of the ledger, then copied each line out in turn.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "EYDTS HNWAH RUTMS EIAVR GOHNE DWTAI GEODN TEODO WNFOT IPGIF RMNEO UNISL RDWYA RHASE",
+     "wide": true,
+     "rails": 3
+    }
+   ],
+   "hash": "191270476d0bdb292b888ce068bc9bdd069b15ecea8909c410d99101358951fa",
+   "partials": {},
+   "hints": [
+    "Rail-fence transposition of a sentence with the spaces removed. Try 2 to 5 rails; the sentence tells you the answer.",
+    "To check you're on track: the answer begins with F."
+   ],
+   "technique": "Rail fence (cluephrase)",
+   "length": 7
+  },
+  {
+   "id": 3,
+   "title": "Terminus Approaching",
+   "flavor": "Thumbs, patience, and no predictive text.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "7777",
+      "8",
+      "33",
+      "2",
+      "6"
+     ],
+     "inline": true,
+     "variant": "keys"
+    }
+   ],
+   "hash": "686c5c5003e29ebf8a83fb29fb2887f5be6b6f532063722faed43859864a7b0c",
+   "partials": {},
+   "hints": [
+    "Old phone multi-tap: the digit is the key, and how many times it repeats picks the letter.",
+    "To check you're on track: the answer begins with S."
+   ],
+   "technique": "Phone multi-tap",
+   "length": 5
+  },
+  {
+   "id": 4,
+   "title": "Rolling Stock",
+   "flavor": "Mendeleev would have lined these up by number without a second thought.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "argon",
+      "phosphorus",
+      "scandium",
+      "silicon",
+      "beryllium",
+      "oxygen",
+      "phosphorus",
+      "scandium",
+      "potassium",
+      "boron"
+     ]
+    }
+   ],
+   "hash": "1edca4072c5b180d5c2661ccbf7df17df8e845c5f44c482afc5ee1f2a59fe640",
+   "partials": {},
+   "hints": [
+    "Each element's atomic number is a letter position (hydrogen = 1 = A).",
+    "To check you're on track: the answer begins with R."
+   ],
+   "technique": "Atomic numbers",
+   "length": 10
+  },
+  {
+   "id": 5,
+   "title": "Points Failure",
+   "flavor": "All the right letters, all in the right words, none in the right places.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "LDSUOH",
+      "IHTS",
+      "ENTO",
+      "LFAL",
+      "IOTN",
+      "HTE",
+      "GOWNR",
+      "NDHAS",
+      "PEALES",
+      "ETORGF",
+      "EHT",
+      "WROD",
+      "TPRORE"
+     ],
+     "inline": true,
+     "tray": "word"
+    }
+   ],
+   "hash": "eded52a97aae6873eb767541f02329a8f3590647b973ab870fba5ed1187cfcb8",
+   "partials": {},
+   "hints": [
+    "Each word of a sentence has had its letters shuffled. Unscramble them; the sentence tells you the answer.",
+    "To check you're on track: the answer begins with P."
+   ],
+   "technique": "Scrambled sentence",
+   "length": 6
+  },
+  {
+   "id": 6,
+   "title": "Request Stop",
+   "flavor": "Sixty-four ways to press a fingertip into paper. Louis numbered his from one to six; we just added them up.",
+   "blocks": [
+    {
+     "type": "numbers",
+     "items": [
+      3,
+      23,
+      1,
+      5,
+      17,
+      13,
+      1,
+      29
+     ]
+    }
+   ],
+   "hash": "95c2b534bb03077c06f75e2c91a7f2f3de3375e231c6fbd4c31c15bb982d8212",
+   "partials": {},
+   "hints": [
+    "Each number is a 6-bit value: bit k set means Braille dot k+1 is raised (dot 1 = 1, dot 2 = 2, dot 3 = 4, dot 4 = 8, ...).",
+    "To check you're on track: the answer begins with B."
+   ],
+   "technique": "Braille as numbers",
+   "length": 8
+  },
+  {
+   "id": 7,
+   "title": "Mind The Gap",
+   "flavor": "Unjumble the kit list. You'll have one letter left over every time, and you'll want to keep those.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "IACAERRCG",
+      "ILSAGON",
+      "WSCHITN",
+      "ODREBRD",
+      "COEIOOTULVM",
+      "TFHCIEGR",
+      "POLUCGNIT",
+      "NITOOSP",
+      "FRBERUF"
+     ],
+     "ordered": true,
+     "mono": true
+    }
+   ],
+   "hash": "e01bc57f93b1598fc1d4d3c0b07ea836a0825b4378c98732b3deb213a85de5cb",
+   "partials": {},
+   "hints": [
+    "Each jumble is an anagram of a word from this round's theme plus one extra letter. The extra letters, in order, spell the answer.",
+    "To check you're on track: the answer begins with C."
+   ],
+   "technique": "Anagrams with an extra letter",
+   "length": 9
+  }
+ ],
+ "meta": {
+  "title": "Meta: The Night Train",
+  "flavor": "Everything in the sleeper car has a place, and every place is exactly the right size.",
+  "blocks": [
+   {
+    "type": "fitgrid",
+    "rows": [
+     {
+      "len": 4,
+      "shade": 0
+     },
+     {
+      "len": 7,
+      "shade": 5
+     },
+     {
+      "len": 8,
+      "shade": 0
+     },
+     {
+      "len": 6,
+      "shade": 1
+     },
+     {
+      "len": 9,
+      "shade": 7
+     },
+     {
+      "len": 5,
+      "shade": 0
+     },
+     {
+      "len": 10,
+      "shade": 9
+     }
+    ]
+   }
+  ],
+  "length": 7,
+  "hash": "81efadebb1ac671fb364bbf4b8dd2c1aa14dcc989e4b477dfbf4a94024776e50",
+  "hints": [
+   "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+   "To check you're on track: the final answer begins with C."
+  ]
+ },
+ "described": true
+}

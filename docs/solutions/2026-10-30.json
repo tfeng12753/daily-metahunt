@@ -1,0 +1,55 @@
+{
+ "date": "2026-10-30",
+ "number": 34,
+ "difficulty": "hard",
+ "final": "ERUPTION",
+ "metaType": "logbook",
+ "explain": "Each entry is (puzzle number, letter number): index into that puzzle's answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Pyroclastic",
+   "answer": "SEISMOGRAPH",
+   "mechanism": "Word search leftovers",
+   "transform": null,
+   "encoded": "SEISMOGRAPH",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Subduction",
+   "answer": "LIMESTONE",
+   "mechanism": "Scrambled sentence",
+   "transform": null,
+   "encoded": "LIMESTONE",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Pahoehoe",
+   "answer": "GEYSER",
+   "mechanism": "Template strand",
+   "transform": "ROT13",
+   "encoded": "TRLFRE",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Richter",
+   "answer": "QUAKE",
+   "mechanism": "Seating plan (logic)",
+   "transform": null,
+   "encoded": "QUAKE",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Lahar",
+   "answer": "RIFT",
+   "mechanism": "Binary codons",
+   "transform": null,
+   "encoded": "RIFT",
+   "mutated": null
+  }
+ ]
+}

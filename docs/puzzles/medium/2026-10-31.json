@@ -1,0 +1,297 @@
+{
+ "date": "2026-10-31",
+ "difficulty": "medium",
+ "salt": "2026-10-31/medium",
+ "number": 35,
+ "round": "The Night Train",
+ "intro": "Somewhere between two stations that no longer exist, the night train stopped. When it started again, every ticket had been replaced with a puzzle. At the head of the car, where the corridor narrows past the linen cupboard, there is a rack of eight hooks, and for eight passengers there were eight coats hung on the first night, but each morning the porter found a ninth hook had appeared among them, bare, as though something had been taken off and forgotten, and he took to chalking a tally beside the door each day, though no passenger would say whose coat it was that had never belonged to them. The drawings on the tickets, they noticed, each bore one more line than the thing it showed.",
+ "echo": "Something has come off the rails, and not only the train.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Last Call",
+   "flavor": "Not a single letter on the page, and yet it says something.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "♪☀♪☆♠ ▲⚑⚑○ ♦♥♣✿ ♪♣○◇ ▽✚✿♦ ● ◇✚♣▲◆♪ ▽⚑☆○ ●♣○ ✿♦♪ ▽⚑☆○ ♠⚑♥ ▽●♣✿ ■☆⚑✈ ✿♦✚◇ ☁●▲♪ ✚◇ ☆⚑○♥♣○♦⚑♥◇♪",
+     "wide": true,
+     "solver": "substitution"
+    }
+   ],
+   "hash": "51ac258d41064074d658880184be08ca0dca6a9784fb6436b5c293fc208b5ca8",
+   "partials": {
+    "2abb64bf98df6afeb6785d0bb884f68f80201a6336b477597bb6b86a5c88b41f": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Which short words are most common in English? Could any of them be hiding here?",
+    "Each symbol always stands for the same letter. The finished sentence tells you what to submit."
+   ],
+   "length": 10
+  },
+  {
+   "id": 2,
+   "title": "Points Failure",
+   "flavor": "Call signs, reflected.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "Golf",
+      "Foxtrot",
+      "Mike",
+      "Mike",
+      "Victor",
+      "Victor",
+      "Oscar"
+     ]
+    }
+   ],
+   "hash": "695b349792a3c3c1a71827d54efe9ff20560045cdda810d6c9d2fb71ae5ef20a",
+   "partials": {
+    "b0f2e74cac22513bc07f356a95963f3e73cdb7d7196d2625fc81542d18b9ca0d": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Each word stands for a letter, the way radio operators spell. Do those letters read? If not, try the alphabet backwards.",
+    "Take the NATO call signs' initials, then swap each letter for its mirror: A for Z, B for Y."
+   ],
+   "length": 6
+  },
+  {
+   "id": 3,
+   "title": "Rolling Stock",
+   "flavor": "Dressed overall, and saying far more than hello.",
+   "blocks": [
+    {
+     "type": "flags",
+     "items": [
+      "F",
+      "R",
+      "E",
+      "I",
+      "R",
+      "G",
+      "H",
+      "T"
+     ]
+    }
+   ],
+   "hash": "41ebaf4c48645235d55765b7e423aa55ea1223b6a3425ba11c26270bbb65de8b",
+   "partials": {
+    "bb0fe7994cfbb7ac319865845020824e4a4267dd896629bb72ac4292196986f3": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Ships carry a flag for every letter of the alphabet. Do you know them?",
+    "International maritime signal flags: one letter each, left to right."
+   ],
+   "length": 7
+  },
+  {
+   "id": 4,
+   "title": "Request Stop",
+   "flavor": "Walk the fence; don't read it.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "THTFL AEOAH EAIST OYOEN SCLCV EIGST SERRN MDTRS OISAK PERAE GITAE IMTPE CVTHT O",
+     "wide": true,
+     "rails": 5
+    }
+   ],
+   "hash": "21d8f2f067c0f6c7a8a04645e1e028b34842e88cc3e14b7136b36c23e1fe3cda",
+   "partials": {
+    "46a5759428195b0b9735c945ce1dab44bf166a474f476461b3680ca4a96814e1": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "All the right letters are here, just out of order. Could they have been written along a path that goes up and down?",
+    "Rail fence: written in a zigzag over a few rows, then copied out row by row. Try two to five rows."
+   ],
+   "length": 10
+  },
+  {
+   "id": 5,
+   "title": "Night Mail",
+   "flavor": "The spy always carried a novel. This page will have to do.",
+   "blocks": [
+    {
+     "type": "prose",
+     "text": "Somewhere between two stations that no longer exist, the night train stopped. When it started again, every ticket had been replaced with a puzzle.",
+     "paper": true
+    },
+    {
+     "type": "list",
+     "items": [
+      "2.4",
+      "10.4",
+      "22.2",
+      "15.1",
+      "22.3",
+      "21.4",
+      "10.2",
+      "2.6"
+     ],
+     "inline": true
+    }
+   ],
+   "hash": "a4fb3483e1bf464a50205153dd67c1951c04a66d3dd4019086bda1618af316bc",
+   "partials": {
+    "c14ba0566166a437324b33e70be3a3dcc8c9cdf688788bd5a9dc9d644b1c32f7": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "The first number in each pair never goes past the number of words on the page. What does the second count?",
+    "The first number finds a word on the page; the second finds a letter in it."
+   ],
+   "length": 7
+  },
+  {
+   "id": 6,
+   "title": "Change Here",
+   "flavor": "A formula no chemist would sign.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "Ti",
+      "F",
+      "H",
+      "Be",
+      "Sc",
+      "Mg",
+      "Li",
+      "Ca"
+     ],
+     "inline": true,
+     "variant": "symbols"
+    }
+   ],
+   "hash": "6462700b48d3aabbd389804a35c5df7b0488eb1f5f7da915ea6d3e5516aad27b",
+   "partials": {
+    "487b1dfa5f3e855b8375a8096c97d52fd6d69ee11013c5088728f1bfb759d45c": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Everything here has a number in a famous chemical line-up. What number does each one have?",
+    "Atomic numbers, then count through the alphabet (hydrogen = 1 = A)."
+   ],
+   "length": 7
+  },
+  {
+   "id": 7,
+   "title": "Signal Failure",
+   "flavor": "The operator never once took a breath.",
+   "blocks": [
+    {
+     "type": "morselines",
+     "items": [
+      {
+       "code": "-.-.---..-.--..-....-.--.",
+       "len": 8,
+       "index": 5
+      },
+      {
+       "code": "--..-..---..",
+       "len": 5,
+       "index": 3
+      },
+      {
+       "code": ".....--.-..-.-..",
+       "len": 6,
+       "index": 3
+      },
+      {
+       "code": "-.-..-.-..-....---..",
+       "len": 8,
+       "index": 7
+      },
+      {
+       "code": ".--..-...--..-.---.-.--",
+       "len": 8,
+       "index": 3
+      },
+      {
+       "code": ".....-....-.--.",
+       "len": 6,
+       "index": 6
+      },
+      {
+       "code": "....--.-.--.....---.-..",
+       "len": 9,
+       "index": 2
+      },
+      {
+       "code": "...-..---",
+       "len": 5,
+       "index": 3
+      }
+     ],
+     "bank": [
+      "BUFFER",
+      "CARRIAGE",
+      "COUPLING",
+      "DEPOT",
+      "GAUGE",
+      "PLATFORM",
+      "SEMAPHORE",
+      "SIDING",
+      "SIGNAL",
+      "SLEEPER",
+      "STEAM",
+      "TICKET"
+     ]
+    }
+   ],
+   "hash": "69002cf39844724c97c646a299c7638d6b77d7d7f55671e75ab3b1e7fa32194b",
+   "partials": {
+    "60b1adb9c46eab28291e0d01a8bf4fdd975000c7ad21778f76761ca28a6041b4": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Two symbols, no spaces, and a letter count. Which old code is it, and which word from this round fits each line?",
+    "Each line is a theme word in Morse with the letter gaps removed; find it, then take the letter at the position shown."
+   ],
+   "length": 7
+  },
+  {
+   "id": 8,
+   "title": "Mind The Gap",
+   "flavor": "Fill the gaps.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "_ORDER",
+      "PO_TER",
+      "FIREM_N",
+      "TRAC_",
+      "BOIL_R",
+      "TEN_ER",
+      "PLATFOR_",
+      "R_ILCAR",
+      "LA_TERN"
+     ],
+     "ordered": true,
+     "mono": true
+    }
+   ],
+   "hash": "c10f3c41b045eb67171932136f1600fab40ffc3fb4cca8089ae1bce11a5969e1",
+   "partials": {
+    "30c48120b80c49f1b9ecf199a4d3f4ec020600dcbb7891ae4689aa5f0fa59d71": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Every gap takes exactly one letter. Is there a pattern in what you filled in?",
+    "Read the letters you supplied, in order."
+   ],
+   "length": 8
+  }
+ ],
+ "meta": {
+  "title": "Meta: The Night Train",
+  "flavor": "Count heads at the gangway.",
+  "blocks": [],
+  "length": 8,
+  "hash": "6325932155168f532055516c6e519d4c30b40cec85033a7e7854e1f06e7c8b80",
+  "hints": [
+   "Did every answer come out the right size the first time? Each had one letter too many. Did you keep them?",
+   "Take the extra letter from each feeder, in puzzle order."
+  ]
+ },
+ "described": true
+}
