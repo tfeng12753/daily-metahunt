@@ -1,0 +1,82 @@
+{
+ "date": "2026-10-31",
+ "number": 35,
+ "difficulty": "hard",
+ "final": "JUNCTION",
+ "metaType": "stowaway",
+ "explain": "Each feeder decodes to its answer plus one inserted letter. The inserted letters, in puzzle order, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Terminus Approaching",
+   "answer": "VIADUCT",
+   "mechanism": "Anagrams with an extra letter",
+   "transform": null,
+   "encoded": "VIADUCTJ",
+   "mutated": "VIADUCTJ"
+  },
+  {
+   "id": 2,
+   "title": "Platform Nine",
+   "answer": "WHISTLE",
+   "mechanism": "Cryptogram (cluephrase)",
+   "transform": null,
+   "encoded": "WHISTULE",
+   "mutated": "WHISTULE"
+  },
+  {
+   "id": 3,
+   "title": "The Up Line",
+   "answer": "CONDUCTOR",
+   "mechanism": "Mixed number bases",
+   "transform": "ROT13",
+   "encoded": "PBAQHPGBAE",
+   "mutated": "CONDUCTONR"
+  },
+  {
+   "id": 4,
+   "title": "Rolling Stock",
+   "answer": "FIREMAN",
+   "mechanism": "Gapless Morse",
+   "transform": null,
+   "encoded": "FIRCEMAN",
+   "mutated": "FIRCEMAN"
+  },
+  {
+   "id": 5,
+   "title": "Leaves On The Line",
+   "answer": "DEPOT",
+   "mechanism": "Braille (drawn)",
+   "transform": null,
+   "encoded": "DEPOTT",
+   "mutated": "DEPOTT"
+  },
+  {
+   "id": 6,
+   "title": "Request Stop",
+   "answer": "PASSPORT",
+   "mechanism": "Nonogram",
+   "transform": null,
+   "encoded": "PASSPORIT",
+   "mutated": "PASSPORIT"
+  },
+  {
+   "id": 7,
+   "title": "Change Here",
+   "answer": "TUNNEL",
+   "mechanism": "Shredded sentence",
+   "transform": null,
+   "encoded": "TOUNNEL",
+   "mutated": "TOUNNEL"
+  },
+  {
+   "id": 8,
+   "title": "Signal Failure",
+   "answer": "ROUNDHOUSE",
+   "mechanism": "Element spelling",
+   "transform": null,
+   "encoded": "RNOUNDHOUSE",
+   "mutated": "RNOUNDHOUSE"
+  }
+ ]
+}

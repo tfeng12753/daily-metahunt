@@ -1,0 +1,176 @@
+{
+ "date": "2026-11-01",
+ "difficulty": "medium",
+ "salt": "2026-11-01/medium",
+ "number": 36,
+ "round": "The Travelling Show",
+ "intro": "The circus arrived overnight in a town that isn't on any map, and by morning the big top stood where the allotments used to be, canvas still smelling of tar and travel. Admission is free, but the ticket-taker only lets you in if you can read your ticket - she holds a stub up to the gaslight, checks the smudged ink, and nods at the letters like a librarian approving a request. This morning she was in a foul mood, muttering over her ledger, where every entry is two numbers and nothing else: no names, no sums, just the pair of them, inked so close they nearly touch. The ringmaster, arriving with a letter in one hand and a tumbler of something amber in the other, asked what she was counting; she said she wasn't counting, she was filing, and every line in her book is a filing. She has started keeping a list of them.",
+ "echo": "The Tower of London once kept lions, and nobody thought it strange.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Grand Finale",
+   "flavor": "It never travels in a straight line, and neither does the truth.",
+   "blocks": [
+    {
+     "type": "board",
+     "rows": [
+      "NMPIHOEP",
+      "BQIIJEXT",
+      "OUDTXYVL",
+      "CXMCSXDC",
+      "PWTYSCCX",
+      "KKOXHVFN",
+      "SHDPLEOP",
+      "PBCSBPQI"
+     ]
+    },
+    {
+     "type": "prose",
+     "text": "The knight sets out from a4: Nb6 Na8 Nc7 Nd5 Nf6 Ng4 Nh6 Ng8."
+    }
+   ],
+   "hash": "9c4563f3518a9fae8e119c53eea1fcc8ad4cd251403c8bce6c0c0ef070873caf",
+   "partials": {},
+   "hints": [
+    "Those are chess moves. Which squares does the piece land on, and what's written there?",
+    "Start on the given square, play each move, and read the letter on every square it lands on."
+   ],
+   "length": 8
+  },
+  {
+   "id": 2,
+   "title": "Centre Ring",
+   "flavor": "The quiz only ever asks how many.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "Sides of a triangle",
+      "Wheels on a unicycle",
+      "Lines in a sonnet",
+      "Lines in a sonnet",
+      "Red balls racked at the start of a snooker frame",
+      "Lines in a sonnet",
+      "Humps on a Bactrian camel",
+      "Wheels on a unicycle",
+      "Months in a year",
+      "Signs of the Western zodiac"
+     ],
+     "ordered": true,
+     "tray": "letter"
+    }
+   ],
+   "hash": "07b56a0d6e0d3d93662effc3768cb85833199b714b1b03dd3abb11546dc6c77f",
+   "partials": {},
+   "hints": [
+    "Every line has a number for an answer. Could those numbers be counting through something else?",
+    "They're all between 1 and 26: A = 1, B = 2…"
+   ],
+   "length": 10
+  },
+  {
+   "id": 3,
+   "title": "Roll Up",
+   "flavor": "The clerk ran out of alphabet and kept going anyway.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "▽◆■▼ ▼◆♫ ○♥♠✿☀♫✿ ○■✿✿☀♫☆ ▽■✈ ☁♥▼ ♦♥●☆ ♥✿ ✈♫○✿♫▼✈ △♠▼ ■ ✈☀☁♦●♫ ▽♥✿☆ ♫●♫◇◆■☁▼",
+     "wide": true,
+     "solver": "substitution"
+    }
+   ],
+   "hash": "92bbbead560cf9f3fa9ce8f7d9be1ff710efc4228b1a46bbceed6ea5ebcafcca",
+   "partials": {},
+   "hints": [
+    "Which short words are most common in English? Could any of them be hiding here?",
+    "Each symbol always stands for the same letter. The finished sentence tells you what to submit."
+   ],
+   "length": 8
+  },
+  {
+   "id": 4,
+   "title": "Sawdust",
+   "flavor": "Tidy up the inventory. Start from the end; that's where it started.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "SEREJTR",
+      "REOIRMR",
+      "PPCRONOM",
+      "ILAELPCAO",
+      "EZARBT"
+     ],
+     "ordered": true,
+     "mono": true
+    }
+   ],
+   "hash": "c3f3fb63c993fa44ecb8da68926b459e527dee92c7d2c949b3e29b58607e1569",
+   "partials": {
+    "fe30e9cb31acf4412d4bccbb6e0b319e17330ce85f5b408a003a506ba64b9ddc": "You've decoded it, but it's not finished. One more layer."
+   },
+   "hints": [
+    "Each jumble is almost a word from this round, but with a letter to spare. Which letter, every time? And if what you get still isn't a word, reread the flavour text.",
+    "Rearrange each into a theme word; the spare letters, in order, are the answer. Then one more layer: Read what you get backwards."
+   ],
+   "length": 5
+  },
+  {
+   "id": 5,
+   "title": "Two Shows Daily",
+   "flavor": "Around the edges first; the point comes last.",
+   "blocks": [
+    {
+     "type": "lettergrid",
+     "rows": [
+      "XPECTEDA",
+      "EOTHEPRN",
+      "YSWORDIY",
+      "DRE··TZO",
+      "OAN··IEN",
+      "BFOREGIE",
+      "OSTSUJST",
+      "NIHTTEGO"
+     ]
+    }
+   ],
+   "hash": "bc01fb24e47a9af7233f42524973034ad64caddc45890df9c6139c0cad06ffd0",
+   "partials": {},
+   "hints": [
+    "All the letters of a sentence are here, but not in rows. Try walking the grid the way a snail would.",
+    "Start in one corner and spiral inward along the edges; one corner and one direction read as a sentence."
+   ],
+   "length": 5
+  }
+ ],
+ "meta": {
+  "title": "Meta: The Travelling Show",
+  "flavor": "Someone underlined a few verses.",
+  "blocks": [
+   {
+    "type": "list",
+    "items": [
+     "Ch. 4 v. 3",
+     "Ch. 5 v. 4",
+     "Ch. 2 v. 3",
+     "Ch. 2 v. 2",
+     "Ch. 5 v. 3",
+     "Ch. 5 v. 4",
+     "Ch. 4 v. 5",
+     "Ch. 1 v. 3",
+     "Ch. 3 v. 1"
+    ],
+    "ordered": true
+   }
+  ],
+  "length": 9,
+  "hash": "5450df2299a7ce57c36448480cdd149fe58769ef834cf26407b7aa51cdb9ee08",
+  "hints": [
+   "Every entry has two numbers. What in this round is numbered, and what could the second number count?",
+   "The first number picks a puzzle; the second picks a letter inside its answer."
+  ]
+ },
+ "described": true
+}

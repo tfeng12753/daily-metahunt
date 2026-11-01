@@ -1,0 +1,82 @@
+{
+ "date": "2026-10-31",
+ "number": 35,
+ "difficulty": "medium",
+ "final": "DERAILED",
+ "metaType": "stowaway",
+ "explain": "Each feeder decodes to its answer plus one inserted letter. The inserted letters, in puzzle order, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Last Call",
+   "answer": "ROUNDHOUSE",
+   "mechanism": "Symbol cryptogram",
+   "transform": null,
+   "encoded": "RODUNDHOUSE",
+   "mutated": "RODUNDHOUSE"
+  },
+  {
+   "id": 2,
+   "title": "Points Failure",
+   "answer": "TUNNEL",
+   "mechanism": "Mirrored NATO",
+   "transform": null,
+   "encoded": "TUNNEEL",
+   "mutated": "TUNNEEL"
+  },
+  {
+   "id": 3,
+   "title": "Rolling Stock",
+   "answer": "FREIGHT",
+   "mechanism": "Maritime signal flags",
+   "transform": null,
+   "encoded": "FREIRGHT",
+   "mutated": "FREIRGHT"
+  },
+  {
+   "id": 4,
+   "title": "Request Stop",
+   "answer": "LOCOMOTIVE",
+   "mechanism": "Rail fence (cluephrase)",
+   "transform": null,
+   "encoded": "LOCOMOTIVAE",
+   "mutated": "LOCOMOTIVAE"
+  },
+  {
+   "id": 5,
+   "title": "Night Mail",
+   "answer": "WHISTLE",
+   "mechanism": "Book cipher",
+   "transform": null,
+   "encoded": "WHISTLIE",
+   "mutated": "WHISTLIE"
+  },
+  {
+   "id": 6,
+   "title": "Change Here",
+   "answer": "VIADUCT",
+   "mechanism": "Atomic numbers (symbols)",
+   "transform": null,
+   "encoded": "VIADULCT",
+   "mutated": "VIADULCT"
+  },
+  {
+   "id": 7,
+   "title": "Signal Failure",
+   "answer": "LUGGAGE",
+   "mechanism": "Gapless Morse",
+   "transform": null,
+   "encoded": "LUGGAGEE",
+   "mutated": "LUGGAGEE"
+  },
+  {
+   "id": 8,
+   "title": "Mind The Gap",
+   "answer": "BRAKEMAN",
+   "mechanism": "Missing letters",
+   "transform": null,
+   "encoded": "BRAKEDMAN",
+   "mutated": "BRAKEDMAN"
+  }
+ ]
+}

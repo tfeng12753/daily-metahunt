@@ -1,0 +1,748 @@
+{
+ "date": "2026-11-01",
+ "difficulty": "hard",
+ "salt": "2026-11-01",
+ "number": 36,
+ "round": "The Travelling Show",
+ "intro": "The circus arrived overnight in a town that isn't on any map, and by morning the big top stood whole and smelling of boiled canvas and burnt sugar, as if the road itself had unrolled it. The performers move through their paces without a word between them, each one carrying a small tin notebook stitched to the wrist, in which they jot what the audience saw and, beneath it, what they themselves nearly did. The ticket-taker checks each hand at the flap with a squint, and lets you in only if your admission bears a single deliberate flaw, set before you even approached. Somewhere under the grandstand a proof-reader has been at work since midnight, going over every programme page with a steady nib, leaving one small correction in the margin of each.",
+ "echo": "The painted horses go up and down and round, and never get anywhere.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Sideshow",
+   "flavor": "The picture is worth exactly one word. Whoever copied it out was standing in front of a mirror.",
+   "blocks": [
+    {
+     "type": "nonogram",
+     "rows": [
+      [
+       1,
+       1,
+       1,
+       1,
+       5,
+       5,
+       4,
+       1,
+       1,
+       1,
+       1,
+       4,
+       1,
+       1,
+       1,
+       1,
+       3
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       4,
+       5,
+       1,
+       3,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       3,
+       1,
+       5,
+       5,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       4,
+       1,
+       1,
+       3
+      ]
+     ],
+     "cols": [
+      [
+       4
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       4
+      ],
+      [],
+      [
+       3
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       3
+      ],
+      [],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       5
+      ],
+      [],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       3
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       3
+      ],
+      [],
+      [
+       3
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       3
+      ],
+      [],
+      [
+       3
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       3
+      ]
+     ],
+     "givens": [
+      [
+       4,
+       38,
+       0
+      ],
+      [
+       4,
+       50,
+       1
+      ],
+      [
+       4,
+       63,
+       1
+      ],
+      [
+       1,
+       39,
+       1
+      ],
+      [
+       1,
+       42,
+       1
+      ],
+      [
+       1,
+       55,
+       0
+      ],
+      [
+       0,
+       0,
+       1
+      ],
+      [
+       1,
+       52,
+       1
+      ],
+      [
+       3,
+       54,
+       0
+      ],
+      [
+       3,
+       56,
+       0
+      ],
+      [
+       4,
+       61,
+       1
+      ],
+      [
+       0,
+       56,
+       0
+      ],
+      [
+       1,
+       9,
+       0
+      ],
+      [
+       4,
+       57,
+       0
+      ],
+      [
+       0,
+       10,
+       1
+      ],
+      [
+       4,
+       42,
+       1
+      ],
+      [
+       0,
+       6,
+       1
+      ],
+      [
+       1,
+       58,
+       1
+      ],
+      [
+       3,
+       7,
+       1
+      ],
+      [
+       3,
+       55,
+       1
+      ],
+      [
+       0,
+       48,
+       1
+      ],
+      [
+       3,
+       52,
+       0
+      ],
+      [
+       3,
+       38,
+       0
+      ],
+      [
+       0,
+       58,
+       1
+      ],
+      [
+       0,
+       40,
+       1
+      ],
+      [
+       0,
+       37,
+       0
+      ],
+      [
+       2,
+       40,
+       0
+      ],
+      [
+       1,
+       36,
+       0
+      ],
+      [
+       2,
+       38,
+       1
+      ],
+      [
+       3,
+       37,
+       1
+      ],
+      [
+       3,
+       40,
+       0
+      ]
+     ]
+    }
+   ],
+   "hash": "a893bda2c9af872499ee7703a8d30e2a0f1e2a5551ef7e2c82fd1c5097929885",
+   "partials": {
+    "34e74a8107539959595c7ab409503f8702f3a222213d9e4934b40a792f409480": "You've decoded it, but it's not finished. One more layer.",
+    "1a806df5f1731ce19aeae489b889b6ee7a3228b54f92a7f6b9aaa9e800a82c55": "So close. Exactly one thing is wrong here. Fix it (and remember what you fixed)."
+   },
+   "hints": [
+    "The numbers describe runs of filled squares. What picture could they be drawing? And if what you get still isn't a word, reread the flavour text."
+   ]
+  },
+  {
+   "id": 2,
+   "title": "Centre Ring",
+   "flavor": "The host was particular about the seating, and more particular still about what each chair was worth.",
+   "blocks": [
+    {
+     "type": "seating",
+     "seats": 7,
+     "names": [
+      "Gilbert",
+      "Barnaby",
+      "Desmond",
+      "Malcolm",
+      "Emilia",
+      "Emerson",
+      "Ashley"
+     ],
+     "clues": [
+      "Exactly 3 people sit between Emerson and Gilbert.",
+      "Ashley sits somewhere between Barnaby and Emerson.",
+      "Malcolm sits somewhere between Barnaby and Gilbert.",
+      "Gilbert is not in seat 5.",
+      "Desmond sits somewhere between Emilia and Malcolm.",
+      "Desmond sits immediately to the right of Ashley."
+     ],
+     "logic": [
+      [
+       "gap",
+       "EMERSON",
+       "GILBERT",
+       3
+      ],
+      [
+       "between",
+       "BARNABY",
+       "ASHLEY",
+       "EMERSON"
+      ],
+      [
+       "between",
+       "BARNABY",
+       "MALCOLM",
+       "GILBERT"
+      ],
+      [
+       "not_at",
+       "GILBERT",
+       5
+      ],
+      [
+       "between",
+       "EMILIA",
+       "DESMOND",
+       "MALCOLM"
+      ],
+      [
+       "right_of",
+       "DESMOND",
+       "ASHLEY"
+      ]
+     ]
+    }
+   ],
+   "hash": "0481a974e4a462791e8d8c0608e25e753ad58be100b08eba4b8007abc30958b3",
+   "partials": {
+    "53fa72f209a141bfd5ba65fad233736b2867713f7b19dd6a3997493d5773d1b5": "So close. Exactly one thing is wrong here. Fix it (and remember what you fixed)."
+   },
+   "hints": [
+    "Only one arrangement satisfies every clue; start from whoever has an end seat or a fixed neighbour. Once they're seated, why might the seat numbers matter?"
+   ]
+  },
+  {
+   "id": 3,
+   "title": "Roll Up",
+   "flavor": "A sensor that only knows up and down, six times over. Unlucky for some, and the same distance either way.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "111100",
+      "101110",
+      "100000",
+      "100000",
+      "110000",
+      "100000",
+      "101010",
+      "101110",
+      "101111",
+      "100010"
+     ],
+     "inline": true
+    }
+   ],
+   "hash": "690e6fbd1adb2dd3fabdd81014f823466137c311e6cf0e441351e771add90e77",
+   "partials": {
+    "49e28e68a1ca5077a8fa41efd69fb7e6b909377cc1ce9174f99ee0c5d71ad468": "You've decoded it, but it's not finished. One more layer.",
+    "3766d71fed9d288b93684bcabc13315f0b7e8c361bd50466a69c55998f69473d": "So close. Exactly one thing is wrong here. Fix it (and remember what you fixed)."
+   },
+   "hints": [
+    "Write each number in binary. Six yes-or-no choices: is there an alphabet built from exactly that? And if what you get still isn't a word, reread the flavour text."
+   ]
+  },
+  {
+   "id": 4,
+   "title": "Midway",
+   "flavor": "Tidy up the inventory.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "CTSBAARO",
+      "PAERWDA",
+      "POGSLTHTIO",
+      "ENTTSYEFAR",
+      "EKTDICT",
+      "ECLMAS",
+      "PPUTEPW",
+      "LSTTASI",
+      "ENOOUTFR",
+      "NWCOLL",
+      "EROEJST",
+      "EWIRGT",
+      "ABRZEE",
+      "RTAREM"
+     ],
+     "ordered": true,
+     "mono": true
+    }
+   ],
+   "hash": "f05bf3955e8591748da1ccaaaf58e804cc0462fd8b0530eb8f93040b756b9cd2",
+   "partials": {
+    "278baef325e6f89fe4d13e707b270e8ca025419e27e94c771c1713c3120c320e": "So close. Exactly one thing is wrong here. Fix it (and remember what you fixed)."
+   },
+   "hints": [
+    "Each jumble is almost a word from this round, but with a letter to spare. Which letter, every time?"
+   ]
+  },
+  {
+   "id": 5,
+   "title": "Without A Net",
+   "flavor": "Two kinds of footprint on the sand, in no particular hurry.",
+   "blocks": [
+    {
+     "type": "glyphs",
+     "groups": [
+      "🎈🎈🎪",
+      "🎈🎈🎪",
+      "🎈🎈",
+      "🎪🎈🎪🎈",
+      "🎪🎈🎪🎪",
+      "🎪🎈🎪🎈",
+      "🎈🎪🎈🎈",
+      "🎈"
+     ],
+     "legend": [
+      "🎈",
+      "🎪"
+     ]
+    }
+   ],
+   "hash": "2451489253342f6773614275c1110ab8284cc701411c2c51be73f26742f3d39e",
+   "partials": {
+    "d94db44ee93c1f0548ee6456af38f0d5458d977a838159eea30dc6e52de8087d": "So close. Exactly one thing is wrong here. Fix it (and remember what you fixed)."
+   },
+   "hints": [
+    "Only two kinds of mark, in groups of one to four. Which old alphabet is built from exactly that?"
+   ]
+  },
+  {
+   "id": 6,
+   "title": "Grand Finale",
+   "flavor": "An inventory, tangled.",
+   "blocks": [
+    {
+     "type": "caption",
+     "text": "Somewhere in here: things to do with the big top."
+    },
+    {
+     "type": "board",
+     "rows": [
+      "LTAMERR",
+      "ITCLZTE",
+      "ONAPEEG",
+      "NEAIBPI",
+      "STLHRPT",
+      "LIOWAUP",
+      "CAMELPS"
+     ],
+     "plain": true,
+     "words": [
+      "CAMEL",
+      "LION",
+      "PUPPET",
+      "SEAL",
+      "TAMER",
+      "TENT",
+      "TIGER",
+      "WHIP",
+      "ZEBRA"
+     ]
+    }
+   ],
+   "hash": "efa75a69348ebc4d893a8aa9ea5b7e0b9ff68b9c6bc906b5e6ee082047e388f6",
+   "partials": {
+    "42255447e6d9eac32eb90f88682b7cf4ba6337b3c41573b6a58d68f9ebe0fa36": "So close. Exactly one thing is wrong here. Fix it (and remember what you fixed)."
+   },
+   "hints": [
+    "Once every theme word is found, is anything left unclaimed? Read it in order.",
+    "The hidden words are: CAMEL, LION, PUPPET, SEAL, TAMER, TENT, TIGER, WHIP, ZEBRA."
+   ]
+  },
+  {
+   "id": 7,
+   "title": "The Flying Act",
+   "flavor": "Lord Playfair's friend got the credit, but the square is built from whatever is written above it.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "HE AP SI NF LI RM HQ HY LO QL KO FH TR SG WH OG TS GA HY DL YG CE LI LO TD QF HY QM TW KS ST FZ",
+     "wide": true
+    }
+   ],
+   "hash": "057c4284415da203b9384890a30c93444242a123e616824b8c0d2c535c1d976c",
+   "partials": {
+    "5b071117a980ed6c37d0f7e024afb7bc567a2deddd4a23e2840b229f5094a07a": "So close. Exactly one thing is wrong here. Fix it (and remember what you fixed)."
+   },
+   "hints": [
+    "An even number of letters, read in pairs, and no pair is ever a double. Which cipher works on pairs, and where's its key?"
+   ]
+  },
+  {
+   "id": 8,
+   "title": "Hall Of Mirrors",
+   "flavor": "Walk the fence; don't read it.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "WATEO RECRI DANTO DRERT BTSNL WRMLC AHTHC UIRAR EWSOG LOSCE SUAIG EODAI IN",
+     "wide": true,
+     "rails": 2
+    }
+   ],
+   "hash": "962029b8557fcafff3ac880adba686ce89fa154ad216a9a4a1cae7bb12946e58",
+   "partials": {
+    "3292a3485566ab21bc3521c9856e3fdd4988ed4b32d00168ad0c02e94603be35": "So close. Exactly one thing is wrong here. Fix it (and remember what you fixed)."
+   },
+   "hints": [
+    "All the right letters are here, just out of order. Could they have been written along a path that goes up and down?"
+   ]
+  }
+ ],
+ "meta": {
+  "title": "Meta: The Travelling Show",
+  "flavor": "Nothing reached the big top undamaged. The damage, though, was remarkably consistent.",
+  "blocks": [],
+  "length": 8,
+  "hash": "856d4f88d72a3cffc64d493d8f92d22669b234c33c28b33d12c51e17c07e21b7",
+  "hints": [
+   "Did every answer come out clean the first time? Each had exactly one wrong letter. Did you keep them?"
+  ]
+ },
+ "described": true
+}

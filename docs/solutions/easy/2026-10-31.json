@@ -1,0 +1,73 @@
+{
+ "date": "2026-10-31",
+ "number": 35,
+ "difficulty": "easy",
+ "final": "CABOOSE",
+ "metaType": "fitin",
+ "explain": "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Platform Nine",
+   "answer": "COAL",
+   "mechanism": "Letter sudoku",
+   "transform": null,
+   "encoded": "COAL",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Leaves On The Line",
+   "answer": "FIREMAN",
+   "mechanism": "Rail fence (cluephrase)",
+   "transform": null,
+   "encoded": "FIREMAN",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Terminus Approaching",
+   "answer": "STEAM",
+   "mechanism": "Phone multi-tap",
+   "transform": null,
+   "encoded": "STEAM",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Rolling Stock",
+   "answer": "ROUNDHOUSE",
+   "mechanism": "Atomic numbers",
+   "transform": null,
+   "encoded": "ROUNDHOUSE",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Points Failure",
+   "answer": "PORTER",
+   "mechanism": "Scrambled sentence",
+   "transform": null,
+   "encoded": "PORTER",
+   "mutated": null
+  },
+  {
+   "id": 6,
+   "title": "Request Stop",
+   "answer": "BRAKEMAN",
+   "mechanism": "Braille as numbers",
+   "transform": null,
+   "encoded": "BRAKEMAN",
+   "mutated": null
+  },
+  {
+   "id": 7,
+   "title": "Mind The Gap",
+   "answer": "CONDUCTOR",
+   "mechanism": "Anagrams with an extra letter",
+   "transform": null,
+   "encoded": "CONDUCTOR",
+   "mutated": null
+  }
+ ]
+}

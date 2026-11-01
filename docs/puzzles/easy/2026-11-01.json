@@ -1,0 +1,647 @@
+{
+ "date": "2026-11-01",
+ "difficulty": "easy",
+ "salt": "2026-11-01/easy",
+ "number": 36,
+ "round": "The Travelling Show",
+ "intro": "The circus arrived overnight in a town that isn't on any map. Admission is free, but the ticket-taker only lets you in if you can read your ticket, and the ink on it shifts like smoke until you hold it right. Past the flap, the riders' coats hang on a rack whose pegs are filed to different lengths, each notch ground so only one garment settles flush against the wood, no forcing, no gap. The contortionist says every costume is made for one hanger and every hanger for one costume, and the whole troupe is waiting on the fittings. When the last act is ready, the rack will know it; the ones in shadow will read the closing line aloud.",
+ "echo": "Five things in the air, and only two hands.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Centre Ring",
+   "flavor": "Every clock under the big top stopped at a different moment, and not one of them can agree which hand is which.",
+   "blocks": [
+    {
+     "type": "clocks",
+     "items": [
+      [
+       0,
+       7
+      ],
+      [
+       5,
+       4
+      ],
+      [
+       2,
+       5
+      ],
+      [
+       1,
+       4
+      ],
+      [
+       6,
+       2
+      ]
+     ]
+    }
+   ],
+   "hash": "171db4f34f936afe151acf64f1371e4cc012b6c25d5c49f7bd15a5024f102e08",
+   "partials": {},
+   "hints": [
+    "Each clock's two hands are the two arms of a flag-semaphore signaller (hand length doesn't matter).",
+    "To check you're on track: the answer begins with T."
+   ],
+   "technique": "Semaphore clocks",
+   "length": 5
+  },
+  {
+   "id": 2,
+   "title": "Greasepaint",
+   "flavor": "Recovered from the shredder under the big top. Somebody at least had the decency to note how long each word was.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "ARS",
+      "DTE",
+      "ECT",
+      "EDA",
+      "EPR",
+      "EXP",
+      "ISF",
+      "ISJ",
+      "IZE",
+      "NET",
+      "NOB",
+      "NT",
+      "NYO",
+      "ODY",
+      "OGE",
+      "ONE",
+      "OTH",
+      "TTH",
+      "UST",
+      "WOR"
+     ],
+     "inline": true,
+     "tiles": true
+    },
+    {
+     "type": "prose",
+     "text": "Word lengths: (6 8 6 2 3 4 3 2 3 5 2 4 3 4 4)"
+    }
+   ],
+   "hash": "31228ea200f46c9a3929757fd665f7a426dbc811c3dfad3ae38c359eea75e92b",
+   "partials": {},
+   "hints": [
+    "The sentence was cut into three-letter fragments (spaces removed) and alphabetised. Reassemble it using the word lengths; it tells you the answer.",
+    "To check you're on track: the answer begins with T."
+   ],
+   "technique": "Shredded sentence",
+   "length": 4
+  },
+  {
+   "id": 3,
+   "title": "Sawdust",
+   "flavor": "A pub quiz where every answer is a count. Keep a tally, then keep counting.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "Years in a decade",
+      "Rings on the Olympic flag",
+      "Lines in a villanelle",
+      "Things in a score",
+      "Sides of a pentagon",
+      "Holes on a full golf course"
+     ],
+     "ordered": true,
+     "tray": "letter"
+    }
+   ],
+   "hash": "618ea82ad23325a9c01710ecb2bc36a22244ead28a07e845fe659565374b7a06",
+   "partials": {},
+   "hints": [
+    "Each line is a number from 1 to 26. Turn each number into a letter (A = 1, B = 2, …).",
+    "To check you're on track: the answer begins with J."
+   ],
+   "technique": "Number trivia",
+   "length": 6
+  },
+  {
+   "id": 4,
+   "title": "Midway",
+   "flavor": "Somebody shook the sentence and all the letters fell to the bottom of their columns.",
+   "blocks": [
+    {
+     "type": "dropquote",
+     "cols": [
+      "AHTWW",
+      "EHNQTY",
+      "ELRU",
+      "ILNOT",
+      "EHNOP",
+      "DEEETW",
+      "LOX",
+      "ANTWWY",
+      "ENOR",
+      "DIOOR",
+      "DNNTY",
+      "EEMO",
+      "OTTU",
+      "DIOV",
+      "EGMO"
+     ],
+     "mask": [
+      "....#....#...#.",
+      "..#...#.....#..",
+      "..#...#....#...",
+      "......#...#....",
+      "#.......#..#..#",
+      "...#....#...###"
+     ]
+    }
+   ],
+   "hash": "73a14d1bdd073a68d0194f19af38d437a77aef5025d47a23f8ede93d2ad86b0d",
+   "partials": {},
+   "hints": [
+    "A drop quote: each column's letters (shown alphabetised above it) drop into that column of the grid below. Black squares are spaces; words can wrap between rows. The sentence tells you the answer.",
+    "To check you're on track: the answer begins with T."
+   ],
+   "technique": "Drop quote",
+   "length": 9
+  },
+  {
+   "id": 5,
+   "title": "Without A Net",
+   "flavor": "Seat them correctly first. Then each guest owes you the letter of their name that matches their seat number.",
+   "blocks": [
+    {
+     "type": "seating",
+     "seats": 7,
+     "names": [
+      "Justine",
+      "Mercedes",
+      "Fiona",
+      "Darius",
+      "Clarence",
+      "Winifred",
+      "Josephine"
+     ],
+     "clues": [
+      "Winifred has an end seat.",
+      "Mercedes sits somewhere to the left of Clarence.",
+      "Exactly 3 people sit between Clarence and Josephine.",
+      "Justine sits somewhere between Darius and Josephine.",
+      "Exactly one person sits between Darius and Winifred.",
+      "Exactly 2 people sit between Fiona and Justine."
+     ],
+     "logic": [
+      [
+       "end",
+       "WINIFRED"
+      ],
+      [
+       "left_of",
+       "MERCEDES",
+       "CLARENCE"
+      ],
+      [
+       "gap",
+       "CLARENCE",
+       "JOSEPHINE",
+       3
+      ],
+      [
+       "between",
+       "DARIUS",
+       "JUSTINE",
+       "JOSEPHINE"
+      ],
+      [
+       "gap",
+       "DARIUS",
+       "WINIFRED",
+       1
+      ],
+      [
+       "gap",
+       "FIONA",
+       "JUSTINE",
+       2
+      ]
+     ]
+    }
+   ],
+   "hash": "4943f5b1a394cd8208756ce1d37092d4750960d19d1ed921c49652cfd41c3c37",
+   "partials": {},
+   "hints": [
+    "A logic puzzle: use the clues to find the one seating that works (seats are numbered 1 to n from the left). Then the guest in seat k gives the k-th letter of their name.",
+    "To check you're on track: the answer begins with F."
+   ],
+   "technique": "Seating plan (logic)",
+   "length": 7
+  },
+  {
+   "id": 6,
+   "title": "Sideshow",
+   "flavor": "A snail's route through the letters: around the outside first, then tighter and tighter.",
+   "blocks": [
+    {
+     "type": "lettergrid",
+     "rows": [
+      "EWSNARUOY",
+      "RDTUBNAIC",
+      "FOWOHSREI",
+      "ONY····HG",
+      "ROO···TTA",
+      "TTUGOTIOM",
+      "HTELLTHES",
+      "ISPUZZLEI"
+     ]
+    }
+   ],
+   "hash": "e24d657ef972340e8c505f7f57e6e6ab772a00bd0b7e8dfbdf72440ac1c70875",
+   "partials": {},
+   "hints": [
+    "A sentence was written into the grid along a spiral, starting in one corner and winding inward. Find the corner and the direction, read the sentence (dots are padding), and it tells you the answer.",
+    "To check you're on track: the answer begins with M."
+   ],
+   "technique": "Spiral route",
+   "length": 8
+  },
+  {
+   "id": 7,
+   "title": "Hall Of Mirrors",
+   "flavor": "A mosaic under the big top was taken apart tile by tile, and all that was kept was the count of each run.",
+   "blocks": [
+    {
+     "type": "nonogram",
+     "rows": [
+      [
+       5,
+       5,
+       4,
+       4,
+       5,
+       4,
+       1,
+       1,
+       1,
+       1,
+       5,
+       5,
+       1
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       4,
+       4,
+       4,
+       4,
+       1,
+       3,
+       1,
+       1,
+       1,
+       5,
+       4,
+       4,
+       1
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       2,
+       2,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       5,
+       1,
+       1,
+       1,
+       1,
+       5,
+       4,
+       1,
+       1,
+       1,
+       1,
+       5,
+       5,
+       5
+      ]
+     ],
+     "cols": [
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       5
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       5
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ],
+     "givens": [
+      [
+       0,
+       34,
+       1
+      ],
+      [
+       3,
+       34,
+       1
+      ]
+     ]
+    }
+   ],
+   "hash": "bb0ec22b39e45069bbacb7070b69df3240a1a1c53d03b97591cde2337319db6d",
+   "partials": {},
+   "hints": [
+    "A nonogram (paint-by-numbers). The filled picture is the answer written in 5×5 block letters.",
+    "To check you're on track: the answer begins with F."
+   ],
+   "technique": "Nonogram",
+   "length": 11
+  }
+ ],
+ "meta": {
+  "title": "Meta: The Travelling Show",
+  "flavor": "Pigeonholes, each cut to fit one thing, and some of them marked.",
+  "blocks": [
+   {
+    "type": "fitgrid",
+    "rows": [
+     {
+      "len": 6,
+      "shade": 0
+     },
+     {
+      "len": 7,
+      "shade": 4
+     },
+     {
+      "len": 9,
+      "shade": 2
+     },
+     {
+      "len": 8,
+      "shade": 2
+     },
+     {
+      "len": 11,
+      "shade": 10
+     },
+     {
+      "len": 4,
+      "shade": 1
+     },
+     {
+      "len": 5,
+      "shade": 4
+     }
+    ]
+   }
+  ],
+  "length": 7,
+  "hash": "030ed92d9a3a7cd86b29e1e2a5c883cf8e43edf1ad152f2b698bde0a75a474db",
+  "hints": [
+   "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+   "To check you're on track: the final answer begins with J."
+  ]
+ },
+ "described": true
+}
