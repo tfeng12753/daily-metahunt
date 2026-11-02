@@ -1,0 +1,73 @@
+{
+ "date": "2026-11-01",
+ "number": 36,
+ "difficulty": "easy",
+ "final": "JUGGLER",
+ "metaType": "fitin",
+ "explain": "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Centre Ring",
+   "answer": "TAMER",
+   "mechanism": "Semaphore clocks",
+   "transform": null,
+   "encoded": "TAMER",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Greasepaint",
+   "answer": "TENT",
+   "mechanism": "Shredded sentence",
+   "transform": null,
+   "encoded": "TENT",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Sawdust",
+   "answer": "JESTER",
+   "mechanism": "Number trivia",
+   "transform": null,
+   "encoded": "JESTER",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Midway",
+   "answer": "TIGHTROPE",
+   "mechanism": "Drop quote",
+   "transform": null,
+   "encoded": "TIGHTROPE",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Without A Net",
+   "answer": "FORTUNE",
+   "mechanism": "Seating plan (logic)",
+   "transform": null,
+   "encoded": "FORTUNE",
+   "mutated": null
+  },
+  {
+   "id": 6,
+   "title": "Sideshow",
+   "answer": "MAGICIAN",
+   "mechanism": "Spiral route",
+   "transform": null,
+   "encoded": "MAGICIAN",
+   "mutated": null
+  },
+  {
+   "id": 7,
+   "title": "Hall Of Mirrors",
+   "answer": "FERRISWHEEL",
+   "mechanism": "Nonogram",
+   "transform": null,
+   "encoded": "FERRISWHEEL",
+   "mutated": null
+  }
+ ]
+}

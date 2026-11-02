@@ -1,0 +1,258 @@
+{
+ "date": "2026-11-02",
+ "difficulty": "easy",
+ "salt": "2026-11-02/easy",
+ "number": 37,
+ "round": "Opening Night",
+ "intro": "Ten minutes before curtain, every part in the pit has been swapped for something else, and the baton leader will not step onto the rostrum until the real scores are found. The stage manager sends the ushers to the dressing-room pigeonholes, where every slot is cut to suit one part and no other, the deeper holes for the longer works and the shallow ones for the short. As each recovered part is slipped into its true home, the little shadowed squares on the back panel begin to read downward, the way a sentence waits for its final word. Nobody needs to tell the players what to do with it; the hall has done this before.",
+ "echo": "The one person on stage who makes no sound at all.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Fermata",
+   "flavor": "Turn the wheel until the words come back.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "BQXDUM CQRB WXCN OJUU RWCX CQN FAXWP QJWMB YUNJBN OXAPNC CQN FXAM RWCNAVRBBRXW",
+     "wide": true,
+     "solver": "substitution",
+     "wheel": true
+    }
+   ],
+   "hash": "52c002e2de793f316cfa8be9858f4ce2649704caa12f217a993d4a536ae5dd69",
+   "partials": {},
+   "hints": [
+    "Every letter of the sentence was shifted along the alphabet by the same amount. Find the shift; the sentence tells you the answer.",
+    "To check you're on track: the answer begins with I."
+   ],
+   "technique": "Caesar shift",
+   "length": 12
+  },
+  {
+   "id": 2,
+   "title": "Pizzicato",
+   "flavor": "Someone wrote this out in a zigzag across five lines of the ledger, then copied each line out in turn.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "WYWWD DETNE EOOWO NRTNM ITOHO ELNUN RDTOE AOULT ETLOM YIEHW NRVQY NNXDA TEOEO E",
+     "wide": true,
+     "rails": 5
+    }
+   ],
+   "hash": "12248c600043fa890a351b818def84097439db58ff13f87c111f61158d8a5a5b",
+   "partials": {},
+   "hints": [
+    "Rail-fence transposition of a sentence with the spaces removed. Try 2 to 5 rails; the sentence tells you the answer.",
+    "To check you're on track: the answer begins with T."
+   ],
+   "technique": "Rail fence (cluephrase)",
+   "length": 5
+  },
+  {
+   "id": 3,
+   "title": "Dal Segno",
+   "flavor": "Fill the gaps. What you fill them with is the point.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "_ALCONY",
+      "SOPR_NO",
+      "SCO_E",
+      "T_MPANI",
+      "_RUMPET",
+      "XYL_PHONE",
+      "E_CORE",
+      "C_LLO"
+     ],
+     "ordered": true,
+     "mono": true
+    }
+   ],
+   "hash": "73131ca2c31b74313da7ae7503958adebd7ac628664c8678b33ed4157f43010d",
+   "partials": {},
+   "hints": [
+    "Each theme word is missing one letter. The missing letters, in order, spell the answer.",
+    "To check you're on track: the answer begins with B."
+   ],
+   "technique": "Missing letters",
+   "length": 8
+  },
+  {
+   "id": 4,
+   "title": "Grand Pause",
+   "flavor": "Cross off everything you recognise. What nobody claims is what you came for.",
+   "blocks": [
+    {
+     "type": "caption",
+     "text": "Hidden in the grid: 10 words to do with the concert hall (lengths 4, 4, 4, 4, 4, 5, 5, 5, 5, 6), running in any direction."
+    },
+    {
+     "type": "board",
+     "rows": [
+      "MEROCSO",
+      "UETULFT",
+      "AAEOPVA",
+      "RBMBRIG",
+      "IUPOAOE",
+      "ATOEHLL",
+      "THORNAE"
+     ],
+     "plain": true,
+     "words": [
+      "ARIA",
+      "FLUTE",
+      "HARP",
+      "HORN",
+      "LEGATO",
+      "OBOE",
+      "SCORE",
+      "TEMPO",
+      "TUBA",
+      "VIOLA"
+     ]
+    }
+   ],
+   "hash": "51c531e8a63ba12339a8543f95de62e33eefb916b3a5d58045c86e529723aced",
+   "partials": {},
+   "hints": [
+    "Find every hidden word (any of 8 directions). The unused letters, read left-to-right, top-to-bottom, spell the answer.",
+    "The hidden words are: ARIA, FLUTE, HARP, HORN, LEGATO, OBOE, SCORE, TEMPO, TUBA, VIOLA.",
+    "To check you're on track: the answer begins with M."
+   ],
+   "technique": "Word search leftovers",
+   "length": 4
+  },
+  {
+   "id": 5,
+   "title": "Con Sordino",
+   "flavor": "Typed in the dark, with one hand resting a single key out of place.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "NSDDPPM",
+     "big": true,
+     "shift": 1
+    }
+   ],
+   "hash": "960e87025204ab959dec696ca7bbc07a4e89ba6a1614d9e89e927e31b55f6874",
+   "partials": {},
+   "hints": [
+    "Every letter was typed one key to the side on a QWERTY keyboard.",
+    "To check you're on track: the answer begins with B."
+   ],
+   "technique": "Keyboard shift",
+   "length": 7
+  },
+  {
+   "id": 6,
+   "title": "Rehearsal Mark",
+   "flavor": "The knight never moves in a straight line, and neither does the truth in the concert hall.",
+   "blocks": [
+    {
+     "type": "board",
+     "rows": [
+      "RHPNUSVK",
+      "JNLBZBQK",
+      "VLGFAMHJ",
+      "TABMTMVG",
+      "MVLDHIQQ",
+      "TMRVLDIY",
+      "DSCMEEVB",
+      "YJSNWHWF"
+     ]
+    },
+    {
+     "type": "prose",
+     "text": "The knight sets out from b4: Nc2 Na1 Nb3 Nc5 Ne6 Nc7."
+    }
+   ],
+   "hash": "c4af68cd9ad0ca75220a99f1c6a5d49e91d2ccf4406556e5b36a812ba7e2942f",
+   "partials": {},
+   "hints": [
+    "Start on the given square and follow the knight moves; read the letter on each square it lands on.",
+    "To check you're on track: the answer begins with C."
+   ],
+   "technique": "Knight's path",
+   "length": 6
+  },
+  {
+   "id": 7,
+   "title": "Da Capo",
+   "flavor": "The navigator keeps pointing two ways at once.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "NW & S",
+      "NW & W",
+      "SE & SW",
+      "S & N",
+      "NW & NE",
+      "S & NW",
+      "NW & N",
+      "NW & W",
+      "W & E"
+     ],
+     "inline": true
+    }
+   ],
+   "hash": "6d35b1cfa15e52f324f5f4f0f434f33bf731735b02db8fb73986802d0333e045",
+   "partials": {},
+   "hints": [
+    "Flag semaphore, with each arm given as a compass direction as you face the signaller (N = straight up).",
+    "To check you're on track: the answer begins with C."
+   ],
+   "technique": "Semaphore (compass bearings)",
+   "length": 9
+  }
+ ],
+ "meta": {
+  "title": "Meta: Opening Night",
+  "flavor": "Everything in the concert hall has a place, and every place is exactly the right size.",
+  "blocks": [
+   {
+    "type": "fitgrid",
+    "rows": [
+     {
+      "len": 4,
+      "shade": 0
+     },
+     {
+      "len": 6,
+      "shade": 4
+     },
+     {
+      "len": 12,
+      "shade": 3
+     },
+     {
+      "len": 7,
+      "shade": 2
+     },
+     {
+      "len": 9,
+      "shade": 6
+     },
+     {
+      "len": 8,
+      "shade": 2
+     },
+     {
+      "len": 5,
+      "shade": 3
+     }
+    ]
+   }
+  ],
+  "length": 7,
+  "hash": "5196a47c17201c7e03a1cff3d840610a506787189da58d8980a3ab67cf5eff59",
+  "hints": [
+   "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+   "To check you're on track: the final answer begins with M."
+  ]
+ },
+ "described": true
+}

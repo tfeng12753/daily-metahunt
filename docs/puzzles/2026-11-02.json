@@ -1,0 +1,436 @@
+{
+ "date": "2026-11-02",
+ "difficulty": "hard",
+ "salt": "2026-11-02",
+ "number": 37,
+ "round": "Opening Night",
+ "intro": "Ten minutes before curtain, every part in the pit was swapped for something else. The conductor refuses to go on until the real score is found. The stage manager's ledger lies open on the desk, each player's name set beside a desk mark and a cue mark, as though the evening had been filed away in pairs. The violins are arguing in the wings, the brass are humming in the wrong keys, and the oboe has taken to polishing a music stand as if it were a window. The prompter's lamp is lit; the first violin is tapping the bars gently on the desk, softly, as if keeping time for a private dance. Nobody has touched the manager's cup of tea, still steaming in the half-dark.",
+ "echo": "No soloists tonight: everyone plays together, or nobody does.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Coda",
+   "flavor": "Walk the fence; don't read it.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "STTIE HLOHS OHDHO ELNHW GAPEF RTEDO NOLIN FLTTR NNSAE GTWRP AUSAO ODSEO R",
+     "wide": true,
+     "rails": 4
+    }
+   ],
+   "hash": "503dbdb5b4b4271856a00839d67398f5dde52a5e0cd06d6b2d13e1103e1b7c0d",
+   "partials": {},
+   "hints": [
+    "All the right letters are here, just out of order. Could they have been written along a path that goes up and down?"
+   ]
+  },
+  {
+   "id": 2,
+   "title": "Cadenza",
+   "flavor": "Some squares have been given to you for free.",
+   "blocks": [
+    {
+     "type": "nonogram",
+     "rows": [
+      [
+       4,
+       1,
+       3,
+       4,
+       5,
+       1,
+       1,
+       5,
+       5
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       2,
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       5,
+       4,
+       1,
+       1,
+       1,
+       1,
+       4,
+       1
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       2,
+       1,
+       1
+      ],
+      [
+       4,
+       5,
+       1,
+       1,
+       1,
+       1,
+       5,
+       1,
+       1,
+       5,
+       1
+      ]
+     ],
+     "cols": [
+      [
+       3
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [],
+      [
+       4
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       4
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       5
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ],
+     "givens": [
+      [
+       0,
+       12,
+       0
+      ],
+      [
+       1,
+       0,
+       1
+      ]
+     ]
+    }
+   ],
+   "hash": "e87e423616c988b5b105834343617d6e7620df0fa1147dc129f1ff622c89fdea",
+   "partials": {},
+   "hints": [
+    "The numbers describe runs of filled squares. What picture could they be drawing?"
+   ]
+  },
+  {
+   "id": 3,
+   "title": "Fermata",
+   "flavor": "Shaken, one word at a time.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "YUO",
+      "OWN",
+      "WDRO",
+      "EXTN",
+      "RWTIE",
+      "EHT",
+      "EHT",
+      "EODN",
+      "MYA",
+      "NOE",
+      "NO",
+      "TUEYLIQ",
+      "WLLE",
+      "OSCURH",
+      "OT",
+      "DNA",
+      "VEOM",
+      "WDNO"
+     ],
+     "inline": true,
+     "tray": "word"
+    }
+   ],
+   "hash": "0dbdbcad690bece6c171e23853be09db55d0e318dc1bd91b4d61dc0e7a318399",
+   "partials": {},
+   "hints": [
+    "Each word is complete but shuffled. Start with the shortest ones: does a sentence appear?"
+   ]
+  },
+  {
+   "id": 4,
+   "title": "Con Sordino",
+   "flavor": "The label is not decoration.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "VSZHC",
+     "big": true
+    }
+   ],
+   "hash": "e9c2debf72bda57f0b9878d63d4bbe3010bc8af62d120fde7ad1d427e5879bb4",
+   "partials": {},
+   "hints": [
+    "A cipher with a word for a key. Which famous one works like that, and what word on this page could open it?"
+   ]
+  },
+  {
+   "id": 5,
+   "title": "Da Capo",
+   "flavor": "A familiar grid, an unfamiliar alphabet. Whoever copied it out was standing in front of a mirror.",
+   "blocks": [
+    {
+     "type": "sudoku",
+     "size": 6,
+     "rows": [
+      ".....N",
+      ".FV...",
+      "..F..V",
+      "....R.",
+      ".....M",
+      ".GR..."
+     ],
+     "alphabet": "FGMNRV",
+     "marks": [
+      [
+       4,
+       2
+      ],
+      [
+       0,
+       4
+      ],
+      [
+       3,
+       5
+      ],
+      [
+       3,
+       0
+      ]
+     ]
+    }
+   ],
+   "hash": "3d5772c33068d3658e53e32d3276dea301019cd6790857a94dd87013d263d053",
+   "partials": {
+    "52337a37dd3f95db0c751def2b7bcacf2572a4ed4036b8f54947a07b684c7027": "You've decoded it, but it's not finished. One more layer."
+   },
+   "hints": [
+    "A familiar grid puzzle in unfamiliar clothes. Once it's done, are some squares more important than others? And if what you get still isn't a word, reread the flavour text."
+   ]
+  },
+  {
+   "id": 6,
+   "title": "Pizzicato",
+   "flavor": "Each column remembers what it held, but not in what order.",
+   "blocks": [
+    {
+     "type": "dropquote",
+     "cols": [
+      "BDEHT",
+      "AEH",
+      "BERW",
+      "EEIO",
+      "FLNPT",
+      "AEOOT",
+      "NRRS",
+      "ADEET",
+      "ET",
+      "AOTT",
+      "DHHR",
+      "EI",
+      "NTW",
+      "AGLY",
+      "IPS",
+      "ENT"
+     ],
+     "mask": [
+      "...#....#.....#.",
+      "..#........#....",
+      ".#......#...#...",
+      ".#....#....#...#",
+      "........########"
+     ]
+    }
+   ],
+   "hash": "a9b9ffd999f286049e62e51ad8a81f5037e06d5f4d44178f1dfe3c9fcb8950f0",
+   "partials": {},
+   "hints": [
+    "Black squares are spaces. Which two- and three-letter words fit, using only the letters each column allows?"
+   ]
+  }
+ ],
+ "meta": {
+  "title": "Meta: Opening Night",
+  "flavor": "The porter only ever noted where each passenger boarded.",
+  "blocks": [
+   {
+    "type": "list",
+    "items": [
+     "Platform 5, car 4",
+     "Platform 1, car 6",
+     "Platform 3, car 6",
+     "Platform 5, car 4",
+     "Platform 4, car 3",
+     "Platform 6, car 1",
+     "Platform 2, car 2",
+     "Platform 6, car 8"
+    ],
+    "ordered": true
+   }
+  ],
+  "length": 8,
+  "hash": "a034b79124473fb28e02bf39ba3cb29a00a855d8369c25da56457cd74e7deaf9",
+  "hints": [
+   "Every entry has two numbers. What in this round is numbered, and what could the second number count?"
+  ]
+ },
+ "described": true
+}

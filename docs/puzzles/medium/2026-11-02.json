@@ -1,0 +1,627 @@
+{
+ "date": "2026-11-02",
+ "difficulty": "medium",
+ "salt": "2026-11-02/medium",
+ "number": 37,
+ "round": "Opening Night",
+ "intro": "Ten minutes before curtain, every part in the pit was swapped for something else, and the conductor refuses to go on until the real score is found. The music librarian is going through the crates backstage, and in every one she finds a single sheet that does not belong: a stowaway folded into the wrong pocket. She lays each one on the table, and as she sorts them she notices that each stowaway carries the same small mark, like a note passed from player to player. She has begun writing the marks in a column down the side of her work list, though she cannot say what they add up to. The hall is full of the smell of rosin and the low hum of the audience, and the conductor waits.",
+ "echo": "Four movements, a hundred players, and Beethoven wrote nine of them.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Cadenza",
+   "flavor": "None of these clocks is broken. None of them tells the time.",
+   "blocks": [
+    {
+     "type": "clocks",
+     "items": [
+      [
+       7,
+       0
+      ],
+      [
+       2,
+       6
+      ],
+      [
+       1,
+       7
+      ],
+      [
+       5,
+       2
+      ],
+      [
+       0,
+       6
+      ],
+      [
+       4,
+       1
+      ],
+      [
+       0,
+       7
+      ],
+      [
+       6,
+       3
+      ]
+     ]
+    }
+   ],
+   "hash": "4918748e5a240df59fed5b99624dcd84fe5211ef9353ee45784470fc897ff9f6",
+   "partials": {
+    "5f0c7c8ce817747c4772c99354c6a40b42c6c7ae65a998806691803fd09b630c": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Imagine each of these as a person holding two flags out at arm's length. Sailors had an alphabet for that.",
+    "Flag semaphore: the two hands are the two arms, and each pair of angles is a letter."
+   ],
+   "length": 7
+  },
+  {
+   "id": 2,
+   "title": "Dal Segno",
+   "flavor": "Every answer is small, and none is bigger than it needs to be.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "Pawns on a chessboard at the start of a game",
+      "Players fielding for a baseball team",
+      "Years of marriage marked by a silver anniversary",
+      "Sides of a triangle",
+      "Primary colours of light",
+      "Red balls racked at the start of a snooker frame",
+      "Signs of the Western zodiac",
+      "Red balls racked at the start of a snooker frame"
+     ],
+     "ordered": true,
+     "tray": "letter"
+    }
+   ],
+   "hash": "b04887c662d56949d02d07d3880f7fe274724d92e0dd46734d7249c69ffc21c4",
+   "partials": {
+    "7399c981b1760e511009fdecd4b2838bfc0e04d8743a769bb46871f3423daf34": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Every line has a number for an answer. Could those numbers be counting through something else?",
+    "They're all between 1 and 26: A = 1, B = 2…"
+   ],
+   "length": 7
+  },
+  {
+   "id": 3,
+   "title": "Grand Pause",
+   "flavor": "Only the count of each run was kept.",
+   "blocks": [
+    {
+     "type": "nonogram",
+     "rows": [
+      [
+       4,
+       1,
+       1,
+       1,
+       3,
+       4,
+       5,
+       1,
+       1,
+       5,
+       5
+      ],
+      [
+       1,
+       1,
+       2,
+       2,
+       1,
+       1,
+       1,
+       1,
+       1,
+       2,
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       5,
+       4,
+       1,
+       1,
+       1,
+       1,
+       4,
+       1
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       2,
+       1,
+       1
+      ],
+      [
+       4,
+       5,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       5,
+       1,
+       1,
+       5,
+       1
+      ]
+     ],
+     "cols": [
+      [
+       3
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       5
+      ],
+      [],
+      [
+       4
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       4
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       5
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ],
+     "givens": [
+      [
+       0,
+       18,
+       0
+      ],
+      [
+       2,
+       14,
+       1
+      ],
+      [
+       4,
+       4,
+       1
+      ]
+     ]
+    }
+   ],
+   "hash": "777390e65b5a361e27412f403b668a5e3c6bb4f8dce24b51a66b036dad1f4ccb",
+   "partials": {
+    "9a5394b261843666adede2c454adee83136ca3ae32415e49da39d1c34f9ec8b2": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "The numbers describe runs of filled squares. What picture could they be drawing?",
+    "Paint by numbers. The picture is written, not drawn."
+   ],
+   "length": 8
+  },
+  {
+   "id": 4,
+   "title": "Tacet",
+   "flavor": "All the right letters, none in the right places.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "TISH",
+      "GPAE",
+      "ASH",
+      "KTEP",
+      "IST",
+      "TESREC",
+      "RFO",
+      "A",
+      "EYRV",
+      "ONGL",
+      "EITM",
+      "ADN",
+      "TATH",
+      "ETRESC",
+      "SI",
+      "FTERPO"
+     ],
+     "inline": true,
+     "tray": "word"
+    }
+   ],
+   "hash": "29eff6e177cbfaae307fe12b7386ea5bb897ef54fb5a6bc452751324a592cf6c",
+   "partials": {
+    "405c403ee8e82fa2f8327b67c5109aa0db59954ebe152d73c88265946657784f": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Each word is complete but shuffled. Start with the shortest ones: does a sentence appear?",
+    "Unscramble each word where it stands; the sentence tells you what to submit."
+   ],
+   "length": 5
+  },
+  {
+   "id": 5,
+   "title": "Con Sordino",
+   "flavor": "Everything that belongs is in there somewhere. Some things don't belong.",
+   "blocks": [
+    {
+     "type": "caption",
+     "text": "Hidden in the grid: 12 words to do with the concert hall."
+    },
+    {
+     "type": "board",
+     "rows": [
+      "TGCHORUS",
+      "ULNPRAHH",
+      "BPORCKNE",
+      "ARIAOMIE",
+      "TNSAUHSO",
+      "OPITNEOB",
+      "NTEMPORO",
+      "BALCONYL"
+     ],
+     "plain": true,
+     "words": [
+      "ARIA",
+      "BALCONY",
+      "BATON",
+      "CHORUS",
+      "HARP",
+      "HORN",
+      "MUTE",
+      "OBOE",
+      "PIANO",
+      "ROSIN",
+      "TEMPO",
+      "TUBA"
+     ]
+    }
+   ],
+   "hash": "5f657e19c3c74b48db24fde03811623e99086efa34c781a9e6aff551af369c0e",
+   "partials": {
+    "6a13633c9c04aafe41a094165f8e4b83fd4b9f749905a32b8ef9ac7b39ae8203": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Once every theme word is found, is anything left unclaimed? Read it in order.",
+    "Find the theme words; the letters no word uses, read row by row, are the answer.",
+    "The hidden words are: ARIA, BALCONY, BATON, CHORUS, HARP, HORN, MUTE, OBOE, PIANO, ROSIN, TEMPO, TUBA."
+   ],
+   "length": 12
+  },
+  {
+   "id": 6,
+   "title": "First Chair",
+   "flavor": "The host was particular about the seating, and more particular still about what each chair was worth.",
+   "blocks": [
+    {
+     "type": "seating",
+     "seats": 6,
+     "names": [
+      "Desmond",
+      "Anthony",
+      "Penelope",
+      "Julian",
+      "Philippa",
+      "Cordelia"
+     ],
+     "clues": [
+      "Julian sits somewhere between Desmond and Penelope.",
+      "Desmond sits somewhere between Cordelia and Julian.",
+      "Anthony and Julian are not neighbours.",
+      "Anthony sits somewhere between Julian and Penelope.",
+      "Philippa has seat 4."
+     ],
+     "logic": [
+      [
+       "between",
+       "DESMOND",
+       "JULIAN",
+       "PENELOPE"
+      ],
+      [
+       "between",
+       "CORDELIA",
+       "DESMOND",
+       "JULIAN"
+      ],
+      [
+       "apart",
+       "ANTHONY",
+       "JULIAN"
+      ],
+      [
+       "between",
+       "JULIAN",
+       "ANTHONY",
+       "PENELOPE"
+      ],
+      [
+       "at",
+       "PHILIPPA",
+       4
+      ]
+     ]
+    }
+   ],
+   "hash": "eb468542abb429c353428b9b784327e2d28fc79816bd2bc17623e26b1b8f4037",
+   "partials": {
+    "4f7135ec00438d8eae03cea1a8ca71ddc0584bda1478798d277ee4083382c187": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Only one arrangement satisfies every clue; start from whoever has an end seat or a fixed neighbour. Once they're seated, why might the seat numbers matter?",
+    "Solve the seating, then take the k-th letter of the name in seat k, left to right."
+   ],
+   "length": 5
+  },
+  {
+   "id": 7,
+   "title": "Coda",
+   "flavor": "A familiar grid, an unfamiliar alphabet. A baker's dozen steps separate this from the truth, in either direction.",
+   "blocks": [
+    {
+     "type": "sudoku",
+     "size": 9,
+     "rows": [
+      ".NC.E...F",
+      "...BVNE..",
+      "...Q.....",
+      "F.....N..",
+      "..K.N.CQ.",
+      "A....Q...",
+      "N..V.....",
+      "..QF...B.",
+      ".A...KQ.."
+     ],
+     "alphabet": "ABCEFKNQV",
+     "marks": [
+      [
+       8,
+       7
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       8,
+       4
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       8,
+       8
+      ],
+      [
+       7,
+       8
+      ],
+      [
+       7,
+       4
+      ],
+      [
+       4,
+       8
+      ]
+     ]
+    }
+   ],
+   "hash": "15d7b82a41709a97689de42310ed807b437a7873416d93adec4a9a4685a51521",
+   "partials": {
+    "c8db63c94fc92ae11c3f7fa4c07f1c85a218a231895efc759a6a40239c00c4da": "You've decoded it, but it's not finished. One more layer.",
+    "d129a4c4b474875b8b8bcd13c626e2e70b1465f0345c321d37c676927e2bc4a0": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "A familiar grid puzzle in unfamiliar clothes. Once it's done, are some squares more important than others? And if what you get still isn't a word, reread the flavour text.",
+    "Solve it like a sudoku, then read the numbered squares in order. Then one more layer: Shift every letter 13 places (A↔N)."
+   ],
+   "length": 7
+  },
+  {
+   "id": 8,
+   "title": "Tutti",
+   "flavor": "Walk the fence; don't read it.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "WDYAW TWEDM AOULT ETELO EOMYO WIEON HWRCY BLNMV QITYN OHNXO ELNUN RDTOY ADEEO TEN",
+     "wide": true,
+     "rails": 3
+    }
+   ],
+   "hash": "6cbf5e8b9577d39cb3f18f72ca72e88a30da19c97de3ee981ebb3a8a203b82d0",
+   "partials": {
+    "c3e1ff9e99d01b8e0fe9d1c4551cb27f6afb67b166345229a9cd5b0083ce2ba3": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "All the right letters are here, just out of order. Could they have been written along a path that goes up and down?",
+    "Rail fence: written in a zigzag over a few rows, then copied out row by row. Try two to five rows."
+   ],
+   "length": 6
+  }
+ ],
+ "meta": {
+  "title": "Meta: Opening Night",
+  "flavor": "Count heads at the gangway.",
+  "blocks": [],
+  "length": 8,
+  "hash": "cd810f4ed6f7691f150ee0fd7124f9f356d2f3025f72aa171a1f9f63b79c867c",
+  "hints": [
+   "Did every answer come out the right size the first time? Each had one letter too many. Did you keep them?",
+   "Take the extra letter from each feeder, in puzzle order."
+  ]
+ },
+ "described": true
+}

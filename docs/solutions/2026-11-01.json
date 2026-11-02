@@ -1,0 +1,82 @@
+{
+ "date": "2026-11-01",
+ "number": 36,
+ "difficulty": "hard",
+ "final": "CAROUSEL",
+ "metaType": "mutation",
+ "explain": "Each feeder decodes to its answer with a single wrong letter. Those substituted letters, in puzzle order, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Sideshow",
+   "answer": "FERRISWHEEL",
+   "mechanism": "Nonogram",
+   "transform": "Atbash (A↔Z mirror)",
+   "encoded": "UVIIRHXSVVO",
+   "mutated": "FERRISCHEEL"
+  },
+  {
+   "id": 2,
+   "title": "Centre Ring",
+   "answer": "BALLOON",
+   "mechanism": "Seating plan (logic)",
+   "transform": null,
+   "encoded": "BALLOAN",
+   "mutated": "BALLOAN"
+  },
+  {
+   "id": 3,
+   "title": "Roll Up",
+   "answer": "CANNONBALL",
+   "mechanism": "Braille as bit strings",
+   "transform": "ROT13",
+   "encoded": "PNAABAONYE",
+   "mutated": "CANNONBALR"
+  },
+  {
+   "id": 4,
+   "title": "Midway",
+   "answer": "SWORDSWALLOWER",
+   "mechanism": "Anagrams with an extra letter",
+   "transform": null,
+   "encoded": "SWORDSWAOLOWER",
+   "mutated": "SWORDSWAOLOWER"
+  },
+  {
+   "id": 5,
+   "title": "Without A Net",
+   "answer": "UNICYCLE",
+   "mechanism": "Morse code",
+   "transform": null,
+   "encoded": "UUICYCLE",
+   "mutated": "UUICYCLE"
+  },
+  {
+   "id": 6,
+   "title": "Grand Finale",
+   "answer": "CALLIOPE",
+   "mechanism": "Word search leftovers",
+   "transform": null,
+   "encoded": "CALLIOPS",
+   "mutated": "CALLIOPS"
+  },
+  {
+   "id": 7,
+   "title": "The Flying Act",
+   "answer": "DRUMROLL",
+   "mechanism": "Playfair keyed by the title",
+   "transform": null,
+   "encoded": "DEUMROLL",
+   "mutated": "DEUMROLL"
+  },
+  {
+   "id": 8,
+   "title": "Hall Of Mirrors",
+   "answer": "MAGICIAN",
+   "mechanism": "Rail fence (cluephrase)",
+   "transform": null,
+   "encoded": "MALICIAN",
+   "mutated": "MALICIAN"
+  }
+ ]
+}

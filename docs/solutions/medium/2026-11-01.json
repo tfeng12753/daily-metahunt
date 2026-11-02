@@ -1,0 +1,55 @@
+{
+ "date": "2026-11-01",
+ "number": 36,
+ "difficulty": "medium",
+ "final": "MENAGERIE",
+ "metaType": "logbook",
+ "explain": "Each entry is (puzzle number, letter number): index into that puzzle's answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Grand Finale",
+   "answer": "UNICYCLE",
+   "mechanism": "Knight's path",
+   "transform": null,
+   "encoded": "UNICYCLE",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Centre Ring",
+   "answer": "CANNONBALL",
+   "mechanism": "Number trivia",
+   "transform": null,
+   "encoded": "CANNONBALL",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Roll Up",
+   "answer": "ELEPHANT",
+   "mechanism": "Symbol cryptogram",
+   "transform": null,
+   "encoded": "ELEPHANT",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Sawdust",
+   "answer": "TAMER",
+   "mechanism": "Anagrams with an extra letter",
+   "transform": "Reversal",
+   "encoded": "REMAT",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Two Shows Daily",
+   "answer": "TIGER",
+   "mechanism": "Spiral route",
+   "transform": null,
+   "encoded": "TIGER",
+   "mutated": null
+  }
+ ]
+}
