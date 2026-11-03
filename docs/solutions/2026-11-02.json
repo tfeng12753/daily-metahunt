@@ -1,0 +1,64 @@
+{
+ "date": "2026-11-02",
+ "number": 37,
+ "difficulty": "hard",
+ "final": "ENSEMBLE",
+ "metaType": "logbook",
+ "explain": "Each entry is (puzzle number, letter number): index into that puzzle's answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Coda",
+   "answer": "SOPRANO",
+   "mechanism": "Rail fence (cluephrase)",
+   "transform": null,
+   "encoded": "SOPRANO",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Cadenza",
+   "answer": "CLARINET",
+   "mechanism": "Nonogram",
+   "transform": null,
+   "encoded": "CLARINET",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Fermata",
+   "answer": "CHORUS",
+   "mechanism": "Scrambled sentence",
+   "transform": null,
+   "encoded": "CHORUS",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Con Sordino",
+   "answer": "TEMPO",
+   "mechanism": "Vigenère keyed by the title",
+   "transform": null,
+   "encoded": "TEMPO",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Da Capo",
+   "answer": "MUTE",
+   "mechanism": "Letter sudoku",
+   "transform": "Atbash (A↔Z mirror)",
+   "encoded": "NFGV",
+   "mutated": null
+  },
+  {
+   "id": 6,
+   "title": "Pizzicato",
+   "answer": "BARITONE",
+   "mechanism": "Drop quote",
+   "transform": null,
+   "encoded": "BARITONE",
+   "mutated": null
+  }
+ ]
+}

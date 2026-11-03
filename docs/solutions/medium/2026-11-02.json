@@ -1,0 +1,82 @@
+{
+ "date": "2026-11-02",
+ "number": 37,
+ "difficulty": "medium",
+ "final": "SYMPHONY",
+ "metaType": "stowaway",
+ "explain": "Each feeder decodes to its answer plus one inserted letter. The inserted letters, in puzzle order, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Cadenza",
+   "answer": "TRUMPET",
+   "mechanism": "Semaphore clocks",
+   "transform": null,
+   "encoded": "TRUMPETS",
+   "mutated": "TRUMPETS"
+  },
+  {
+   "id": 2,
+   "title": "Dal Segno",
+   "answer": "PICCOLO",
+   "mechanism": "Number trivia",
+   "transform": null,
+   "encoded": "PIYCCOLO",
+   "mutated": "PIYCCOLO"
+  },
+  {
+   "id": 3,
+   "title": "Grand Pause",
+   "answer": "CLARINET",
+   "mechanism": "Nonogram",
+   "transform": null,
+   "encoded": "CLMARINET",
+   "mutated": "CLMARINET"
+  },
+  {
+   "id": 4,
+   "title": "Tacet",
+   "answer": "FORTE",
+   "mechanism": "Scrambled sentence",
+   "transform": null,
+   "encoded": "FORPTE",
+   "mutated": "FORPTE"
+  },
+  {
+   "id": 5,
+   "title": "Con Sordino",
+   "answer": "GLOCKENSPIEL",
+   "mechanism": "Word search leftovers",
+   "transform": null,
+   "encoded": "GLHOCKENSPIEL",
+   "mutated": "GLHOCKENSPIEL"
+  },
+  {
+   "id": 6,
+   "title": "First Chair",
+   "answer": "CELLO",
+   "mechanism": "Seating plan (logic)",
+   "transform": null,
+   "encoded": "CELLOO",
+   "mutated": "CELLOO"
+  },
+  {
+   "id": 7,
+   "title": "Coda",
+   "answer": "SOPRANO",
+   "mechanism": "Letter sudoku",
+   "transform": "ROT13",
+   "encoded": "FBCAENAB",
+   "mutated": "SOPNRANO"
+  },
+  {
+   "id": 8,
+   "title": "Tutti",
+   "answer": "CYMBAL",
+   "mechanism": "Rail fence (cluephrase)",
+   "transform": null,
+   "encoded": "CYYMBAL",
+   "mutated": "CYYMBAL"
+  }
+ ]
+}

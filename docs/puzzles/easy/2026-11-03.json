@@ -1,0 +1,225 @@
+{
+ "date": "2026-11-03",
+ "difficulty": "easy",
+ "salt": "2026-11-03/easy",
+ "number": 38,
+ "round": "The Endgame Study",
+ "intro": "At the end of the hall, behind the clock, the strongest players file their sheets past the old scoresheet rack: a row of pigeonholes sawn to fit one sheet each, every compartment a different depth, and a few lined with black baize. A champion resigned in a winning position, left the hall, and never played again; his scoresheet was not a game at all, yet it settled into the only compartment that matched it, and the attendant felt the black lining under his fingers. The club still keeps the sheets in order of length, and the marks left by the papers show that the interesting part is not the moves but the shadowed holes themselves. A newcomer should begin by seeing what the sheets have in common and where the darkness falls.",
+ "echo": "Every good opening starts by giving something away.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Sealed Move",
+   "flavor": "One alphabet was traded for another, one for one, and nobody bothered to hide where the words begin and end.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "EJML LJO WQISFOS WMSSFOG EMY CQL NQPG QS YOWSOLY XIL M YFCNPO EQSG XFYJQK",
+     "wide": true,
+     "solver": "substitution"
+    }
+   ],
+   "hash": "b9e99f1b3744b9e891588988501aff4fb6a6fa6bbde662e93cc42594e1f47af2",
+   "partials": {},
+   "hints": [
+    "Simple monoalphabetic substitution with word breaks kept. Solve the sentence; it tells you the answer.",
+    "To check you're on track: the answer begins with B."
+   ],
+   "technique": "Cryptogram (cluephrase)",
+   "length": 6
+  },
+  {
+   "id": 2,
+   "title": "Desperado",
+   "flavor": "Every word in the tournament hall went through the blender, but each one came out whole.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "SIHT",
+      "EAGP",
+      "SAH",
+      "PTKE",
+      "STI",
+      "ERESCT",
+      "OFR",
+      "A",
+      "YERV",
+      "NLOG",
+      "ETMI",
+      "ADN",
+      "THTA",
+      "TSCEER",
+      "SI",
+      "EPNONGI"
+     ],
+     "inline": true,
+     "tray": "word"
+    }
+   ],
+   "hash": "399fafed2de1a8d998e9233109eb8272290626e72d739426167ba8063701244b",
+   "partials": {},
+   "hints": [
+    "Each word of a sentence has had its letters shuffled. Unscramble them; the sentence tells you the answer.",
+    "To check you're on track: the answer begins with O."
+   ],
+   "technique": "Scrambled sentence",
+   "length": 7
+  },
+  {
+   "id": 3,
+   "title": "Queen's Gambit",
+   "flavor": "Start in a corner, follow the edge, and keep turning inward. Which corner, and which way, is up to you to find.",
+   "blocks": [
+    {
+     "type": "lettergrid",
+     "rows": [
+      "ELZZUPSI",
+      "IHTLLETH",
+      "SETOGUTT",
+      "EOI··OOR",
+      "XTT··YNO",
+      "CH···WOF",
+      "HERSHODR",
+      "ANGEBUTE",
+      "YOURANSW"
+     ]
+    }
+   ],
+   "hash": "917186d46d9cea6fb1934d4040e0ab0b29d04260fcdef8f534f3f32b5ecfe758",
+   "partials": {},
+   "hints": [
+    "A sentence was written into the grid along a spiral, starting in one corner and winding inward. Find the corner and the direction, read the sentence (dots are padding), and it tells you the answer.",
+    "To check you're on track: the answer begins with E."
+   ],
+   "technique": "Spiral route",
+   "length": 8
+  },
+  {
+   "id": 4,
+   "title": "Lucena Position",
+   "flavor": "Scrambled inventory. Each entry picked up one hitchhiker on the way through the machine.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "LTBIZG",
+      "SIHENLGR",
+      "FDANJAOR",
+      "ERAUSNQ",
+      "IDAADGNOL",
+      "ENHRMCF",
+      "NAAACLTA",
+      "UTSOOTPS",
+      "TECHATNIFTO",
+      "GIHETKN",
+      "CHKECR"
+     ],
+     "ordered": true,
+     "mono": true
+    }
+   ],
+   "hash": "756673a84deacdfe513f07c255c3096055655d8481c2e603457fdac382f03e1a",
+   "partials": {},
+   "hints": [
+    "Each jumble is an anagram of a word from this round's theme plus one extra letter. The extra letters, in order, spell the answer.",
+    "To check you're on track: the answer begins with G."
+   ],
+   "technique": "Anagrams with an extra letter",
+   "length": 11
+  },
+  {
+   "id": 5,
+   "title": "Zugzwang",
+   "flavor": "Every part described by its first two stripes, and nothing else.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "red–black",
+      "brown–green",
+      "red–brown",
+      "brown–grey",
+      "brown–yellow",
+      "black–brown",
+      "brown–orange",
+      "black–green",
+      "brown–yellow",
+      "red–black"
+     ]
+    }
+   ],
+   "hash": "560bafda33e4d911c66189da27cace8d01a4dea346b6f70652919d2b9cdf3224",
+   "partials": {},
+   "hints": [
+    "Resistor colour code: each pair of colours is two digits (black 0 … white 9), a letter position.",
+    "To check you're on track: the answer begins with T."
+   ],
+   "technique": "Resistor colour code (written)",
+   "length": 10
+  },
+  {
+   "id": 6,
+   "title": "Windmill",
+   "flavor": "Nothing was lost in transcription; everything simply moved over.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "RWNOI",
+     "big": true,
+     "shift": -1
+    }
+   ],
+   "hash": "44271b4b4ad81f582748cceb41b640af73a666c661d0b9960a9258ddc3fcc166",
+   "partials": {},
+   "hints": [
+    "Every letter was typed one key to the side on a QWERTY keyboard.",
+    "To check you're on track: the answer begins with T."
+   ],
+   "technique": "Keyboard shift",
+   "length": 5
+  }
+ ],
+ "meta": {
+  "title": "Meta: The Endgame Study",
+  "flavor": "Everything in the tournament hall has a place, and every place is exactly the right size.",
+  "blocks": [
+   {
+    "type": "fitgrid",
+    "rows": [
+     {
+      "len": 8,
+      "shade": 6
+     },
+     {
+      "len": 10,
+      "shade": 5
+     },
+     {
+      "len": 5,
+      "shade": 2
+     },
+     {
+      "len": 6,
+      "shade": 0
+     },
+     {
+      "len": 7,
+      "shade": 4
+     },
+     {
+      "len": 11,
+      "shade": 8
+     }
+    ]
+   }
+  ],
+  "length": 6,
+  "hash": "15175ce8522f18a39dba0c7dc28f3575fcef39bedceeb844d09b01fd24933fd9",
+  "hints": [
+   "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+   "To check you're on track: the final answer begins with G."
+  ]
+ },
+ "described": true
+}

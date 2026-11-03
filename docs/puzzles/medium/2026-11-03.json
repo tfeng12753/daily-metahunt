@@ -1,0 +1,224 @@
+{
+ "date": "2026-11-03",
+ "difficulty": "medium",
+ "salt": "2026-11-03/medium",
+ "number": 38,
+ "round": "The Endgame Study",
+ "intro": "The arbiter found the scoresheet in the pocket of the empty overcoat, wrapped around a single copper coin. The hall stood silent, the clocks still running, the grandmasters filing past without a glance at the board where the game had ended. On the table beside the table stood a ledger, its pages ruled in pairs, each entry a number and a number, kept in the same hand as the resignation note. No one in the hall spoke of it again, though the ledger stayed open, its ink still wet, as if someone had been waiting for someone to come and read it aloud.",
+ "echo": "No legal moves, not in check, and nobody wins.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Sealed Move",
+   "flavor": "One horseman, and a field full of noise.",
+   "blocks": [
+    {
+     "type": "board",
+     "rows": [
+      "QKWTCFCP",
+      "PTKRNXRM",
+      "UFOESDDL",
+      "ICRCIYSA",
+      "ZGYIAEPY",
+      "OGVNLFCX",
+      "XCIORCOF",
+      "NLGKRAIZ"
+     ]
+    },
+    {
+     "type": "prose",
+     "text": "The knight sets out from e6: Ng5 Ne4 Ng3 Ne2 Ng1 Nf3 Nd4 Nb5 Nd6."
+    }
+   ],
+   "hash": "3111d8daba35bba4816962957014c9a86baf387f2e46c15dc2888c4569f91f10",
+   "partials": {},
+   "hints": [
+    "Those are chess moves. Which squares does the piece land on, and what's written there?",
+    "Start on the given square, play each move, and read the letter on every square it lands on."
+   ],
+   "length": 9
+  },
+  {
+   "id": 2,
+   "title": "Time Trouble",
+   "flavor": "Walk the fence; don't read it.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "YAERS ZSGUN EHHHO TORNW ROTIP ZLIKI HBTOO TLTET ESOYU OIUSF HUENT DTLOR WGT",
+     "wide": true,
+     "rails": 3
+    }
+   ],
+   "hash": "0237ddcf4cf475c36c29e304de806adc66867a9daa58a3c8216dc19b12a22d6e",
+   "partials": {},
+   "hints": [
+    "All the right letters are here, just out of order. Could they have been written along a path that goes up and down?",
+    "Rail fence: written in a zigzag over a few rows, then copied out row by row. Try two to five rows."
+   ],
+   "length": 6
+  },
+  {
+   "id": 3,
+   "title": "Smothered Mate",
+   "flavor": "Caesar counted only things that could not be shared.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "XI",
+      "XLIII",
+      "VII",
+      "XVII",
+      "II",
+      "XLI",
+      "XI"
+     ],
+     "inline": true
+    }
+   ],
+   "hash": "c7ae5d830386a9c3aedd2ebb261dee10417be5e45db99441177910f40cef12f1",
+   "partials": {},
+   "hints": [
+    "Read the numerals. They're all prime. Is there a natural way to number the primes?",
+    "Find each prime's place in the list of primes (2 is 1st, 3 is 2nd…), then count through the alphabet."
+   ],
+   "length": 7
+  },
+  {
+   "id": 4,
+   "title": "Desperado",
+   "flavor": "A sentence in disguise, and not a very good disguise.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "CIA RABBFQA KFB IXUUAM XM JOFXM BXQIC FOO FOHMQ FMU XC BXRJOZ BFZB UXFQHMFO",
+     "wide": true,
+     "solver": "substitution"
+    }
+   ],
+   "hash": "2cb35b105e0aaa5b8f1ce9e2064fea545c5affac95fb3e32fe98c22cc5c3ad6c",
+   "partials": {},
+   "hints": [
+    "Which short words are most common in English? Could any of them be hiding here?",
+    "Each symbol always stands for the same letter. The finished sentence tells you what to submit."
+   ],
+   "length": 8
+  },
+  {
+   "id": 5,
+   "title": "Lucena Position",
+   "flavor": "It goes round and round, and only gets anywhere in the middle.",
+   "blocks": [
+    {
+     "type": "lettergrid",
+     "rows": [
+      "TDEPYTROT",
+      "HBAEDTNEA",
+      "EED···KWR",
+      "LFW···CEE",
+      "AOASCHENP",
+      "SRETHELIO",
+      "TTHINGTHE"
+     ]
+    }
+   ],
+   "hash": "90ef01b5c139de4a146880e589c816dbb9a4954f27b10ef7de48d75c31537026",
+   "partials": {},
+   "hints": [
+    "All the letters of a sentence are here, but not in rows. Try walking the grid the way a snail would.",
+    "Start in one corner and spiral inward along the edges; one corner and one direction read as a sentence."
+   ],
+   "length": 5
+  },
+  {
+   "id": 6,
+   "title": "Poisoned Pawn",
+   "flavor": "Every word ran into itself. The little numbers know where to look.",
+   "blocks": [
+    {
+     "type": "morselines",
+     "items": [
+      {
+       "code": ".-.--..-...........",
+       "len": 7,
+       "index": 6
+      },
+      {
+       "code": "-.-..-..----.-.-.-",
+       "len": 5,
+       "index": 5
+      },
+      {
+       "code": "---.--..-...-.--.",
+       "len": 7,
+       "index": 3
+      },
+      {
+       "code": ".--..-.---.",
+       "len": 4,
+       "index": 3
+      },
+      {
+       "code": ".-..--.-......--.--..",
+       "len": 8,
+       "index": 8
+      },
+      {
+       "code": "-...---.-.-.-..",
+       "len": 5,
+       "index": 4
+      }
+     ],
+     "bank": [
+      "BOARD",
+      "CLOCK",
+      "DRAGON",
+      "ENGLISH",
+      "EXCHANGE",
+      "FILE",
+      "KING",
+      "OPENING",
+      "PAWN",
+      "SICILIAN"
+     ]
+    }
+   ],
+   "hash": "15f74bf673392b546e2923823fee609f1002c8e8ff6e318c5cef454b69c355ac",
+   "partials": {},
+   "hints": [
+    "Two symbols, no spaces, and a letter count. Which old code is it, and which word from this round fits each line?",
+    "Each line is a theme word in Morse with the letter gaps removed; find it, then take the letter at the position shown."
+   ],
+   "length": 6
+  }
+ ],
+ "meta": {
+  "title": "Meta: The Endgame Study",
+  "flavor": "Tonight's seating chart.",
+  "blocks": [
+   {
+    "type": "list",
+    "items": [
+     "Row 6, seat 1",
+     "Row 2, seat 6",
+     "Row 1, seat 2",
+     "Row 4, seat 8",
+     "Row 5, seat 3",
+     "Row 3, seat 6",
+     "Row 4, seat 3",
+     "Row 2, seat 6",
+     "Row 6, seat 3"
+    ],
+    "ordered": true
+   }
+  ],
+  "length": 9,
+  "hash": "975551c26f61e70c4802949b464505931cd08355a468a5a1f8acd9a50d2adca4",
+  "hints": [
+   "Every entry has two numbers. What in this round is numbered, and what could the second number count?",
+   "The first number picks a puzzle; the second picks a letter inside its answer."
+  ]
+ },
+ "described": true
+}

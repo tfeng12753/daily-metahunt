@@ -1,0 +1,73 @@
+{
+ "date": "2026-11-02",
+ "number": 37,
+ "difficulty": "easy",
+ "final": "MAESTRO",
+ "metaType": "fitin",
+ "explain": "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Fermata",
+   "answer": "INTERMISSION",
+   "mechanism": "Caesar shift",
+   "transform": null,
+   "encoded": "INTERMISSION",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Pizzicato",
+   "answer": "TENOR",
+   "mechanism": "Rail fence (cluephrase)",
+   "transform": null,
+   "encoded": "TENOR",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Dal Segno",
+   "answer": "BARITONE",
+   "mechanism": "Missing letters",
+   "transform": null,
+   "encoded": "BARITONE",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Grand Pause",
+   "answer": "MUTE",
+   "mechanism": "Word search leftovers",
+   "transform": null,
+   "encoded": "MUTE",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Con Sordino",
+   "answer": "BASSOON",
+   "mechanism": "Keyboard shift",
+   "transform": null,
+   "encoded": "BASSOON",
+   "mutated": null
+  },
+  {
+   "id": 6,
+   "title": "Rehearsal Mark",
+   "answer": "CYMBAL",
+   "mechanism": "Knight's path",
+   "transform": null,
+   "encoded": "CYMBAL",
+   "mutated": null
+  },
+  {
+   "id": 7,
+   "title": "Da Capo",
+   "answer": "CONDUCTOR",
+   "mechanism": "Semaphore (compass bearings)",
+   "transform": null,
+   "encoded": "CONDUCTOR",
+   "mutated": null
+  }
+ ]
+}
