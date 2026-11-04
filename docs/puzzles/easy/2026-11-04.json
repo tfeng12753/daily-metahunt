@@ -1,0 +1,518 @@
+{
+ "date": "2026-11-04",
+ "difficulty": "easy",
+ "salt": "2026-11-04/easy",
+ "number": 39,
+ "round": "Hut Eight",
+ "intro": "The intercepts kept in the false-bottomed drawer were never logged, and the codebreakers knew better than to ask what else the war had left unrecorded. Each one was pinned to a page of a crossword, as if the compiler had decided every strip of intelligence deserved a home among the clues. At Hut Eight they sorted things the way the pigeonholes demanded: every slip, every return, every loose sheet had its own cut, and a sheet that did not fit was set aside until someone trimmed it. The newcomers learned fast that a pigeonhole takes only what it is cut to take, and that the shape of the hole decides what belongs inside.",
+ "echo": "Elgar wrote variations on it; the Kriegsmarine typed on it.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Shark",
+   "flavor": "Everything here has been weighed, not counted.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "39.098",
+      "18.998",
+      "14.007",
+      "28.085",
+      "1.008",
+      "24.305"
+     ],
+     "inline": true,
+     "variant": "masses"
+    }
+   ],
+   "hash": "5b5e94fd725c8a1bc3ea19c831738fcc016f0e087b1a3307e90cf35fbd0fba71",
+   "partials": {},
+   "hints": [
+    "Standard atomic masses: identify each element, then use its atomic number as a letter position.",
+    "To check you're on track: the answer begins with S."
+   ],
+   "technique": "Atomic numbers (by mass)",
+   "length": 6
+  },
+  {
+   "id": 2,
+   "title": "Cillies",
+   "flavor": "Paint by numbers. The picture is worth exactly one word.",
+   "blocks": [
+    {
+     "type": "nonogram",
+     "rows": [
+      [
+       3,
+       4,
+       1,
+       1,
+       5,
+       4,
+       3,
+       1,
+       5,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       2,
+       2,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       5,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       4,
+       5,
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       4,
+       1,
+       1,
+       5,
+       1,
+       1,
+       1,
+       1,
+       5,
+       1,
+       1
+      ]
+     ],
+     "cols": [
+      [
+       4
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       4
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       3
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       5
+      ],
+      [],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       4
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       4
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       3
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ],
+     "givens": [
+      [
+       0,
+       4,
+       0
+      ],
+      [
+       3,
+       38,
+       0
+      ],
+      [
+       0,
+       48,
+       1
+      ],
+      [
+       0,
+       51,
+       0
+      ],
+      [
+       3,
+       50,
+       1
+      ],
+      [
+       4,
+       39,
+       1
+      ],
+      [
+       0,
+       31,
+       1
+      ]
+     ]
+    }
+   ],
+   "hash": "1860dcb6bf6aaa6621f4b5d623a324e003ebd333d20e3e7a60c1f5356c582a88",
+   "partials": {},
+   "hints": [
+    "A nonogram (paint-by-numbers). The filled picture is the answer written in 5×5 block letters.",
+    "To check you're on track: the answer begins with A."
+   ],
+   "technique": "Nonogram",
+   "length": 9
+  },
+  {
+   "id": 3,
+   "title": "Herivel Tip",
+   "flavor": "Only one page of the book survived. Luckily, it was the only page anyone needed.",
+   "blocks": [
+    {
+     "type": "prose",
+     "text": "A drawer at Bletchley Park was found to have a false bottom. Beneath it: a stack of intercepts that were never logged, each one pinned to a different page of a crossword.",
+     "paper": true
+    },
+    {
+     "type": "list",
+     "items": [
+      "14.2",
+      "13.4",
+      "22.1",
+      "9.4",
+      "22.4",
+      "20.3",
+      "6.2",
+      "12.6"
+     ],
+     "inline": true
+    }
+   ],
+   "hash": "bc4f2ead6ba88853b56ee9e71d0e763bf6ba096aa0b352aa9fde90636c79fc35",
+   "partials": {},
+   "hints": [
+    "Each pair is word.letter into the recovered page (words split on spaces; punctuation ignored).",
+    "To check you're on track: the answer begins with T."
+   ],
+   "technique": "Book cipher",
+   "length": 8
+  },
+  {
+   "id": 4,
+   "title": "Rodding",
+   "flavor": "Someone on the pier is trying very hard to get your attention.",
+   "blocks": [
+    {
+     "type": "semaphore",
+     "items": [
+      [
+       2,
+       5
+      ],
+      [
+       4,
+       1
+      ],
+      [
+       6,
+       3
+      ],
+      [
+       3,
+       6
+      ],
+      [
+       5,
+       4
+      ],
+      [
+       3,
+       4
+      ],
+      [
+       1,
+       4
+      ]
+     ]
+    }
+   ],
+   "hash": "75c96017d1ea7a1f8b45085d43c487f75eae81da7f780ba2ae2e004edd346252",
+   "partials": {},
+   "hints": [
+    "Flag semaphore: read each figure's arm positions.",
+    "To check you're on track: the answer begins with M."
+   ],
+   "technique": "Semaphore (figures)",
+   "length": 7
+  },
+  {
+   "id": 5,
+   "title": "Enigma Variations",
+   "flavor": "A pub quiz where every answer is a count. Keep a tally, then keep counting.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "Holes on a full golf course",
+      "Squares in a noughts-and-crosses grid",
+      "Days in a fortnight",
+      "Continents on a standard world map"
+     ],
+     "ordered": true,
+     "tray": "letter"
+    }
+   ],
+   "hash": "1d6b60a526d99d21d4840f4d36d55c88d87981e4d159484ecd8cb61892c602aa",
+   "partials": {},
+   "hints": [
+    "Each line is a number from 1 to 26. Turn each number into a letter (A = 1, B = 2, …).",
+    "To check you're on track: the answer begins with R."
+   ],
+   "technique": "Number trivia",
+   "length": 4
+  },
+  {
+   "id": 6,
+   "title": "The Crib",
+   "flavor": "All the right letters, all in the right words, none in the right places.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "ULDSHO",
+      "TSIH",
+      "TONE",
+      "AFLL",
+      "TINO",
+      "HTE",
+      "ROGWN",
+      "HANSD",
+      "SLPEEA",
+      "GFERTO",
+      "HTE",
+      "WDRO",
+      "EXNDI"
+     ],
+     "inline": true,
+     "tray": "word"
+    }
+   ],
+   "hash": "90e98f2d142a6ba656bb9c169e8472f2a545ed1ae3c310f21fe16ee1576ac171",
+   "partials": {},
+   "hints": [
+    "Each word of a sentence has had its letters shuffled. Unscramble them; the sentence tells you the answer.",
+    "To check you're on track: the answer begins with I."
+   ],
+   "technique": "Scrambled sentence",
+   "length": 5
+  }
+ ],
+ "meta": {
+  "title": "Meta: Hut Eight",
+  "flavor": "Everything in Hut Eight has a place, and every place is exactly the right size.",
+  "blocks": [
+   {
+    "type": "fitgrid",
+    "rows": [
+     {
+      "len": 7,
+      "shade": 1
+     },
+     {
+      "len": 5,
+      "shade": 1
+     },
+     {
+      "len": 6,
+      "shade": 1
+     },
+     {
+      "len": 4,
+      "shade": 3
+     },
+     {
+      "len": 8,
+      "shade": 7
+     },
+     {
+      "len": 9,
+      "shade": 0
+     }
+    ]
+   }
+  ],
+  "length": 6,
+  "hash": "2a2e8e62a0382cc341d1329a942d1d186583d3e093f276436f0b0276ac1ffc8d",
+  "hints": [
+   "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+   "To check you're on track: the final answer begins with E."
+  ]
+ },
+ "described": true
+}

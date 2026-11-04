@@ -1,0 +1,218 @@
+{
+ "date": "2026-11-04",
+ "difficulty": "medium",
+ "salt": "2026-11-04/medium",
+ "number": 39,
+ "round": "Hut Eight",
+ "intro": "A drawer in Hut Eight was found to have a false bottom. Beneath it lay a stack of signals that were never logged, each pinned to a different page of a crossword, the paper smelling of beeswax and the long dust of unused pigeonholes. The codebreakers took them up without comment, spreading them across desks that already held cold tea and chipped mugs. Before standup the duty clerk reads the roll; every day the names fill the margin and still run to one more than the hut has bunks, and nobody asks about the extra hand. The clerks only sharpen their pencils, fold the pages smaller, and tuck the margin under the blotter.",
+ "echo": "Three wheels, turning one notch at a time, like an odometer that lies.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "The Crib",
+   "flavor": "Caesar counted only things that could not be shared. Whoever transcribed it held the alphabet up to a mirror.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "XVII",
+      "LXXIX",
+      "XXIII",
+      "XLVII",
+      "LXXIX",
+      "XXXI",
+      "XXIII",
+      "LXI",
+      "XLI",
+      "XVII",
+      "LXXIX",
+      "XXIII"
+     ],
+     "inline": true
+    }
+   ],
+   "hash": "28a1ec26a0c76994732c2f9774cb4e29aa4778136764cb969728797f2c0e7625",
+   "partials": {
+    "df580a5469a499ab66cf800260dc84788cad507238c751db99dc8a455cb62b3c": "You've decoded it, but it's not finished. One more layer.",
+    "b7907915182076a3c40c3df171d251651013ecaaea3ff6d9851bb6621eb8044c": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Read the numerals. They're all prime. Is there a natural way to number the primes? And if what you get still isn't a word, reread the flavour text.",
+    "Find each prime's place in the list of primes (2 is 1st, 3 is 2nd…), then count through the alphabet. Then one more layer: Turn the alphabet end to end: A for Z, B for Y."
+   ],
+   "length": 11
+  },
+  {
+   "id": 2,
+   "title": "Station X",
+   "flavor": "Shaken, one word at a time.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "VREEY",
+      "OOGD",
+      "NUTH",
+      "DENS",
+      "IWTH",
+      "A",
+      "NGLIES",
+      "ORWD",
+      "DAN",
+      "ETH",
+      "OWRD",
+      "YUO",
+      "TANW",
+      "FRMO",
+      "SITH",
+      "AGEP",
+      "SI",
+      "IPHSTACDO"
+     ],
+     "inline": true,
+     "tray": "word"
+    }
+   ],
+   "hash": "d0994e602bf914ac77b18ab85e8a3e41580904ac2c25f352e6b8f8913bed9ed5",
+   "partials": {
+    "e3e21ed60b6f8112f0c110748b68b72ea78cd9270b4f6e68008f96fff53b9b8c": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Each word is complete but shuffled. Start with the shortest ones: does a sentence appear?",
+    "Unscramble each word where it stands; the sentence tells you what to submit."
+   ],
+   "length": 8
+  },
+  {
+   "id": 3,
+   "title": "Cillies",
+   "flavor": "Rhythm without rests, and a finger pointing into each line. Unlucky for some: the letters were all nudged by the same unlucky amount.",
+   "blocks": [
+    {
+     "type": "morselines",
+     "items": [
+      {
+       "code": "-.-.-.--....--..--.-..",
+       "len": 8,
+       "index": 3
+      },
+      {
+       "code": ".--..-....---.-...---.-.-.-..",
+       "len": 9,
+       "index": 5
+      },
+      {
+       "code": "..-..-..--.-..-.-.-.-.-.--",
+       "len": 9,
+       "index": 6
+      },
+      {
+       "code": ".....--.-..-.-..",
+       "len": 6,
+       "index": 3
+      },
+      {
+       "code": "-.-..-.-..-.....-.",
+       "len": 7,
+       "index": 7
+      },
+      {
+       "code": ".-...---.--.-...---.-.-.-..",
+       "len": 9,
+       "index": 2
+      },
+      {
+       "code": "--........---..",
+       "len": 7,
+       "index": 1
+      }
+     ],
+     "bank": [
+      "CARRIER",
+      "CODEBOOK",
+      "DECRYPT",
+      "FREQUENCY",
+      "KEYSPACE",
+      "LAMPBOARD",
+      "MANSION",
+      "MESSAGE",
+      "PIGEON",
+      "PLUGBOARD",
+      "SIGNAL"
+     ]
+    }
+   ],
+   "hash": "daa8a1f23a6de60b9e80945d407c774a20b58216eafd3f922bcbe4c071b4b643",
+   "partials": {
+    "5a02f0057107d039a6220f1c58cac91ee3942b9cc3739c3156648c47ee538ddd": "You've decoded it, but it's not finished. One more layer.",
+    "2334633e6fb67a1252ac35a4a855bedad23fc8d2b88b7a20bd98cb741fc23f8c": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Two symbols, no spaces, and a letter count. Which old code is it, and which word from this round fits each line? And if what you get still isn't a word, reread the flavour text.",
+    "Each line is a theme word in Morse with the letter gaps removed; find it, then take the letter at the position shown. Then one more layer: Shift every letter 13 places (A↔N)."
+   ],
+   "length": 6
+  },
+  {
+   "id": 4,
+   "title": "Shark",
+   "flavor": "Room numbers in a hotel where nobody reads with their eyes.",
+   "blocks": [
+    {
+     "type": "numbers",
+     "items": [
+      37,
+      21,
+      3,
+      21,
+      1,
+      30
+     ]
+    }
+   ],
+   "hash": "b93e866796a3b30ffde8c8e004a2a80f6396f545f80ef818fe7774dc17497304",
+   "partials": {
+    "f2871c26e4d10182233ae23e4269313f7641f6c0cad82a3fb29f32d66d83ae4b": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Write each number in binary. Six yes-or-no choices: is there an alphabet built from exactly that?",
+    "Braille: each bit is one of the six dots (1, 2, 4 down the left column; 8, 16, 32 down the right)."
+   ],
+   "length": 5
+  },
+  {
+   "id": 5,
+   "title": "Menu",
+   "flavor": "Typed in the dark, with one hand resting a key out of place.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "UBRWEXEWOR",
+     "big": true,
+     "shift": -1
+    }
+   ],
+   "hash": "297bdfa4b5197009b7717d2fc3322c1ddfe15ca86fb2c73a84f384d93ed53a6f",
+   "partials": {
+    "bf7a39c74ccc21416bb7402f3067a1033cf3f38bb9336a8269978e7ef1d86649": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Every letter is close to the right one. Close on what? Look down at your hands.",
+    "QWERTY: every letter was typed one key to the side. Try shifting each one back, both directions."
+   ],
+   "length": 9
+  }
+ ],
+ "meta": {
+  "title": "Meta: Hut Eight",
+  "flavor": "Everything arrived a little heavier than it left.",
+  "blocks": [],
+  "length": 5,
+  "hash": "e9cd652933907873ceb54193134aa6c805dba9ea8b7c2f09080c5714160823c4",
+  "hints": [
+   "Did every answer come out the right size the first time? Each had one letter too many. Did you keep them?",
+   "Take the extra letter from each feeder, in puzzle order."
+  ]
+ },
+ "described": true
+}

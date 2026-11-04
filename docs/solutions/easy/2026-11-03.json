@@ -1,0 +1,64 @@
+{
+ "date": "2026-11-03",
+ "number": 38,
+ "difficulty": "easy",
+ "final": "GAMBIT",
+ "metaType": "fitin",
+ "explain": "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Sealed Move",
+   "answer": "BISHOP",
+   "mechanism": "Cryptogram (cluephrase)",
+   "transform": null,
+   "encoded": "BISHOP",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Desperado",
+   "answer": "OPENING",
+   "mechanism": "Scrambled sentence",
+   "transform": null,
+   "encoded": "OPENING",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Queen's Gambit",
+   "answer": "EXCHANGE",
+   "mechanism": "Spiral route",
+   "transform": null,
+   "encoded": "EXCHANGE",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Lucena Position",
+   "answer": "GRANDMASTER",
+   "mechanism": "Anagrams with an extra letter",
+   "transform": null,
+   "encoded": "GRANDMASTER",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Zugzwang",
+   "answer": "TOURNAMENT",
+   "mechanism": "Resistor colour code (written)",
+   "transform": null,
+   "encoded": "TOURNAMENT",
+   "mutated": null
+  },
+  {
+   "id": 6,
+   "title": "Windmill",
+   "answer": "TEMPO",
+   "mechanism": "Keyboard shift",
+   "transform": null,
+   "encoded": "TEMPO",
+   "mutated": null
+  }
+ ]
+}

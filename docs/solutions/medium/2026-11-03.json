@@ -1,0 +1,64 @@
+{
+ "date": "2026-11-03",
+ "number": 38,
+ "difficulty": "medium",
+ "final": "STALEMATE",
+ "metaType": "logbook",
+ "explain": "Each entry is (puzzle number, letter number): index into that puzzle's answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Sealed Move",
+   "answer": "SACRIFICE",
+   "mechanism": "Knight's path",
+   "transform": null,
+   "encoded": "SACRIFICE",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Time Trouble",
+   "answer": "KNIGHT",
+   "mechanism": "Rail fence (cluephrase)",
+   "transform": null,
+   "encoded": "KNIGHT",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Smothered Mate",
+   "answer": "ENDGAME",
+   "mechanism": "Prime indices in Roman numerals",
+   "transform": null,
+   "encoded": "ENDGAME",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Desperado",
+   "answer": "DIAGONAL",
+   "mechanism": "Cryptogram (cluephrase)",
+   "transform": null,
+   "encoded": "DIAGONAL",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Lucena Position",
+   "answer": "CHECK",
+   "mechanism": "Spiral route",
+   "transform": null,
+   "encoded": "CHECK",
+   "mutated": null
+  },
+  {
+   "id": 6,
+   "title": "Poisoned Pawn",
+   "answer": "SKEWER",
+   "mechanism": "Gapless Morse",
+   "transform": null,
+   "encoded": "SKEWER",
+   "mutated": null
+  }
+ ]
+}
