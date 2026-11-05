@@ -1,0 +1,64 @@
+{
+ "date": "2026-11-04",
+ "number": 39,
+ "difficulty": "hard",
+ "final": "CIPHER",
+ "metaType": "mutation",
+ "explain": "Each feeder decodes to its answer with a single wrong letter. Those substituted letters, in puzzle order, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Menu",
+   "answer": "WIRELESS",
+   "mechanism": "Prime indices in Roman numerals",
+   "transform": null,
+   "encoded": "WIRELCSS",
+   "mutated": "WIRELCSS"
+  },
+  {
+   "id": 2,
+   "title": "Cillies",
+   "answer": "INTERCEPT",
+   "mechanism": "Baconian cipher",
+   "transform": "Atbash (A↔Z mirror)",
+   "encoded": "RMGVIXRKG",
+   "mutated": "INTERCIPT"
+  },
+  {
+   "id": 3,
+   "title": "Depth",
+   "answer": "TELEGRAM",
+   "mechanism": "Scrambled sentence",
+   "transform": null,
+   "encoded": "TELEPRAM",
+   "mutated": "TELEPRAM"
+  },
+  {
+   "id": 4,
+   "title": "Banburismus",
+   "answer": "TELEPRINTER",
+   "mechanism": "Spiral route",
+   "transform": null,
+   "encoded": "TELHPRINTER",
+   "mutated": "TELHPRINTER"
+  },
+  {
+   "id": 5,
+   "title": "Room Forty",
+   "answer": "LORENZ",
+   "mechanism": "Semaphore (figures)",
+   "transform": null,
+   "encoded": "LERENZ",
+   "mutated": "LERENZ"
+  },
+  {
+   "id": 6,
+   "title": "Kiss",
+   "answer": "DISPATCH",
+   "mechanism": "Shredded sentence",
+   "transform": null,
+   "encoded": "DRSPATCH",
+   "mutated": "DRSPATCH"
+  }
+ ]
+}

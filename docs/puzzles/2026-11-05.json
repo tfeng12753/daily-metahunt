@@ -1,0 +1,429 @@
+{
+ "date": "2026-11-05",
+ "difficulty": "hard",
+ "salt": "2026-11-05",
+ "number": 40,
+ "round": "Dead Men's Chest",
+ "intro": "The old skipper died with the chart in his head, and being a suspicious soul he had it pressed into the crew's skin in fragments, so the sea would never take the whole of it at once. Each morning the men rinse off the salt and rub the fresh ink smooth, and by noon the same strange smudge has settled on the inner wrist of every sailor, in the same place it settled yesterday. The bosun blames the salt, but the mate who mixes the ink only frowns and checks the glass. We have learned to leave our wrists alone when the swab comes round, and the ship keeps moving. Nobody speaks of the chart as a whole, least of all the men who can feel it itching under the bandage.",
+ "echo": "Fletcher Christian took the Bounty. The crew here are considering something similar.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Davy Jones",
+   "flavor": "Everything in its place, and nothing twice. Something in here has been through the looking glass.",
+   "blocks": [
+    {
+     "type": "sudoku",
+     "size": 6,
+     "rows": [
+      "..X...",
+      ".K.G..",
+      "...Z..",
+      "ZG.K..",
+      ".X....",
+      "....KR"
+     ],
+     "alphabet": "GKNRXZ",
+     "marks": [
+      [
+       3,
+       5
+      ],
+      [
+       5,
+       1
+      ],
+      [
+       4,
+       0
+      ],
+      [
+       2,
+       5
+      ],
+      [
+       4,
+       5
+      ],
+      [
+       4,
+       2
+      ],
+      [
+       0,
+       1
+      ]
+     ]
+    }
+   ],
+   "hash": "5aedc07161157d6fca76970dd0aa187bf6a630683716ab2f8938dd9c5e0fbc0b",
+   "partials": {
+    "19de9a0703da7538317a66080fc83f49ff6c76523084000153856424d25570ac": "You've decoded it, but it's not finished. One more layer.",
+    "6ad9f3b87de7c3a5d0003529717f8e88fd102c7ab860e7a66b58b108d8cfc8b6": "So close. Exactly one thing is wrong here. Fix it (and remember what you fixed)."
+   },
+   "hints": [
+    "A familiar grid puzzle in unfamiliar clothes. Once it's done, are some squares more important than others? And if what you get still isn't a word, reread the flavour text."
+   ]
+  },
+  {
+   "id": 2,
+   "title": "Shore Leave",
+   "flavor": "Everything that belongs is in there somewhere. Some things don't belong. The tape was spooled back onto the wrong reel.",
+   "blocks": [
+    {
+     "type": "caption",
+     "text": "Somewhere in here: things to do with the ship."
+    },
+    {
+     "type": "board",
+     "rows": [
+      "KEGLIBK",
+      "COTSAMO",
+      "TEKSUMO",
+      "KRAKENH",
+      "LLUKSMU",
+      "KEELIAS",
+      "AHKNALP"
+     ],
+     "plain": true,
+     "words": [
+      "BILGE",
+      "HOOK",
+      "KEEL",
+      "KRAKEN",
+      "MAST",
+      "MUSKET",
+      "PLANK",
+      "SAIL",
+      "SKULL"
+     ]
+    }
+   ],
+   "hash": "fe7a986de571893363bf23327ef41eaf745402e858ff6f03e2b2fe0b0a3fc8f7",
+   "partials": {
+    "5c1e5cadb738df167cd7b26b4b15f8ef3c08af85ba776fc9f111c037ee19d8fb": "You've decoded it, but it's not finished. One more layer.",
+    "8569ee27c835c68be6d831725f8baa53010815dc1cbe4a5a1c6dd55670a804d0": "So close. Exactly one thing is wrong here. Fix it (and remember what you fixed)."
+   },
+   "hints": [
+    "Once every theme word is found, is anything left unclaimed? Read it in order. And if what you get still isn't a word, reread the flavour text.",
+    "The hidden words are: BILGE, HOOK, KEEL, KRAKEN, MAST, MUSKET, PLANK, SAIL, SKULL."
+   ]
+  },
+  {
+   "id": 3,
+   "title": "The Brig",
+   "flavor": "The picture is worth exactly one word.",
+   "blocks": [
+    {
+     "type": "nonogram",
+     "rows": [
+      [
+       4,
+       3,
+       4,
+       4,
+       5,
+       1
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       4,
+       5,
+       4,
+       4,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       4,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       5
+      ]
+     ],
+     "cols": [
+      [
+       5
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       4
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       4
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ],
+     "givens": [
+      [
+       0,
+       10,
+       0
+      ]
+     ]
+    }
+   ],
+   "hash": "263c5d4cc93cfcb26807373eae95207a44fa73f03a5b3100bad302e6eb393c32",
+   "partials": {
+    "1c7929c218e57b7f9085f318f9f811722a116ed22d67802db8f8344a3d6054bc": "So close. Exactly one thing is wrong here. Fix it (and remember what you fixed)."
+   },
+   "hints": [
+    "The numbers describe runs of filled squares. What picture could they be drawing?"
+   ]
+  },
+  {
+   "id": 4,
+   "title": "Black Spot",
+   "flavor": "The Senate admitted only the indivisible.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "LIII",
+      "II",
+      "LXI",
+      "LXI",
+      "XLVII",
+      "XXIII"
+     ],
+     "inline": true
+    }
+   ],
+   "hash": "97d9c6194b8bf53be0265fed3e8dbc57f7b7a1dee9a2446bdc45db8b1ccbc99e",
+   "partials": {
+    "bbb1abe461680e3fc857359960b39c0da81c669bb9180e120004cdb4a1f8f7bf": "So close. Exactly one thing is wrong here. Fix it (and remember what you fixed)."
+   },
+   "hints": [
+    "Read the numerals. They're all prime. Is there a natural way to number the primes?"
+   ]
+  },
+  {
+   "id": 5,
+   "title": "Walk The Plank",
+   "flavor": "All the right letters, none in the right places.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "UORY",
+      "OUY",
+      "TI",
+      "OD",
+      "LELT",
+      "STIH",
+      "OHW",
+      "ETH",
+      "SRHTEO",
+      "OGT",
+      "ANLNRTN",
+      "TON",
+      "ZZUELP",
+      "RFO",
+      "RWNASE",
+      "TBU",
+      "SI"
+     ],
+     "inline": true,
+     "tray": "word"
+    }
+   ],
+   "hash": "08965b826cb57125fb5e4caa19cfe4e56e839e4643aac566a5c16b1eb253fe47",
+   "partials": {
+    "19429985c380222c21b961cc394a1623c3761bfbba5a21115e7bdbb19b3bf162": "So close. Exactly one thing is wrong here. Fix it (and remember what you fixed)."
+   },
+   "hints": [
+    "Each word is complete but shuffled. Start with the shortest ones: does a sentence appear?"
+   ]
+  },
+  {
+   "id": 6,
+   "title": "Pieces Of Eight",
+   "flavor": "The operator never once took a breath.",
+   "blocks": [
+    {
+     "type": "morselines",
+     "items": [
+      {
+       "code": ".-...--.--...-.--.",
+       "len": 7,
+       "index": 2
+      },
+      {
+       "code": "....--.-.----..-...-......",
+       "len": 8,
+       "index": 1
+      },
+      {
+       "code": ".-.--..--..---.-.....",
+       "len": 8,
+       "index": 2
+      },
+      {
+       "code": "....-...-..",
+       "len": 4,
+       "index": 2
+      },
+      {
+       "code": "--...--..--.---.---....-.",
+       "len": 9,
+       "index": 3
+      },
+      {
+       "code": "-...-.-.-.-",
+       "len": 4,
+       "index": 1
+      }
+     ]
+    }
+   ],
+   "hash": "7d15e14f528905f4202de306c723e7e654954c9be0f1d59f7bfe7018e55b1eb9",
+   "partials": {
+    "3199a72871e81673a5a40a3ab7f1cb27f61d7f7519024ae74797ef8a9d204235": "So close. Exactly one thing is wrong here. Fix it (and remember what you fixed)."
+   },
+   "hints": [
+    "Two symbols, no spaces, and a letter count. Which old code is it, and which word from this round fits each line?"
+   ]
+  }
+ ],
+ "meta": {
+  "title": "Meta: Dead Men's Chest",
+  "flavor": "Nothing reached the ship undamaged. The damage, though, was remarkably consistent.",
+  "blocks": [],
+  "length": 6,
+  "hash": "fb9530fbbf1beeec0a94122759e44373434c53856f99946659beba4478ff32fb",
+  "hints": [
+   "Did every answer come out clean the first time? Each had exactly one wrong letter. Did you keep them?"
+  ]
+ },
+ "described": true
+}

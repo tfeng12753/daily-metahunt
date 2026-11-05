@@ -1,0 +1,724 @@
+{
+ "date": "2026-11-05",
+ "difficulty": "easy",
+ "salt": "2026-11-05/easy",
+ "number": 40,
+ "round": "Dead Men's Chest",
+ "intro": "The old skipper died with the chart in his skull, but he was a suspicious soul and had it pricked into pieces across the backs and forearms of everyone aboard. The seven answers from Articles, Keelhauled, Walk The Plank, Letter Of Marque, Dead Reckoning, Black Spot and Shore Leave are still damp with brine, and the mate has brought up a rack of iron clips from the ship's store, each slot filed to a different mouth so a word of one length drops through while the next jams at the lip. Every clip has its own private width; nothing longer can squeeze in, nothing shorter rattles home. The rack is bolted where the lantern hangs, and the clips that matter are scorched black, a mark the old man left while tattooing the crew. We lay the answers across the rack until each sits in the only mouth made for it, then read the burnt clips downward and let the map finish itself.",
+ "echo": "The ship's articles set out exactly how the spoils would be divided.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Articles",
+   "flavor": "An inventory of the ship, tangled up. Whatever is left over when every item is accounted for is yours.",
+   "blocks": [
+    {
+     "type": "caption",
+     "text": "Hidden in the grid: 9 words to do with the ship (lengths 4, 4, 5, 5, 5, 6, 6, 6, 7), running in any direction."
+    },
+    {
+     "type": "board",
+     "rows": [
+      "SSAPMOC",
+      "SRNAPUR",
+      "ABURLTO",
+      "IISRASH",
+      "LLOONAC",
+      "MGBTKMN",
+      "LERRABA"
+     ],
+     "plain": true,
+     "words": [
+      "ANCHOR",
+      "BARREL",
+      "BILGE",
+      "BOSUN",
+      "COMPASS",
+      "MAST",
+      "PARROT",
+      "PLANK",
+      "SAIL"
+     ]
+    }
+   ],
+   "hash": "f0e07092bad6cf39f7415a8b97345a2a02c112c4450dd92b5adb0b631c1ffada",
+   "partials": {},
+   "hints": [
+    "Find every hidden word (any of 8 directions). The unused letters, read left-to-right, top-to-bottom, spell the answer.",
+    "The hidden words are: ANCHOR, BARREL, BILGE, BOSUN, COMPASS, MAST, PARROT, PLANK, SAIL.",
+    "To check you're on track: the answer begins with R."
+   ],
+   "technique": "Word search leftovers",
+   "length": 3
+  },
+  {
+   "id": 2,
+   "title": "Keelhauled",
+   "flavor": "Fill in the blanks, literally. Some squares have been given to you for free.",
+   "blocks": [
+    {
+     "type": "nonogram",
+     "rows": [
+      [
+       3,
+       1,
+       1,
+       3,
+       4,
+       5,
+       5,
+       4,
+       1,
+       1,
+       3,
+       4,
+       5,
+       5,
+       4
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       2,
+       2,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       5,
+       4,
+       1,
+       4,
+       4,
+       1,
+       1,
+       1,
+       5,
+       3,
+       1,
+       4,
+       4
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       2,
+       1,
+       3,
+       1,
+       1,
+       1,
+       1,
+       1,
+       5,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       4,
+       1,
+       5,
+       1,
+       1
+      ]
+     ],
+     "cols": [
+      [
+       3
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       2,
+       1
+      ],
+      [],
+      [
+       4
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       4
+      ],
+      [],
+      [
+       4
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       4
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       5
+      ],
+      [],
+      [
+       4
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       4
+      ],
+      [],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "givens": [
+      [
+       4,
+       54,
+       1
+      ],
+      [
+       4,
+       6,
+       0
+      ],
+      [
+       0,
+       15,
+       1
+      ],
+      [
+       0,
+       52,
+       0
+      ],
+      [
+       0,
+       54,
+       0
+      ]
+     ]
+    }
+   ],
+   "hash": "7ebcaa975ad86172aea3d103ff67c75525215adcacca4e421c95a25a7d68d6d7",
+   "partials": {},
+   "hints": [
+    "A nonogram (paint-by-numbers). The filled picture is the answer written in 5×5 block letters.",
+    "To check you're on track: the answer begins with Q."
+   ],
+   "technique": "Nonogram",
+   "length": 13
+  },
+  {
+   "id": 3,
+   "title": "Walk The Plank",
+   "flavor": "The labels aboard the ship have faded. Each one lost exactly one letter.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "PE_LEG",
+      "SC_RVY",
+      "RIGGI_G",
+      "_LANK",
+      "LAGO_N",
+      "SHIP_RECK",
+      "_OUBLOON",
+      "LANT_RN",
+      "HARBO_"
+     ],
+     "ordered": true,
+     "mono": true
+    }
+   ],
+   "hash": "bc697adf87ccfd03221e60f09c030b7f09ee6f65f9b4eaa87ba5a2df03020426",
+   "partials": {},
+   "hints": [
+    "Each theme word is missing one letter. The missing letters, in order, spell the answer.",
+    "To check you're on track: the answer begins with G."
+   ],
+   "technique": "Missing letters",
+   "length": 9
+  },
+  {
+   "id": 4,
+   "title": "Letter Of Marque",
+   "flavor": "Place cards, a long table and a host who counts: seat one, first letter; seat two, second letter; and so on down the row.",
+   "blocks": [
+    {
+     "type": "seating",
+     "seats": 7,
+     "names": [
+      "Caspian",
+      "Fabian",
+      "Cyprian",
+      "Cedric",
+      "Greta",
+      "Hector",
+      "Ignatius"
+     ],
+     "clues": [
+      "Exactly 2 people sit between Cyprian and Ignatius.",
+      "Exactly 2 people sit between Caspian and Hector.",
+      "Caspian and Ignatius sit side by side.",
+      "Exactly 2 people sit between Cedric and Hector.",
+      "Cyprian and Greta are not neighbours.",
+      "Caspian has seat 7."
+     ],
+     "logic": [
+      [
+       "gap",
+       "CYPRIAN",
+       "IGNATIUS",
+       2
+      ],
+      [
+       "gap",
+       "CASPIAN",
+       "HECTOR",
+       2
+      ],
+      [
+       "beside",
+       "CASPIAN",
+       "IGNATIUS"
+      ],
+      [
+       "gap",
+       "CEDRIC",
+       "HECTOR",
+       2
+      ],
+      [
+       "apart",
+       "CYPRIAN",
+       "GRETA"
+      ],
+      [
+       "at",
+       "CASPIAN",
+       7
+      ]
+     ]
+    }
+   ],
+   "hash": "5d316d172625d590209cafda10afd9c4181cf0e1484307e927e26e9261e85931",
+   "partials": {},
+   "hints": [
+    "A logic puzzle: use the clues to find the one seating that works (seats are numbered 1 to n from the left). Then the guest in seat k gives the k-th letter of their name.",
+    "To check you're on track: the answer begins with C."
+   ],
+   "technique": "Seating plan (logic)",
+   "length": 7
+  },
+  {
+   "id": 5,
+   "title": "Dead Reckoning",
+   "flavor": "Short, long, short: no spaces. Match each run to a word from the list, then count along it.",
+   "blocks": [
+    {
+     "type": "morselines",
+     "items": [
+      {
+       "code": ".-...--.--...-.--.",
+       "len": 7,
+       "index": 5
+      },
+      {
+       "code": "--.-...-",
+       "len": 4,
+       "index": 3
+      },
+      {
+       "code": "......-.-...-..",
+       "len": 4,
+       "index": 4
+      },
+      {
+       "code": ".--.-.-.....---.-.",
+       "len": 6,
+       "index": 1
+      },
+      {
+       "code": ".-...---.-------.",
+       "len": 6,
+       "index": 6
+      },
+      {
+       "code": "-..---..--....-..-------.",
+       "len": 8,
+       "index": 1
+      }
+     ],
+     "bank": [
+      "ANCHOR",
+      "BOSUN",
+      "DOUBLOON",
+      "HULL",
+      "LAGOON",
+      "LIME",
+      "MAST",
+      "MUSKET",
+      "RIGGING",
+      "SAIL"
+     ]
+    }
+   ],
+   "hash": "c1ca27fd82f0a3b8ec4f9827316c9c21a97a52b5559c86f6502ceb6203f84c16",
+   "partials": {},
+   "hints": [
+    "Each line is a word from this round's theme in Morse code with the gaps between letters lost. Work out which word fits the dots, dashes and letter count, then take the letter at the position shown.",
+    "To check you're on track: the answer begins with I."
+   ],
+   "technique": "Gapless Morse",
+   "length": 6
+  },
+  {
+   "id": 6,
+   "title": "Black Spot",
+   "flavor": "The knight never moves in a straight line, and neither does the truth aboard the ship.",
+   "blocks": [
+    {
+     "type": "board",
+     "rows": [
+      "TGWOSKAZ",
+      "MIYLWDSC",
+      "CKZTISVX",
+      "SDRDIBEU",
+      "HGDXHGZO",
+      "MWODWBBO",
+      "MIGNTXVY",
+      "BKFIULVT"
+     ]
+    },
+    {
+     "type": "prose",
+     "text": "The knight sets out from h8: Nf7 Ng5 Nh7 Nf8."
+    }
+   ],
+   "hash": "eea41be4c862b25e0006b400652124341d75345c994b1b7ed10e957d034f4654",
+   "partials": {},
+   "hints": [
+    "Start on the given square and follow the knight moves; read the letter on each square it lands on.",
+    "To check you're on track: the answer begins with D."
+   ],
+   "technique": "Knight's path",
+   "length": 4
+  },
+  {
+   "id": 7,
+   "title": "Shore Leave",
+   "flavor": "Up and down, up and down: four rows, one long sentence, and not a single space left.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "TSSNI TOILS SHSAA HEIAN HALND TPYSP ASEEG WIDNL SGLAG NSMSY YLMED PILAI AG",
+     "wide": true,
+     "rails": 4
+    }
+   ],
+   "hash": "e7a1c04ca5b0a6a6c57e317f638fa9dcbd4bfe2205694a06b34e44e1959288c5",
+   "partials": {},
+   "hints": [
+    "Rail-fence transposition of a sentence with the spaces removed. Try 2 to 5 rails; the sentence tells you the answer.",
+    "To check you're on track: the answer begins with S."
+   ],
+   "technique": "Rail fence (cluephrase)",
+   "length": 8
+  }
+ ],
+ "meta": {
+  "title": "Meta: Dead Men's Chest",
+  "flavor": "Pigeonholes, each cut to fit one thing, and some of them marked.",
+  "blocks": [
+   {
+    "type": "fitgrid",
+    "rows": [
+     {
+      "len": 8,
+      "shade": 1
+     },
+     {
+      "len": 6,
+      "shade": 2
+     },
+     {
+      "len": 13,
+      "shade": 1
+     },
+     {
+      "len": 7,
+      "shade": 6
+     },
+     {
+      "len": 9,
+      "shade": 6
+     },
+     {
+      "len": 4,
+      "shade": 1
+     },
+     {
+      "len": 3,
+      "shade": 0
+     }
+    ]
+   }
+  ],
+  "length": 7,
+  "hash": "568540787b7b83c9ec28dd4adad80f06fd9bc0a36e6086e82e94cd81eb388614",
+  "hints": [
+   "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+   "To check you're on track: the final answer begins with P."
+  ]
+ },
+ "described": true
+}

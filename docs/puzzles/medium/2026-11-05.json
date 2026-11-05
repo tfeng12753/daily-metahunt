@@ -1,0 +1,260 @@
+{
+ "date": "2026-11-05",
+ "difficulty": "medium",
+ "salt": "2026-11-05/medium",
+ "number": 40,
+ "round": "Dead Men's Chest",
+ "intro": "The late master died with the chart in his head, and the only mercy was that he had been a cagey man. He broke the chart into curves and bearings and had them pricked beneath the crew's skin, one piece to a person, so the whole voyage would only survive if the ship survived. In the armoury is a rack of line and wood, each loop sawn to a different mouth: the boarding axe drops clean to the floor, the dirk hangs loose in its loop, and the cutlass with the brass grip finds the only eye that takes it without a wobble. The master told the armourer to make it that way, he said, so that every blade would know its own place before it was needed. Now the crew unbutton their collars and compare ink while the rack creaks in the draught.",
+ "echo": "Every year the Spanish fleet sailed home low in the water, heavy with silver.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Black Spot",
+   "flavor": "Rhythm without rests, and a finger pointing into each line.",
+   "blocks": [
+    {
+     "type": "morselines",
+     "items": [
+      {
+       "code": ".....---------.-.-.-",
+       "len": 7,
+       "index": 1
+      },
+      {
+       "code": "-..---..--....-..-------.",
+       "len": 8,
+       "index": 3
+      },
+      {
+       "code": "......-...--.-..",
+       "len": 6,
+       "index": 3
+      },
+      {
+       "code": "-....-.-..-...-..",
+       "len": 6,
+       "index": 6
+      }
+     ],
+     "bank": [
+      "BARREL",
+      "COMPASS",
+      "DOUBLOON",
+      "HAMMOCK",
+      "ISLAND",
+      "MUSKET",
+      "PEGLEG",
+      "SHIPWRECK"
+     ]
+    }
+   ],
+   "hash": "a8513dbde202a526f1fc6f023d0012a6d8e9ad3f5165c77ef9c7473104dd2ddc",
+   "partials": {},
+   "hints": [
+    "Two symbols, no spaces, and a letter count. Which old code is it, and which word from this round fits each line?",
+    "Each line is a theme word in Morse with the letter gaps removed; find it, then take the letter at the position shown."
+   ],
+   "length": 4
+  },
+  {
+   "id": 2,
+   "title": "Pieces Of Eight",
+   "flavor": "One horseman, and a field full of noise.",
+   "blocks": [
+    {
+     "type": "board",
+     "rows": [
+      "QEJKZLCJ",
+      "FBJSGKRQ",
+      "VOIZXLAU",
+      "DGEOOCWD",
+      "NJWKABRH",
+      "YAXPCNXQ",
+      "SDPIHXIB",
+      "OFSXFGQD"
+     ]
+    },
+    {
+     "type": "prose",
+     "text": "The knight sets out from h7: Nf8 Ng6 Ne7 Nd5 Nb6 Na4."
+    }
+   ],
+   "hash": "418eb71c5694cda13f1792390fafcca75d27a00ab379a60d4355b241aca48bcb",
+   "partials": {},
+   "hints": [
+    "Those are chess moves. Which squares does the piece land on, and what's written there?",
+    "Start on the given square, play each move, and read the letter on every square it lands on."
+   ],
+   "length": 6
+  },
+  {
+   "id": 3,
+   "title": "X Marks The Spot",
+   "flavor": "A parts list read aloud by someone who only knew the stripes.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "brown–white",
+      "brown–blue",
+      "red–green",
+      "black–violet",
+      "brown–red",
+      "black–brown",
+      "brown–white",
+      "brown–white"
+     ]
+    }
+   ],
+   "hash": "54c0daf37b8a4e8fb24cab5c22b39c1f8e76a30ea76f6aca098510044685181f",
+   "partials": {},
+   "hints": [
+    "Engineers read stripes like these as numbers. What number does each part give, and what is a number up to 26?",
+    "Resistor colour code: the first two bands are two digits; that number is a letter position."
+   ],
+   "length": 8
+  },
+  {
+   "id": 4,
+   "title": "Letter Of Marque",
+   "flavor": "The quiz only ever asks how many.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "Continents on a standard world map",
+      "Guns fired in a traditional royal salute",
+      "Days in a fortnight",
+      "Pawns on a chessboard at the start of a game",
+      "Players on a rugby union side",
+      "Pairs of chromosomes in a typical human cell",
+      "Strings on a violin",
+      "Rings on the Olympic flag",
+      "Holes on a full golf course"
+     ],
+     "ordered": true,
+     "tray": "letter"
+    }
+   ],
+   "hash": "ab9725db5a336da71a4509c544f1c7929a051603cdc616f3eb2703fed08ad75d",
+   "partials": {},
+   "hints": [
+    "Every line has a number for an answer. Could those numbers be counting through something else?",
+    "They're all between 1 and 26: A = 1, B = 2…"
+   ],
+   "length": 9
+  },
+  {
+   "id": 5,
+   "title": "The Brig",
+   "flavor": "Up and down, up and down, and not a single space left.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "TEGSD NIGLO NSLYA RTHMS AEAHD EIPAN IHALL NADTI PYASU REMSE ESWIN LSTAG IMSQT AR",
+     "wide": true,
+     "rails": 3
+    }
+   ],
+   "hash": "040e1f966de8a920cb6646d2f22c5fb2f0774c9f94807ecf70cd411d1407c896",
+   "partials": {},
+   "hints": [
+    "All the right letters are here, just out of order. Could they have been written along a path that goes up and down?",
+    "Rail fence: written in a zigzag over a few rows, then copied out row by row. Try two to five rows."
+   ],
+   "length": 13
+  },
+  {
+   "id": 6,
+   "title": "Davy Jones",
+   "flavor": "Fill the gaps.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "COMPAS_",
+      "SHIPWREC_",
+      "DO_BLOON",
+      "P_ANK",
+      "PEG_EG"
+     ],
+     "ordered": true,
+     "mono": true
+    }
+   ],
+   "hash": "37fb4972e7e8a4b2ce28ddc7c6c19028e31da02af69d4482530f877970a97a04",
+   "partials": {},
+   "hints": [
+    "Every gap takes exactly one letter. Is there a pattern in what you filled in?",
+    "Read the letters you supplied, in order."
+   ],
+   "length": 5
+  },
+  {
+   "id": 7,
+   "title": "Articles",
+   "flavor": "An emperor's idea of privacy.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "BSBOV DLLA ERKQ BKAP TFQE X PFKDIB TLOA XKA QEB TLOA VLR TXKQ COLJ QEFP MXDB FP ZXMQXFK",
+     "wide": true,
+     "solver": "substitution"
+    }
+   ],
+   "hash": "b6f2fa0d264843e1927ce8335782c0ea8b37b117c00e00d57c4d3dad75b97fd3",
+   "partials": {},
+   "hints": [
+    "Try moving every letter the same distance. How far turns the short words into English?",
+    "A Caesar shift: find the one shift that fixes a short word, then apply it everywhere."
+   ],
+   "length": 7
+  }
+ ],
+ "meta": {
+  "title": "Meta: Dead Men's Chest",
+  "flavor": "Pigeonholes, each cut to fit one thing only.",
+  "blocks": [
+   {
+    "type": "fitgrid",
+    "rows": [
+     {
+      "len": 6,
+      "shade": 2
+     },
+     {
+      "len": 8,
+      "shade": 5
+     },
+     {
+      "len": 5,
+      "shade": 3
+     },
+     {
+      "len": 4,
+      "shade": 2
+     },
+     {
+      "len": 13,
+      "shade": 11
+     },
+     {
+      "len": 9,
+      "shade": 4
+     },
+     {
+      "len": 7,
+      "shade": 6
+     }
+    ]
+   }
+  ],
+  "length": 7,
+  "hash": "15eb852107f484b16db080518a6e59b68990e6caa1cb6cacb5a6f7e7ed3b46b5",
+  "hints": [
+   "The grid's rows are all different lengths. So are your answers.",
+   "Put each answer in the row its length fits; read the shaded squares top to bottom."
+  ]
+ },
+ "described": true
+}

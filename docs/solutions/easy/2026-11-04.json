@@ -1,0 +1,64 @@
+{
+ "date": "2026-11-04",
+ "number": 39,
+ "difficulty": "easy",
+ "final": "ENIGMA",
+ "metaType": "fitin",
+ "explain": "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Shark",
+   "answer": "SIGNAL",
+   "mechanism": "Atomic numbers (by mass)",
+   "transform": null,
+   "encoded": "SIGNAL",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Cillies",
+   "answer": "ADMIRALTY",
+   "mechanism": "Nonogram",
+   "transform": null,
+   "encoded": "ADMIRALTY",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Herivel Tip",
+   "answer": "TELEGRAM",
+   "mechanism": "Book cipher",
+   "transform": null,
+   "encoded": "TELEGRAM",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Rodding",
+   "answer": "MESSAGE",
+   "mechanism": "Semaphore (figures)",
+   "transform": null,
+   "encoded": "MESSAGE",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Enigma Variations",
+   "answer": "RING",
+   "mechanism": "Number trivia",
+   "transform": null,
+   "encoded": "RING",
+   "mutated": null
+  },
+  {
+   "id": 6,
+   "title": "The Crib",
+   "answer": "INDEX",
+   "mechanism": "Scrambled sentence",
+   "transform": null,
+   "encoded": "INDEX",
+   "mutated": null
+  }
+ ]
+}

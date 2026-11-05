@@ -1,0 +1,55 @@
+{
+ "date": "2026-11-04",
+ "number": 39,
+ "difficulty": "medium",
+ "final": "ROTOR",
+ "metaType": "stowaway",
+ "explain": "Each feeder decodes to its answer plus one inserted letter. The inserted letters, in puzzle order, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "The Crib",
+   "answer": "TELEPRINTER",
+   "mechanism": "Prime indices in Roman numerals",
+   "transform": "Atbash (A↔Z mirror)",
+   "encoded": "GVIOVKIRMGVI",
+   "mutated": "TERLEPRINTER"
+  },
+  {
+   "id": 2,
+   "title": "Station X",
+   "answer": "DISPATCH",
+   "mechanism": "Scrambled sentence",
+   "transform": null,
+   "encoded": "DIOSPATCH",
+   "mutated": "DIOSPATCH"
+  },
+  {
+   "id": 3,
+   "title": "Cillies",
+   "answer": "LORENZ",
+   "mechanism": "Gapless Morse",
+   "transform": "ROT13",
+   "encoded": "YBEGRAM",
+   "mutated": "LORTENZ"
+  },
+  {
+   "id": 4,
+   "title": "Shark",
+   "answer": "UBOAT",
+   "mechanism": "Braille as numbers",
+   "transform": null,
+   "encoded": "UOBOAT",
+   "mutated": "UOBOAT"
+  },
+  {
+   "id": 5,
+   "title": "Menu",
+   "answer": "INTERCEPT",
+   "mechanism": "Keyboard shift",
+   "transform": null,
+   "encoded": "INTERCREPT",
+   "mutated": "INTERCREPT"
+  }
+ ]
+}
