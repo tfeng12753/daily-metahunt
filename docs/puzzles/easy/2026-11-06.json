@@ -1,0 +1,558 @@
+{
+ "date": "2026-11-06",
+ "difficulty": "easy",
+ "salt": "2026-11-06/easy",
+ "number": 41,
+ "round": "The Inside Job",
+ "intro": "The plan was perfect, which is why nobody wrote it down; each member of the crew hid their part somewhere only the others would think to look. In the back room off the main floor there was a message board of pigeonholes, each cubicle cut to a different length by the same carpenter who made the drop boxes, and no card would lie straight unless it belonged there. The brass nameplates were only a front, and the pit boss let the croupiers ignore the board during play, because the real signal was the black felt pasted behind certain compartments. When the crew finally set every part in its own hole, the pieces would be flush, and the dark patches would form the last word of the job.",
+ "echo": "The driver has been idling around the corner since before any of this began.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Casing The Joint",
+   "flavor": "Unjumble the kit list. You'll have one letter left over every time, and you'll want to keep those.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "DARLLI",
+      "IESLGSIDU",
+      "KCKLCAJABA",
+      "YORCDE",
+      "MNRSAOM"
+     ],
+     "ordered": true,
+     "mono": true
+    }
+   ],
+   "hash": "c0b8e0e181a0b36355734e8f188a3183bf86ff0176dad227d160f61beef47d91",
+   "partials": {},
+   "hints": [
+    "Each jumble is an anagram of a word from this round's theme plus one extra letter. The extra letters, in order, spell the answer.",
+    "To check you're on track: the answer begins with A."
+   ],
+   "technique": "Anagrams with an extra letter",
+   "length": 5
+  },
+  {
+   "id": 2,
+   "title": "The Vault Door",
+   "flavor": "Every flag on this line has a meaning on its own. Together, they have one more.",
+   "blocks": [
+    {
+     "type": "flags",
+     "items": [
+      "V",
+      "E",
+      "N",
+      "T",
+      "I",
+      "L",
+      "A",
+      "T",
+      "I",
+      "O",
+      "N"
+     ]
+    }
+   ],
+   "hash": "b438c5b125264dc77406d6bd5ca39d9f7908e723b11f0883c65272ee448a97b8",
+   "partials": {},
+   "hints": [
+    "International maritime signal flags, one letter each.",
+    "To check you're on track: the answer begins with V."
+   ],
+   "technique": "Maritime signal flags",
+   "length": 11
+  },
+  {
+   "id": 3,
+   "title": "Alibi",
+   "flavor": "An inventory of the casino, tangled up. Whatever is left over when every item is accounted for is yours.",
+   "blocks": [
+    {
+     "type": "caption",
+     "text": "Hidden in the grid: 8 words to do with the casino (lengths 5, 5, 5, 5, 5, 5, 6, 7), running in any direction."
+    },
+    {
+     "type": "board",
+     "rows": [
+      "YOCEDGD",
+      "CLOTLRR",
+      "HPDIAEA",
+      "IORMSLC",
+      "PKAEEAY",
+      "SEURREE",
+      "VRGESDK"
+     ],
+     "plain": true,
+     "words": [
+      "CHIPS",
+      "DEALER",
+      "DECOY",
+      "GUARD",
+      "KEYCARD",
+      "LASER",
+      "POKER",
+      "TIMER"
+     ]
+    }
+   ],
+   "hash": "2ae63d699656717648ab22425445433b7fe236ccffb21517f3d19acfd3bcf4fe",
+   "partials": {},
+   "hints": [
+    "Find every hidden word (any of 8 directions). The unused letters, read left-to-right, top-to-bottom, spell the answer.",
+    "The hidden words are: CHIPS, DEALER, DECOY, GUARD, KEYCARD, LASER, POKER, TIMER.",
+    "To check you're on track: the answer begins with G."
+   ],
+   "technique": "Word search leftovers",
+   "length": 6
+  },
+  {
+   "id": 4,
+   "title": "Cold Deck",
+   "flavor": "A board full of noise, and one horseman who knows exactly where to step.",
+   "blocks": [
+    {
+     "type": "board",
+     "rows": [
+      "VHSCIQJK",
+      "AESRAHJI",
+      "SQAASQFG",
+      "RULSEKYH",
+      "UKWQDIWG",
+      "PDDQRXJO",
+      "UAKKHDAF",
+      "WSWWCGTM"
+     ]
+    },
+    {
+     "type": "prose",
+     "text": "The knight sets out from c3: Nd5 Ne7 Ng6 Ne5."
+    }
+   ],
+   "hash": "8e0d2383802f59afd021d5d250cc8941336451a873190e702cd5978e06b294fa",
+   "partials": {},
+   "hints": [
+    "Start on the given square and follow the knight moves; read the letter on each square it lands on.",
+    "To check you're on track: the answer begins with S."
+   ],
+   "technique": "Knight's path",
+   "length": 4
+  },
+  {
+   "id": 5,
+   "title": "Shift Change",
+   "flavor": "The clerk ran out of alphabet and kept going anyway.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "▽☀◆ △◆☾☾♫▲◆ ⚑♫☾ ☀□✈✈◆★ □★ ▼◇♫□★ ☾□▲☀▽ ♫◇◇ ♫◇✿★▲ ♫★✈ □▽ ☾□△▼◇● ☾♫●☾ ♪☁✿⚑☆♫☁",
+     "wide": true,
+     "solver": "substitution"
+    }
+   ],
+   "hash": "e9a95a606853fa8ce5c4b0c437a76e938d987f68c88de700e0c87655623f95ee",
+   "partials": {},
+   "hints": [
+    "Each symbol stands for one letter (a simple substitution); word breaks are kept. Solve the sentence; it tells you the answer.",
+    "To check you're on track: the answer begins with C."
+   ],
+   "technique": "Symbol cryptogram",
+   "length": 7
+  },
+  {
+   "id": 6,
+   "title": "House Edge",
+   "flavor": "A mosaic inside the casino was taken apart tile by tile, and all that was kept was the count of each run.",
+   "blocks": [
+    {
+     "type": "nonogram",
+     "rows": [
+      [
+       4,
+       5,
+       4,
+       1,
+       1,
+       4,
+       5,
+       5,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       3,
+       4,
+       1,
+       1,
+       1,
+       4,
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       4,
+       5,
+       4,
+       3,
+       1,
+       1,
+       5,
+       1,
+       1
+      ]
+     ],
+     "cols": [
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       3
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       4
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       4
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       3
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ],
+     "givens": [
+      [
+       0,
+       21,
+       0
+      ],
+      [
+       4,
+       16,
+       1
+      ],
+      [
+       0,
+       44,
+       0
+      ],
+      [
+       1,
+       16,
+       0
+      ],
+      [
+       0,
+       46,
+       1
+      ],
+      [
+       0,
+       43,
+       0
+      ],
+      [
+       1,
+       43,
+       1
+      ],
+      [
+       0,
+       4,
+       1
+      ],
+      [
+       3,
+       4,
+       1
+      ]
+     ]
+    }
+   ],
+   "hash": "955ca12d2bb431902976fa67d346f231462da9d854f1111ed1d857b94e233600",
+   "partials": {},
+   "hints": [
+    "A nonogram (paint-by-numbers). The filled picture is the answer written in 5×5 block letters.",
+    "To check you're on track: the answer begins with S."
+   ],
+   "technique": "Nonogram",
+   "length": 8
+  },
+  {
+   "id": 7,
+   "title": "Loaded Dice",
+   "flavor": "Scratched into the wall of a Masonic lodge. Or a pig pen; the caretaker wasn't sure.",
+   "blocks": [
+    {
+     "type": "pigpen",
+     "items": [
+      {
+       "g": "hash",
+       "p": 6,
+       "dot": true
+      },
+      {
+       "g": "hash",
+       "p": 4,
+       "dot": false
+      },
+      {
+       "g": "hash",
+       "p": 4,
+       "dot": true
+      },
+      {
+       "g": "x",
+       "p": 1,
+       "dot": false
+      },
+      {
+       "g": "hash",
+       "p": 7,
+       "dot": false
+      },
+      {
+       "g": "hash",
+       "p": 5,
+       "dot": true
+      },
+      {
+       "g": "x",
+       "p": 2,
+       "dot": false
+      },
+      {
+       "g": "x",
+       "p": 0,
+       "dot": false
+      },
+      {
+       "g": "hash",
+       "p": 4,
+       "dot": false
+      }
+     ]
+    }
+   ],
+   "hash": "111c686a4329e53f61fcf0318d4686c552d8e41aaf8b69be7138a9eef2d52066",
+   "partials": {},
+   "hints": [
+    "Pigpen (Freemason's) cipher: A–I in a # grid, J–R the same with dots, S–V in an X, W–Z the X with dots.",
+    "To check you're on track: the answer begins with P."
+   ],
+   "technique": "Pigpen cipher",
+   "length": 9
+  }
+ ],
+ "meta": {
+  "title": "Meta: The Inside Job",
+  "flavor": "Everything inside the casino has a place, and every place is exactly the right size.",
+  "blocks": [
+   {
+    "type": "fitgrid",
+    "rows": [
+     {
+      "len": 6,
+      "shade": 0
+     },
+     {
+      "len": 11,
+      "shade": 1
+     },
+     {
+      "len": 9,
+      "shade": 3
+     },
+     {
+      "len": 5,
+      "shade": 2
+     },
+     {
+      "len": 7,
+      "shade": 3
+     },
+     {
+      "len": 4,
+      "shade": 1
+     },
+     {
+      "len": 8,
+      "shade": 7
+     }
+    ]
+   }
+  ],
+  "length": 7,
+  "hash": "f1955764eeb773102ddfe5c34470d5eb64821372607f155023aeba9e97521be2",
+  "hints": [
+   "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+   "To check you're on track: the final answer begins with G."
+  ]
+ },
+ "described": true
+}

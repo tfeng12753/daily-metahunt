@@ -1,0 +1,64 @@
+{
+ "date": "2026-11-05",
+ "number": 40,
+ "difficulty": "hard",
+ "final": "MUTINY",
+ "metaType": "mutation",
+ "explain": "Each feeder decodes to its answer with a single wrong letter. Those substituted letters, in puzzle order, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Davy Jones",
+   "answer": "CAPTAIN",
+   "mechanism": "Letter sudoku",
+   "transform": "Atbash (A↔Z mirror)",
+   "encoded": "XZKGZRN",
+   "mutated": "CAPTAIM"
+  },
+  {
+   "id": 2,
+   "title": "Shore Leave",
+   "answer": "HAMMOCK",
+   "mechanism": "Word search leftovers",
+   "transform": "Reversal",
+   "encoded": "KCOMUAH",
+   "mutated": "HAUMOCK"
+  },
+  {
+   "id": 3,
+   "title": "The Brig",
+   "answer": "BARREL",
+   "mechanism": "Nonogram",
+   "transform": null,
+   "encoded": "BARRTL",
+   "mutated": "BARRTL"
+  },
+  {
+   "id": 4,
+   "title": "Black Spot",
+   "answer": "PARROT",
+   "mechanism": "Prime indices in Roman numerals",
+   "transform": null,
+   "encoded": "PARROI",
+   "mutated": "PARROI"
+  },
+  {
+   "id": 5,
+   "title": "Walk The Plank",
+   "answer": "LANTERN",
+   "mechanism": "Scrambled sentence",
+   "transform": null,
+   "encoded": "LANTNRN",
+   "mutated": "LANTNRN"
+  },
+  {
+   "id": 6,
+   "title": "Pieces Of Eight",
+   "answer": "ISLAND",
+   "mechanism": "Gapless Morse",
+   "transform": null,
+   "encoded": "ISYAND",
+   "mutated": "ISYAND"
+  }
+ ]
+}

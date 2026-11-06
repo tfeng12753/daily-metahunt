@@ -1,0 +1,214 @@
+{
+ "date": "2026-11-06",
+ "difficulty": "medium",
+ "salt": "2026-11-06/medium",
+ "number": 41,
+ "round": "The Inside Job",
+ "intro": "The pit boss keeps the only ledger in the house that was never meant for the floor: a slim black book, bought for a song at an auction, its pages ruled in faded blue. Each night, after the last high roller has been walked to the door, he opens it and writes just two numbers beside the crew member's name, then closes it again without a word. The croupiers say the book hasn't been opened in front of anyone since the year the lights went out during the final hand and nobody left with a chip out of place. Nobody asks what the second number counts, because nobody asks anything twice at the Grimaldi.",
+ "echo": "One of the crew sands their fingertips before every job, to feel the tumblers fall.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Double Cross",
+   "flavor": "Tidy up the inventory.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "OSVLGEK",
+      "UCIEPEROR",
+      "AYSRLE",
+      "BCTUNLEIRP",
+      "LAEEOTRVA",
+      "REAERDL",
+      "JBAAKCKDCL"
+     ],
+     "ordered": true,
+     "mono": true
+    }
+   ],
+   "hash": "ca8ba05ffb8f2b865a976616268be6382fb0f72526180e7d66abb194fff978bf",
+   "partials": {},
+   "hints": [
+    "Each jumble is almost a word from this round, but with a letter to spare. Which letter, every time?",
+    "Rearrange each into a theme word; the spare letters, in order, are the answer."
+   ],
+   "length": 7
+  },
+  {
+   "id": 2,
+   "title": "House Edge",
+   "flavor": "Everything here has been weighed, not counted.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "6.94",
+      "39.95",
+      "30.974",
+      "50.942",
+      "4.003",
+      "1.008",
+      "39.95"
+     ],
+     "inline": true,
+     "variant": "masses"
+    }
+   ],
+   "hash": "606bb6c221a6506bdb5febe6849a1f252932b430f3fadd4f692e6557c9dab34e",
+   "partials": {},
+   "hints": [
+    "Everything here has a number in a famous chemical line-up. What number does each one have?",
+    "Atomic numbers, then count through the alphabet (hydrogen = 1 = A)."
+   ],
+   "length": 7
+  },
+  {
+   "id": 3,
+   "title": "Alibi",
+   "flavor": "Fenced in, and copied out in a hurry.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "SLITL TENNL EGHRC AHUDH SOEAL NOHWO GADPE SFRET EODAC RTOTN FITRH SAOTW BA",
+     "wide": true,
+     "rails": 3
+    }
+   ],
+   "hash": "5b8e4e18180efcb6ec971cf017c2b83cb65b747d8ab990c01dd3de34345a617b",
+   "partials": {},
+   "hints": [
+    "All the right letters are here, just out of order. Could they have been written along a path that goes up and down?",
+    "Rail fence: written in a zigzag over a few rows, then copied out row by row. Try two to five rows."
+   ],
+   "length": 8
+  },
+  {
+   "id": 4,
+   "title": "Blind Spot",
+   "flavor": "Turn the wheel until it talks.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "KAGD MZEIQD RAD FTUE BGLLXQ UE XAOWBUOW NGF PA ZAF FQXX FTQ AFTQDE TAI KAG SAF UF",
+     "wide": true,
+     "solver": "substitution"
+    }
+   ],
+   "hash": "fb3a50e892c1d656604e578c1aad60c2d2f1396a769369e5fb54f3c4801d6fce",
+   "partials": {},
+   "hints": [
+    "Try moving every letter the same distance. How far turns the short words into English?",
+    "A Caesar shift: find the one shift that fixes a short word, then apply it everywhere."
+   ],
+   "length": 8
+  },
+  {
+   "id": 5,
+   "title": "Getaway Driver",
+   "flavor": "It never travels in a straight line, and neither does the truth.",
+   "blocks": [
+    {
+     "type": "board",
+     "rows": [
+      "WUSTRSCD",
+      "EBYNABIF",
+      "QTUKIBKF",
+      "ASJGFEIY",
+      "PXMQQBSC",
+      "HXJXEHGX",
+      "CVCIFUBS",
+      "FIGHPMJO"
+     ]
+    },
+    {
+     "type": "prose",
+     "text": "The knight sets out from h5: Nf6 Ne8 Ng7 Nf5 Nh6 Ng8 Ne7 Nc8 Na7."
+    }
+   ],
+   "hash": "2f04cf161efcb70b9dc0cf6bfc72e5dccc8bc79a116597628a6a617007174dc9",
+   "partials": {},
+   "hints": [
+    "Those are chess moves. Which squares does the piece land on, and what's written there?",
+    "Start on the given square, play each move, and read the letter on every square it lands on."
+   ],
+   "length": 9
+  },
+  {
+   "id": 6,
+   "title": "Shift Change",
+   "flavor": "Everything that belongs is in there somewhere. Some things don't belong.",
+   "blocks": [
+    {
+     "type": "caption",
+     "text": "Hidden in the grid: 11 words to do with the casino."
+    },
+    {
+     "type": "board",
+     "rows": [
+      "ERDLRDLT",
+      "LANAERLI",
+      "ENOSKAIM",
+      "VMMEOURE",
+      "AAARPGDR",
+      "TSIGOLDS",
+      "OKDYOCED",
+      "ROCHIPSM"
+     ],
+     "plain": true,
+     "words": [
+      "CHIPS",
+      "DECOY",
+      "DIAMOND",
+      "DRILL",
+      "ELEVATOR",
+      "GOLD",
+      "GUARD",
+      "LASER",
+      "MASK",
+      "POKER",
+      "TIMER"
+     ]
+    }
+   ],
+   "hash": "dbbb15bf9077a41068419da624dbb7dad292b53adf536c84ecf56150b96a8c26",
+   "partials": {},
+   "hints": [
+    "Once every theme word is found, is anything left unclaimed? Read it in order.",
+    "Find the theme words; the letters no word uses, read row by row, are the answer.",
+    "The hidden words are: CHIPS, DECOY, DIAMOND, DRILL, ELEVATOR, GOLD, GUARD, LASER, MASK, POKER, TIMER."
+   ],
+   "length": 6
+  }
+ ],
+ "meta": {
+  "title": "Meta: The Inside Job",
+  "flavor": "The watch-keeper wrote down nothing but the day and the bell.",
+  "blocks": [
+   {
+    "type": "list",
+    "items": [
+     "Day 5, 8 bells",
+     "Day 6, 2 bells",
+     "Day 5, 5 bells",
+     "Day 1, 2 bells",
+     "Day 4, 7 bells",
+     "Day 3, 6 bells",
+     "Day 1, 5 bells",
+     "Day 3, 3 bells",
+     "Day 4, 4 bells",
+     "Day 1, 2 bells",
+     "Day 2, 2 bells"
+    ],
+    "ordered": true
+   }
+  ],
+  "length": 11,
+  "hash": "ad9bfa682f435cc081c67bb4e05e9c816a10dcae8fd62d343ce96f3cb958740d",
+  "hints": [
+   "Every entry has two numbers. What in this round is numbered, and what could the second number count?",
+   "The first number picks a puzzle; the second picks a letter inside its answer."
+  ]
+ },
+ "described": true
+}

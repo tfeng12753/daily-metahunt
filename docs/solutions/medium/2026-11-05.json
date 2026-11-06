@@ -1,0 +1,73 @@
+{
+ "date": "2026-11-05",
+ "number": 40,
+ "difficulty": "medium",
+ "final": "GALLEON",
+ "metaType": "fitin",
+ "explain": "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Black Spot",
+   "answer": "HULL",
+   "mechanism": "Gapless Morse",
+   "transform": null,
+   "encoded": "HULL",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Pieces Of Eight",
+   "answer": "LAGOON",
+   "mechanism": "Knight's path",
+   "transform": null,
+   "encoded": "LAGOON",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "X Marks The Spot",
+   "answer": "SPYGLASS",
+   "mechanism": "Resistor colour code (written)",
+   "transform": null,
+   "encoded": "SPYGLASS",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Letter Of Marque",
+   "answer": "GUNPOWDER",
+   "mechanism": "Number trivia",
+   "transform": null,
+   "encoded": "GUNPOWDER",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "The Brig",
+   "answer": "QUARTERMASTER",
+   "mechanism": "Rail fence (cluephrase)",
+   "transform": null,
+   "encoded": "QUARTERMASTER",
+   "mutated": null
+  },
+  {
+   "id": 6,
+   "title": "Davy Jones",
+   "answer": "SKULL",
+   "mechanism": "Missing letters",
+   "transform": null,
+   "encoded": "SKULL",
+   "mutated": null
+  },
+  {
+   "id": 7,
+   "title": "Articles",
+   "answer": "CAPTAIN",
+   "mechanism": "Caesar shift",
+   "transform": null,
+   "encoded": "CAPTAIN",
+   "mutated": null
+  }
+ ]
+}

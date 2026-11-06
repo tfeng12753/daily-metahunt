@@ -1,0 +1,181 @@
+{
+ "date": "2026-11-06",
+ "difficulty": "hard",
+ "salt": "2026-11-06",
+ "number": 41,
+ "round": "The Inside Job",
+ "intro": "The plan was perfect, which is why nobody wrote it down. Instead, each member of the crew hid their part of it somewhere only the others would think to look. Overnight the place changes personality: the slots are loud at noon, then the pit goes quiet as a church while the same four players nurse one drink each and watch the clocks. The glass on the high-limit tables gets wiped in circular strokes, and by morning there is always the same faint smudge in the same corner, as though somebody has leaned there a little longer than they meant to. We treat it like a signature and leave it alone; the pit boss says a clean window would only attract questions. Nobody mentions the footprints in the carpet near the staff door, and nobody needs to.",
+ "echo": "The architect gave the strongroom an arched ceiling, as if it were a cathedral.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Cold Deck",
+   "flavor": "Every flag on this line means something on its own. Together they mean one more thing.",
+   "blocks": [
+    {
+     "type": "flags",
+     "items": [
+      "T",
+      "U",
+      "N",
+      "N",
+      "V",
+      "L"
+     ]
+    }
+   ],
+   "hash": "f5c0b1c07c0dfc11928e1c4a04f62c2d28e98a9ff357c2fd0c70db6c278c8b40",
+   "partials": {
+    "3299f53aeeebaf69b1d5f498b64344e44d9c7f032bbce29319a33135c2a5ef51": "So close. Exactly one thing is wrong here. Fix it (and remember what you fixed)."
+   },
+   "hints": [
+    "Ships carry a flag for every letter of the alphabet. Do you know them?"
+   ]
+  },
+  {
+   "id": 2,
+   "title": "Shift Change",
+   "flavor": "Fenced in, and copied out in a hurry.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "YAERS ZSTST OLEEO UIORN WROTI PZLIP NHAEU DNTEL HOHRH WOGTT USFHU EEOBO TTTSY O",
+     "wide": true,
+     "rails": 3
+    }
+   ],
+   "hash": "9b1b326f66a0fdbaf059a842799de5e1fb78c590b0c9e73cfac3bff34c46ea3c",
+   "partials": {
+    "2a2be245ced7f072698b43536a5dd19d86e502b20ad5f0325d13699c09105851": "So close. Exactly one thing is wrong here. Fix it (and remember what you fixed)."
+   },
+   "hints": [
+    "All the right letters are here, just out of order. Could they have been written along a path that goes up and down?"
+   ]
+  },
+  {
+   "id": 3,
+   "title": "The Vault Door",
+   "flavor": "Confetti, alphabetised.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "ATU",
+      "AYN",
+      "EDO",
+      "ETL",
+      "EXT",
+      "HEN",
+      "HEW",
+      "LDO",
+      "NDM",
+      "NEY",
+      "ONA",
+      "ONE",
+      "ORD",
+      "OUM",
+      "OVE",
+      "OWW",
+      "QUI",
+      "RIT",
+      "TIL",
+      "TOT",
+      "VEN",
+      "WEL",
+      "WNT",
+      "YON"
+     ],
+     "inline": true,
+     "tiles": true
+    },
+    {
+     "type": "prose",
+     "text": "Word lengths: (4 4 3 3 3 5 4 3 4 11 3 4 7 2 2 3 4 3)"
+    }
+   ],
+   "hash": "a70e875792048bc74a14fb8981a78d57d2fa82dc342242776ea186ca495b1ac1",
+   "partials": {
+    "d825bf752128c06869110946fe5a3d62cc15f2e68ec4c9228420f6dcb1708484": "So close. Exactly one thing is wrong here. Fix it (and remember what you fixed)."
+   },
+   "hints": [
+    "The strips are alphabetised, not in order. The word lengths say where the breaks fall. Which strip could start the sentence?"
+   ]
+  },
+  {
+   "id": 4,
+   "title": "Inside Man",
+   "flavor": "Only one page survived. It was the only page anyone needed.",
+   "blocks": [
+    {
+     "type": "prose",
+     "text": "The plan was perfect, which is why nobody wrote it down. Instead, each member of the crew hid their part of it somewhere only the others would think to look.",
+     "paper": true
+    },
+    {
+     "type": "list",
+     "items": [
+      "17.1",
+      "14.6",
+      "26.1",
+      "24.3",
+      "20.1",
+      "22.1",
+      "13.1",
+      "26.5"
+     ],
+     "inline": true
+    }
+   ],
+   "hash": "a0724cd3b41cfa7e7ed2ecbd3633b4b8685acb0c02de54eb7ad6f15a0821ca7f",
+   "partials": {
+    "ef78c0ab1d71c39d7b0eab90fc0a367ab924207d4b89b616ace83af4413900d1": "So close. Exactly one thing is wrong here. Fix it (and remember what you fixed)."
+   },
+   "hints": [
+    "The first number in each pair never goes past the number of words on the page. What does the second count?"
+   ]
+  },
+  {
+   "id": 5,
+   "title": "Double Cross",
+   "flavor": "It never travels in a straight line, and neither does the truth. Unlucky for some, and the same distance either way.",
+   "blocks": [
+    {
+     "type": "board",
+     "rows": [
+      "EMOWWLIE",
+      "FHCMEXNW",
+      "DONZIGYH",
+      "UKYRWGDA",
+      "CTGUHJPH",
+      "ZEHUYTDS",
+      "YHREQHQX",
+      "HZFQOTKI"
+     ]
+    },
+    {
+     "type": "prose",
+     "text": "The knight sets out from e8: Nf6 Ne4 Nd6 Nf5 Ne3 Nd5 Ne7."
+    }
+   ],
+   "hash": "c951821e65a62534614cb72c2c2bca0ab85f2daf2ccf41461705be8f14054d7d",
+   "partials": {
+    "239847a4f752311df4d42dd46b97ffa27ba06063aac6ac397b4a1b22d63d2a6d": "You've decoded it, but it's not finished. One more layer.",
+    "de5920816baa57754e7deeb24b0fd93e836b8bd27a9e8c30d29f532d0eb3bd99": "So close. Exactly one thing is wrong here. Fix it (and remember what you fixed)."
+   },
+   "hints": [
+    "Those are chess moves. Which squares does the piece land on, and what's written there? And if what you get still isn't a word, reread the flavour text."
+   ]
+  }
+ ],
+ "meta": {
+  "title": "Meta: The Inside Job",
+  "flavor": "Every report is one slip away from perfect.",
+  "blocks": [],
+  "length": 5,
+  "hash": "cebe74277302721cd855334a60d255f81e49a98462d97bc420c7fdf7a059e063",
+  "hints": [
+   "Did every answer come out clean the first time? Each had exactly one wrong letter. Did you keep them?"
+  ]
+ },
+ "described": true
+}

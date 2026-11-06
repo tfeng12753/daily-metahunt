@@ -1,0 +1,73 @@
+{
+ "date": "2026-11-05",
+ "number": 40,
+ "difficulty": "easy",
+ "final": "PLUNDER",
+ "metaType": "fitin",
+ "explain": "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Articles",
+   "answer": "RUM",
+   "mechanism": "Word search leftovers",
+   "transform": null,
+   "encoded": "RUM",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Keelhauled",
+   "answer": "QUARTERMASTER",
+   "mechanism": "Nonogram",
+   "transform": null,
+   "encoded": "QUARTERMASTER",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Walk The Plank",
+   "answer": "GUNPOWDER",
+   "mechanism": "Missing letters",
+   "transform": null,
+   "encoded": "GUNPOWDER",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Letter Of Marque",
+   "answer": "CAPTAIN",
+   "mechanism": "Seating plan (logic)",
+   "transform": null,
+   "encoded": "CAPTAIN",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Dead Reckoning",
+   "answer": "ISLAND",
+   "mechanism": "Gapless Morse",
+   "transform": null,
+   "encoded": "ISLAND",
+   "mutated": null
+  },
+  {
+   "id": 6,
+   "title": "Black Spot",
+   "answer": "DECK",
+   "mechanism": "Knight's path",
+   "transform": null,
+   "encoded": "DECK",
+   "mutated": null
+  },
+  {
+   "id": 7,
+   "title": "Shore Leave",
+   "answer": "SPYGLASS",
+   "mechanism": "Rail fence (cluephrase)",
+   "transform": null,
+   "encoded": "SPYGLASS",
+   "mutated": null
+  }
+ ]
+}
