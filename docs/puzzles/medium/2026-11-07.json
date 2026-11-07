@@ -1,0 +1,238 @@
+{
+ "date": "2026-11-07",
+ "difficulty": "medium",
+ "salt": "2026-11-07/medium",
+ "number": 42,
+ "round": "The Bathysphere Logs",
+ "intro": "Eleven hundred metres down, the cable went slack and the radio went strange. What came back up the line was not speech, only a long sigh that set the gauges shivering. The watch-keeper, a former bell-ringer from the surface observatories, did not write the cable's message at all; she tapped her slate and recorded the dive and the bell count since the flare-tank was lit. Every other line in the round room was left blank, as if the two figures were enough to fetch the meaning later. The divers passed the slate from hand to hand, and the condensation blurred the edges of the numbers. The cable swayed in its socket, patient as a held breath.",
+ "echo": "Tennyson wrote that it sleeps below the thunders of the upper deep, and will rise only once.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Lantern Hours",
+   "flavor": "Everything came out of the wash with a little something extra.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "UISDSQ",
+      "ISIOODP",
+      "LARPBENCA",
+      "AYHMNARTA",
+      "PEGUOLR",
+      "RSKANH",
+      "UOENCRTR",
+      "PIHVEPFRSI",
+      "TNKLNOHAP",
+      "LOACRNHLEGE",
+      "OSRETLRB",
+      "EULTAUSNI"
+     ],
+     "ordered": true,
+     "mono": true
+    }
+   ],
+   "hash": "d92820835bd69ab6d53ddbee546bb1fef1eba43140e3e0a4848e13c354cdb00d",
+   "partials": {},
+   "hints": [
+    "Each jumble is almost a word from this round, but with a letter to spare. Which letter, every time?",
+    "Rearrange each into a theme word; the spare letters, in order, are the answer."
+   ],
+   "length": 12
+  },
+  {
+   "id": 2,
+   "title": "Thermocline",
+   "flavor": "The host was particular about the seating, and more particular still about what each chair was worth.",
+   "blocks": [
+    {
+     "type": "seating",
+     "seats": 4,
+     "names": [
+      "Kathleen",
+      "Bernard",
+      "Delphine",
+      "Wilhelmina"
+     ],
+     "clues": [
+      "Wilhelmina sits somewhere between Bernard and Delphine.",
+      "Delphine has seat 4.",
+      "Bernard sits somewhere between Delphine and Kathleen."
+     ],
+     "logic": [
+      [
+       "between",
+       "BERNARD",
+       "WILHELMINA",
+       "DELPHINE"
+      ],
+      [
+       "at",
+       "DELPHINE",
+       4
+      ],
+      [
+       "between",
+       "DELPHINE",
+       "BERNARD",
+       "KATHLEEN"
+      ]
+     ]
+    }
+   ],
+   "hash": "629bda7fb09bc10975755ede40b2a0642ccd636859be86ea2a4530a55275a6c1",
+   "partials": {},
+   "hints": [
+    "Only one arrangement satisfies every clue; start from whoever has an end seat or a fixed neighbour. Once they're seated, why might the seat numbers matter?",
+    "Solve the seating, then take the k-th letter of the name in seat k, left to right."
+   ],
+   "length": 4
+  },
+  {
+   "id": 3,
+   "title": "Siphon",
+   "flavor": "Matter, counted, and then spelled.",
+   "blocks": [
+    {
+     "type": "numbers",
+     "items": [
+      4,
+      7,
+      90,
+      53,
+      6
+     ],
+     "tray": 2
+    }
+   ],
+   "hash": "228f914ff12beeb3d2411745a950e4fc1e213bec3dd3cc259da037df630d038b",
+   "partials": {},
+   "hints": [
+    "Several of these numbers are bigger than 26, so they can't be letter positions. What else has a number that high?",
+    "Atomic numbers: write each element's symbol and run the symbols together into one word."
+   ],
+   "length": 7
+  },
+  {
+   "id": 4,
+   "title": "Marine Snow",
+   "flavor": "Rhythm without rests, and a finger pointing into each line.",
+   "blocks": [
+    {
+     "type": "morselines",
+     "items": [
+      {
+       "code": "-.-...-.-..-..-.-",
+       "len": 7,
+       "index": 7
+      },
+      {
+       "code": ".-..----......-..-.",
+       "len": 7,
+       "index": 2
+      },
+      {
+       "code": "--.--.-.-.-..--.--",
+       "len": 8,
+       "index": 6
+      },
+      {
+       "code": "----.-.----.--...-...",
+       "len": 7,
+       "index": 5
+      },
+      {
+       "code": ".--...-......-.-.---.--..",
+       "len": 9,
+       "index": 9
+      },
+      {
+       "code": "....-.-.-....-..",
+       "len": 7,
+       "index": 4
+      },
+      {
+       "code": "-..---.-...--.......-.",
+       "len": 7,
+       "index": 2
+      }
+     ],
+     "bank": [
+      "CURRENT",
+      "DOLPHIN",
+      "HALIBUT",
+      "JELLYFISH",
+      "LOBSTER",
+      "MANTARAY",
+      "OCTOPUS",
+      "PERISCOPE",
+      "SARDINE",
+      "SHARK",
+      "VIPERFISH"
+     ]
+    }
+   ],
+   "hash": "6efc3f0b7d7d4663e4fe7d2af52c78dac5ed9305ca36c75a1e67d9bce2855097",
+   "partials": {},
+   "hints": [
+    "Two symbols, no spaces, and a letter count. Which old code is it, and which word from this round fits each line?",
+    "Each line is a theme word in Morse with the letter gaps removed; find it, then take the letter at the position shown."
+   ],
+   "length": 7
+  },
+  {
+   "id": 5,
+   "title": "The Long Descent",
+   "flavor": "Count everything. Then count again, differently.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "Lines in a villanelle",
+      "Wheels on a unicycle",
+      "Months in a year",
+      "Players fielding for a baseball team",
+      "Lines in a sonnet",
+      "Squares in a noughts-and-crosses grid",
+      "Faces on an icosahedron",
+      "Cents in a US quarter"
+     ],
+     "ordered": true,
+     "tray": "letter"
+    }
+   ],
+   "hash": "a98fcf72ae3ba742f6b5d6a4a789791bfd1acb0e26d875d37e8f5f4064cff649",
+   "partials": {},
+   "hints": [
+    "Every line has a number for an answer. Could those numbers be counting through something else?",
+    "They're all between 1 and 26: A = 1, B = 2…"
+   ],
+   "length": 8
+  }
+ ],
+ "meta": {
+  "title": "Meta: The Bathysphere Logs",
+  "flavor": "The watch-keeper wrote down nothing but the day and the bell.",
+  "blocks": [
+   {
+    "type": "list",
+    "items": [
+     "Day 2, 1 bells",
+     "Day 1, 11 bells",
+     "Day 5, 2 bells",
+     "Day 2, 1 bells",
+     "Day 4, 5 bells",
+     "Day 3, 3 bells"
+    ],
+    "ordered": true
+   }
+  ],
+  "length": 6,
+  "hash": "8f45cc47772ad21be8a39546808e86f7b0cf8b1d33f9184b0df0a34bb844490c",
+  "hints": [
+   "Every entry has two numbers. What in this round is numbered, and what could the second number count?",
+   "The first number picks a puzzle; the second picks a letter inside its answer."
+  ]
+ },
+ "described": true
+}

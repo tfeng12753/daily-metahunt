@@ -1,0 +1,73 @@
+{
+ "date": "2026-11-06",
+ "number": 41,
+ "difficulty": "easy",
+ "final": "GETAWAY",
+ "metaType": "fitin",
+ "explain": "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Casing The Joint",
+   "answer": "ALARM",
+   "mechanism": "Anagrams with an extra letter",
+   "transform": null,
+   "encoded": "ALARM",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "The Vault Door",
+   "answer": "VENTILATION",
+   "mechanism": "Maritime signal flags",
+   "transform": null,
+   "encoded": "VENTILATION",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Alibi",
+   "answer": "GLOVES",
+   "mechanism": "Word search leftovers",
+   "transform": null,
+   "encoded": "GLOVES",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Cold Deck",
+   "answer": "SAFE",
+   "mechanism": "Knight's path",
+   "transform": null,
+   "encoded": "SAFE",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Shift Change",
+   "answer": "CROWBAR",
+   "mechanism": "Symbol cryptogram",
+   "transform": null,
+   "encoded": "CROWBAR",
+   "mutated": null
+  },
+  {
+   "id": 6,
+   "title": "House Edge",
+   "answer": "SECURITY",
+   "mechanism": "Nonogram",
+   "transform": null,
+   "encoded": "SECURITY",
+   "mutated": null
+  },
+  {
+   "id": 7,
+   "title": "Loaded Dice",
+   "answer": "PENTHOUSE",
+   "mechanism": "Pigpen cipher",
+   "transform": null,
+   "encoded": "PENTHOUSE",
+   "mutated": null
+  }
+ ]
+}

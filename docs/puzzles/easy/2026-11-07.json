@@ -1,0 +1,269 @@
+{
+ "date": "2026-11-07",
+ "difficulty": "easy",
+ "salt": "2026-11-07/easy",
+ "number": 42,
+ "round": "The Bathysphere Logs",
+ "intro": "Eleven hundred metres down, the cable went slack and the radio went strange. What came back up the line was not speech. The divers have started keeping the Bathysphere Logs anyway: every hour one of them reads out a message from the deck, and another writes it into the leather-bound journal clipped to the bulkhead. The journal’s flyleaf is a lattice of small compartments, each one cut deeper or shallower so that only a note of one particular length will lie flat in it; the six compartments are already occupied by the evening’s findings. The compasses and pencils are placed so that the dark ink pooling at the bottom of certain slots will, when the divers finally climb out, spell the one word they have been circling all descent.",
+ "echo": "Soldiers once lived for years in long ditches; the sea keeps one seven miles deep.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Porthole",
+   "flavor": "Someone wrote this out in a zigzag across five lines of the ledger, then copied each line out in turn.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "NPYTS ZOHRO XENOE TROIE TNCAE BECAN GHATR ISEDL GOYTD EOIFH PSUWR LNDET SEJOE",
+     "wide": true,
+     "rails": 5
+    }
+   ],
+   "hash": "caeceb8bcc394b242524a3dfc7f6af90e677f475adc112911e2cf2c7604ad232",
+   "partials": {},
+   "hints": [
+    "Rail-fence transposition of a sentence with the spaces removed. Try 2 to 5 rails; the sentence tells you the answer.",
+    "To check you're on track: the answer begins with C."
+   ],
+   "technique": "Rail fence (cluephrase)",
+   "length": 10
+  },
+  {
+   "id": 2,
+   "title": "Cold Seep",
+   "flavor": "A board full of noise, and one horseman who knows exactly where to step.",
+   "blocks": [
+    {
+     "type": "board",
+     "rows": [
+      "WYDHCQVQ",
+      "MNQKKAYV",
+      "TEKZDPNZ",
+      "OGNLOISQ",
+      "CMCOQVOG",
+      "QNTNBAQI",
+      "FYMSOOJV",
+      "FNJHNBBB"
+     ]
+    },
+    {
+     "type": "prose",
+     "text": "The knight sets out from b8: Nd7 Nb6 Nd5 Nf6."
+    }
+   ],
+   "hash": "56545c69f769ea3c565f61e7335432df4e8d6b9ccb7a17ea5a18610629077dee",
+   "partials": {},
+   "hints": [
+    "Start on the given square and follow the knight moves; read the letter on each square it lands on.",
+    "To check you're on track: the answer begins with K."
+   ],
+   "technique": "Knight's path",
+   "length": 4
+  },
+  {
+   "id": 3,
+   "title": "Ballast",
+   "flavor": "How many? How many? How many? The answers go somewhere after that.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "Humps on a Bactrian camel",
+      "Sides of a pentagon",
+      "Days in a fortnight",
+      "Faces on an icosahedron",
+      "Arms on an octopus",
+      "Squares in a noughts-and-crosses grid",
+      "Sides of a triangle"
+     ],
+     "ordered": true,
+     "tray": "letter"
+    }
+   ],
+   "hash": "82313e1d05f38f7aaa730e7af811b27e5a944ec6f062df89e3d6bbb45cbd41c3",
+   "partials": {},
+   "hints": [
+    "Each line is a number from 1 to 26. Turn each number into a letter (A = 1, B = 2, …).",
+    "To check you're on track: the answer begins with B."
+   ],
+   "technique": "Number trivia",
+   "length": 7
+  },
+  {
+   "id": 4,
+   "title": "Lantern Hours",
+   "flavor": "Every clock aboard the bathysphere stopped at a different moment, and not one of them can agree which hand is which.",
+   "blocks": [
+    {
+     "type": "clocks",
+     "items": [
+      [
+       4,
+       5
+      ],
+      [
+       5,
+       3
+      ],
+      [
+       7,
+       4
+      ],
+      [
+       6,
+       5
+      ],
+      [
+       6,
+       7
+      ],
+      [
+       2,
+       6
+      ]
+     ]
+    }
+   ],
+   "hash": "dfdf3b2301625b5f92cf39d78d2771bc6581c74b5bd5c4af9e12ea863625d336",
+   "partials": {},
+   "hints": [
+    "Each clock's two hands are the two arms of a flag-semaphore signaller (hand length doesn't matter).",
+    "To check you're on track: the answer begins with A."
+   ],
+   "technique": "Semaphore clocks",
+   "length": 6
+  },
+  {
+   "id": 5,
+   "title": "Siphon",
+   "flavor": "Three letters to a strip. The strips are in order; the sentence isn't.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "ARR",
+      "BAR",
+      "DOR",
+      "ECO",
+      "ERC",
+      "GOL",
+      "IED",
+      "ING",
+      "LE",
+      "LEW",
+      "NAC",
+      "NOT",
+      "ORD",
+      "RET",
+      "SBU",
+      "SEC",
+      "TAS",
+      "TTH",
+      "URI",
+      "WAS",
+      "WHA"
+     ],
+     "inline": true,
+     "tiles": true
+    },
+    {
+     "type": "prose",
+     "text": "Word lengths: (4 3 7 7 3 3 4 2 7 3 1 6 4 8)"
+    }
+   ],
+   "hash": "c90a5f2b2ed9f1dc86ed43f9f3e5cdcda89270b0ec1660679c8728abe683cd9f",
+   "partials": {},
+   "hints": [
+    "The sentence was cut into three-letter fragments (spaces removed) and alphabetised. Reassemble it using the word lengths; it tells you the answer.",
+    "To check you're on track: the answer begins with B."
+   ],
+   "technique": "Shredded sentence",
+   "length": 8
+  },
+  {
+   "id": 6,
+   "title": "Hadal Zone",
+   "flavor": "An inventory of the bathysphere, tangled up. Whatever is left over when every item is accounted for is yours.",
+   "blocks": [
+    {
+     "type": "caption",
+     "text": "Hidden in the grid: 8 words to do with the bathysphere (lengths 4, 5, 5, 5, 5, 5, 5, 6), running in any direction."
+    },
+    {
+     "type": "board",
+     "rows": [
+      "WRSQUID",
+      "HEHYDOL",
+      "AVROPTA",
+      "LISONAR",
+      "EDSHERO",
+      "MIBARCC",
+      "KRAHSAL"
+     ],
+     "plain": true,
+     "words": [
+      "CORAL",
+      "CRAB",
+      "DIVER",
+      "ISOPOD",
+      "SHARK",
+      "SONAR",
+      "SQUID",
+      "WHALE"
+     ]
+    }
+   ],
+   "hash": "3a30f2d07e38d8ece156aa48e7dea5bc4fbaa08ceccf224d4abffb7da2ec4415",
+   "partials": {},
+   "hints": [
+    "Find every hidden word (any of 8 directions). The unused letters, read left-to-right, top-to-bottom, spell the answer.",
+    "The hidden words are: CORAL, CRAB, DIVER, ISOPOD, SHARK, SONAR, SQUID, WHALE.",
+    "To check you're on track: the answer begins with H."
+   ],
+   "technique": "Word search leftovers",
+   "length": 12
+  }
+ ],
+ "meta": {
+  "title": "Meta: The Bathysphere Logs",
+  "flavor": "Everything aboard the bathysphere has a place, and every place is exactly the right size.",
+  "blocks": [
+   {
+    "type": "fitgrid",
+    "rows": [
+     {
+      "len": 7,
+      "shade": 3
+     },
+     {
+      "len": 8,
+      "shade": 2
+     },
+     {
+      "len": 4,
+      "shade": 1
+     },
+     {
+      "len": 10,
+      "shade": 6
+     },
+     {
+      "len": 6,
+      "shade": 2
+     },
+     {
+      "len": 12,
+      "shade": 0
+     }
+    ]
+   }
+  ],
+  "length": 6,
+  "hash": "ba229111ac6a208fa37acdf43e671c3bb472d9da45810814eb18a5a0bc52249c",
+  "hints": [
+   "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+   "To check you're on track: the final answer begins with T."
+  ]
+ },
+ "described": true
+}

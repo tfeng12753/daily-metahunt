@@ -1,0 +1,55 @@
+{
+ "date": "2026-11-06",
+ "number": 41,
+ "difficulty": "hard",
+ "final": "VAULT",
+ "metaType": "mutation",
+ "explain": "Each feeder decodes to its answer with a single wrong letter. Those substituted letters, in puzzle order, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Cold Deck",
+   "answer": "TUNNEL",
+   "mechanism": "Maritime signal flags",
+   "transform": null,
+   "encoded": "TUNNVL",
+   "mutated": "TUNNVL"
+  },
+  {
+   "id": 2,
+   "title": "Shift Change",
+   "answer": "PENTHOUSE",
+   "mechanism": "Rail fence (cluephrase)",
+   "transform": null,
+   "encoded": "PENTHOASE",
+   "mutated": "PENTHOASE"
+  },
+  {
+   "id": 3,
+   "title": "The Vault Door",
+   "answer": "VENTILATION",
+   "mechanism": "Shredded sentence",
+   "transform": null,
+   "encoded": "VENTILATUON",
+   "mutated": "VENTILATUON"
+  },
+  {
+   "id": 4,
+   "title": "Inside Man",
+   "answer": "CROUPIER",
+   "mechanism": "Book cipher",
+   "transform": null,
+   "encoded": "CROLPIER",
+   "mutated": "CROLPIER"
+  },
+  {
+   "id": 5,
+   "title": "Double Cross",
+   "answer": "TUMBLER",
+   "mechanism": "Knight's path",
+   "transform": "ROT13",
+   "encoded": "GHZGYRE",
+   "mutated": "TUMTLER"
+  }
+ ]
+}

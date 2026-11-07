@@ -1,0 +1,637 @@
+{
+ "date": "2026-11-07",
+ "difficulty": "hard",
+ "salt": "2026-11-07",
+ "number": 42,
+ "round": "The Bathysphere Logs",
+ "intro": "Eleven hundred metres down, the cable went slack and the radio went strange, and what came back up the line was not speech but a long, low tone that the divers learned to hear as music. Down in the bathysphere they keep a wall of cork, and each day, when the shift ends, the diver on watch pins up a scrap with the day's readings, written in a hand that has grown cramped from the cold. The old diver who mends the lamps has taken to pulling one pin from each scrap every evening, and the cork wall holds the rest, a forest of paper leaves, each missing exactly one small thing. He says the scraps are getting hard to read, not from the damp but from a habit of his own, and he has started a notebook of the pins, one page to a day, so that the missing pieces might be found again. Nobody asks him why.",
+ "echo": "What drowns strong swimmers is never the wave you can see, but the pull going the other way beneath it.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Siphon",
+   "flavor": "Shaken, one word at a time.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "OS",
+      "ZEPIR",
+      "UTSJ",
+      "SI",
+      "EON",
+      "UERTCUR",
+      "EHT",
+      "OT",
+      "DEXTEECP",
+      "FRA",
+      "YNBDOO",
+      "ANOYEN",
+      "ODWR",
+      "EGT",
+      "ISHT"
+     ],
+     "inline": true,
+     "tray": "word"
+    }
+   ],
+   "hash": "7016274705d6669922928fde7083ec7c9232b25292d9ac2330461d4c964815b7",
+   "partials": {
+    "1764d9dd7f46c2391497df8932785af4f4732841c36c47a34a5cf9356482bd37": "So close. Exactly one thing is wrong here. Fix it (and remember what you fixed)."
+   },
+   "hints": [
+    "Each word is complete but shuffled. Start with the shortest ones: does a sentence appear?"
+   ]
+  },
+  {
+   "id": 2,
+   "title": "Dead Reckoning",
+   "flavor": "A familiar grid, an unfamiliar alphabet. Unlucky for some, and the same distance either way.",
+   "blocks": [
+    {
+     "type": "sudoku",
+     "size": 9,
+     "rows": [
+      "V..I....E",
+      "..Y....R.",
+      "...A.YT..",
+      "U......ET",
+      "....TVA.U",
+      "..A..E...",
+      "..R..TE.I",
+      ".P....V.Y",
+      "..VP....."
+     ],
+     "alphabet": "AEIPRTUVY",
+     "marks": [
+      [
+       2,
+       2
+      ],
+      [
+       7,
+       2
+      ],
+      [
+       7,
+       4
+      ],
+      [
+       4,
+       3
+      ],
+      [
+       8,
+       4
+      ],
+      [
+       2,
+       0
+      ],
+      [
+       6,
+       0
+      ],
+      [
+       5,
+       1
+      ],
+      [
+       0,
+       4
+      ],
+      [
+       7,
+       3
+      ]
+     ]
+    }
+   ],
+   "hash": "42c617098e2a5cc459bdd7e72dab57d273396764e8a10fa5acfb4b295266e53c",
+   "partials": {
+    "001ed3fede7ed819313980336fa1f700c625a335742a10aaf4a41033ef8f04ba": "You've decoded it, but it's not finished. One more layer.",
+    "2ef86f76246b3a6117289e04e4a0a0a98b5c2a0e4fcc0c8e1af22e362b707371": "So close. Exactly one thing is wrong here. Fix it (and remember what you fixed)."
+   },
+   "hints": [
+    "A familiar grid puzzle in unfamiliar clothes. Once it's done, are some squares more important than others? And if what you get still isn't a word, reread the flavour text."
+   ]
+  },
+  {
+   "id": 3,
+   "title": "Pressure Hull",
+   "flavor": "A paint chart for a room nobody will ever decorate.",
+   "blocks": [
+    {
+     "type": "swatches",
+     "items": [
+      "#444F4C",
+      "#504849",
+      "#442020"
+     ]
+    }
+   ],
+   "hash": "b8292eb5b7b5b8be9589a93504704d6a08a9e591eb075c694c465aa3f3098a42",
+   "partials": {
+    "96491c1edb9ef72102e8521fa8010d1338090777d4e6b20dfacb0b5bfd483b2f": "So close. Exactly one thing is wrong here. Fix it (and remember what you fixed)."
+   },
+   "hints": [
+    "Split each colour code into three pairs of hex digits. What else is a two-digit hex number?"
+   ]
+  },
+  {
+   "id": 4,
+   "title": "Cold Seep",
+   "flavor": "Everything that belongs is in there somewhere. Some things don't belong.",
+   "blocks": [
+    {
+     "type": "caption",
+     "text": "Somewhere in here: things to do with the bathysphere."
+    },
+    {
+     "type": "board",
+     "rows": [
+      "SIREVID",
+      "BARCEHO",
+      "PLEKNOP",
+      "BENTHIC",
+      "ISOPODH",
+      "OSHARKR",
+      "EGULPER"
+     ],
+     "plain": true,
+     "words": [
+      "BENTHIC",
+      "CRAB",
+      "DIVER",
+      "GULPER",
+      "ISOPOD",
+      "KELP",
+      "SHARK"
+     ]
+    }
+   ],
+   "hash": "e62534d2f32bc209e450de42107ef809897764bbd846362bb81ea297e828de8d",
+   "partials": {
+    "5f0876f6d963dc051e0c61e444dfb6ec4e83697200487757935217e0944cfc2f": "So close. Exactly one thing is wrong here. Fix it (and remember what you fixed)."
+   },
+   "hints": [
+    "Once every theme word is found, is anything left unclaimed? Read it in order.",
+    "The hidden words are: BENTHIC, CRAB, DIVER, GULPER, ISOPOD, KELP, SHARK."
+   ]
+  },
+  {
+   "id": 5,
+   "title": "Ballast",
+   "flavor": "Some of these are far too big to be letters.",
+   "blocks": [
+    {
+     "type": "numbers",
+     "items": [
+      7,
+      44,
+      22,
+      71,
+      16
+     ],
+     "tray": 2
+    }
+   ],
+   "hash": "ce613d924e622b2f6e8388de9cf34af3c8818282fac8710f19faa2ce7ba13d42",
+   "partials": {
+    "bf2d3a945c3122f455149a905c1753cc93c9eda2bf906fcf080843857fc892ed": "So close. Exactly one thing is wrong here. Fix it (and remember what you fixed)."
+   },
+   "hints": [
+    "Several of these numbers are bigger than 26, so they can't be letter positions. What else has a number that high?"
+   ]
+  },
+  {
+   "id": 6,
+   "title": "Marine Snow",
+   "flavor": "Typed in the dark, with one hand resting a key out of place.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "ARKUBURT",
+     "big": true,
+     "shift": -1
+    }
+   ],
+   "hash": "6fae298644468dc6f018620b938a05cecf36001e01b8208fece940b23107bdcf",
+   "partials": {
+    "e36bd43eacca376a75a5f8a8336b638b21cd4fa599e59abd2b77ca74da9650a6": "So close. Exactly one thing is wrong here. Fix it (and remember what you fixed)."
+   },
+   "hints": [
+    "Every letter is close to the right one. Close on what? Look down at your hands."
+   ]
+  },
+  {
+   "id": 7,
+   "title": "Black Smoker",
+   "flavor": "The spaces, at least, are honest.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "FUMY BDXTHY CUY JLQX AMPPEH QX GMJUEHCQXL WMJ KU DUJ JHEE JLH UJLHYX LUT FUM RUJ QJ",
+     "wide": true,
+     "solver": "substitution"
+    }
+   ],
+   "hash": "6c4b98a264588c55871d1f2aed577f67973ee27c1c89db65776fd716037cce93",
+   "partials": {
+    "94ffd4cedbc31fb7fa7e1f5d2499b3ef4405d47a4562a3fb73a8aa3beece54bd": "So close. Exactly one thing is wrong here. Fix it (and remember what you fixed)."
+   },
+   "hints": [
+    "Which short words are most common in English? Could any of them be hiding here?"
+   ]
+  },
+  {
+   "id": 8,
+   "title": "Sounding Line",
+   "flavor": "Some squares have been given to you for free.",
+   "blocks": [
+    {
+     "type": "nonogram",
+     "rows": [
+      [
+       1,
+       1,
+       1,
+       1,
+       4,
+       4,
+       3,
+       5,
+       1,
+       1,
+       5,
+       1,
+       1,
+       1,
+       1,
+       3,
+       1
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       2,
+       2,
+       1,
+       1,
+       1
+      ],
+      [
+       5,
+       1,
+       1,
+       1,
+       4,
+       1,
+       1,
+       1,
+       5,
+       4,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       5,
+       1
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       2,
+       2,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1,
+       4,
+       1,
+       1,
+       3,
+       1,
+       1,
+       1,
+       5,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       5
+      ]
+     ],
+     "cols": [
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       5
+      ],
+      [],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       3
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       3
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       3
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       3
+      ],
+      [],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       5
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       5
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       5
+      ],
+      [],
+      [
+       4
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       4
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ],
+     "givens": [
+      [
+       3,
+       9,
+       0
+      ],
+      [
+       3,
+       7,
+       0
+      ],
+      [
+       1,
+       25,
+       0
+      ],
+      [
+       1,
+       27,
+       0
+      ],
+      [
+       4,
+       8,
+       1
+      ],
+      [
+       0,
+       63,
+       1
+      ],
+      [
+       1,
+       9,
+       1
+      ],
+      [
+       1,
+       6,
+       0
+      ]
+     ]
+    }
+   ],
+   "hash": "282cb3a6b6ead42198117d013c7969bfb245b2e749bde23bf1b78e2b9846a531",
+   "partials": {
+    "fde09a01eb8bffd6ab87b69b9dde8406e0a4fbffbeab35ae40a0a47e44b1809a": "So close. Exactly one thing is wrong here. Fix it (and remember what you fixed)."
+   },
+   "hints": [
+    "The numbers describe runs of filled squares. What picture could they be drawing?"
+   ]
+  }
+ ],
+ "meta": {
+  "title": "Meta: The Bathysphere Logs",
+  "flavor": "Nothing reached the bathysphere undamaged. The damage, though, was remarkably consistent.",
+  "blocks": [],
+  "length": 8,
+  "hash": "28ea4ccc8ed1799a3481c64111a2322a75bf58d70b07aeb1436ea7f12bdffc85",
+  "hints": [
+   "Did every answer come out clean the first time? Each had exactly one wrong letter. Did you keep them?"
+  ]
+ },
+ "described": true
+}
