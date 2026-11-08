@@ -1,0 +1,82 @@
+{
+ "date": "2026-11-07",
+ "number": 42,
+ "difficulty": "hard",
+ "final": "UNDERTOW",
+ "metaType": "mutation",
+ "explain": "Each feeder decodes to its answer with a single wrong letter. Those substituted letters, in puzzle order, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Siphon",
+   "answer": "CURRENT",
+   "mechanism": "Scrambled sentence",
+   "transform": null,
+   "encoded": "CURREUT",
+   "mutated": "CURREUT"
+  },
+  {
+   "id": 2,
+   "title": "Dead Reckoning",
+   "answer": "CHALLENGER",
+   "mechanism": "Letter sudoku",
+   "transform": "ROT13",
+   "encoded": "PUAYYRATRE",
+   "mutated": "CHNLLENGER"
+  },
+  {
+   "id": 3,
+   "title": "Pressure Hull",
+   "answer": "DOLPHIN",
+   "mechanism": "Hex colour ASCII",
+   "transform": null,
+   "encoded": "DOLPHID",
+   "mutated": "DOLPHID"
+  },
+  {
+   "id": 4,
+   "title": "Cold Seep",
+   "answer": "SIPHONOPHORE",
+   "mechanism": "Word search leftovers",
+   "transform": null,
+   "encoded": "SIEHONOPHORE",
+   "mutated": "SIEHONOPHORE"
+  },
+  {
+   "id": 5,
+   "title": "Ballast",
+   "answer": "NAUTILUS",
+   "mechanism": "Element spelling",
+   "transform": null,
+   "encoded": "NRUTILUS",
+   "mutated": "NRUTILUS"
+  },
+  {
+   "id": 6,
+   "title": "Marine Snow",
+   "answer": "SALINITY",
+   "mechanism": "Keyboard shift",
+   "transform": null,
+   "encoded": "STLINITY",
+   "mutated": "STLINITY"
+  },
+  {
+   "id": 7,
+   "title": "Black Smoker",
+   "answer": "CUTTLEFISH",
+   "mechanism": "Cryptogram (cluephrase)",
+   "transform": null,
+   "encoded": "CUTOLEFISH",
+   "mutated": "CUTOLEFISH"
+  },
+  {
+   "id": 8,
+   "title": "Sounding Line",
+   "answer": "HYDROTHERMAL",
+   "mechanism": "Nonogram",
+   "transform": null,
+   "encoded": "HYDROTHEWMAL",
+   "mutated": "HYDROTHEWMAL"
+  }
+ ]
+}

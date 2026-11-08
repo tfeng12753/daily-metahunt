@@ -1,0 +1,55 @@
+{
+ "date": "2026-11-07",
+ "number": 42,
+ "difficulty": "medium",
+ "final": "KRAKEN",
+ "metaType": "logbook",
+ "explain": "Each entry is (puzzle number, letter number): index into that puzzle's answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Lantern Hours",
+   "answer": "SIPHONOPHORE",
+   "mechanism": "Anagrams with an extra letter",
+   "transform": null,
+   "encoded": "SIPHONOPHORE",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Thermocline",
+   "answer": "KELP",
+   "mechanism": "Seating plan (logic)",
+   "transform": null,
+   "encoded": "KELP",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Siphon",
+   "answer": "BENTHIC",
+   "mechanism": "Element spelling",
+   "transform": null,
+   "encoded": "BENTHIC",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Marine Snow",
+   "answer": "TORPEDO",
+   "mechanism": "Gapless Morse",
+   "transform": null,
+   "encoded": "TORPEDO",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "The Long Descent",
+   "answer": "SALINITY",
+   "mechanism": "Number trivia",
+   "transform": null,
+   "encoded": "SALINITY",
+   "mutated": null
+  }
+ ]
+}

@@ -1,0 +1,319 @@
+{
+ "date": "2026-11-08",
+ "difficulty": "hard",
+ "salt": "2026-11-08",
+ "number": 43,
+ "round": "The Clockmaker's Will",
+ "intro": "The old clockmaker left his whole bench to whichever apprentice could finish the last clock. It has no face and no hands, only fourteen drawers, and the apprentices treat it less like an inheritance than a slow trial. In the workshop the bench-keeper's habit is to keep every odd wheel and jewel in the pigeonhole cut for it, and no one has ever forced a part into a hole that shut tight. They wind the unfinished movement each morning by the light from the north window, and they leave their own tools where the last user set them down. Dust moves in the same lanes every afternoon, and the new apprentice still jumps at the sound of the regulator's release.",
+ "echo": "The oldest clock in the garden is useless after dark and honest all day.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Beat Error",
+   "flavor": "Everything came out of the wash with a little something extra.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "AHRNOQC",
+      "ORRAUB",
+      "AMCHEI",
+      "ETMEONVMR",
+      "NINOIPT",
+      "ZLZBEE"
+     ],
+     "ordered": true,
+     "mono": true
+    }
+   ],
+   "hash": "833761aad4ddf23a5ebf275406dfb8c7d97657e5730d24c069ef329f1ef59aff",
+   "partials": {},
+   "hints": [
+    "Each jumble is almost a word from this round, but with a letter to spare. Which letter, every time?"
+   ]
+  },
+  {
+   "id": 2,
+   "title": "Remontoire",
+   "flavor": "Each column remembers what it held, but not in what order.",
+   "blocks": [
+    {
+     "type": "dropquote",
+     "cols": [
+      "ADIRW",
+      "AEHS",
+      "ACRS",
+      "EHNST",
+      "CCIOR",
+      "ANORTT",
+      "EGHNR",
+      "EGLORT",
+      "EGIOS",
+      "CELR",
+      "ABDDOW",
+      "OPUU",
+      "HORRTW"
+     ],
+     "mask": [
+      "....#...#....",
+      "...#.......#.",
+      "..#...#....#.",
+      ".#.......#...",
+      "#.#......#...",
+      ".#..........."
+     ]
+    }
+   ],
+   "hash": "4aa6b5ea75da28704e4b5239cd914f48f65b8a021b82fb131b2a20ab27fe6905",
+   "partials": {},
+   "hints": [
+    "Black squares are spaces. Which two- and three-letter words fit, using only the letters each column allows?"
+   ]
+  },
+  {
+   "id": 3,
+   "title": "Perpetual Calendar",
+   "flavor": "It never travels in a straight line, and neither does the truth.",
+   "blocks": [
+    {
+     "type": "board",
+     "rows": [
+      "TKKYGZBT",
+      "NQWSZTHS",
+      "PBBENJVX",
+      "TCOBBWOZ",
+      "AZAETLXM",
+      "NIUXYSTH",
+      "ALSWQDHS",
+      "AEMDSIMT"
+     ]
+    },
+    {
+     "type": "prose",
+     "text": "The knight sets out from d7: Nb6 Na4 Nb2 Nc4 Na3 Nb5 Nd6."
+    }
+   ],
+   "hash": "0157f77387f9ce13179d2032b932c7264d33b47fe9e1513704e43e17f6b395fb",
+   "partials": {},
+   "hints": [
+    "Those are chess moves. Which squares does the piece land on, and what's written there?"
+   ]
+  },
+  {
+   "id": 4,
+   "title": "Power Reserve",
+   "flavor": "An inventory, tangled.",
+   "blocks": [
+    {
+     "type": "caption",
+     "text": "Somewhere in here: things to do with the workshop."
+    },
+    {
+     "type": "board",
+     "rows": [
+      "LEEHWDJ",
+      "RUOHNTE",
+      "CIRAEGW",
+      "ROHCNAE",
+      "OALARML",
+      "WCKDIAL",
+      "NDNOCES"
+     ],
+     "plain": true,
+     "words": [
+      "ALARM",
+      "ANCHOR",
+      "CROWN",
+      "DIAL",
+      "GEAR",
+      "HAND",
+      "HOUR",
+      "JEWEL",
+      "SECOND",
+      "WHEEL"
+     ]
+    }
+   ],
+   "hash": "a2bedeb4bf53c000c1211f68663acdb8a10ea9d1c967ddbb6ece668b12de6a3f",
+   "partials": {},
+   "hints": [
+    "Once every theme word is found, is anything left unclaimed? Read it in order.",
+    "The hidden words are: ALARM, ANCHOR, CROWN, DIAL, GEAR, HAND, HOUR, JEWEL, SECOND, WHEEL."
+   ]
+  },
+  {
+   "id": 5,
+   "title": "Minute Repeater",
+   "flavor": "Fenced in, and copied out in a hurry.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "NEENT AEIOD AOYXT DOEET FRHPE STNRS WTBDP CAYTG HSSTR ZJSEO TPCOE NOIOI UWOH",
+     "wide": true,
+     "rails": 4
+    }
+   ],
+   "hash": "c57218f9d34033bfdef15e30333f70848d540a80aa637867ba3954d84e7b7bf0",
+   "partials": {},
+   "hints": [
+    "All the right letters are here, just out of order. Could they have been written along a path that goes up and down?"
+   ]
+  },
+  {
+   "id": 6,
+   "title": "Escapement",
+   "flavor": "A familiar grid, an unfamiliar alphabet.",
+   "blocks": [
+    {
+     "type": "sudoku",
+     "size": 9,
+     "rows": [
+      ".........",
+      "I...R..LQ",
+      "N.QL..I..",
+      ".......I.",
+      ".CAQ....D",
+      "..E..D.R.",
+      ".....L...",
+      ".D....C.A",
+      ".NC..E..."
+     ],
+     "alphabet": "ACDEILNQR",
+     "marks": [
+      [
+       0,
+       0
+      ],
+      [
+       3,
+       4
+      ],
+      [
+       7,
+       2
+      ],
+      [
+       6,
+       8
+      ],
+      [
+       4,
+       6
+      ],
+      [
+       8,
+       7
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       4,
+       5
+      ]
+     ]
+    }
+   ],
+   "hash": "5f69774e64c6d1433dbd6647cca79134f43c5754d0b3454cad47cba34366d534",
+   "partials": {},
+   "hints": [
+    "A familiar grid puzzle in unfamiliar clothes. Once it's done, are some squares more important than others?"
+   ]
+  },
+  {
+   "id": 7,
+   "title": "Grande Sonnerie",
+   "flavor": "Every part here resists a little, and never more than twenty-six. The tape was spooled back onto the wrong reel.",
+   "blocks": [
+    {
+     "type": "resistors",
+     "items": [
+      [
+       "brown",
+       "blue",
+       "black",
+       "gold"
+      ],
+      [
+       "black",
+       "brown",
+       "black",
+       "gold"
+      ],
+      [
+       "brown",
+       "grey",
+       "black",
+       "gold"
+      ],
+      [
+       "red",
+       "black",
+       "black",
+       "gold"
+      ],
+      [
+       "brown",
+       "white",
+       "black",
+       "gold"
+      ]
+     ]
+    }
+   ],
+   "hash": "e3f188881957e09e1344b73f851bbeeddf94810199dfde31feb999c6e21b3e6a",
+   "partials": {
+    "2d3724b4d5503ffc6197a8e4c0a51911921e229e77abaf3a193dc9cf930f5116": "You've decoded it, but it's not finished. One more layer."
+   },
+   "hints": [
+    "Engineers read stripes like these as numbers. What number does each part give, and what is a number up to 26? And if what you get still isn't a word, reread the flavour text."
+   ]
+  }
+ ],
+ "meta": {
+  "title": "Meta: The Clockmaker's Will",
+  "flavor": "Everything in the workshop has a place.",
+  "blocks": [
+   {
+    "type": "fitgrid",
+    "rows": [
+     {
+      "len": 5,
+      "shade": 0
+     },
+     {
+      "len": 6,
+      "shade": 1
+     },
+     {
+      "len": 11,
+      "shade": 4
+     },
+     {
+      "len": 8,
+      "shade": 5
+     },
+     {
+      "len": 4,
+      "shade": 1
+     },
+     {
+      "len": 9,
+      "shade": 5
+     },
+     {
+      "len": 7,
+      "shade": 2
+     }
+    ]
+   }
+  ],
+  "length": 7,
+  "hash": "49a5df90f6c35ea682d1a81108b39a56fdecb4fb9eee5cfafa06eaaf69f75476",
+  "hints": [
+   "The grid's rows are all different lengths. So are your answers."
+  ]
+ },
+ "described": true
+}

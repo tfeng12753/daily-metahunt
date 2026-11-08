@@ -1,0 +1,215 @@
+{
+ "date": "2026-11-08",
+ "difficulty": "medium",
+ "salt": "2026-11-08/medium",
+ "number": 43,
+ "round": "The Clockmaker's Will",
+ "intro": "The old clockmaker left everything to whichever apprentice could finish the last clock, and the workshop has not slept properly since the reading. The unfinished piece sits on the pine bench with no face and no hands, its movement exposed and its fourteen drawers shut tight. Elsie, who keeps the workshop ledger, has filled its pages with the morning's work in black iron-gall ink, and every entry carries exactly two figures: the drawer an apprentice was sent to, then the count they returned with. The others say the will is impossible, but they still arrive at dawn to oil the wheel trains and smoke their pipes in the cold. Nobody has opened drawer nine yet, and the ledger's second column grows longer all the same.",
+ "echo": "Breguet put the whole escapement in a spinning cage, to cheat gravity.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Complication",
+   "flavor": "Every answer is small, and none is bigger than it needs to be.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "Years in a decade",
+      "Rings on the Olympic flag",
+      "Pairs of chromosomes in a typical human cell",
+      "Rings on the Olympic flag",
+      "Signs of the Western zodiac"
+     ],
+     "ordered": true,
+     "tray": "letter"
+    }
+   ],
+   "hash": "f0071106ca2681b60a04bdc89b3756499225b74b4c78e46f159da00b1df7563f",
+   "partials": {},
+   "hints": [
+    "Every line has a number for an answer. Could those numbers be counting through something else?",
+    "They're all between 1 and 26: A = 1, B = 2…"
+   ],
+   "length": 5
+  },
+  {
+   "id": 2,
+   "title": "Escapement",
+   "flavor": "A sentence that came loose from its lines.",
+   "blocks": [
+    {
+     "type": "dropquote",
+     "cols": [
+      "IORY",
+      "GNOST",
+      "HOOTU",
+      "EHHRTT",
+      "IOR",
+      "AISSTU",
+      "ENRT",
+      "HLPS",
+      "BLOUW",
+      "EUWZ",
+      "RTTZ",
+      "HLY",
+      "DEEFO",
+      "OOU"
+     ],
+     "mask": [
+      "....#......#..",
+      ".#....#......#",
+      "..#....#...#..",
+      "#...#....#...#",
+      "......#...#...",
+      "#...#..#######"
+     ]
+    }
+   ],
+   "hash": "0ba7bbba22221510509b7b8d87aeb58ac1abe0c66594e29cc28a0e2af6d01ce2",
+   "partials": {},
+   "hints": [
+    "Black squares are spaces. Which two- and three-letter words fit, using only the letters each column allows?",
+    "Each column's letters drop into that column of the grid; cross them off as you place them. The sentence tells you what to submit."
+   ],
+   "length": 4
+  },
+  {
+   "id": 3,
+   "title": "Beat Error",
+   "flavor": "It never travels in a straight line, and neither does the truth.",
+   "blocks": [
+    {
+     "type": "board",
+     "rows": [
+      "DMPZUQZU",
+      "ZIOUCXVB",
+      "RSKNQTID",
+      "EUDESCZZ",
+      "YFVKJSAM",
+      "IEICQQUY",
+      "CAUTHOTB",
+      "YZKTPBNI"
+     ]
+    },
+    {
+     "type": "prose",
+     "text": "The knight sets out from f2: Nd1 Nc3 Na2 Nc1."
+    }
+   ],
+   "hash": "46d1e5667f013db37f20d3563d2f6320bcfdded6cf9bbf5e5d273953fb2e4c7f",
+   "partials": {},
+   "hints": [
+    "Those are chess moves. Which squares does the piece land on, and what's written there?",
+    "Start on the given square, play each move, and read the letter on every square it lands on."
+   ],
+   "length": 4
+  },
+  {
+   "id": 4,
+   "title": "Fusee Chain",
+   "flavor": "Everything came out of the wash with a little something extra. Start from the end; that's where it started.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "EEBZSL",
+      "WHSELE",
+      "NACLDEAAR",
+      "ROETWR",
+      "BIHWTGE"
+     ],
+     "ordered": true,
+     "mono": true
+    }
+   ],
+   "hash": "c1c6f3775fc7ae84b37546e6561ba9a189593259899fb267aa2efcfb350cbb00",
+   "partials": {
+    "362286792d48172678c93e65caeacc68d25ebc3861f0c0cb84b11f19f7737571": "You've decoded it, but it's not finished. One more layer."
+   },
+   "hints": [
+    "Each jumble is almost a word from this round, but with a letter to spare. Which letter, every time? And if what you get still isn't a word, reread the flavour text.",
+    "Rearrange each into a theme word; the spare letters, in order, are the answer. Then one more layer: Read what you get backwards."
+   ],
+   "length": 5
+  },
+  {
+   "id": 5,
+   "title": "Moonphase",
+   "flavor": "The navigator keeps pointing two ways at once.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "NW & S",
+      "W & SW",
+      "SW & NW",
+      "E & SW",
+      "NE & S"
+     ],
+     "inline": true
+    }
+   ],
+   "hash": "38f6152c938a8980230637038148ae41cbf13c6b3a10ff8937fdb48f9efa75ba",
+   "partials": {},
+   "hints": [
+    "Imagine each of these as a person holding two flags out at arm's length. Sailors had an alphabet for that.",
+    "Flag semaphore: the two hands are the two arms, and each pair of angles is a letter."
+   ],
+   "length": 5
+  },
+  {
+   "id": 6,
+   "title": "Mainspring",
+   "flavor": "Bumps on a lift button, copied carefully.",
+   "blocks": [
+    {
+     "type": "braille",
+     "items": [
+      "100100",
+      "111010",
+      "101010",
+      "010111",
+      "101110"
+     ]
+    }
+   ],
+   "hash": "0a359bd6886e505700823e09df2586095c6dea3f12eb109807f152d9806a9c83",
+   "partials": {},
+   "hints": [
+    "Write each number in binary. Six yes-or-no choices: is there an alphabet built from exactly that?",
+    "Braille: each bit is one of the six dots (1, 2, 4 down the left column; 8, 16, 32 down the right)."
+   ],
+   "length": 5
+  }
+ ],
+ "meta": {
+  "title": "Meta: The Clockmaker's Will",
+  "flavor": "Tonight's seating chart.",
+  "blocks": [
+   {
+    "type": "list",
+    "items": [
+     "Row 3, seat 1",
+     "Row 6, seat 3",
+     "Row 2, seat 3",
+     "Row 2, seat 4",
+     "Row 4, seat 1",
+     "Row 5, seat 3",
+     "Row 1, seat 5",
+     "Row 1, seat 5",
+     "Row 6, seat 3",
+     "Row 6, seat 5"
+    ],
+    "ordered": true
+   }
+  ],
+  "length": 10,
+  "hash": "651df59ce41d0738ef645784a24c52902c722ac6a60156123c3cf673176bdedc",
+  "hints": [
+   "Every entry has two numbers. What in this round is numbered, and what could the second number count?",
+   "The first number picks a puzzle; the second picks a letter inside its answer."
+  ]
+ },
+ "described": true
+}

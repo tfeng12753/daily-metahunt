@@ -1,0 +1,302 @@
+{
+ "date": "2026-11-08",
+ "difficulty": "easy",
+ "salt": "2026-11-08/easy",
+ "number": 43,
+ "round": "The Clockmaker's Will",
+ "intro": "The old clockmaker has left everything to whichever apprentice finishes the last clock, and the clock itself is the stubborn part: it has no face, no hands, and fourteen small drawers set into the bottom rail. Each drawer is lined with a different brass lip, so a cog, spring or pallet will only sit flush if it is exactly the right length for that one place; the apprentices test their work by sliding parts into the pigeonholes until everything is home. The clockmaker's rule is that a finished part is never forced, only found, and the workshop keeps its own record of belonging in the shallow shadows that the fitted pieces leave between them. When the last drawer is shut, the apprentice is meant to read the inheritance not from the clock, but from the dark gaps that remain. Nobody has finished it yet, but the smell of old iron and the sound of the repeating hammers still run the place.",
+ "echo": "The Black Forest clockmakers taught a bird to announce the hour.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Minute Repeater",
+   "flavor": "Paint chips left behind in the workshop. The labels matter more than the colours.",
+   "blocks": [
+    {
+     "type": "swatches",
+     "items": [
+      "#4D494E",
+      "#555445"
+     ]
+    }
+   ],
+   "hash": "a63487055d8920f9c5ed9eff3e0029da921166454ab730deb6406603ee0cab81",
+   "partials": {},
+   "hints": [
+    "Each hex colour code is three ASCII bytes.",
+    "To check you're on track: the answer begins with M."
+   ],
+   "technique": "Hex colour ASCII",
+   "length": 6
+  },
+  {
+   "id": 2,
+   "title": "Fusee Chain",
+   "flavor": "Fences and corners. Some of them have an animal inside.",
+   "blocks": [
+    {
+     "type": "pigpen",
+     "items": [
+      {
+       "g": "hash",
+       "p": 2,
+       "dot": false
+      },
+      {
+       "g": "hash",
+       "p": 8,
+       "dot": true
+      },
+      {
+       "g": "hash",
+       "p": 5,
+       "dot": true
+      },
+      {
+       "g": "x",
+       "p": 0,
+       "dot": true
+      },
+      {
+       "g": "hash",
+       "p": 4,
+       "dot": true
+      }
+     ]
+    }
+   ],
+   "hash": "2ac378f5e4ed3d6b7f5685408f2137404274f1c67fdb6d66e75fbe5898410f80",
+   "partials": {},
+   "hints": [
+    "Pigpen (Freemason's) cipher: A–I in a # grid, J–R the same with dots, S–V in an X, W–Z the X with dots.",
+    "To check you're on track: the answer begins with C."
+   ],
+   "technique": "Pigpen cipher",
+   "length": 5
+  },
+  {
+   "id": 3,
+   "title": "Perpetual Calendar",
+   "flavor": "The typesetter dropped the tray. Every letter landed in the right column, at least.",
+   "blocks": [
+    {
+     "type": "dropquote",
+     "cols": [
+      "AEMNS",
+      "ATVY",
+      "BENOST",
+      "ADEHIRU",
+      "ILNNY",
+      "ADGSTW",
+      "AGHLNS",
+      "CEENOP",
+      "AEOTW",
+      "DGIWW",
+      "EFOOT",
+      "HHRRR",
+      "DDIOU"
+     ],
+     "mask": [
+      ".....#....#..",
+      "..#....#....#",
+      ".#......#....",
+      "#...#...#....",
+      "#...#....#...",
+      ".#....#....#.",
+      ".#.......####"
+     ]
+    }
+   ],
+   "hash": "aead958050a5bfa9f5029f93fcaeac775c6a9c8f6a5f1fb846803f4e0a152593",
+   "partials": {},
+   "hints": [
+    "A drop quote: each column's letters (shown alphabetised above it) drop into that column of the grid below. Black squares are spaces; words can wrap between rows. The sentence tells you the answer.",
+    "To check you're on track: the answer begins with B."
+   ],
+   "technique": "Drop quote",
+   "length": 7
+  },
+  {
+   "id": 4,
+   "title": "Remontoire",
+   "flavor": "Up and down, up and down: three rows, one long sentence, and not a single space left.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "YAERS ZSETD TLORW GTORN WROTI PZLIM VMNBT OOTLT ETESO YUOIU SFHUE OEUNE HHHOT",
+     "wide": true,
+     "rails": 3
+    }
+   ],
+   "hash": "ac59c80184b932dca6d638beac12a9a7f31c07b17fa9f38280d7f99043961fee",
+   "partials": {},
+   "hints": [
+    "Rail-fence transposition of a sentence with the spaces removed. Try 2 to 5 rails; the sentence tells you the answer.",
+    "To check you're on track: the answer begins with M."
+   ],
+   "technique": "Rail fence (cluephrase)",
+   "length": 8
+  },
+  {
+   "id": 5,
+   "title": "Complication",
+   "flavor": "A familiar grid, an unfamiliar alphabet.",
+   "blocks": [
+    {
+     "type": "sudoku",
+     "size": 9,
+     "rows": [
+      "..S.D....",
+      "DCWS..T.O",
+      "O....P.DA",
+      ".SPTODAH.",
+      ".WDAH..OP",
+      "H.....D.S",
+      "WH..C....",
+      "...HSAW..",
+      ".DCP.WO.."
+     ],
+     "alphabet": "ACDHOPSTW",
+     "marks": [
+      [
+       4,
+       5
+      ],
+      [
+       4,
+       0
+      ],
+      [
+       5,
+       2
+      ],
+      [
+       7,
+       0
+      ],
+      [
+       2,
+       4
+      ],
+      [
+       5,
+       1
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       0,
+       8
+      ],
+      [
+       0,
+       6
+      ]
+     ]
+    }
+   ],
+   "hash": "cb40023203bbdf168e6874fb3f07a91f27d050fa67a8681f3158074bdf5c9419",
+   "partials": {},
+   "hints": [
+    "Sudoku using the letters shown instead of digits (each row, column and box uses each letter once). Read the numbered squares in order.",
+    "To check you're on track: the answer begins with S."
+   ],
+   "technique": "Letter sudoku",
+   "length": 9
+  },
+  {
+   "id": 6,
+   "title": "Power Reserve",
+   "flavor": "The telegraphist in the workshop never paused between letters. You'll have to work out where one ends and the next begins, and the word bank will help.",
+   "blocks": [
+    {
+     "type": "morselines",
+     "items": [
+      {
+       "code": ".-..---.-......-",
+       "len": 7,
+       "index": 3
+      },
+      {
+       "code": "-.....-.-..",
+       "len": 4,
+       "index": 2
+      },
+      {
+       "code": "....-.-.----.-..",
+       "len": 6,
+       "index": 3
+      },
+      {
+       "code": "-----.-.-.-",
+       "len": 4,
+       "index": 4
+      }
+     ],
+     "bank": [
+      "BELL",
+      "DIAL",
+      "PALLET",
+      "PINION",
+      "RATCHET",
+      "SECOND",
+      "SPRING",
+      "TOCK"
+     ]
+    }
+   ],
+   "hash": "e59a0a373de169230683fcd30580e10f14abffc88724b8d0f9805d278fa4ef74",
+   "partials": {},
+   "hints": [
+    "Each line is a word from this round's theme in Morse code with the gaps between letters lost. Work out which word fits the dots, dashes and letter count, then take the letter at the position shown.",
+    "To check you're on track: the answer begins with T."
+   ],
+   "technique": "Gapless Morse",
+   "length": 4
+  }
+ ],
+ "meta": {
+  "title": "Meta: The Clockmaker's Will",
+  "flavor": "Pigeonholes, each cut to fit one thing, and some of them marked.",
+  "blocks": [
+   {
+    "type": "fitgrid",
+    "rows": [
+     {
+      "len": 7,
+      "shade": 5
+     },
+     {
+      "len": 6,
+      "shade": 3
+     },
+     {
+      "len": 5,
+      "shade": 0
+     },
+     {
+      "len": 4,
+      "shade": 3
+     },
+     {
+      "len": 9,
+      "shade": 2
+     },
+     {
+      "len": 8,
+      "shade": 1
+     }
+    ]
+   }
+  ],
+  "length": 6,
+  "hash": "f7f0d636fdf7ff5d5ad5f95f35c18c3e87cb2cc892073528d1d3fcf51beec759",
+  "hints": [
+   "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+   "To check you're on track: the final answer begins with C."
+  ]
+ },
+ "described": true
+}

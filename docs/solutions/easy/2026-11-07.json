@@ -1,0 +1,64 @@
+{
+ "date": "2026-11-07",
+ "number": 42,
+ "difficulty": "easy",
+ "final": "TRENCH",
+ "metaType": "fitin",
+ "explain": "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Porthole",
+   "answer": "CHALLENGER",
+   "mechanism": "Rail fence (cluephrase)",
+   "transform": null,
+   "encoded": "CHALLENGER",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Cold Seep",
+   "answer": "KELP",
+   "mechanism": "Knight's path",
+   "transform": null,
+   "encoded": "KELP",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Ballast",
+   "answer": "BENTHIC",
+   "mechanism": "Number trivia",
+   "transform": null,
+   "encoded": "BENTHIC",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Lantern Hours",
+   "answer": "ANCHOR",
+   "mechanism": "Semaphore clocks",
+   "transform": null,
+   "encoded": "ANCHOR",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Siphon",
+   "answer": "BARNACLE",
+   "mechanism": "Shredded sentence",
+   "transform": null,
+   "encoded": "BARNACLE",
+   "mutated": null
+  },
+  {
+   "id": 6,
+   "title": "Hadal Zone",
+   "answer": "HYDROTHERMAL",
+   "mechanism": "Word search leftovers",
+   "transform": null,
+   "encoded": "HYDROTHERMAL",
+   "mutated": null
+  }
+ ]
+}
