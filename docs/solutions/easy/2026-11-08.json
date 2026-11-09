@@ -1,0 +1,64 @@
+{
+ "date": "2026-11-08",
+ "number": 43,
+ "difficulty": "easy",
+ "final": "CUCKOO",
+ "metaType": "fitin",
+ "explain": "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Minute Repeater",
+   "answer": "MINUTE",
+   "mechanism": "Hex colour ASCII",
+   "transform": null,
+   "encoded": "MINUTE",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Fusee Chain",
+   "answer": "CROWN",
+   "mechanism": "Pigpen cipher",
+   "transform": null,
+   "encoded": "CROWN",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Perpetual Calendar",
+   "answer": "BALANCE",
+   "mechanism": "Drop quote",
+   "transform": null,
+   "encoded": "BALANCE",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Remontoire",
+   "answer": "MOVEMENT",
+   "mechanism": "Rail fence (cluephrase)",
+   "transform": null,
+   "encoded": "MOVEMENT",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Complication",
+   "answer": "STOPWATCH",
+   "mechanism": "Letter sudoku",
+   "transform": null,
+   "encoded": "STOPWATCH",
+   "mutated": null
+  },
+  {
+   "id": 6,
+   "title": "Power Reserve",
+   "answer": "TICK",
+   "mechanism": "Gapless Morse",
+   "transform": null,
+   "encoded": "TICK",
+   "mutated": null
+  }
+ ]
+}

@@ -1,0 +1,185 @@
+{
+ "date": "2026-11-09",
+ "difficulty": "easy",
+ "salt": "2026-11-09/easy",
+ "number": 44,
+ "round": "Mission Control, Night Shift",
+ "intro": "The probe was declared lost in 1994. Last night, it phoned home, and it had clearly been practising. In Mission Control, the night-shift flight directors keep a brown leather logbook on the third desk from the console, and every entry in it is exactly two numbers: the bay number of the call, then the bell it came in on. Nobody has ever needed to ask why the book is laid out this way, any more than anyone asks why the coffee is always poured before the telemetry comes up. The new recruits learn to read it by watching, and they learn that every answer the probe gives is already a question about where to look next.",
+ "echo": "Newton blamed an apple; Einstein blamed the shape of space itself.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Dark Side",
+   "flavor": "A voicemail with no voice.",
+   "blocks": [
+    {
+     "type": "audio",
+     "kind": "dtmf",
+     "groups": [
+      "888",
+      "666",
+      "999",
+      "2",
+      "4",
+      "33",
+      "777"
+     ]
+    }
+   ],
+   "hash": "54eb5ad50a793c200b84acc188ff20ee1da1ad5256dfe03d3e8f51d642e8cbb8",
+   "partials": {},
+   "hints": [
+    "Touch-tone (DTMF) key presses, played as sound. Identify each key; repeated presses pick the letter, multi-tap style.",
+    "To check you're on track: the answer begins with V."
+   ],
+   "technique": "DTMF multi-tap (audio)",
+   "length": 7
+  },
+  {
+   "id": 2,
+   "title": "Countdown",
+   "flavor": "The newspaper's puzzle page, the one your grandmother did in pen, every single morning.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "JMJZQ NSSF VDXU JXFK RLUV C KLXNBJ RSZF CXF UVJ RSZF QSD RCXU YZSE UVLK ACNJ LK EJUJSZ",
+     "wide": true,
+     "solver": "substitution"
+    }
+   ],
+   "hash": "875575cbbf3844a8338adf4c575e923c563d5d5840593be09f59aa6c1b5f9124",
+   "partials": {},
+   "hints": [
+    "Simple monoalphabetic substitution with word breaks kept. Solve the sentence; it tells you the answer.",
+    "To check you're on track: the answer begins with M."
+   ],
+   "technique": "Cryptogram (cluephrase)",
+   "length": 6
+  },
+  {
+   "id": 3,
+   "title": "Station Keeping",
+   "flavor": "Every line is a word you'd expect at mission control, keyed without a single gap. Find the word, then take the letter the number points to.",
+   "blocks": [
+    {
+     "type": "morselines",
+     "items": [
+      {
+       "code": ".---..-.--...-..-.",
+       "len": 7,
+       "index": 3
+      },
+      {
+       "code": ".-.--.---.-...-..---",
+       "len": 6,
+       "index": 1
+      },
+      {
+       "code": "--..-.-...--..--.--",
+       "len": 6,
+       "index": 6
+      },
+      {
+       "code": "...---.-.....-..-.-..",
+       "len": 8,
+       "index": 3
+      },
+      {
+       "code": ".-.--.-----...",
+       "len": 6,
+       "index": 3
+      },
+      {
+       "code": ".-...-.-.----..-..--",
+       "len": 9,
+       "index": 7
+      },
+      {
+       "code": ".-...--.-....-.",
+       "len": 6,
+       "index": 4
+      }
+     ],
+     "bank": [
+      "APOGEE",
+      "APOLLO",
+      "ASTRONAUT",
+      "BOOSTER",
+      "GALAXY",
+      "GANTRY",
+      "JUPITER",
+      "LANDER",
+      "NEPTUNE",
+      "ROCKET",
+      "SOLSTICE"
+     ]
+    }
+   ],
+   "hash": "a02f7ece38d7795618b3d91a39120580529a1b68151feb9b50bc95cbcd36f87d",
+   "partials": {},
+   "hints": [
+    "Each line is a word from this round's theme in Morse code with the gaps between letters lost. Work out which word fits the dots, dashes and letter count, then take the letter at the position shown.",
+    "To check you're on track: the answer begins with P."
+   ],
+   "technique": "Gapless Morse",
+   "length": 7
+  },
+  {
+   "id": 4,
+   "title": "Apogee",
+   "flavor": "The quizmaster at mission control only ever asks questions with a number for an answer, and never a big one.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "Lines in a villanelle",
+      "Wheels on a unicycle",
+      "Things in a score",
+      "Sides of a pentagon",
+      "Months in a year",
+      "Signs of the Western zodiac",
+      "Squares in a noughts-and-crosses grid",
+      "Things in a score",
+      "Sides of a pentagon"
+     ],
+     "ordered": true,
+     "tray": "letter"
+    }
+   ],
+   "hash": "317a4fe22eee9dd62cf26cb284bf6380f5a4719b6e4b34e95676fe5ad3fcd0ba",
+   "partials": {},
+   "hints": [
+    "Each line is a number from 1 to 26. Turn each number into a letter (A = 1, B = 2, …).",
+    "To check you're on track: the answer begins with S."
+   ],
+   "technique": "Number trivia",
+   "length": 9
+  }
+ ],
+ "meta": {
+  "title": "Meta: Mission Control, Night Shift",
+  "flavor": "The porter only ever noted where each passenger boarded. Every car holds one letter.",
+  "blocks": [
+   {
+    "type": "list",
+    "items": [
+     "Platform 1, car 5",
+     "Platform 2, car 6",
+     "Platform 4, car 2",
+     "Platform 1, car 1",
+     "Platform 4, car 7",
+     "Platform 4, car 3",
+     "Platform 3, car 3"
+    ],
+    "ordered": true
+   }
+  ],
+  "length": 7,
+  "hash": "7cf803b070ff1cf02fc2440798160a5d2c548e2b88043893e04f3fd0f1d19c8f",
+  "hints": [
+   "Each entry is (puzzle number, letter number): index into that puzzle's answer.",
+   "To check you're on track: the final answer begins with G."
+  ]
+ },
+ "described": true
+}

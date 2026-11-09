@@ -1,0 +1,64 @@
+{
+ "date": "2026-11-08",
+ "number": 43,
+ "difficulty": "medium",
+ "final": "TOURBILLON",
+ "metaType": "logbook",
+ "explain": "Each entry is (puzzle number, letter number): index into that puzzle's answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Complication",
+   "answer": "JEWEL",
+   "mechanism": "Number trivia",
+   "transform": null,
+   "encoded": "JEWEL",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Escapement",
+   "answer": "HOUR",
+   "mechanism": "Drop quote",
+   "transform": null,
+   "encoded": "HOUR",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Beat Error",
+   "answer": "TICK",
+   "mechanism": "Knight's path",
+   "transform": null,
+   "encoded": "TICK",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Fusee Chain",
+   "answer": "BRASS",
+   "mechanism": "Anagrams with an extra letter",
+   "transform": "Reversal",
+   "encoded": "SSARB",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Moonphase",
+   "answer": "CHIME",
+   "mechanism": "Semaphore (compass bearings)",
+   "transform": null,
+   "encoded": "CHIME",
+   "mutated": null
+  },
+  {
+   "id": 6,
+   "title": "Mainspring",
+   "answer": "CROWN",
+   "mechanism": "Braille (drawn)",
+   "transform": null,
+   "encoded": "CROWN",
+   "mutated": null
+  }
+ ]
+}

@@ -1,0 +1,321 @@
+{
+ "date": "2026-11-09",
+ "difficulty": "hard",
+ "salt": "2026-11-09",
+ "number": 44,
+ "round": "Mission Control, Night Shift",
+ "intro": "The probe was declared lost in 1994. Last night, it phoned home, and it had clearly been practising. In the back room of Flight, where the shift keeps its coffee and its spare logbooks, every incoming strip is now pinned to the corkboard beside the one before it, each sheet edged in a different colour of tape, none of them ever thrown away, each one kept just in case it turns out to matter. The senior capcom says the machine never sends anything it didn't mean to keep, and the younger controllers have started doing the same with their coffee cups, stacking them handle-out on the shelf above the printers, right up to the ceiling.",
+ "echo": "For a few minutes, the day forgot to happen.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Slingshot",
+   "flavor": "Nothing is missing. Nothing is where it was.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "DLSHUO",
+      "ITNO",
+      "GRNWO",
+      "DRELEAN",
+      "HET",
+      "EPSLEA",
+      "NTOE",
+      "FREOGT",
+      "THSI",
+      "ETH",
+      "ROWD",
+      "FLLA",
+      "ANHDS"
+     ],
+     "inline": true,
+     "tray": "word"
+    }
+   ],
+   "hash": "df4808235c6e3b1471d95f446ab513a7cfc7d22aa69a7b90fe07d35a1d685518",
+   "partials": {
+    "f99acb1164db740fffe54efa663aa1e74c871d369c3878613cd72c7aa11647a8": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Each word is complete but shuffled. Start with the shortest ones: does a sentence appear?"
+   ]
+  },
+  {
+   "id": 2,
+   "title": "Station Keeping",
+   "flavor": "A sentence that came loose from its lines.",
+   "blocks": [
+    {
+     "type": "dropquote",
+     "cols": [
+      "ACHQWW",
+      "EENTUY",
+      "ILU",
+      "ELNNNT",
+      "EEHOT",
+      "DELWX",
+      "AOTY",
+      "NNWW",
+      "DEOOOR",
+      "INNR",
+      "DEMTY",
+      "EOOT",
+      "NOUV",
+      "DEE",
+      "MOPT"
+     ],
+     "mask": [
+      "....#....#...#.",
+      "..#...#.....#..",
+      "..#...#....#...",
+      ".....#...#....#",
+      ".......#..#..#.",
+      "..#....#...####"
+     ]
+    }
+   ],
+   "hash": "68a5738f38145a49972a20ff578063f04a9222da88cb8521da3a076e6fef2b40",
+   "partials": {
+    "997b7aa535481641ac5f56ce474a22148683b6854aa76ff5d69643f01f00b1e8": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Black squares are spaces. Which two- and three-letter words fit, using only the letters each column allows?"
+   ]
+  },
+  {
+   "id": 3,
+   "title": "Apogee",
+   "flavor": "An accountant who changes currency every line, but never the amount.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "100₄",
+      "13₉",
+      "5₆",
+      "200₃",
+      "9₁₂",
+      "111₂",
+      "5₈",
+      "10₅"
+     ],
+     "inline": true
+    }
+   ],
+   "hash": "a0f38f1f18e6e7602c6a69ccf26a86aafc694079ab7381f4c37e405f7108d399",
+   "partials": {
+    "ea6e9c9cb24a51efc5d3a29d9293acdfa2e417e88203bd5179df6851de170863": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "The subscript is a base. Once everything is in ordinary decimal, what range are the numbers in?"
+   ]
+  },
+  {
+   "id": 4,
+   "title": "Burn Window",
+   "flavor": "Rhythm without rests, and a finger pointing into each line.",
+   "blocks": [
+    {
+     "type": "morselines",
+     "items": [
+      {
+       "code": "....--..-.-.-.",
+       "len": 6,
+       "index": 4
+      },
+      {
+       "code": "--.-.---.-.",
+       "len": 6,
+       "index": 6
+      },
+      {
+       "code": ".-...-..--.-.-.....",
+       "len": 6,
+       "index": 2
+      },
+      {
+       "code": "...---.-...-.-..--..-.-..",
+       "len": 9,
+       "index": 7
+      },
+      {
+       "code": "--..--.-.-.-.--",
+       "len": 6,
+       "index": 3
+      },
+      {
+       "code": ".-...-.-.----..-..--",
+       "len": 9,
+       "index": 8
+      },
+      {
+       "code": "-..-......-.-.---.--..",
+       "len": 9,
+       "index": 5
+      }
+     ]
+    }
+   ],
+   "hash": "03c4e4a5cabeb0023a0e3d047af6e7b72fc2dafcf72d8bd715fdcb0ef3cedb8a",
+   "partials": {
+    "4ef16c2e2cc204e0a65c37cd932caafdfb8728cecbbc58408668a14e43bfc3a0": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Two symbols, no spaces, and a letter count. Which old code is it, and which word from this round fits each line?"
+   ]
+  },
+  {
+   "id": 5,
+   "title": "Dark Side",
+   "flavor": "One horseman, and a field full of noise.",
+   "blocks": [
+    {
+     "type": "board",
+     "rows": [
+      "IXPLEXEG",
+      "PIFYLJRM",
+      "XAVJGKAN",
+      "LFQBDROI",
+      "GSELDXLE",
+      "WMUJDCTP",
+      "QOGNQHJJ",
+      "EBYRNVAW"
+     ]
+    },
+    {
+     "type": "prose",
+     "text": "The knight sets out from c3: Na4 Nb6 Nc8 Ne7 Ng6 Nf8 Nd7."
+    }
+   ],
+   "hash": "07fea439131ff7325c20e52dd6ea44dbdae4b510237baa0d54f19212b9726b4c",
+   "partials": {
+    "c3330593ee4debab6f29f25ead1b1c395d582c3afbd66fe95cb220b8eaaf5ce9": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Those are chess moves. Which squares does the piece land on, and what's written there?"
+   ]
+  },
+  {
+   "id": 6,
+   "title": "Telemetry",
+   "flavor": "The host was particular about the seating, and more particular still about what each chair was worth.",
+   "blocks": [
+    {
+     "type": "seating",
+     "seats": 7,
+     "names": [
+      "Ophelia",
+      "Rosalind",
+      "Charles",
+      "Abigail",
+      "Emilia",
+      "Theodore",
+      "Florence"
+     ],
+     "clues": [
+      "Exactly one person sits between Abigail and Florence.",
+      "Charles is not in seat 1.",
+      "Theodore sits somewhere between Abigail and Charles.",
+      "Ophelia sits somewhere to the left of Emilia.",
+      "Rosalind sits somewhere between Ophelia and Theodore.",
+      "Abigail and Theodore are not neighbours.",
+      "Florence and Rosalind are not neighbours.",
+      "Exactly 3 people sit between Charles and Florence."
+     ],
+     "logic": [
+      [
+       "gap",
+       "ABIGAIL",
+       "FLORENCE",
+       1
+      ],
+      [
+       "not_at",
+       "CHARLES",
+       1
+      ],
+      [
+       "between",
+       "ABIGAIL",
+       "THEODORE",
+       "CHARLES"
+      ],
+      [
+       "left_of",
+       "OPHELIA",
+       "EMILIA"
+      ],
+      [
+       "between",
+       "OPHELIA",
+       "ROSALIND",
+       "THEODORE"
+      ],
+      [
+       "apart",
+       "ABIGAIL",
+       "THEODORE"
+      ],
+      [
+       "apart",
+       "FLORENCE",
+       "ROSALIND"
+      ],
+      [
+       "gap",
+       "CHARLES",
+       "FLORENCE",
+       3
+      ]
+     ]
+    }
+   ],
+   "hash": "95529d42cfdfe9bb2dc64a5e31959d2e32fdc8bc5d724cb81777e44ba71b196b",
+   "partials": {
+    "8abb5a6fcd6d5c8c0bdf2a9faf0e8cc428cf9c7b4abb6fde6da0e7102215c24c": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Only one arrangement satisfies every clue; start from whoever has an end seat or a fixed neighbour. Once they're seated, why might the seat numbers matter?"
+   ]
+  },
+  {
+   "id": 7,
+   "title": "Deep Space Network",
+   "flavor": "It goes round and round, and only gets anywhere in the middle.",
+   "blocks": [
+    {
+     "type": "lettergrid",
+     "rows": [
+      "NREADTHIS",
+      "AALREADYS",
+      "CERWHICFE",
+      "UVEEETHON",
+      "OAWK··IUT",
+      "YHSCORSNE",
+      "FUNAEHTDN",
+      "IOYNEHTEC"
+     ]
+    }
+   ],
+   "hash": "f054003f86d6a94f0f7b34b06f72283083465556a35b4cb3790f40eeeb1e123b",
+   "partials": {
+    "5574609e881d8384b741e7ee0e4e7747b8e5c9295b7034d41d7946428ab9b210": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "All the letters of a sentence are here, but not in rows. Try walking the grid the way a snail would."
+   ]
+  }
+ ],
+ "meta": {
+  "title": "Meta: Mission Control, Night Shift",
+  "flavor": "Count heads at the gangway.",
+  "blocks": [],
+  "length": 7,
+  "hash": "80a5faa49860d99403613fa5fbc97f7ce06ac2ff1aa0787f221cf3c04b157a88",
+  "hints": [
+   "Did every answer come out the right size the first time? Each had one letter too many. Did you keep them?"
+  ]
+ },
+ "described": true
+}

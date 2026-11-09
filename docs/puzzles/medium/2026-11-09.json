@@ -1,0 +1,258 @@
+{
+ "date": "2026-11-09",
+ "difficulty": "medium",
+ "salt": "2026-11-09/medium",
+ "number": 44,
+ "round": "Mission Control, Night Shift",
+ "intro": "The probe was declared lost in 1994, and the overnight log had been shut for thirty years with nothing but a coffee ring on its cover. Last night it phoned home, and it had clearly been practising: the same patient sequence, sent again and again while the night crew leant towards the speaker. At 0200 the flight director called the roll in the old way, and the scribe wrote each name against the controller's place in the row of consoles. In the margin of the newest line there is a second, smaller figure beside the line number, as if the line had a length worth measuring. Tea is still in the saucer by the sheet.",
+ "echo": "Everything up there is falling. It just keeps missing.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Hohmann Transfer",
+   "flavor": "A familiar grid, an unfamiliar alphabet.",
+   "blocks": [
+    {
+     "type": "sudoku",
+     "size": 9,
+     "rows": [
+      ".C.RU.SP.",
+      "T...PI...",
+      ".......U.",
+      ".U....C.S",
+      "EI......A",
+      ".......I.",
+      "I...RA.ST",
+      "....E.I..",
+      "P......E."
+     ],
+     "alphabet": "ACEIPRSTU",
+     "marks": [
+      [
+       8,
+       2
+      ],
+      [
+       6,
+       3
+      ],
+      [
+       2,
+       3
+      ],
+      [
+       1,
+       7
+      ],
+      [
+       6,
+       1
+      ],
+      [
+       7,
+       5
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       0,
+       8
+      ],
+      [
+       5,
+       3
+      ]
+     ]
+    }
+   ],
+   "hash": "4e48e133bd5f9a938a08d62f966eb3d5ed4cc8ada1f3de6450b2e96ee9c4d446",
+   "partials": {},
+   "hints": [
+    "A familiar grid puzzle in unfamiliar clothes. Once it's done, are some squares more important than others?",
+    "Solve it like a sudoku, then read the numbered squares in order."
+   ],
+   "length": 9
+  },
+  {
+   "id": 2,
+   "title": "Mission Elapsed Time",
+   "flavor": "One table, one arrangement that offends nobody, and a toll that rises seat by seat.",
+   "blocks": [
+    {
+     "type": "seating",
+     "seats": 6,
+     "names": [
+      "Cecilia",
+      "Ludwig",
+      "Michael",
+      "Harriet",
+      "Aubrey",
+      "Isobel"
+     ],
+     "clues": [
+      "Exactly 3 people sit between Cecilia and Harriet.",
+      "Exactly 3 people sit between Ludwig and Michael.",
+      "Michael has seat 6.",
+      "Exactly one person sits between Aubrey and Harriet.",
+      "Aubrey sits somewhere between Cecilia and Ludwig."
+     ],
+     "logic": [
+      [
+       "gap",
+       "CECILIA",
+       "HARRIET",
+       3
+      ],
+      [
+       "gap",
+       "LUDWIG",
+       "MICHAEL",
+       3
+      ],
+      [
+       "at",
+       "MICHAEL",
+       6
+      ],
+      [
+       "gap",
+       "AUBREY",
+       "HARRIET",
+       1
+      ],
+      [
+       "between",
+       "CECILIA",
+       "AUBREY",
+       "LUDWIG"
+      ]
+     ]
+    }
+   ],
+   "hash": "889df50dc031dc230e71200b7ff7470e6a3b501c2400d49cfee394055526ca07",
+   "partials": {},
+   "hints": [
+    "Only one arrangement satisfies every clue; start from whoever has an end seat or a fixed neighbour. Once they're seated, why might the seat numbers matter?",
+    "Solve the seating, then take the k-th letter of the name in seat k, left to right."
+   ],
+   "length": 6
+  },
+  {
+   "id": 3,
+   "title": "Apogee",
+   "flavor": "Fill the gaps.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "NEPT_NE",
+      "ROVE_",
+      "ANTENN_",
+      "LA_DER",
+      "VEN_S",
+      "CON_TELLATION"
+     ],
+     "ordered": true,
+     "mono": true
+    }
+   ],
+   "hash": "9ecc16f95694aa047da8646040ce8decab74bfb93ffea442b9d70d29994d3073",
+   "partials": {},
+   "hints": [
+    "Every gap takes exactly one letter. Is there a pattern in what you filled in?",
+    "Read the letters you supplied, in order."
+   ],
+   "length": 6
+  },
+  {
+   "id": 4,
+   "title": "Countdown",
+   "flavor": "Three letters to a strip, and a note of how long each word was.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "ARR",
+      "DOR",
+      "ECO",
+      "EQU",
+      "ERC",
+      "GOL",
+      "IED",
+      "ING",
+      "INO",
+      "LEW",
+      "NOT",
+      "ORD",
+      "RET",
+      "SBU",
+      "SEC",
+      "TAS",
+      "TTH",
+      "URI",
+      "WAS",
+      "WHA",
+      "X"
+     ],
+     "inline": true,
+     "tiles": true
+    },
+    {
+     "type": "prose",
+     "text": "Word lengths: (4 3 7 7 3 3 4 2 7 3 1 6 4 7)"
+    }
+   ],
+   "hash": "0e1ab50dbc118911733004d7d163935873c1b5bb26a6720a6a82255c13caf902",
+   "partials": {},
+   "hints": [
+    "The strips are alphabetised, not in order. The word lengths say where the breaks fall. Which strip could start the sentence?",
+    "Chain the strips into one string and split it by the word lengths; the sentence tells you what to submit."
+   ],
+   "length": 7
+  },
+  {
+   "id": 5,
+   "title": "Houston",
+   "flavor": "Pay attention to how it stands, not what it says.",
+   "blocks": [
+    {
+     "type": "prose",
+     "text": "apogeE juPiTer PERigeE vOYAgeR GeMini coNsTelLatIOn."
+    }
+   ],
+   "hash": "64daa46f7cf13e14b2534b715142fea63102fec2be2d7d53047991f6fe70ddbf",
+   "partials": {},
+   "hints": [
+    "Two kinds of letter, big and small. How many of them would you need to spell twenty-six different things?",
+    "Baconian cipher: groups of five, lowercase = a, uppercase = b; aaaaa is A."
+   ],
+   "length": 9
+  }
+ ],
+ "meta": {
+  "title": "Meta: Mission Control, Night Shift",
+  "flavor": "The watch-keeper wrote down nothing but the day and the bell.",
+  "blocks": [
+   {
+    "type": "list",
+    "items": [
+     "Day 4, 6 bells",
+     "Day 3, 2 bells",
+     "Day 2, 3 bells",
+     "Day 1, 8 bells",
+     "Day 5, 9 bells"
+    ],
+    "ordered": true
+   }
+  ],
+  "length": 5,
+  "hash": "ebad9c3a29a3b23979fc1d574d8fbe4a6e9a996aacd61ef3175db492cd42892a",
+  "hints": [
+   "Every entry has two numbers. What in this round is numbered, and what could the second number count?",
+   "The first number picks a puzzle; the second picks a letter inside its answer."
+  ]
+ },
+ "described": true
+}

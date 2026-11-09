@@ -1,0 +1,73 @@
+{
+ "date": "2026-11-08",
+ "number": 43,
+ "difficulty": "hard",
+ "final": "SUNDIAL",
+ "metaType": "fitin",
+ "explain": "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Beat Error",
+   "answer": "QUARTZ",
+   "mechanism": "Anagrams with an extra letter",
+   "transform": null,
+   "encoded": "QUARTZ",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Remontoire",
+   "answer": "CHRONOGRAPH",
+   "mechanism": "Drop quote",
+   "transform": null,
+   "encoded": "CHRONOGRAPH",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Perpetual Calendar",
+   "answer": "BALANCE",
+   "mechanism": "Knight's path",
+   "transform": null,
+   "encoded": "BALANCE",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Power Reserve",
+   "answer": "TICK",
+   "mechanism": "Word search leftovers",
+   "transform": null,
+   "encoded": "TICK",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Minute Repeater",
+   "answer": "STOPWATCH",
+   "mechanism": "Rail fence (cluephrase)",
+   "transform": null,
+   "encoded": "STOPWATCH",
+   "mutated": null
+  },
+  {
+   "id": 6,
+   "title": "Escapement",
+   "answer": "CALENDAR",
+   "mechanism": "Letter sudoku",
+   "transform": null,
+   "encoded": "CALENDAR",
+   "mutated": null
+  },
+  {
+   "id": 7,
+   "title": "Grande Sonnerie",
+   "answer": "STRAP",
+   "mechanism": "Resistor colour bands",
+   "transform": "Reversal",
+   "encoded": "PARTS",
+   "mutated": null
+  }
+ ]
+}
