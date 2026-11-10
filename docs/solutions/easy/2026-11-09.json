@@ -1,0 +1,46 @@
+{
+ "date": "2026-11-09",
+ "number": 44,
+ "difficulty": "easy",
+ "final": "GRAVITY",
+ "metaType": "logbook",
+ "explain": "Each entry is (puzzle number, letter number): index into that puzzle's answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Dark Side",
+   "answer": "VOYAGER",
+   "mechanism": "DTMF multi-tap (audio)",
+   "transform": null,
+   "encoded": "VOYAGER",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Countdown",
+   "answer": "METEOR",
+   "mechanism": "Cryptogram (cluephrase)",
+   "transform": null,
+   "encoded": "METEOR",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Station Keeping",
+   "answer": "PAYLOAD",
+   "mechanism": "Gapless Morse",
+   "transform": null,
+   "encoded": "PAYLOAD",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Apogee",
+   "answer": "SATELLITE",
+   "mechanism": "Number trivia",
+   "transform": null,
+   "encoded": "SATELLITE",
+   "mutated": null
+  }
+ ]
+}

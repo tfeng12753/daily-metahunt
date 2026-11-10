@@ -1,0 +1,73 @@
+{
+ "date": "2026-11-09",
+ "number": 44,
+ "difficulty": "hard",
+ "final": "ECLIPSE",
+ "metaType": "stowaway",
+ "explain": "Each feeder decodes to its answer plus one inserted letter. The inserted letters, in puzzle order, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Slingshot",
+   "answer": "LANDER",
+   "mechanism": "Scrambled sentence",
+   "transform": null,
+   "encoded": "LANDEER",
+   "mutated": "LANDEER"
+  },
+  {
+   "id": 2,
+   "title": "Station Keeping",
+   "answer": "NEPTUNE",
+   "mechanism": "Drop quote",
+   "transform": null,
+   "encoded": "NEPCTUNE",
+   "mutated": "NEPCTUNE"
+  },
+  {
+   "id": 3,
+   "title": "Apogee",
+   "answer": "PERIGEE",
+   "mechanism": "Mixed number bases",
+   "transform": null,
+   "encoded": "PLERIGEE",
+   "mutated": "PLERIGEE"
+  },
+  {
+   "id": 4,
+   "title": "Burn Window",
+   "answer": "URANUS",
+   "mechanism": "Gapless Morse",
+   "transform": null,
+   "encoded": "URAINUS",
+   "mutated": "URAINUS"
+  },
+  {
+   "id": 5,
+   "title": "Dark Side",
+   "answer": "GALAXY",
+   "mechanism": "Knight's path",
+   "transform": null,
+   "encoded": "GAPLAXY",
+   "mutated": "GAPLAXY"
+  },
+  {
+   "id": 6,
+   "title": "Telemetry",
+   "answer": "APOLLO",
+   "mechanism": "Seating plan (logic)",
+   "transform": null,
+   "encoded": "APOLLOS",
+   "mutated": "APOLLOS"
+  },
+  {
+   "id": 7,
+   "title": "Deep Space Network",
+   "answer": "ROCKET",
+   "mechanism": "Spiral route",
+   "transform": null,
+   "encoded": "ROCKEET",
+   "mutated": "ROCKEET"
+  }
+ ]
+}

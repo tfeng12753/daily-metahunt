@@ -1,0 +1,337 @@
+{
+ "date": "2026-11-10",
+ "difficulty": "easy",
+ "salt": "2026-11-10/easy",
+ "number": 45,
+ "round": "Insert Coin",
+ "intro": "The cabinet in the back corner of the arcade has been unplugged since 1987, and yet the high-score table still flickers with fresh initials each morning, as if somebody were still playing after closing time. The regulars have long stopped asking who writes them; they just slide a coin across the counter and move on, the way you might pay a fare you do not understand. What draws the eye is the little oak rack beside the change machine, where the owner files the night's takings: six shallow pigeonholes, each cut to fit exactly one envelope, one handful, one size of take, and any envelope that does not belong is left lying on the counter overnight until it finds its groove. Nobody can say what the initials mean, but everyone agrees the table reads differently once the day's money has settled into its slots.",
+ "echo": "One up, two up: somebody has to hold the controls.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "High Score",
+   "flavor": "Every row in the arcade holds one of everything. So does every column, and every box. Then read the numbered squares.",
+   "blocks": [
+    {
+     "type": "sudoku",
+     "size": 9,
+     "rows": [
+      "E...I.RO.",
+      ".T...S..I",
+      "ADI.RV...",
+      "DIA...E..",
+      "TS.....R.",
+      "..RA.EID.",
+      "OE.R..DIS",
+      ".RD.VO...",
+      "S.TEDI.V."
+     ],
+     "alphabet": "ADEIORSTV",
+     "marks": [
+      [
+       8,
+       1
+      ],
+      [
+       0,
+       2
+      ],
+      [
+       2,
+       7
+      ],
+      [
+       7,
+       7
+      ],
+      [
+       1,
+       0
+      ],
+      [
+       8,
+       6
+      ],
+      [
+       4,
+       3
+      ],
+      [
+       4,
+       5
+      ],
+      [
+       3,
+       7
+      ]
+     ]
+    }
+   ],
+   "hash": "f14bd0c4fb30232157024534957fa3ca116cc8f9c738503a28b209ac21137a61",
+   "partials": {},
+   "hints": [
+    "Sudoku using the letters shown instead of digits (each row, column and box uses each letter once). Read the numbered squares in order.",
+    "To check you're on track: the answer begins with A."
+   ],
+   "technique": "Letter sudoku",
+   "length": 9
+  },
+  {
+   "id": 2,
+   "title": "Up Up Down Down",
+   "flavor": "A parts list read aloud by someone who only knew the stripes.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "brown–red",
+      "black–green",
+      "red–red",
+      "black–green",
+      "brown–red"
+     ]
+    }
+   ],
+   "hash": "47cd2def73ab65b9bea3fc6f103f3a7312d5474422d3ea0276384da6e2798d3c",
+   "partials": {},
+   "hints": [
+    "Resistor colour code: each pair of colours is two digits (black 0 … white 9), a letter position.",
+    "To check you're on track: the answer begins with L."
+   ],
+   "technique": "Resistor colour code (written)",
+   "length": 5
+  },
+  {
+   "id": 3,
+   "title": "Attract Mode",
+   "flavor": "Three letters to a strip. The strips are in order; the sentence isn't.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "HEO",
+      "ISP",
+      "LEI",
+      "LLT",
+      "NGB",
+      "NKE",
+      "ONO",
+      "OTI",
+      "OUG",
+      "OWY",
+      "RAN",
+      "RFO",
+      "RSH",
+      "RTH",
+      "SDO",
+      "SWE",
+      "T",
+      "THE",
+      "TTE",
+      "UTD",
+      "UZZ",
+      "YKO",
+      "YOU"
+     ],
+     "inline": true,
+     "tiles": true
+    },
+    {
+     "type": "prose",
+     "text": "Word lengths: (4 6 3 4 6 2 10 3 2 3 4 3 6 3 3 3 2)"
+    }
+   ],
+   "hash": "5d775a5fefff04361ebe1ea71075c9a0ff9a24456fba67bc97e490b14205de94",
+   "partials": {},
+   "hints": [
+    "The sentence was cut into three-letter fragments (spaces removed) and alphabetised. Reassemble it using the word lengths; it tells you the answer.",
+    "To check you're on track: the answer begins with D."
+   ],
+   "technique": "Shredded sentence",
+   "length": 10
+  },
+  {
+   "id": 4,
+   "title": "Boss Rush",
+   "flavor": "Seat them correctly first. Then each guest owes you the letter of their name that matches their seat number.",
+   "blocks": [
+    {
+     "type": "seating",
+     "seats": 7,
+     "names": [
+      "Bridget",
+      "Andrew",
+      "Isobel",
+      "Claudia",
+      "Theodore",
+      "Vivienne",
+      "Jonathan"
+     ],
+     "clues": [
+      "Isobel sits somewhere to the left of Theodore.",
+      "Jonathan is not in seat 5.",
+      "Claudia and Isobel are not neighbours.",
+      "Andrew sits somewhere between Isobel and Jonathan.",
+      "Jonathan sits somewhere between Andrew and Bridget.",
+      "Vivienne sits somewhere between Andrew and Jonathan.",
+      "Claudia sits somewhere to the left of Bridget.",
+      "Exactly 4 people sit between Bridget and Isobel."
+     ],
+     "logic": [
+      [
+       "left_of",
+       "ISOBEL",
+       "THEODORE"
+      ],
+      [
+       "not_at",
+       "JONATHAN",
+       5
+      ],
+      [
+       "apart",
+       "CLAUDIA",
+       "ISOBEL"
+      ],
+      [
+       "between",
+       "ISOBEL",
+       "ANDREW",
+       "JONATHAN"
+      ],
+      [
+       "between",
+       "ANDREW",
+       "JONATHAN",
+       "BRIDGET"
+      ],
+      [
+       "between",
+       "ANDREW",
+       "VIVIENNE",
+       "JONATHAN"
+      ],
+      [
+       "left_of",
+       "CLAUDIA",
+       "BRIDGET"
+      ],
+      [
+       "gap",
+       "BRIDGET",
+       "ISOBEL",
+       4
+      ]
+     ]
+    }
+   ],
+   "hash": "5455c15a6d0ea7b9912c808713409c0b93f013131f0f5c9bf7204a4a3bb51719",
+   "partials": {},
+   "hints": [
+    "A logic puzzle: use the clues to find the one seating that works (seats are numbered 1 to n from the left). Then the guest in seat k gives the k-th letter of their name.",
+    "To check you're on track: the answer begins with I."
+   ],
+   "technique": "Seating plan (logic)",
+   "length": 7
+  },
+  {
+   "id": 5,
+   "title": "Kill Screen",
+   "flavor": "Everything in the arcade got thrown in the tumble dryer, and every item came out with a little something extra.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "ECRPNLLOROT",
+      "RUBEPAML",
+      "CAIPPSEHSC",
+      "ACMTESL",
+      "OAHSTG",
+      "IDTCNRE"
+     ],
+     "ordered": true,
+     "mono": true
+    }
+   ],
+   "hash": "40948d4b9bf02e7e8867e3ce6eefa72947f6c44967bff04fd9f4b6ce9c9000e4",
+   "partials": {},
+   "hints": [
+    "Each jumble is an anagram of a word from this round's theme plus one extra letter. The extra letters, in order, spell the answer.",
+    "To check you're on track: the answer begins with P."
+   ],
+   "technique": "Anagrams with an extra letter",
+   "length": 6
+  },
+  {
+   "id": 6,
+   "title": "Continue?",
+   "flavor": "Two directions at a time, and never a destination.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "E & SW",
+      "NW & NE",
+      "SE & W",
+      "W & SW",
+      "W & E",
+      "W & NW",
+      "W & NW",
+      "SW & E"
+     ],
+     "inline": true
+    }
+   ],
+   "hash": "8f9a5d480093c4840cd6cbd7d43d3bb3bd1464cd169cb1a5a951f65c54d82ee9",
+   "partials": {},
+   "hints": [
+    "Flag semaphore, with each arm given as a compass direction as you face the signaller (N = straight up).",
+    "To check you're on track: the answer begins with M."
+   ],
+   "technique": "Semaphore (compass bearings)",
+   "length": 8
+  }
+ ],
+ "meta": {
+  "title": "Meta: Insert Coin",
+  "flavor": "Pigeonholes, each cut to fit one thing, and some of them marked.",
+  "blocks": [
+   {
+    "type": "fitgrid",
+    "rows": [
+     {
+      "len": 6,
+      "shade": 0
+     },
+     {
+      "len": 5,
+      "shade": 0
+     },
+     {
+      "len": 9,
+      "shade": 0
+     },
+     {
+      "len": 10,
+      "shade": 5
+     },
+     {
+      "len": 7,
+      "shade": 5
+     },
+     {
+      "len": 8,
+      "shade": 4
+     }
+    ]
+   }
+  ],
+  "length": 6,
+  "hash": "5e948e974dc0fc581e26ae1c20414cefe7729334afe8873d09494a3f35f2888a",
+  "hints": [
+   "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+   "To check you're on track: the final answer begins with P."
+  ]
+ },
+ "described": true
+}

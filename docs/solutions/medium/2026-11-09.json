@@ -1,0 +1,55 @@
+{
+ "date": "2026-11-09",
+ "number": 44,
+ "difficulty": "medium",
+ "final": "ORBIT",
+ "metaType": "logbook",
+ "explain": "Each entry is (puzzle number, letter number): index into that puzzle's answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Hohmann Transfer",
+   "answer": "SPACESUIT",
+   "mechanism": "Letter sudoku",
+   "transform": null,
+   "encoded": "SPACESUIT",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Mission Elapsed Time",
+   "answer": "HUBBLE",
+   "mechanism": "Seating plan (logic)",
+   "transform": null,
+   "encoded": "HUBBLE",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Apogee",
+   "answer": "URANUS",
+   "mechanism": "Missing letters",
+   "transform": null,
+   "encoded": "URANUS",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Countdown",
+   "answer": "EQUINOX",
+   "mechanism": "Shredded sentence",
+   "transform": null,
+   "encoded": "EQUINOX",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Houston",
+   "answer": "ASTRONAUT",
+   "mechanism": "Baconian cipher",
+   "transform": null,
+   "encoded": "ASTRONAUT",
+   "mutated": null
+  }
+ ]
+}

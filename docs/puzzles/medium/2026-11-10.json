@@ -1,0 +1,175 @@
+{
+ "date": "2026-11-10",
+ "difficulty": "medium",
+ "salt": "2026-11-10/medium",
+ "number": 45,
+ "round": "Insert Coin",
+ "intro": "The cabinet in the back corner of the arcade has been unplugged since 1987, but it still hums with the future; its high-score table glows while the initials keep changing. The regulars do not touch it. They say the initials arrive like missed calls, three letters at a time, and nobody has ever caught a hand in the dark. At the counter, the cashier keeps a cardboard rack of score sheets for that one machine, each ruled into two narrow columns; on every line she writes only two small figures, then adds her own initials in pencil. The sheets are always kept in order, although the order is never spoken aloud.",
+ "echo": "If it didn't work, you blew on the contacts and tried again.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Extra Life",
+   "flavor": "It never travels in a straight line, and neither does the truth. Start from the end; that's where it started.",
+   "blocks": [
+    {
+     "type": "board",
+     "rows": [
+      "DNKHNLDF",
+      "RNLBUWRG",
+      "OIECXEPB",
+      "GNKDFLDL",
+      "ZTDJFVWY",
+      "UTZXONMX",
+      "MVTXEAUH",
+      "YBIUTKIN"
+     ]
+    },
+    {
+     "type": "prose",
+     "text": "The knight sets out from d7: Nb8 Na6 Nb4 Nc2 Na3 Nb1."
+    }
+   ],
+   "hash": "7a7608f8728382bab00f5ac6e06ab46d24cbcac084b8f35c18b1a475ddf45f0b",
+   "partials": {
+    "a13d59bd73b3a7a74e4685b3762e4b0ff85aba52ce87c59ad8b0f50e401c6c57": "You've decoded it, but it's not finished. One more layer."
+   },
+   "hints": [
+    "Those are chess moves. Which squares does the piece land on, and what's written there? And if what you get still isn't a word, reread the flavour text.",
+    "Start on the given square, play each move, and read the letter on every square it lands on. Then one more layer: Read what you get backwards."
+   ],
+   "length": 6
+  },
+  {
+   "id": 2,
+   "title": "High Score",
+   "flavor": "The labels in the arcade have faded.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "_ONSOLE",
+      "P_CMAN",
+      "SPACE_HIP",
+      "CEN_IPEDE",
+      "_EVEL",
+      "CH_RRY"
+     ],
+     "ordered": true,
+     "mono": true
+    }
+   ],
+   "hash": "2cccc19742c765bd544156c79ddbc0cfb0e468e5063587cd5cd3696b031432dd",
+   "partials": {},
+   "hints": [
+    "Every gap takes exactly one letter. Is there a pattern in what you filled in?",
+    "Read the letters you supplied, in order."
+   ],
+   "length": 6
+  },
+  {
+   "id": 3,
+   "title": "Boss Rush",
+   "flavor": "An emperor's idea of privacy.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "HSLE ESP NZFCTPC NLCCTPO HLD YZE RZWO ZC DPNCPED MFE L DTYRWP HZCO OZYVPJVZYR",
+     "wide": true,
+     "solver": "substitution"
+    }
+   ],
+   "hash": "39c80b0c930fa1555507b975d7eaf58c93ec70ac9080209741234d6bfb0e02b8",
+   "partials": {},
+   "hints": [
+    "Try moving every letter the same distance. How far turns the short words into English?",
+    "A Caesar shift: find the one shift that fixes a short word, then apply it everywhere."
+   ],
+   "length": 10
+  },
+  {
+   "id": 4,
+   "title": "Player Two",
+   "flavor": "Nothing is missing. Nothing is where it was.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "YDBOON",
+      "EEXPCTED",
+      "NYENAO",
+      "OT",
+      "EGT",
+      "STIH",
+      "RAF",
+      "OS",
+      "EHT",
+      "RIPEZ",
+      "SI",
+      "JSTU",
+      "NEO",
+      "WDOR",
+      "IRETPS"
+     ],
+     "inline": true,
+     "tray": "word"
+    }
+   ],
+   "hash": "242aeb0fdc2e12e351f5aa7100b316db2520c5984ab53405758f1b50e0ccd025",
+   "partials": {},
+   "hints": [
+    "Each word is complete but shuffled. Start with the shortest ones: does a sentence appear?",
+    "Unscramble each word where it stands; the sentence tells you what to submit."
+   ],
+   "length": 6
+  },
+  {
+   "id": 5,
+   "title": "Up Up Down Down",
+   "flavor": "Walk the fence; don't read it.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "WATEO RECRI DANTO DRERT BTSNL WRTKN HTHCU IRARE WSOGL OSCES UAIGE ODOE",
+     "wide": true,
+     "rails": 2
+    }
+   ],
+   "hash": "e4ee5394d267fc6c55d3b65e9b6667de56a43a225d68c13f3471f4ce2d7933b8",
+   "partials": {},
+   "hints": [
+    "All the right letters are here, just out of order. Could they have been written along a path that goes up and down?",
+    "Rail fence: written in a zigzag over a few rows, then copied out row by row. Try two to five rows."
+   ],
+   "length": 5
+  }
+ ],
+ "meta": {
+  "title": "Meta: Insert Coin",
+  "flavor": "The porter only ever noted where each passenger boarded.",
+  "blocks": [
+   {
+    "type": "list",
+    "items": [
+     "Platform 2, car 1",
+     "Platform 2, car 2",
+     "Platform 4, car 3",
+     "Platform 1, car 3",
+     "Platform 4, car 3",
+     "Platform 4, car 4",
+     "Platform 3, car 1",
+     "Platform 3, car 10",
+     "Platform 5, car 4"
+    ],
+    "ordered": true
+   }
+  ],
+  "length": 9,
+  "hash": "625252aae24d63a9d12fe72ef557738de61ee5c289166d38f0ab700959c96038",
+  "hints": [
+   "Every entry has two numbers. What in this round is numbered, and what could the second number count?",
+   "The first number picks a puzzle; the second picks a letter inside its answer."
+  ]
+ },
+ "described": true
+}

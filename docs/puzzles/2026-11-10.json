@@ -1,0 +1,227 @@
+{
+ "date": "2026-11-10",
+ "difficulty": "hard",
+ "salt": "2026-11-10",
+ "number": 45,
+ "round": "Insert Coin",
+ "intro": "The cabinet in the back corner of the arcade has been unplugged since 1987, but nobody has ever moved it. Its high-score table is really a visitors' book, and the little signatures in it keep changing as if the machine were still taking turns. The regulars do not mention it over the hum of the fruit machines; they just leave a coin on the marquee and watch the screen hold its breath. The leather ledger under the coin door keeps a register of monograms, each closed by the same curved stroke, and the hinge will not lift until they have all been pressed flat together.",
+ "echo": "Up close, every face on the screen is made of tiny squares.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Player Two",
+   "flavor": "Bunting on the halyard, and not for a celebration.",
+   "blocks": [
+    {
+     "type": "flags",
+     "items": [
+      "G",
+      "H",
+      "O",
+      "S",
+      "T"
+     ]
+    }
+   ],
+   "hash": "42b7ba46dbb4ff82018a4b2f735b3a8a412cdeaed9b1394e0d4734cea07fccd3",
+   "partials": {},
+   "hints": [
+    "Ships carry a flag for every letter of the alphabet. Do you know them?"
+   ]
+  },
+  {
+   "id": 2,
+   "title": "Speedrun",
+   "flavor": "Each entry picked up a hitchhiker on the way.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "SLGGAAA",
+      "DGPNNEOU",
+      "GANORDA",
+      "URLCEPMB",
+      "OESRSADETI",
+      "VSEILS",
+      "GHHHGEDEO",
+      "EIIBACTN",
+      "IPKNMOA"
+     ],
+     "ordered": true,
+     "mono": true
+    }
+   ],
+   "hash": "48aaba65873fcbae5c14054cbb66216df8309ba651dc5103f9e0ec3afa493075",
+   "partials": {},
+   "hints": [
+    "Each jumble is almost a word from this round, but with a letter to spare. Which letter, every time?"
+   ]
+  },
+  {
+   "id": 3,
+   "title": "Continue?",
+   "flavor": "It goes round and round, and only gets anywhere in the middle.",
+   "blocks": [
+    {
+     "type": "lettergrid",
+     "rows": [
+      "ORTYPEDT",
+      "TNTDEABH",
+      "AEYKODEE",
+      "RWE·NWFL",
+      "EEK·GAOA",
+      "PNNODSRS",
+      "OILEHTET",
+      "EHTGNIHT"
+     ]
+    }
+   ],
+   "hash": "d040603c926413d3be3761d37a88b4fc0751637cd553ac9b28c157008c3c8125",
+   "partials": {},
+   "hints": [
+    "All the letters of a sentence are here, but not in rows. Try walking the grid the way a snail would."
+   ]
+  },
+  {
+   "id": 4,
+   "title": "Extra Life",
+   "flavor": "Everyone has a place. Everyone pays for it in their own name.",
+   "blocks": [
+    {
+     "type": "seating",
+     "seats": 7,
+     "names": [
+      "Penelope",
+      "Cedric",
+      "Cordelia",
+      "Daniel",
+      "Malcolm",
+      "Griselda",
+      "Justine"
+     ],
+     "clues": [
+      "Exactly one person sits between Daniel and Griselda.",
+      "Cordelia sits somewhere between Cedric and Daniel.",
+      "Cordelia sits immediately to the right of Cedric.",
+      "Exactly 3 people sit between Cordelia and Daniel.",
+      "Griselda sits somewhere between Cedric and Justine.",
+      "Exactly 3 people sit between Cedric and Malcolm."
+     ],
+     "logic": [
+      [
+       "gap",
+       "DANIEL",
+       "GRISELDA",
+       1
+      ],
+      [
+       "between",
+       "CEDRIC",
+       "CORDELIA",
+       "DANIEL"
+      ],
+      [
+       "right_of",
+       "CORDELIA",
+       "CEDRIC"
+      ],
+      [
+       "gap",
+       "CORDELIA",
+       "DANIEL",
+       3
+      ],
+      [
+       "between",
+       "CEDRIC",
+       "GRISELDA",
+       "JUSTINE"
+      ],
+      [
+       "gap",
+       "CEDRIC",
+       "MALCOLM",
+       3
+      ]
+     ]
+    }
+   ],
+   "hash": "56be7ade543b4111ac9aa7c5e3ad63440aebfcc4784f9080652a033a3bd7df2d",
+   "partials": {},
+   "hints": [
+    "Only one arrangement satisfies every clue; start from whoever has an end seat or a fixed neighbour. Once they're seated, why might the seat numbers matter?"
+   ]
+  },
+  {
+   "id": 5,
+   "title": "High Score",
+   "flavor": "Two kinds of footprint on the sand, in no particular hurry.",
+   "blocks": [
+    {
+     "type": "glyphs",
+     "groups": [
+      "👾🕹👾🕹",
+      "🕹🕹🕹🕹",
+      "🕹",
+      "🕹👾🕹",
+      "🕹👾🕹",
+      "👾🕹👾👾"
+     ],
+     "legend": [
+      "🕹",
+      "👾"
+     ]
+    }
+   ],
+   "hash": "a69c6bf42115048e1e7e7d97ed2edcbb2d9309688ef00b7d4d12c5cd52318330",
+   "partials": {},
+   "hints": [
+    "Only two kinds of mark, in groups of one to four. Which old alphabet is built from exactly that?"
+   ]
+  },
+  {
+   "id": 6,
+   "title": "Kill Screen",
+   "flavor": "Only one page survived. It was the only page anyone needed.",
+   "blocks": [
+    {
+     "type": "prose",
+     "text": "The cabinet in the back corner of the arcade has been unplugged since 1987. It still has a high-score table, and the initials on it keep changing.",
+     "paper": true
+    },
+    {
+     "type": "list",
+     "items": [
+      "26.4",
+      "19.7",
+      "23.2",
+      "27.8"
+     ],
+     "inline": true
+    }
+   ],
+   "hash": "0d80164331fc8b91988ae1c0dad48d01670839a9d7c24d0b57342131c5e88a09",
+   "partials": {},
+   "hints": [
+    "The first number in each pair never goes past the number of words on the page. What does the second count?"
+   ]
+  }
+ ],
+ "meta": {
+  "title": "Meta: Insert Coin",
+  "flavor": "The last lock takes every signature at once.",
+  "blocks": [
+   {
+    "type": "mono",
+    "text": "VAAGN",
+    "big": true
+   }
+  ],
+  "length": 5,
+  "hash": "f8f42ce69562be00f6e72b04bbb78ead4ee474f160607139f3a93793d83a03d6",
+  "hints": [
+   "Blaise de Vigenère needed a key to open this. Has every answer signed its work?"
+  ]
+ },
+ "described": true
+}
