@@ -1,0 +1,55 @@
+{
+ "date": "2026-11-10",
+ "number": 45,
+ "difficulty": "medium",
+ "final": "CARTRIDGE",
+ "metaType": "logbook",
+ "explain": "Each entry is (puzzle number, letter number): index into that puzzle's answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Extra Life",
+   "answer": "BUTTON",
+   "mechanism": "Knight's path",
+   "transform": "Reversal",
+   "encoded": "NOTTUB",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "High Score",
+   "answer": "CASTLE",
+   "mechanism": "Missing letters",
+   "transform": null,
+   "encoded": "CASTLE",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Boss Rush",
+   "answer": "DONKEYKONG",
+   "mechanism": "Caesar shift",
+   "transform": null,
+   "encoded": "DONKEYKONG",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Player Two",
+   "answer": "SPRITE",
+   "mechanism": "Scrambled sentence",
+   "transform": null,
+   "encoded": "SPRITE",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Up Up Down Down",
+   "answer": "TOKEN",
+   "mechanism": "Rail fence (cluephrase)",
+   "transform": null,
+   "encoded": "TOKEN",
+   "mutated": null
+  }
+ ]
+}

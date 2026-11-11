@@ -1,0 +1,464 @@
+{
+ "date": "2026-11-11",
+ "difficulty": "easy",
+ "salt": "2026-11-11/easy",
+ "number": 46,
+ "round": "Series Z",
+ "intro": "The startup pivoted eleven times in one quarter, and the last pivot left cryptic commit messages dangling in the history and a whiteboard nobody is allowed to erase. The meeting room still owns a brass type case from the founder's grandfather's print shop, with compartments for every size of type and a drawer that groans if even one slug is out of place. The engineers have adopted its superstition: a set of words is not finished until each word has been laid in the compartment whose length fits it, narrow slugs upright and wide ones flat. On the whiteboard the same discipline applies, with rows standing in for the little brass wells. The compartments that take an answer without forcing it are the ones whose type has been left in place; read those kept letters and the last pivot explains itself.",
+ "echo": "There are ten kinds of engineer: those who get the joke, and those who don't.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Force Push",
+   "flavor": "A sensor that only knows up and down, six times over.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "101100",
+      "100010",
+      "111010",
+      "110110",
+      "100010"
+     ],
+     "inline": true
+    }
+   ],
+   "hash": "17ebfdc4c66d407e7c12e2ba0d884eaa6e01466dd323d88e4aa95c02f14a8f31",
+   "partials": {},
+   "hints": [
+    "Six-bit strings: the k-th character is 1 if Braille dot k is raised (dots 1-2-3 down the left, 4-5-6 down the right).",
+    "To check you're on track: the answer begins with M."
+   ],
+   "technique": "Braille as bit strings",
+   "length": 5
+  },
+  {
+   "id": 2,
+   "title": "Hockey Stick",
+   "flavor": "Not a single letter on the page, and yet it says something.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "♫◆☆☀ ☀◆✈ ○♦◇△☁✈△ ○☆△△☁✈⚑ ♫☆♣ ●♦☀ □♦✚⚑ ♦△ ♣✈○△✈☀♣ ★◇☀ ☆ ♣☁●□✚✈ ♫♦△⚑ ✚☆☀✈●○☂",
+     "wide": true,
+     "solver": "substitution"
+    }
+   ],
+   "hash": "1f620da6f0c65fbbbafffd38cbce750e00033a43fb72e440e6b3bc28a8596c71",
+   "partials": {},
+   "hints": [
+    "Each symbol stands for one letter (a simple substitution); word breaks are kept. Solve the sentence; it tells you the answer.",
+    "To check you're on track: the answer begins with L."
+   ],
+   "technique": "Symbol cryptogram",
+   "length": 7
+  },
+  {
+   "id": 3,
+   "title": "Monday Deploy",
+   "flavor": "Someone wrote this out in a zigzag across four lines of the ledger, then copied each line out in turn.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "YSRUS IDEOH GONWO TPZIP LNTOT LETSO UOUAE FHSZE IEEUN TLHHR WOTTR RILPB OTEYI",
+     "wide": true,
+     "rails": 4
+    }
+   ],
+   "hash": "8dbe50ec5b9c65a032557c8bc71024a1d7af9e3bd2fa0766cedc79419ab3c8aa",
+   "partials": {},
+   "hints": [
+    "Rail-fence transposition of a sentence with the spaces removed. Try 2 to 5 rails; the sentence tells you the answer.",
+    "To check you're on track: the answer begins with P."
+   ],
+   "technique": "Rail fence (cluephrase)",
+   "length": 8
+  },
+  {
+   "id": 4,
+   "title": "Burn Rate",
+   "flavor": "The quizmaster at the office only ever asks questions with a number for an answer, and never a big one.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "Months in a year",
+      "Wheels on a unicycle",
+      "Cards in one suit of a standard deck",
+      "Humps on a Bactrian camel",
+      "Strings on a violin",
+      "Moons orbiting Earth"
+     ],
+     "ordered": true,
+     "tray": "letter"
+    }
+   ],
+   "hash": "b57273c275e2347a49a47f23272400d1ec5e574a1745762aac4f875b269779d2",
+   "partials": {},
+   "hints": [
+    "Each line is a number from 1 to 26. Turn each number into a letter (A = 1, B = 2, …).",
+    "To check you're on track: the answer begins with L."
+   ],
+   "technique": "Number trivia",
+   "length": 6
+  },
+  {
+   "id": 5,
+   "title": "Hotfix",
+   "flavor": "Turn the wheel until the words come back.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "OZSL LZW UGMJAWJ USJJAWV OSK FGL YGDV GJ KWUJWLK TML S KAFYDW OGJV GFTGSJVAFY",
+     "wide": true,
+     "solver": "substitution",
+     "wheel": true
+    }
+   ],
+   "hash": "6e0459a8a40b30b708a628aaa0ab93539016934793f007c43fc188c48aa64385",
+   "partials": {},
+   "hints": [
+    "Every letter of the sentence was shifted along the alphabet by the same amount. Find the shift; the sentence tells you the answer.",
+    "To check you're on track: the answer begins with O."
+   ],
+   "technique": "Caesar shift",
+   "length": 10
+  },
+  {
+   "id": 6,
+   "title": "Offsite",
+   "flavor": "Fill in the blanks, literally. Some squares have been given to you for free.",
+   "blocks": [
+    {
+     "type": "nonogram",
+     "rows": [
+      [
+       4,
+       3,
+       1,
+       1,
+       5,
+       3,
+       5,
+       1,
+       1,
+       5,
+       4
+      ],
+      [
+       1,
+       1,
+       1,
+       2,
+       1,
+       1,
+       1,
+       1,
+       1,
+       2,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       5,
+       1,
+       1,
+       1,
+       1,
+       4,
+       4
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       2,
+       1,
+       1,
+       1,
+       1,
+       1,
+       2,
+       1,
+       1,
+       1
+      ],
+      [
+       4,
+       3,
+       1,
+       1,
+       1,
+       1,
+       1,
+       5,
+       1,
+       1,
+       5,
+       1,
+       1
+      ]
+     ],
+     "cols": [
+      [
+       3
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       3
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       3
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       5
+      ],
+      [],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [],
+      [
+       4
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       4
+      ],
+      [],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       5
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "givens": [
+      [
+       4,
+       14,
+       0
+      ],
+      [
+       4,
+       28,
+       1
+      ],
+      [
+       0,
+       0,
+       0
+      ],
+      [
+       3,
+       9,
+       0
+      ],
+      [
+       4,
+       10,
+       0
+      ]
+     ]
+    }
+   ],
+   "hash": "6ac22eb58321be3801051ffbef999240878d58afb6d875b6e01cee5b5a5f351a",
+   "partials": {},
+   "hints": [
+    "A nonogram (paint-by-numbers). The filled picture is the answer written in 5×5 block letters.",
+    "To check you're on track: the answer begins with C."
+   ],
+   "technique": "Nonogram",
+   "length": 9
+  }
+ ],
+ "meta": {
+  "title": "Meta: Series Z",
+  "flavor": "Pigeonholes, each cut to fit one thing, and some of them marked.",
+  "blocks": [
+   {
+    "type": "fitgrid",
+    "rows": [
+     {
+      "len": 6,
+      "shade": 3
+     },
+     {
+      "len": 9,
+      "shade": 5
+     },
+     {
+      "len": 8,
+      "shade": 6
+     },
+     {
+      "len": 10,
+      "shade": 4
+     },
+     {
+      "len": 5,
+      "shade": 2
+     },
+     {
+      "len": 7,
+      "shade": 6
+     }
+    ]
+   }
+  ],
+  "length": 6,
+  "hash": "10af59cf1521575e63b8ffe2acb4206ccbd27dcb8b73f78657be935124c4bbbc",
+  "hints": [
+   "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+   "To check you're on track: the final answer begins with B."
+  ]
+ },
+ "described": true
+}

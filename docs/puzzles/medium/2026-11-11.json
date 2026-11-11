@@ -1,0 +1,252 @@
+{
+ "date": "2026-11-11",
+ "difficulty": "medium",
+ "salt": "2026-11-11/medium",
+ "number": 46,
+ "round": "Series Z",
+ "intro": "The startup pivoted eleven times in one quarter, and the last pivot left a trail of cryptic commit messages and a whiteboard nobody is allowed to erase. The engineering team keeps a long drawer of spare keycaps and blank badge reels under the bench by the rack; each cubby in the foam insert was carved to fit one exact part, and when a new component arrives, someone spends an evening with a hot knife until the foam holds it perfectly. Nobody has drawn on the whiteboard since the eleventh pivot; the markers have dried out in their trays. The drawer has no labels, but everyone knows which cubby a bent bracket belongs in.",
+ "echo": "The investors are hunting for a mythical beast worth a billion.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Monday Deploy",
+   "flavor": "A light on the far shore that refuses to stay on.",
+   "blocks": [
+    {
+     "type": "lamp",
+     "groups": [
+      "..",
+      "-.",
+      "-.-.",
+      "..-",
+      "-...",
+      ".-",
+      "-",
+      "---",
+      ".-."
+     ]
+    }
+   ],
+   "hash": "af3888d9db847597368dea26015d11efe2249ea80b438b257763020b27968159",
+   "partials": {},
+   "hints": [
+    "Only two kinds of mark, in groups of one to four. Which old alphabet is built from exactly that?",
+    "Morse code: one mark is a dot, the other a dash. Try it both ways round."
+   ],
+   "length": 9
+  },
+  {
+   "id": 2,
+   "title": "Blameless",
+   "flavor": "Arms out, arms up, arms down: a dance with no music.",
+   "blocks": [
+    {
+     "type": "semaphore",
+     "items": [
+      [
+       6,
+       2
+      ],
+      [
+       4,
+       1
+      ],
+      [
+       2,
+       4
+      ],
+      [
+       4,
+       5
+      ],
+      [
+       4,
+       7
+      ],
+      [
+       0,
+       7
+      ],
+      [
+       7,
+       6
+      ],
+      [
+       6,
+       2
+      ]
+     ]
+    }
+   ],
+   "hash": "a00d552256000cf9354a0938694d02525b2ccf0233a8d1999d228b27b40f53d9",
+   "partials": {},
+   "hints": [
+    "Imagine each of these as a person holding two flags out at arm's length. Sailors had an alphabet for that.",
+    "Flag semaphore: the two hands are the two arms, and each pair of angles is a letter."
+   ],
+   "length": 8
+  },
+  {
+   "id": 3,
+   "title": "Standup",
+   "flavor": "Walk the fence; don't read it.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "IYUAR ATISN ECTEY UAELE DFUDH ASEWI HSPIT FOCNE DHSET NEHNO HVARA YONTE NWRHC ISRN",
+     "wide": true,
+     "rails": 2
+    }
+   ],
+   "hash": "38436af79b99ecf20237a70d5b54ff3da47b450eebdbe4c324b6abd6dd9ff77c",
+   "partials": {},
+   "hints": [
+    "All the right letters are here, just out of order. Could they have been written along a path that goes up and down?",
+    "Rail fence: written in a zigzag over a few rows, then copied out row by row. Try two to five rows."
+   ],
+   "length": 6
+  },
+  {
+   "id": 4,
+   "title": "Offsite",
+   "flavor": "The clerk ran out of alphabet and kept going anyway.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "✈☀✈◇▽ △▼▼☆ ♥♠☂✚ ✈☂☆♪ ■♦✚♥ ♣ ♪♦☂△□✈ ■▼◇☆ ♣☂☆ ✚♥✈ ■▼◇☆ ▽▼♠ ■♣☂✚ ★◇▼♫ ✚♥♦♪ ▲♣△✈ ♦♪ ○✈▽☂▼✚✈",
+     "wide": true,
+     "solver": "substitution"
+    }
+   ],
+   "hash": "8d9fe731564d15c44423bcaf0c0f35f515cd8ba361e2dbfabc1129a42a36e2d8",
+   "partials": {},
+   "hints": [
+    "Which short words are most common in English? Could any of them be hiding here?",
+    "Each symbol always stands for the same letter. The finished sentence tells you what to submit."
+   ],
+   "length": 7
+  },
+  {
+   "id": 5,
+   "title": "Runway",
+   "flavor": "Around the edges first; the point comes last.",
+   "blocks": [
+    {
+     "type": "lettergrid",
+     "rows": [
+      "GASSEMEHT",
+      "EOLALLATH",
+      "WNBNOSYAG",
+      "AGO····SI",
+      "SAA····YS",
+      "HNRDINGLN",
+      "IDITSIMPI",
+      "DDENINPLA"
+     ]
+    }
+   ],
+   "hash": "2f9906e8fbbd60b3367a13d44f0bb6107b4cac5b8729b93d9f19c1016cf224cc",
+   "partials": {},
+   "hints": [
+    "All the letters of a sentence are here, but not in rows. Try walking the grid the way a snail would.",
+    "Start in one corner and spiral inward along the edges; one corner and one direction read as a sentence."
+   ],
+   "length": 10
+  },
+  {
+   "id": 6,
+   "title": "Hockey Stick",
+   "flavor": "Everything came out of the wash with a little something extra.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "IAESVTGN",
+      "PNAUNSTD",
+      "TRUEEVNG",
+      "EABLADM",
+      "NBLKAAN"
+     ],
+     "ordered": true,
+     "mono": true
+    }
+   ],
+   "hash": "c400ac0aa81fc7d17925fa84a12a3dd16c40490eab495746540226b92e4a16c3",
+   "partials": {},
+   "hints": [
+    "Each jumble is almost a word from this round, but with a letter to spare. Which letter, every time?",
+    "Rearrange each into a theme word; the spare letters, in order, are the answer."
+   ],
+   "length": 5
+  },
+  {
+   "id": 7,
+   "title": "Postmortem",
+   "flavor": "The radio operator had everything back to front, but only from A to Z.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "Whiskey",
+      "Victor",
+      "November",
+      "Lima"
+     ]
+    }
+   ],
+   "hash": "017ffad38eb411181f24a7019da825acbfc039e4d036af87856354a2c21c1bfa",
+   "partials": {},
+   "hints": [
+    "Each word stands for a letter, the way radio operators spell. Do those letters read? If not, try the alphabet backwards.",
+    "Take the NATO call signs' initials, then swap each letter for its mirror: A for Z, B for Y."
+   ],
+   "length": 4
+  }
+ ],
+ "meta": {
+  "title": "Meta: Series Z",
+  "flavor": "Everything at the office has a place.",
+  "blocks": [
+   {
+    "type": "fitgrid",
+    "rows": [
+     {
+      "len": 9,
+      "shade": 3
+     },
+     {
+      "len": 7,
+      "shade": 3
+     },
+     {
+      "len": 6,
+      "shade": 3
+     },
+     {
+      "len": 8,
+      "shade": 4
+     },
+     {
+      "len": 4,
+      "shade": 3
+     },
+     {
+      "len": 10,
+      "shade": 5
+     },
+     {
+      "len": 5,
+      "shade": 1
+     }
+    ]
+   }
+  ],
+  "length": 7,
+  "hash": "10fc503fe660b4cfc3016fcbe7975f9e6b3d7fd20f164d4ca09682363c22374d",
+  "hints": [
+   "The grid's rows are all different lengths. So are your answers.",
+   "Put each answer in the row its length fits; read the shaded squares top to bottom."
+  ]
+ },
+ "described": true
+}

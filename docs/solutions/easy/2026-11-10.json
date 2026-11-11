@@ -1,0 +1,64 @@
+{
+ "date": "2026-11-10",
+ "number": 45,
+ "difficulty": "easy",
+ "final": "PLAYER",
+ "metaType": "fitin",
+ "explain": "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "High Score",
+   "answer": "ASTEROIDS",
+   "mechanism": "Letter sudoku",
+   "transform": null,
+   "encoded": "ASTEROIDS",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Up Up Down Down",
+   "answer": "LEVEL",
+   "mechanism": "Resistor colour code (written)",
+   "transform": null,
+   "encoded": "LEVEL",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Attract Mode",
+   "answer": "DONKEYKONG",
+   "mechanism": "Shredded sentence",
+   "transform": null,
+   "encoded": "DONKEYKONG",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Boss Rush",
+   "answer": "INVADER",
+   "mechanism": "Seating plan (logic)",
+   "transform": null,
+   "encoded": "INVADER",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Kill Screen",
+   "answer": "PACMAN",
+   "mechanism": "Anagrams with an extra letter",
+   "transform": null,
+   "encoded": "PACMAN",
+   "mutated": null
+  },
+  {
+   "id": 6,
+   "title": "Continue?",
+   "answer": "MUSHROOM",
+   "mechanism": "Semaphore (compass bearings)",
+   "transform": null,
+   "encoded": "MUSHROOM",
+   "mutated": null
+  }
+ ]
+}

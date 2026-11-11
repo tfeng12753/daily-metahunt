@@ -1,0 +1,64 @@
+{
+ "date": "2026-11-10",
+ "number": 45,
+ "difficulty": "hard",
+ "final": "PIXEL",
+ "metaType": "initials",
+ "explain": "The ciphertext is Vigenère-encrypted with the first letters of the feeder answers (in puzzle order) as the key.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Player Two",
+   "answer": "GHOST",
+   "mechanism": "Maritime signal flags",
+   "transform": null,
+   "encoded": "GHOST",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Speedrun",
+   "answer": "SPACESHIP",
+   "mechanism": "Anagrams with an extra letter",
+   "transform": null,
+   "encoded": "SPACESHIP",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Continue?",
+   "answer": "DONKEYKONG",
+   "mechanism": "Spiral route",
+   "transform": null,
+   "encoded": "DONKEYKONG",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Extra Life",
+   "answer": "CONSOLE",
+   "mechanism": "Seating plan (logic)",
+   "transform": null,
+   "encoded": "CONSOLE",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "High Score",
+   "answer": "CHERRY",
+   "mechanism": "Morse code",
+   "transform": null,
+   "encoded": "CHERRY",
+   "mutated": null
+  },
+  {
+   "id": 6,
+   "title": "Kill Screen",
+   "answer": "PONG",
+   "mechanism": "Book cipher",
+   "transform": null,
+   "encoded": "PONG",
+   "mutated": null
+  }
+ ]
+}
