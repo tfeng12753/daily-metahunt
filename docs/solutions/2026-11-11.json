@@ -1,0 +1,64 @@
+{
+ "date": "2026-11-11",
+ "number": 46,
+ "difficulty": "hard",
+ "final": "KERNEL",
+ "metaType": "fitin",
+ "explain": "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Hockey Stick",
+   "answer": "MILESTONE",
+   "mechanism": "Maritime signal flags",
+   "transform": "Reversal",
+   "encoded": "ENOTSELIM",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "All Hands",
+   "answer": "ROLLBACK",
+   "mechanism": "Letter sudoku",
+   "transform": null,
+   "encoded": "ROLLBACK",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Postmortem",
+   "answer": "ANGEL",
+   "mechanism": "Knight's path",
+   "transform": "Atbash (A↔Z mirror)",
+   "encoded": "ZMTVO",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Standup",
+   "answer": "KANBAN",
+   "mechanism": "Word search leftovers",
+   "transform": null,
+   "encoded": "KANBAN",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Offsite",
+   "answer": "METRICS",
+   "mechanism": "Pigpen cipher",
+   "transform": "ROT13",
+   "encoded": "ZRGEVPF",
+   "mutated": null
+  },
+  {
+   "id": 6,
+   "title": "Runway",
+   "answer": "WHITEBOARD",
+   "mechanism": "Shredded sentence",
+   "transform": null,
+   "encoded": "WHITEBOARD",
+   "mutated": null
+  }
+ ]
+}

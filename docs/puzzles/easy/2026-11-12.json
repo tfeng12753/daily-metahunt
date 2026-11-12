@@ -1,0 +1,492 @@
+{
+ "date": "2026-11-12",
+ "difficulty": "easy",
+ "salt": "2026-11-12/easy",
+ "number": 47,
+ "round": "The Last Expedition",
+ "intro": "The ship was crushed by pack ice in the first winter, and the tin that washed up holds the expedition's last messages, each cramped in a different hand, each word chosen as if to be read by no one. At base camp the survivors have never thrown anything away; they keep their ration books, their maps, and their broken sled runners in a single oak sorting rack, its compartments cut so that each thing — a pencil, a tin of pemmican, a plug of wax — lies exactly where it fits and nowhere else. The mess steward says the rack was made by the carpenter's mate: no item ever forces its way in, and nothing is left lying loose on the shelf. Along with the tin, he has begun shelving the messages themselves, one per compartment, letting the length of each note decide which tray takes it. The camp's other rituals are harsher, but this one they keep quietly, as if the rack might one day be read like a logbook.",
+ "echo": "The navigator trusted only one star: the one that never moved.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Dead Reckoning",
+   "flavor": "Recovered from the shredder at base camp. Somebody at least had the decency to note how long each word was.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "ADY",
+      "ANR",
+      "CRE",
+      "EAD",
+      "ERW",
+      "FOU",
+      "HEA",
+      "HIC",
+      "HIS",
+      "IFY",
+      "LRE",
+      "NCE",
+      "NDT",
+      "NSW",
+      "NTE",
+      "NYO",
+      "OUC",
+      "SE",
+      "SSE",
+      "THE",
+      "THI",
+      "UHA",
+      "VAS",
+      "VEA"
+     ],
+     "inline": true,
+     "tiles": true
+    },
+    {
+     "type": "prose",
+     "text": "Word lengths: (2 3 3 4 4 8 4 3 4 7 5 3 6 5 2 8)"
+    }
+   ],
+   "hash": "8b2d758996736f13ed026414c43fe1b7b8009dd17aa707d3f3425b8f99b32ceb",
+   "partials": {},
+   "hints": [
+    "The sentence was cut into three-letter fragments (spaces removed) and alphabetised. Reassemble it using the word lengths; it tells you the answer.",
+    "To check you're on track: the answer begins with C."
+   ],
+   "technique": "Shredded sentence",
+   "length": 8
+  },
+  {
+   "id": 2,
+   "title": "Winter Quarters",
+   "flavor": "The telegraphist at base camp never paused between letters. You'll have to work out where one ends and the next begins, and the word bank will help.",
+   "blocks": [
+    {
+     "type": "morselines",
+     "items": [
+      {
+       "code": "..-..-.---...--.....-.",
+       "len": 9,
+       "index": 4
+      },
+      {
+       "code": ".--..-.--...-..-.",
+       "len": 7,
+       "index": 2
+      },
+      {
+       "code": "-.-.--.--.--.-",
+       "len": 5,
+       "index": 2
+      },
+      {
+       "code": "..-..-..---.",
+       "len": 4,
+       "index": 2
+      }
+     ],
+     "bank": [
+      "FLOE",
+      "FROSTBITE",
+      "KAYAK",
+      "MUKLUK",
+      "PENGUIN",
+      "RATIONS",
+      "SEXTANT",
+      "SKUA"
+     ]
+    }
+   ],
+   "hash": "d529b8fdbc1ab61a5ebea241f5d35455ffa26376df295b4c3c87f56635126e5f",
+   "partials": {},
+   "hints": [
+    "Each line is a word from this round's theme in Morse code with the gaps between letters lost. Work out which word fits the dots, dashes and letter count, then take the letter at the position shown.",
+    "To check you're on track: the answer begins with S."
+   ],
+   "technique": "Gapless Morse",
+   "length": 4
+  },
+  {
+   "id": 3,
+   "title": "Whiteout",
+   "flavor": "The navigator keeps pointing two ways at once.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "S & NW",
+      "W & NW",
+      "SW & E",
+      "W & N",
+      "SW & S",
+      "SE & W",
+      "W & SE"
+     ],
+     "inline": true
+    }
+   ],
+   "hash": "8570b75f2b446ab93aa44f35ff2df61dfad847cf04da7bc7a0fea0d35f17e25d",
+   "partials": {},
+   "hints": [
+    "Flag semaphore, with each arm given as a compass direction as you face the signaller (N = straight up).",
+    "To check you're on track: the answer begins with C."
+   ],
+   "technique": "Semaphore (compass bearings)",
+   "length": 7
+  },
+  {
+   "id": 4,
+   "title": "The Long Night",
+   "flavor": "A sensor that only knows up and down, six times over.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "010100",
+      "100100",
+      "100010",
+      "110000",
+      "111010",
+      "100010",
+      "100000",
+      "101000",
+      "100010",
+      "111010"
+     ],
+     "inline": true
+    }
+   ],
+   "hash": "3a768962b5f6f99f49713ba3c6db004e5e2bc579ad8972cbf93ddddb0bfcd093",
+   "partials": {},
+   "hints": [
+    "Six-bit strings: the k-th character is 1 if Braille dot k is raised (dots 1-2-3 down the left, 4-5-6 down the right).",
+    "To check you're on track: the answer begins with I."
+   ],
+   "technique": "Braille as bit strings",
+   "length": 10
+  },
+  {
+   "id": 5,
+   "title": "Ship's Biscuit",
+   "flavor": "Scratched into the wall of a Masonic lodge. Or a pig pen; the caretaker wasn't sure.",
+   "blocks": [
+    {
+     "type": "pigpen",
+     "items": [
+      {
+       "g": "hash",
+       "p": 5,
+       "dot": false
+      },
+      {
+       "g": "hash",
+       "p": 0,
+       "dot": true
+      },
+      {
+       "g": "hash",
+       "p": 5,
+       "dot": true
+      },
+      {
+       "g": "hash",
+       "p": 8,
+       "dot": true
+      },
+      {
+       "g": "hash",
+       "p": 3,
+       "dot": false
+      }
+     ]
+    }
+   ],
+   "hash": "20b82d9a32601352a288e37c05e7efa4d5184d6ec326c62015681bf5b0e6278b",
+   "partials": {},
+   "hints": [
+    "Pigpen (Freemason's) cipher: A–I in a # grid, J–R the same with dots, S–V in an X, W–Z the X with dots.",
+    "To check you're on track: the answer begins with F."
+   ],
+   "technique": "Pigpen cipher",
+   "length": 5
+  },
+  {
+   "id": 6,
+   "title": "Katabatic",
+   "flavor": "Every letter here is wearing someone else's coat. The spaces, at least, are honest.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "NLNTS DBBJ WHKU NKJX IGUW Y XGKDFN IBTJ YKJ UWN IBTJ SBH IYKU VTBO UWGX QYDN GX YFZYUTBXX",
+     "wide": true,
+     "solver": "substitution"
+    }
+   ],
+   "hash": "3627aafe0b78fd36d779cafcf31bdfd4bdd4c0b134091d40fb6d46060f8494f4",
+   "partials": {},
+   "hints": [
+    "Simple monoalphabetic substitution with word breaks kept. Solve the sentence; it tells you the answer.",
+    "To check you're on track: the answer begins with A."
+   ],
+   "technique": "Cryptogram (cluephrase)",
+   "length": 9
+  },
+  {
+   "id": 7,
+   "title": "Pack Ice",
+   "flavor": "Paint by numbers. The picture is worth exactly one word.",
+   "blocks": [
+    {
+     "type": "nonogram",
+     "rows": [
+      [
+       1,
+       1,
+       3,
+       1,
+       4,
+       1,
+       1,
+       4
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1,
+       5,
+       1,
+       4,
+       1,
+       1,
+       3
+      ],
+      [
+       2,
+       2,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       5,
+       1,
+       1,
+       3,
+       4
+      ]
+     ],
+     "cols": [
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       5
+      ],
+      [],
+      [
+       4
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       4
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       4
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       4
+      ],
+      [],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "givens": [
+      [
+       4,
+       25,
+       1
+      ],
+      [
+       1,
+       34,
+       0
+      ],
+      [
+       0,
+       9,
+       1
+      ],
+      [
+       3,
+       34,
+       1
+      ]
+     ]
+    }
+   ],
+   "hash": "974fe7e2ebec37c965f54dffd5ba4868f44e45df9421c016546432d0d2a934f5",
+   "partials": {},
+   "hints": [
+    "A nonogram (paint-by-numbers). The filled picture is the answer written in 5×5 block letters.",
+    "To check you're on track: the answer begins with W."
+   ],
+   "technique": "Nonogram",
+   "length": 6
+  }
+ ],
+ "meta": {
+  "title": "Meta: The Last Expedition",
+  "flavor": "Pigeonholes, each cut to fit one thing, and some of them marked.",
+  "blocks": [
+   {
+    "type": "fitgrid",
+    "rows": [
+     {
+      "len": 7,
+      "shade": 3
+     },
+     {
+      "len": 5,
+      "shade": 2
+     },
+     {
+      "len": 4,
+      "shade": 3
+     },
+     {
+      "len": 9,
+      "shade": 0
+     },
+     {
+      "len": 8,
+      "shade": 1
+     },
+     {
+      "len": 10,
+      "shade": 0
+     },
+     {
+      "len": 6,
+      "shade": 5
+     }
+    ]
+   }
+  ],
+  "length": 7,
+  "hash": "6193f3c4b0146eb19d97bfc9bf4ff2c42261c51d3dddf75331037cae4ee089d0",
+  "hints": [
+   "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+   "To check you're on track: the final answer begins with P."
+  ]
+ },
+ "described": true
+}

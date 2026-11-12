@@ -1,0 +1,73 @@
+{
+ "date": "2026-11-11",
+ "number": 46,
+ "difficulty": "medium",
+ "final": "UNICORN",
+ "metaType": "fitin",
+ "explain": "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Monday Deploy",
+   "answer": "INCUBATOR",
+   "mechanism": "Morse code (signal lamp)",
+   "transform": null,
+   "encoded": "INCUBATOR",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Blameless",
+   "answer": "REFACTOR",
+   "mechanism": "Semaphore (figures)",
+   "transform": null,
+   "encoded": "REFACTOR",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Standup",
+   "answer": "SPRINT",
+   "mechanism": "Rail fence (cluephrase)",
+   "transform": null,
+   "encoded": "SPRINT",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Offsite",
+   "answer": "KEYNOTE",
+   "mechanism": "Symbol cryptogram",
+   "transform": null,
+   "encoded": "KEYNOTE",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Runway",
+   "answer": "ONBOARDING",
+   "mechanism": "Spiral route",
+   "transform": null,
+   "encoded": "ONBOARDING",
+   "mutated": null
+  },
+  {
+   "id": 6,
+   "title": "Hockey Stick",
+   "answer": "ANGEL",
+   "mechanism": "Anagrams with an extra letter",
+   "transform": null,
+   "encoded": "ANGEL",
+   "mutated": null
+  },
+  {
+   "id": 7,
+   "title": "Postmortem",
+   "answer": "DEMO",
+   "mechanism": "Mirrored NATO",
+   "transform": null,
+   "encoded": "DEMO",
+   "mutated": null
+  }
+ ]
+}

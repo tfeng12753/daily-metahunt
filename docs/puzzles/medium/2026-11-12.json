@@ -1,0 +1,203 @@
+{
+ "date": "2026-11-12",
+ "difficulty": "medium",
+ "salt": "2026-11-12/medium",
+ "number": 47,
+ "round": "The Last Expedition",
+ "intro": "The ship was crushed by pack ice in the first winter, and what survives of the expedition is a biscuit tin full of messages, each written in a different hand and each deliberately obscure. At base camp the tin sits on the stove lid, and every evening the officer reads one aloud before supper, though the stove is cold and the soup is thin. Afterwards he calls the roll from a grease-marked list, and there is always one name left over at the end, the name of the empty berth beside the stove, which nobody claims. No one has opened the tin since the reading; it is the only thing here that has not been bartered away.",
+ "echo": "Some nights the sky above the camp moves like a curtain in a draught.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Farthest South",
+   "flavor": "Stopped hands, raised arms. Start from the end; that's where it started.",
+   "blocks": [
+    {
+     "type": "clocks",
+     "items": [
+      [
+       1,
+       7
+      ],
+      [
+       4,
+       5
+      ],
+      [
+       6,
+       7
+      ],
+      [
+       4,
+       6
+      ],
+      [
+       5,
+       7
+      ],
+      [
+       2,
+       6
+      ],
+      [
+       5,
+       4
+      ],
+      [
+       7,
+       4
+      ]
+     ]
+    }
+   ],
+   "hash": "18eab2746ca43034463a2a0f619045a2ef22294c54f2b42b8d26c9702931f300",
+   "partials": {
+    "97ea871858f407091dff04aa066772df8e80409ebcc35a68c5eaf3d607ddb00a": "You've decoded it, but it's not finished. One more layer.",
+    "2d2d794aa7a2a4c076e0b5200adcd392d94a829cee793c030463dd18c2cefa19": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Imagine each of these as a person holding two flags out at arm's length. Sailors had an alphabet for that. And if what you get still isn't a word, reread the flavour text.",
+    "Flag semaphore: the two hands are the two arms, and each pair of angles is a letter. Then one more layer: Read what you get backwards."
+   ],
+   "length": 7
+  },
+  {
+   "id": 2,
+   "title": "Frost Smoke",
+   "flavor": "One horseman, and a field full of noise.",
+   "blocks": [
+    {
+     "type": "board",
+     "rows": [
+      "BETAURGF",
+      "SPYCRUPP",
+      "UOKAGSDG",
+      "ONRGTAJE",
+      "ORGKTDYI",
+      "KJQUNCDM",
+      "BEUTMURT",
+      "QCCDRDJJ"
+     ]
+    },
+    {
+     "type": "prose",
+     "text": "The knight sets out from h5: Ng7 Nf5 Ne7 Nc6 Nd8 Nf7."
+    }
+   ],
+   "hash": "18c13fd18b27e70ee0abae2b420b7c07b0d5eb988df12796d9db7caf63adab24",
+   "partials": {
+    "6e5cd73631763a9ccdffa367b328519ca8bdc6b4043c8c264a13e3f241d5ae94": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Those are chess moves. Which squares does the piece land on, and what's written there?",
+    "Start on the given square, play each move, and read the letter on every square it lands on."
+   ],
+   "length": 5
+  },
+  {
+   "id": 3,
+   "title": "The Long Night",
+   "flavor": "Not a single letter on the page, and yet it says something.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "♦☀♫♥ ▽✿□○ ☀✿♥ ▼○▽♦ ♫♦♥ ♥○⚑☂○♦ ✈★☂ ✿ △○☂♣ ☆★♪□ ♦♫▲○ ✿♪■ ♦☀✿♦ ♥○⚑☂○♦ ♫♥ ✈☂★♥☂♦◆♫♦○",
+     "wide": true,
+     "solver": "substitution"
+    }
+   ],
+   "hash": "591dc88c765dfa2b6a67cdc356e89199e6768a6599dd6018280409ff3a70cdbd",
+   "partials": {
+    "11187961e86aa4e30b7a9678f329eebcd8cf4dc2d54b43d6759f0c5d4d8ce693": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Which short words are most common in English? Could any of them be hiding here?",
+    "Each symbol always stands for the same letter. The finished sentence tells you what to submit."
+   ],
+   "length": 9
+  },
+  {
+   "id": 4,
+   "title": "Polar Plateau",
+   "flavor": "The smallest things there are, listed by rank. Unlucky for some: the letters were all nudged by the same unlucky amount.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "iron",
+      "oxygen",
+      "chromium",
+      "helium",
+      "manganese",
+      "oxygen",
+      "chromium"
+     ]
+    }
+   ],
+   "hash": "083e30580175285e8134065fcfeefa749ef9197ff9c6fa4d56c7f09f8d5648bb",
+   "partials": {
+    "35e6d8ebe194c39c3fb5e70ad840df8d62dabb5ed479c8681c88d17ccf9dba5e": "You've decoded it, but it's not finished. One more layer.",
+    "35c7a93a16f3305671673efce4792ae524fed9535f6bc818caca3f867c21dd87": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Everything here has a number in a famous chemical line-up. What number does each one have? And if what you get still isn't a word, reread the flavour text.",
+    "Atomic numbers, then count through the alphabet (hydrogen = 1 = A). Then one more layer: Shift every letter 13 places (A↔N)."
+   ],
+   "length": 6
+  },
+  {
+   "id": 5,
+   "title": "Sastrugi",
+   "flavor": "Walk the fence; don't read it.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "TSSNI TOILI RHSAA HEIAN HALND TPYSR EGEEG WIDNL SGLAG NSMSY CBMED PILAI AE",
+     "wide": true,
+     "rails": 4
+    }
+   ],
+   "hash": "95ee1ed782f339e324b1f441c324978514cac09c618bcacd3a49c98ab1a17567",
+   "partials": {
+    "0971cb2195658e4f69c6b46a88e27eadffaa2ab745dd7333d2c3f6133ebac219": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "All the right letters are here, just out of order. Could they have been written along a path that goes up and down?",
+    "Rail fence: written in a zigzag over a few rows, then copied out row by row. Try two to five rows."
+   ],
+   "length": 7
+  },
+  {
+   "id": 6,
+   "title": "Midnight Sun",
+   "flavor": "The words are nonsense. The typesetting isn't.",
+   "blocks": [
+    {
+     "type": "prose",
+     "text": "tUnDRa shackleton COmPAss PEngUin TherMoMEtEr."
+    }
+   ],
+   "hash": "70c6f1dad58f93ed039420eb395f8ec66acf19c7210d821310ef0aacf40f28b1",
+   "partials": {
+    "38a27f8b3c44b1df678771c2e2222a0ee47b09ba457608d168a7abb01841782e": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Two kinds of letter, big and small. How many of them would you need to spell twenty-six different things?",
+    "Baconian cipher: groups of five, lowercase = a, uppercase = b; aaaaa is A."
+   ],
+   "length": 7
+  }
+ ],
+ "meta": {
+  "title": "Meta: The Last Expedition",
+  "flavor": "Everything arrived a little heavier than it left.",
+  "blocks": [],
+  "length": 6,
+  "hash": "4591d495f0dc2a22e0cf3af5e196755b84de376041f9f355a82a6c40081ab367",
+  "hints": [
+   "Did every answer come out the right size the first time? Each had one letter too many. Did you keep them?",
+   "Take the extra letter from each feeder, in puzzle order."
+  ]
+ },
+ "described": true
+}

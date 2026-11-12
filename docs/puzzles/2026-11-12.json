@@ -1,0 +1,126 @@
+{
+ "date": "2026-11-12",
+ "difficulty": "hard",
+ "salt": "2026-11-12",
+ "number": 47,
+ "round": "The Last Expedition",
+ "intro": "The ship was crushed by pack ice in the first winter, and the wreck is still out there somewhere under the floes. What survives of the expedition is a biscuit tin full of messages, each written in a different hand, and each deliberately obscure. At base camp the survivors pass the dark hours mending harnesses, scraping snow-lamps, and reading the tin aloud in turn, as if the writers might still be listening at the edge of the tent. The tin's lid carries a little hasp meant for as many seals as there are hands, and it will not lift unless all are pressed down together. Outside, the wind hums through the guy-ropes, and nobody speaks of going home.",
+ "echo": "For three days nobody could see the next tent.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Nunatak",
+   "flavor": "Two forward, one across.",
+   "blocks": [
+    {
+     "type": "board",
+     "rows": [
+      "NODCJWMD",
+      "GWUYVSPN",
+      "BMXSKZUZ",
+      "SZADGNZW",
+      "ISRYVENQ",
+      "TDQDRHPR",
+      "LEOSLBRC",
+      "DDEYGOSR"
+     ]
+    },
+    {
+     "type": "prose",
+     "text": "The knight sets out from d3: Nb4 Na2 Nc1 Nb3 Na1 Nc2 Ne1."
+    }
+   ],
+   "hash": "28a4197be69119a60ea771c126d39c0b1c894db8b35a473d8f341530ea873a9f",
+   "partials": {},
+   "hints": [
+    "Those are chess moves. Which squares does the piece land on, and what's written there?"
+   ]
+  },
+  {
+   "id": 2,
+   "title": "Midnight Sun",
+   "flavor": "Up and down, up and down, and not a single space left.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "NDPEY TTSSE ZJOOH OEOOY XETDN OEOET IFROH PIESU TNWRT EMMTR BECAN GHATR ISEDR E",
+     "wide": true,
+     "rails": 3
+    }
+   ],
+   "hash": "a32608d5ec328244a549119ca7e38ab1d3d4e47efe4faae9d9e2a8ce4b9d2662",
+   "partials": {},
+   "hints": [
+    "All the right letters are here, just out of order. Could they have been written along a path that goes up and down?"
+   ]
+  },
+  {
+   "id": 3,
+   "title": "Frost Smoke",
+   "flavor": "Lord Playfair's friend got the credit, but the square is built from whatever is written above it.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "SI MP HA OZ SI DU IO GA EX KO BS SO SZ XG IK MO SO BO GA UC PK XK UR GK KH YK TF LP NK EY",
+     "wide": true
+    }
+   ],
+   "hash": "88d98736191d5a81c909eb5872609f2c8681f39c376bacf5aba3c98fce2b1770",
+   "partials": {},
+   "hints": [
+    "An even number of letters, read in pairs, and no pair is ever a double. Which cipher works on pairs, and where's its key?"
+   ]
+  },
+  {
+   "id": 4,
+   "title": "Farthest South",
+   "flavor": "Half a ladder, read from the far end.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "5′–GTTGCGTTCAGTGTTCGCTAG–3′"
+    }
+   ],
+   "hash": "b615728d750e99bff56eecb89af37ad5489504037c1998d5268527c0ab8916c0",
+   "partials": {},
+   "hints": [
+    "This is DNA, but not the strand a cell would read. What is its partner, and which end does reading start from?"
+   ]
+  },
+  {
+   "id": 5,
+   "title": "Katabatic",
+   "flavor": "The typist's hands were fine. Their aim was not.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "NYJKYJ",
+     "big": true,
+     "shift": -1
+    }
+   ],
+   "hash": "fb704148cd6a795ae1041f9ce1bcb87a09cdbed609bb37ba520ebfb7e38b9764",
+   "partials": {},
+   "hints": [
+    "Every letter is close to the right one. Close on what? Look down at your hands."
+   ]
+  }
+ ],
+ "meta": {
+  "title": "Meta: The Last Expedition",
+  "flavor": "Every report is signed with a single initial. Blaise would know what to do with them.",
+  "blocks": [
+   {
+    "type": "mono",
+    "text": "TEBKLSKW",
+    "big": true
+   }
+  ],
+  "length": 8,
+  "hash": "a878868677b6626b34017821c693c65fd8528bef29bb4d7c8293f6e635d3a4da",
+  "hints": [
+   "Blaise de Vigenère needed a key to open this. Has every answer signed its work?"
+  ]
+ },
+ "described": true
+}

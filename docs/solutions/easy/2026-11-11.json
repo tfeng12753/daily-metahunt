@@ -1,0 +1,64 @@
+{
+ "date": "2026-11-11",
+ "number": 46,
+ "difficulty": "easy",
+ "final": "BINARY",
+ "metaType": "fitin",
+ "explain": "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Force Push",
+   "answer": "MERGE",
+   "mechanism": "Braille as bit strings",
+   "transform": null,
+   "encoded": "MERGE",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Hockey Stick",
+   "answer": "LATENCY",
+   "mechanism": "Symbol cryptogram",
+   "transform": null,
+   "encoded": "LATENCY",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Monday Deploy",
+   "answer": "PIPELINE",
+   "mechanism": "Rail fence (cluephrase)",
+   "transform": null,
+   "encoded": "PIPELINE",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Burn Rate",
+   "answer": "LAMBDA",
+   "mechanism": "Number trivia",
+   "transform": null,
+   "encoded": "LAMBDA",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Hotfix",
+   "answer": "ONBOARDING",
+   "mechanism": "Caesar shift",
+   "transform": null,
+   "encoded": "ONBOARDING",
+   "mutated": null
+  },
+  {
+   "id": 6,
+   "title": "Offsite",
+   "answer": "CONTAINER",
+   "mechanism": "Nonogram",
+   "transform": null,
+   "encoded": "CONTAINER",
+   "mutated": null
+  }
+ ]
+}
