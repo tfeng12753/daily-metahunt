@@ -1,0 +1,208 @@
+{
+ "date": "2026-11-13",
+ "difficulty": "medium",
+ "salt": "2026-11-13/medium",
+ "number": 48,
+ "round": "221B, Upstairs",
+ "intro": "The Irregulars keep the rooms above the shop the way the detective left them, though he has been gone for years now and the violin on the mantelpiece has gathered no dust at all. Its single retuned string hums at dusk, and the notes stacked beneath it are addressed, in his hand, to whoever is clever enough to read them. To the untrained eye they look like ordinary scraps — a train ticket, a torn map, a list of the night's lodgers — but the landlady says each one has something left over, something that was never meant to fit. She has taken to pinning them to the wall with the oddments she finds in her apron, one small thing from each, in case whoever comes looking needs a trail.",
+ "echo": "Means and opportunity are easy. The hard part is why.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Five Orange Pips",
+   "flavor": "Everything came out of the wash with a little something extra.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "RCOSPIETTN",
+      "UTROLBE",
+      "NAOBMR",
+      "GRMEINAAFI",
+      "MECGIRAAR",
+      "NIIVOCL",
+      "OIMCUP",
+      "AEREONRDG"
+     ],
+     "ordered": true,
+     "mono": true
+    }
+   ],
+   "hash": "1ccd69b60c89c4e7892272282b52a052b9a290509faa7165090c8d556f8f7616",
+   "partials": {
+    "9c570e130d53999768268c0c96660c0dcca71cec18a44431d6165da2a66e59fd": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Each jumble is almost a word from this round, but with a letter to spare. Which letter, every time?",
+    "Rearrange each into a theme word; the spare letters, in order, are the answer."
+   ],
+   "length": 7
+  },
+  {
+   "id": 2,
+   "title": "The Red-Headed League",
+   "flavor": "The spy always carried a novel. This page will have to do. Start from the end; that's where it started.",
+   "blocks": [
+    {
+     "type": "prose",
+     "text": "The detective has vanished, leaving only a violin with one string retuned and a stack of notes addressed to whoever is clever enough to read them.",
+     "paper": true
+    },
+    {
+     "type": "list",
+     "items": [
+      "6.4",
+      "12.3",
+      "24.2",
+      "20.7",
+      "18.1",
+      "8.5",
+      "20.7",
+      "10.1",
+      "26.4"
+     ],
+     "inline": true
+    }
+   ],
+   "hash": "de49a0d5849b1cb65ab52575727eaa815b6879668e04b5c3426bcc724f4026ff",
+   "partials": {
+    "178aa65949f2ec8100bdb2243b0f0be3a64d4f8505e68dbc90448a485a12d15c": "You've decoded it, but it's not finished. One more layer.",
+    "a8a2e1df70a63823a5f57a895e5d360534cb127367c4ca949407798ff6f7ffea": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "The first number in each pair never goes past the number of words on the page. What does the second count? And if what you get still isn't a word, reread the flavour text.",
+    "The first number finds a word on the page; the second finds a letter in it. Then one more layer: Read what you get backwards."
+   ],
+   "length": 8
+  },
+  {
+   "id": 3,
+   "title": "The Final Problem",
+   "flavor": "The clerk ran out of alphabet and kept going anyway.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "☆○▲ ✈☾●☆ ☆○⚑♥△ ☆○▲ ◆★▲♪☾☆◆♪ ☆♠★▲▼ ♫▲✿◆♪▲ ☆○▲ ✈⚑♥▲ □▲♥☆ ▼▲☾▼ □☾● ✈☆⚑♫♪☾♪♠",
+     "wide": true,
+     "solver": "substitution"
+    }
+   ],
+   "hash": "2acacde2f79a2963c1639b9d06ab05b985407914013e70c8372737dcb362d486",
+   "partials": {
+    "d7b1242f1f6c8306e708efbfd5dff7267ed070a2b160ed060e143fd4465f7ab5": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Which short words are most common in English? Could any of them be hiding here?",
+    "Each symbol always stands for the same letter. The finished sentence tells you what to submit."
+   ],
+   "length": 7
+  },
+  {
+   "id": 4,
+   "title": "The Empty House",
+   "flavor": "Some of these are far too big to be letters.",
+   "blocks": [
+    {
+     "type": "numbers",
+     "items": [
+      15,
+      53,
+      8,
+      53,
+      16,
+      8,
+      7
+     ],
+     "tray": 2
+    }
+   ],
+   "hash": "97bbc7c392e8f3f8341e6f02d4810e29d7726f954844d3cffb80ae6bba3b7d8e",
+   "partials": {
+    "bfa3b5c2b18975ef9a4a98ff5ed3f1e56fcce72ed04edfa9bf5557c804ba488f": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Several of these numbers are bigger than 26, so they can't be letter positions. What else has a number that high?",
+    "Atomic numbers: write each element's symbol and run the symbols together into one word."
+   ],
+   "length": 6
+  },
+  {
+   "id": 5,
+   "title": "The Dog In The Night",
+   "flavor": "Each column remembers what it held, but not in what order.",
+   "blocks": [
+    {
+     "type": "dropquote",
+     "cols": [
+      "RW",
+      "BCDGH",
+      "AAOU",
+      "LPRTT",
+      "DOR",
+      "AIRT",
+      "EHOT",
+      "DERRS",
+      "IV",
+      "ACNSW",
+      "AEGIO",
+      "CLSTU",
+      "ERR",
+      "EIN",
+      "EOTW",
+      "ORST"
+     ],
+     "mask": [
+      "....#...#.......",
+      "#.......#...#...",
+      "#....#..#.......",
+      "#...#.#......#..",
+      "..#.........####"
+     ]
+    }
+   ],
+   "hash": "f68b774c6370bf59e0c6e46f4eb4a49668d082ebba4ccc09dcfbd20d8376c40b",
+   "partials": {
+    "a01426bd15db59821bc9d932e3c784798f498d262ea02bac5553f6b2de8dec5a": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Black squares are spaces. Which two- and three-letter words fit, using only the letters each column allows?",
+    "Each column's letters drop into that column of the grid; cross them off as you place them. The sentence tells you what to submit."
+   ],
+   "length": 8
+  },
+  {
+   "id": 6,
+   "title": "Dancing Men",
+   "flavor": "An emperor's idea of privacy.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "MBIOFX NBCM HINY ZUFF CHNI NBY QLIHA BUHXM JFYUMY ZILAYN NBY QILX MWINFUHXSUYLX",
+     "wide": true,
+     "solver": "substitution"
+    }
+   ],
+   "hash": "a9f1ed40dad8e47274dce5b13a38630cfbf0781acda1c7c95792efb73ea608c6",
+   "partials": {
+    "554df53105b404605d78ccc55d84b5554b6b90fcaaf7f6c0a97c623247a87213": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Try moving every letter the same distance. How far turns the short words into English?",
+    "A Caesar shift: find the one shift that fixes a short word, then apply it everywhere."
+   ],
+   "length": 12
+  }
+ ],
+ "meta": {
+  "title": "Meta: 221B, Upstairs",
+  "flavor": "Everything arrived a little heavier than it left.",
+  "blocks": [],
+  "length": 6,
+  "hash": "fd96650b5e4ba100b68e13b748572f0df5e72b2ed58fe9a3b2d6883c2554a7a0",
+  "hints": [
+   "Did every answer come out the right size the first time? Each had one letter too many. Did you keep them?",
+   "Take the extra letter from each feeder, in puzzle order."
+  ]
+ },
+ "described": true
+}

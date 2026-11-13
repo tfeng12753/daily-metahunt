@@ -1,0 +1,64 @@
+{
+ "date": "2026-11-12",
+ "number": 47,
+ "difficulty": "medium",
+ "final": "AURORA",
+ "metaType": "stowaway",
+ "explain": "Each feeder decodes to its answer plus one inserted letter. The inserted letters, in puzzle order, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Farthest South",
+   "answer": "CARIBOU",
+   "mechanism": "Semaphore clocks",
+   "transform": "Reversal",
+   "encoded": "UAOBIRAC",
+   "mutated": "CARIBOAU"
+  },
+  {
+   "id": 2,
+   "title": "Frost Smoke",
+   "answer": "PARKA",
+   "mechanism": "Knight's path",
+   "transform": null,
+   "encoded": "PARKAU",
+   "mutated": "PARKAU"
+  },
+  {
+   "id": 3,
+   "title": "The Long Night",
+   "answer": "FROSTBITE",
+   "mechanism": "Symbol cryptogram",
+   "transform": null,
+   "encoded": "FROSRTBITE",
+   "mutated": "FROSRTBITE"
+  },
+  {
+   "id": 4,
+   "title": "Polar Plateau",
+   "answer": "MUKLUK",
+   "mechanism": "Atomic numbers",
+   "transform": "ROT13",
+   "encoded": "ZHXBYHX",
+   "mutated": "MUKOLUK"
+  },
+  {
+   "id": 5,
+   "title": "Sastrugi",
+   "answer": "ICEBERG",
+   "mechanism": "Rail fence (cluephrase)",
+   "transform": null,
+   "encoded": "IRCEBERG",
+   "mutated": "IRCEBERG"
+  },
+  {
+   "id": 6,
+   "title": "Midnight Sun",
+   "answer": "LANTERN",
+   "mechanism": "Baconian cipher",
+   "transform": null,
+   "encoded": "LAANTERN",
+   "mutated": "LAANTERN"
+  }
+ ]
+}

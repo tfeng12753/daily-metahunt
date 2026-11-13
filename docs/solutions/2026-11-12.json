@@ -1,0 +1,55 @@
+{
+ "date": "2026-11-12",
+ "number": 47,
+ "difficulty": "hard",
+ "final": "BLIZZARD",
+ "metaType": "initials",
+ "explain": "The ciphertext is Vigenère-encrypted with the first letters of the feeder answers (in puzzle order) as the key.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Nunatak",
+   "answer": "SLEDDOG",
+   "mechanism": "Knight's path",
+   "transform": null,
+   "encoded": "SLEDDOG",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Midnight Sun",
+   "answer": "THERMOMETER",
+   "mechanism": "Rail fence (cluephrase)",
+   "transform": null,
+   "encoded": "THERMOMETER",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Frost Smoke",
+   "answer": "TUNDRA",
+   "mechanism": "Playfair keyed by the title",
+   "transform": null,
+   "encoded": "TUNDRA",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Farthest South",
+   "answer": "LANTERN",
+   "mechanism": "Template strand",
+   "transform": null,
+   "encoded": "LANTERN",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Katabatic",
+   "answer": "MUKLUK",
+   "mechanism": "Keyboard shift",
+   "transform": null,
+   "encoded": "MUKLUK",
+   "mutated": null
+  }
+ ]
+}

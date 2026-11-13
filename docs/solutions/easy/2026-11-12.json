@@ -1,0 +1,73 @@
+{
+ "date": "2026-11-12",
+ "number": 47,
+ "difficulty": "easy",
+ "final": "POLARIS",
+ "metaType": "fitin",
+ "explain": "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Dead Reckoning",
+   "answer": "CREVASSE",
+   "mechanism": "Shredded sentence",
+   "transform": null,
+   "encoded": "CREVASSE",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Winter Quarters",
+   "answer": "SEAL",
+   "mechanism": "Gapless Morse",
+   "transform": null,
+   "encoded": "SEAL",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Whiteout",
+   "answer": "COMPASS",
+   "mechanism": "Semaphore (compass bearings)",
+   "transform": null,
+   "encoded": "COMPASS",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "The Long Night",
+   "answer": "ICEBREAKER",
+   "mechanism": "Braille as bit strings",
+   "transform": null,
+   "encoded": "ICEBREAKER",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Ship's Biscuit",
+   "answer": "FJORD",
+   "mechanism": "Pigpen cipher",
+   "transform": null,
+   "encoded": "FJORD",
+   "mutated": null
+  },
+  {
+   "id": 6,
+   "title": "Katabatic",
+   "answer": "ALBATROSS",
+   "mechanism": "Cryptogram (cluephrase)",
+   "transform": null,
+   "encoded": "ALBATROSS",
+   "mutated": null
+  },
+  {
+   "id": 7,
+   "title": "Pack Ice",
+   "answer": "WALRUS",
+   "mechanism": "Nonogram",
+   "transform": null,
+   "encoded": "WALRUS",
+   "mutated": null
+  }
+ ]
+}

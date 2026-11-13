@@ -1,0 +1,193 @@
+{
+ "date": "2026-11-13",
+ "difficulty": "easy",
+ "salt": "2026-11-13/easy",
+ "number": 48,
+ "round": "221B, Upstairs",
+ "intro": "The detective has vanished, and in the parlour above 221B the Irregulars have found a violin with one string retuned and a stack of notes addressed to whoever is clever enough to read them. What they found first, though, was the watchman's bench by the stair, where the old porter who keeps the house has kept his ledger for forty years: every line in it is just two figures, the first the flat where the errand ran, the second which bell on the street clock struck when it was done. The Irregulars, being Irregulars, have taken the ledger into their heads as a joke, and left it on the mantelpiece next to the notes, as if to say: even here, everything is filed by where it came from and where it pointed.",
+ "echo": "It is always the person you trusted with the tea.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Five Orange Pips",
+   "flavor": "The labels at Baker Street have faded. Each one lost exactly one letter.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "VIOL_N",
+      "POISO_",
+      "A_HTRAY",
+      "_ORTRAIT",
+      "D_ERSTALKER",
+      "TOBA_CO",
+      "_ELEGRAM",
+      "HUDS_N",
+      "MANO_"
+     ],
+     "ordered": true,
+     "mono": true
+    }
+   ],
+   "hash": "ae1167acc5c958695b555d283cb92dc333238ae18990c987e3f58be6fb05b646",
+   "partials": {},
+   "hints": [
+    "Each theme word is missing one letter. The missing letters, in order, spell the answer.",
+    "To check you're on track: the answer begins with I."
+   ],
+   "technique": "Missing letters",
+   "length": 9
+  },
+  {
+   "id": 2,
+   "title": "Three Pipe Problem",
+   "flavor": "Unjumble the kit list. You'll have one letter left over every time, and you'll want to keep those.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "NMOSAHS",
+      "ETNRLBU",
+      "RMFAUNIEIG",
+      "VLFRROEEV",
+      "ARRYLFIB",
+      "MBROAN",
+      "NOTLAENR",
+      "ITXRRPATO"
+     ],
+     "ordered": true,
+     "mono": true
+    }
+   ],
+   "hash": "8d18e70056dc7d7d9d053cc68d4ce99334f611bc72b14e95aa87157f050baa35",
+   "partials": {},
+   "hints": [
+    "Each jumble is an anagram of a word from this round's theme plus one extra letter. The extra letters, in order, spell the answer.",
+    "To check you're on track: the answer begins with S."
+   ],
+   "technique": "Anagrams with an extra letter",
+   "length": 8
+  },
+  {
+   "id": 3,
+   "title": "Dancing Men",
+   "flavor": "The typesetter dropped the tray. Every letter landed in the right column, at least.",
+   "blocks": [
+    {
+     "type": "dropquote",
+     "cols": [
+      "EEEIW",
+      "CHNNR",
+      "AGOR",
+      "CELTT",
+      "AET",
+      "GRST",
+      "HORW",
+      "BEILO",
+      "DERU",
+      "CDDT",
+      "OO",
+      "APRUW",
+      "AIR",
+      "IPSSS"
+     ],
+     "mask": [
+      "....#...#.....",
+      "..#.......#...",
+      "#...#....#..#.",
+      "......#...#.#.",
+      ".....#....#...",
+      ".#############"
+     ]
+    }
+   ],
+   "hash": "52b5a99e2a005328fe17d318c548c7a592e768d3a73fb67fbc32ea37ba399268",
+   "partials": {},
+   "hints": [
+    "A drop quote: each column's letters (shown alphabetised above it) drop into that column of the grid below. Black squares are spaces; words can wrap between rows. The sentence tells you the answer.",
+    "To check you're on track: the answer begins with P."
+   ],
+   "technique": "Drop quote",
+   "length": 4
+  },
+  {
+   "id": 4,
+   "title": "The Reichenbach Fall",
+   "flavor": "Two forward, one across. Remember where you land.",
+   "blocks": [
+    {
+     "type": "board",
+     "rows": [
+      "TZMEACIA",
+      "FJFPOALD",
+      "LGTKDSDD",
+      "KCRNLLQI",
+      "RSPIPZJN",
+      "MFWEQAJG",
+      "SFICHTZI",
+      "RJMDNNNC"
+     ]
+    },
+    {
+     "type": "prose",
+     "text": "The knight sets out from c4: Nd2 Nf3 Nh4 Ng6 Ne5 Nd3 Nb4 Nc6 Nd4 Nb5 Nd6."
+    }
+   ],
+   "hash": "426947d9fde1f2cbd3d5cacfa668ae0cb254f7cd2252b7e87a07873b9dc3329d",
+   "partials": {},
+   "hints": [
+    "Start on the given square and follow the knight moves; read the letter on each square it lands on.",
+    "To check you're on track: the answer begins with C."
+   ],
+   "technique": "Knight's path",
+   "length": 11
+  },
+  {
+   "id": 5,
+   "title": "The Empty House",
+   "flavor": "Someone wrote this out in a zigzag across four lines of the ledger, then copied each line out in turn.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "TTTRY FEEDE YHSTG HEATP EOHLW NAWHM REAHN EPTRE BRTIE TEACI TLIOO DENDS S",
+     "wide": true,
+     "rails": 4
+    }
+   ],
+   "hash": "0f62905ed9b2d250abb20b3a8c84742223a5ec21fa4f303b3b111eb9a069bff2",
+   "partials": {},
+   "hints": [
+    "Rail-fence transposition of a sentence with the spaces removed. Try 2 to 5 rails; the sentence tells you the answer.",
+    "To check you're on track: the answer begins with C."
+   ],
+   "technique": "Rail fence (cluephrase)",
+   "length": 9
+  }
+ ],
+ "meta": {
+  "title": "Meta: 221B, Upstairs",
+  "flavor": "Someone underlined a few verses. This page has its own chapters.",
+  "blocks": [
+   {
+    "type": "list",
+    "items": [
+     "Ch. 5 v. 1",
+     "Ch. 2 v. 3",
+     "Ch. 4 v. 5",
+     "Ch. 3 v. 1",
+     "Ch. 5 v. 8",
+     "Ch. 1 v. 1",
+     "Ch. 4 v. 8"
+    ],
+    "ordered": true
+   }
+  ],
+  "length": 7,
+  "hash": "d16bcf37db396d38d177066d57b12c2afad684cf5bef6d68dbb2045f3684f615",
+  "hints": [
+   "Each entry is (puzzle number, letter number): index into that puzzle's answer.",
+   "To check you're on track: the final answer begins with C."
+  ]
+ },
+ "described": true
+}
