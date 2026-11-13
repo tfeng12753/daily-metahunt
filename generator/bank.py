@@ -21,7 +21,8 @@ it read as its own world rather than a reskin:
                      used by the cryptogram, rail fence, drop quote and friends
     "flavors":       {puzzle type key: [oblique lines]} for Hard and Medium
     "easy_flavors":  {puzzle type key: [direct lines]} for Easy
-    "meta_flavors" / "easy_meta_flavors": {meta type: [lines]}
+    "meta_flavors" / "easy_meta_flavors": {meta type: [lines]} (not "logbook": its
+                     line has to match the entry format it was drawn with)
     "max_uses":      how many days the theme may run (default 1; each use
                      avoids every answer published by the ones before)
 
@@ -41,7 +42,8 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import generate  # noqa: E402
 from deep_mechanisms import BY_KEY  # noqa: E402
-from hunt_mechanisms import phrase_answer  # noqa: E402
+from hints import FEEDER, META, echoes  # noqa: E402
+from hunt_mechanisms import CLUEPHRASES, phrase_answer  # noqa: E402
 
 THEMES_DIR = os.path.join(generate.BANK_DIR, "themes")
 PUBLIC_KEY = os.path.join(generate.BANK_DIR, "public_key.pem")
@@ -170,9 +172,26 @@ def problems(theme):
                 out.append("%s: no puzzle type called %r (known: %s)" % (field, key, ", ".join(sorted(BY_KEY))))
             elif not (isinstance(lines, list) and lines and all(isinstance(x, str) and x for x in lines)):
                 out.append("%s[%s] must be a non-empty list of lines" % (field, key))
+            elif field == "easy_flavors" and key == "railfence" and not all("{n}" in x for x in lines):
+                out.append("easy_flavors[railfence] lines must say how many rails with {n}")
+    # The ladder must climb: a theme's line can't say what its own first hint says.
+    for key, lines in theme.get("flavors", {}).items():
+        for x in lines if key in FEEDER and isinstance(lines, list) else []:
+            if echoes(x, FEEDER[key][0]):
+                out.append("flavors[%s] %r says what the first hint says; make it more oblique" % (key, x))
+    for key, lines in theme.get("easy_flavors", {}).items():
+        for x in lines if key in BY_KEY and isinstance(lines, list) else []:
+            if echoes(x, BY_KEY[key].hint):
+                out.append("easy_flavors[%s] %r says what the first hint says" % (key, x))
+    for key, lines in theme.get("meta_flavors", {}).items():
+        for x in lines if key in META and isinstance(lines, list) else []:
+            if echoes(x, META[key][0]):
+                out.append("meta_flavors[%s] %r says what the first hint says" % (key, x))
     for field in ("meta_flavors", "easy_meta_flavors"):
         for key, lines in theme.get(field, {}).items():
-            if key not in META_TYPES:
+            if key == "logbook":
+                out.append("%s: the logbook's line must match its entry format (bells, verses, seats...), so it can't be replaced" % field)
+            elif key not in META_TYPES:
                 out.append("%s: no meta called %r (known: %s)" % (field, key, ", ".join(sorted(META_TYPES))))
             elif not (isinstance(lines, list) and lines and all(isinstance(x, str) and x for x in lines)):
                 out.append("%s[%s] must be a non-empty list of lines" % (field, key))
@@ -185,14 +204,27 @@ def problems(theme):
     for f in finals:
         if f in letters:
             out.append("the final %s appears in text players can see (intro, titles, flavour or cluephrases)" % f)
+    # A feeder printed as a word gives some puzzle's answer away (plurals count).
+    words = set(re.findall(r"[A-Z]+", " ".join(shown).upper()))
+    for w in feeders:
+        hit = {w, w + "S", w + "ES"} & words
+        if hit:
+            out.append("the feeder %s appears as %s in text players can see" % (w, sorted(hit)[0]))
+    # Solving a shared cluephrase shows its whole sentence, so a final mustn't be in one either.
+    for f in finals:
+        if any(f in t.replace(" ", "") for t in CLUEPHRASES):
+            out.append("the final %s appears in a shared cluephrase (hunt_mechanisms.CLUEPHRASES)" % f)
     for f, echo in theme.get("echoes", {}).items():
         if f in re.sub(r"[^A-Z]", "", echo.upper()):
             out.append("the echo for %s contains it" % f)
     return out
 
 
-def trial_builds(theme, dates=8):
-    """Test-build every level, each final taking a turn as the Hard one. Returns (ok, tried, metas by level)."""
+def trial_builds(theme, dates=12):
+    """Test-build every level, each final taking a turn as the Hard one. Returns (ok, tried, metas by level).
+
+    A build whose first hint mostly repeats the flavour beside it (a theme's own line, usually) counts as failed:
+    the hint ladder has to climb."""
     ok = tried = 0
     metas = {level: {} for level in generate.LEVELS}
     start = dt.date(2030, 1, 1)
@@ -203,7 +235,10 @@ def trial_builds(theme, dates=8):
         tried += 1
         try:
             for level in generate.LEVELS:
-                _, sol = generate.build("bank-trial", date, level=level, pick=pick)
+                p, sol = generate.build("bank-trial", date, level=level, pick=pick)
+                for q in p["puzzles"] + [p["meta"]]:
+                    if echoes(q["flavor"], q["hints"][0]):
+                        raise ValueError("flavour %r is echoed by its first hint %r" % (q["flavor"], q["hints"][0]))
                 metas[level][sol["metaType"]] = metas[level].get(sol["metaType"], 0) + 1
             ok += 1
         except Exception as e:

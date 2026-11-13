@@ -17,6 +17,8 @@ Every puzzle climbs one ladder, and each rung must say more than the one before:
 Easy already shows the technique and a direct flavour, which together say
 as much as a pointer, so its hints start at the method.
 """
+import re
+
 
 TIERS = {
     "hard": ("nudge",),
@@ -244,3 +246,22 @@ def meta_hints(level, meta_type, method, final=None):
     nudge, pointer = META[meta_type]
     first = "To check you're on track: the final answer begins with %s." % final[0] if final else None
     return tiers(level, nudge, pointer, method, first)
+
+
+# ---------------------------------------------------------------------------
+# The ladder must climb: a first hint that mostly repeats its own flavour adds nothing.
+# selftest.py checks every built round with this, and bank.py checks every bank theme.
+# ---------------------------------------------------------------------------
+
+STOP = set("a an and the of to in on is it its it's as at be by or if for from with this that these those you your "
+           "what which each every one two any all are was were has have had not no but so then than there here into "
+           "out up down only once more just some something".split())
+
+
+def _words(text):
+    return {w for w in re.findall(r"[a-z]+", text.lower()) if w not in STOP and len(w) > 2}
+
+
+def echoes(flavor, hint):
+    h = _words(hint)
+    return len(h) >= 3 and len(h & _words(flavor)) / len(h) >= 0.6

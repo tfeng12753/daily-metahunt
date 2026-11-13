@@ -3,23 +3,9 @@
 import collections, copy, datetime as dt, json, os, re, sys
 import generate
 from generate import build, EPOCH, LEVELS
+from hints import echoes
 
 generate.HASH_ITER = 1  # the real count only slows the self-test down; the scheme is checked below
-
-STOP = set("a an and the of to in on is it its it's as at be by or if for from with this that these those you your "
-           "what which each every one two any all are was were has have had not no but so then than there here into "
-           "out up down only once more just some something".split())
-
-
-def words(text):
-    return {w for w in re.findall(r"[a-z]+", text.lower()) if w not in STOP and len(w) > 2}
-
-
-def echoes(flavor, hint):
-    """A hint that mostly repeats its flavour adds nothing: the ladder must climb."""
-    h = words(hint)
-    return len(h) >= 3 and len(h & words(flavor)) / len(h) >= 0.6
-
 
 counts, mechs, ladder = collections.Counter(), collections.Counter(), collections.Counter()
 n = int(sys.argv[1]) if len(sys.argv) > 1 else 730
@@ -65,6 +51,7 @@ theme = dict(src, id="trial-sea", name="Trial Sea", max_uses=2,
              cluephrases=["THE DIVERS SURFACED HOLDING A SLATE THAT SAID {W}",
                           "SCRAWLED ON THE INSIDE OF THE PORTHOLE WAS {W}"],
              flavors={"cryptogram": ["Salt water got into the type case."]})
+theme["feeders"] = [w for w in theme["feeders"] if w != "DIVER"]  # the crew are "the divers"
 assert not bank.problems(theme), bank.problems(theme)
 assert bank.problems(dict(theme, intro=theme["intro"] + " " + theme["finals"][0])), "a printed final went unnoticed"
 sealed = {}
