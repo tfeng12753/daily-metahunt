@@ -1,0 +1,709 @@
+{
+ "date": "2026-11-14",
+ "difficulty": "hard",
+ "salt": "2026-11-14",
+ "number": 49,
+ "round": "The Great Work",
+ "intro": "The alchemist's notebook was written so that only a fellow adept could read it. Every page is a different recipe, and every recipe is a lie with one true ingredient. In the west corner of the laboratory stands the old sorting rack, its shallow shelves cut one by one to cradle each vessel exactly as it finds them, no two alike, no one shared. The novices are forbidden to touch it; the masters add to it in silence, setting down the day's yield where it naturally falls. A visitor once asked why the shelves were made so oddly, and the old master only smiled and said that everything in the Work has its proper place.",
+ "echo": "Everything that matters here was tested in fire, and Arthur Miller named a play after the vessel.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "The Red King",
+   "flavor": "Rhythm without rests, and a finger pointing into each line.",
+   "blocks": [
+    {
+     "type": "morselines",
+     "items": [
+      {
+       "code": "-.-..-..-.-..-...-.----.",
+       "len": 8,
+       "index": 2
+      },
+      {
+       "code": "-.-.---.--..--...-.",
+       "len": 6,
+       "index": 6
+      },
+      {
+       "code": "-.......-...-...-..",
+       "len": 7,
+       "index": 3
+      },
+      {
+       "code": ".--.....---.-...-..-",
+       "len": 7,
+       "index": 4
+      },
+      {
+       "code": ".--.-..------.-.--",
+       "len": 8,
+       "index": 2
+      },
+      {
+       "code": "....--....-...-",
+       "len": 6,
+       "index": 5
+      },
+      {
+       "code": "..-...-.-.-..--.-..",
+       "len": 7,
+       "index": 6
+      }
+     ]
+    }
+   ],
+   "hash": "b544b36e21a13ddbda79f7c59265d38001caab185697a60b498c2dd1afe4af05",
+   "partials": {},
+   "hints": [
+    "Two symbols, no spaces, and a letter count. Which old code is it, and which word from this round fits each line?"
+   ]
+  },
+  {
+   "id": 2,
+   "title": "Athanor",
+   "flavor": "The pipes have been knocking all night, and not at random.",
+   "blocks": [
+    {
+     "type": "audio",
+     "kind": "taps",
+     "groups": [
+      [
+       4,
+       3
+      ],
+      [
+       4,
+       5
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       3,
+       1
+      ],
+      [
+       2,
+       4
+      ],
+      [
+       3,
+       2
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       4,
+       4
+      ],
+      [
+       1,
+       5
+      ]
+     ]
+    }
+   ],
+   "hash": "40b90197ebd694a243f643ab9f86d293272c650d929f6460c6fefbdf9623a310",
+   "partials": {},
+   "hints": [
+    "Always two numbers, never more than five. How would two prisoners spell through a wall with a 5×5 grid?"
+   ]
+  },
+  {
+   "id": 3,
+   "title": "Emerald Tablet",
+   "flavor": "The picture is worth exactly one word.",
+   "blocks": [
+    {
+     "type": "nonogram",
+     "rows": [
+      [
+       3,
+       1,
+       1,
+       5,
+       4,
+       1,
+       1,
+       4,
+       5,
+       1,
+       1,
+       1,
+       5,
+       4
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       3,
+       3,
+       1,
+       1,
+       1,
+       1,
+       4,
+       4
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       2,
+       1,
+       3,
+       5,
+       4,
+       1,
+       1,
+       4,
+       5,
+       5,
+       1,
+       5,
+       1,
+       1
+      ]
+     ],
+     "cols": [
+      [
+       3
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       2,
+       1
+      ],
+      [],
+      [
+       4
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       4
+      ],
+      [],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       3
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [],
+      [
+       3
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       3
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "givens": [
+      [
+       0,
+       27,
+       0
+      ],
+      [
+       1,
+       49,
+       0
+      ],
+      [
+       4,
+       52,
+       0
+      ],
+      [
+       4,
+       50,
+       1
+      ],
+      [
+       0,
+       34,
+       1
+      ],
+      [
+       4,
+       34,
+       0
+      ],
+      [
+       3,
+       52,
+       0
+      ],
+      [
+       4,
+       9,
+       1
+      ],
+      [
+       3,
+       22,
+       0
+      ],
+      [
+       3,
+       49,
+       1
+      ],
+      [
+       3,
+       28,
+       0
+      ]
+     ]
+    }
+   ],
+   "hash": "cdd227975c76e6cd5e9380ee5ced4c577ddadc571344a5d097dbb0a740281d83",
+   "partials": {},
+   "hints": [
+    "The numbers describe runs of filled squares. What picture could they be drawing?"
+   ]
+  },
+  {
+   "id": 4,
+   "title": "Calcination",
+   "flavor": "Count everything. Then count again, differently. Half a turn of the wheel and you'd have it.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "Guns fired in a traditional royal salute",
+      "Humps on a Bactrian camel",
+      "Letters in the English alphabet",
+      "Arms on an octopus",
+      "Wheels on a unicycle",
+      "Ounces in a pound",
+      "Legs on a spider",
+      "Cents in a US quarter",
+      "Legs on a spider",
+      "Legs on an insect"
+     ],
+     "ordered": true,
+     "tray": "letter"
+    }
+   ],
+   "hash": "a8db6b266bf3cd811a04787fba9231ae7521424fdfe80895635bfce38fb752c9",
+   "partials": {
+    "3d3847295762a6cda7c5a45b8dd0a2a2ff36435969eb185d98879b983c7e7780": "You've decoded it, but it's not finished. One more layer."
+   },
+   "hints": [
+    "Every line has a number for an answer. Could those numbers be counting through something else? And if what you get still isn't a word, reread the flavour text."
+   ]
+  },
+  {
+   "id": 5,
+   "title": "Solve Et Coagula",
+   "flavor": "Up and down, up and down, and not a single space left.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "WYWWD EQNXE EOOWO NRTRA EUOTE TLNUN RDTOI UNVIY ONOLO MYIEH WNTDO ELTEN DATEC MTHE",
+     "wide": true,
+     "rails": 5
+    }
+   ],
+   "hash": "9b766480834befc6a700a4d5b1205d929d240ffcc2c0322e077022ad8fbbf7a4",
+   "partials": {},
+   "hints": [
+    "All the right letters are here, just out of order. Could they have been written along a path that goes up and down?"
+   ]
+  },
+  {
+   "id": 6,
+   "title": "Ouroboros",
+   "flavor": "Pairs of numbers pencilled in the margin.",
+   "blocks": [
+    {
+     "type": "prose",
+     "text": "The alchemist's notebook was written so that only a fellow adept could read it. Every page is a different recipe, and every recipe is a lie with one true ingredient.",
+     "paper": true
+    },
+    {
+     "type": "list",
+     "items": [
+      "30.8",
+      "2.6",
+      "3.5",
+      "23.6",
+      "29.2"
+     ],
+     "inline": true
+    }
+   ],
+   "hash": "c338abb54b87b9ad6d39e5f4da8ad66652e0683d039952e1d545413dfcef3f39",
+   "partials": {},
+   "hints": [
+    "The first number in each pair never goes past the number of words on the page. What does the second count?"
+   ]
+  },
+  {
+   "id": 7,
+   "title": "The Green Lion",
+   "flavor": "Everyone has a place. Everyone pays for it in their own name.",
+   "blocks": [
+    {
+     "type": "seating",
+     "seats": 4,
+     "names": [
+      "Felicity",
+      "Leopold",
+      "Kendrick",
+      "Ivanka"
+     ],
+     "clues": [
+      "Ivanka sits somewhere between Kendrick and Leopold.",
+      "Exactly one person sits between Ivanka and Leopold.",
+      "Leopold sits somewhere to the left of Felicity."
+     ],
+     "logic": [
+      [
+       "between",
+       "KENDRICK",
+       "IVANKA",
+       "LEOPOLD"
+      ],
+      [
+       "gap",
+       "IVANKA",
+       "LEOPOLD",
+       1
+      ],
+      [
+       "left_of",
+       "LEOPOLD",
+       "FELICITY"
+      ]
+     ]
+    }
+   ],
+   "hash": "83e014de528f19db86ef0c329e4a3824be62a757a1c1156e1157609a1fe8ab41",
+   "partials": {},
+   "hints": [
+    "Only one arrangement satisfies every clue; start from whoever has an end seat or a fixed neighbour. Once they're seated, why might the seat numbers matter?"
+   ]
+  },
+  {
+   "id": 8,
+   "title": "As Above So Below",
+   "flavor": "Confetti, alphabetised.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "AND",
+      "AYN",
+      "E",
+      "EDO",
+      "EQU",
+      "HEW",
+      "IET",
+      "LDO",
+      "LYO",
+      "MOV",
+      "NEX",
+      "NEY",
+      "NTO",
+      "ORD",
+      "ORT",
+      "OUM",
+      "OWW",
+      "RET",
+      "RIT",
+      "THE",
+      "TON",
+      "WEL",
+      "WNT"
+     ],
+     "inline": true,
+     "tiles": true
+    },
+    {
+     "type": "prose",
+     "text": "Word lengths: (4 4 3 3 3 5 4 3 4 6 3 4 7 2 2 3 4 3)"
+    }
+   ],
+   "hash": "38ed7494d4d58a504b06e3af2d929a97cca2f336a01cba746235d02b0998b93f",
+   "partials": {},
+   "hints": [
+    "The strips are alphabetised, not in order. The word lengths say where the breaks fall. Which strip could start the sentence?"
+   ]
+  }
+ ],
+ "meta": {
+  "title": "Meta: The Great Work",
+  "flavor": "Pigeonholes, each cut to fit one thing only.",
+  "blocks": [
+   {
+    "type": "fitgrid",
+    "rows": [
+     {
+      "len": 8,
+      "shade": 3
+     },
+     {
+      "len": 6,
+      "shade": 0
+     },
+     {
+      "len": 11,
+      "shade": 1
+     },
+     {
+      "len": 7,
+      "shade": 6
+     },
+     {
+      "len": 9,
+      "shade": 4
+     },
+     {
+      "len": 5,
+      "shade": 2
+     },
+     {
+      "len": 10,
+      "shade": 7
+     },
+     {
+      "len": 4,
+      "shade": 1
+     }
+    ]
+   }
+  ],
+  "length": 8,
+  "hash": "9d5f65598db1a20496fd3db326ca1a44b5679e21ac690de15def6dcb388aa30b",
+  "hints": [
+   "The grid's rows are all different lengths. So are your answers."
+  ]
+ },
+ "described": true
+}

@@ -1,0 +1,184 @@
+{
+ "date": "2026-11-14",
+ "difficulty": "easy",
+ "salt": "2026-11-14/easy",
+ "number": 49,
+ "round": "The Great Work",
+ "intro": "The alchemist's notebook was written so that only a fellow adept could read it: every page a different recipe, every recipe a lie with one true ingredient. In the laboratory the stoppered bottles keep their colours separate by candlelight, and the named workings—Athanor, Emerald Tablet, Rubedo, The Red King—are copied out with quills that have never touched common ink. Beside them sits the master ledger in grey calf, its lampblack lines always holding two numerals and nothing more: one numeral chooses the page, the other a count along the line. The senior adept closes the book and says only that the closing step will be read the same way, from pairs, not from the recipes' truths. Newcomers are told to trust the pair.",
+ "echo": "Two glass vessels joined by a beak, where vapour goes to become something purer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Athanor",
+   "flavor": "Every flag on this line has a meaning on its own. Together, they have one more.",
+   "blocks": [
+    {
+     "type": "flags",
+     "items": [
+      "O",
+      "U",
+      "R",
+      "O",
+      "B",
+      "O",
+      "R",
+      "O",
+      "S"
+     ]
+    }
+   ],
+   "hash": "f275ec125184ad0dbc022093a59fec1e878e61e7b2473c9a8655a3089757390c",
+   "partials": {},
+   "hints": [
+    "International maritime signal flags, one letter each.",
+    "To check you're on track: the answer begins with O."
+   ],
+   "technique": "Maritime signal flags",
+   "length": 9
+  },
+  {
+   "id": 2,
+   "title": "Emerald Tablet",
+   "flavor": "An inventory from the stores in the laboratory, listed by order of arrival rather than by weight.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "lithium",
+      "hydrogen",
+      "scandium",
+      "magnesium",
+      "beryllium",
+      "argon",
+      "phosphorus",
+      "silicon"
+     ]
+    }
+   ],
+   "hash": "ce32154442fb3f0f2de655d9b25de98ac7dc73aea2b6c00f3944b2d5e68e955a",
+   "partials": {},
+   "hints": [
+    "Each element's atomic number is a letter position (hydrogen = 1 = A).",
+    "To check you're on track: the answer begins with C."
+   ],
+   "technique": "Atomic numbers",
+   "length": 8
+  },
+  {
+   "id": 3,
+   "title": "Rubedo",
+   "flavor": "An inventory of the laboratory, tangled up. Whatever is left over when every item is accounted for is yours.",
+   "blocks": [
+    {
+     "type": "caption",
+     "text": "Hidden in the grid: 11 words to do with the laboratory (lengths 4, 4, 4, 4, 5, 6, 6, 6, 6, 7, 7), running in any direction."
+    },
+    {
+     "type": "board",
+     "rows": [
+      "EMMEERRD",
+      "CRORMAEI",
+      "AGOEBTTS",
+      "NONVEROT",
+      "RLCLRORI",
+      "UDEIUMTL",
+      "FARSALTL",
+      "DRUFLUSY"
+     ],
+     "plain": true,
+     "words": [
+      "DISTILL",
+      "EMBER",
+      "FURNACE",
+      "GOLD",
+      "LEAD",
+      "MOON",
+      "MORTAR",
+      "RETORT",
+      "SALT",
+      "SILVER",
+      "SULFUR"
+     ]
+    }
+   ],
+   "hash": "518194c8938cc998124a9d74979b3c99dff0ee62e600eeadf16e5f102a1cdf2c",
+   "partials": {},
+   "hints": [
+    "Find every hidden word (any of 8 directions). The unused letters, read left-to-right, top-to-bottom, spell the answer.",
+    "The hidden words are: DISTILL, EMBER, FURNACE, GOLD, LEAD, MOON, MORTAR, RETORT, SALT, SILVER, SULFUR.",
+    "To check you're on track: the answer begins with M."
+   ],
+   "technique": "Word search leftovers",
+   "length": 7
+  },
+  {
+   "id": 4,
+   "title": "The Red King",
+   "flavor": "Somebody shook the sentence and all the letters fell to the bottom of their columns.",
+   "blocks": [
+    {
+     "type": "dropquote",
+     "cols": [
+      "AIINW",
+      "NOOSZ",
+      "BERY",
+      "DFOO",
+      "ADIN",
+      "AERSY",
+      "R",
+      "EJSST",
+      "EOOUX",
+      "NPS",
+      "EGITT",
+      "CCEH",
+      "EOTT",
+      "EN",
+      "DEPT",
+      "HR"
+     ],
+     "mask": [
+      "......#........#",
+      "......#..#...#..",
+      "..#...#..#...#..",
+      "...#..#....#...#",
+      "....#.......####"
+     ]
+    }
+   ],
+   "hash": "c7be9366985d81f60627437ea4c5b3ee97e4c33631e245d6ba3952b42050e294",
+   "partials": {},
+   "hints": [
+    "A drop quote: each column's letters (shown alphabetised above it) drop into that column of the grid below. Black squares are spaces; words can wrap between rows. The sentence tells you the answer.",
+    "To check you're on track: the answer begins with A."
+   ],
+   "technique": "Drop quote",
+   "length": 7
+  }
+ ],
+ "meta": {
+  "title": "Meta: The Great Work",
+  "flavor": "The watch-keeper wrote down nothing but the day and the bell. Every day was one of your puzzles.",
+  "blocks": [
+   {
+    "type": "list",
+    "items": [
+     "Day 4, 1 bells",
+     "Day 2, 4 bells",
+     "Day 3, 2 bells",
+     "Day 3, 1 bells",
+     "Day 1, 5 bells",
+     "Day 4, 6 bells",
+     "Day 3, 4 bells"
+    ],
+    "ordered": true
+   }
+  ],
+  "length": 7,
+  "hash": "33d69aa52079c86898f21169fa44b33a34f0ed0b544d0df6b235c32dbf30a1d9",
+  "hints": [
+   "Each entry is (puzzle number, letter number): index into that puzzle's answer.",
+   "To check you're on track: the final answer begins with A."
+  ]
+ },
+ "described": true
+}

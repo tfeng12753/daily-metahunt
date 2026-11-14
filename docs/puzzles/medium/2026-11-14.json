@@ -1,0 +1,202 @@
+{
+ "date": "2026-11-14",
+ "difficulty": "medium",
+ "salt": "2026-11-14/medium",
+ "number": 49,
+ "round": "The Great Work",
+ "intro": "The alchemist's notebook was written so that only a fellow adept could read it. Every page is a different recipe, and every recipe is a lie with one true ingredient. In the common room, the master of novices still calls the roll as the lamps are lit; the names are chalked on the slate, but the slate always shows one name after the last adept has spoken. New apprentices are told not to mind it, and by winter nobody does. The notebook rests on the bench beside the ledger, its pages dog-eared where someone has already tested the recipes.",
+ "echo": "The adepts' universal solvent takes its name from the first and last letters of three alphabets.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "The Green Lion",
+   "flavor": "Call signs, reflected.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "Hotel",
+      "Foxtrot",
+      "Oscar",
+      "Zulu",
+      "Uniform",
+      "Foxtrot",
+      "India"
+     ]
+    }
+   ],
+   "hash": "9cd5355f67a83fef12f40502e317f8ebce099ff44b8b4dcb7d87662ac207339f",
+   "partials": {
+    "9868687200f2bcda4e8cdec474adcd3a48ae5facf778d3d0e546746f98b1a039": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Each word stands for a letter, the way radio operators spell. Do those letters read? If not, try the alphabet backwards.",
+    "Take the NATO call signs' initials, then swap each letter for its mirror: A for Z, B for Y."
+   ],
+   "length": 6
+  },
+  {
+   "id": 2,
+   "title": "Albedo",
+   "flavor": "An inventory, tangled.",
+   "blocks": [
+    {
+     "type": "caption",
+     "text": "Hidden in the grid: 12 words to do with the laboratory."
+    },
+    {
+     "type": "board",
+     "rows": [
+      "YNOMITNAS",
+      "QSERPENTP",
+      "UZEMBERLI",
+      "IDAELGCAR",
+      "KSALFKOSI",
+      "SNOOMILLT",
+      "NORDLUACD",
+      "FURNACEVE",
+      "CINNABARR"
+     ],
+     "plain": true,
+     "words": [
+      "ANTIMONY",
+      "CAULDRON",
+      "CINNABAR",
+      "EMBER",
+      "FLASK",
+      "FURNACE",
+      "GOLD",
+      "LEAD",
+      "MOON",
+      "SALT",
+      "SERPENT",
+      "SPIRIT"
+     ]
+    }
+   ],
+   "hash": "f981447ac8aa941d59947264dd4fa74f9116763e582f84e44027c3d9a3b8dc3a",
+   "partials": {
+    "6e08f43a7cab354c2fb9fa91d5f27a9e1f10e385160c00488e899fc7d39d2cc4": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Once every theme word is found, is anything left unclaimed? Read it in order.",
+    "Find the theme words; the letters no word uses, read row by row, are the answer.",
+    "The hidden words are: ANTIMONY, CAULDRON, CINNABAR, EMBER, FLASK, FURNACE, GOLD, LEAD, MOON, SALT, SERPENT, SPIRIT."
+   ],
+   "length": 11
+  },
+  {
+   "id": 3,
+   "title": "Ouroboros",
+   "flavor": "Rubbings from a handrail. Start from the end; that's where it started.",
+   "blocks": [
+    {
+     "type": "braille",
+     "items": [
+      "100010",
+      "111010",
+      "101010",
+      "101001",
+      "011110",
+      "100100",
+      "101110",
+      "010100",
+      "011110"
+     ]
+    }
+   ],
+   "hash": "2fa5cb9d5c159e7cec5aeb7ef6c6ce3383a1f89f1b0d5aa662feb8e71a8fddab",
+   "partials": {
+    "e2d8548bf822af349ac2e0bb822f913de70ccfcd92df1a14cfab73697ce0b939": "You've decoded it, but it's not finished. One more layer.",
+    "3b0fd890b7c2809cf9cc2d93f54791383eeeed7b763e10d762ffd30bb8145c0c": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Write each number in binary. Six yes-or-no choices: is there an alphabet built from exactly that? And if what you get still isn't a word, reread the flavour text.",
+    "Braille: each bit is one of the six dots (1, 2, 4 down the left column; 8, 16, 32 down the right). Then one more layer: Read what you get backwards."
+   ],
+   "length": 8
+  },
+  {
+   "id": 4,
+   "title": "Solve Et Coagula",
+   "flavor": "The labels in the laboratory have faded.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "AR_ENIC",
+      "B_SMUTH",
+      "F_ASK",
+      "SUBLIMA_E",
+      "_ITRIOL",
+      "ESSENC_",
+      "PHILOSOPHE_"
+     ],
+     "ordered": true,
+     "mono": true
+    }
+   ],
+   "hash": "6e160a72c58d6241c073cef68005356988ff8cea933c59a5ba50f96748d1487c",
+   "partials": {
+    "00c71747572de59aec4ffcf7bbe1d87bdc513a4d14699180776d6532d35bc09f": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Every gap takes exactly one letter. Is there a pattern in what you filled in?",
+    "Read the letters you supplied, in order."
+   ],
+   "length": 6
+  },
+  {
+   "id": 5,
+   "title": "Athanor",
+   "flavor": "Shaken, one word at a time.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "YORU",
+      "WEARSN",
+      "FRO",
+      "IHST",
+      "ZLEUPZ",
+      "SI",
+      "OWBESLHL",
+      "UTB",
+      "OD",
+      "NTO",
+      "LELT",
+      "HET",
+      "HROEST",
+      "WHO",
+      "OUY",
+      "GTO",
+      "TI"
+     ],
+     "inline": true,
+     "tray": "word"
+    }
+   ],
+   "hash": "b0cab6bc8f7e35c32fbcf815e3b1663880572ed86b565b575f7d3d0ebff76ad3",
+   "partials": {
+    "e528e1d6462fbbe8faaebe70ad95ea370409ac8b691fba6bf4832b80896276c2": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Each word is complete but shuffled. Start with the shortest ones: does a sentence appear?",
+    "Unscramble each word where it stands; the sentence tells you what to submit."
+   ],
+   "length": 7
+  }
+ ],
+ "meta": {
+  "title": "Meta: The Great Work",
+  "flavor": "Count heads at the gangway.",
+  "blocks": [],
+  "length": 5,
+  "hash": "e3f57b455802eb8ac350b7e999375808dd5126122bf03b2b1fd9254fb9152d65",
+  "hints": [
+   "Did every answer come out the right size the first time? Each had one letter too many. Did you keep them?",
+   "Take the extra letter from each feeder, in puzzle order."
+  ]
+ },
+ "described": true
+}

@@ -1,0 +1,64 @@
+{
+ "date": "2026-11-13",
+ "number": 48,
+ "difficulty": "medium",
+ "final": "MOTIVE",
+ "metaType": "stowaway",
+ "explain": "Each feeder decodes to its answer plus one inserted letter. The inserted letters, in puzzle order, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Five Orange Pips",
+   "answer": "TOBACCO",
+   "mechanism": "Anagrams with an extra letter",
+   "transform": null,
+   "encoded": "TOBAMCCO",
+   "mutated": "TOBAMCCO"
+  },
+  {
+   "id": 2,
+   "title": "The Red-Headed League",
+   "answer": "MORIARTY",
+   "mechanism": "Book cipher",
+   "transform": "Reversal",
+   "encoded": "YTORAIROM",
+   "mutated": "MORIAROTY"
+  },
+  {
+   "id": 3,
+   "title": "The Final Problem",
+   "answer": "LIBRARY",
+   "mechanism": "Symbol cryptogram",
+   "transform": null,
+   "encoded": "LTIBRARY",
+   "mutated": "LTIBRARY"
+  },
+  {
+   "id": 4,
+   "title": "The Empty House",
+   "answer": "POISON",
+   "mechanism": "Element spelling",
+   "transform": null,
+   "encoded": "PIOISON",
+   "mutated": "PIOISON"
+  },
+  {
+   "id": 5,
+   "title": "The Dog In The Night",
+   "answer": "PORTRAIT",
+   "mechanism": "Drop quote",
+   "transform": null,
+   "encoded": "PORTRVAIT",
+   "mutated": "PORTRVAIT"
+  },
+  {
+   "id": 6,
+   "title": "Dancing Men",
+   "answer": "SCOTLANDYARD",
+   "mechanism": "Caesar shift",
+   "transform": null,
+   "encoded": "SCOTLANDYAERD",
+   "mutated": "SCOTLANDYAERD"
+  }
+ ]
+}

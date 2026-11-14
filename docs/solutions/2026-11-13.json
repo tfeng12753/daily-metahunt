@@ -1,0 +1,64 @@
+{
+ "date": "2026-11-13",
+ "number": 48,
+ "difficulty": "hard",
+ "final": "SLEUTH",
+ "metaType": "initials",
+ "explain": "The ciphertext is Vigenère-encrypted with the first letters of the feeder answers (in puzzle order) as the key.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Elementary",
+   "answer": "DIARY",
+   "mechanism": "Punched tape",
+   "transform": "ROT13",
+   "encoded": "QVNEL",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Five Orange Pips",
+   "answer": "DEERSTALKER",
+   "mechanism": "Mixed number bases",
+   "transform": "Atbash (A↔Z mirror)",
+   "encoded": "WVVIHGZOPVI",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "The Dog In The Night",
+   "answer": "HANSOM",
+   "mechanism": "Hex colour ASCII",
+   "transform": null,
+   "encoded": "HANSOM",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "The Reichenbach Fall",
+   "answer": "TELEGRAM",
+   "mechanism": "Resistor colour bands",
+   "transform": null,
+   "encoded": "TELEGRAM",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "The Red-Headed League",
+   "answer": "FOG",
+   "mechanism": "Playfair keyed by the title",
+   "transform": null,
+   "encoded": "FOG",
+   "mutated": null
+  },
+  {
+   "id": 6,
+   "title": "A Study In Scarlet",
+   "answer": "MAGNIFIER",
+   "mechanism": "Shredded sentence",
+   "transform": null,
+   "encoded": "MAGNIFIER",
+   "mutated": null
+  }
+ ]
+}

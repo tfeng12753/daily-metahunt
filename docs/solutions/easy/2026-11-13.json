@@ -1,0 +1,55 @@
+{
+ "date": "2026-11-13",
+ "number": 48,
+ "difficulty": "easy",
+ "final": "CULPRIT",
+ "metaType": "logbook",
+ "explain": "Each entry is (puzzle number, letter number): index into that puzzle's answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Five Orange Pips",
+   "answer": "INSPECTOR",
+   "mechanism": "Missing letters",
+   "transform": null,
+   "encoded": "INSPECTOR",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Three Pipe Problem",
+   "answer": "SNUFFBOX",
+   "mechanism": "Anagrams with an extra letter",
+   "transform": null,
+   "encoded": "SNUFFBOX",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Dancing Men",
+   "answer": "PIPE",
+   "mechanism": "Drop quote",
+   "transform": null,
+   "encoded": "PIPE",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "The Reichenbach Fall",
+   "answer": "CANDLESTICK",
+   "mechanism": "Knight's path",
+   "transform": null,
+   "encoded": "CANDLESTICK",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "The Empty House",
+   "answer": "CHEMISTRY",
+   "mechanism": "Rail fence (cluephrase)",
+   "transform": null,
+   "encoded": "CHEMISTRY",
+   "mutated": null
+  }
+ ]
+}
