@@ -1,0 +1,82 @@
+{
+ "date": "2026-11-14",
+ "number": 49,
+ "difficulty": "hard",
+ "final": "CRUCIBLE",
+ "metaType": "fitin",
+ "explain": "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "The Red King",
+   "answer": "ARSENIC",
+   "mechanism": "Gapless Morse",
+   "transform": null,
+   "encoded": "ARSENIC",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Athanor",
+   "answer": "SUBLIMATE",
+   "mechanism": "Tap code (audio)",
+   "transform": null,
+   "encoded": "SUBLIMATE",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Emerald Tablet",
+   "answer": "QUICKSILVER",
+   "mechanism": "Nonogram",
+   "transform": null,
+   "encoded": "QUICKSILVER",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Calcination",
+   "answer": "HOMUNCULUS",
+   "mechanism": "Number trivia",
+   "transform": "ROT13",
+   "encoded": "UBZHAPHYHF",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Solve Et Coagula",
+   "answer": "TINCTURE",
+   "mechanism": "Rail fence (cluephrase)",
+   "transform": null,
+   "encoded": "TINCTURE",
+   "mutated": null
+  },
+  {
+   "id": 6,
+   "title": "Ouroboros",
+   "answer": "EMBER",
+   "mechanism": "Book cipher",
+   "transform": null,
+   "encoded": "EMBER",
+   "mutated": null
+  },
+  {
+   "id": 7,
+   "title": "The Green Lion",
+   "answer": "LEAD",
+   "mechanism": "Seating plan (logic)",
+   "transform": null,
+   "encoded": "LEAD",
+   "mutated": null
+  },
+  {
+   "id": 8,
+   "title": "As Above So Below",
+   "answer": "RETORT",
+   "mechanism": "Shredded sentence",
+   "transform": null,
+   "encoded": "RETORT",
+   "mutated": null
+  }
+ ]
+}

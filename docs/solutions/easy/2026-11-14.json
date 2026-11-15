@@ -1,0 +1,46 @@
+{
+ "date": "2026-11-14",
+ "number": 49,
+ "difficulty": "easy",
+ "final": "ALEMBIC",
+ "metaType": "logbook",
+ "explain": "Each entry is (puzzle number, letter number): index into that puzzle's answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Athanor",
+   "answer": "OUROBOROS",
+   "mechanism": "Maritime signal flags",
+   "transform": null,
+   "encoded": "OUROBOROS",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Emerald Tablet",
+   "answer": "CAULDRON",
+   "mechanism": "Atomic numbers",
+   "transform": null,
+   "encoded": "CAULDRON",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Rubedo",
+   "answer": "MERCURY",
+   "mechanism": "Word search leftovers",
+   "transform": null,
+   "encoded": "MERCURY",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "The Red King",
+   "answer": "ARSENIC",
+   "mechanism": "Drop quote",
+   "transform": null,
+   "encoded": "ARSENIC",
+   "mutated": null
+  }
+ ]
+}

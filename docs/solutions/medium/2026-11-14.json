@@ -1,0 +1,55 @@
+{
+ "date": "2026-11-14",
+ "number": 49,
+ "difficulty": "medium",
+ "final": "AZOTH",
+ "metaType": "stowaway",
+ "explain": "Each feeder decodes to its answer plus one inserted letter. The inserted letters, in puzzle order, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "The Green Lion",
+   "answer": "SULFUR",
+   "mechanism": "Mirrored NATO",
+   "transform": null,
+   "encoded": "SULAFUR",
+   "mutated": "SULAFUR"
+  },
+  {
+   "id": 2,
+   "title": "Albedo",
+   "answer": "QUICKSILVER",
+   "mechanism": "Word search leftovers",
+   "transform": null,
+   "encoded": "QUZICKSILVER",
+   "mutated": "QUZICKSILVER"
+  },
+  {
+   "id": 3,
+   "title": "Ouroboros",
+   "answer": "TINCTURE",
+   "mechanism": "Braille (drawn)",
+   "transform": "Reversal",
+   "encoded": "EROUTCNIT",
+   "mutated": "TINCTUORE"
+  },
+  {
+   "id": 4,
+   "title": "Solve Et Coagula",
+   "answer": "SILVER",
+   "mechanism": "Missing letters",
+   "transform": null,
+   "encoded": "SILTVER",
+   "mutated": "SILTVER"
+  },
+  {
+   "id": 5,
+   "title": "Athanor",
+   "answer": "BELLOWS",
+   "mechanism": "Scrambled sentence",
+   "transform": null,
+   "encoded": "BELLOWHS",
+   "mutated": "BELLOWHS"
+  }
+ ]
+}

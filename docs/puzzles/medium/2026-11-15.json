@@ -1,0 +1,567 @@
+{
+ "date": "2026-11-15",
+ "difficulty": "medium",
+ "salt": "2026-11-15/medium",
+ "number": 50,
+ "round": "Isobars",
+ "intro": "The weather station on the summit has been automated for forty years, and the forecasters who still come up in the winter keep their things in a rack of wooden slots by the door, each cut to a different length. This morning the printer woke up and produced something that is definitely not a forecast. It ran out a stack of pages, too neat for weather, with symbols that looked more like ledger entries than rain. Mrs Aisling, who has logged every shift since the roof was rebuilt, has put the pages in a drawer and gone to make tea. The rack, she says, has never once admitted a thing that did not belong in its own slot.",
+ "echo": "Poe sent a fisherman down a whirlpool off the coast of Norway.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Low Pressure",
+   "flavor": "Thumbs, patience, and no predictive text.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "7777",
+      "555",
+      "33",
+      "33",
+      "8"
+     ],
+     "inline": true,
+     "variant": "keys"
+    }
+   ],
+   "hash": "4e50d8eb0385d3406262625519399489354fc9fefa03c6a1932cba49f5adfd4e",
+   "partials": {},
+   "hints": [
+    "Two frequencies at once is the sound of a phone key being pressed. What letters did those keys carry?",
+    "Old phone keypads: find each key, then press it the number of times shown to move along its letters."
+   ],
+   "length": 5
+  },
+  {
+   "id": 2,
+   "title": "Wind Chill",
+   "flavor": "Some squares have been given to you for free.",
+   "blocks": [
+    {
+     "type": "nonogram",
+     "rows": [
+      [
+       4,
+       3,
+       1,
+       1,
+       3,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       3,
+       1,
+       1,
+       1,
+       1,
+       1,
+       5,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       4,
+       2,
+       1,
+       3,
+       1,
+       1,
+       5,
+       5
+      ]
+     ],
+     "cols": [
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       3
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       2,
+       1
+      ],
+      [],
+      [
+       4
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       4
+      ],
+      [],
+      [
+       4
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       4
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ],
+     "givens": [
+      [
+       0,
+       16,
+       1
+      ],
+      [
+       4,
+       4,
+       0
+      ],
+      [
+       1,
+       0,
+       1
+      ],
+      [
+       0,
+       22,
+       0
+      ]
+     ]
+    }
+   ],
+   "hash": "77ac5fb6e6f9ef951dbf460c0ccc66ce4fc180b209946269800ea2a7b3c4cdb1",
+   "partials": {},
+   "hints": [
+    "The numbers describe runs of filled squares. What picture could they be drawing?",
+    "Paint by numbers. The picture is written, not drawn."
+   ],
+   "length": 6
+  },
+  {
+   "id": 3,
+   "title": "Inversion",
+   "flavor": "No duplicates anywhere.",
+   "blocks": [
+    {
+     "type": "sudoku",
+     "size": 6,
+     "rows": [
+      "..BN.Z",
+      ".O....",
+      "..N.B.",
+      "A...Z.",
+      "......",
+      "O...NB"
+     ],
+     "alphabet": "ABLNOZ",
+     "marks": [
+      [
+       3,
+       1
+      ],
+      [
+       5,
+       3
+      ],
+      [
+       0,
+       0
+      ],
+      [
+       1,
+       5
+      ],
+      [
+       2,
+       3
+      ],
+      [
+       4,
+       5
+      ],
+      [
+       1,
+       0
+      ]
+     ]
+    }
+   ],
+   "hash": "1a70bea882404d0bcf9548cfc092a8c7e7963682d3e9b33a55fc3ac001fe0c00",
+   "partials": {},
+   "hints": [
+    "A familiar grid puzzle in unfamiliar clothes. Once it's done, are some squares more important than others?",
+    "Solve it like a sudoku, then read the numbered squares in order."
+   ],
+   "length": 7
+  },
+  {
+   "id": 4,
+   "title": "Anvil Cloud",
+   "flavor": "Static, then something that isn't static.",
+   "blocks": [
+    {
+     "type": "audio",
+     "kind": "morse",
+     "groups": [
+      ".-",
+      "-.",
+      ".",
+      "--",
+      "---",
+      "--",
+      ".",
+      "-",
+      ".",
+      ".-."
+     ]
+    }
+   ],
+   "hash": "e477f2828a8253d4a767e3ac7b27a7f272752cfe812f3542c2e909d057dd7dfc",
+   "partials": {},
+   "hints": [
+    "Only two kinds of mark, in groups of one to four. Which old alphabet is built from exactly that?",
+    "Morse code: one mark is a dot, the other a dash. Try it both ways round."
+   ],
+   "length": 10
+  },
+  {
+   "id": 5,
+   "title": "Dew Point",
+   "flavor": "Noughts and crosses, with a few stray dots.",
+   "blocks": [
+    {
+     "type": "pigpen",
+     "items": [
+      {
+       "g": "hash",
+       "p": 5,
+       "dot": false
+      },
+      {
+       "g": "hash",
+       "p": 5,
+       "dot": true
+      },
+      {
+       "g": "hash",
+       "p": 6,
+       "dot": false
+      }
+     ]
+    }
+   ],
+   "hash": "9c3b480a2c5c69fca55ce026f8e7120d7a0e26743265d211d1bd5d40cfb5847c",
+   "partials": {},
+   "hints": [
+    "Picture the alphabet written into a couple of #-grids and X-grids. Which cell would each shape be?",
+    "Pigpen cipher: the shape of each cell, and whether it has a dot, picks the letter."
+   ],
+   "length": 3
+  },
+  {
+   "id": 6,
+   "title": "Squall Line",
+   "flavor": "Each entry picked up a hitchhiker on the way.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "IRCRSUD",
+      "ARDERA",
+      "WZILRBZDA",
+      "PROTFN",
+      "TNURDEHO",
+      "MALILRBUE",
+      "GNNIERGUAA",
+      "UNMITSB"
+     ],
+     "ordered": true,
+     "mono": true
+    }
+   ],
+   "hash": "40feefef30f8cf67c61d74c600bdaf7525134860c79cc32e91e158f00f170c25",
+   "partials": {},
+   "hints": [
+    "Each jumble is almost a word from this round, but with a letter to spare. Which letter, every time?",
+    "Rearrange each into a theme word; the spare letters, in order, are the answer."
+   ],
+   "length": 8
+  },
+  {
+   "id": 7,
+   "title": "Veering",
+   "flavor": "An inventory, tangled.",
+   "blocks": [
+    {
+     "type": "caption",
+     "text": "Hidden in the grid: 6 words to do with the weather station."
+    },
+    {
+     "type": "board",
+     "rows": [
+      "TRABOSI",
+      "HBREEZE",
+      "ERTSORF",
+      "THUNDER",
+      "MOMETER",
+      "CLIMATE",
+      "WOBNIAR"
+     ],
+     "plain": true,
+     "words": [
+      "BREEZE",
+      "CLIMATE",
+      "FROST",
+      "ISOBAR",
+      "RAINBOW",
+      "THUNDER"
+     ]
+    }
+   ],
+   "hash": "5a46408e19a494c0786c8afa3c6ce0cd659369622c832e60a523f3cd5d109a62",
+   "partials": {},
+   "hints": [
+    "Once every theme word is found, is anything left unclaimed? Read it in order.",
+    "Find the theme words; the letters no word uses, read row by row, are the answer.",
+    "The hidden words are: BREEZE, CLIMATE, FROST, ISOBAR, RAINBOW, THUNDER."
+   ],
+   "length": 11
+  },
+  {
+   "id": 8,
+   "title": "Occluded Front",
+   "flavor": "Everyone has a place. Everyone pays for it in their own name.",
+   "blocks": [
+    {
+     "type": "seating",
+     "seats": 4,
+     "names": [
+      "Mercedes",
+      "Caspian",
+      "Gilbert",
+      "Justine"
+     ],
+     "clues": [
+      "Caspian sits somewhere between Justine and Mercedes.",
+      "Mercedes has an end seat.",
+      "Justine sits immediately to the right of Caspian.",
+      "Gilbert and Justine are not neighbours."
+     ],
+     "logic": [
+      [
+       "between",
+       "JUSTINE",
+       "CASPIAN",
+       "MERCEDES"
+      ],
+      [
+       "end",
+       "MERCEDES"
+      ],
+      [
+       "right_of",
+       "JUSTINE",
+       "CASPIAN"
+      ],
+      [
+       "apart",
+       "GILBERT",
+       "JUSTINE"
+      ]
+     ]
+    }
+   ],
+   "hash": "1e5f85c38816a181a2d0c2c691067f40d01f92b7bdb9c02b6ffb192f1c0347ec",
+   "partials": {},
+   "hints": [
+    "Only one arrangement satisfies every clue; start from whoever has an end seat or a fixed neighbour. Once they're seated, why might the seat numbers matter?",
+    "Solve the seating, then take the k-th letter of the name in seat k, left to right."
+   ],
+   "length": 4
+  },
+  {
+   "id": 9,
+   "title": "Shipping Forecast",
+   "flavor": "Call signs, reflected.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "Yankee",
+      "Zulu",
+      "India",
+      "Lima",
+      "November",
+      "Victor",
+      "Golf",
+      "Victor",
+      "India"
+     ]
+    }
+   ],
+   "hash": "4d1b79b8ac73369da30a31a77526014f966de840d27a342b7e2040eb78a545b1",
+   "partials": {},
+   "hints": [
+    "Each word stands for a letter, the way radio operators spell. Do those letters read? If not, try the alphabet backwards.",
+    "Take the NATO call signs' initials, then swap each letter for its mirror: A for Z, B for Y."
+   ],
+   "length": 9
+  }
+ ],
+ "meta": {
+  "title": "Meta: Isobars",
+  "flavor": "Pigeonholes, each cut to fit one thing only.",
+  "blocks": [
+   {
+    "type": "fitgrid",
+    "rows": [
+     {
+      "len": 11,
+      "shade": 4
+     },
+     {
+      "len": 6,
+      "shade": 3
+     },
+     {
+      "len": 9,
+      "shade": 5
+     },
+     {
+      "len": 7,
+      "shade": 3
+     },
+     {
+      "len": 5,
+      "shade": 0
+     },
+     {
+      "len": 8,
+      "shade": 7
+     },
+     {
+      "len": 10,
+      "shade": 9
+     },
+     {
+      "len": 3,
+      "shade": 1
+     },
+     {
+      "len": 4,
+      "shade": 0
+     }
+    ]
+   }
+  ],
+  "length": 9,
+  "hash": "2a74ef442a61a9123d42a75bca1a83e10efd05bff13f325e48da37bc6f9d0dca",
+  "hints": [
+   "The grid's rows are all different lengths. So are your answers.",
+   "Put each answer in the row its length fits; read the shaded squares top to bottom."
+  ]
+ },
+ "described": true
+}

@@ -1,0 +1,269 @@
+{
+ "date": "2026-11-15",
+ "difficulty": "easy",
+ "salt": "2026-11-15/easy",
+ "number": 50,
+ "round": "Isobars",
+ "intro": "The weather station on the summit has been automated for forty years, and its forecasters now spend their mornings reading printouts and brewing too-strong tea. This morning the printer woke up and produced something that is definitely not a forecast: eight envelopes, each sealed with wax the colour of a different warning flag, each slid into a slit in the oak rack by the door. The rack has no labels, but the slits are not all the same width, and the envelopes fit snugly, each into its own, and nobody has seen the forecaster's own copy taken out twice.",
+ "echo": "Dorothy's house left Kansas in one.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Eye Of The Storm",
+   "flavor": "Find them all. The letters nobody used are the only ones that were talking to you.",
+   "blocks": [
+    {
+     "type": "caption",
+     "text": "Hidden in the grid: 8 words to do with the weather station (lengths 4, 4, 4, 5, 6, 6, 6, 7), running in any direction."
+    },
+    {
+     "type": "board",
+     "rows": [
+      "BDRGUST",
+      "ASOESUH",
+      "LUTZQGA",
+      "LRSEUTI",
+      "OROEASL",
+      "OIRRLIH",
+      "NCFBLMT"
+     ],
+     "plain": true,
+     "words": [
+      "BALLOON",
+      "BREEZE",
+      "CIRRUS",
+      "FROST",
+      "GUST",
+      "HAIL",
+      "MIST",
+      "SQUALL"
+     ]
+    }
+   ],
+   "hash": "0903b530cd99ee2ba126cd56f2b0b95ff4fdb1d9fd2ea5e350f85304996ba4a9",
+   "partials": {},
+   "hints": [
+    "Find every hidden word (any of 8 directions). The unused letters, read left-to-right, top-to-bottom, spell the answer.",
+    "The hidden words are: BALLOON, BREEZE, CIRRUS, FROST, GUST, HAIL, MIST, SQUALL.",
+    "To check you're on track: the answer begins with D."
+   ],
+   "technique": "Word search leftovers",
+   "length": 7
+  },
+  {
+   "id": 2,
+   "title": "Squall Line",
+   "flavor": "Every flag on this line has a meaning on its own. Together, they have one more.",
+   "blocks": [
+    {
+     "type": "flags",
+     "items": [
+      "I",
+      "S",
+      "O",
+      "B",
+      "A",
+      "R"
+     ]
+    }
+   ],
+   "hash": "2ac74de90c7253ddb3a353807f48d334166ef8c5d24600753f3e44c25bd73e30",
+   "partials": {},
+   "hints": [
+    "International maritime signal flags, one letter each.",
+    "To check you're on track: the answer begins with I."
+   ],
+   "technique": "Maritime signal flags",
+   "length": 6
+  },
+  {
+   "id": 3,
+   "title": "Dew Point",
+   "flavor": "Numbers in pairs, pencilled in the margin: a page reference is a very old kind of key.",
+   "blocks": [
+    {
+     "type": "prose",
+     "text": "The weather station on the summit has been automated for forty years. This morning its printer woke up and produced something that is definitely not a forecast.",
+     "paper": true
+    },
+    {
+     "type": "list",
+     "items": [
+      "11.1",
+      "3.6",
+      "14.7"
+     ],
+     "inline": true
+    }
+   ],
+   "hash": "3c42ef7ebfd1f494591162b0bf981f2f04d593b66e8afb38a232cf783b6d429d",
+   "partials": {},
+   "hints": [
+    "Each pair is word.letter into the recovered page (words split on spaces; punctuation ignored).",
+    "To check you're on track: the answer begins with F."
+   ],
+   "technique": "Book cipher",
+   "length": 3
+  },
+  {
+   "id": 4,
+   "title": "Occluded Front",
+   "flavor": "The clerk ran out of alphabet and kept going anyway.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "○◆◇★ ★◆▼ △✈⚑●□▼● △◇●●□▼♦ ○◇♫ ☂✈★ ☁✈▲♦ ✈● ♫▼△●▼★♫ ✚⚑★ ◇ ♫□☂☁▲▼ ○✈●♦ ☁◇▲▼",
+     "wide": true,
+     "solver": "substitution"
+    }
+   ],
+   "hash": "f0fd94e3b1465826f86b1e79352436fa19635b3c84d01714a0b9ae398987741b",
+   "partials": {},
+   "hints": [
+    "Each symbol stands for one letter (a simple substitution); word breaks are kept. Solve the sentence; it tells you the answer.",
+    "To check you're on track: the answer begins with G."
+   ],
+   "technique": "Symbol cryptogram",
+   "length": 4
+  },
+  {
+   "id": 5,
+   "title": "Veering",
+   "flavor": "The labels at the weather station have faded. Each one lost exactly one letter.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "NIM_US",
+      "UMBRE_LA",
+      "HUM_DITY",
+      "DRIZ_LE",
+      "BREE_E",
+      "_NEMOMETER",
+      "F_OST",
+      "_EWPOINT"
+     ],
+     "ordered": true,
+     "mono": true
+    }
+   ],
+   "hash": "cf85494ee3ef02ee264503def32624e07cf9b88ad60867e6ad2c764ffded2de5",
+   "partials": {},
+   "hints": [
+    "Each theme word is missing one letter. The missing letters, in order, spell the answer.",
+    "To check you're on track: the answer begins with B."
+   ],
+   "technique": "Missing letters",
+   "length": 8
+  },
+  {
+   "id": 6,
+   "title": "Rain Shadow",
+   "flavor": "A board full of noise, and one horseman who knows exactly where to step.",
+   "blocks": [
+    {
+     "type": "board",
+     "rows": [
+      "IWBWLUOD",
+      "PPMTNPMF",
+      "DVEGVRKK",
+      "XABTWWOQ",
+      "QKQZXRIA",
+      "QHXIYLYZ",
+      "ICVYAMSP",
+      "KXIYYGVN"
+     ]
+    },
+    {
+     "type": "prose",
+     "text": "The knight sets out from f8: Nh7 Nf6 Ng8 Ne7 Nd5."
+    }
+   ],
+   "hash": "f164a0a8226ac10266e0f4fc7bfe03385e37cb26e20a5be5bc48287e207af85e",
+   "partials": {},
+   "hints": [
+    "Start on the given square and follow the knight moves; read the letter on each square it lands on.",
+    "To check you're on track: the answer begins with F."
+   ],
+   "technique": "Knight's path",
+   "length": 5
+  },
+  {
+   "id": 7,
+   "title": "Beaufort Twelve",
+   "flavor": "Everything at the weather station got thrown in the tumble dryer, and every item came out with a little something extra.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "MJNSUBI",
+      "ETCOASEFR",
+      "TAWKFLOSEN",
+      "QLSLSAU",
+      "TENOTWIPD",
+      "RORABWNI",
+      "ENHUDTER",
+      "ZERBAEE",
+      "TVHEMAWAE"
+     ],
+     "ordered": true,
+     "mono": true
+    }
+   ],
+   "hash": "968706d0d05548798a6b4add99d6d38b72c72193eb546dd2054a589fbf60b76d",
+   "partials": {},
+   "hints": [
+    "Each jumble is an anagram of a word from this round's theme plus one extra letter. The extra letters, in order, spell the answer.",
+    "To check you're on track: the answer begins with J."
+   ],
+   "technique": "Anagrams with an extra letter",
+   "length": 9
+  }
+ ],
+ "meta": {
+  "title": "Meta: Isobars",
+  "flavor": "Everything at the weather station has a place, and every place is exactly the right size.",
+  "blocks": [
+   {
+    "type": "fitgrid",
+    "rows": [
+     {
+      "len": 9,
+      "shade": 2
+     },
+     {
+      "len": 7,
+      "shade": 2
+     },
+     {
+      "len": 6,
+      "shade": 5
+     },
+     {
+      "len": 5,
+      "shade": 3
+     },
+     {
+      "len": 4,
+      "shade": 1
+     },
+     {
+      "len": 8,
+      "shade": 7
+     },
+     {
+      "len": 3,
+      "shade": 1
+     }
+    ]
+   }
+  ],
+  "length": 7,
+  "hash": "1526ae0df397ca937483ecc0e35596746c10fef8e6abd253f5f9748d1670e826",
+  "hints": [
+   "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+   "To check you're on track: the final answer begins with T."
+  ]
+ },
+ "described": true
+}

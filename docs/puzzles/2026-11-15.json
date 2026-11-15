@@ -1,0 +1,577 @@
+{
+ "date": "2026-11-15",
+ "difficulty": "hard",
+ "salt": "2026-11-15",
+ "number": 50,
+ "round": "Isobars",
+ "intro": "The weather station on the summit has been automated for forty years. This morning its printer woke up and produced something that is definitely not a forecast. The forecasters keep their own books beneath the charts, each one bound in oilskin and filled with the day's readings, and in every one the entries are made the same way: a single figure by the margin, then another beside it, no more. The wind has been carrying the smell of wet stone all afternoon, and one of the crew has taken to standing at the window, watching the cloud bank roll in from the sea. He says it reminds him of the old days, when a man could tell the weather by the way the water pooled in the cracks of the flagstones.",
+ "echo": "Prospero raised one to bring his enemies ashore.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Low Pressure",
+   "flavor": "Around the edges first; the point comes last.",
+   "blocks": [
+    {
+     "type": "lettergrid",
+     "rows": [
+      "ALLINTOTHE",
+      "FFORGETTHW",
+      "EEINT···ER",
+      "TSO·····WO",
+      "OAPWEDDRON",
+      "NELPSDNAHG",
+      "SIHTDLUOHS"
+     ]
+    }
+   ],
+   "hash": "19b24cdc2fb8afbe45d81539a3f7238e495b9e7b2357dbb4d15df17c829c6fd7",
+   "partials": {},
+   "hints": [
+    "All the letters of a sentence are here, but not in rows. Try walking the grid the way a snail would."
+   ]
+  },
+  {
+   "id": 2,
+   "title": "Rain Shadow",
+   "flavor": "One table, one arrangement that offends nobody, and a toll that rises seat by seat.",
+   "blocks": [
+    {
+     "type": "seating",
+     "seats": 5,
+     "names": [
+      "Ophelia",
+      "Samuel",
+      "Jonathan",
+      "Eloise",
+      "Eleanor"
+     ],
+     "clues": [
+      "Exactly 2 people sit between Ophelia and Samuel.",
+      "Jonathan has an end seat.",
+      "Exactly one person sits between Eloise and Ophelia.",
+      "Jonathan sits immediately to the right of Ophelia."
+     ],
+     "logic": [
+      [
+       "gap",
+       "OPHELIA",
+       "SAMUEL",
+       2
+      ],
+      [
+       "end",
+       "JONATHAN"
+      ],
+      [
+       "gap",
+       "ELOISE",
+       "OPHELIA",
+       1
+      ],
+      [
+       "right_of",
+       "JONATHAN",
+       "OPHELIA"
+      ]
+     ]
+    }
+   ],
+   "hash": "ed3946d6467dcd174ca37cf5761cb4ce7b53be9204be86c15ce3875282445b04",
+   "partials": {},
+   "hints": [
+    "Only one arrangement satisfies every clue; start from whoever has an end seat or a fixed neighbour. Once they're seated, why might the seat numbers matter?"
+   ]
+  },
+  {
+   "id": 3,
+   "title": "Eye Of The Storm",
+   "flavor": "The sprocket keeps count; the holes do the talking.",
+   "blocks": [
+    {
+     "type": "tape",
+     "rows": [
+      [
+       1,
+       0,
+       0,
+       0,
+       0,
+       0,
+       1
+      ],
+      [
+       1,
+       0,
+       0,
+       1,
+       1,
+       1,
+       0
+      ],
+      [
+       1,
+       0,
+       0,
+       0,
+       1,
+       0,
+       1
+      ],
+      [
+       1,
+       0,
+       0,
+       1,
+       1,
+       0,
+       1
+      ],
+      [
+       1,
+       0,
+       0,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       0,
+       0,
+       1,
+       1,
+       0,
+       1
+      ],
+      [
+       1,
+       0,
+       0,
+       0,
+       1,
+       0,
+       1
+      ],
+      [
+       1,
+       0,
+       1,
+       0,
+       1,
+       0,
+       0
+      ],
+      [
+       1,
+       0,
+       0,
+       0,
+       1,
+       0,
+       1
+      ],
+      [
+       1,
+       0,
+       1,
+       0,
+       0,
+       1,
+       0
+      ]
+     ]
+    }
+   ],
+   "hash": "9f0f59e4d530ebc63c2275cb3c0c50d6aea02f8184bd0dd63e736bd0b58ab2e9",
+   "partials": {},
+   "hints": [
+    "Seven positions a row, each punched or not. What were seven bits once enough for?"
+   ]
+  },
+  {
+   "id": 4,
+   "title": "Shipping Forecast",
+   "flavor": "Some squares have been given to you for free. Whatever you find, it was said on the way out, not the way in.",
+   "blocks": [
+    {
+     "type": "nonogram",
+     "rows": [
+      [
+       4,
+       5,
+       5,
+       5,
+       1,
+       1,
+       3,
+       1,
+       1,
+       4,
+       5,
+       1,
+       1,
+       5
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       2,
+       2,
+       1,
+       1,
+       2,
+       2,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       4,
+       4,
+       1,
+       4,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       4,
+       4,
+       5,
+       1
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       5,
+       1,
+       5,
+       1,
+       1,
+       3,
+       1,
+       1,
+       1,
+       1,
+       5,
+       1,
+       1,
+       1
+      ]
+     ],
+     "cols": [
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       5
+      ],
+      [],
+      [
+       3
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       3
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       5
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       5
+      ],
+      [],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ],
+     "givens": [
+      [
+       1,
+       31,
+       0
+      ],
+      [
+       4,
+       34,
+       0
+      ]
+     ]
+    }
+   ],
+   "hash": "73726956480fb3882d1c38e0c6a316a08bd0e0324ffe0506c7dcc7c30ec04e4d",
+   "partials": {
+    "76ef80169008499fc99c94bb9a4eba8331e8aa0e1019bc621f4549b844c672c3": "You've decoded it, but it's not finished. One more layer."
+   },
+   "hints": [
+    "The numbers describe runs of filled squares. What picture could they be drawing? And if what you get still isn't a word, reread the flavour text."
+   ]
+  },
+  {
+   "id": 5,
+   "title": "Wind Chill",
+   "flavor": "Count everything. Then count again, differently. Whatever you find, it was said on the way out, not the way in.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "Faces on an icosahedron",
+      "Arms on an octopus",
+      "Continents on a standard world map",
+      "Spots on a standard die, all faces added up",
+      "Red balls racked at the start of a snooker frame",
+      "Holes on a full golf course",
+      "Suits in a deck of cards"
+     ],
+     "ordered": true,
+     "tray": "letter"
+    }
+   ],
+   "hash": "725b556fb521a43d2693f531e76ec36d5fc8a6c4ee0581229cf7d493b29e53a8",
+   "partials": {
+    "ad3334b5606f1afbe4916b9a9bdcb4c43ae5cb1fb9d8f490f29f12a4aed4dbfa": "You've decoded it, but it's not finished. One more layer."
+   },
+   "hints": [
+    "Every line has a number for an answer. Could those numbers be counting through something else? And if what you get still isn't a word, reread the flavour text."
+   ]
+  }
+ ],
+ "meta": {
+  "title": "Meta: Isobars",
+  "flavor": "The porter only ever noted where each passenger boarded.",
+  "blocks": [
+   {
+    "type": "list",
+    "items": [
+     "Platform 5, car 7",
+     "Platform 4, car 3",
+     "Platform 3, car 4",
+     "Platform 1, car 4",
+     "Platform 4, car 3",
+     "Platform 2, car 1",
+     "Platform 2, car 5"
+    ],
+    "ordered": true
+   }
+  ],
+  "length": 7,
+  "hash": "e1aff629ebdac160baca02e87fc13162e6fe421a85e3fd80b20e08fa2b56c518",
+  "hints": [
+   "Every entry has two numbers. What in this round is numbered, and what could the second number count?"
+  ]
+ },
+ "described": true
+}
