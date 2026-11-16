@@ -1,0 +1,73 @@
+{
+ "date": "2026-11-15",
+ "number": 50,
+ "difficulty": "easy",
+ "final": "TORNADO",
+ "metaType": "fitin",
+ "explain": "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Eye Of The Storm",
+   "answer": "DROUGHT",
+   "mechanism": "Word search leftovers",
+   "transform": null,
+   "encoded": "DROUGHT",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Squall Line",
+   "answer": "ISOBAR",
+   "mechanism": "Maritime signal flags",
+   "transform": null,
+   "encoded": "ISOBAR",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Dew Point",
+   "answer": "FOG",
+   "mechanism": "Book cipher",
+   "transform": null,
+   "encoded": "FOG",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Occluded Front",
+   "answer": "GALE",
+   "mechanism": "Symbol cryptogram",
+   "transform": null,
+   "encoded": "GALE",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Veering",
+   "answer": "BLIZZARD",
+   "mechanism": "Missing letters",
+   "transform": null,
+   "encoded": "BLIZZARD",
+   "mutated": null
+  },
+  {
+   "id": 6,
+   "title": "Rain Shadow",
+   "answer": "FRONT",
+   "mechanism": "Knight's path",
+   "transform": null,
+   "encoded": "FRONT",
+   "mutated": null
+  },
+  {
+   "id": 7,
+   "title": "Beaufort Twelve",
+   "answer": "JETSTREAM",
+   "mechanism": "Anagrams with an extra letter",
+   "transform": null,
+   "encoded": "JETSTREAM",
+   "mutated": null
+  }
+ ]
+}

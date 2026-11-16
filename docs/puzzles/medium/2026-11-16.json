@@ -1,0 +1,348 @@
+{
+ "date": "2026-11-16",
+ "difficulty": "medium",
+ "salt": "2026-11-16/medium",
+ "number": 51,
+ "round": "Cold Storage, Freezer B",
+ "intro": "Someone left the minus-eighty open overnight, and the cold room off the sequencing lab smells of condensation and broken buffer. Half the samples are ruined; the other half have started talking, in low, argumentative voices, and none of them agree on how the evening went. The postdocs have given up trying to sequence them and are sorting the survivors into the old wooden pigeonhole cabinet by the door, where every compartment is a different length and each tube fits only one. They keep catching themselves reaching for the same hole twice, and the cabinet never lets them. The postdocs have started recording which tube goes where in a ledger, in careful ink, though the talking samples rearrange themselves overnight.",
+ "echo": "What the code says is one thing; what walks out of the incubator is another.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Wild Type",
+   "flavor": "A parts list read aloud by someone who only knew the stripes. Unlucky for some: the letters were all nudged by the same unlucky amount.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "brown–blue",
+      "brown–red",
+      "black–violet",
+      "black–red",
+      "black–orange",
+      "red–green",
+      "brown–yellow",
+      "black–blue",
+      "red–blue"
+     ]
+    }
+   ],
+   "hash": "a0ddf77b941d1c4890f7bc02e028c3af3ec963f717255f2165cf1caaf25bbb00",
+   "partials": {
+    "36cb05bfd3dd7f3f6b0da0093f5254f9f6beae88f4ad4ff749ea193db1b8ae1e": "You've decoded it, but it's not finished. One more layer."
+   },
+   "hints": [
+    "Engineers read stripes like these as numbers. What number does each part give, and what is a number up to 26? And if what you get still isn't a word, reread the flavour text.",
+    "Resistor colour code: the first two bands are two digits; that number is a letter position. Then one more layer: Shift every letter 13 places (A↔N)."
+   ],
+   "length": 9
+  },
+  {
+   "id": 2,
+   "title": "Central Dogma",
+   "flavor": "A voicemail with no voice.",
+   "blocks": [
+    {
+     "type": "audio",
+     "kind": "dtmf",
+     "groups": [
+      "7",
+      "666",
+      "555",
+      "999",
+      "6",
+      "33",
+      "777",
+      "2",
+      "7777",
+      "33"
+     ]
+    }
+   ],
+   "hash": "990b33e8b11f040cbc97b55def17e4be3ce767cb5d1470c6cb4841b961c10b27",
+   "partials": {},
+   "hints": [
+    "Two frequencies at once is the sound of a phone key being pressed. What letters did those keys carry?",
+    "Old phone keypads: find each key, then press it the number of times shown to move along its letters."
+   ],
+   "length": 10
+  },
+  {
+   "id": 3,
+   "title": "Reading Frame",
+   "flavor": "Two forward, one across.",
+   "blocks": [
+    {
+     "type": "board",
+     "rows": [
+      "DIROUIHD",
+      "CZTNCPTB",
+      "AKWTMEYY",
+      "NYGKEKYJ",
+      "MSCINKYB",
+      "RGQEUHQQ",
+      "FKZXMDAF",
+      "LTPHTJKE"
+     ]
+    },
+    {
+     "type": "prose",
+     "text": "The knight sets out from g2: Ne1 Nf3 Ng5 Ne6 Nf8 Nd7 Ne5."
+    }
+   ],
+   "hash": "fef5b47cce0005cc4fb2036b76b9ede01b955d06f0e1499430597930869bad95",
+   "partials": {},
+   "hints": [
+    "Those are chess moves. Which squares does the piece land on, and what's written there?",
+    "Start on the given square, play each move, and read the letter on every square it lands on."
+   ],
+   "length": 7
+  },
+  {
+   "id": 4,
+   "title": "Knockout",
+   "flavor": "Around the edges first; the point comes last.",
+   "blocks": [
+    {
+     "type": "lettergrid",
+     "rows": [
+      "GOTENOYNA",
+      "EJSIEZIRD",
+      "TUNOXEDPE",
+      "TS····RET",
+      "HTONEWOHC",
+      "ISFARSOTE",
+      "NOBODYEXP"
+     ]
+    }
+   ],
+   "hash": "1c8ac5b15ab62efaa636c90b8f9ec2f2971630ff3dc893e939f2dfac849b10dc",
+   "partials": {},
+   "hints": [
+    "All the letters of a sentence are here, but not in rows. Try walking the grid the way a snail would.",
+    "Start in one corner and spiral inward along the edges; one corner and one direction read as a sentence."
+   ],
+   "length": 4
+  },
+  {
+   "id": 5,
+   "title": "Primer Dimer",
+   "flavor": "A shopping list for a very small, very specific chemist.",
+   "blocks": [
+    {
+     "type": "numbers",
+     "items": [
+      75,
+      15,
+      3,
+      20,
+      22,
+      8,
+      7
+     ],
+     "tray": 2
+    }
+   ],
+   "hash": "8b9b5bb2dd62ed6ebf4bd84abc2e4e781bc1c4356c3a2c47b09106b68432a408",
+   "partials": {},
+   "hints": [
+    "Several of these numbers are bigger than 26, so they can't be letter positions. What else has a number that high?",
+    "Atomic numbers: write each element's symbol and run the symbols together into one word."
+   ],
+   "length": 11
+  },
+  {
+   "id": 6,
+   "title": "Point Mutation",
+   "flavor": "Fill the gaps.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "_ISTONE",
+      "PROMOT_R",
+      "_IGASE",
+      "URAC_L",
+      "SEQUEN_E",
+      "BACTERI_",
+      "VIRU_",
+      "ADENIN_"
+     ],
+     "ordered": true,
+     "mono": true
+    }
+   ],
+   "hash": "10d0d92b697a4737a147fe32236c999b99c5ddc9a800c39e7469b81a69fa08fb",
+   "partials": {},
+   "hints": [
+    "Every gap takes exactly one letter. Is there a pattern in what you filled in?",
+    "Read the letters you supplied, in order."
+   ],
+   "length": 8
+  },
+  {
+   "id": 7,
+   "title": "Backup Copy",
+   "flavor": "Everyone has a place. Everyone pays for it in their own name.",
+   "blocks": [
+    {
+     "type": "seating",
+     "seats": 5,
+     "names": [
+      "Catherine",
+      "Claudia",
+      "Imogen",
+      "Evangeline",
+      "Daniel"
+     ],
+     "clues": [
+      "Daniel has seat 5.",
+      "Exactly one person sits between Claudia and Evangeline.",
+      "Evangeline sits somewhere between Daniel and Imogen.",
+      "Imogen sits somewhere between Catherine and Evangeline."
+     ],
+     "logic": [
+      [
+       "at",
+       "DANIEL",
+       5
+      ],
+      [
+       "gap",
+       "CLAUDIA",
+       "EVANGELINE",
+       1
+      ],
+      [
+       "between",
+       "DANIEL",
+       "EVANGELINE",
+       "IMOGEN"
+      ],
+      [
+       "between",
+       "CATHERINE",
+       "IMOGEN",
+       "EVANGELINE"
+      ]
+     ]
+    }
+   ],
+   "hash": "d13b5f5420e95ac335b179f2ddd6c625e45c818aed1a3174bb9a5ee748f7dc7b",
+   "partials": {},
+   "hints": [
+    "Only one arrangement satisfies every clue; start from whoever has an end seat or a fixed neighbour. Once they're seated, why might the seat numbers matter?",
+    "Solve the seating, then take the k-th letter of the name in seat k, left to right."
+   ],
+   "length": 5
+  },
+  {
+   "id": 8,
+   "title": "Stop Codon",
+   "flavor": "Pairs of numbers pencilled in the margin.",
+   "blocks": [
+    {
+     "type": "prose",
+     "text": "Someone left the minus-eighty open overnight. Half the samples are ruined; the other half have started talking.",
+     "paper": true
+    },
+    {
+     "type": "list",
+     "items": [
+      "17.5",
+      "1.6",
+      "12.1",
+      "6.4",
+      "5.1",
+      "11.4"
+     ],
+     "inline": true
+    }
+   ],
+   "hash": "4eb3f6625194c3b8d4db5f12b2e462a6f6444712b463c05b726521ae8ee82955",
+   "partials": {},
+   "hints": [
+    "The first number in each pair never goes past the number of words on the page. What does the second count?",
+    "The first number finds a word on the page; the second finds a letter in it."
+   ],
+   "length": 6
+  },
+  {
+   "id": 9,
+   "title": "Gel Electrophoresis",
+   "flavor": "A paint chart for a room nobody will ever decorate.",
+   "blocks": [
+    {
+     "type": "swatches",
+     "items": [
+      "#4D4954",
+      "#4F4348",
+      "#4F4E44",
+      "#524941"
+     ]
+    }
+   ],
+   "hash": "c36f89ed977f22803b55405941fab58c9eae802748331f45f2c9b16cd3f1bd91",
+   "partials": {},
+   "hints": [
+    "Split each colour code into three pairs of hex digits. What else is a two-digit hex number?",
+    "Each pair of hex digits is an ASCII code: three characters per colour."
+   ],
+   "length": 12
+  }
+ ],
+ "meta": {
+  "title": "Meta: Cold Storage, Freezer B",
+  "flavor": "Pigeonholes, each cut to fit one thing only.",
+  "blocks": [
+   {
+    "type": "fitgrid",
+    "rows": [
+     {
+      "len": 10,
+      "shade": 0
+     },
+     {
+      "len": 8,
+      "shade": 0
+     },
+     {
+      "len": 7,
+      "shade": 6
+     },
+     {
+      "len": 5,
+      "shade": 3
+     },
+     {
+      "len": 6,
+      "shade": 4
+     },
+     {
+      "len": 12,
+      "shade": 2
+     },
+     {
+      "len": 9,
+      "shade": 1
+     },
+     {
+      "len": 11,
+      "shade": 2
+     },
+     {
+      "len": 4,
+      "shade": 0
+     }
+    ]
+   }
+  ],
+  "length": 9,
+  "hash": "7c68ebc8324e386c6606cf9cc61854cff8ceb75e9a754571bd5c082804971eab",
+  "hints": [
+   "The grid's rows are all different lengths. So are your answers.",
+   "Put each answer in the row its length fits; read the shaded squares top to bottom."
+  ]
+ },
+ "described": true
+}

@@ -1,0 +1,91 @@
+{
+ "date": "2026-11-15",
+ "number": 50,
+ "difficulty": "medium",
+ "final": "MAELSTROM",
+ "metaType": "fitin",
+ "explain": "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Low Pressure",
+   "answer": "SLEET",
+   "mechanism": "Phone multi-tap",
+   "transform": null,
+   "encoded": "SLEET",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Wind Chill",
+   "answer": "SQUALL",
+   "mechanism": "Nonogram",
+   "transform": null,
+   "encoded": "SQUALL",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Inversion",
+   "answer": "BALLOON",
+   "mechanism": "Letter sudoku",
+   "transform": null,
+   "encoded": "BALLOON",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Anvil Cloud",
+   "answer": "ANEMOMETER",
+   "mechanism": "Morse code (audio)",
+   "transform": null,
+   "encoded": "ANEMOMETER",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Dew Point",
+   "answer": "FOG",
+   "mechanism": "Pigpen cipher",
+   "transform": null,
+   "encoded": "FOG",
+   "mutated": null
+  },
+  {
+   "id": 6,
+   "title": "Squall Line",
+   "answer": "DEWPOINT",
+   "mechanism": "Anagrams with an extra letter",
+   "transform": null,
+   "encoded": "DEWPOINT",
+   "mutated": null
+  },
+  {
+   "id": 7,
+   "title": "Veering",
+   "answer": "THERMOMETER",
+   "mechanism": "Word search leftovers",
+   "transform": null,
+   "encoded": "THERMOMETER",
+   "mutated": null
+  },
+  {
+   "id": 8,
+   "title": "Occluded Front",
+   "answer": "MIST",
+   "mechanism": "Seating plan (logic)",
+   "transform": null,
+   "encoded": "MIST",
+   "mutated": null
+  },
+  {
+   "id": 9,
+   "title": "Shipping Forecast",
+   "answer": "BAROMETER",
+   "mechanism": "Mirrored NATO",
+   "transform": null,
+   "encoded": "BAROMETER",
+   "mutated": null
+  }
+ ]
+}

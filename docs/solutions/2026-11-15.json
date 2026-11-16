@@ -1,0 +1,55 @@
+{
+ "date": "2026-11-15",
+ "number": 50,
+ "difficulty": "hard",
+ "final": "TEMPEST",
+ "metaType": "logbook",
+ "explain": "Each entry is (puzzle number, letter number): index into that puzzle's answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Low Pressure",
+   "answer": "DEWPOINT",
+   "mechanism": "Spiral route",
+   "transform": null,
+   "encoded": "DEWPOINT",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Rain Shadow",
+   "answer": "SLEET",
+   "mechanism": "Seating plan (logic)",
+   "transform": null,
+   "encoded": "SLEET",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Eye Of The Storm",
+   "answer": "ANEMOMETER",
+   "mechanism": "Punched tape",
+   "transform": null,
+   "encoded": "ANEMOMETER",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Shipping Forecast",
+   "answer": "THERMOMETER",
+   "mechanism": "Nonogram",
+   "transform": "Reversal",
+   "encoded": "RETEMOMREHT",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Wind Chill",
+   "answer": "DROUGHT",
+   "mechanism": "Number trivia",
+   "transform": "Reversal",
+   "encoded": "THGUORD",
+   "mutated": null
+  }
+ ]
+}

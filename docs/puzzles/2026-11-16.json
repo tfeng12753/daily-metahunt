@@ -1,0 +1,225 @@
+{
+ "date": "2026-11-16",
+ "difficulty": "hard",
+ "salt": "2026-11-16",
+ "number": 51,
+ "round": "Cold Storage, Freezer B",
+ "intro": "The minus-eighty door to Freezer B was standing open at dawn, and by breakfast the thaw had sorted the sequencing lab's samples into the ruined and the conversational. Postdocs in fleece jackets are crouched by the racks, listening to faint complaints that sound like bad data recited backwards, while one of them photographs the frost pattern on the inside handle as evidence. On the bench stands the old chest that holds the spare keys, its lid fitted with a ring of hasps that each postdoc can pull shut only after marking the padlock tag with a single downstroke at the top of their name, though the key inside has not been turned since last night. The hasps are still up, and the corridor lights are humming their usual flat note. Nobody has decided whether the voices are contamination or just the freezer warming up, and the apology email remains unsent.",
+ "echo": "Every one of us differs from our parents in about sixty places. Some of us rather more.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Primer Dimer",
+   "flavor": "One horseman, and a field full of noise.",
+   "blocks": [
+    {
+     "type": "board",
+     "rows": [
+      "EDJMCICZ",
+      "VEVNRKPU",
+      "WABMXTAU",
+      "JBMFNXKI",
+      "DKNCNNLG",
+      "KPZLLGFK",
+      "HCIGEYVY",
+      "XMANXDTQ"
+     ]
+    },
+    {
+     "type": "prose",
+     "text": "The knight sets out from a4: Nc5 Nb7 Nd8 Nc6 Ne7 Ng6 Nf4 Ne2."
+    }
+   ],
+   "hash": "de01c448d366605aa0b6a3267e08891a8afb38db3b513fe60c91c6992f4f20ed",
+   "partials": {},
+   "hints": [
+    "Those are chess moves. Which squares does the piece land on, and what's written there?"
+   ]
+  },
+  {
+   "id": 2,
+   "title": "Wild Type",
+   "flavor": "Nothing is missing. Nothing is where it was.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "NTEX",
+      "QULIETY",
+      "MYA",
+      "ODRW",
+      "NEO",
+      "CEUFRTNGEI",
+      "HET",
+      "LWEL",
+      "NAD",
+      "NEDO",
+      "WNOD",
+      "NO",
+      "NWO",
+      "OT",
+      "ERIWT",
+      "OVEM",
+      "YUO",
+      "EHT"
+     ],
+     "inline": true,
+     "tray": "word"
+    }
+   ],
+   "hash": "c0e45e91a29a5fc97c3ca1c57dd072d002e66a7762edb0a92c590cd901bb180d",
+   "partials": {},
+   "hints": [
+    "Each word is complete but shuffled. Start with the shortest ones: does a sentence appear?"
+   ]
+  },
+  {
+   "id": 3,
+   "title": "Point Mutation",
+   "flavor": "Everything came out of the wash with a little something extra.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "EZHCIEASL",
+      "YEIPPTET",
+      "UCSENEQEG",
+      "OYOMSOLES",
+      "NAITNEDE",
+      "TEOERRPMO"
+     ],
+     "ordered": true,
+     "mono": true
+    }
+   ],
+   "hash": "05c2175a77d0064e168cf60421d40183a65117cf9b28c0a38f966b071a194885",
+   "partials": {},
+   "hints": [
+    "Each jumble is almost a word from this round, but with a letter to spare. Which letter, every time?"
+   ]
+  },
+  {
+   "id": 4,
+   "title": "Open Reading",
+   "flavor": "Every word ran into itself. The little numbers know where to look.",
+   "blocks": [
+    {
+     "type": "morselines",
+     "items": [
+      {
+       "code": ".--..-.---------..-.",
+       "len": 8,
+       "index": 1
+      },
+      {
+       "code": "-...--.-..-.....-...",
+       "len": 7,
+       "index": 4
+      },
+      {
+       "code": "-....--.-.-..-....-",
+       "len": 8,
+       "index": 8
+      },
+      {
+       "code": "--...---........",
+       "len": 7,
+       "index": 5
+      },
+      {
+       "code": "-..-..-----..-..",
+       "len": 8,
+       "index": 5
+      },
+      {
+       "code": "-.-.-.------.....-..",
+       "len": 8,
+       "index": 6
+      },
+      {
+       "code": ".--..-.-...-...........",
+       "len": 9,
+       "index": 6
+      }
+     ]
+    }
+   ],
+   "hash": "7b447b236a6ec66a3fe4c7944adf4fe7498ac4c00304b0291fc6fcbc61351dd7",
+   "partials": {},
+   "hints": [
+    "Two symbols, no spaces, and a letter count. Which old code is it, and which word from this round fits each line?"
+   ]
+  },
+  {
+   "id": 5,
+   "title": "Central Dogma",
+   "flavor": "Static, then something that isn't static.",
+   "blocks": [
+    {
+     "type": "audio",
+     "kind": "morse",
+     "groups": [
+      "--",
+      "..",
+      "-.-.",
+      ".-.",
+      "---",
+      "...",
+      "-.-.",
+      "---",
+      ".--.",
+      "."
+     ]
+    }
+   ],
+   "hash": "31199f450185779264c278671fe343e2a08521e0fb7b92eed9d834ae04c7ed49",
+   "partials": {},
+   "hints": [
+    "Only two kinds of mark, in groups of one to four. Which old alphabet is built from exactly that?"
+   ]
+  },
+  {
+   "id": 6,
+   "title": "Backup Copy",
+   "flavor": "A parts list read aloud by someone who only knew the stripes. Whatever you find, it was said on the way out, not the way in.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "black–green",
+      "black–yellow",
+      "black–white",
+      "red–black",
+      "brown–blue",
+      "black–green",
+      "brown–blue"
+     ]
+    }
+   ],
+   "hash": "1baed372d68a709bfc73282385301a70fb1ab8f24ff71ab62fc32dc5bbf4fd03",
+   "partials": {
+    "7dff9c7f31a1248a861fcf2bd35e92cf23374c101684f50357df24bbafdfa152": "You've decoded it, but it's not finished. One more layer."
+   },
+   "hints": [
+    "Engineers read stripes like these as numbers. What number does each part give, and what is a number up to 26? And if what you get still isn't a word, reread the flavour text."
+   ]
+  }
+ ],
+ "meta": {
+  "title": "Meta: Cold Storage, Freezer B",
+  "flavor": "The last lock takes every signature at once.",
+  "blocks": [
+   {
+    "type": "mono",
+    "text": "YWSPZI",
+    "big": true
+   }
+  ],
+  "length": 6,
+  "hash": "dee57412fcf23ca98dff4b65ffc5c8ba1c3f57f631d59725126d248b0203f7d8",
+  "hints": [
+   "Blaise de Vigenère needed a key to open this. Has every answer signed its work?"
+  ]
+ },
+ "described": true
+}
