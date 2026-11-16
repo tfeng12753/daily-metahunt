@@ -4,7 +4,7 @@
  "salt": "2026-11-16/easy",
  "number": 51,
  "round": "Cold Storage, Freezer B",
- "intro": "Someone left the minus-eighty open overnight. Half the samples are ruined; the other half have started talking.",
+ "intro": "Someone left minus-eighty open overnight, and by morning the cold room in Freezer B smelled of warm plastic and thawing glycerol: half the tubes were dead, while the survivors had begun talking in thin, pipette-corked voices. The postdocs have stopped trying to silence them and instead made Mara the archivist, because she files every answer sheet by the big heading at its top, the way the old card catalogues in the corridor stand in strict title order. When a sheet misbehaves she does not flip to the middle or the end; she walks the row from the first heading onward and lets each sheet give up a single letter, calm and unhurried, as if the library itself were reading the damaged collection back to health. The ruined half lies in a bucket for the autoclave; the talking half waits in a line, already sorted, already quiet enough to be heard one letter at a time.",
  "echo": "A few of the mice in cage four are two animals at once, and perfectly happy about it.",
  "puzzles": [
   {
@@ -271,5 +271,6 @@
    "Order the puzzles alphabetically by title; take the k-th letter of the k-th answer.",
    "To check you're on track: the final answer begins with C."
   ]
- }
+ },
+ "described": true
 }
