@@ -1,0 +1,518 @@
+{
+ "date": "2026-11-17",
+ "difficulty": "easy",
+ "salt": "2026-11-17/easy",
+ "number": 52,
+ "round": "The Glasshouse",
+ "intro": "Every plant in the botanic garden's glasshouse bloomed on the same night, and the labels in the pots had all been rewritten in the head gardener's careful hand. She keeps a mahogany label box whose pigeonholes are cut to different lengths, and she has already made clear that each new tag belongs in the one hole that fits it exactly, like a wedge in a gap. The keepers work in silence, dropping the damp tags in one by one; a tag forced into a longer hole slides about, while the right hole holds it still. In the shadowed lip beneath every hole, letters have been brushed in lampblack, and these hidden strokes only stop looking like scratches once each tag is home. The box is not for storage, she says, but for reading the garden after dark.",
+ "echo": "The Victorians sent collectors to die in jungles for a single rare bloom.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Cross-Pollination",
+   "flavor": "Every letter here is wearing someone else's coat. The spaces, at least, are honest.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "CQPO VRWJHO IQO FGKW ZPBBNH KW MQDZQWF XPF AQ RQF FHNN FGH QFGHOW GQJ CQP EQF KF",
+     "wide": true,
+     "solver": "substitution"
+    }
+   ],
+   "hash": "6d01187ea79e4b7e55359d74996e0022d6486b8246b421bcbc58cc0cbe91a9b6",
+   "partials": {},
+   "hints": [
+    "Simple monoalphabetic substitution with word breaks kept. Solve the sentence; it tells you the answer.",
+    "To check you're on track: the answer begins with C."
+   ],
+   "technique": "Cryptogram (cluephrase)",
+   "length": 7
+  },
+  {
+   "id": 2,
+   "title": "Taproot",
+   "flavor": "All the right letters, all in the right words, none in the right places.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "TEH",
+      "ESMGESA",
+      "ASW",
+      "HDIDNE",
+      "NI",
+      "LNIAP",
+      "SHGIT",
+      "LLA",
+      "ONLAG",
+      "NAD",
+      "TI",
+      "LSMPIY",
+      "YASS",
+      "CULCUSENT"
+     ],
+     "inline": true,
+     "tray": "word"
+    }
+   ],
+   "hash": "d715f848cf03611b4df957a89842b0f613bc6995e95327df44afd04a1e6380eb",
+   "partials": {},
+   "hints": [
+    "Each word of a sentence has had its letters shuffled. Unscramble them; the sentence tells you the answer.",
+    "To check you're on track: the answer begins with S."
+   ],
+   "technique": "Scrambled sentence",
+   "length": 9
+  },
+  {
+   "id": 3,
+   "title": "Night Bloom",
+   "flavor": "Fill in the blanks, literally. Some squares have been given to you for free.",
+   "blocks": [
+    {
+     "type": "nonogram",
+     "rows": [
+      [
+       1,
+       3,
+       1,
+       1,
+       5,
+       1,
+       1,
+       4,
+       5,
+       4
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       2,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       5,
+       1,
+       1,
+       4,
+       1,
+       1,
+       1,
+       1,
+       1,
+       4,
+       4
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       2,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       5,
+       1,
+       1,
+       1,
+       5,
+       1,
+       1,
+       4,
+       5,
+       1,
+       1
+      ]
+     ],
+     "cols": [
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [],
+      [
+       4
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       4
+      ],
+      [],
+      [
+       3
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       3
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       5
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       3
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "givens": [
+      [
+       4,
+       10,
+       1
+      ],
+      [
+       1,
+       12,
+       1
+      ],
+      [
+       0,
+       12,
+       1
+      ],
+      [
+       1,
+       15,
+       0
+      ],
+      [
+       4,
+       16,
+       0
+      ],
+      [
+       0,
+       14,
+       0
+      ],
+      [
+       3,
+       13,
+       1
+      ],
+      [
+       3,
+       16,
+       0
+      ]
+     ]
+    }
+   ],
+   "hash": "0fe1608de56e2b5aa5a77494fe7b8fd55353a3d159b8054ab6637cd99e65e003",
+   "partials": {},
+   "hints": [
+    "A nonogram (paint-by-numbers). The filled picture is the answer written in 5×5 block letters.",
+    "To check you're on track: the answer begins with L."
+   ],
+   "technique": "Nonogram",
+   "length": 8
+  },
+  {
+   "id": 4,
+   "title": "Photoperiod",
+   "flavor": "Arms out, arms up, arms down: a dance with no music.",
+   "blocks": [
+    {
+     "type": "semaphore",
+     "items": [
+      [
+       7,
+       5
+      ],
+      [
+       3,
+       0
+      ],
+      [
+       7,
+       2
+      ]
+     ]
+    }
+   ],
+   "hash": "669db8117b325a91b18a71d77fac058e4bae92efd031e85bb4418e1bb8391940",
+   "partials": {},
+   "hints": [
+    "Flag semaphore: read each figure's arm positions.",
+    "To check you're on track: the answer begins with I."
+   ],
+   "technique": "Semaphore (figures)",
+   "length": 3
+  },
+  {
+   "id": 5,
+   "title": "Latin Names",
+   "flavor": "Confetti, sorted alphabetically by a very tidy intern. Put it back together.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "AYN",
+      "CHL",
+      "EDO",
+      "ETL",
+      "EXT",
+      "HEN",
+      "HEW",
+      "LDO",
+      "LLA",
+      "NDM",
+      "NEY",
+      "ONE",
+      "ORD",
+      "ORO",
+      "OUM",
+      "OVE",
+      "OWW",
+      "PHY",
+      "QUI",
+      "RIT",
+      "TOT",
+      "WEL",
+      "WNT",
+      "YON"
+     ],
+     "inline": true,
+     "tiles": true
+    },
+    {
+     "type": "prose",
+     "text": "Word lengths: (4 4 3 3 3 5 4 3 4 11 3 4 7 2 2 3 4 3)"
+    }
+   ],
+   "hash": "8047b970725ed4c7bc7834b331a4da2f053fc7e792068ccb9d494b3c82dbe9f9",
+   "partials": {},
+   "hints": [
+    "The sentence was cut into three-letter fragments (spaces removed) and alphabetised. Reassemble it using the word lengths; it tells you the answer.",
+    "To check you're on track: the answer begins with C."
+   ],
+   "technique": "Shredded sentence",
+   "length": 11
+  },
+  {
+   "id": 6,
+   "title": "Hardening Off",
+   "flavor": "Each column remembers what it held, but not in what order.",
+   "blocks": [
+    {
+     "type": "dropquote",
+     "cols": [
+      "DNRTTU",
+      "EHOS",
+      "ABEETT",
+      "HNNO",
+      "DHIOPY",
+      "NOORSY",
+      "EINU",
+      "EEFSZ",
+      "AEEWX",
+      "OPRT",
+      "EIOR",
+      "CDSS",
+      "GOT",
+      "EEGJ"
+     ],
+     "mask": [
+      "......#.......",
+      ".#......#..#..",
+      ".#....#...#..#",
+      "...#.....#..#.",
+      "...#...#....#.",
+      ".........#####"
+     ]
+    }
+   ],
+   "hash": "5e204cbddeeee674395f42e67d989c1c01011e6a4fde8c162f9b1cf152b8d384",
+   "partials": {},
+   "hints": [
+    "A drop quote: each column's letters (shown alphabetised above it) drop into that column of the grid below. Black squares are spaces; words can wrap between rows. The sentence tells you the answer.",
+    "To check you're on track: the answer begins with G."
+   ],
+   "technique": "Drop quote",
+   "length": 10
+  }
+ ],
+ "meta": {
+  "title": "Meta: The Glasshouse",
+  "flavor": "Everything in the glasshouse has a place, and every place is exactly the right size.",
+  "blocks": [
+   {
+    "type": "fitgrid",
+    "rows": [
+     {
+      "len": 7,
+      "shade": 4
+     },
+     {
+      "len": 11,
+      "shade": 4
+     },
+     {
+      "len": 9,
+      "shade": 3
+     },
+     {
+      "len": 10,
+      "shade": 5
+     },
+     {
+      "len": 3,
+      "shade": 0
+     },
+     {
+      "len": 8,
+      "shade": 5
+     }
+    ]
+   }
+  ],
+  "length": 6,
+  "hash": "88b53d59c9624b289c6bc5723c733ccb30e4a293756bdb14693fdefae4c871bb",
+  "hints": [
+   "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+   "To check you're on track: the final answer begins with O."
+  ]
+ },
+ "described": true
+}

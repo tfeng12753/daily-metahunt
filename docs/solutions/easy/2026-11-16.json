@@ -1,0 +1,73 @@
+{
+ "date": "2026-11-16",
+ "number": 51,
+ "difficulty": "easy",
+ "final": "CHIMERA",
+ "metaType": "title_diagonal",
+ "explain": "Order the puzzles alphabetically by title; take the k-th letter of the k-th answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Crossover Event",
+   "answer": "PRIMER",
+   "mechanism": "Phone multi-tap",
+   "transform": null,
+   "encoded": "PRIMER",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Gel Electrophoresis",
+   "answer": "PROMOTER",
+   "mechanism": "Word search leftovers",
+   "transform": null,
+   "encoded": "PROMOTER",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Central Dogma",
+   "answer": "CHROMOSOME",
+   "mechanism": "Missing letters",
+   "transform": null,
+   "encoded": "CHROMOSOME",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Primer Dimer",
+   "answer": "BACTERIA",
+   "mechanism": "Drop quote",
+   "transform": null,
+   "encoded": "BACTERIA",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Knockout",
+   "answer": "PROTEIN",
+   "mechanism": "Element spelling",
+   "transform": null,
+   "encoded": "PROTEIN",
+   "mutated": null
+  },
+  {
+   "id": 6,
+   "title": "Backup Copy",
+   "answer": "CLONE",
+   "mechanism": "Letter sudoku",
+   "transform": null,
+   "encoded": "CLONE",
+   "mutated": null
+  },
+  {
+   "id": 7,
+   "title": "Reading Frame",
+   "answer": "CYTOPLASM",
+   "mechanism": "Maritime signal flags",
+   "transform": null,
+   "encoded": "CYTOPLASM",
+   "mutated": null
+  }
+ ]
+}

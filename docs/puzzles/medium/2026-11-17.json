@@ -1,0 +1,507 @@
+{
+ "date": "2026-11-17",
+ "difficulty": "medium",
+ "salt": "2026-11-17/medium",
+ "number": 52,
+ "round": "The Glasshouse",
+ "intro": "Every plant in the botanic garden's glasshouse bloomed on the same night, and the labels in the pots had all been rewritten. The night gardener, who takes the census at midnight, found her tally kept coming out long by one in every house: the cacti, the carnivores, the temperate ferns, all of them counted one extra. She set each surplus aside on the iron staging bench, wrapped in damp newspaper, tagged with nothing but a date. By morning the staging bench ran the full length of the glasshouse, and the head gardener, walking it with her ledger, began folding the little paper tags into quarters and tucking them into her pocket.",
+ "echo": "Pull it from the soil and its scream, they say, will kill you.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Hothouse",
+   "flavor": "An inventory, tangled.",
+   "blocks": [
+    {
+     "type": "caption",
+     "text": "Hidden in the grid: 12 words to do with the glasshouse."
+    },
+    {
+     "type": "board",
+     "rows": [
+      "TLVMSFUC",
+      "UOIOCESR",
+      "BTNSARPH",
+      "EUESMNOI",
+      "RSUTOORZ",
+      "DEESTLEO",
+      "BULBSENM",
+      "TMTHORNE"
+     ],
+     "plain": true,
+     "words": [
+      "BULB",
+      "FERN",
+      "LOTUS",
+      "MOSS",
+      "RHIZOME",
+      "ROOT",
+      "SEED",
+      "SPORE",
+      "STOMA",
+      "THORN",
+      "TUBER",
+      "VINE"
+     ]
+    }
+   ],
+   "hash": "9fb844688ca18c2de31938d484734bd8b2c4f7c8fc02ee03aef6230e3d87a66f",
+   "partials": {
+    "335b45fd510ddf62585639a410a1f8b7015ec57ca3929ad03d47dc0eed4eb516": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Once every theme word is found, is anything left unclaimed? Read it in order.",
+    "Find the theme words; the letters no word uses, read row by row, are the answer.",
+    "The hidden words are: BULB, FERN, LOTUS, MOSS, RHIZOME, ROOT, SEED, SPORE, STOMA, THORN, TUBER, VINE."
+   ],
+   "length": 9
+  },
+  {
+   "id": 2,
+   "title": "Cross-Pollination",
+   "flavor": "Only the first two stripes on each were ever meant to be read.",
+   "blocks": [
+    {
+     "type": "resistors",
+     "items": [
+      [
+       "red",
+       "black",
+       "black",
+       "gold"
+      ],
+      [
+       "red",
+       "brown",
+       "black",
+       "gold"
+      ],
+      [
+       "brown",
+       "red",
+       "black",
+       "gold"
+      ],
+      [
+       "black",
+       "brown",
+       "black",
+       "gold"
+      ],
+      [
+       "black",
+       "white",
+       "black",
+       "gold"
+      ],
+      [
+       "brown",
+       "blue",
+       "black",
+       "gold"
+      ]
+     ]
+    }
+   ],
+   "hash": "2d68cf296a6e120dac2f247247e83cbaf0429c33466eec0e820a81749737c16a",
+   "partials": {
+    "cb1024d3744188b3e878933aa9136bc7c8fdac1baa63ffa3ab5597f109816255": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Engineers read stripes like these as numbers. What number does each part give, and what is a number up to 26?",
+    "Resistor colour code: the first two bands are two digits; that number is a letter position."
+   ],
+   "length": 5
+  },
+  {
+   "id": 3,
+   "title": "Deadheading",
+   "flavor": "Fenced in, and copied out in a hurry.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "WTOER DNORR BSLRX VHTHC UIRAR EWSOG LOSCE SUAIG EODOG OEAER CIATD ETTNW FLN",
+     "wide": true,
+     "rails": 3
+    }
+   ],
+   "hash": "d8a769b9616bf08b9cd589db2a7377d5e9693f3460ec8b2e466e213d6135bf6c",
+   "partials": {
+    "d21f5a58c10bdf7fa0a7f394a80f361b3b149c11dd1f3236101f7f833610aebc": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "All the right letters are here, just out of order. Could they have been written along a path that goes up and down?",
+    "Rail fence: written in a zigzag over a few rows, then copied out row by row. Try two to five rows."
+   ],
+   "length": 8
+  },
+  {
+   "id": 4,
+   "title": "Germination",
+   "flavor": "Not a single letter on the page, and yet it says something.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "✿♪○ ☾▼☀✿ ✿♪✚♥□ ✿♪○ ☆♠○♣▼✿☆♣ ✿♫♠○● ◇○✈☆♣○ ✿♪○ ☾✚♥○ ♦○♥✿ ●○▼● ♦▼☀ ★♫☾●○☂",
+     "wide": true,
+     "solver": "substitution"
+    }
+   ],
+   "hash": "a808f6b510cd27680e0586240b2241f97efd359edd890862cf12ccf98c68b4a3",
+   "partials": {
+    "1e54dd3642e067f5267e0ffde948bc59004de09c8d754ad82ebf14f52dcc3c3f": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Which short words are most common in English? Could any of them be hiding here?",
+    "Each symbol always stands for the same letter. The finished sentence tells you what to submit."
+   ],
+   "length": 5
+  },
+  {
+   "id": 5,
+   "title": "Seed Bank",
+   "flavor": "Turn the wheel until it talks.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "PQDQFA GZRGEVGF CPAQPG VQ IGV VJKU HCT UQ VJG RTKBG KU LWUV QPG YQTF DGIQPKCT",
+     "wide": true,
+     "solver": "substitution"
+    }
+   ],
+   "hash": "bae31ee3efc93d742d787544392cb95d044b1a6ef5c3b07c7ca70c8a386f6c8d",
+   "partials": {
+    "465157f9d20999fa28c44093a944d8fc84a68715c1c448e467dcb6061e3d77e4": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Try moving every letter the same distance. How far turns the short words into English?",
+    "A Caesar shift: find the one shift that fixes a short word, then apply it everywhere."
+   ],
+   "length": 7
+  },
+  {
+   "id": 6,
+   "title": "Bolting",
+   "flavor": "Some squares have been given to you for free.",
+   "blocks": [
+    {
+     "type": "nonogram",
+     "rows": [
+      [
+       4,
+       5,
+       3,
+       3,
+       1,
+       1,
+       5,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       2,
+       2,
+       1,
+       2,
+       1
+      ],
+      [
+       3,
+       1,
+       5,
+       5,
+       1,
+       1,
+       1,
+       4,
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       2
+      ],
+      [
+       4,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       5,
+       1,
+       1
+      ]
+     ],
+     "cols": [
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [],
+      [
+       4
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       4
+      ],
+      [],
+      [
+       4
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       4
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       5
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       5
+      ]
+     ],
+     "givens": [
+      [
+       4,
+       0,
+       1
+      ],
+      [
+       0,
+       12,
+       0
+      ],
+      [
+       1,
+       0,
+       1
+      ],
+      [
+       4,
+       18,
+       1
+      ]
+     ]
+    }
+   ],
+   "hash": "ed629037734e25da3cd692e27aafd85875248783c1bb1782bcace7a74b11e147",
+   "partials": {
+    "aaa07f0b6c289588c221081d0c8d5354fb10b65f1498672dc65c021f28c28f9c": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "The numbers describe runs of filled squares. What picture could they be drawing?",
+    "Paint by numbers. The picture is written, not drawn."
+   ],
+   "length": 6
+  },
+  {
+   "id": 7,
+   "title": "Pollinator",
+   "flavor": "Each column remembers what it held, but not in what order.",
+   "blocks": [
+    {
+     "type": "dropquote",
+     "cols": [
+      "EEIOW",
+      "CHNNRR",
+      "AGOOR",
+      "CELPTT",
+      "AEHT",
+      "GRSTY",
+      "HKORW",
+      "BEILLO",
+      "DELRU",
+      "CDDT",
+      "OO",
+      "ACRUW",
+      "AHR",
+      "ILSSS"
+     ],
+     "mask": [
+      "....#...#.....",
+      "..#.......#...",
+      "#...#....#..#.",
+      "......#...#.#.",
+      ".....#....#...",
+      ".........#####"
+     ]
+    }
+   ],
+   "hash": "89b8a0bab610a9979efe12e8a3d1e62a88a10e904553766a7a0fbd674c28447a",
+   "partials": {
+    "846418176a25412b1792973c63799d8293636980b6943b0c2cd5facd406131d2": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Black squares are spaces. Which two- and three-letter words fit, using only the letters each column allows?",
+    "Each column's letters drop into that column of the grid; cross them off as you place them. The sentence tells you what to submit."
+   ],
+   "length": 11
+  },
+  {
+   "id": 8,
+   "title": "Taproot",
+   "flavor": "Bunting on the halyard, and not for a celebration.",
+   "blocks": [
+    {
+     "type": "flags",
+     "items": [
+      "H",
+      "E",
+      "M",
+      "L",
+      "O",
+      "C",
+      "E",
+      "K"
+     ]
+    }
+   ],
+   "hash": "0a43cb98d2bcaf5fa5636b5861a4a1b5e1946033304545f73d6de9535ae76c8b",
+   "partials": {
+    "f71aa71dc7a40769f1079c6410be9ab33c6eff3368a1758ffa3b8f5934d3e8c3": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Ships carry a flag for every letter of the alphabet. Do you know them?",
+    "International maritime signal flags: one letter each, left to right."
+   ],
+   "length": 7
+  }
+ ],
+ "meta": {
+  "title": "Meta: The Glasshouse",
+  "flavor": "Everything arrived a little heavier than it left.",
+  "blocks": [],
+  "length": 8,
+  "hash": "16870735c6752e8b24b4461f7f7cb4cfd0965020b03f0207b34b89e23458444c",
+  "hints": [
+   "Did every answer come out the right size the first time? Each had one letter too many. Did you keep them?",
+   "Take the extra letter from each feeder, in puzzle order."
+  ]
+ },
+ "described": true
+}

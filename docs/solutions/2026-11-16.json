@@ -1,0 +1,64 @@
+{
+ "date": "2026-11-16",
+ "number": 51,
+ "difficulty": "hard",
+ "final": "MUTANT",
+ "metaType": "initials",
+ "explain": "The ciphertext is Vigenère-encrypted with the first letters of the feeder answers (in puzzle order) as the key.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Primer Dimer",
+   "answer": "MEMBRANE",
+   "mechanism": "Knight's path",
+   "transform": null,
+   "encoded": "MEMBRANE",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Wild Type",
+   "answer": "CENTRIFUGE",
+   "mechanism": "Scrambled sentence",
+   "transform": null,
+   "encoded": "CENTRIFUGE",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Point Mutation",
+   "answer": "ZYGOTE",
+   "mechanism": "Anagrams with an extra letter",
+   "transform": null,
+   "encoded": "ZYGOTE",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Open Reading",
+   "answer": "PLASMID",
+   "mechanism": "Gapless Morse",
+   "transform": null,
+   "encoded": "PLASMID",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Central Dogma",
+   "answer": "MICROSCOPE",
+   "mechanism": "Morse code (audio)",
+   "transform": null,
+   "encoded": "MICROSCOPE",
+   "mutated": null
+  },
+  {
+   "id": 6,
+   "title": "Backup Copy",
+   "answer": "PEPTIDE",
+   "mechanism": "Resistor colour code (written)",
+   "transform": "Reversal",
+   "encoded": "EDITPEP",
+   "mutated": null
+  }
+ ]
+}

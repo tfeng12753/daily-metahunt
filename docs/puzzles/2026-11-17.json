@@ -1,0 +1,242 @@
+{
+ "date": "2026-11-17",
+ "difficulty": "hard",
+ "salt": "2026-11-17",
+ "number": 52,
+ "round": "The Glasshouse",
+ "intro": "Every plant in the botanic garden's glasshouse bloomed on the same night, and the labels in the pots had all been rewritten, though the gardeners say they saw no one enter after closing. The glasshouse at midnight is a cathedral of steam and green noise, root systems knitting in the dark, and the people who tend it know better than to be startled by a change they cannot explain; that is the first lesson of the trade. Each morning the head gardener walks the central aisle with a basket, and at the bottom of it, beneath the fallen petals and the stray snail, lies a folded page torn from yesterday's ledger, one line scored through and written again above it in a hand that is almost, but not quite, her own. She has kept every one of these pages in a wooden box under the bench, and last week, when the new apprentice asked what they were, she only said that plants forgive a great deal, but a record has to be honest.",
+ "echo": "In Kyoto they hold parties just to watch the trees flower.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Deadheading",
+   "flavor": "Up and down, up and down, and not a single space left.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "EDSNA RTSHV OHDWI GDNOD NFIPR IEOUN ISLRD WYARH ASBRG NETAE OTEOW OTGIO EYTHW HUMEM",
+     "wide": true,
+     "rails": 5
+    }
+   ],
+   "hash": "89554c737e7d29d90e209fa1dc521ec9eb5d6697ef0b0e65551737cc6dc66fe2",
+   "partials": {
+    "f4530b533ea1d8da84281730e3fd95c29bcc5b419259607749573610fac49a7e": "So close. Exactly one thing is wrong here. Fix it (and remember what you fixed)."
+   },
+   "hints": [
+    "All the right letters are here, just out of order. Could they have been written along a path that goes up and down?"
+   ]
+  },
+  {
+   "id": 2,
+   "title": "Bolting",
+   "flavor": "Two kinds of footprint on the sand, in no particular hurry.",
+   "blocks": [
+    {
+     "type": "glyphs",
+     "groups": [
+      "🌿🌱🌱🌱",
+      "🌱🌿🌱🌱",
+      "🌿🌿🌱",
+      "🌿🌿🌿",
+      "🌿🌱",
+      "🌱🌱",
+      "🌱🌿"
+     ],
+     "legend": [
+      "🌱",
+      "🌿"
+     ]
+    }
+   ],
+   "hash": "b7e3d6b2567732fc5a0f1365001cd6ab6e2eef9cff8c26cdd561891889ee9600",
+   "partials": {
+    "2df6aac92bcebecb41d6d1c28ea5f997eacfa03f66410271b13c4bf2ea7f1581": "So close. Exactly one thing is wrong here. Fix it (and remember what you fixed)."
+   },
+   "hints": [
+    "Only two kinds of mark, in groups of one to four. Which old alphabet is built from exactly that?"
+   ]
+  },
+  {
+   "id": 3,
+   "title": "Latin Names",
+   "flavor": "Six switches at a time, some pressed, some not. Something in here has been through the looking glass.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "101101",
+      "111000",
+      "101110",
+      "111000",
+      "111000",
+      "110010",
+      "110110"
+     ],
+     "inline": true
+    }
+   ],
+   "hash": "7b89d027656b5c299f2937c70da9faf5bfb1c9341786d14795fd3efba50d5a76",
+   "partials": {
+    "34962f7f8144071769fac8798edfd5abfb6d59fc6d4d850d190977975f5dc0bb": "You've decoded it, but it's not finished. One more layer.",
+    "dbd5d0966fbc7e1368a519092e6551f884bf23d5513a475d99b376fb8edcae34": "So close. Exactly one thing is wrong here. Fix it (and remember what you fixed)."
+   },
+   "hints": [
+    "Write each number in binary. Six yes-or-no choices: is there an alphabet built from exactly that? And if what you get still isn't a word, reread the flavour text."
+   ]
+  },
+  {
+   "id": 4,
+   "title": "Hothouse",
+   "flavor": "Everything came out of the wash with a little something extra. The tape was spooled back onto the wrong reel.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "HKLMEOLC",
+      "SELORP",
+      "CYUCTSA",
+      "PITUHL",
+      "EMNATSP",
+      "SOTAMO",
+      "SRAPEL",
+      "OTEOWRL",
+      "BAESLRMB",
+      "THEPLA",
+      "WLRUFCOSEN"
+     ],
+     "ordered": true,
+     "mono": true
+    }
+   ],
+   "hash": "e38acc81f0c4f670f163862682f505ed41cbe514a7f450b46370fcaa5d93f8d5",
+   "partials": {
+    "ab63fa04197cbaf8f78ec98a3206821c24d7f76bf6871d1699ade32eea06219b": "You've decoded it, but it's not finished. One more layer.",
+    "b32efe3826ddf5e83dbd923e978c380c253d5fe32d4756c851c696657123f99a": "So close. Exactly one thing is wrong here. Fix it (and remember what you fixed)."
+   },
+   "hints": [
+    "Each jumble is almost a word from this round, but with a letter to spare. Which letter, every time? And if what you get still isn't a word, reread the flavour text."
+   ]
+  },
+  {
+   "id": 5,
+   "title": "Seed Bank",
+   "flavor": "The machine keeps its diary in your cells' alphabet, if your cells could only say yes or no.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "010100 001101 110101 000110 110110 011100"
+    }
+   ],
+   "hash": "aebcafb6b187e2d19ff0c8d7ddacd3fbfbfb2376bdaf9cd4ee086f78fd24d702",
+   "partials": {
+    "92ceeddb1f0cb7d80c7c527a672b0f5d87183e204d529f36464ea02871d68924": "So close. Exactly one thing is wrong here. Fix it (and remember what you fixed)."
+   },
+   "hints": [
+    "How many different things can a pair of bits say? Four is a very biological number."
+   ]
+  },
+  {
+   "id": 6,
+   "title": "Pollinator",
+   "flavor": "Everything fell straight down, and landed in the right column.",
+   "blocks": [
+    {
+     "type": "dropquote",
+     "cols": [
+      "GIOT",
+      "DHHIL",
+      "DEOTT",
+      "EE",
+      "AMMNS",
+      "EIL",
+      "ILMS",
+      "NPS",
+      "AAL",
+      "GLPY",
+      "ELO",
+      "ANS",
+      "AGIW",
+      "ANY",
+      "ASS",
+      "NS",
+      "DHIP"
+     ],
+     "mask": [
+      "...#.......#...#.",
+      ".....#..#.....#..",
+      "...#...#.....#...",
+      "#..#......#....#.",
+      ".....############"
+     ]
+    }
+   ],
+   "hash": "07ad220740e8b0711146dbaac6653af871c053f79b192a8d2f052ad56420e3c1",
+   "partials": {
+    "a6c87023a1f1210ed7626db122e8e78b7fa7fdc440cc4ca15ecf6fed1660aa2a": "So close. Exactly one thing is wrong here. Fix it (and remember what you fixed)."
+   },
+   "hints": [
+    "Black squares are spaces. Which two- and three-letter words fit, using only the letters each column allows?"
+   ]
+  },
+  {
+   "id": 7,
+   "title": "Night Bloom",
+   "flavor": "Everything that belongs is in there somewhere. Some things don't belong.",
+   "blocks": [
+    {
+     "type": "caption",
+     "text": "Somewhere in here: things to do with the glasshouse."
+    },
+    {
+     "type": "board",
+     "rows": [
+      "METSSOMB",
+      "TBSEPALU",
+      "ULEAFOCL",
+      "BNROHTAB",
+      "ENVINECA",
+      "RSPORETR",
+      "MTULIPUK",
+      "ALATEPSI"
+     ],
+     "plain": true,
+     "words": [
+      "BARK",
+      "BULB",
+      "CACTUS",
+      "LEAF",
+      "MOSS",
+      "PETAL",
+      "SEPAL",
+      "SPORE",
+      "STEM",
+      "THORN",
+      "TUBER",
+      "TULIP",
+      "VINE"
+     ]
+    }
+   ],
+   "hash": "6478404643a854507f8be2d3e8780ac160a29d810c43e5f956dc8b7463cda8eb",
+   "partials": {
+    "815090b49bd94683b3846e03dc2827cd51792cacc60f1b3cee60cce635943c9f": "So close. Exactly one thing is wrong here. Fix it (and remember what you fixed)."
+   },
+   "hints": [
+    "Once every theme word is found, is anything left unclaimed? Read it in order.",
+    "The hidden words are: BARK, BULB, CACTUS, LEAF, MOSS, PETAL, SEPAL, SPORE, STEM, THORN, TUBER, TULIP, VINE."
+   ]
+  }
+ ],
+ "meta": {
+  "title": "Meta: The Glasshouse",
+  "flavor": "Every report is one slip away from perfect.",
+  "blocks": [],
+  "length": 7,
+  "hash": "18da976356650a0b9dc0bba0f162fa8e8cd097d6cfa91e93259bf6131578a7a7",
+  "hints": [
+   "Did every answer come out clean the first time? Each had exactly one wrong letter. Did you keep them?"
+  ]
+ },
+ "described": true
+}

@@ -1,0 +1,91 @@
+{
+ "date": "2026-11-16",
+ "number": 51,
+ "difficulty": "medium",
+ "final": "PHENOTYPE",
+ "metaType": "fitin",
+ "explain": "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Wild Type",
+   "answer": "CYTOPLASM",
+   "mechanism": "Resistor colour code (written)",
+   "transform": "ROT13",
+   "encoded": "PLGBCYNFZ",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Central Dogma",
+   "answer": "POLYMERASE",
+   "mechanism": "DTMF multi-tap (audio)",
+   "transform": null,
+   "encoded": "POLYMERASE",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Reading Frame",
+   "answer": "THYMINE",
+   "mechanism": "Knight's path",
+   "transform": null,
+   "encoded": "THYMINE",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Knockout",
+   "answer": "EXON",
+   "mechanism": "Spiral route",
+   "transform": null,
+   "encoded": "EXON",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Primer Dimer",
+   "answer": "REPLICATION",
+   "mechanism": "Element spelling",
+   "transform": null,
+   "encoded": "REPLICATION",
+   "mutated": null
+  },
+  {
+   "id": 6,
+   "title": "Point Mutation",
+   "answer": "HELICASE",
+   "mechanism": "Missing letters",
+   "transform": null,
+   "encoded": "HELICASE",
+   "mutated": null
+  },
+  {
+   "id": 7,
+   "title": "Backup Copy",
+   "answer": "CLONE",
+   "mechanism": "Seating plan (logic)",
+   "transform": null,
+   "encoded": "CLONE",
+   "mutated": null
+  },
+  {
+   "id": 8,
+   "title": "Stop Codon",
+   "answer": "INTRON",
+   "mechanism": "Book cipher",
+   "transform": null,
+   "encoded": "INTRON",
+   "mutated": null
+  },
+  {
+   "id": 9,
+   "title": "Gel Electrophoresis",
+   "answer": "MITOCHONDRIA",
+   "mechanism": "Hex colour ASCII",
+   "transform": null,
+   "encoded": "MITOCHONDRIA",
+   "mutated": null
+  }
+ ]
+}
