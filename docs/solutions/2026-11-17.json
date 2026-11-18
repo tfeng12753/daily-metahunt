@@ -1,0 +1,73 @@
+{
+ "date": "2026-11-17",
+ "number": 52,
+ "difficulty": "hard",
+ "final": "BLOSSOM",
+ "metaType": "mutation",
+ "explain": "Each feeder decodes to its answer with a single wrong letter. Those substituted letters, in puzzle order, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Deadheading",
+   "answer": "RHIZOME",
+   "mechanism": "Rail fence (cluephrase)",
+   "transform": null,
+   "encoded": "RHIBOME",
+   "mutated": "RHIBOME"
+  },
+  {
+   "id": 2,
+   "title": "Bolting",
+   "answer": "BEGONIA",
+   "mechanism": "Morse code",
+   "transform": null,
+   "encoded": "BLGONIA",
+   "mutated": "BLGONIA"
+  },
+  {
+   "id": 3,
+   "title": "Latin Names",
+   "answer": "COMPOST",
+   "mechanism": "Braille as bit strings",
+   "transform": "Atbash (A↔Z mirror)",
+   "encoded": "XLNLLHG",
+   "mutated": "COMOOST"
+  },
+  {
+   "id": 4,
+   "title": "Hothouse",
+   "answer": "CHLOROPHYLL",
+   "mechanism": "Anagrams with an extra letter",
+   "transform": "Reversal",
+   "encoded": "LLYHPOROSHC",
+   "mutated": "CHSOROPHYLL"
+  },
+  {
+   "id": 5,
+   "title": "Seed Bank",
+   "answer": "PISTIL",
+   "mechanism": "Binary codons",
+   "transform": null,
+   "encoded": "PISTSL",
+   "mutated": "PISTSL"
+  },
+  {
+   "id": 6,
+   "title": "Pollinator",
+   "answer": "PHLOEM",
+   "mechanism": "Drop quote",
+   "transform": null,
+   "encoded": "POLOEM",
+   "mutated": "POLOEM"
+  },
+  {
+   "id": 7,
+   "title": "Night Bloom",
+   "answer": "BONSAI",
+   "mechanism": "Word search leftovers",
+   "transform": null,
+   "encoded": "BONMAI",
+   "mutated": "BONMAI"
+  }
+ ]
+}

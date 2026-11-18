@@ -1,0 +1,265 @@
+{
+ "date": "2026-11-18",
+ "difficulty": "hard",
+ "salt": "2026-11-18",
+ "number": 53,
+ "round": "Capture The Flag",
+ "intro": "The honeypot caught something at 03:14. It was not an attacker. It was a message, split across every protocol the intruder could find, and the red team gathered round the racks as dawn came up grey through the vents. Marisol was already pulling the tapes, her boots scuffing the anti-static mat, and she laid each reel out in its own groove on the workbench, the way they all did, one groove to a shape, no two reels ever sharing a groove.",
+ "echo": "Every bug is a door, and somebody always walks through it.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Cold Boot",
+   "flavor": "Around the edges first; the point comes last.",
+   "blocks": [
+    {
+     "type": "lettergrid",
+     "rows": [
+      "EHTGNIHT",
+      "OILEHTET",
+      "PNCAPSRS",
+      "EEK··AOA",
+      "RWE··WFL",
+      "AET··DEE",
+      "TNTDEABH",
+      "ORTYPEDT"
+     ]
+    }
+   ],
+   "hash": "e3ad98f4b166efbc7475fd32222250066180661223071b5b17512a864fa790dc",
+   "partials": {},
+   "hints": [
+    "All the letters of a sentence are here, but not in rows. Try walking the grid the way a snail would."
+   ]
+  },
+  {
+   "id": 2,
+   "title": "Rubber Ducky",
+   "flavor": "Every letter here is wearing someone else's coat.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "EKPP JMOK CMB QFC OME EIWDK JMEO DSK EMIJ HFDKEFC FOJ QMXK TBWKDPC MO DM DSK OKRD MOK",
+     "wide": true,
+     "solver": "substitution"
+    }
+   ],
+   "hash": "92ee941dea133b1cbf90080fa10a860c7022e862f74f27c8f58c93d565946257",
+   "partials": {},
+   "hints": [
+    "Which short words are most common in English? Could any of them be hiding here?"
+   ]
+  },
+  {
+   "id": 3,
+   "title": "Privilege Escalation",
+   "flavor": "Caesar counted only things that could not be shared.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "LIII",
+      "LXI",
+      "XLVII",
+      "LXXXIX",
+      "XCVII"
+     ],
+     "inline": true
+    }
+   ],
+   "hash": "3cd31a66323f7372bc4fd7ca6244d23e3d99978a5ce763f720ba9fb545227753",
+   "partials": {},
+   "hints": [
+    "Read the numerals. They're all prime. Is there a natural way to number the primes?"
+   ]
+  },
+  {
+   "id": 4,
+   "title": "Null Byte",
+   "flavor": "Walk the fence; don't read it.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "WLDNY UANWR TDWTE ODETF CTADO EUELO TTEET NELOE OMYOW IEONH WRCRI IAENM VQITY NOHNX OE",
+     "wide": true,
+     "rails": 2
+    }
+   ],
+   "hash": "2d5d91e67495080d0b87ff2a16cd69baa0f2d51504d0e84ee09f26b7f942ed5f",
+   "partials": {},
+   "hints": [
+    "All the right letters are here, just out of order. Could they have been written along a path that goes up and down?"
+   ]
+  },
+  {
+   "id": 5,
+   "title": "Side Channel",
+   "flavor": "Noughts and crosses, with a few stray dots.",
+   "blocks": [
+    {
+     "type": "pigpen",
+     "items": [
+      {
+       "g": "x",
+       "p": 1,
+       "dot": false
+      },
+      {
+       "g": "hash",
+       "p": 4,
+       "dot": false
+      },
+      {
+       "g": "hash",
+       "p": 8,
+       "dot": true
+      },
+      {
+       "g": "hash",
+       "p": 3,
+       "dot": true
+      },
+      {
+       "g": "hash",
+       "p": 8,
+       "dot": false
+      },
+      {
+       "g": "hash",
+       "p": 4,
+       "dot": true
+      },
+      {
+       "g": "hash",
+       "p": 0,
+       "dot": false
+      },
+      {
+       "g": "hash",
+       "p": 2,
+       "dot": true
+      }
+     ]
+    }
+   ],
+   "hash": "da61dec3531e725b5d4319f3b2e478ab117a1dd0a6b133d954eafaf7ff2a40ae",
+   "partials": {},
+   "hints": [
+    "Picture the alphabet written into a couple of #-grids and X-grids. Which cell would each shape be?"
+   ]
+  },
+  {
+   "id": 6,
+   "title": "Replay Attack",
+   "flavor": "Lord Playfair's friend got the credit, but the square is built from whatever is written above it.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "TE PE CD QW MG DX VF TV IM ZG KF BZ FS HP PV MP IR MF KF PV MP MD MW ZP VF DE QN KF SZ LR FP SZ TL KR WO FP LU",
+     "wide": true
+    }
+   ],
+   "hash": "e8380cef8a9b0ca3ddc7dd31bd3972e271d9a5dcd4e9922d582979873d6e7b31",
+   "partials": {},
+   "hints": [
+    "An even number of letters, read in pairs, and no pair is ever a double. Which cipher works on pairs, and where's its key?"
+   ]
+  },
+  {
+   "id": 7,
+   "title": "Salted Hash",
+   "flavor": "One table, one arrangement that offends nobody, and a toll that rises seat by seat.",
+   "blocks": [
+    {
+     "type": "seating",
+     "seats": 4,
+     "names": [
+      "Prudence",
+      "Anita",
+      "Mercedes",
+      "Tobias"
+     ],
+     "clues": [
+      "Anita and Mercedes sit side by side.",
+      "Tobias sits somewhere between Mercedes and Prudence.",
+      "Prudence sits somewhere to the left of Mercedes.",
+      "Anita and Tobias are not neighbours."
+     ],
+     "logic": [
+      [
+       "beside",
+       "ANITA",
+       "MERCEDES"
+      ],
+      [
+       "between",
+       "MERCEDES",
+       "TOBIAS",
+       "PRUDENCE"
+      ],
+      [
+       "left_of",
+       "PRUDENCE",
+       "MERCEDES"
+      ],
+      [
+       "apart",
+       "ANITA",
+       "TOBIAS"
+      ]
+     ]
+    }
+   ],
+   "hash": "2e6ff0dcd00fbd246714f8dd445c58dc68a9f706b3d90a460c15d952156966be",
+   "partials": {},
+   "hints": [
+    "Only one arrangement satisfies every clue; start from whoever has an end seat or a fixed neighbour. Once they're seated, why might the seat numbers matter?"
+   ]
+  }
+ ],
+ "meta": {
+  "title": "Meta: Capture The Flag",
+  "flavor": "Pigeonholes, each cut to fit one thing only.",
+  "blocks": [
+   {
+    "type": "fitgrid",
+    "rows": [
+     {
+      "len": 7,
+      "shade": 3
+     },
+     {
+      "len": 5,
+      "shade": 3
+     },
+     {
+      "len": 6,
+      "shade": 0
+     },
+     {
+      "len": 9,
+      "shade": 3
+     },
+     {
+      "len": 4,
+      "shade": 1
+     },
+     {
+      "len": 8,
+      "shade": 4
+     },
+     {
+      "len": 11,
+      "shade": 9
+     }
+    ]
+   }
+  ],
+  "length": 7,
+  "hash": "af13ab3d4ba8644d074727d5c8ec5bffa89804888b48203ade1313c0bedfb6b1",
+  "hints": [
+   "The grid's rows are all different lengths. So are your answers."
+  ]
+ },
+ "described": true
+}

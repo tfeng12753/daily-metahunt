@@ -1,0 +1,82 @@
+{
+ "date": "2026-11-17",
+ "number": 52,
+ "difficulty": "medium",
+ "final": "MANDRAKE",
+ "metaType": "stowaway",
+ "explain": "Each feeder decodes to its answer plus one inserted letter. The inserted letters, in puzzle order, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Hothouse",
+   "answer": "SUCCULENT",
+   "mechanism": "Word search leftovers",
+   "transform": null,
+   "encoded": "SUCCULENTM",
+   "mutated": "SUCCULENTM"
+  },
+  {
+   "id": 2,
+   "title": "Cross-Pollination",
+   "answer": "TULIP",
+   "mechanism": "Resistor colour bands",
+   "transform": null,
+   "encoded": "TULAIP",
+   "mutated": "TULAIP"
+  },
+  {
+   "id": 3,
+   "title": "Deadheading",
+   "answer": "FOXGLOVE",
+   "mechanism": "Rail fence (cluephrase)",
+   "transform": null,
+   "encoded": "FOXGLOVEN",
+   "mutated": "FOXGLOVEN"
+  },
+  {
+   "id": 4,
+   "title": "Germination",
+   "answer": "XYLEM",
+   "mechanism": "Symbol cryptogram",
+   "transform": null,
+   "encoded": "XYLDEM",
+   "mutated": "XYLDEM"
+  },
+  {
+   "id": 5,
+   "title": "Seed Bank",
+   "answer": "BEGONIA",
+   "mechanism": "Caesar shift",
+   "transform": null,
+   "encoded": "BEGONIAR",
+   "mutated": "BEGONIAR"
+  },
+  {
+   "id": 6,
+   "title": "Bolting",
+   "answer": "STAMEN",
+   "mechanism": "Nonogram",
+   "transform": null,
+   "encoded": "STAAMEN",
+   "mutated": "STAAMEN"
+  },
+  {
+   "id": 7,
+   "title": "Pollinator",
+   "answer": "CHLOROPHYLL",
+   "mechanism": "Drop quote",
+   "transform": null,
+   "encoded": "CHLOROPHYKLL",
+   "mutated": "CHLOROPHYKLL"
+  },
+  {
+   "id": 8,
+   "title": "Taproot",
+   "answer": "HEMLOCK",
+   "mechanism": "Maritime signal flags",
+   "transform": null,
+   "encoded": "HEMLOCEK",
+   "mutated": "HEMLOCEK"
+  }
+ ]
+}

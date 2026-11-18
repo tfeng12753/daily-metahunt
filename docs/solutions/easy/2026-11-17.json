@@ -1,0 +1,64 @@
+{
+ "date": "2026-11-17",
+ "number": 52,
+ "difficulty": "easy",
+ "final": "ORCHID",
+ "metaType": "fitin",
+ "explain": "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Cross-Pollination",
+   "answer": "COMPOST",
+   "mechanism": "Cryptogram (cluephrase)",
+   "transform": null,
+   "encoded": "COMPOST",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Taproot",
+   "answer": "SUCCULENT",
+   "mechanism": "Scrambled sentence",
+   "transform": null,
+   "encoded": "SUCCULENT",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Night Bloom",
+   "answer": "LAVENDER",
+   "mechanism": "Nonogram",
+   "transform": null,
+   "encoded": "LAVENDER",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Photoperiod",
+   "answer": "IVY",
+   "mechanism": "Semaphore (figures)",
+   "transform": null,
+   "encoded": "IVY",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Latin Names",
+   "answer": "CHLOROPHYLL",
+   "mechanism": "Shredded sentence",
+   "transform": null,
+   "encoded": "CHLOROPHYLL",
+   "mutated": null
+  },
+  {
+   "id": 6,
+   "title": "Hardening Off",
+   "answer": "GREENHOUSE",
+   "mechanism": "Drop quote",
+   "transform": null,
+   "encoded": "GREENHOUSE",
+   "mutated": null
+  }
+ ]
+}

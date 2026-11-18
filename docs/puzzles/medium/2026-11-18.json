@@ -1,0 +1,247 @@
+{
+ "date": "2026-11-18",
+ "difficulty": "medium",
+ "salt": "2026-11-18/medium",
+ "number": 53,
+ "round": "Capture The Flag",
+ "intro": "The honeypot caught something at 03:14. It was not an attacker. It was a message, split across every protocol the intruder could find, and the red team's duty officer has been logging each shard as it arrives in a black ledger with columns ruled in pencil. Every entry so far is terse: one number to say which packet carried the fragment, one number to say where in that packet's own message the fragment sat. The watch rotates every four bells, and each new shift inherits the ledger just as it is, no commentary, no corrections.",
+ "echo": "Builders put a brick barrier between houses to stop the flames spreading; the network keeps one too.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Dead Drop",
+   "flavor": "A light on the far shore that refuses to stay on.",
+   "blocks": [
+    {
+     "type": "lamp",
+     "groups": [
+      "...",
+      "....",
+      ".",
+      ".-..",
+      ".-.."
+     ]
+    }
+   ],
+   "hash": "ce00fc78410f6c28eaf8debf412327a553bc565f9e4f126b92581aa6606b3966",
+   "partials": {},
+   "hints": [
+    "Only two kinds of mark, in groups of one to four. Which old alphabet is built from exactly that?",
+    "Morse code: one mark is a dot, the other a dash. Try it both ways round."
+   ],
+   "length": 5
+  },
+  {
+   "id": 2,
+   "title": "Privilege Escalation",
+   "flavor": "Everything here has been weighed, not counted.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "6.94",
+      "18.998",
+      "32.06",
+      "15.999",
+      "10.81",
+      "39.95"
+     ],
+     "inline": true,
+     "variant": "masses"
+    }
+   ],
+   "hash": "18aaf0d8583dab3bb9046db28e9d11896f996ba9d7025eebaea15ddfbbeba0cb",
+   "partials": {},
+   "hints": [
+    "Everything here has a number in a famous chemical line-up. What number does each one have?",
+    "Atomic numbers, then count through the alphabet (hydrogen = 1 = A)."
+   ],
+   "length": 6
+  },
+  {
+   "id": 3,
+   "title": "Side Channel",
+   "flavor": "Scratched into the wall of a very old lodge.",
+   "blocks": [
+    {
+     "type": "pigpen",
+     "items": [
+      {
+       "g": "hash",
+       "p": 7,
+       "dot": false
+      },
+      {
+       "g": "hash",
+       "p": 0,
+       "dot": false
+      },
+      {
+       "g": "hash",
+       "p": 4,
+       "dot": true
+      },
+      {
+       "g": "hash",
+       "p": 3,
+       "dot": false
+      },
+      {
+       "g": "x",
+       "p": 0,
+       "dot": false
+      },
+      {
+       "g": "hash",
+       "p": 7,
+       "dot": false
+      },
+      {
+       "g": "hash",
+       "p": 0,
+       "dot": false
+      },
+      {
+       "g": "hash",
+       "p": 1,
+       "dot": true
+      },
+      {
+       "g": "hash",
+       "p": 4,
+       "dot": false
+      }
+     ]
+    }
+   ],
+   "hash": "2c2a477f916b5cacd2ff3e1fe7d455f7b91ff2f892e17e0da36f5b82ab258c0d",
+   "partials": {},
+   "hints": [
+    "Picture the alphabet written into a couple of #-grids and X-grids. Which cell would each shape be?",
+    "Pigpen cipher: the shape of each cell, and whether it has a dot, picks the letter."
+   ],
+   "length": 9
+  },
+  {
+   "id": 4,
+   "title": "Cold Boot",
+   "flavor": "One horseman, and a field full of noise.",
+   "blocks": [
+    {
+     "type": "board",
+     "rows": [
+      "OTRAQKYI",
+      "OCDZDPFJ",
+      "BDSWGWBK",
+      "VWTTPFFJ",
+      "YEVSEXMH",
+      "FQKBPOGG",
+      "KDIABRUM",
+      "VYXIITNE"
+     ]
+    },
+    {
+     "type": "prose",
+     "text": "The knight sets out from h8: Nf7 Nd8 Nc6 Nd4 Nb5 Na7 Nc8 Ne7."
+    }
+   ],
+   "hash": "c26f5cbbc15ad6226fe4f1ad66b71bae1cc82bd8bce0017dfca985d4afe19e51",
+   "partials": {},
+   "hints": [
+    "Those are chess moves. Which squares does the piece land on, and what's written there?",
+    "Start on the given square, play each move, and read the letter on every square it lands on."
+   ],
+   "length": 8
+  },
+  {
+   "id": 5,
+   "title": "Null Byte",
+   "flavor": "Everyone has a place. Everyone pays for it in their own name.",
+   "blocks": [
+    {
+     "type": "seating",
+     "seats": 7,
+     "names": [
+      "Eleanor",
+      "Seraphina",
+      "Chiara",
+      "Winifred",
+      "Madeleine",
+      "Andrew",
+      "Geoffrey"
+     ],
+     "clues": [
+      "Winifred sits immediately to the right of Geoffrey.",
+      "Chiara sits somewhere between Geoffrey and Seraphina.",
+      "Andrew sits somewhere between Chiara and Seraphina.",
+      "Madeleine has seat 6.",
+      "Madeleine and Winifred sit side by side."
+     ],
+     "logic": [
+      [
+       "right_of",
+       "WINIFRED",
+       "GEOFFREY"
+      ],
+      [
+       "between",
+       "GEOFFREY",
+       "CHIARA",
+       "SERAPHINA"
+      ],
+      [
+       "between",
+       "CHIARA",
+       "ANDREW",
+       "SERAPHINA"
+      ],
+      [
+       "at",
+       "MADELEINE",
+       6
+      ],
+      [
+       "beside",
+       "MADELEINE",
+       "WINIFRED"
+      ]
+     ]
+    }
+   ],
+   "hash": "d005d94c4560db0dfd4bb3894c9656e528f7fc29a184411d59d9b77108ea73fb",
+   "partials": {},
+   "hints": [
+    "Only one arrangement satisfies every clue; start from whoever has an end seat or a fixed neighbour. Once they're seated, why might the seat numbers matter?",
+    "Solve the seating, then take the k-th letter of the name in seat k, left to right."
+   ],
+   "length": 7
+  }
+ ],
+ "meta": {
+  "title": "Meta: Capture The Flag",
+  "flavor": "The porter only ever noted where each passenger boarded.",
+  "blocks": [
+   {
+    "type": "list",
+    "items": [
+     "Platform 5, car 4",
+     "Platform 2, car 2",
+     "Platform 4, car 7",
+     "Platform 3, car 9",
+     "Platform 4, car 5",
+     "Platform 3, car 7",
+     "Platform 1, car 5",
+     "Platform 1, car 5"
+    ],
+    "ordered": true
+   }
+  ],
+  "length": 8,
+  "hash": "5cfe1e6ba60588d4c55d2851c429f549c9f7e89cd5955e1b74f39a802fa69e40",
+  "hints": [
+   "Every entry has two numbers. What in this round is numbered, and what could the second number count?",
+   "The first number picks a puzzle; the second picks a letter inside its answer."
+  ]
+ },
+ "described": true
+}

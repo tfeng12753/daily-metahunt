@@ -1,0 +1,177 @@
+{
+ "date": "2026-11-18",
+ "difficulty": "easy",
+ "salt": "2026-11-18/easy",
+ "number": 53,
+ "round": "Capture The Flag",
+ "intro": "The honeypot caught something at 03:14. It was not an attacker. It was a message, split across every protocol the intruder could find, and the red team has known for weeks that the only way to read it is the way they read everything else down here: like the old ticket machine by the rack, which punches no name, no destination, only a pair of digits on the stub — carriage and seat — and leaves you to know that the first number tells you where to stand and the second where to look. The stubs from tonight sit in a pile, each one small and useless alone.",
+ "echo": "The intruder didn't just get in. They moved in, and hid the furniture.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Heap Spray",
+   "flavor": "A snail's route through the letters: around the outside first, then tighter and tighter.",
+   "blocks": [
+    {
+     "type": "lettergrid",
+     "rows": [
+      "IFYOUCANREA",
+      "HAVEALREADD",
+      "URWHICHISYT",
+      "OEE·····HFH",
+      "YWKAHSDNAOI",
+      "NSNAEHTDNUS",
+      "EHTECNETNES"
+     ]
+    }
+   ],
+   "hash": "23da9b8a6739f2c9cdb76a1b35eaa4475655db5f8c296c728de0340dc08d47c9",
+   "partials": {},
+   "hints": [
+    "A sentence was written into the grid along a spiral, starting in one corner and winding inward. Find the corner and the direction, read the sentence (dots are padding), and it tells you the answer.",
+    "To check you're on track: the answer begins with H."
+   ],
+   "technique": "Spiral route",
+   "length": 9
+  },
+  {
+   "id": 2,
+   "title": "Man In The Middle",
+   "flavor": "Samuel would have recognised the rhythm at once, whatever it happened to be wearing.",
+   "blocks": [
+    {
+     "type": "glyphs",
+     "groups": [
+      "1001",
+      "101",
+      "000",
+      "0110",
+      "0100"
+     ],
+     "legend": [
+      "1",
+      "0"
+     ]
+    }
+   ],
+   "hash": "c80d8012cf789c7764ee472029ad4f22696241def6bd33ed45b2ba515ada88e4",
+   "partials": {},
+   "hints": [
+    "Morse code: two symbols stand for dot and dash; gaps separate letters.",
+    "To check you're on track: the answer begins with P."
+   ],
+   "technique": "Morse code",
+   "length": 5
+  },
+  {
+   "id": 3,
+   "title": "Privilege Escalation",
+   "flavor": "The typesetter shook each word like a box of tiles, one word at a time.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "FI",
+      "OYU",
+      "ACN",
+      "DRAE",
+      "HSTI",
+      "ECNTSENE",
+      "ENHT",
+      "UOY",
+      "AVHE",
+      "EDRYLAA",
+      "OFUDN",
+      "HET",
+      "SARNWE",
+      "CWHHI",
+      "SI",
+      "NMRIAELT"
+     ],
+     "inline": true,
+     "tray": "word"
+    }
+   ],
+   "hash": "bd3d3a165955008823a311e2ff242c73a3d4a82f3e1e48d9f0a49057eabf6cdf",
+   "partials": {},
+   "hints": [
+    "Each word of a sentence has had its letters shuffled. Unscramble them; the sentence tells you the answer.",
+    "To check you're on track: the answer begins with T."
+   ],
+   "technique": "Scrambled sentence",
+   "length": 8
+  },
+  {
+   "id": 4,
+   "title": "Dead Drop",
+   "flavor": "Confetti, sorted alphabetically by a very tidy intern. Put it back together.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "ARR",
+      "DOR",
+      "ECO",
+      "ERC",
+      "GOL",
+      "IED",
+      "ING",
+      "LEW",
+      "NOT",
+      "OF",
+      "ORD",
+      "RET",
+      "SBU",
+      "SEC",
+      "SPO",
+      "TAS",
+      "TTH",
+      "URI",
+      "WAS",
+      "WHA"
+     ],
+     "inline": true,
+     "tiles": true
+    },
+    {
+     "type": "prose",
+     "text": "Word lengths: (4 3 7 7 3 3 4 2 7 3 1 6 4 5)"
+    }
+   ],
+   "hash": "b96296ce106f4f5f98fb4857414bcc143766526cbc1f0f082836da5030fe690c",
+   "partials": {},
+   "hints": [
+    "The sentence was cut into three-letter fragments (spaces removed) and alphabetised. Reassemble it using the word lengths; it tells you the answer.",
+    "To check you're on track: the answer begins with S."
+   ],
+   "technique": "Shredded sentence",
+   "length": 5
+  }
+ ],
+ "meta": {
+  "title": "Meta: Capture The Flag",
+  "flavor": "Someone underlined a few verses. This page has its own chapters.",
+  "blocks": [
+   {
+    "type": "list",
+    "items": [
+     "Ch. 2 v. 2",
+     "Ch. 4 v. 4",
+     "Ch. 2 v. 3",
+     "Ch. 3 v. 1",
+     "Ch. 1 v. 8",
+     "Ch. 3 v. 5",
+     "Ch. 3 v. 1"
+    ],
+    "ordered": true
+   }
+  ],
+  "length": 7,
+  "hash": "01ec3e815d9a4946bdd8754d09c39ed708c2c6ac5d357270ed506519cd529072",
+  "hints": [
+   "Each entry is (puzzle number, letter number): index into that puzzle's answer.",
+   "To check you're on track: the final answer begins with R."
+  ]
+ },
+ "described": true
+}
