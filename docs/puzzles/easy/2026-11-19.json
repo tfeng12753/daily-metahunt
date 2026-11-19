@@ -1,0 +1,190 @@
+{
+ "date": "2026-11-19",
+ "difficulty": "easy",
+ "salt": "2026-11-19/easy",
+ "number": 54,
+ "round": "The Oracle Is Closed",
+ "intro": "The Oracle at Delphi has fallen silent, and in her place the pilgrims now leave their questions written on wax tablets, each one sealed with a different god's name. The temple steward keeps a single ledger for all of them, and the pilgrims have learned to read its columns by heart: the day the tablet was left, and the number of the shrine where it now waits. No one remembers why the steward began numbering the shrines, but every pilgrim knows that the answer to the day's question lies in what is written at that number, at that shrine. The riddles themselves—sworn upon the Fleece, upon Tartarus, upon the Apple, upon the measure of all things—wait in their boxes like sleepers, and the ledger is the only map to waking them.",
+ "echo": "Cut off one head and two grow back.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "The Golden Fleece",
+   "flavor": "Every letter here is wearing someone else's coat. The spaces, at least, are honest.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "IJXP PJD NUYAVDA NXAAVDO IXL EUP QUWO UA LDNADPL FYP X LVEQWD IUAO PJYEODAFUWP",
+     "wide": true,
+     "solver": "substitution"
+    }
+   ],
+   "hash": "d09c8679a8800e2ed8696fe91facea3c2af9b6e865147ad8d331ddba551d2edc",
+   "partials": {},
+   "hints": [
+    "Simple monoalphabetic substitution with word breaks kept. Solve the sentence; it tells you the answer.",
+    "To check you're on track: the answer begins with T."
+   ],
+   "technique": "Cryptogram (cluephrase)",
+   "length": 11
+  },
+  {
+   "id": 2,
+   "title": "Tartarus",
+   "flavor": "Seat them correctly first. Then each guest owes you the letter of their name that matches their seat number.",
+   "blocks": [
+    {
+     "type": "seating",
+     "seats": 7,
+     "names": [
+      "Philippa",
+      "Emilia",
+      "Charles",
+      "Camilla",
+      "Jacinta",
+      "Cyprian",
+      "Anthony"
+     ],
+     "clues": [
+      "Philippa sits somewhere between Charles and Jacinta.",
+      "Camilla has an end seat.",
+      "Camilla is not in seat 7.",
+      "Emilia sits somewhere between Anthony and Cyprian.",
+      "Exactly one person sits between Emilia and Philippa.",
+      "Cyprian sits somewhere to the left of Philippa.",
+      "Jacinta sits somewhere between Cyprian and Philippa.",
+      "Philippa sits somewhere between Anthony and Charles."
+     ],
+     "logic": [
+      [
+       "between",
+       "CHARLES",
+       "PHILIPPA",
+       "JACINTA"
+      ],
+      [
+       "end",
+       "CAMILLA"
+      ],
+      [
+       "not_at",
+       "CAMILLA",
+       7
+      ],
+      [
+       "between",
+       "ANTHONY",
+       "EMILIA",
+       "CYPRIAN"
+      ],
+      [
+       "gap",
+       "EMILIA",
+       "PHILIPPA",
+       1
+      ],
+      [
+       "left_of",
+       "CYPRIAN",
+       "PHILIPPA"
+      ],
+      [
+       "between",
+       "CYPRIAN",
+       "JACINTA",
+       "PHILIPPA"
+      ],
+      [
+       "between",
+       "ANTHONY",
+       "PHILIPPA",
+       "CHARLES"
+      ]
+     ]
+    }
+   ],
+   "hash": "729fe8552e84a67d3741b312a51968126caff3b5e955b0bb80a1785e91a8a335",
+   "partials": {},
+   "hints": [
+    "A logic puzzle: use the clues to find the one seating that works (seats are numbered 1 to n from the left). Then the guest in seat k gives the k-th letter of their name.",
+    "To check you're on track: the answer begins with C."
+   ],
+   "technique": "Seating plan (logic)",
+   "length": 7
+  },
+  {
+   "id": 3,
+   "title": "Apple Of Discord",
+   "flavor": "The note at Delphi was written round and round the page, from the edge towards the middle.",
+   "blocks": [
+    {
+     "type": "lettergrid",
+     "rows": [
+      "IHSAWEG",
+      "DGNOLAA",
+      "DADSYLS",
+      "ENA·ALS",
+      "NDESSAE",
+      "IIDUYTM",
+      "NTALLHE",
+      "PSIMPGH",
+      "LAINSIT"
+     ]
+    }
+   ],
+   "hash": "96fe932369f09825248e7c2d8ab94737f80e93ea1077d2c258205b6fdfe9427c",
+   "partials": {},
+   "hints": [
+    "A sentence was written into the grid along a spiral, starting in one corner and winding inward. Find the corner and the direction, read the sentence (dots are padding), and it tells you the answer.",
+    "To check you're on track: the answer begins with D."
+   ],
+   "technique": "Spiral route",
+   "length": 8
+  },
+  {
+   "id": 4,
+   "title": "Nothing In Excess",
+   "flavor": "The typist at Delphi was consistently, reliably, one step off.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "OEINWRGWYA",
+     "big": true,
+     "shift": -1
+    }
+   ],
+   "hash": "6c9aea94962cda235c89d0358c3820f632515c271dd102c79b0b1741a7caa662",
+   "partials": {},
+   "hints": [
+    "Every letter was typed one key to the side on a QWERTY keyboard.",
+    "To check you're on track: the answer begins with P."
+   ],
+   "technique": "Keyboard shift",
+   "length": 10
+  }
+ ],
+ "meta": {
+  "title": "Meta: The Oracle Is Closed",
+  "flavor": "Tonight's seating chart. Every seat is one letter wide.",
+  "blocks": [
+   {
+    "type": "list",
+    "items": [
+     "Row 1, seat 2",
+     "Row 2, seat 2",
+     "Row 3, seat 4",
+     "Row 4, seat 2",
+     "Row 3, seat 5"
+    ],
+    "ordered": true
+   }
+  ],
+  "length": 5,
+  "hash": "d6d53e96637b758fab488b257e52ef7bd433427695ff34494b7e36020b25d41a",
+  "hints": [
+   "Each entry is (puzzle number, letter number): index into that puzzle's answer.",
+   "To check you're on track: the final answer begins with H."
+  ]
+ },
+ "described": true
+}

@@ -1,0 +1,46 @@
+{
+ "date": "2026-11-18",
+ "number": 53,
+ "difficulty": "easy",
+ "final": "ROOTKIT",
+ "metaType": "logbook",
+ "explain": "Each entry is (puzzle number, letter number): index into that puzzle's answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Heap Spray",
+   "answer": "HANDSHAKE",
+   "mechanism": "Spiral route",
+   "transform": null,
+   "encoded": "HANDSHAKE",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Man In The Middle",
+   "answer": "PROXY",
+   "mechanism": "Morse code",
+   "transform": null,
+   "encoded": "PROXY",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Privilege Escalation",
+   "answer": "TERMINAL",
+   "mechanism": "Scrambled sentence",
+   "transform": null,
+   "encoded": "TERMINAL",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Dead Drop",
+   "answer": "SPOOF",
+   "mechanism": "Shredded sentence",
+   "transform": null,
+   "encoded": "SPOOF",
+   "mutated": null
+  }
+ ]
+}

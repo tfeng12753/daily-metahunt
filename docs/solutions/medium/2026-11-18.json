@@ -1,0 +1,55 @@
+{
+ "date": "2026-11-18",
+ "number": 53,
+ "difficulty": "medium",
+ "final": "FIREWALL",
+ "metaType": "logbook",
+ "explain": "Each entry is (puzzle number, letter number): index into that puzzle's answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Dead Drop",
+   "answer": "SHELL",
+   "mechanism": "Morse code (signal lamp)",
+   "transform": null,
+   "encoded": "SHELL",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Privilege Escalation",
+   "answer": "CIPHER",
+   "mechanism": "Atomic numbers (by mass)",
+   "transform": null,
+   "encoded": "CIPHER",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Side Channel",
+   "answer": "HANDSHAKE",
+   "mechanism": "Pigpen cipher",
+   "transform": null,
+   "encoded": "HANDSHAKE",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Cold Boot",
+   "answer": "PASSWORD",
+   "mechanism": "Knight's path",
+   "transform": null,
+   "encoded": "PASSWORD",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Null Byte",
+   "answer": "SNIFFER",
+   "mechanism": "Seating plan (logic)",
+   "transform": null,
+   "encoded": "SNIFFER",
+   "mutated": null
+  }
+ ]
+}

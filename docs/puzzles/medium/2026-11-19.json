@@ -1,0 +1,198 @@
+{
+ "date": "2026-11-19",
+ "difficulty": "medium",
+ "salt": "2026-11-19/medium",
+ "number": 54,
+ "round": "The Oracle Is Closed",
+ "intro": "The Oracle at Delphi has stopped answering questions. Instead she has left a set of riddles, each one sworn upon a different god, and the pilgrims crowd the stairway of the temple, each holding a token from the treasury. The gate-keeper stamps each token with two marks before it may be laid upon the altar: the number of the shrine the supplicant came from, and the number of the niche where it must be set, and he does this with the flat certainty of a man sorting freight. The pilgrims study the stamped tokens as they walk, turning them over in their hands, and some have begun to arrange their own sets in rows upon the temple steps.",
+ "echo": "Before the gods there were their parents, and they were very large.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Tartarus",
+   "flavor": "Pairs of numbers pencilled in the margin.",
+   "blocks": [
+    {
+     "type": "prose",
+     "text": "The Oracle at Delphi has stopped answering questions. Instead she has left a set of riddles, each one sworn upon a different god.",
+     "paper": true
+    },
+    {
+     "type": "list",
+     "items": [
+      "9.6",
+      "6.5",
+      "10.2",
+      "19.4",
+      "15.1",
+      "6.7",
+      "7.7",
+      "3.2",
+      "22.5"
+     ],
+     "inline": true
+    }
+   ],
+   "hash": "31eb5fd18d3a89186ebafde3e0c5ab01650cd87b24d95030a7c3f946547e5e6d",
+   "partials": {},
+   "hints": [
+    "The first number in each pair never goes past the number of words on the page. What does the second count?",
+    "The first number finds a word on the page; the second finds a letter in it."
+   ],
+   "length": 9
+  },
+  {
+   "id": 2,
+   "title": "Elysian Fields",
+   "flavor": "Fenced in, and copied out in a hurry.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "SLITL TENNL EGHRH HUDHS OEALN OHWOG ADPES FRETE ODTEA OTNFI TRHSA OTWAN",
+     "wide": true,
+     "rails": 3
+    }
+   ],
+   "hash": "2935dd43c2a965f0bec062f29595be0c37d2e12c0e5ade719656143f55feea76",
+   "partials": {},
+   "hints": [
+    "All the right letters are here, just out of order. Could they have been written along a path that goes up and down?",
+    "Rail fence: written in a zigzag over a few rows, then copied out row by row. Try two to five rows."
+   ],
+   "length": 6
+  },
+  {
+   "id": 3,
+   "title": "Wine-Dark Sea",
+   "flavor": "No duplicates anywhere.",
+   "blocks": [
+    {
+     "type": "sudoku",
+     "size": 6,
+     "rows": [
+      "R...A.",
+      "N..C..",
+      ".N..E.",
+      ".....A",
+      ".A.E..",
+      "....R."
+     ],
+     "alphabet": "ACENRT",
+     "marks": [
+      [
+       4,
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       2,
+       5
+      ],
+      [
+       1,
+       4
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       1,
+       5
+      ]
+     ]
+    }
+   ],
+   "hash": "c70c328cf37103e5c1036cb883a475cb0bf293d12b25a2f1539a775fe94a25a8",
+   "partials": {},
+   "hints": [
+    "A familiar grid puzzle in unfamiliar clothes. Once it's done, are some squares more important than others?",
+    "Solve it like a sudoku, then read the numbered squares in order."
+   ],
+   "length": 6
+  },
+  {
+   "id": 4,
+   "title": "Twelve Labours",
+   "flavor": "It goes round and round, and only gets anywhere in the middle.",
+   "blocks": [
+    {
+     "type": "lettergrid",
+     "rows": [
+      "SWITHASING",
+      "DUWANTFROL",
+      "NOCHILLEME",
+      "EYA····STW",
+      "TDS·····HO",
+      "NRIEGAPSIR",
+      "UOWEHTDNAD",
+      "HDOOGYREVE"
+     ]
+    }
+   ],
+   "hash": "38a4fb6480bf5bd68a8682c7841709b162b3f5822413b048a825578730bbc7c7",
+   "partials": {},
+   "hints": [
+    "All the letters of a sentence are here, but not in rows. Try walking the grid the way a snail would.",
+    "Start in one corner and spiral inward along the edges; one corner and one direction read as a sentence."
+   ],
+   "length": 8
+  },
+  {
+   "id": 5,
+   "title": "Apple Of Discord",
+   "flavor": "Every flag on this line means something on its own. Together they mean one more thing.",
+   "blocks": [
+    {
+     "type": "flags",
+     "items": [
+      "H",
+      "E",
+      "P",
+      "H",
+      "A",
+      "E",
+      "S",
+      "T",
+      "U",
+      "S"
+     ]
+    }
+   ],
+   "hash": "159f5fead49ff5ded955cee7e493bb253fb58b13c9d5386400e361bd55e77a1b",
+   "partials": {},
+   "hints": [
+    "Ships carry a flag for every letter of the alphabet. Do you know them?",
+    "International maritime signal flags: one letter each, left to right."
+   ],
+   "length": 10
+  }
+ ],
+ "meta": {
+  "title": "Meta: The Oracle Is Closed",
+  "flavor": "Tonight's seating chart.",
+  "blocks": [
+   {
+    "type": "list",
+    "items": [
+     "Row 5, seat 8",
+     "Row 1, seat 7",
+     "Row 2, seat 2",
+     "Row 4, seat 1",
+     "Row 3, seat 1"
+    ],
+    "ordered": true
+   }
+  ],
+  "length": 5,
+  "hash": "42bcba3cd02e4d5118c12744f5354f08b305b55c2d1d983294fd7d532d09985f",
+  "hints": [
+   "Every entry has two numbers. What in this round is numbered, and what could the second number count?",
+   "The first number picks a puzzle; the second picks a letter inside its answer."
+  ]
+ },
+ "described": true
+}

@@ -1,0 +1,540 @@
+{
+ "date": "2026-11-19",
+ "difficulty": "hard",
+ "salt": "2026-11-19",
+ "number": 54,
+ "round": "The Oracle Is Closed",
+ "intro": "The Oracle at Delphi has stopped answering questions. Instead she has left a set of riddles, each one sworn upon a different god, and the pilgrims have learned to wait in the same hush as the priests who tend the sacred hearth. Each evening the elders clear the temple steps of the day's offerings, and each evening they find one more fig than they left, one more coin than the pilgrims brought, one more shadow at the edge of the ash-tray where no one sits. They do not speak of it; they sweep it into the same cloth and carry it down the Sacred Way as though it were always so. The pilgrims have begun to leave small gifts of their own, not for the goddess, but for whichever thing comes after dark and takes the extra things.",
+ "echo": "The gods live nearly three thousand metres up, above the clouds of Thessaly.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Ambrosia",
+   "flavor": "Tidy up the inventory. Something in here has been through the looking glass.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "SEMZREH",
+      "AGSCSISURN",
+      "MTEESEDR",
+      "SUEVSEPR",
+      "SULMAADDE",
+      "RULOEHPS",
+      "OISEDNPOZ"
+     ],
+     "ordered": true,
+     "mono": true
+    }
+   ],
+   "hash": "61b0fda92883d7e63d966840e05c30229dae73efab1229794df455d1ed374d7d",
+   "partials": {
+    "4c78be29adaf0ff40834a44aaef81864f341a1307a93e890ff883ddec816eb62": "You've decoded it, but it's not finished. One more layer.",
+    "6d1302743623ffd8df5351908cd569ccd7acc819a862f29548a03e597f2fd26d": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Each jumble is almost a word from this round, but with a letter to spare. Which letter, every time? And if what you get still isn't a word, reread the flavour text."
+   ]
+  },
+  {
+   "id": 2,
+   "title": "Tartarus",
+   "flavor": "Walk the fence; don't read it.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "TTTRY FEEDH THSTG HEATP EOHLW NAWPL IEEAH NEPTR EBRTI ETEAA RDLIO ODEND SO",
+     "wide": true,
+     "rails": 4
+    }
+   ],
+   "hash": "22ef3138c8021bf1f54062902711bd553c87c5e97e1b0902adf5fc927068cc69",
+   "partials": {
+    "e0e6f8531689f662aff3abed7f603cc126e17dcae01023ae20d8d40ed2caa352": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "All the right letters are here, just out of order. Could they have been written along a path that goes up and down?"
+   ]
+  },
+  {
+   "id": 3,
+   "title": "Elysian Fields",
+   "flavor": "A familiar grid, an unfamiliar alphabet.",
+   "blocks": [
+    {
+     "type": "sudoku",
+     "size": 9,
+     "rows": [
+      "YE.S.....",
+      "T...EP...",
+      "...VU..A.",
+      "S.....PVE",
+      "H.......S",
+      ".......T.",
+      ".P...EY..",
+      "..UA.....",
+      ".T...U.S."
+     ],
+     "alphabet": "AEHPSTUVY",
+     "marks": [
+      [
+       5,
+       6
+      ],
+      [
+       5,
+       3
+      ],
+      [
+       7,
+       8
+      ],
+      [
+       7,
+       1
+      ],
+      [
+       3,
+       4
+      ],
+      [
+       2,
+       6
+      ],
+      [
+       6,
+       2
+      ],
+      [
+       0,
+       4
+      ],
+      [
+       3,
+       3
+      ],
+      [
+       1,
+       6
+      ],
+      [
+       2,
+       5
+      ]
+     ]
+    }
+   ],
+   "hash": "d5ea502c2d3735ac3b24de40a8ed53b74aa40537c88f7d9489e6acddf56e4edf",
+   "partials": {
+    "c740c0368d4135604c5035e91fe9a9c52c1b3c2a04a82196205be5b7d82b7fb8": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "A familiar grid puzzle in unfamiliar clothes. Once it's done, are some squares more important than others?"
+   ]
+  },
+  {
+   "id": 4,
+   "title": "Laurel Wreath",
+   "flavor": "Every word ran into itself. The little numbers know where to look.",
+   "blocks": [
+    {
+     "type": "morselines",
+     "items": [
+      {
+       "code": "-...--.-..-.",
+       "len": 7,
+       "index": 3
+      },
+      {
+       "code": "-...........-...",
+       "len": 7,
+       "index": 5
+      },
+      {
+       "code": "-.-.......--..-..-",
+       "len": 7,
+       "index": 4
+      },
+      {
+       "code": "-....----.-.--.....-...",
+       "len": 8,
+       "index": 1
+      },
+      {
+       "code": "---.-..--........-...",
+       "len": 7,
+       "index": 6
+      },
+      {
+       "code": ".--...-.......-...",
+       "len": 7,
+       "index": 7
+      },
+      {
+       "code": ".--.-...-...",
+       "len": 5,
+       "index": 4
+      }
+     ]
+    }
+   ],
+   "hash": "e968b66fe2e140161a59c5b6a990879c6f7adf62a5da2d53a6a476bf3eafe173",
+   "partials": {
+    "3c500243e5c2852cc6791239574b6ae54c54e303ef78e200b8ae523bc5350531": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Two symbols, no spaces, and a letter count. Which old code is it, and which word from this round fits each line?"
+   ]
+  },
+  {
+   "id": 5,
+   "title": "The Golden Fleece",
+   "flavor": "Some of these are far too big to be letters.",
+   "blocks": [
+    {
+     "type": "numbers",
+     "items": [
+      53,
+      6,
+      91,
+      44,
+      16
+     ],
+     "tray": 2
+    }
+   ],
+   "hash": "640c2f0c909b3fa7bffa4eba3c4e76fedca8b28f26e1d66d030d6ffe0efdf437",
+   "partials": {
+    "da259656d9aa94ac6e95798470a240996829b5f07aa40de48765682e5ea9ff63": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Several of these numbers are bigger than 26, so they can't be letter positions. What else has a number that high?"
+   ]
+  },
+  {
+   "id": 6,
+   "title": "Nothing In Excess",
+   "flavor": "Take stock of everything you recognise. Whatever you find, it was said on the way out, not the way in.",
+   "blocks": [
+    {
+     "type": "caption",
+     "text": "Somewhere in here: things to do with Delphi."
+    },
+    {
+     "type": "board",
+     "rows": [
+      "ASNERIS",
+      "TNEDIRT",
+      "LUUZSAG",
+      "AEEHERA",
+      "SUHADES",
+      "SHERMES",
+      "PNECTAR"
+     ],
+     "plain": true,
+     "words": [
+      "ATLAS",
+      "HADES",
+      "HERA",
+      "HERMES",
+      "NECTAR",
+      "SIREN",
+      "TRIDENT",
+      "ZEUS"
+     ]
+    }
+   ],
+   "hash": "011555a285df721ce2cbd79865c71c5d6a17f7df80440e712431518639792226",
+   "partials": {
+    "3cb59c9c1a867bf0714edf569eea8955a10d1d7d329b2980b214b0225667d727": "You've decoded it, but it's not finished. One more layer.",
+    "c6946cbc8ee1c3f9899b4ffea8e1323a4702587269f03086a89b74e8ae265be2": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Once every theme word is found, is anything left unclaimed? Read it in order. And if what you get still isn't a word, reread the flavour text.",
+    "The hidden words are: ATLAS, HADES, HERA, HERMES, NECTAR, SIREN, TRIDENT, ZEUS."
+   ]
+  },
+  {
+   "id": 7,
+   "title": "Wine-Dark Sea",
+   "flavor": "The picture is worth exactly one word.",
+   "blocks": [
+    {
+     "type": "nonogram",
+     "rows": [
+      [
+       3,
+       4,
+       4,
+       5,
+       5,
+       1,
+       1,
+       5,
+       4
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       2,
+       2,
+       1,
+       1
+      ],
+      [
+       5,
+       3,
+       4,
+       1,
+       4,
+       1,
+       1,
+       1,
+       1,
+       3
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       4,
+       1,
+       1,
+       1,
+       5,
+       1,
+       1,
+       5,
+       4
+      ]
+     ],
+     "cols": [
+      [
+       4
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       4
+      ],
+      [],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       5
+      ],
+      [],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "givens": [
+      [
+       1,
+       6,
+       1
+      ],
+      [
+       3,
+       42,
+       0
+      ],
+      [
+       3,
+       10,
+       1
+      ],
+      [
+       0,
+       1,
+       1
+      ],
+      [
+       1,
+       42,
+       1
+      ]
+     ]
+    }
+   ],
+   "hash": "61fa49a15db039e8e0a789204c2f0c736c9fc097130d2384be60e9904989b56b",
+   "partials": {
+    "e4ec64fe13c2c12bdfbe50e53d9319f4df793ce35b862a3a2a6fafd7348e69d9": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "The numbers describe runs of filled squares. What picture could they be drawing?"
+   ]
+  }
+ ],
+ "meta": {
+  "title": "Meta: The Oracle Is Closed",
+  "flavor": "Everything arrived a little heavier than it left.",
+  "blocks": [],
+  "length": 7,
+  "hash": "0b048a2842f83fed6096c960baa8f46911a7b512889ca230ca9808b2e7552a32",
+  "hints": [
+   "Did every answer come out the right size the first time? Each had one letter too many. Did you keep them?"
+  ]
+ },
+ "described": true
+}
