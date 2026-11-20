@@ -1,0 +1,73 @@
+{
+ "date": "2026-11-19",
+ "number": 54,
+ "difficulty": "hard",
+ "final": "OLYMPUS",
+ "metaType": "stowaway",
+ "explain": "Each feeder decodes to its answer plus one inserted letter. The inserted letters, in puzzle order, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Ambrosia",
+   "answer": "ATHENA",
+   "mechanism": "Anagrams with an extra letter",
+   "transform": "Atbash (A↔Z mirror)",
+   "encoded": "ZGSVMLZ",
+   "mutated": "ATHENOA"
+  },
+  {
+   "id": 2,
+   "title": "Tartarus",
+   "answer": "APHRODITE",
+   "mechanism": "Rail fence (cluephrase)",
+   "transform": null,
+   "encoded": "APHLRODITE",
+   "mutated": "APHLRODITE"
+  },
+  {
+   "id": 3,
+   "title": "Elysian Fields",
+   "answer": "HEPHAESTUS",
+   "mechanism": "Letter sudoku",
+   "transform": null,
+   "encoded": "HEPHAESTUSY",
+   "mutated": "HEPHAESTUSY"
+  },
+  {
+   "id": 4,
+   "title": "Laurel Wreath",
+   "answer": "MEDUSA",
+   "mechanism": "Gapless Morse",
+   "transform": null,
+   "encoded": "MEMDUSA",
+   "mutated": "MEMDUSA"
+  },
+  {
+   "id": 5,
+   "title": "The Golden Fleece",
+   "answer": "ICARUS",
+   "mechanism": "Element spelling",
+   "transform": null,
+   "encoded": "ICPARUS",
+   "mutated": "ICPARUS"
+  },
+  {
+   "id": 6,
+   "title": "Nothing In Excess",
+   "answer": "PEGASUS",
+   "mechanism": "Word search leftovers",
+   "transform": "Reversal",
+   "encoded": "SUUSAGEP",
+   "mutated": "PEGASUUS"
+  },
+  {
+   "id": 7,
+   "title": "Wine-Dark Sea",
+   "answer": "ARTEMIS",
+   "mechanism": "Nonogram",
+   "transform": null,
+   "encoded": "ASRTEMIS",
+   "mutated": "ASRTEMIS"
+  }
+ ]
+}

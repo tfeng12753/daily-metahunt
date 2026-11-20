@@ -1,0 +1,214 @@
+{
+ "date": "2026-11-20",
+ "difficulty": "easy",
+ "salt": "2026-11-20/easy",
+ "number": 55,
+ "round": "Valley Of The Kings",
+ "intro": "The excavators broke the seal on a tomb that appears on no king-list. Every chamber is empty except for a single inscription, carved in a script that is not quite hieroglyphic. The night watch-keeper refuses the foreman's lamp and instead marks a strip of papyrus with only two symbols for each passing hour: the bell of the watch and the notch of the hour within it. He claims the tomb's silence has taught him that everything is found by its place in the round of the night, and he will not speak until the last of the five inscriptions has been copied beside its bell. His papyrus, he says, is not a record but a key: first the round, then the mark inside it.",
+ "echo": "The beetle rolls its ball across the sand the way Khepri rolls the sun.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Weighing Of The Heart",
+   "flavor": "One alphabet was traded for another, one for one, and nobody bothered to hide where the words begin and end.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "AIGS SIF RBHTNFT RGTTNFU AGE LBS OBPU BT EFRTFSE VHS G ENLOPF ABTU GYHPFS",
+     "wide": true,
+     "solver": "substitution"
+    }
+   ],
+   "hash": "ce34463265d05ed326fb7b511d14de85bcc1886bc5f79686dae9e10c8d7bed9b",
+   "partials": {},
+   "hints": [
+    "Simple monoalphabetic substitution with word breaks kept. Solve the sentence; it tells you the answer.",
+    "To check you're on track: the answer begins with A."
+   ],
+   "technique": "Cryptogram (cluephrase)",
+   "length": 6
+  },
+  {
+   "id": 2,
+   "title": "False Door",
+   "flavor": "An inventory of the tomb, tangled up. Whatever is left over when every item is accounted for is yours.",
+   "blocks": [
+    {
+     "type": "caption",
+     "text": "Hidden in the grid: 10 words to do with the tomb (lengths 4, 4, 4, 4, 5, 5, 5, 5, 6, 6), running in any direction."
+    },
+    {
+     "type": "board",
+     "rows": [
+      "OASISFS",
+      "ADNLLSI",
+      "CEIOCCR",
+      "DELTARI",
+      "OREUMIS",
+      "ISISEBO",
+      "SIBILEN"
+     ],
+     "plain": true,
+     "words": [
+      "CAMEL",
+      "DELTA",
+      "IBIS",
+      "ISIS",
+      "LOTUS",
+      "NILE",
+      "OASIS",
+      "OSIRIS",
+      "REED",
+      "SCRIBE"
+     ]
+    }
+   ],
+   "hash": "e276a5afee5566702da58ba8e6cec27d0011def02eeb9d2c5fff4cf8b14074ca",
+   "partials": {},
+   "hints": [
+    "Find every hidden word (any of 8 directions). The unused letters, read left-to-right, top-to-bottom, spell the answer.",
+    "The hidden words are: CAMEL, DELTA, IBIS, ISIS, LOTUS, NILE, OASIS, OSIRIS, REED, SCRIBE.",
+    "To check you're on track: the answer begins with F."
+   ],
+   "technique": "Word search leftovers",
+   "length": 6
+  },
+  {
+   "id": 3,
+   "title": "Book Of The Dead",
+   "flavor": "Nothing was lost in transcription; everything simply moved over.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "RINV",
+     "big": true,
+     "shift": -1
+    }
+   ],
+   "hash": "5f34bf035dfa01da6f62a580f01f7c1badd8c671bf37cd1ae67fcf629d82f92b",
+   "partials": {},
+   "hints": [
+    "Every letter was typed one key to the side on a QWERTY keyboard.",
+    "To check you're on track: the answer begins with T."
+   ],
+   "technique": "Keyboard shift",
+   "length": 4
+  },
+  {
+   "id": 4,
+   "title": "Solar Barque",
+   "flavor": "Fill the gaps. What you fill them with is the point.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "CROCO_ILE",
+      "MUMM_",
+      "CA_OPIC",
+      "S_RCOPHAGUS",
+      "LOTU_",
+      "NA_RON",
+      "HIEROGL_PH"
+     ],
+     "ordered": true,
+     "mono": true
+    }
+   ],
+   "hash": "25b410aa4c7a36f34ac980cea2ab657f719658edc213f93eaeb7aa9c25030cbb",
+   "partials": {},
+   "hints": [
+    "Each theme word is missing one letter. The missing letters, in order, spell the answer.",
+    "To check you're on track: the answer begins with D."
+   ],
+   "technique": "Missing letters",
+   "length": 7
+  },
+  {
+   "id": 5,
+   "title": "Opening Of The Mouth",
+   "flavor": "The telegraphist inside the tomb never paused between letters. You'll have to work out where one ends and the next begins, and the word bank will help.",
+   "blocks": [
+    {
+     "type": "morselines",
+     "items": [
+      {
+       "code": ".-...-..",
+       "len": 4,
+       "index": 4
+      },
+      {
+       "code": "-.--.--..-...",
+       "len": 6,
+       "index": 2
+      },
+      {
+       "code": "...-.-..-...-....",
+       "len": 6,
+       "index": 1
+      },
+      {
+       "code": "-.-..-...---.--..--.-..-",
+       "len": 9,
+       "index": 3
+      },
+      {
+       "code": "---......-......",
+       "len": 6,
+       "index": 4
+      },
+      {
+       "code": "-....-...-.-..-..",
+       "len": 9,
+       "index": 6
+      }
+     ],
+     "bank": [
+      "CAMEL",
+      "CLEOPATRA",
+      "HORUS",
+      "LOTUS",
+      "NEFERTITI",
+      "OSIRIS",
+      "REED",
+      "SCRIBE",
+      "TEMPLE",
+      "THOTH"
+     ]
+    }
+   ],
+   "hash": "890107cdfef5ea42d3709b01f2538b611e1262d23efb2e36e222660a1b8ebc9e",
+   "partials": {},
+   "hints": [
+    "Each line is a word from this round's theme in Morse code with the gaps between letters lost. Work out which word fits the dots, dashes and letter count, then take the letter at the position shown.",
+    "To check you're on track: the answer begins with D."
+   ],
+   "technique": "Gapless Morse",
+   "length": 6
+  }
+ ],
+ "meta": {
+  "title": "Meta: Valley Of The Kings",
+  "flavor": "The watch-keeper wrote down nothing but the day and the bell. Every day was one of your puzzles.",
+  "blocks": [
+   {
+    "type": "list",
+    "items": [
+     "Day 4, 5 bells",
+     "Day 2, 4 bells",
+     "Day 1, 1 bells",
+     "Day 5, 5 bells",
+     "Day 2, 2 bells",
+     "Day 3, 4 bells"
+    ],
+    "ordered": true
+   }
+  ],
+  "length": 6,
+  "hash": "7f0b226d3164a4c4d32e09ae76fc58a08dfa1116b4efe332dd36174c9719261d",
+  "hints": [
+   "Each entry is (puzzle number, letter number): index into that puzzle's answer.",
+   "To check you're on track: the final answer begins with S."
+  ]
+ },
+ "described": true
+}

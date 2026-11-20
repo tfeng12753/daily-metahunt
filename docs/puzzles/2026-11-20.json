@@ -1,0 +1,195 @@
+{
+ "date": "2026-11-20",
+ "difficulty": "hard",
+ "salt": "2026-11-20",
+ "number": 55,
+ "round": "Valley Of The Kings",
+ "intro": "The excavators broke the seal on a tomb that appears on no dynasty list. Every chamber is empty except for a single inscription, carved in a script that is not quite sacred. The head copyist has begun her day's work, and already a small pile of slips lies beside her inkwell, each one carefully scraped clean and set aside, as if she could not trust the first telling of any line. She will not say why, only that the stone seems to shift its meaning when copied too hastily, and that a copy that agrees too perfectly with the wall is the one most likely to betray you. The crew has learned not to ask which of her finished pages has been discarded, only to tiptoe past the heap.",
+ "echo": "Four triangular faces, pointing at the sun, over a very small room.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Weighing Of The Heart",
+   "flavor": "Around the edges first; the point comes last.",
+   "blocks": [
+    {
+     "type": "lettergrid",
+     "rows": [
+      "DIHSAWEGAS",
+      "DDNAGNOLAS",
+      "EIGORPIHLE",
+      "NTL····SLM",
+      "ISYPH··YAE",
+      "NIMPLYSATH",
+      "PLAINSIGHT"
+     ]
+    }
+   ],
+   "hash": "a5ab31cdd60fc3e3fcdb5dea4271c967bb3ba3b9bc2de9d87962f01e81ef0d08",
+   "partials": {
+    "bb2aa219a64338de0d701a6b65ebbca96384c7a39cb8eac5ee3998d3605f7c2a": "So close. Exactly one thing is wrong here. Fix it (and remember what you fixed)."
+   },
+   "hints": [
+    "All the letters of a sentence are here, but not in rows. Try walking the grid the way a snail would."
+   ]
+  },
+  {
+   "id": 2,
+   "title": "The Inundation",
+   "flavor": "The words are nonsense. The typesetting isn't. The tape was spooled back onto the wrong reel.",
+   "blocks": [
+    {
+     "type": "prose",
+     "text": "lUxor OsiRIs Reed GizA ANubiS dyNasTY natroN croCOdIle."
+    }
+   ],
+   "hash": "38eb52ef3ded47d9c494f4bdd0cfb4bbbad990ccacc54d228438c34212f1399d",
+   "partials": {
+    "6a49660373751e214505695030bcfb82153c206256d303702ce0698adf5e438d": "You've decoded it, but it's not finished. One more layer.",
+    "2e5105019630ce856647afc10d3d788f678009c63a994abc1d535d98844a14c3": "So close. Exactly one thing is wrong here. Fix it (and remember what you fixed)."
+   },
+   "hints": [
+    "Two kinds of letter, big and small. How many of them would you need to spell twenty-six different things? And if what you get still isn't a word, reread the flavour text."
+   ]
+  },
+  {
+   "id": 3,
+   "title": "False Door",
+   "flavor": "A sentence in disguise, and not a very good disguise.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "KFS YSQQRTS BRQ FAOOSG AG LWRAG QATFK RWW RWPGT RGO AK QAYLWC QRCQ KMKRGHFRYXG",
+     "wide": true,
+     "solver": "substitution"
+    }
+   ],
+   "hash": "b384d2f78f7892b02181afb61c03836e1fbe4e4662a6f490938f2e2af327a2f8",
+   "partials": {
+    "08ab9afc6dc0385784405480949b8950e78346615c8a386c16df11490847243e": "So close. Exactly one thing is wrong here. Fix it (and remember what you fixed)."
+   },
+   "hints": [
+    "Which short words are most common in English? Could any of them be hiding here?"
+   ]
+  },
+  {
+   "id": 4,
+   "title": "Field Of Reeds",
+   "flavor": "A paint chart for a room nobody will ever decorate.",
+   "blocks": [
+    {
+     "type": "swatches",
+     "items": [
+      "#434C41",
+      "#4F5041",
+      "#545241"
+     ]
+    }
+   ],
+   "hash": "28eb84dd41c0cb377263a639634fa6465b9bca76fc399a976718419076601a0e",
+   "partials": {
+    "b89d6c620705e12de17c46d913ccd1ef535f7e558b02ebef4d8289032b62b925": "So close. Exactly one thing is wrong here. Fix it (and remember what you fixed)."
+   },
+   "hints": [
+    "Split each colour code into three pairs of hex digits. What else is a two-digit hex number?"
+   ]
+  },
+  {
+   "id": 5,
+   "title": "Opening Of The Mouth",
+   "flavor": "Everything fell straight down, and landed in the right column.",
+   "blocks": [
+    {
+     "type": "dropquote",
+     "cols": [
+      "AIIWW",
+      "BEENNY",
+      "ELMT",
+      "LLNTX",
+      "AHOTY",
+      "DENW",
+      "DOOO",
+      "NNNWW",
+      "EEMOR",
+      "IORT",
+      "DOTVY",
+      "EEO",
+      "STU",
+      "CDHQ",
+      "EMORU"
+     ],
+     "mask": [
+      "....#....#...#.",
+      "..#...#.....#..",
+      "..#...#....#...",
+      "...#...#....#..",
+      ".....#..#..#...",
+      "#....#...######"
+     ]
+    }
+   ],
+   "hash": "bafaef29353c605ebde2bb86f530836d7a8b3347bc01b49d99f8d79c1f8d070f",
+   "partials": {
+    "d04c9cf35c4eca1436027c15f4d2dc19036368729807a6ac0082725bc35a8275": "So close. Exactly one thing is wrong here. Fix it (and remember what you fixed)."
+   },
+   "hints": [
+    "Black squares are spaces. Which two- and three-letter words fit, using only the letters each column allows?"
+   ]
+  },
+  {
+   "id": 6,
+   "title": "Book Of The Dead",
+   "flavor": "Call signs, reflected.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "Zulu",
+      "November",
+      "Foxtrot",
+      "Romeo",
+      "Victor",
+      "Golf"
+     ]
+    }
+   ],
+   "hash": "5e30ca68e32c030e33c57c33aadc25c81c716f1a559da79f9eee4a1f611bafc5",
+   "partials": {
+    "732af1e6ef218ac66aac4dead903e9a3c5a3d0933b6fc787034ce70ed370a575": "So close. Exactly one thing is wrong here. Fix it (and remember what you fixed)."
+   },
+   "hints": [
+    "Each word stands for a letter, the way radio operators spell. Do those letters read? If not, try the alphabet backwards."
+   ]
+  },
+  {
+   "id": 7,
+   "title": "Cartouche",
+   "flavor": "Read the heading twice: once to learn what this is called, and once to open it.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "EDEHDCE",
+     "big": true
+    }
+   ],
+   "hash": "4b9b28c2049a35b6773de25d12262a2804b3ebd986d4f706e7598cd69d49d9df",
+   "partials": {
+    "d0df1853fed9338255736efa5c18ea46f9bda0ace31e857fbbcacdcf18b115b3": "So close. Exactly one thing is wrong here. Fix it (and remember what you fixed)."
+   },
+   "hints": [
+    "A cipher with a word for a key. Which famous one works like that, and what word on this page could open it?"
+   ]
+  }
+ ],
+ "meta": {
+  "title": "Meta: Valley Of The Kings",
+  "flavor": "Nothing reached the tomb undamaged. The damage, though, was remarkably consistent.",
+  "blocks": [],
+  "length": 7,
+  "hash": "609b66940eadc831297f4c9d04cbd4316e48df9f667ef377c92379c8daebda12",
+  "hints": [
+   "Did every answer come out clean the first time? Each had exactly one wrong letter. Did you keep them?"
+  ]
+ },
+ "described": true
+}

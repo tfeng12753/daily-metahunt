@@ -1,0 +1,304 @@
+{
+ "date": "2026-11-20",
+ "difficulty": "medium",
+ "salt": "2026-11-20/medium",
+ "number": 55,
+ "round": "Valley Of The Kings",
+ "intro": "The excavators broke the seal on a tomb that appears on no dynasty list, and the dust tasted of closed rooms. Every chamber is empty except for a single inscription, carved in a script that is not quite hieroglyphic, and the team has begun to treat that line of signs as the only real find. In the antechamber they have borrowed an old sorting case from the survey office: narrow pigeonholes cut so each will take only the coin, scarab or flake of exactly its own measure, with no room to borrow from its neighbour. The workmen drop their mornings' dust into it in silence, because a piece that rattles loose has plainly been set down in the wrong home. Still, the inscription's few words seem to wait for somewhere to be filed.",
+ "echo": "What walks on four legs in the morning, two at noon and three in the evening?",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Book Of The Dead",
+   "flavor": "Moths got into the inventory.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "CLEOPA_RA",
+      "M_MMY",
+      "DEL_A",
+      "F_LCON",
+      "LINE_",
+      "JAC_AL",
+      "CARTOUC_E",
+      "_NUBIS",
+      "RA_SES",
+      "AM_LET",
+      "NATRO_"
+     ],
+     "ordered": true,
+     "mono": true
+    }
+   ],
+   "hash": "75508d8d97c63836af4f1b4e125a5e707c24ee9bc8f9c599b9a4ba1506e9a83b",
+   "partials": {},
+   "hints": [
+    "Every gap takes exactly one letter. Is there a pattern in what you filled in?",
+    "Read the letters you supplied, in order."
+   ],
+   "length": 11
+  },
+  {
+   "id": 2,
+   "title": "Hall Of Records",
+   "flavor": "Around the edges first; the point comes last.",
+   "blocks": [
+    {
+     "type": "lettergrid",
+     "rows": [
+      "SWERFORTH",
+      "NDONOTTEI",
+      "ATHOWYOLS",
+      "RUST··ULP",
+      "UBRITOGTU",
+      "OSEHTOEHZ",
+      "YISISIELZ"
+     ]
+    }
+   ],
+   "hash": "82328548b6b7fc6ba8d14acabe672c942339e0f7774a6404ef2fa35311d79315",
+   "partials": {},
+   "hints": [
+    "All the letters of a sentence are here, but not in rows. Try walking the grid the way a snail would.",
+    "Start in one corner and spiral inward along the edges; one corner and one direction read as a sentence."
+   ],
+   "length": 4
+  },
+  {
+   "id": 3,
+   "title": "Seal Unbroken",
+   "flavor": "Nothing is missing. Nothing is where it was.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "EEVYR",
+      "OGDO",
+      "HTNU",
+      "DESN",
+      "TIHW",
+      "A",
+      "NGSLIE",
+      "RODW",
+      "NDA",
+      "ETH",
+      "ODRW",
+      "OYU",
+      "NAWT",
+      "MORF",
+      "ITSH",
+      "PEGA",
+      "SI",
+      "RAKNAK"
+     ],
+     "inline": true,
+     "tray": "word"
+    }
+   ],
+   "hash": "3f1c2bf02ac11060452c063186057b32950451df69bba07bab8ed22b147dbbc5",
+   "partials": {},
+   "hints": [
+    "Each word is complete but shuffled. Start with the shortest ones: does a sentence appear?",
+    "Unscramble each word where it stands; the sentence tells you what to submit."
+   ],
+   "length": 6
+  },
+  {
+   "id": 4,
+   "title": "Weighing Of The Heart",
+   "flavor": "Confetti, alphabetised.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "DBE",
+      "DEA",
+      "DWA",
+      "ELI",
+      "ENT",
+      "ETH",
+      "FER",
+      "FOR",
+      "I",
+      "ING",
+      "LAS",
+      "NEW",
+      "OPE",
+      "ORT",
+      "RAT",
+      "SNE",
+      "THE",
+      "THE",
+      "TIT",
+      "TTH",
+      "YPE"
+     ],
+     "inline": true,
+     "tiles": true
+    },
+    {
+     "type": "prose",
+     "text": "Word lengths: (3 4 5 3 8 5 6 3 4 4 4 3 9)"
+    }
+   ],
+   "hash": "693b587ec946bae805131eb2608ae08ff9432da18e32a874c122c7667d95d397",
+   "partials": {},
+   "hints": [
+    "The strips are alphabetised, not in order. The word lengths say where the breaks fall. Which strip could start the sentence?",
+    "Chain the strips into one string and split it by the word lengths; the sentence tells you what to submit."
+   ],
+   "length": 9
+  },
+  {
+   "id": 5,
+   "title": "Field Of Reeds",
+   "flavor": "Each column remembers what it held, but not in what order.",
+   "blocks": [
+    {
+     "type": "dropquote",
+     "cols": [
+      "EEORW",
+      "HTT",
+      "ACSW",
+      "AGOT",
+      "BORR",
+      "DLRTU",
+      "DHIT",
+      "EEL",
+      "ADOU",
+      "CRX",
+      "OOSW",
+      "AIRSU",
+      "ENRS",
+      "CGI",
+      "ELNR"
+     ],
+     "mask": [
+      "....#...#......",
+      ".#.......#...#.",
+      "..#....#..#....",
+      "...#...#.#.....",
+      ".#....#.....###"
+     ]
+    }
+   ],
+   "hash": "bc903d4c4c36f0ffdee1cefead5bae20ec36d0ec97f0e1d3f444dd5613785597",
+   "partials": {},
+   "hints": [
+    "Black squares are spaces. Which two- and three-letter words fit, using only the letters each column allows?",
+    "Each column's letters drop into that column of the grid; cross them off as you place them. The sentence tells you what to submit."
+   ],
+   "length": 5
+  },
+  {
+   "id": 6,
+   "title": "The Inundation",
+   "flavor": "Every word ran into itself. The little numbers know where to look.",
+   "blocks": [
+    {
+     "type": "morselines",
+     "items": [
+      {
+       "code": "-.-..-.----.-.----.....-...",
+       "len": 9,
+       "index": 1
+      },
+      {
+       "code": ".-..---.......",
+       "len": 6,
+       "index": 2
+      },
+      {
+       "code": "-..--.-.----.",
+       "len": 6,
+       "index": 1
+      },
+      {
+       "code": "---.-........",
+       "len": 5,
+       "index": 1
+      },
+      {
+       "code": "-.-..-...---.--..--.-..-",
+       "len": 9,
+       "index": 5
+      },
+      {
+       "code": "-....-...",
+       "len": 4,
+       "index": 2
+      },
+      {
+       "code": "-.-..-.-.----..--.-......",
+       "len": 9,
+       "index": 7
+      }
+     ],
+     "bank": [
+      "CARTOUCHE",
+      "CLEOPATRA",
+      "CROCODILE",
+      "LOTUS",
+      "MUMMY",
+      "NATRON",
+      "NILE",
+      "OASIS",
+      "RAMSES",
+      "SCRIBE",
+      "TEMPLE"
+     ]
+    }
+   ],
+   "hash": "4e316c0734ac46911dcde6ad4d1f13554ba9b48d1e626f73230eb31e8936df9b",
+   "partials": {},
+   "hints": [
+    "Two symbols, no spaces, and a letter count. Which old code is it, and which word from this round fits each line?",
+    "Each line is a theme word in Morse with the letter gaps removed; find it, then take the letter at the position shown."
+   ],
+   "length": 7
+  }
+ ],
+ "meta": {
+  "title": "Meta: Valley Of The Kings",
+  "flavor": "Pigeonholes, each cut to fit one thing only.",
+  "blocks": [
+   {
+    "type": "fitgrid",
+    "rows": [
+     {
+      "len": 4,
+      "shade": 1
+     },
+     {
+      "len": 7,
+      "shade": 4
+     },
+     {
+      "len": 11,
+      "shade": 6
+     },
+     {
+      "len": 9,
+      "shade": 8
+     },
+     {
+      "len": 6,
+      "shade": 3
+     },
+     {
+      "len": 5,
+      "shade": 2
+     }
+    ]
+   }
+  ],
+  "length": 6,
+  "hash": "2f7a8aae75c57ee1635be5e11401a3dcf2aaa3c859d93c036a307b13bc63b0d3",
+  "hints": [
+   "The grid's rows are all different lengths. So are your answers.",
+   "Put each answer in the row its length fits; read the shaded squares top to bottom."
+  ]
+ },
+ "described": true
+}
