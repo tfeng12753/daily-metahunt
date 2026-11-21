@@ -1,0 +1,437 @@
+{
+ "date": "2026-11-21",
+ "difficulty": "medium",
+ "salt": "2026-11-21/medium",
+ "number": 56,
+ "round": "Seismograph",
+ "intro": "The needle on the seismograph has started drawing letters, and the old funicular that carries core boxes up the ridge has stopped at the observatory with a full tin of ticket stubs. The mountain has twelve hours before it says whatever it is trying to say, and the first letters arrived with the dawn shift’s tea. Every stub in the tin is stamped with a carriage and a seat, two digits kept apart by a thin line of grease; the volcanologists have sorted them into the feed folders labelled Pyroclastic, Lahar, Pahoehoe, Aftershock and Harmonic Tremor without comment. Dr Okafor holds one up to the lamp and turns it over, watching the stamp catch the light. Outside, the summit is breathing in slow grey pulses that match the rhythm of the bell.",
+ "echo": "The Aztecs made mirrors and blades from the mountain's black glass.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Pyroclastic",
+   "flavor": "All the right letters, none in the right places.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "EHT",
+      "SGESAME",
+      "SAW",
+      "NEDDHI",
+      "NI",
+      "LPNAI",
+      "THGSI",
+      "LLA",
+      "ANOLG",
+      "NDA",
+      "TI",
+      "LSPIYM",
+      "SYSA",
+      "FUSRLU"
+     ],
+     "inline": true,
+     "tray": "word"
+    }
+   ],
+   "hash": "38a30db8e44ee9365e0a03ce8a64b2a12c8d61f7fab45fe6b3bf517f9a4708de",
+   "partials": {},
+   "hints": [
+    "Each word is complete but shuffled. Start with the shortest ones: does a sentence appear?",
+    "Unscramble each word where it stands; the sentence tells you what to submit."
+   ],
+   "length": 6
+  },
+  {
+   "id": 2,
+   "title": "Lahar",
+   "flavor": "The labels at the observatory have faded.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "_RATER",
+      "F_SSIL",
+      "DIAMO_D",
+      "SLAT_"
+     ],
+     "ordered": true,
+     "mono": true
+    }
+   ],
+   "hash": "83cad5bc2ec468a4d11f591eff780a1b520b97ad1f67fc49e06fd53f6a6800a4",
+   "partials": {},
+   "hints": [
+    "Every gap takes exactly one letter. Is there a pattern in what you filled in?",
+    "Read the letters you supplied, in order."
+   ],
+   "length": 4
+  },
+  {
+   "id": 3,
+   "title": "Pahoehoe",
+   "flavor": "Some squares have been given to you for free.",
+   "blocks": [
+    {
+     "type": "nonogram",
+     "rows": [
+      [
+       5,
+       4,
+       1,
+       1,
+       1,
+       1,
+       3,
+       1,
+       1,
+       5
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       2,
+       1,
+       1,
+       1,
+       2,
+       2,
+       1
+      ],
+      [
+       1,
+       3,
+       1,
+       1,
+       1,
+       1,
+       1,
+       5,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       2,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       4,
+       3,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       5
+      ]
+     ],
+     "cols": [
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       4
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       4
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       5
+      ],
+      [],
+      [
+       4
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       4
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       5
+      ],
+      [],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "givens": [
+      [
+       4,
+       24,
+       1
+      ],
+      [
+       0,
+       15,
+       0
+      ],
+      [
+       4,
+       10,
+       0
+      ],
+      [
+       0,
+       6,
+       0
+      ]
+     ]
+    }
+   ],
+   "hash": "4464d401f29a7b8dce4ec6c2b80f12c560f1e0ceac91f396b305f8207a269da4",
+   "partials": {},
+   "hints": [
+    "The numbers describe runs of filled squares. What picture could they be drawing?",
+    "Paint by numbers. The picture is written, not drawn."
+   ],
+   "length": 7
+  },
+  {
+   "id": 4,
+   "title": "Aftershock",
+   "flavor": "A familiar grid, an unfamiliar alphabet.",
+   "blocks": [
+    {
+     "type": "sudoku",
+     "size": 9,
+     "rows": [
+      "...S....A",
+      "...A..DEL",
+      "....F....",
+      ".DOLE....",
+      "A.....O..",
+      ".P.O....S",
+      "R......A.",
+      "..L..F...",
+      "..DP..F.E"
+     ],
+     "alphabet": "ADEFLOPRS",
+     "marks": [
+      [
+       1,
+       0
+      ],
+      [
+       4,
+       1
+      ],
+      [
+       8,
+       4
+      ],
+      [
+       5,
+       7
+      ],
+      [
+       8,
+       7
+      ],
+      [
+       2,
+       7
+      ],
+      [
+       8,
+       1
+      ],
+      [
+       2,
+       3
+      ]
+     ]
+    }
+   ],
+   "hash": "53a4d7166ee4c58b597bf0a546bdc9c5df9bf0e4da7f90239ea2420260397229",
+   "partials": {},
+   "hints": [
+    "A familiar grid puzzle in unfamiliar clothes. Once it's done, are some squares more important than others?",
+    "Solve it like a sudoku, then read the numbered squares in order."
+   ],
+   "length": 8
+  },
+  {
+   "id": 5,
+   "title": "Harmonic Tremor",
+   "flavor": "A sentence that came loose from its lines.",
+   "blocks": [
+    {
+     "type": "dropquote",
+     "cols": [
+      "EEHNT",
+      "EEGV",
+      "EFILN",
+      "DERRSW",
+      "OOSY",
+      "EMRW",
+      "DGMOW",
+      "BIORT",
+      "DEHOTY",
+      "DHIOR",
+      "ASU",
+      "AHN",
+      "DPUW",
+      "AANS",
+      "GINTT"
+     ],
+     "mask": [
+      ".....#....#....",
+      "#....#....#.#..",
+      "....#....#...#.",
+      "..#....#...#...",
+      ".#....#....#...",
+      ".#..#.....#####"
+     ]
+    }
+   ],
+   "hash": "754b4cb304d8bfa45e65fd806e52dfa020a672642db2a0dedd8e87c530daac6a",
+   "partials": {},
+   "hints": [
+    "Black squares are spaces. Which two- and three-letter words fit, using only the letters each column allows?",
+    "Each column's letters drop into that column of the grid; cross them off as you place them. The sentence tells you what to submit."
+   ],
+   "length": 5
+  }
+ ],
+ "meta": {
+  "title": "Meta: Seismograph",
+  "flavor": "The porter only ever noted where each passenger boarded.",
+  "blocks": [
+   {
+    "type": "list",
+    "items": [
+     "Platform 2, car 2",
+     "Platform 5, car 3",
+     "Platform 1, car 1",
+     "Platform 3, car 7",
+     "Platform 4, car 4",
+     "Platform 3, car 7",
+     "Platform 3, car 5",
+     "Platform 2, car 3"
+    ],
+    "ordered": true
+   }
+  ],
+  "length": 8,
+  "hash": "685267c9876473378d0808b4394cea954989f020380c783cdc9d90c6852b7c0e",
+  "hints": [
+   "Every entry has two numbers. What in this round is numbered, and what could the second number count?",
+   "The first number picks a puzzle; the second picks a letter inside its answer."
+  ]
+ },
+ "described": true
+}

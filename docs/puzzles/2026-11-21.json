@@ -1,0 +1,203 @@
+{
+ "date": "2026-11-21",
+ "difficulty": "hard",
+ "salt": "2026-11-21",
+ "number": 56,
+ "round": "Seismograph",
+ "intro": "The needle on the seismograph has started drawing letters. The observatory has twelve hours before the mountain says whatever it is trying to say.",
+ "echo": "The damage spreads out in rings from a single point on the surface.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Ring Of Fire",
+   "flavor": "Everything came out of the wash with a little something extra. Unlucky for some, and the same distance either way.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "ERGFYES",
+      "SFAERPLPD",
+      "ILEMUARN",
+      "STMDEVIEN",
+      "DIRFENC",
+      "TUGAFL"
+     ],
+     "ordered": true,
+     "mono": true
+    }
+   ],
+   "hash": "448a87693583a42a1d88adafc374b89edc4deaf53fa851d7059eafe2dbb576d4",
+   "partials": {
+    "2ecbbf6730fcab91a79f3656ae0972c36e036855883eb84fb9d1cd084900ccae": "You've decoded it, but it's not finished. One more layer."
+   },
+   "hints": [
+    "Each jumble is almost a word from this round, but with a letter to spare. Which letter, every time? And if what you get still isn't a word, reread the flavour text."
+   ]
+  },
+  {
+   "id": 2,
+   "title": "Pahoehoe",
+   "flavor": "Every word ran into itself. The little numbers know where to look. Half a turn of the wheel and you'd have it.",
+   "blocks": [
+    {
+     "type": "morselines",
+     "items": [
+      {
+       "code": "-.-.---.-..",
+       "len": 4,
+       "index": 3
+      },
+      {
+       "code": "--.-..-.-.-.---..",
+       "len": 6,
+       "index": 6
+      },
+      {
+       "code": "-.....-------.-..",
+       "len": 7,
+       "index": 5
+      },
+      {
+       "code": "-.-...-.-....-.",
+       "len": 6,
+       "index": 6
+      },
+      {
+       "code": "--..-.--.....-.",
+       "len": 6,
+       "index": 5
+      }
+     ]
+    }
+   ],
+   "hash": "8747dd4dce1598091b8a9f98c8f2906dade0a4d3c96685f37976ae4617f5d753",
+   "partials": {
+    "f22f37fa2fbdc29093c206cd5413fa88ec4dd784e2484f413347aeeb367f25e9": "You've decoded it, but it's not finished. One more layer."
+   },
+   "hints": [
+    "Two symbols, no spaces, and a letter count. Which old code is it, and which word from this round fits each line? And if what you get still isn't a word, reread the flavour text."
+   ]
+  },
+  {
+   "id": 3,
+   "title": "Hot Spot",
+   "flavor": "Knock, knock. Pause. Knock knock knock.",
+   "blocks": [
+    {
+     "type": "taps",
+     "groups": [
+      [
+       "••••",
+       "•••"
+      ],
+      [
+       "••••",
+       "•••••"
+      ],
+      [
+       "•••",
+       "••"
+      ],
+      [
+       "•••",
+       "••"
+      ],
+      [
+       "••",
+       "••••"
+      ],
+      [
+       "••••",
+       "••••"
+      ]
+     ]
+    }
+   ],
+   "hash": "8fb83f403902a931e32cf082e5dccd5ccfd4ea497b2a122a0903a2f0450fae12",
+   "partials": {},
+   "hints": [
+    "Always two numbers, never more than five. How would two prisoners spell through a wall with a 5×5 grid?"
+   ]
+  },
+  {
+   "id": 4,
+   "title": "Tephra",
+   "flavor": "It never travels in a straight line, and neither does the truth.",
+   "blocks": [
+    {
+     "type": "board",
+     "rows": [
+      "XADSKNZM",
+      "WQONBVHI",
+      "MRRIOGLW",
+      "GQIVIKTK",
+      "RAGOSFVE",
+      "DGUAZNLT",
+      "NWGTKWZO",
+      "KLPICJUI"
+     ]
+    },
+    {
+     "type": "prose",
+     "text": "The knight sets out from h7: Ng5 Ne4 Nc3 Na2 Nb4 Na6 Nc5."
+    }
+   ],
+   "hash": "aea17ba9022bdc783a0136517ba096a0a6beaa3b8c31fe88894d0c2a97f35ebb",
+   "partials": {},
+   "hints": [
+    "Those are chess moves. Which squares does the piece land on, and what's written there?"
+   ]
+  },
+  {
+   "id": 5,
+   "title": "Plate Boundary",
+   "flavor": "Everyone here counts differently. The little number says how. Unlucky for some, and the same distance either way.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "3₆",
+      "21₁₂",
+      "20₇",
+      "7₉",
+      "16₁₂"
+     ],
+     "inline": true
+    }
+   ],
+   "hash": "9b89e627b725c3cbacb879b6d442de01e005c72362eaf8f3f39bf7c911661d46",
+   "partials": {
+    "6a4023ba92ad02dca690f33e05505ac8897f4e1a8b009c017852b5fb785de781": "You've decoded it, but it's not finished. One more layer."
+   },
+   "hints": [
+    "The subscript is a base. Once everything is in ordinary decimal, what range are the numbers in? And if what you get still isn't a word, reread the flavour text."
+   ]
+  }
+ ],
+ "meta": {
+  "title": "Meta: Seismograph",
+  "flavor": "Tonight's seating chart.",
+  "blocks": [
+   {
+    "type": "list",
+    "items": [
+     "Row 2, seat 4",
+     "Row 5, seat 1",
+     "Row 1, seat 4",
+     "Row 1, seat 2",
+     "Row 2, seat 1",
+     "Row 4, seat 4",
+     "Row 3, seat 6",
+     "Row 2, seat 5",
+     "Row 2, seat 1"
+    ],
+    "ordered": true
+   }
+  ],
+  "length": 9,
+  "hash": "be04ed887bc07c827d440dda2d3821743d8d2223a242aa594402460666f58e7f",
+  "hints": [
+   "Every entry has two numbers. What in this round is numbered, and what could the second number count?"
+  ]
+ }
+}

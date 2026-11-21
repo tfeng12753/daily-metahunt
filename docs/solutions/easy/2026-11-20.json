@@ -1,0 +1,55 @@
+{
+ "date": "2026-11-20",
+ "number": 55,
+ "difficulty": "easy",
+ "final": "SCARAB",
+ "metaType": "logbook",
+ "explain": "Each entry is (puzzle number, letter number): index into that puzzle's answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Weighing Of The Heart",
+   "answer": "AMULET",
+   "mechanism": "Cryptogram (cluephrase)",
+   "transform": null,
+   "encoded": "AMULET",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "False Door",
+   "answer": "FALCON",
+   "mechanism": "Word search leftovers",
+   "transform": null,
+   "encoded": "FALCON",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Book Of The Dead",
+   "answer": "TOMB",
+   "mechanism": "Keyboard shift",
+   "transform": null,
+   "encoded": "TOMB",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Solar Barque",
+   "answer": "DYNASTY",
+   "mechanism": "Missing letters",
+   "transform": null,
+   "encoded": "DYNASTY",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Opening Of The Mouth",
+   "answer": "DESERT",
+   "mechanism": "Gapless Morse",
+   "transform": null,
+   "encoded": "DESERT",
+   "mutated": null
+  }
+ ]
+}

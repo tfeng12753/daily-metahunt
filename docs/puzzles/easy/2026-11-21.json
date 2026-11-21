@@ -1,0 +1,297 @@
+{
+ "date": "2026-11-21",
+ "difficulty": "easy",
+ "salt": "2026-11-21/easy",
+ "number": 56,
+ "round": "Seismograph",
+ "intro": "The needle on the seismograph has started drawing letters, and the volcanologists at the observatory have stopped arguing about what it means. They have begun filing the readings into the wooden pigeonholes by the door, each notch cut to fit exactly one strip of paper and no other. The mountain is speaking in phrases, and the hour is late.",
+ "echo": "When the mountain empties itself, the summit falls in and leaves a cauldron.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Richter",
+   "flavor": "A familiar grid, an unfamiliar alphabet.",
+   "blocks": [
+    {
+     "type": "sudoku",
+     "size": 9,
+     "rows": [
+      "L.MSAIENR",
+      ".R.MK....",
+      "N.SL....K",
+      "....EL.K.",
+      ".N...ALS.",
+      "ML...S..A",
+      "KS.NIMARE",
+      "A.R.L..I.",
+      ".....R.M."
+     ],
+     "alphabet": "AEIKLMNRS",
+     "marks": [
+      [
+       3,
+       8
+      ],
+      [
+       1,
+       6
+      ],
+      [
+       3,
+       6
+      ],
+      [
+       7,
+       3
+      ],
+      [
+       3,
+       3
+      ],
+      [
+       2,
+       7
+      ],
+      [
+       6,
+       2
+      ]
+     ]
+    }
+   ],
+   "hash": "9d4ef925047eabf2a29c58e4be1db6fb9ce3f3b595ec318d93e2b28cab95fade",
+   "partials": {},
+   "hints": [
+    "Sudoku using the letters shown instead of digits (each row, column and box uses each letter once). Read the numbered squares in order.",
+    "To check you're on track: the answer begins with M."
+   ],
+   "technique": "Letter sudoku",
+   "length": 7
+  },
+  {
+   "id": 2,
+   "title": "Deep Time",
+   "flavor": "Some buttons are more worn than others.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "2",
+      "7777",
+      "44"
+     ],
+     "inline": true,
+     "variant": "keys"
+    }
+   ],
+   "hash": "eb843d9e033944e1caffbf1169be21223860304ac1e1b046cf7b41c4ec2511a8",
+   "partials": {},
+   "hints": [
+    "Old phone multi-tap: the digit is the key, and how many times it repeats picks the letter.",
+    "To check you're on track: the answer begins with A."
+   ],
+   "technique": "Phone multi-tap",
+   "length": 3
+  },
+  {
+   "id": 3,
+   "title": "Plate Boundary",
+   "flavor": "Each colour whispers three characters, if you ask in the right code.",
+   "blocks": [
+    {
+     "type": "swatches",
+     "items": [
+      "#434F4E",
+      "#452020"
+     ]
+    }
+   ],
+   "hash": "68954faffbe4c3c53b697f57f876d86480536650466fe3b798d111c79224e8f1",
+   "partials": {},
+   "hints": [
+    "Each hex colour code is three ASCII bytes.",
+    "To check you're on track: the answer begins with C."
+   ],
+   "technique": "Hex colour ASCII",
+   "length": 4
+  },
+  {
+   "id": 4,
+   "title": "Aa",
+   "flavor": "Start in a corner, follow the edge, and keep turning inward. Which corner, and which way, is up to you to find.",
+   "blocks": [
+    {
+     "type": "lettergrid",
+     "rows": [
+      "TISNIAL",
+      "HGPMISP",
+      "EHL·RTN",
+      "MTY·EII",
+      "EAS·BDN",
+      "SLA·MNE",
+      "SLYSEAD",
+      "AALONGD",
+      "GEWASHI"
+     ]
+    }
+   ],
+   "hash": "522ca0830fe17e5a11a8dedb59bb2325f24f7f4b3d7e6dc5e46bb9a5911b6ba3",
+   "partials": {},
+   "hints": [
+    "A sentence was written into the grid along a spiral, starting in one corner and winding inward. Find the corner and the direction, read the sentence (dots are padding), and it tells you the answer.",
+    "To check you're on track: the answer begins with E."
+   ],
+   "technique": "Spiral route",
+   "length": 5
+  },
+  {
+   "id": 5,
+   "title": "Subduction",
+   "flavor": "The navigator keeps pointing two ways at once.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "SW & E",
+      "SW & S",
+      "W & E",
+      "S & W",
+      "SW & NE",
+      "NE & S"
+     ],
+     "inline": true
+    }
+   ],
+   "hash": "aae1806fd28d8e23d70666052344eade257e4d5ec4b4c0e44b4028d3c0c2008f",
+   "partials": {},
+   "hints": [
+    "Flag semaphore, with each arm given as a compass direction as you face the signaller (N = straight up).",
+    "To check you're on track: the answer begins with M."
+   ],
+   "technique": "Semaphore (compass bearings)",
+   "length": 6
+  },
+  {
+   "id": 6,
+   "title": "Aftershock",
+   "flavor": "Somebody shook the sentence and all the letters fell to the bottom of their columns.",
+   "blocks": [
+    {
+     "type": "dropquote",
+     "cols": [
+      "NN",
+      "FIOSY",
+      "ABEOS",
+      "INOR",
+      "DEJS",
+      "MSUY",
+      "OOST",
+      "EGOT",
+      "RTX",
+      "AGHOP",
+      "EEENP",
+      "CEHT",
+      "PT",
+      "ERTW",
+      "DHIO",
+      "IRZ",
+      "ADES"
+     ],
+     "mask": [
+      "......#........#.",
+      ".....#..#...#....",
+      "#...#..#...#.....",
+      "#..#....#...#....",
+      "#...........#####"
+     ]
+    }
+   ],
+   "hash": "d745979ae665bd65685fa14ba2126d4e426a1761a0b2daaca4155ca1432a3109",
+   "partials": {},
+   "hints": [
+    "A drop quote: each column's letters (shown alphabetised above it) drop into that column of the grid below. Black squares are spaces; words can wrap between rows. The sentence tells you the answer.",
+    "To check you're on track: the answer begins with S."
+   ],
+   "technique": "Drop quote",
+   "length": 11
+  },
+  {
+   "id": 7,
+   "title": "Tephra",
+   "flavor": "A board full of noise, and one horseman who knows exactly where to step.",
+   "blocks": [
+    {
+     "type": "board",
+     "rows": [
+      "AOPADMYF",
+      "JALEIYNX",
+      "GWPVXFEH",
+      "VRJEQAJT",
+      "GLYPVRVI",
+      "USRPGECF",
+      "EADOPDUE",
+      "WONRSDPL"
+     ]
+    },
+    {
+     "type": "prose",
+     "text": "The knight sets out from g8: Nf6 Nd5 Nb4 Nc2 Ne1 Nd3 Nb2 Nd1."
+    }
+   ],
+   "hash": "de703d81bcc48632c9823155948297455186d3124de9e7be60bab1746d47cef9",
+   "partials": {},
+   "hints": [
+    "Start on the given square and follow the knight moves; read the letter on each square it lands on.",
+    "To check you're on track: the answer begins with F."
+   ],
+   "technique": "Knight's path",
+   "length": 8
+  }
+ ],
+ "meta": {
+  "title": "Meta: Seismograph",
+  "flavor": "Everything at the observatory has a place, and every place is exactly the right size.",
+  "blocks": [
+   {
+    "type": "fitgrid",
+    "rows": [
+     {
+      "len": 4,
+      "shade": 0
+     },
+     {
+      "len": 7,
+      "shade": 5
+     },
+     {
+      "len": 6,
+      "shade": 4
+     },
+     {
+      "len": 8,
+      "shade": 3
+     },
+     {
+      "len": 5,
+      "shade": 0
+     },
+     {
+      "len": 11,
+      "shade": 7
+     },
+     {
+      "len": 3,
+      "shade": 0
+     }
+    ]
+   }
+  ],
+  "length": 7,
+  "hash": "828e2d10fadf40f1f700a405769d48b0948cd5f2c62319688b730cd832f9a44e",
+  "hints": [
+   "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+   "To check you're on track: the final answer begins with C."
+  ]
+ },
+ "described": true
+}

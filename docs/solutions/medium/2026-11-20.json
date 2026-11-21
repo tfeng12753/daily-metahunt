@@ -1,0 +1,64 @@
+{
+ "date": "2026-11-20",
+ "number": 55,
+ "difficulty": "medium",
+ "final": "SPHINX",
+ "metaType": "fitin",
+ "explain": "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Book Of The Dead",
+   "answer": "TUTANKHAMUN",
+   "mechanism": "Missing letters",
+   "transform": null,
+   "encoded": "TUTANKHAMUN",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Hall Of Records",
+   "answer": "ISIS",
+   "mechanism": "Spiral route",
+   "transform": null,
+   "encoded": "ISIS",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Seal Unbroken",
+   "answer": "KARNAK",
+   "mechanism": "Scrambled sentence",
+   "transform": null,
+   "encoded": "KARNAK",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Weighing Of The Heart",
+   "answer": "NEFERTITI",
+   "mechanism": "Shredded sentence",
+   "transform": null,
+   "encoded": "NEFERTITI",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Field Of Reeds",
+   "answer": "LUXOR",
+   "mechanism": "Drop quote",
+   "transform": null,
+   "encoded": "LUXOR",
+   "mutated": null
+  },
+  {
+   "id": 6,
+   "title": "The Inundation",
+   "answer": "CANOPIC",
+   "mechanism": "Gapless Morse",
+   "transform": null,
+   "encoded": "CANOPIC",
+   "mutated": null
+  }
+ ]
+}

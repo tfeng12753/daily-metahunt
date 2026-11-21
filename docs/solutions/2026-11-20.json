@@ -1,0 +1,73 @@
+{
+ "date": "2026-11-20",
+ "number": 55,
+ "difficulty": "hard",
+ "final": "PYRAMID",
+ "metaType": "mutation",
+ "explain": "Each feeder decodes to its answer with a single wrong letter. Those substituted letters, in puzzle order, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Weighing Of The Heart",
+   "answer": "HIEROGLYPH",
+   "mechanism": "Spiral route",
+   "transform": null,
+   "encoded": "HIPROGLYPH",
+   "mutated": "HIPROGLYPH"
+  },
+  {
+   "id": 2,
+   "title": "The Inundation",
+   "answer": "NEFERTITI",
+   "mechanism": "Baconian cipher",
+   "transform": "Reversal",
+   "encoded": "ITITREYEN",
+   "mutated": "NEYERTITI"
+  },
+  {
+   "id": 3,
+   "title": "False Door",
+   "answer": "TUTANKHAMUN",
+   "mechanism": "Cryptogram (cluephrase)",
+   "transform": null,
+   "encoded": "TRTANKHAMUN",
+   "mutated": "TRTANKHAMUN"
+  },
+  {
+   "id": 4,
+   "title": "Field Of Reeds",
+   "answer": "CLEOPATRA",
+   "mechanism": "Hex colour ASCII",
+   "transform": null,
+   "encoded": "CLAOPATRA",
+   "mutated": "CLAOPATRA"
+  },
+  {
+   "id": 5,
+   "title": "Opening Of The Mouth",
+   "answer": "SCRIBE",
+   "mechanism": "Drop quote",
+   "transform": null,
+   "encoded": "SCRIBM",
+   "mutated": "SCRIBM"
+  },
+  {
+   "id": 6,
+   "title": "Book Of The Dead",
+   "answer": "AMULET",
+   "mechanism": "Mirrored NATO",
+   "transform": null,
+   "encoded": "AMUIET",
+   "mutated": "AMUIET"
+  },
+  {
+   "id": 7,
+   "title": "Cartouche",
+   "answer": "CANOPIC",
+   "mechanism": "Vigenère keyed by the title",
+   "transform": null,
+   "encoded": "CDNOPIC",
+   "mutated": "CDNOPIC"
+  }
+ ]
+}
