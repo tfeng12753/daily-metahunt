@@ -4,7 +4,7 @@
  "salt": "2026-11-21",
  "number": 56,
  "round": "Seismograph",
- "intro": "The needle on the seismograph has started drawing letters. The observatory has twelve hours before the mountain says whatever it is trying to say.",
+ "intro": "The needle on the seismograph has started tracing a sentence, and the observatory has twelve hours before the mountain says whatever it is trying to say. Ash has dusted every windowsill, and the radio sits silent where the supply truck was meant to call. The duty ledger, kept by the night watch, has room for two things only: a name and an hour. Dr Voss has begun pacing the long bench, tapping her pencil against each new tremor as if it were a phrase she almost knows. Outside, the fumarole breathes white, patient and precise, while the coffee in the canteen goes cold.",
  "echo": "The damage spreads out in rings from a single point on the surface.",
  "puzzles": [
   {
@@ -199,5 +199,6 @@
   "hints": [
    "Every entry has two numbers. What in this round is numbered, and what could the second number count?"
   ]
- }
+ },
+ "described": true
 }
