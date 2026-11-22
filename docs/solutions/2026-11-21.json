@@ -1,0 +1,55 @@
+{
+ "date": "2026-11-21",
+ "number": 56,
+ "difficulty": "hard",
+ "final": "EPICENTRE",
+ "metaType": "logbook",
+ "explain": "Each entry is (puzzle number, letter number): index into that puzzle's answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Ring Of Fire",
+   "answer": "SCHIST",
+   "mechanism": "Anagrams with an extra letter",
+   "transform": "ROT13",
+   "encoded": "FPUVFG",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Pahoehoe",
+   "answer": "EMBER",
+   "mechanism": "Gapless Morse",
+   "transform": "ROT13",
+   "encoded": "RZORE",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Hot Spot",
+   "answer": "SUMMIT",
+   "mechanism": "Tap code",
+   "transform": null,
+   "encoded": "SUMMIT",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Tephra",
+   "answer": "TSUNAMI",
+   "mechanism": "Knight's path",
+   "transform": null,
+   "encoded": "TSUNAMI",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Plate Boundary",
+   "answer": "PLATE",
+   "mechanism": "Mixed number bases",
+   "transform": "ROT13",
+   "encoded": "CYNGR",
+   "mutated": null
+  }
+ ]
+}

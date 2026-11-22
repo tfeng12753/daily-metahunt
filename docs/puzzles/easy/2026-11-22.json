@@ -1,0 +1,340 @@
+{
+ "date": "2026-11-22",
+ "difficulty": "easy",
+ "salt": "2026-11-22/easy",
+ "number": 57,
+ "round": "The Night Train",
+ "intro": "Somewhere between two stations that no longer exist, the night train stopped, and the watch-keeper began marking time in a book that had no ordinary dates. When the train started again, every ticket had been replaced with a puzzle, and the book had learned a new economy: each entry was only the train's own day and the bell that sounded after it, as if a traveller could be recalled completely by when they were and where they answered. The passengers read the puzzles aloud softly, then fell quiet, because the words did not tell them who was in the next berth; the two figures beside them did that work instead. The bell rang once more down the corridor, and the night went on naming days and bells, never faces.",
+ "echo": "Something has come off the rails, and not only the train.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Platform Nine",
+   "flavor": "Two forward, one across. Remember where you land.",
+   "blocks": [
+    {
+     "type": "board",
+     "rows": [
+      "QPZFGHNT",
+      "NLSOVMZJ",
+      "PTAAYFXR",
+      "UYQQYUBD",
+      "DFINJZBX",
+      "MCUIZVBN",
+      "DAHTXAUD",
+      "LCCNVYUZ"
+     ]
+    },
+    {
+     "type": "prose",
+     "text": "The knight sets out from c2: Ne1 Nd3 Nb2 Na4 Nc3 Nb1 Nd2."
+    }
+   ],
+   "hash": "d84f72e87b29e7b44f991649055561884ffaa11b28d1eb162e5120a6addfce3b",
+   "partials": {},
+   "hints": [
+    "Start on the given square and follow the knight moves; read the letter on each square it lands on.",
+    "To check you're on track: the answer begins with V."
+   ],
+   "technique": "Knight's path",
+   "length": 7
+  },
+  {
+   "id": 2,
+   "title": "Rolling Stock",
+   "flavor": "A mosaic in the sleeper car was taken apart tile by tile, and all that was kept was the count of each run.",
+   "blocks": [
+    {
+     "type": "nonogram",
+     "rows": [
+      [
+       4,
+       1,
+       1,
+       5,
+       5,
+       5,
+       4
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       4,
+       1,
+       1,
+       4,
+       4,
+       4,
+       4
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       4,
+       3,
+       1,
+       1,
+       5,
+       1,
+       1
+      ]
+     ],
+     "cols": [
+      [
+       5
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       4
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       4
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "givens": [
+      [
+       4,
+       6,
+       0
+      ]
+     ]
+    }
+   ],
+   "hash": "fca4bbe5009193e88bf34df96c19b61fbe61886faadaa6a65b28e23756c5fd0b",
+   "partials": {},
+   "hints": [
+    "A nonogram (paint-by-numbers). The filled picture is the answer written in 5×5 block letters.",
+    "To check you're on track: the answer begins with B."
+   ],
+   "technique": "Nonogram",
+   "length": 6
+  },
+  {
+   "id": 3,
+   "title": "Night Mail",
+   "flavor": "The spy's handbook said to always carry a novel. It never said which one; this page will have to do.",
+   "blocks": [
+    {
+     "type": "prose",
+     "text": "Somewhere between two stations that no longer exist, the night train stopped. When it started again, every ticket had been replaced with a puzzle.",
+     "paper": true
+    },
+    {
+     "type": "list",
+     "items": [
+      "24.5",
+      "21.5",
+      "7.3",
+      "18.6",
+      "12.6",
+      "17.4",
+      "4.7"
+     ],
+     "inline": true
+    }
+   ],
+   "hash": "aa826f5972ff6704503c915968b77b96c624b049d3f1592968fc82fe50ebb61e",
+   "partials": {},
+   "hints": [
+    "Each pair is word.letter into the recovered page (words split on spaces; punctuation ignored).",
+    "To check you're on track: the answer begins with L."
+   ],
+   "technique": "Book cipher",
+   "length": 7
+  },
+  {
+   "id": 4,
+   "title": "The Up Line",
+   "flavor": "All the right letters, all in the right words, none in the right places.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "EERYV",
+      "OOGD",
+      "TUNH",
+      "DSEN",
+      "THIW",
+      "A",
+      "EIGLSN",
+      "ODWR",
+      "DAN",
+      "ETH",
+      "ORWD",
+      "UYO",
+      "AWTN",
+      "OMRF",
+      "HTIS",
+      "PAEG",
+      "SI",
+      "RIACLAR"
+     ],
+     "inline": true,
+     "tray": "word"
+    }
+   ],
+   "hash": "826b8a9df928fabe7f582c542052dad6ec0cd3ee74896a949243b52778c36029",
+   "partials": {},
+   "hints": [
+    "Each word of a sentence has had its letters shuffled. Unscramble them; the sentence tells you the answer.",
+    "To check you're on track: the answer begins with R."
+   ],
+   "technique": "Scrambled sentence",
+   "length": 7
+  }
+ ],
+ "meta": {
+  "title": "Meta: The Night Train",
+  "flavor": "Tonight's seating chart. Every seat is one letter wide.",
+  "blocks": [
+   {
+    "type": "list",
+    "items": [
+     "Row 1, seat 4",
+     "Row 2, seat 5",
+     "Row 2, seat 6",
+     "Row 3, seat 2",
+     "Row 1, seat 2",
+     "Row 4, seat 4",
+     "Row 2, seat 5",
+     "Row 1, seat 4"
+    ],
+    "ordered": true
+   }
+  ],
+  "length": 8,
+  "hash": "7b586b470d4a5d8079f4f864bef2bf02d44b8d74a6052c1a48f97b503f9b1274",
+  "hints": [
+   "Each entry is (puzzle number, letter number): index into that puzzle's answer.",
+   "To check you're on track: the final answer begins with D."
+  ]
+ },
+ "described": true
+}

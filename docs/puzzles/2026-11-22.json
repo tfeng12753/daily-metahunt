@@ -1,0 +1,220 @@
+{
+ "date": "2026-11-22",
+ "difficulty": "hard",
+ "salt": "2026-11-22",
+ "number": 57,
+ "round": "The Night Train",
+ "intro": "Somewhere between two stations that no longer exist, the night train stopped. When it started again, every ticket had been replaced with a puzzle, and the passengers went to work in the low light as if it were the most natural thing in the world, each settling into a bench or berth with a small pencil and the blank look of people long used to signing for things they do not fully understand. A hush ran down the sleeper car, broken only by the scratch of graphite and the occasional creak of the couplings. In each hand that paused, the pencil hovered above the paper the way it does before a signature, one flourish and done. The conductor did not come; the corridor outside stayed dark; and somewhere in the rhythm of the wheels, the train seemed to be waiting for something to be put right.",
+ "echo": "The last car of the freight train, where the brakeman kept his stove.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Platform Nine",
+   "flavor": "Fenced in, and copied out in a hurry.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "EDSNA RTSOV OHDWI GDNOD NFIPB IEOUN ISLRD WYARH ASLRG NETAE OTEOW OTGIE YTHWH UMER",
+     "wide": true,
+     "rails": 5
+    }
+   ],
+   "hash": "3de6a154507274d04544db8ce6f15c9213ce581dd9838cc55daa606ada56e616",
+   "partials": {},
+   "hints": [
+    "All the right letters are here, just out of order. Could they have been written along a path that goes up and down?"
+   ]
+  },
+  {
+   "id": 2,
+   "title": "Last Call",
+   "flavor": "Fences and corners; some have an animal inside.",
+   "blocks": [
+    {
+     "type": "pigpen",
+     "items": [
+      {
+       "g": "hash",
+       "p": 6,
+       "dot": true
+      },
+      {
+       "g": "hash",
+       "p": 0,
+       "dot": false
+      },
+      {
+       "g": "x",
+       "p": 0,
+       "dot": false
+      },
+      {
+       "g": "x",
+       "p": 0,
+       "dot": false
+      },
+      {
+       "g": "hash",
+       "p": 6,
+       "dot": true
+      },
+      {
+       "g": "hash",
+       "p": 5,
+       "dot": true
+      },
+      {
+       "g": "hash",
+       "p": 8,
+       "dot": true
+      },
+      {
+       "g": "x",
+       "p": 1,
+       "dot": false
+      }
+     ]
+    }
+   ],
+   "hash": "22eabba4fbefef959c3f2abd82be60d0f78c341596a67f0287feafd54b48db46",
+   "partials": {},
+   "hints": [
+    "Picture the alphabet written into a couple of #-grids and X-grids. Which cell would each shape be?"
+   ]
+  },
+  {
+   "id": 3,
+   "title": "Points Failure",
+   "flavor": "Everything that belongs is in there somewhere. Some things don't belong.",
+   "blocks": [
+    {
+     "type": "caption",
+     "text": "Somewhere in here: things to do with the sleeper car."
+    },
+    {
+     "type": "board",
+     "rows": [
+      "TSIGNALS",
+      "ELGRRPLT",
+      "KAAEEOUU",
+      "COUPDRGN",
+      "ICGENTGN",
+      "TWEEEEAE",
+      "ITCLTRGL",
+      "NOTSIPEH"
+     ],
+     "plain": true,
+     "words": [
+      "COAL",
+      "GAUGE",
+      "LUGGAGE",
+      "PISTON",
+      "PORTER",
+      "SIGNAL",
+      "SLEEPER",
+      "TENDER",
+      "TICKET",
+      "TUNNEL"
+     ]
+    }
+   ],
+   "hash": "d673a9b621efa36a4b2bcccf54d0228811c1a82930da491e97341a1b881cf314",
+   "partials": {},
+   "hints": [
+    "Once every theme word is found, is anything left unclaimed? Read it in order.",
+    "The hidden words are: COAL, GAUGE, LUGGAGE, PISTON, PORTER, SIGNAL, SLEEPER, TENDER, TICKET, TUNNEL."
+   ]
+  },
+  {
+   "id": 4,
+   "title": "Rolling Stock",
+   "flavor": "Every answer is small, and none is bigger than it needs to be.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "Sides of a triangle",
+      "Red balls racked at the start of a snooker frame",
+      "Original British colonies that became the United States",
+      "Ounces in a pound",
+      "Moons orbiting Earth",
+      "Holes on a full golf course",
+      "Things in a score",
+      "Cards in one suit of a standard deck",
+      "Sides of a pentagon",
+      "Lines in a sonnet",
+      "Things in a score"
+     ],
+     "ordered": true,
+     "tray": "letter"
+    }
+   ],
+   "hash": "3b10b4194265844138079b167e73b7644cd58ce13d2c9ad77e3c3021196cb8f9",
+   "partials": {},
+   "hints": [
+    "Every line has a number for an answer. Could those numbers be counting through something else?"
+   ]
+  },
+  {
+   "id": 5,
+   "title": "Night Mail",
+   "flavor": "Every letter here is wearing someone else's coat.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "MYU RUWWQIU ZQW YSAAUD SD FVQSD WSIYM QVV QVCDI QDA SM WSRFVG WQGW TSOURQD",
+     "wide": true,
+     "solver": "substitution"
+    }
+   ],
+   "hash": "ac91681f29438a63617a8d94e57c30dfe95200842f0e02104525628d764979c1",
+   "partials": {},
+   "hints": [
+    "Which short words are most common in English? Could any of them be hiding here?"
+   ]
+  },
+  {
+   "id": 6,
+   "title": "Request Stop",
+   "flavor": "Thumbs, patience, and no predictive text.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "9",
+      "44",
+      "444",
+      "7777",
+      "8",
+      "555",
+      "33"
+     ],
+     "inline": true,
+     "variant": "keys"
+    }
+   ],
+   "hash": "a244b0d59a71f873ca0816488f1da85002bd357c05ea33dcbc34b273296548bc",
+   "partials": {},
+   "hints": [
+    "Two frequencies at once is the sound of a phone key being pressed. What letters did those keys carry?"
+   ]
+  }
+ ],
+ "meta": {
+  "title": "Meta: The Night Train",
+  "flavor": "Every report is signed with a single initial. Blaise would know what to do with them.",
+  "blocks": [
+   {
+    "type": "mono",
+    "text": "DPTQTOF",
+    "big": true
+   }
+  ],
+  "length": 7,
+  "hash": "54667dcd7ccded3fd16c127e57b93407efcc29abc1a8d70259f204cfa77189e1",
+  "hints": [
+   "Blaise de Vigenère needed a key to open this. Has every answer signed its work?"
+  ]
+ },
+ "described": true
+}

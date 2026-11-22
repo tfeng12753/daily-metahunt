@@ -1,0 +1,384 @@
+{
+ "date": "2026-11-22",
+ "difficulty": "medium",
+ "salt": "2026-11-22/medium",
+ "number": 57,
+ "round": "The Night Train",
+ "intro": "Somewhere between two stations that no longer exist, the night train stopped. When it started again, every ticket had been replaced with a puzzle, and the sleeping passengers, woken one by one, each found a slip of paper in their hand bearing a single word they did not remember writing. The conductor moved down the aisle with his lamp, and at each berth he paused, counted the faces he could see, and counted once more, as though the side of the book he carried were always one short. Mrs Egremont, the only one awake, watched him do it eleven times and never once reach the same sum.",
+ "echo": "Two lines meet, and someone else decides which way you go.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Signal Failure",
+   "flavor": "A snail wrote this.",
+   "blocks": [
+    {
+     "type": "lettergrid",
+     "rows": [
+      "FETONSIHT",
+      "AAELPSDND",
+      "LSSDROWAL",
+      "LEI··LEHU",
+      "IFGNJAHGO",
+      "NORGETTNH",
+      "TOTHEWROS"
+     ]
+    }
+   ],
+   "hash": "76209025d5df1e42ce4928aae18ac2c52f6d1733d7a83e7041eda77b32e8f216",
+   "partials": {
+    "f0a8cb5ac224494b9c9cc3abd4c092ccedd90f9284d1a6c1d8bf2f5c140a0b69": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "All the letters of a sentence are here, but not in rows. Try walking the grid the way a snail would.",
+    "Start in one corner and spiral inward along the edges; one corner and one direction read as a sentence."
+   ],
+   "length": 6
+  },
+  {
+   "id": 2,
+   "title": "Dining Car",
+   "flavor": "The scale is very precise; the list is very short. It was written down last letter first.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "44.956",
+      "39.95",
+      "10.81",
+      "12.011",
+      "12.011",
+      "44.956",
+      "4.003"
+     ],
+     "inline": true,
+     "variant": "masses"
+    }
+   ],
+   "hash": "4afcdc22a3a4e77f1e81355f085616009b4c851547bc2556bdd2460e6f4dfd4c",
+   "partials": {
+    "dfb239b775b473ccd9786239944a283ce23d0d2c60fcf31b91a171105ced1c68": "You've decoded it, but it's not finished. One more layer.",
+    "df746d0e9b054e82de40016266abefa6d74a171bfc7f728c63e49881d45c4664": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Everything here has a number in a famous chemical line-up. What number does each one have? And if what you get still isn't a word, reread the flavour text.",
+    "Atomic numbers, then count through the alphabet (hydrogen = 1 = A). Then one more layer: Read what you get backwards."
+   ],
+   "length": 6
+  },
+  {
+   "id": 3,
+   "title": "Request Stop",
+   "flavor": "A familiar grid, an unfamiliar alphabet.",
+   "blocks": [
+    {
+     "type": "sudoku",
+     "size": 9,
+     "rows": [
+      ".R.E.D..S",
+      ".........",
+      ".S....AE.",
+      ".N.L..P..",
+      ".DR......",
+      "...ARP...",
+      "..A..N...",
+      "NPER..F..",
+      "....S..L."
+     ],
+     "alphabet": "ADEFLNPRS",
+     "marks": [
+      [
+       1,
+       3
+      ],
+      [
+       2,
+       2
+      ],
+      [
+       3,
+       8
+      ],
+      [
+       5,
+       1
+      ],
+      [
+       0,
+       2
+      ],
+      [
+       8,
+       6
+      ],
+      [
+       1,
+       0
+      ],
+      [
+       2,
+       5
+      ]
+     ]
+    }
+   ],
+   "hash": "d1161e9c0b0b1cf6d64cfa551c88cd3e68d271d5edb1319f6b655ffe38af3c12",
+   "partials": {
+    "d1cb74531901968e2b40d56d16921ec187b5817d89903557b38030434b68b4ed": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "A familiar grid puzzle in unfamiliar clothes. Once it's done, are some squares more important than others?",
+    "Solve it like a sudoku, then read the numbered squares in order."
+   ],
+   "length": 7
+  },
+  {
+   "id": 4,
+   "title": "Leaves On The Line",
+   "flavor": "Everything fell straight down, and landed in the right column.",
+   "blocks": [
+    {
+     "type": "dropquote",
+     "cols": [
+      "AEMNS",
+      "ATVY",
+      "EFNOST",
+      "DEHIIRU",
+      "CINNY",
+      "DGRSTW",
+      "AEGHLS",
+      "EEMNOP",
+      "AAOTW",
+      "DGINWW",
+      "EFOOT",
+      "HHRRR",
+      "DDIOU"
+     ],
+     "mask": [
+      ".....#....#..",
+      "..#....#....#",
+      ".#......#....",
+      "#...#...#....",
+      "#...#....#...",
+      ".#....#....#.",
+      ".#........###"
+     ]
+    }
+   ],
+   "hash": "e872e5db4bca669e8c0edb7c6bd21c48269a357c1b682c30dfc35d9d310aabea",
+   "partials": {
+    "454046047527afb70ee327b9ec62000be175118ff7aae3a7a3f3f2a20e1c9388": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Black squares are spaces. Which two- and three-letter words fit, using only the letters each column allows?",
+    "Each column's letters drop into that column of the grid; cross them off as you place them. The sentence tells you what to submit."
+   ],
+   "length": 7
+  },
+  {
+   "id": 5,
+   "title": "The Up Line",
+   "flavor": "Only one page survived. It was the only page anyone needed.",
+   "blocks": [
+    {
+     "type": "prose",
+     "text": "Somewhere between two stations that no longer exist, the night train stopped. When it started again, every ticket had been replaced with a puzzle.",
+     "paper": true
+    },
+    {
+     "type": "list",
+     "items": [
+      "8.4",
+      "2.2",
+      "1.3",
+      "16.1",
+      "21.3",
+      "5.2",
+      "4.6",
+      "10.5",
+      "7.6",
+      "20.3"
+     ],
+     "inline": true
+    }
+   ],
+   "hash": "1e68160e41d5de078b79f20675b6e823adc41851aec0008ff0f88c840063624c",
+   "partials": {
+    "792fa8a98e37c314a89ded8f121be8bb1cab9f7df609cd7e4f7ac3d02501fce3": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "The first number in each pair never goes past the number of words on the page. What does the second count?",
+    "The first number finds a word on the page; the second finds a letter in it."
+   ],
+   "length": 9
+  },
+  {
+   "id": 6,
+   "title": "Change Here",
+   "flavor": "Call signs, reflected.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "Yankee",
+      "India",
+      "Zulu",
+      "Papa",
+      "Victor",
+      "November",
+      "Romeo",
+      "Zulu",
+      "Mike"
+     ]
+    }
+   ],
+   "hash": "6e59de5e4d0089182df12900becd109d974d21298fb508b7f41ee6f362bbb5a6",
+   "partials": {
+    "d30f8c9b4d89d3e3015108e5b8f180c14c72705c3504daaf25518d9f05537a7e": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Each word stands for a letter, the way radio operators spell. Do those letters read? If not, try the alphabet backwards.",
+    "Take the NATO call signs' initials, then swap each letter for its mirror: A for Z, B for Y."
+   ],
+   "length": 8
+  },
+  {
+   "id": 7,
+   "title": "Terminus Approaching",
+   "flavor": "Components from a dead board, stripes and all.",
+   "blocks": [
+    {
+     "type": "resistors",
+     "items": [
+      [
+       "black",
+       "orange",
+       "black",
+       "gold"
+      ],
+      [
+       "black",
+       "brown",
+       "black",
+       "gold"
+      ],
+      [
+       "brown",
+       "grey",
+       "black",
+       "gold"
+      ],
+      [
+       "brown",
+       "grey",
+       "black",
+       "gold"
+      ],
+      [
+       "black",
+       "white",
+       "black",
+       "gold"
+      ],
+      [
+       "brown",
+       "green",
+       "black",
+       "gold"
+      ],
+      [
+       "black",
+       "brown",
+       "black",
+       "gold"
+      ],
+      [
+       "black",
+       "violet",
+       "black",
+       "gold"
+      ],
+      [
+       "black",
+       "green",
+       "black",
+       "gold"
+      ]
+     ]
+    }
+   ],
+   "hash": "04dd6bca57f63da1a55ab543f6e639407edbe6b561b7d4ac95e37e6eb662245f",
+   "partials": {
+    "b825e071d666b31ad97555cb31cbe1c657073d1050995d483ecd528571073a77": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Engineers read stripes like these as numbers. What number does each part give, and what is a number up to 26?",
+    "Resistor colour code: the first two bands are two digits; that number is a letter position."
+   ],
+   "length": 8
+  },
+  {
+   "id": 8,
+   "title": "Mind The Gap",
+   "flavor": "Confetti, alphabetised.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "ADY",
+      "ANR",
+      "EAD",
+      "ERW",
+      "FOU",
+      "HEA",
+      "HIC",
+      "HIS",
+      "IFY",
+      "LRE",
+      "NCE",
+      "NDT",
+      "NSW",
+      "NTE",
+      "NYO",
+      "ORT",
+      "OUC",
+      "PNA",
+      "SSE",
+      "SSP",
+      "THE",
+      "THI",
+      "UHA",
+      "VEA"
+     ],
+     "inline": true,
+     "tiles": true
+    },
+    {
+     "type": "prose",
+     "text": "Word lengths: (2 3 3 4 4 8 4 3 4 7 5 3 6 5 2 9)"
+    }
+   ],
+   "hash": "3e9ada74e1e7470984c49433bdae79a492ac6db05c6b238a8afc7e7021297a37",
+   "partials": {
+    "1eeb41b64d3be94ceabcf3ec5e1d68b07c448e75c50c5fab7a667e3d6d070b3a": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "The strips are alphabetised, not in order. The word lengths say where the breaks fall. Which strip could start the sentence?",
+    "Chain the strips into one string and split it by the word lengths; the sentence tells you what to submit."
+   ],
+   "length": 8
+  }
+ ],
+ "meta": {
+  "title": "Meta: The Night Train",
+  "flavor": "Everything arrived a little heavier than it left.",
+  "blocks": [],
+  "length": 8,
+  "hash": "3f80e60a8b2202f422ebc95bbb952881649a264733d946c07e9a0faea884e7db",
+  "hints": [
+   "Did every answer come out the right size the first time? Each had one letter too many. Did you keep them?",
+   "Take the extra letter from each feeder, in puzzle order."
+  ]
+ },
+ "described": true
+}

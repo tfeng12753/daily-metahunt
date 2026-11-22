@@ -1,0 +1,55 @@
+{
+ "date": "2026-11-21",
+ "number": 56,
+ "difficulty": "medium",
+ "final": "OBSIDIAN",
+ "metaType": "logbook",
+ "explain": "Each entry is (puzzle number, letter number): index into that puzzle's answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Pyroclastic",
+   "answer": "SULFUR",
+   "mechanism": "Scrambled sentence",
+   "transform": null,
+   "encoded": "SULFUR",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Lahar",
+   "answer": "CONE",
+   "mechanism": "Missing letters",
+   "transform": null,
+   "encoded": "CONE",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Pahoehoe",
+   "answer": "TSUNAMI",
+   "mechanism": "Nonogram",
+   "transform": null,
+   "encoded": "TSUNAMI",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Aftershock",
+   "answer": "FELDSPAR",
+   "mechanism": "Letter sudoku",
+   "transform": null,
+   "encoded": "FELDSPAR",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Harmonic Tremor",
+   "answer": "EMBER",
+   "mechanism": "Drop quote",
+   "transform": null,
+   "encoded": "EMBER",
+   "mutated": null
+  }
+ ]
+}

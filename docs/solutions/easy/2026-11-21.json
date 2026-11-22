@@ -1,0 +1,73 @@
+{
+ "date": "2026-11-21",
+ "number": 56,
+ "difficulty": "easy",
+ "final": "CALDERA",
+ "metaType": "fitin",
+ "explain": "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Richter",
+   "answer": "MINERAL",
+   "mechanism": "Letter sudoku",
+   "transform": null,
+   "encoded": "MINERAL",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Deep Time",
+   "answer": "ASH",
+   "mechanism": "Phone multi-tap",
+   "transform": null,
+   "encoded": "ASH",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Plate Boundary",
+   "answer": "CONE",
+   "mechanism": "Hex colour ASCII",
+   "transform": null,
+   "encoded": "CONE",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Aa",
+   "answer": "EMBER",
+   "mechanism": "Spiral route",
+   "transform": null,
+   "encoded": "EMBER",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Subduction",
+   "answer": "MARBLE",
+   "mechanism": "Semaphore (compass bearings)",
+   "transform": null,
+   "encoded": "MARBLE",
+   "mutated": null
+  },
+  {
+   "id": 6,
+   "title": "Aftershock",
+   "answer": "SEISMOGRAPH",
+   "mechanism": "Drop quote",
+   "transform": null,
+   "encoded": "SEISMOGRAPH",
+   "mutated": null
+  },
+  {
+   "id": 7,
+   "title": "Tephra",
+   "answer": "FELDSPAR",
+   "mechanism": "Knight's path",
+   "transform": null,
+   "encoded": "FELDSPAR",
+   "mutated": null
+  }
+ ]
+}
