@@ -1,0 +1,82 @@
+{
+ "date": "2026-11-22",
+ "number": 57,
+ "difficulty": "medium",
+ "final": "JUNCTION",
+ "metaType": "stowaway",
+ "explain": "Each feeder decodes to its answer plus one inserted letter. The inserted letters, in puzzle order, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Signal Failure",
+   "answer": "SIGNAL",
+   "mechanism": "Spiral route",
+   "transform": null,
+   "encoded": "SIGNJAL",
+   "mutated": "SIGNJAL"
+  },
+  {
+   "id": 2,
+   "title": "Dining Car",
+   "answer": "BUFFER",
+   "mechanism": "Atomic numbers (by mass)",
+   "transform": "Reversal",
+   "encoded": "UREFFUB",
+   "mutated": "BUFFERU"
+  },
+  {
+   "id": 3,
+   "title": "Request Stop",
+   "answer": "SLEEPER",
+   "mechanism": "Letter sudoku",
+   "transform": null,
+   "encoded": "SLEEPNER",
+   "mutated": "SLEEPNER"
+  },
+  {
+   "id": 4,
+   "title": "Leaves On The Line",
+   "answer": "FIREMAN",
+   "mechanism": "Drop quote",
+   "transform": null,
+   "encoded": "FICREMAN",
+   "mutated": "FICREMAN"
+  },
+  {
+   "id": 5,
+   "title": "The Up Line",
+   "answer": "SEMAPHORE",
+   "mechanism": "Book cipher",
+   "transform": null,
+   "encoded": "SEMAPHOTRE",
+   "mutated": "SEMAPHOTRE"
+  },
+  {
+   "id": 6,
+   "title": "Change Here",
+   "answer": "BRAKEMAN",
+   "mechanism": "Mirrored NATO",
+   "transform": null,
+   "encoded": "BRAKEMIAN",
+   "mutated": "BRAKEMIAN"
+  },
+  {
+   "id": 7,
+   "title": "Terminus Approaching",
+   "answer": "CARRIAGE",
+   "mechanism": "Resistor colour bands",
+   "transform": null,
+   "encoded": "CARRIOAGE",
+   "mutated": "CARRIOAGE"
+  },
+  {
+   "id": 8,
+   "title": "Mind The Gap",
+   "answer": "PASSPORT",
+   "mechanism": "Shredded sentence",
+   "transform": null,
+   "encoded": "PNASSPORT",
+   "mutated": "PNASSPORT"
+  }
+ ]
+}

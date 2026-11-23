@@ -1,0 +1,64 @@
+{
+ "date": "2026-11-22",
+ "number": 57,
+ "difficulty": "hard",
+ "final": "CABOOSE",
+ "metaType": "initials",
+ "explain": "The ciphertext is Vigenère-encrypted with the first letters of the feeder answers (in puzzle order) as the key.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Platform Nine",
+   "answer": "BOILER",
+   "mechanism": "Rail fence (cluephrase)",
+   "transform": null,
+   "encoded": "BOILER",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Last Call",
+   "answer": "PASSPORT",
+   "mechanism": "Pigpen cipher",
+   "transform": null,
+   "encoded": "PASSPORT",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Points Failure",
+   "answer": "SWITCH",
+   "mechanism": "Word search leftovers",
+   "transform": null,
+   "encoded": "SWITCH",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Rolling Stock",
+   "answer": "COMPARTMENT",
+   "mechanism": "Number trivia",
+   "transform": null,
+   "encoded": "COMPARTMENT",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Night Mail",
+   "answer": "FIREMAN",
+   "mechanism": "Cryptogram (cluephrase)",
+   "transform": null,
+   "encoded": "FIREMAN",
+   "mutated": null
+  },
+  {
+   "id": 6,
+   "title": "Request Stop",
+   "answer": "WHISTLE",
+   "mechanism": "Phone multi-tap",
+   "transform": null,
+   "encoded": "WHISTLE",
+   "mutated": null
+  }
+ ]
+}

@@ -1,0 +1,384 @@
+{
+ "date": "2026-11-23",
+ "difficulty": "hard",
+ "salt": "2026-11-23",
+ "number": 58,
+ "round": "The Travelling Show",
+ "intro": "The circus arrived overnight in a town that isn't on any map, and by morning the big top stood complete, its canvas bleached by a sun that never quite warms. Admission is free, but the ticket-taker only lets you in if you can read your ticket, so the queue is long and patient, each person turning the stub over in their fingers. Behind the curtain, the wardrobe trunk is open like a mouth, and the dresser is laying out the costumes the way she always does, each garment slipped into its own cut of felt, no two alike, no one out of place. The performers drift in one by one, collecting their outfits in silence, and the mirrors along the wall catch them at odd angles. The sawdust holds the chill of the night, and the smell of rosin and damp wool settles over everything.",
+ "echo": "Roll up: the whole show exists only to be looked at.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Strongman",
+   "flavor": "All the right letters, none in the right places.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "WHIHC",
+      "FI",
+      "RWSEARDSOWOWLL",
+      "DOUFN",
+      "TNHE",
+      "UYO",
+      "OUY",
+      "EARD",
+      "AERAYDL",
+      "ENSENETC",
+      "ETH",
+      "ACN",
+      "AWRNES",
+      "EVHA",
+      "HSTI",
+      "SI"
+     ],
+     "inline": true,
+     "tray": "word"
+    }
+   ],
+   "hash": "d99124781d69ae5875c5055f0b8ce02629b04d7b07e81dbe9b17a344c80ec2cb",
+   "partials": {},
+   "hints": [
+    "Each word is complete but shuffled. Start with the shortest ones: does a sentence appear?"
+   ]
+  },
+  {
+   "id": 2,
+   "title": "Two Shows Daily",
+   "flavor": "Around the edges first; the point comes last.",
+   "blocks": [
+    {
+     "type": "lettergrid",
+     "rows": [
+      "IDDENINP",
+      "HGANDITL",
+      "SNPRETSA",
+      "AOS··ZII",
+      "WLY·LEMN",
+      "EAASYLPS",
+      "GLLATHGI",
+      "ASSEMEHT"
+     ]
+    }
+   ],
+   "hash": "1652a87f0d2d36faa17773a08fe2418e1278f2357341f607399ddd0111c99963",
+   "partials": {},
+   "hints": [
+    "All the letters of a sentence are here, but not in rows. Try walking the grid the way a snail would."
+   ]
+  },
+  {
+   "id": 3,
+   "title": "Hall Of Mirrors",
+   "flavor": "Everything in its place, and nothing twice.",
+   "blocks": [
+    {
+     "type": "sudoku",
+     "size": 9,
+     "rows": [
+      "..M...A..",
+      "...B...OM",
+      "....C..L.",
+      ".E.A.U...",
+      "....O....",
+      ".A..L...C",
+      ".CL.N..ME",
+      "..OM.....",
+      ".M..BEOC."
+     ],
+     "alphabet": "ABCELMNOU",
+     "marks": [
+      [
+       7,
+       5
+      ],
+      [
+       7,
+       7
+      ],
+      [
+       7,
+       1
+      ],
+      [
+       4,
+       5
+      ],
+      [
+       6,
+       3
+      ],
+      [
+       8,
+       8
+      ],
+      [
+       7,
+       6
+      ],
+      [
+       6,
+       5
+      ],
+      [
+       1,
+       5
+      ],
+      [
+       3,
+       0
+      ]
+     ]
+    }
+   ],
+   "hash": "451a6c8b9e1802fdc8323bdaa4f024e2afd5760f6876999f15ee5b89977af820",
+   "partials": {},
+   "hints": [
+    "A familiar grid puzzle in unfamiliar clothes. Once it's done, are some squares more important than others?"
+   ]
+  },
+  {
+   "id": 4,
+   "title": "Centre Ring",
+   "flavor": "Static, then something that isn't static. Unlucky for some, and the same distance either way.",
+   "blocks": [
+    {
+     "type": "audio",
+     "kind": "morse",
+     "groups": [
+      ".--.",
+      "-.",
+      "-.--",
+      "-.--",
+      "...-",
+      "-...",
+      "-.-.",
+      ".-."
+     ]
+    }
+   ],
+   "hash": "5ffd55d3d6fbf64830d39d8fb4db423c621c71d05098fedb784f5debe4057ad9",
+   "partials": {
+    "d3be2956176c9ae7a82ba74f418a5dcd636c8838140466b57199baad58a351a6": "You've decoded it, but it's not finished. One more layer."
+   },
+   "hints": [
+    "Only two kinds of mark, in groups of one to four. Which old alphabet is built from exactly that? And if what you get still isn't a word, reread the flavour text."
+   ]
+  },
+  {
+   "id": 5,
+   "title": "Sawdust",
+   "flavor": "Everyone has a place. Everyone pays for it in their own name.",
+   "blocks": [
+    {
+     "type": "seating",
+     "seats": 4,
+     "names": [
+      "Bernard",
+      "Sylvester",
+      "Emilia",
+      "Claudia"
+     ],
+     "clues": [
+      "Claudia is not in seat 2.",
+      "Sylvester has an end seat.",
+      "Emilia is not in seat 2.",
+      "Bernard and Emilia are not neighbours."
+     ],
+     "logic": [
+      [
+       "not_at",
+       "CLAUDIA",
+       2
+      ],
+      [
+       "end",
+       "SYLVESTER"
+      ],
+      [
+       "not_at",
+       "EMILIA",
+       2
+      ],
+      [
+       "apart",
+       "BERNARD",
+       "EMILIA"
+      ]
+     ]
+    }
+   ],
+   "hash": "7c4b8bf7a2a2912313ff841fd0194350bbabd7cf6e181b2d3c750ea275c682e0",
+   "partials": {},
+   "hints": [
+    "Only one arrangement satisfies every clue; start from whoever has an end seat or a fixed neighbour. Once they're seated, why might the seat numbers matter?"
+   ]
+  },
+  {
+   "id": 6,
+   "title": "Midway",
+   "flavor": "Only one page survived. It was the only page anyone needed.",
+   "blocks": [
+    {
+     "type": "prose",
+     "text": "The circus arrived overnight in a town that isn't on any map. Admission is free, but the ticket-taker only lets you in if you can read your ticket.",
+     "paper": true
+    },
+    {
+     "type": "list",
+     "items": [
+      "28.3",
+      "7.2",
+      "9.3",
+      "4.9",
+      "7.2",
+      "3.2",
+      "9.4",
+      "14.1",
+      "19.1",
+      "9.3",
+      "14.1",
+      "13.6",
+      "9.4"
+     ],
+     "inline": true
+    }
+   ],
+   "hash": "fc3c0879d019e3d7285fe307dca0470eda0895475c8bab06e926a24fd0c1766a",
+   "partials": {},
+   "hints": [
+    "The first number in each pair never goes past the number of words on the page. What does the second count?"
+   ]
+  },
+  {
+   "id": 7,
+   "title": "Sideshow",
+   "flavor": "The name on the door is also the key to it.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "LQJLLYCLW",
+     "big": true
+    }
+   ],
+   "hash": "2ccdda2248091d36f3999627c5338823e1f1d0f967306a1e06c211200a63640c",
+   "partials": {},
+   "hints": [
+    "A cipher with a word for a key. Which famous one works like that, and what word on this page could open it?"
+   ]
+  },
+  {
+   "id": 8,
+   "title": "The Human Cannonball",
+   "flavor": "Walk the fence; don't read it.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "THPYR EDEHT IOETP OENWA WTRET NERRE FTIEE ASLSG HAODE HLNDS EATTB ETJ",
+     "wide": true,
+     "rails": 5
+    }
+   ],
+   "hash": "963b6cfbad7872a685d23fa985bee520f1d6791b6f0a906b5bcde6304ec0841f",
+   "partials": {},
+   "hints": [
+    "All the right letters are here, just out of order. Could they have been written along a path that goes up and down?"
+   ]
+  },
+  {
+   "id": 9,
+   "title": "Grand Finale",
+   "flavor": "Every word ran into itself. The little numbers know where to look.",
+   "blocks": [
+    {
+     "type": "morselines",
+     "items": [
+      {
+       "code": "...-...-..-...",
+       "len": 6,
+       "index": 5
+      },
+      {
+       "code": "..-....--......--.-",
+       "len": 8,
+       "index": 6
+      },
+      {
+       "code": "--...-..-.---.-.",
+       "len": 6,
+       "index": 1
+      },
+      {
+       "code": "-.-.-",
+       "len": 4,
+       "index": 2
+      },
+      {
+       "code": "..-.---.-.-..--..",
+       "len": 7,
+       "index": 3
+      }
+     ]
+    }
+   ],
+   "hash": "3aeeb834e153fd8eeb240ba0b303a02a11e0bb44730e04b901703531bf6608b3",
+   "partials": {},
+   "hints": [
+    "Two symbols, no spaces, and a letter count. Which old code is it, and which word from this round fits each line?"
+   ]
+  }
+ ],
+ "meta": {
+  "title": "Meta: The Travelling Show",
+  "flavor": "Everything under the big top has a place.",
+  "blocks": [
+   {
+    "type": "fitgrid",
+    "rows": [
+     {
+      "len": 6,
+      "shade": 2
+     },
+     {
+      "len": 9,
+      "shade": 7
+     },
+     {
+      "len": 4,
+      "shade": 1
+     },
+     {
+      "len": 8,
+      "shade": 0
+     },
+     {
+      "len": 5,
+      "shade": 0
+     },
+     {
+      "len": 10,
+      "shade": 1
+     },
+     {
+      "len": 13,
+      "shade": 0
+     },
+     {
+      "len": 7,
+      "shade": 6
+     },
+     {
+      "len": 14,
+      "shade": 12
+     }
+    ]
+   }
+  ],
+  "length": 9,
+  "hash": "2fa3ec5c590e140cfa496f7abb79a04b2928d0c76518a789174543821a5e5fc1",
+  "hints": [
+   "The grid's rows are all different lengths. So are your answers."
+  ]
+ },
+ "described": true
+}

@@ -1,0 +1,378 @@
+{
+ "date": "2026-11-23",
+ "difficulty": "medium",
+ "salt": "2026-11-23/medium",
+ "number": 58,
+ "round": "The Travelling Show",
+ "intro": "The circus arrived overnight in a town that isn't on any map. Admission is free, but the ticket-taker only lets you in if you can read your ticket, and the ink on every ticket is a different colour, like the ones the ringmaster files in the green ledger behind the box office. Sawdust hangs thick in the air, and the big top's canvas flaps against the poles even though there is no wind. The performers arrive in order, each to their own mark, and the calliope plays the same tune it played yesterday.",
+ "echo": "The Tower of London once kept lions, and nobody thought it strange.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Roll Up",
+   "flavor": "Not a single letter on the page, and yet it says something.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "✈▼♫✚◇♥ ♦▼☆✈ ☀♫♦○ ●◆◇◇ ☆☀♦♫ ♦▼○ ☁▲♫☀▽ ▼◆☀♥✈ ♠◇○◆✈○ ●♫▲▽○♦ ♦▼○ ☁♫▲♥ ♠▲○♦♪○◇",
+     "wide": true,
+     "solver": "substitution"
+    }
+   ],
+   "hash": "7030daf5f98938651228aa15a60d74ab4b0ac6d47c70490d1c902957244c63dc",
+   "partials": {},
+   "hints": [
+    "Which short words are most common in English? Could any of them be hiding here?",
+    "Each symbol always stands for the same letter. The finished sentence tells you what to submit."
+   ],
+   "length": 7
+  },
+  {
+   "id": 2,
+   "title": "Sideshow",
+   "flavor": "Every value here was once something you could touch.",
+   "blocks": [
+    {
+     "type": "numbers",
+     "items": [
+      13,
+      1,
+      27,
+      10,
+      9,
+      10,
+      1,
+      29
+     ]
+    }
+   ],
+   "hash": "b9028165d91f03159b9cce7327584af165405c7e171d32dfde9d8350d1eb0766",
+   "partials": {},
+   "hints": [
+    "Write each number in binary. Six yes-or-no choices: is there an alphabet built from exactly that?",
+    "Braille: each bit is one of the six dots (1, 2, 4 down the left column; 8, 16, 32 down the right)."
+   ],
+   "length": 8
+  },
+  {
+   "id": 3,
+   "title": "Midway",
+   "flavor": "Nothing was lost; everything simply moved over.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "KUIB",
+     "big": true,
+     "shift": -1
+    }
+   ],
+   "hash": "966d01a7188f6f12def983b97fd7cc79250145938f8da648d57089936306dec1",
+   "partials": {},
+   "hints": [
+    "Every letter is close to the right one. Close on what? Look down at your hands.",
+    "QWERTY: every letter was typed one key to the side. Try shifting each one back, both directions."
+   ],
+   "length": 4
+  },
+  {
+   "id": 4,
+   "title": "The Human Cannonball",
+   "flavor": "Three letters to a strip, and a note of how long each word was.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "ADY",
+      "ANR",
+      "CON",
+      "EAD",
+      "ERW",
+      "FOU",
+      "HEA",
+      "HIC",
+      "HIS",
+      "IFY",
+      "LRE",
+      "NCE",
+      "NDT",
+      "NIS",
+      "NSW",
+      "NTE",
+      "NYO",
+      "OUC",
+      "SSE",
+      "T",
+      "THE",
+      "THI",
+      "TIO",
+      "TOR",
+      "UHA",
+      "VEA"
+     ],
+     "inline": true,
+     "tiles": true
+    },
+    {
+     "type": "prose",
+     "text": "Word lengths: (2 3 3 4 4 8 4 3 4 7 5 3 6 5 2 13)"
+    }
+   ],
+   "hash": "7e30a59b399e978cdf0a97d4b7a2ff836191f86c7b899530f1f84ee4f0ebbd6d",
+   "partials": {},
+   "hints": [
+    "The strips are alphabetised, not in order. The word lengths say where the breaks fall. Which strip could start the sentence?",
+    "Chain the strips into one string and split it by the word lengths; the sentence tells you what to submit."
+   ],
+   "length": 13
+  },
+  {
+   "id": 5,
+   "title": "Greasepaint",
+   "flavor": "Every answer is small, and none is bigger than it needs to be. Unlucky for some: the letters were all nudged by the same unlucky amount.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "Days in a week",
+      "Players on a football pitch at kick-off",
+      "Faces on an icosahedron",
+      "Guns fired in a traditional royal salute",
+      "Days in a week",
+      "Rings on the Olympic flag",
+      "Wheels on a bicycle",
+      "Primary colours of light",
+      "Holes on a full golf course"
+     ],
+     "ordered": true,
+     "tray": "letter"
+    }
+   ],
+   "hash": "caf8107d077428505d18623b99f2835c66529b62332b7fb83f104a9e120f819a",
+   "partials": {
+    "172ce7f9b072ace180267b8572c7aab1b2b464b215fbfe2451b5b9dafc374f74": "You've decoded it, but it's not finished. One more layer."
+   },
+   "hints": [
+    "Every line has a number for an answer. Could those numbers be counting through something else? And if what you get still isn't a word, reread the flavour text.",
+    "They're all between 1 and 26: A = 1, B = 2… Then one more layer: Shift every letter 13 places (A↔N)."
+   ],
+   "length": 9
+  },
+  {
+   "id": 6,
+   "title": "Two Shows Daily",
+   "flavor": "Pairs of numbers pencilled in the margin.",
+   "blocks": [
+    {
+     "type": "prose",
+     "text": "The circus arrived overnight in a town that isn't on any map. Admission is free, but the ticket-taker only lets you in if you can read your ticket.",
+     "paper": true
+    },
+    {
+     "type": "list",
+     "items": [
+      "12.3",
+      "26.3",
+      "3.2",
+      "13.1",
+      "3.7",
+      "18.10"
+     ],
+     "inline": true
+    }
+   ],
+   "hash": "c2b5c9134a35891445ca98de0566bff06f9ad20007eef32e8afe2a1d7e6d3dc9",
+   "partials": {},
+   "hints": [
+    "The first number in each pair never goes past the number of words on the page. What does the second count?",
+    "The first number finds a word on the page; the second finds a letter in it."
+   ],
+   "length": 6
+  },
+  {
+   "id": 7,
+   "title": "Sawdust",
+   "flavor": "Shaken, one word at a time.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "BDOYNO",
+      "EPCETDXE",
+      "OAENNY",
+      "OT",
+      "ETG",
+      "IHTS",
+      "FRA",
+      "OS",
+      "EHT",
+      "IZERP",
+      "SI",
+      "UTJS",
+      "EON",
+      "DOWR",
+      "ROSELOWWWLADSR"
+     ],
+     "inline": true,
+     "tray": "word"
+    }
+   ],
+   "hash": "2e038642d129200063b896e53f2ae747ce2db62ec34024e3b94cd9c0793669d0",
+   "partials": {},
+   "hints": [
+    "Each word is complete but shuffled. Start with the shortest ones: does a sentence appear?",
+    "Unscramble each word where it stands; the sentence tells you what to submit."
+   ],
+   "length": 14
+  },
+  {
+   "id": 8,
+   "title": "Centre Ring",
+   "flavor": "Fill the gaps.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "_ORTUNE",
+      "PUPP_T",
+      "DRUM_OLL",
+      "BARKE_",
+      "CALL_OPE",
+      "_AFETYNET",
+      "CLO_N",
+      "SPOTLIG_T",
+      "UNICYCL_",
+      "TIG_R",
+      "CANNONBAL_"
+     ],
+     "ordered": true,
+     "mono": true
+    }
+   ],
+   "hash": "11553306dd555dbceae5eca71549431ee7db6d426ec88daaf1b7687e9c33c9dd",
+   "partials": {},
+   "hints": [
+    "Every gap takes exactly one letter. Is there a pattern in what you filled in?",
+    "Read the letters you supplied, in order."
+   ],
+   "length": 11
+  },
+  {
+   "id": 9,
+   "title": "Without A Net",
+   "flavor": "The sprocket keeps count; the holes do the talking.",
+   "blocks": [
+    {
+     "type": "tape",
+     "rows": [
+      [
+       1,
+       0,
+       1,
+       0,
+       1,
+       0,
+       0
+      ],
+      [
+       1,
+       0,
+       0,
+       0,
+       0,
+       0,
+       1
+      ],
+      [
+       1,
+       0,
+       0,
+       1,
+       1,
+       0,
+       1
+      ],
+      [
+       1,
+       0,
+       0,
+       0,
+       1,
+       0,
+       1
+      ],
+      [
+       1,
+       0,
+       1,
+       0,
+       0,
+       1,
+       0
+      ]
+     ]
+    }
+   ],
+   "hash": "fbe01a589917a1e4bb669662518d6cf63431ae2a3c1340dd298065eb0812f0e1",
+   "partials": {},
+   "hints": [
+    "Seven positions a row, each punched or not. What were seven bits once enough for?",
+    "Seven-bit ASCII: a hole is 1, the leftmost hole is the highest bit."
+   ],
+   "length": 5
+  }
+ ],
+ "meta": {
+  "title": "Meta: The Travelling Show",
+  "flavor": "Everything under the big top has a place.",
+  "blocks": [
+   {
+    "type": "fitgrid",
+    "rows": [
+     {
+      "len": 5,
+      "shade": 2
+     },
+     {
+      "len": 9,
+      "shade": 8
+     },
+     {
+      "len": 4,
+      "shade": 3
+     },
+     {
+      "len": 6,
+      "shade": 3
+     },
+     {
+      "len": 8,
+      "shade": 2
+     },
+     {
+      "len": 14,
+      "shade": 12
+     },
+     {
+      "len": 7,
+      "shade": 1
+     },
+     {
+      "len": 13,
+      "shade": 10
+     },
+     {
+      "len": 11,
+      "shade": 8
+     }
+    ]
+   }
+  ],
+  "length": 9,
+  "hash": "fb563d76487d125b22d2292a3db988046d02cb0856162427e6ddc9934d23afec",
+  "hints": [
+   "The grid's rows are all different lengths. So are your answers.",
+   "Put each answer in the row its length fits; read the shaded squares top to bottom."
+  ]
+ },
+ "described": true
+}

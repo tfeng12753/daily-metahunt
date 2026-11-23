@@ -1,0 +1,46 @@
+{
+ "date": "2026-11-22",
+ "number": 57,
+ "difficulty": "easy",
+ "final": "DERAILED",
+ "metaType": "logbook",
+ "explain": "Each entry is (puzzle number, letter number): index into that puzzle's answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Platform Nine",
+   "answer": "VIADUCT",
+   "mechanism": "Knight's path",
+   "transform": null,
+   "encoded": "VIADUCT",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Rolling Stock",
+   "answer": "BUFFER",
+   "mechanism": "Nonogram",
+   "transform": null,
+   "encoded": "BUFFER",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Night Mail",
+   "answer": "LANTERN",
+   "mechanism": "Book cipher",
+   "transform": null,
+   "encoded": "LANTERN",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "The Up Line",
+   "answer": "RAILCAR",
+   "mechanism": "Scrambled sentence",
+   "transform": null,
+   "encoded": "RAILCAR",
+   "mutated": null
+  }
+ ]
+}

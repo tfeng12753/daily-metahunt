@@ -1,0 +1,220 @@
+{
+ "date": "2026-11-23",
+ "difficulty": "easy",
+ "salt": "2026-11-23/easy",
+ "number": 58,
+ "round": "The Travelling Show",
+ "intro": "The circus arrived overnight in a town that isn't on any map, and by morning the big top smells of sawdust and greasepaint. Admission is free, but the ticket-taker only lets you in if you can read your ticket; those who cannot are sent to watch from the mud outside. Inside, the manager's ledger lies open on a barrel, and every line in it holds two numbers rather than a sentence: the first for the act's place in the running order, the second for a spot inside that act's name. The Strongman page, the Sawdust page, the Centre Ring page and the Hall Of Mirrors page have all been filled in the same cramped way, though nobody will tell you what the second number is meant to find. Newcomers are wise to copy the pattern onto their own tickets before the bell rings.",
+ "echo": "Five things in the air, and only two hands.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Strongman",
+   "flavor": "Someone wrote this out in a zigzag across two lines of the ledger, then copied each line out in turn.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "IYUAR ATISN ECTEY UAELE DFUDH ASEWI HSETR FOCNE DHSET NEHNO HVARA YONTE NWRHC IJSE",
+     "wide": true,
+     "rails": 2
+    }
+   ],
+   "hash": "d2975b727407f12cb00fad3f2b5de32c64f7c2b54006b7c2f18e5ba95efb97f7",
+   "partials": {},
+   "hints": [
+    "Rail-fence transposition of a sentence with the spaces removed. Try 2 to 5 rails; the sentence tells you the answer.",
+    "To check you're on track: the answer begins with J."
+   ],
+   "technique": "Rail fence (cluephrase)",
+   "length": 6
+  },
+  {
+   "id": 2,
+   "title": "Sawdust",
+   "flavor": "Confetti, sorted alphabetically by a very tidy intern. Put it back together.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "EBU",
+      "EOT",
+      "GHT",
+      "HER",
+      "ISP",
+      "LEI",
+      "LTH",
+      "NOT",
+      "RAN",
+      "RFO",
+      "ROP",
+      "RTH",
+      "SHO",
+      "STI",
+      "SWE",
+      "TDO",
+      "TEL",
+      "TIT",
+      "UGO",
+      "UZZ",
+      "WYO",
+      "YOU"
+     ],
+     "inline": true,
+     "tiles": true
+    },
+    {
+     "type": "prose",
+     "text": "Word lengths: (4 6 3 4 6 2 9 3 2 3 4 3 6 3 3 3 2)"
+    }
+   ],
+   "hash": "0b0c8669a267bbbbe34cfbfb1a2de133f5a8d24ebe8e73234c280c0aea57848e",
+   "partials": {},
+   "hints": [
+    "The sentence was cut into three-letter fragments (spaces removed) and alphabetised. Reassemble it using the word lengths; it tells you the answer.",
+    "To check you're on track: the answer begins with T."
+   ],
+   "technique": "Shredded sentence",
+   "length": 9
+  },
+  {
+   "id": 3,
+   "title": "Centre Ring",
+   "flavor": "Seat them correctly first. Then each guest owes you the letter of their name that matches their seat number.",
+   "blocks": [
+    {
+     "type": "seating",
+     "seats": 7,
+     "names": [
+      "Vivienne",
+      "Melanie",
+      "Frederick",
+      "Rosalind",
+      "Anita",
+      "Cornelius",
+      "Magnus"
+     ],
+     "clues": [
+      "Rosalind sits somewhere between Cornelius and Frederick.",
+      "Vivienne sits somewhere between Frederick and Melanie.",
+      "Exactly 2 people sit between Magnus and Rosalind.",
+      "Anita sits somewhere between Frederick and Vivienne.",
+      "Cornelius sits somewhere between Magnus and Rosalind.",
+      "Rosalind sits somewhere to the left of Magnus.",
+      "Anita is not in seat 2.",
+      "Exactly 2 people sit between Cornelius and Vivienne."
+     ],
+     "logic": [
+      [
+       "between",
+       "CORNELIUS",
+       "ROSALIND",
+       "FREDERICK"
+      ],
+      [
+       "between",
+       "FREDERICK",
+       "VIVIENNE",
+       "MELANIE"
+      ],
+      [
+       "gap",
+       "MAGNUS",
+       "ROSALIND",
+       2
+      ],
+      [
+       "between",
+       "FREDERICK",
+       "ANITA",
+       "VIVIENNE"
+      ],
+      [
+       "between",
+       "MAGNUS",
+       "CORNELIUS",
+       "ROSALIND"
+      ],
+      [
+       "left_of",
+       "ROSALIND",
+       "MAGNUS"
+      ],
+      [
+       "not_at",
+       "ANITA",
+       2
+      ],
+      [
+       "gap",
+       "CORNELIUS",
+       "VIVIENNE",
+       2
+      ]
+     ]
+    }
+   ],
+   "hash": "406ab4bde1002767489b62b11ef4d6a965b7b010bdec94b19ca22ca4e9af9c02",
+   "partials": {},
+   "hints": [
+    "A logic puzzle: use the clues to find the one seating that works (seats are numbered 1 to n from the left). Then the guest in seat k gives the k-th letter of their name.",
+    "To check you're on track: the answer begins with F."
+   ],
+   "technique": "Seating plan (logic)",
+   "length": 7
+  },
+  {
+   "id": 4,
+   "title": "Hall Of Mirrors",
+   "flavor": "Every flag on this line has a meaning on its own. Together, they have one more.",
+   "blocks": [
+    {
+     "type": "flags",
+     "items": [
+      "C",
+      "A",
+      "L",
+      "L",
+      "I",
+      "O",
+      "P",
+      "E"
+     ]
+    }
+   ],
+   "hash": "a77fb8b048536edaf514738f05d23fd389ad6ed10143f2e3c428b4ea5faeff83",
+   "partials": {},
+   "hints": [
+    "International maritime signal flags, one letter each.",
+    "To check you're on track: the answer begins with C."
+   ],
+   "technique": "Maritime signal flags",
+   "length": 8
+  }
+ ],
+ "meta": {
+  "title": "Meta: The Travelling Show",
+  "flavor": "The porter only ever noted where each passenger boarded. Every car holds one letter.",
+  "blocks": [
+   {
+    "type": "list",
+    "items": [
+     "Platform 1, car 1",
+     "Platform 3, car 5",
+     "Platform 2, car 3",
+     "Platform 2, car 3",
+     "Platform 4, car 3",
+     "Platform 1, car 5",
+     "Platform 3, car 3"
+    ],
+    "ordered": true
+   }
+  ],
+  "length": 7,
+  "hash": "67844c9a0823d9bcfecfbbb0922b28abba147e2f77342ba528a4a074c265ad55",
+  "hints": [
+   "Each entry is (puzzle number, letter number): index into that puzzle's answer.",
+   "To check you're on track: the final answer begins with J."
+  ]
+ },
+ "described": true
+}
