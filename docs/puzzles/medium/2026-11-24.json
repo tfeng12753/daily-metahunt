@@ -1,0 +1,408 @@
+{
+ "date": "2026-11-24",
+ "difficulty": "medium",
+ "salt": "2026-11-24/medium",
+ "number": 59,
+ "round": "Opening Night",
+ "intro": "Ten minutes before curtain, the librarian opened the pit to find every part swapped for a stranger's copy, pages dog-eared and ink still wet. The conductor stood on the podium with his hands still, refusing to raise the baton until the real score is found. The stage manager has been checking the seating plan, and on every chair he has found a spare name card, printed for a player who is not on the roster. The house lights are still up, and the audience, settling into velvet, has no idea that the whole evening has been misassigned.",
+ "echo": "Before the curtain rises, the orchestra plays a promise of everything to come.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Rehearsal Mark",
+   "flavor": "It goes round and round, and only gets anywhere in the middle.",
+   "blocks": [
+    {
+     "type": "lettergrid",
+     "rows": [
+      "EHTGNIHTT",
+      "OILEHTERS",
+      "PNERPSAOA",
+      "EEL···WFL",
+      "RWUDOEDEE",
+      "AENTDEABH",
+      "TORTYPEDT"
+     ]
+    }
+   ],
+   "hash": "80a69fbf987f452214d49d3ed562dfc8a3aa8598a86fb548673ff5ae50916dba",
+   "partials": {
+    "6774187f06d403d330e48f5db240d802959f20eadd450532efa264da326caa23": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "All the letters of a sentence are here, but not in rows. Try walking the grid the way a snail would.",
+    "Start in one corner and spiral inward along the edges; one corner and one direction read as a sentence."
+   ],
+   "length": 7
+  },
+  {
+   "id": 2,
+   "title": "Da Capo",
+   "flavor": "Everyone has a place. Everyone pays for it in their own name.",
+   "blocks": [
+    {
+     "type": "seating",
+     "seats": 7,
+     "names": [
+      "Ivanka",
+      "Stephanie",
+      "Gerald",
+      "Theodore",
+      "Valentine",
+      "Bridget",
+      "Cecilia"
+     ],
+     "clues": [
+      "Cecilia sits somewhere between Gerald and Stephanie.",
+      "Bridget sits somewhere between Gerald and Valentine.",
+      "Exactly 4 people sit between Ivanka and Stephanie.",
+      "Gerald has seat 5.",
+      "Theodore sits somewhere between Bridget and Stephanie."
+     ],
+     "logic": [
+      [
+       "between",
+       "GERALD",
+       "CECILIA",
+       "STEPHANIE"
+      ],
+      [
+       "between",
+       "GERALD",
+       "BRIDGET",
+       "VALENTINE"
+      ],
+      [
+       "gap",
+       "IVANKA",
+       "STEPHANIE",
+       4
+      ],
+      [
+       "at",
+       "GERALD",
+       5
+      ],
+      [
+       "between",
+       "BRIDGET",
+       "THEODORE",
+       "STEPHANIE"
+      ]
+     ]
+    }
+   ],
+   "hash": "b1678ace3423b833949af32c61f05c7667bc702def4df9f28ba6c7cd8be28911",
+   "partials": {
+    "97acd27d9734abdb06e8b7cd391a4eaaf25654e5d5d1b4e2dfbfe5370dac1ff9": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Only one arrangement satisfies every clue; start from whoever has an end seat or a fixed neighbour. Once they're seated, why might the seat numbers matter?",
+    "Solve the seating, then take the k-th letter of the name in seat k, left to right."
+   ],
+   "length": 6
+  },
+  {
+   "id": 3,
+   "title": "First Chair",
+   "flavor": "The operator never once took a breath.",
+   "blocks": [
+    {
+     "type": "morselines",
+     "items": [
+      {
+       "code": "----...---.",
+       "len": 4,
+       "index": 2
+      },
+      {
+       "code": "-.-..-...-.-...-..-",
+       "len": 8,
+       "index": 7
+      },
+      {
+       "code": "-..--.--..--...",
+       "len": 7,
+       "index": 5
+      },
+      {
+       "code": "...-.--.-.-.-..-----",
+       "len": 8,
+       "index": 1
+      },
+      {
+       "code": "...-.-.---.-..",
+       "len": 5,
+       "index": 1
+      },
+      {
+       "code": "-.-.----.-....--.-.----.-.",
+       "len": 9,
+       "index": 2
+      },
+      {
+       "code": "-..--.--.-..---.--.....----..",
+       "len": 9,
+       "index": 7
+      },
+      {
+       "code": "....---.-.-.",
+       "len": 4,
+       "index": 4
+      }
+     ],
+     "bank": [
+      "BALCONY",
+      "CLARINET",
+      "CONDUCTOR",
+      "ENCORE",
+      "FORTE",
+      "HORN",
+      "OBOE",
+      "SCORE",
+      "SOPRANO",
+      "STACCATO",
+      "TIMPANI",
+      "XYLOPHONE"
+     ]
+    }
+   ],
+   "hash": "4dcd7a82a08730af787aba8aae79c42b170be3ffcdc9e1ba4e2f44ebde74c59a",
+   "partials": {
+    "c340fa0ca90556b428f280e19808847a8ea7b409bb00248941a4989d6e096531": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Two symbols, no spaces, and a letter count. Which old code is it, and which word from this round fits each line?",
+    "Each line is a theme word in Morse with the letter gaps removed; find it, then take the letter at the position shown."
+   ],
+   "length": 7
+  },
+  {
+   "id": 4,
+   "title": "Con Sordino",
+   "flavor": "Numbers that nothing divides, written the old way.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "LXXI",
+      "LXI",
+      "XI",
+      "XLI",
+      "LIII",
+      "XLVII"
+     ],
+     "inline": true
+    }
+   ],
+   "hash": "8864ce4174d559156d0d95b7d5591aaa882d1ec6f9f608beb4c734b1dbb8788f",
+   "partials": {
+    "9a051b41eb30b0af66624b76f6675bf8263efc68c66753d2b3bc153b4141fd90": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Read the numerals. They're all prime. Is there a natural way to number the primes?",
+    "Find each prime's place in the list of primes (2 is 1st, 3 is 2nd…), then count through the alphabet."
+   ],
+   "length": 5
+  },
+  {
+   "id": 5,
+   "title": "Pizzicato",
+   "flavor": "Labels peeled from bottles, in the order they were used. Whoever transcribed it held the alphabet up to a mirror.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "B",
+      "Ar",
+      "Mg",
+      "P",
+      "Fe",
+      "N"
+     ],
+     "inline": true,
+     "variant": "symbols"
+    }
+   ],
+   "hash": "c50c7deaee9330b857e267a3837c262680e0455797cd07a8b5b5ac34ff468c5e",
+   "partials": {
+    "97ee20e20eb17b7f0636050ed59951c00aab13f8646bffe58fe0a2f500b11e86": "You've decoded it, but it's not finished. One more layer.",
+    "70e1fc545c16208e5d878a05e20715594169cc6cd3f1e247d6a64d605ca53baf": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Everything here has a number in a famous chemical line-up. What number does each one have? And if what you get still isn't a word, reread the flavour text.",
+    "Atomic numbers, then count through the alphabet (hydrogen = 1 = A). Then one more layer: Turn the alphabet end to end: A for Z, B for Y."
+   ],
+   "length": 5
+  },
+  {
+   "id": 6,
+   "title": "Coda",
+   "flavor": "Matter, counted, and then spelled.",
+   "blocks": [
+    {
+     "type": "numbers",
+     "items": [
+      44,
+      8,
+      16,
+      49
+     ],
+     "tray": 2
+    }
+   ],
+   "hash": "9e710287d655c1386f35db6c5fe57c41ffcf24533393b542337b0794c2d65c5d",
+   "partials": {
+    "3f0abc26414dbc3a5958da8547d9ca5fda96adc17d16f5115f0928b1fd531243": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Several of these numbers are bigger than 26, so they can't be letter positions. What else has a number that high?",
+    "Atomic numbers: write each element's symbol and run the symbols together into one word."
+   ],
+   "length": 5
+  },
+  {
+   "id": 7,
+   "title": "Fermata",
+   "flavor": "A familiar grid, an unfamiliar alphabet. A baker's dozen steps separate this from the truth, in either direction.",
+   "blocks": [
+    {
+     "type": "sudoku",
+     "size": 9,
+     "rows": [
+      "D.B..V...",
+      "Z.E......",
+      "..R.BZ.A.",
+      "..GZD....",
+      ".......DR",
+      "B..G.....",
+      "....F.DV.",
+      ".E......G",
+      "G.ZD..B.."
+     ],
+     "alphabet": "ABDEFGRVZ",
+     "marks": [
+      [
+       1,
+       8
+      ],
+      [
+       3,
+       0
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       1,
+       6
+      ],
+      [
+       0,
+       4
+      ],
+      [
+       8,
+       8
+      ],
+      [
+       6,
+       8
+      ],
+      [
+       2,
+       0
+      ],
+      [
+       4,
+       2
+      ],
+      [
+       0,
+       8
+      ],
+      [
+       7,
+       3
+      ],
+      [
+       1,
+       7
+      ],
+      [
+       4,
+       5
+      ]
+     ]
+    }
+   ],
+   "hash": "c3fdeefebba14407f9ebe3fb0b115ce3c145dc5167e1069b364fba6fbf0254d4",
+   "partials": {
+    "45e217ef8284b53f3795e1dd5481c81addb2e7d3548d37dcadc1aaccb992be61": "You've decoded it, but it's not finished. One more layer.",
+    "b8d7b7bd765c4769f42de4b6e291c03111f6c554c32ef355610c53fc2688e1da": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "A familiar grid puzzle in unfamiliar clothes. Once it's done, are some squares more important than others? And if what you get still isn't a word, reread the flavour text.",
+    "Solve it like a sudoku, then read the numbered squares in order. Then one more layer: Shift every letter 13 places (A↔N)."
+   ],
+   "length": 12
+  },
+  {
+   "id": 8,
+   "title": "Cadenza",
+   "flavor": "A sentence that came loose from its lines.",
+   "blocks": [
+    {
+     "type": "dropquote",
+     "cols": [
+      "EEMORW",
+      "EHTT",
+      "ACSW",
+      "AGOT",
+      "BORR",
+      "DLRTU",
+      "DHIT",
+      "EEM",
+      "ADEO",
+      "CRT",
+      "ORSW",
+      "AEISU",
+      "ENORS",
+      "CGIN",
+      "ELNOR"
+     ],
+     "mask": [
+      "....#...#......",
+      ".#.......#...#.",
+      "..#....#..#....",
+      "...#...#.#.....",
+      ".#....#........",
+      "..#############"
+     ]
+    }
+   ],
+   "hash": "2b2675894936f1c583ac531e04ee68d6bcb20ff4828e5298229f8806b1a863ee",
+   "partials": {
+    "d9833998dc38525efd251761209d3e44361d8640e4fead2143303b73060c6804": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Black squares are spaces. Which two- and three-letter words fit, using only the letters each column allows?",
+    "Each column's letters drop into that column of the grid; cross them off as you place them. The sentence tells you what to submit."
+   ],
+   "length": 9
+  }
+ ],
+ "meta": {
+  "title": "Meta: Opening Night",
+  "flavor": "Everything arrived a little heavier than it left.",
+  "blocks": [],
+  "length": 8,
+  "hash": "7176c846c8593b8d674c421e05dcd58066e6d224a04c34c6639e449153f57646",
+  "hints": [
+   "Did every answer come out the right size the first time? Each had one letter too many. Did you keep them?",
+   "Take the extra letter from each feeder, in puzzle order."
+  ]
+ },
+ "described": true
+}

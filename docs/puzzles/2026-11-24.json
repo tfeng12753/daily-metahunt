@@ -1,0 +1,542 @@
+{
+ "date": "2026-11-24",
+ "difficulty": "hard",
+ "salt": "2026-11-24",
+ "number": 59,
+ "round": "Opening Night",
+ "intro": "Ten minutes before curtain, every part in the pit was swapped for something else. The baton lies untouched on the stand, and the podium is empty. The orchestra is not angry; they are sorting. Cellists compare bowings with the horn section, percussionists hold up parts to the light as if checking watermarks. First violins have found two copies of the same page, side by side, one wearing a sticky note with a time written on it. The rehearsal pianist keeps finding mismatched pages lying exactly where she left them, as though someone is tidying around her. Nobody will say it out loud, but the copyist’s room on the third floor is still lit.",
+ "echo": "The one person on stage who makes no sound at all.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Pizzicato",
+   "flavor": "Each entry picked up a hitchhiker on the way. Whoever copied it out was standing in front of a mirror.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "CSOHXUR",
+      "PEMNOT",
+      "RDEUPELM",
+      "IWNPOA",
+      "ONRSFI",
+      "ILXNOIV",
+      "NGTAOAS",
+      "LRONET",
+      "OANTIB"
+     ],
+     "ordered": true,
+     "mono": true
+    }
+   ],
+   "hash": "2b6a3604d576d3796640c0ca8b91e8c368b7f2f8eedddb59fa2da137667f98e9",
+   "partials": {
+    "b233f7e80c5115086de8a589dc58ef1187bd36885d74be741d635974a9e904be": "You've decoded it, but it's not finished. One more layer.",
+    "2ea3ed7752cbe0c63cc1ff51694c729af22ef417ebce48ab4958af7263a6b466": "So close. Exactly one thing is wrong here. Fix it (and remember what you fixed)."
+   },
+   "hints": [
+    "Each jumble is almost a word from this round, but with a letter to spare. Which letter, every time? And if what you get still isn't a word, reread the flavour text."
+   ]
+  },
+  {
+   "id": 2,
+   "title": "Da Capo",
+   "flavor": "Matter, counted, and then spelled.",
+   "blocks": [
+    {
+     "type": "numbers",
+     "items": [
+      27,
+      7,
+      58,
+      88,
+      8
+     ],
+     "tray": 2
+    }
+   ],
+   "hash": "e368253b5049ba28da96796af70f1f947c00b768ccbfb4089df8fd9dc026b4a0",
+   "partials": {
+    "32c339814065f95a34d0cdc92473328fced4ba897d6e933a80d1d2eced95c3fa": "So close. Exactly one thing is wrong here. Fix it (and remember what you fixed)."
+   },
+   "hints": [
+    "Several of these numbers are bigger than 26, so they can't be letter positions. What else has a number that high?"
+   ]
+  },
+  {
+   "id": 3,
+   "title": "First Chair",
+   "flavor": "Take stock of everything you recognise.",
+   "blocks": [
+    {
+     "type": "caption",
+     "text": "Somewhere in here: things to do with the concert hall."
+    },
+    {
+     "type": "board",
+     "rows": [
+      "PIANOLP",
+      "SEABUTI",
+      "FUMUTEC",
+      "ONROHEC",
+      "RGBOLAO",
+      "TOTLHEL",
+      "EROCSCO"
+     ],
+     "plain": true,
+     "words": [
+      "CELLO",
+      "CHORUS",
+      "FORTE",
+      "HORN",
+      "MUTE",
+      "OBOE",
+      "PIANO",
+      "PICCOLO",
+      "SCORE",
+      "TUBA"
+     ]
+    }
+   ],
+   "hash": "9e3c3d9244670ffb564bccc79f827926a559aa1fca2924d5138417e23ecbd6d5",
+   "partials": {
+    "8d1d4db960854f47073af74da13c792d2d04b548896d6c83de35a03560a50412": "So close. Exactly one thing is wrong here. Fix it (and remember what you fixed)."
+   },
+   "hints": [
+    "Once every theme word is found, is anything left unclaimed? Read it in order.",
+    "The hidden words are: CELLO, CHORUS, FORTE, HORN, MUTE, OBOE, PIANO, PICCOLO, SCORE, TUBA."
+   ]
+  },
+  {
+   "id": 4,
+   "title": "Cadenza",
+   "flavor": "Noughts and crosses, with a few stray dots.",
+   "blocks": [
+    {
+     "type": "pigpen",
+     "items": [
+      {
+       "g": "hash",
+       "p": 8,
+       "dot": false
+      },
+      {
+       "g": "hash",
+       "p": 4,
+       "dot": true
+      },
+      {
+       "g": "x",
+       "p": 1,
+       "dot": false
+      },
+      {
+       "g": "x",
+       "p": 0,
+       "dot": false
+      },
+      {
+       "g": "hash",
+       "p": 8,
+       "dot": true
+      },
+      {
+       "g": "hash",
+       "p": 3,
+       "dot": true
+      },
+      {
+       "g": "hash",
+       "p": 8,
+       "dot": false
+      },
+      {
+       "g": "x",
+       "p": 0,
+       "dot": false
+      },
+      {
+       "g": "x",
+       "p": 0,
+       "dot": false
+      },
+      {
+       "g": "hash",
+       "p": 8,
+       "dot": false
+      },
+      {
+       "g": "hash",
+       "p": 5,
+       "dot": true
+      },
+      {
+       "g": "hash",
+       "p": 4,
+       "dot": true
+      }
+     ]
+    }
+   ],
+   "hash": "0475993f5d5813ebdd41754dadfbe08070b34aeca5362491e6f643ea4a6f3990",
+   "partials": {
+    "53f87cd2ffb969bd11e9a77759d7b91364d568530b0a2998eac6bea1b32c59b2": "So close. Exactly one thing is wrong here. Fix it (and remember what you fixed)."
+   },
+   "hints": [
+    "Picture the alphabet written into a couple of #-grids and X-grids. Which cell would each shape be?"
+   ]
+  },
+  {
+   "id": 5,
+   "title": "Tutti",
+   "flavor": "Rhythm without rests, and a finger pointing into each line.",
+   "blocks": [
+    {
+     "type": "morselines",
+     "items": [
+      {
+       "code": "-....-......-------.",
+       "len": 7,
+       "index": 1
+      },
+      {
+       "code": "-....-.-...-----..",
+       "len": 8,
+       "index": 2
+      },
+      {
+       "code": "-.-...-...-..---",
+       "len": 5,
+       "index": 3
+      },
+      {
+       "code": "-.-.....---.-...-...",
+       "len": 6,
+       "index": 1
+      },
+      {
+       "code": "-.--.--.---",
+       "len": 5,
+       "index": 1
+      },
+      {
+       "code": "...-..---.-....-.",
+       "len": 6,
+       "index": 6
+      },
+      {
+       "code": "-.-.-.-----....-.-..",
+       "len": 6,
+       "index": 2
+      }
+     ]
+    }
+   ],
+   "hash": "f96d315f477021ff9cdcf4e266c404bd87d884115e00b83aa016673ca5a84ced",
+   "partials": {
+    "8bd5dc1263a076b85ec117a3cfcf98982d44ec7afecce94e038bb7917f8790a0": "So close. Exactly one thing is wrong here. Fix it (and remember what you fixed)."
+   },
+   "hints": [
+    "Two symbols, no spaces, and a letter count. Which old code is it, and which word from this round fits each line?"
+   ]
+  },
+  {
+   "id": 6,
+   "title": "Tuning Note",
+   "flavor": "Nothing is missing. Nothing is where it was.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "NWOD",
+      "NO",
+      "HTE",
+      "ENO",
+      "RMOERONMT",
+      "DNA",
+      "AMY",
+      "OWRD",
+      "WIERT",
+      "NTEX",
+      "LWLE",
+      "OT",
+      "UOY",
+      "ETH",
+      "ULQYTEI",
+      "ENDO",
+      "ONW",
+      "OMEV"
+     ],
+     "inline": true,
+     "tray": "word"
+    }
+   ],
+   "hash": "8e858fe82b2e365a4855beedeb19519c2baf6b43c062b67886b9ad9a173627ac",
+   "partials": {
+    "c91528777729b0739fb43593d04fd5d1ef4d5f261a08094b9aae830b61983081": "So close. Exactly one thing is wrong here. Fix it (and remember what you fixed)."
+   },
+   "hints": [
+    "Each word is complete but shuffled. Start with the shortest ones: does a sentence appear?"
+   ]
+  },
+  {
+   "id": 7,
+   "title": "Rehearsal Mark",
+   "flavor": "Some squares have been given to you for free. Half a turn of the wheel and you'd have it.",
+   "blocks": [
+    {
+     "type": "nonogram",
+     "rows": [
+      [
+       5,
+       4,
+       1,
+       1,
+       4,
+       4,
+       1,
+       1,
+       4,
+       4
+      ],
+      [
+       1,
+       1,
+       1,
+       2,
+       1,
+       1,
+       1,
+       1,
+       1,
+       2,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       4,
+       4,
+       1,
+       1,
+       1,
+       4,
+       4,
+       1,
+       1,
+       1,
+       1,
+       2,
+       4
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       2,
+       1,
+       1,
+       1,
+       2,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       4,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       4,
+       4
+      ]
+     ],
+     "cols": [
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       5
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       5
+      ],
+      [],
+      [
+       3
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       3
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "givens": []
+    }
+   ],
+   "hash": "f9fb6eab337ed8c3ccc226403c9795194f46f92fc0bf66669318deaf917290db",
+   "partials": {
+    "065a4e642abd82b39c7788b5d4c43ccdd311139704b0d42f4658a156c916c76b": "You've decoded it, but it's not finished. One more layer.",
+    "563012439b7e122cccfb68ccc4806872a1edec3b1874af1b96541ae52ec6d1c9": "So close. Exactly one thing is wrong here. Fix it (and remember what you fixed)."
+   },
+   "hints": [
+    "The numbers describe runs of filled squares. What picture could they be drawing? And if what you get still isn't a word, reread the flavour text."
+   ]
+  }
+ ],
+ "meta": {
+  "title": "Meta: Opening Night",
+  "flavor": "Nothing reached the concert hall undamaged. The damage, though, was remarkably consistent.",
+  "blocks": [],
+  "length": 7,
+  "hash": "e3f084ae14dec0d741b32b82d6898beea5f25c18480588c04880041cce6a580e",
+  "hints": [
+   "Did every answer come out clean the first time? Each had exactly one wrong letter. Did you keep them?"
+  ]
+ },
+ "described": true
+}

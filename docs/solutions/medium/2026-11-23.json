@@ -1,0 +1,91 @@
+{
+ "date": "2026-11-23",
+ "number": 58,
+ "difficulty": "medium",
+ "final": "MENAGERIE",
+ "metaType": "fitin",
+ "explain": "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Roll Up",
+   "answer": "PRETZEL",
+   "mechanism": "Symbol cryptogram",
+   "transform": null,
+   "encoded": "PRETZEL",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Sideshow",
+   "answer": "MAGICIAN",
+   "mechanism": "Braille as numbers",
+   "transform": null,
+   "encoded": "MAGICIAN",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Midway",
+   "answer": "LION",
+   "mechanism": "Keyboard shift",
+   "transform": null,
+   "encoded": "LION",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "The Human Cannonball",
+   "answer": "CONTORTIONIST",
+   "mechanism": "Shredded sentence",
+   "transform": null,
+   "encoded": "CONTORTIONIST",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Greasepaint",
+   "answer": "TIGHTROPE",
+   "mechanism": "Number trivia",
+   "transform": "ROT13",
+   "encoded": "GVTUGEBCR",
+   "mutated": null
+  },
+  {
+   "id": 6,
+   "title": "Two Shows Daily",
+   "answer": "PARADE",
+   "mechanism": "Book cipher",
+   "transform": null,
+   "encoded": "PARADE",
+   "mutated": null
+  },
+  {
+   "id": 7,
+   "title": "Sawdust",
+   "answer": "SWORDSWALLOWER",
+   "mechanism": "Scrambled sentence",
+   "transform": null,
+   "encoded": "SWORDSWALLOWER",
+   "mutated": null
+  },
+  {
+   "id": 8,
+   "title": "Centre Ring",
+   "answer": "FERRISWHEEL",
+   "mechanism": "Missing letters",
+   "transform": null,
+   "encoded": "FERRISWHEEL",
+   "mutated": null
+  },
+  {
+   "id": 9,
+   "title": "Without A Net",
+   "answer": "TAMER",
+   "mechanism": "Punched tape",
+   "transform": null,
+   "encoded": "TAMER",
+   "mutated": null
+  }
+ ]
+}

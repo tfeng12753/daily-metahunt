@@ -1,0 +1,695 @@
+{
+ "date": "2026-11-24",
+ "difficulty": "easy",
+ "salt": "2026-11-24/easy",
+ "number": 59,
+ "round": "Opening Night",
+ "intro": "Ten minutes before curtain, every part in the pit was swapped for something else. The conductor refuses to go on until the real score is found. In the green room, the librarian has laid out a long wooden case of pigeonholes, each cut to fit a single part exactly; the duplicates have been sorted out and pushed to one side. 'Nothing fits where it shouldn't,' she says, tapping the lid, 'and everything has its own place.' The stage manager has started carrying the originals down one by one, and the orchestra is already warming up, wondering which of them will get to play what they were hired for.",
+ "echo": "No soloists tonight: everyone plays together, or nobody does.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Grand Pause",
+   "flavor": "Confetti, sorted alphabetically by a very tidy intern. Put it back together.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "ASI",
+      "CEL",
+      "DSW",
+      "EIS",
+      "EVE",
+      "EWO",
+      "HEW",
+      "HIS",
+      "HUN",
+      "ITH",
+      "LO",
+      "NDT",
+      "NGL",
+      "OMT",
+      "OOD",
+      "ORD",
+      "PAG",
+      "RDA",
+      "RYG",
+      "TEN",
+      "TFR",
+      "WAN",
+      "YOU"
+     ],
+     "inline": true,
+     "tiles": true
+    },
+    {
+     "type": "prose",
+     "text": "Word lengths: (5 4 4 4 4 1 6 4 3 3 4 3 4 4 4 4 2 5)"
+    }
+   ],
+   "hash": "d6b7334c4f769027215c5ef0b23c7026058d3d125569ace83e7fdd1ca8dc1873",
+   "partials": {},
+   "hints": [
+    "The sentence was cut into three-letter fragments (spaces removed) and alphabetised. Reassemble it using the word lengths; it tells you the answer.",
+    "To check you're on track: the answer begins with C."
+   ],
+   "technique": "Shredded sentence",
+   "length": 5
+  },
+  {
+   "id": 2,
+   "title": "Cadenza",
+   "flavor": "Everything in the concert hall got thrown in the tumble dryer, and every item came out with a little something extra.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "NIORSO",
+      "OREEBNMOTM",
+      "HCOSURO",
+      "EPTOME"
+     ],
+     "ordered": true,
+     "mono": true
+    }
+   ],
+   "hash": "07c570682526b4ea3760938b46359d6684ef21e7fa2dd00a4b153aa57bbc8f9a",
+   "partials": {},
+   "hints": [
+    "Each jumble is an anagram of a word from this round's theme plus one extra letter. The extra letters, in order, spell the answer.",
+    "To check you're on track: the answer begins with O."
+   ],
+   "technique": "Anagrams with an extra letter",
+   "length": 4
+  },
+  {
+   "id": 3,
+   "title": "Fermata",
+   "flavor": "Every word in the concert hall went through the blender, but each one came out whole.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "DUHSOL",
+      "THSI",
+      "TENO",
+      "FLAL",
+      "TOIN",
+      "EHT",
+      "ORWGN",
+      "SAHDN",
+      "ELSEPA",
+      "OGTFRE",
+      "HTE",
+      "ODWR",
+      "CTTASACO"
+     ],
+     "inline": true,
+     "tray": "word"
+    }
+   ],
+   "hash": "7bd1a3bd9384203c58f41ac214925f490eb78071b8cc1076862c87f778096986",
+   "partials": {},
+   "hints": [
+    "Each word of a sentence has had its letters shuffled. Unscramble them; the sentence tells you the answer.",
+    "To check you're on track: the answer begins with S."
+   ],
+   "technique": "Scrambled sentence",
+   "length": 8
+  },
+  {
+   "id": 4,
+   "title": "First Chair",
+   "flavor": "The labels in the concert hall have faded. Each one lost exactly one letter.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "CONCER_O",
+      "TENO_",
+      "PREL_DE",
+      "_ETRONOME",
+      "TEM_O",
+      "CLARIN_T",
+      "BA_ON"
+     ],
+     "ordered": true,
+     "mono": true
+    }
+   ],
+   "hash": "be1c4da86d7cf0fa652771d77b35a78ec77a788c94113887fe7ee0e2f8296499",
+   "partials": {},
+   "hints": [
+    "Each theme word is missing one letter. The missing letters, in order, spell the answer.",
+    "To check you're on track: the answer begins with T."
+   ],
+   "technique": "Missing letters",
+   "length": 7
+  },
+  {
+   "id": 5,
+   "title": "Coda",
+   "flavor": "Two directions at a time, and never a destination.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "S & W",
+      "NW & W",
+      "E & NE"
+     ],
+     "inline": true
+    }
+   ],
+   "hash": "0daec3573964b58efdf1cabf672aad8c641458816dde82880d7fa54fb1e36fe6",
+   "partials": {},
+   "hints": [
+    "Flag semaphore, with each arm given as a compass direction as you face the signaller (N = straight up).",
+    "To check you're on track: the answer begins with B."
+   ],
+   "technique": "Semaphore (compass bearings)",
+   "length": 3
+  },
+  {
+   "id": 6,
+   "title": "Tutti",
+   "flavor": "Turn it up. It's saying something, just not in words.",
+   "blocks": [
+    {
+     "type": "audio",
+     "kind": "morse",
+     "groups": [
+      "-..-",
+      "-.--",
+      ".-..",
+      "---",
+      ".--.",
+      "....",
+      "---",
+      "-.",
+      "."
+     ]
+    }
+   ],
+   "hash": "5174e53c4fafe23e695a8b1c5bef1c571e440ec579903dd38f6050ccb48e91ab",
+   "partials": {},
+   "hints": [
+    "Morse code, played as beeps. Short = dot, long = dash; longer silences separate letters.",
+    "To check you're on track: the answer begins with X."
+   ],
+   "technique": "Morse code (audio)",
+   "length": 9
+  },
+  {
+   "id": 7,
+   "title": "Pizzicato",
+   "flavor": "Seat them correctly first. Then each guest owes you the letter of their name that matches their seat number.",
+   "blocks": [
+    {
+     "type": "seating",
+     "seats": 6,
+     "names": [
+      "Eugene",
+      "Bertrand",
+      "Hector",
+      "Simone",
+      "Harriet",
+      "Andrea"
+     ],
+     "clues": [
+      "Andrea sits immediately to the right of Eugene.",
+      "Hector sits somewhere between Andrea and Bertrand.",
+      "Harriet has an end seat.",
+      "Eugene has an end seat.",
+      "Simone sits immediately to the right of Hector."
+     ],
+     "logic": [
+      [
+       "right_of",
+       "ANDREA",
+       "EUGENE"
+      ],
+      [
+       "between",
+       "ANDREA",
+       "HECTOR",
+       "BERTRAND"
+      ],
+      [
+       "end",
+       "HARRIET"
+      ],
+      [
+       "end",
+       "EUGENE"
+      ],
+      [
+       "right_of",
+       "SIMONE",
+       "HECTOR"
+      ]
+     ]
+    }
+   ],
+   "hash": "7c03ee3927b57ac2b8a2f85932640b380e3b8590733c1658e24a6d366071d0c6",
+   "partials": {},
+   "hints": [
+    "A logic puzzle: use the clues to find the one seating that works (seats are numbered 1 to n from the left). Then the guest in seat k gives the k-th letter of their name.",
+    "To check you're on track: the answer begins with E."
+   ],
+   "technique": "Seating plan (logic)",
+   "length": 6
+  },
+  {
+   "id": 8,
+   "title": "Rehearsal Mark",
+   "flavor": "Paint by numbers. The picture is worth exactly one word.",
+   "blocks": [
+    {
+     "type": "nonogram",
+     "rows": [
+      [
+       5,
+       1,
+       1,
+       5,
+       5,
+       4,
+       1,
+       1,
+       5,
+       4,
+       4,
+       5,
+       3,
+       1,
+       1
+      ],
+      [
+       1,
+       2,
+       1,
+       1,
+       1,
+       1,
+       1,
+       2,
+       2,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       2,
+       1
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       4,
+       4,
+       1,
+       1,
+       1,
+       1,
+       3,
+       3,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       2,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       2
+      ],
+      [
+       5,
+       1,
+       1,
+       1,
+       5,
+       1,
+       1,
+       1,
+       1,
+       5,
+       4,
+       4,
+       5,
+       3,
+       1,
+       1
+      ]
+     ],
+     "cols": [
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       5
+      ],
+      [],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       5
+      ],
+      [],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       3
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       3
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       5
+      ]
+     ],
+     "givens": [
+      [
+       0,
+       64,
+       0
+      ],
+      [
+       0,
+       60,
+       0
+      ],
+      [
+       1,
+       46,
+       0
+      ],
+      [
+       1,
+       48,
+       1
+      ],
+      [
+       4,
+       42,
+       1
+      ],
+      [
+       4,
+       48,
+       1
+      ]
+     ]
+    }
+   ],
+   "hash": "2d6451c28176c97aa54df1e49f367a989fd7e91653b496501d045ac8afbeeb14",
+   "partials": {},
+   "hints": [
+    "A nonogram (paint-by-numbers). The filled picture is the answer written in 5×5 block letters.",
+    "To check you're on track: the answer begins with I."
+   ],
+   "technique": "Nonogram",
+   "length": 12
+  }
+ ],
+ "meta": {
+  "title": "Meta: Opening Night",
+  "flavor": "Everything in the concert hall has a place, and every place is exactly the right size.",
+  "blocks": [
+   {
+    "type": "fitgrid",
+    "rows": [
+     {
+      "len": 5,
+      "shade": 1
+     },
+     {
+      "len": 6,
+      "shade": 1
+     },
+     {
+      "len": 8,
+      "shade": 0
+     },
+     {
+      "len": 7,
+      "shade": 5
+     },
+     {
+      "len": 12,
+      "shade": 5
+     },
+     {
+      "len": 3,
+      "shade": 0
+     },
+     {
+      "len": 9,
+      "shade": 2
+     },
+     {
+      "len": 4,
+      "shade": 3
+     }
+    ]
+   }
+  ],
+  "length": 8,
+  "hash": "23032547c6934959b240fdec17e360a70803f3262395fa30f7f8a3fafd521057",
+  "hints": [
+   "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+   "To check you're on track: the final answer begins with E."
+  ]
+ },
+ "described": true
+}

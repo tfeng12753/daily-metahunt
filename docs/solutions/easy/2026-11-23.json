@@ -1,0 +1,46 @@
+{
+ "date": "2026-11-23",
+ "number": 58,
+ "difficulty": "easy",
+ "final": "JUGGLER",
+ "metaType": "logbook",
+ "explain": "Each entry is (puzzle number, letter number): index into that puzzle's answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Strongman",
+   "answer": "JESTER",
+   "mechanism": "Rail fence (cluephrase)",
+   "transform": null,
+   "encoded": "JESTER",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Sawdust",
+   "answer": "TIGHTROPE",
+   "mechanism": "Shredded sentence",
+   "transform": null,
+   "encoded": "TIGHTROPE",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Centre Ring",
+   "answer": "FORTUNE",
+   "mechanism": "Seating plan (logic)",
+   "transform": null,
+   "encoded": "FORTUNE",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Hall Of Mirrors",
+   "answer": "CALLIOPE",
+   "mechanism": "Maritime signal flags",
+   "transform": null,
+   "encoded": "CALLIOPE",
+   "mutated": null
+  }
+ ]
+}

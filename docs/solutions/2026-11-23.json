@@ -1,0 +1,91 @@
+{
+ "date": "2026-11-23",
+ "number": 58,
+ "difficulty": "hard",
+ "final": "SPECTACLE",
+ "metaType": "fitin",
+ "explain": "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Strongman",
+   "answer": "SWORDSWALLOWER",
+   "mechanism": "Scrambled sentence",
+   "transform": null,
+   "encoded": "SWORDSWALLOWER",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Two Shows Daily",
+   "answer": "PRETZEL",
+   "mechanism": "Spiral route",
+   "transform": null,
+   "encoded": "PRETZEL",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Hall Of Mirrors",
+   "answer": "CANNONBALL",
+   "mechanism": "Letter sudoku",
+   "transform": null,
+   "encoded": "CANNONBALL",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Centre Ring",
+   "answer": "CALLIOPE",
+   "mechanism": "Morse code (audio)",
+   "transform": "ROT13",
+   "encoded": "PNYYVBCR",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Sawdust",
+   "answer": "SEAL",
+   "mechanism": "Seating plan (logic)",
+   "transform": null,
+   "encoded": "SEAL",
+   "mutated": null
+  },
+  {
+   "id": 6,
+   "title": "Midway",
+   "answer": "CONTORTIONIST",
+   "mechanism": "Book cipher",
+   "transform": null,
+   "encoded": "CONTORTIONIST",
+   "mutated": null
+  },
+  {
+   "id": 7,
+   "title": "Sideshow",
+   "answer": "TIGHTROPE",
+   "mechanism": "Vigenère keyed by the title",
+   "transform": null,
+   "encoded": "TIGHTROPE",
+   "mutated": null
+  },
+  {
+   "id": 8,
+   "title": "The Human Cannonball",
+   "answer": "JESTER",
+   "mechanism": "Rail fence (cluephrase)",
+   "transform": null,
+   "encoded": "JESTER",
+   "mutated": null
+  },
+  {
+   "id": 9,
+   "title": "Grand Finale",
+   "answer": "TAMER",
+   "mechanism": "Gapless Morse",
+   "transform": null,
+   "encoded": "TAMER",
+   "mutated": null
+  }
+ ]
+}
