@@ -1,0 +1,73 @@
+{
+ "date": "2026-11-24",
+ "number": 59,
+ "difficulty": "hard",
+ "final": "MAESTRO",
+ "metaType": "mutation",
+ "explain": "Each feeder decodes to its answer with a single wrong letter. Those substituted letters, in puzzle order, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Pizzicato",
+   "answer": "CONDUCTOR",
+   "mechanism": "Anagrams with an extra letter",
+   "transform": "Atbash (A↔Z mirror)",
+   "encoded": "XNMWFXGLI",
+   "mutated": "CMNDUCTOR"
+  },
+  {
+   "id": 2,
+   "title": "Da Capo",
+   "answer": "CONCERTO",
+   "mechanism": "Element spelling",
+   "transform": null,
+   "encoded": "CONCERAO",
+   "mutated": "CONCERAO"
+  },
+  {
+   "id": 3,
+   "title": "First Chair",
+   "answer": "LEGATO",
+   "mechanism": "Word search leftovers",
+   "transform": null,
+   "encoded": "LEGATE",
+   "mutated": "LEGATE"
+  },
+  {
+   "id": 4,
+   "title": "Cadenza",
+   "answer": "INTERMISSION",
+   "mechanism": "Pigpen cipher",
+   "transform": null,
+   "encoded": "INTSRMISSION",
+   "mutated": "INTSRMISSION"
+  },
+  {
+   "id": 5,
+   "title": "Tutti",
+   "answer": "BALCONY",
+   "mechanism": "Gapless Morse",
+   "transform": null,
+   "encoded": "BALCTNY",
+   "mutated": "BALCTNY"
+  },
+  {
+   "id": 6,
+   "title": "Tuning Note",
+   "answer": "METRONOME",
+   "mechanism": "Scrambled sentence",
+   "transform": null,
+   "encoded": "METRONOMR",
+   "mutated": "METRONOMR"
+  },
+  {
+   "id": 7,
+   "title": "Rehearsal Mark",
+   "answer": "STACCATO",
+   "mechanism": "Nonogram",
+   "transform": "ROT13",
+   "encoded": "FBNPPNGB",
+   "mutated": "SOACCATO"
+  }
+ ]
+}

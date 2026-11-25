@@ -1,0 +1,179 @@
+{
+ "date": "2026-11-25",
+ "difficulty": "medium",
+ "salt": "2026-11-25/medium",
+ "number": 60,
+ "round": "The Endgame Study",
+ "intro": "At the back of the tournament hall a wall clock runs a quarter-hour slow, and the custodian resets it by hand at noon each day, winding the key and listening for the catch. The habit is old, older than the hall’s current ceiling, and the custodian keeps a small notebook in which he records only the day and which bell of the half-hour the minute hand has reached when he arrives. The notebook’s pages are thin and yellowed, each line a pair of plain figures, and it sits open on his stool beside a tin of polish. No one has asked about it, and he has never been asked, which suits him.",
+ "echo": "The Persian shah was never killed; he was simply left with nowhere to go.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Adjournment",
+   "flavor": "Each column remembers what it held, but not in what order.",
+   "blocks": [
+    {
+     "type": "dropquote",
+     "cols": [
+      "AASTT",
+      "HN",
+      "DIITV",
+      "EOST",
+      "RSTU",
+      "HPRY",
+      "AANS",
+      "AEGLT",
+      "CEMO",
+      "ENRS",
+      "EEGHN",
+      "ACTT",
+      "RST",
+      "EFI",
+      "KMOT",
+      "EER",
+      "IP"
+     ],
+     "mask": [
+      "....#....#...#...",
+      ".#...#......#...#",
+      ".#....#....#....#",
+      "...#....#......#.",
+      ".#..........#####"
+     ]
+    }
+   ],
+   "hash": "972e1b178392f8d34337ea94d40c278198ae3e9407fc6c2856374d40ebd0e57a",
+   "partials": {},
+   "hints": [
+    "Black squares are spaces. Which two- and three-letter words fit, using only the letters each column allows?",
+    "Each column's letters drop into that column of the grid; cross them off as you place them. The sentence tells you what to submit."
+   ],
+   "length": 10
+  },
+  {
+   "id": 2,
+   "title": "Queen's Gambit",
+   "flavor": "Typed in the dark, with one hand resting a key out of place.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "DSVTOGOVR",
+     "big": true,
+     "shift": 1
+    }
+   ],
+   "hash": "87bb89aba480f8f553158682f9771dbd72090e81926e0003fa10ef21d278d4a5",
+   "partials": {},
+   "hints": [
+    "Every letter is close to the right one. Close on what? Look down at your hands.",
+    "QWERTY: every letter was typed one key to the side. Try shifting each one back, both directions."
+   ],
+   "length": 9
+  },
+  {
+   "id": 3,
+   "title": "Sealed Move",
+   "flavor": "Matter, counted, and then spelled.",
+   "blocks": [
+    {
+     "type": "numbers",
+     "items": [
+      88,
+      7,
+      19
+     ],
+     "tray": 2
+    }
+   ],
+   "hash": "770c7a140db8e938fb8e3e55eb37e4fdbb7913e8ac68168f74b312dd502ea994",
+   "partials": {},
+   "hints": [
+    "Several of these numbers are bigger than 26, so they can't be letter positions. What else has a number that high?",
+    "Atomic numbers: write each element's symbol and run the symbols together into one word."
+   ],
+   "length": 4
+  },
+  {
+   "id": 4,
+   "title": "Poisoned Pawn",
+   "flavor": "Each entry picked up a hitchhiker on the way.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "NOAGAEDLI",
+      "CECHXK",
+      "CORABD",
+      "RHTBIRAE",
+      "CNTLAAAA",
+      "IHSENNLG",
+      "AEQRGSU",
+      "NONITAOTE"
+     ],
+     "ordered": true,
+     "mono": true
+    }
+   ],
+   "hash": "324d460c90bc0fc8c3f7a088356adb533e47027f1f93c628287c3550e0d491f4",
+   "partials": {},
+   "hints": [
+    "Each jumble is almost a word from this round, but with a letter to spare. Which letter, every time?",
+    "Rearrange each into a theme word; the spare letters, in order, are the answer."
+   ],
+   "length": 8
+  },
+  {
+   "id": 5,
+   "title": "Desperado",
+   "flavor": "Call signs, reflected.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "Uniform",
+      "India",
+      "Victor",
+      "Mike",
+      "X-ray",
+      "Sierra"
+     ]
+    }
+   ],
+   "hash": "c323f5fedbc3efb67b0e360910f1fe6a90c66dcbac964ddfd3b7cb163a8c14e3",
+   "partials": {},
+   "hints": [
+    "Each word stands for a letter, the way radio operators spell. Do those letters read? If not, try the alphabet backwards.",
+    "Take the NATO call signs' initials, then swap each letter for its mirror: A for Z, B for Y."
+   ],
+   "length": 6
+  }
+ ],
+ "meta": {
+  "title": "Meta: The Endgame Study",
+  "flavor": "Tonight's seating chart.",
+  "blocks": [
+   {
+    "type": "list",
+    "items": [
+     "Row 2, seat 3",
+     "Row 5, seat 6",
+     "Row 1, seat 8",
+     "Row 2, seat 3",
+     "Row 3, seat 4",
+     "Row 1, seat 7",
+     "Row 4, seat 5",
+     "Row 1, seat 10",
+     "Row 2, seat 9"
+    ],
+    "ordered": true
+   }
+  ],
+  "length": 9,
+  "hash": "7d78d67e773309ed776cd0e6e2c97e5bc007df9fd3864b93a4a4ed5275631508",
+  "hints": [
+   "Every entry has two numbers. What in this round is numbered, and what could the second number count?",
+   "The first number picks a puzzle; the second picks a letter inside its answer."
+  ]
+ },
+ "described": true
+}

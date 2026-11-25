@@ -1,0 +1,205 @@
+{
+ "date": "2026-11-25",
+ "difficulty": "hard",
+ "salt": "2026-11-25",
+ "number": 60,
+ "round": "The Endgame Study",
+ "intro": "The tournament hall keeps its own hours. The grandmasters come in before dawn and leave after the last score is settled, each one moving through the long silence between rounds like a man who has made an appointment with something that will not be hurried. The one who resigned in a winning position never explained himself; he folded his scoresheet into a square and left it on the table, as if the thing he had written down was not a game at all, and walked out into the rain. Nobody has seen him since, though his coat still hangs by the door and his chair still holds the shape of him. The hall keeps its habits anyway: the same clocks, the same hush, the same careful way of putting things back where they belong. One of the grandmasters signs every score he touches with a single stroke of the pen, and the others have begun to do the same, as though the mark itself carries the weight of the man who made it.",
+ "echo": "A pawn that walks all the way across the board can become anything it likes.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Fianchetto",
+   "flavor": "No duplicates anywhere. Whatever you find, it was said on the way out, not the way in.",
+   "blocks": [
+    {
+     "type": "sudoku",
+     "size": 9,
+     "rows": [
+      "P......O.",
+      ".B...J...",
+      "....W....",
+      ".WUA.....",
+      "..M...B.O",
+      "..O.NM..W",
+      "M..J..U.N",
+      "J...P...A",
+      ".O...W..B"
+     ],
+     "alphabet": "ABJMNOPUW",
+     "marks": [
+      [
+       2,
+       5
+      ],
+      [
+       4,
+       3
+      ],
+      [
+       2,
+       6
+      ],
+      [
+       3,
+       8
+      ]
+     ]
+    }
+   ],
+   "hash": "3edb1353c14cdd8d71b40fdbe6ac0afc301233d07a3d9121cfa98122d27c47b5",
+   "partials": {
+    "fd2247269aacc5e0c843d0d2143c511296688785583b409d616b87e7c2564d6e": "You've decoded it, but it's not finished. One more layer."
+   },
+   "hints": [
+    "A familiar grid puzzle in unfamiliar clothes. Once it's done, are some squares more important than others? And if what you get still isn't a word, reread the flavour text."
+   ]
+  },
+  {
+   "id": 2,
+   "title": "Desperado",
+   "flavor": "Every word ran into itself. The little numbers know where to look.",
+   "blocks": [
+    {
+     "type": "morselines",
+     "items": [
+      {
+       "code": ".-.-------.-",
+       "len": 4,
+       "index": 3
+      },
+      {
+       "code": "-.--.--.---",
+       "len": 5,
+       "index": 4
+      },
+      {
+       "code": "--.-..-..-.",
+       "len": 5,
+       "index": 4
+      },
+      {
+       "code": ".-..--.-.-",
+       "len": 4,
+       "index": 3
+      },
+      {
+       "code": "-.--...--.....-",
+       "len": 6,
+       "index": 3
+      },
+      {
+       "code": "-.-..-.--.",
+       "len": 4,
+       "index": 3
+      },
+      {
+       "code": "-...-..---.----.",
+       "len": 6,
+       "index": 4
+      }
+     ]
+    }
+   ],
+   "hash": "446f5d9247fe5ca4fba4d34e57c8dc33d9251640c5cc8046daf6ca04d76e2f7b",
+   "partials": {},
+   "hints": [
+    "Two symbols, no spaces, and a letter count. Which old code is it, and which word from this round fits each line?"
+   ]
+  },
+  {
+   "id": 3,
+   "title": "Lucena Position",
+   "flavor": "Nothing was lost; everything simply moved over. Half a turn of the wheel and you'd have it.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "ITCFN",
+     "big": true,
+     "shift": -1
+    }
+   ],
+   "hash": "b2102f0449b5fe43790910b4a06a5514f30dcb31ee039fe39942431f0e3587ae",
+   "partials": {
+    "66a1e6450f4993fa6eecdde0742f4a8add6c7ea959b835d99a3abdd8e4be8594": "You've decoded it, but it's not finished. One more layer."
+   },
+   "hints": [
+    "Every letter is close to the right one. Close on what? Look down at your hands. And if what you get still isn't a word, reread the flavour text."
+   ]
+  },
+  {
+   "id": 4,
+   "title": "Windmill",
+   "flavor": "Around the edges first; the point comes last.",
+   "blocks": [
+    {
+     "type": "lettergrid",
+     "rows": [
+      "EOPERATORT",
+      "HINEWENTDY",
+      "TLAGONALEP",
+      "GEIDSAWDAE",
+      "NHTEROFEBD",
+      "IHTTSALEHT"
+     ]
+    }
+   ],
+   "hash": "57598bbd66fcf3854635d8e43718c2f222d1cd3e5b2df0f46c85fc72cfbf8402",
+   "partials": {},
+   "hints": [
+    "All the letters of a sentence are here, but not in rows. Try walking the grid the way a snail would."
+   ]
+  },
+  {
+   "id": 5,
+   "title": "Smothered Mate",
+   "flavor": "Shaken, one word at a time.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "SI",
+      "OT",
+      "OS",
+      "KROF",
+      "TEG",
+      "OEN",
+      "ZIPER",
+      "ETH",
+      "AEYNON",
+      "FRA",
+      "DEPETXEC",
+      "TISH",
+      "UJST",
+      "RDWO",
+      "BDNOYO"
+     ],
+     "inline": true,
+     "tray": "word"
+    }
+   ],
+   "hash": "5644fd84669efc45068b0bd593ec1efe5f09eaa312c9c6124a5ffada070d815c",
+   "partials": {},
+   "hints": [
+    "Each word is complete but shuffled. Start with the shortest ones: does a sentence appear?"
+   ]
+  }
+ ],
+ "meta": {
+  "title": "Meta: The Endgame Study",
+  "flavor": "Every report is signed with a single initial. Blaise would know what to do with them.",
+  "blocks": [
+   {
+    "type": "mono",
+    "text": "EFPPTIWPQ",
+    "big": true
+   }
+  ],
+  "length": 9,
+  "hash": "7b3983be46f49f84230a63d031198528891f42bf8064d0385e82731c07a2e0b3",
+  "hints": [
+   "Blaise de Vigenère needed a key to open this. Has every answer signed its work?"
+  ]
+ },
+ "described": true
+}

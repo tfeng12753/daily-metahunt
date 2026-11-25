@@ -1,0 +1,82 @@
+{
+ "date": "2026-11-24",
+ "number": 59,
+ "difficulty": "medium",
+ "final": "OVERTURE",
+ "metaType": "stowaway",
+ "explain": "Each feeder decodes to its answer plus one inserted letter. The inserted letters, in puzzle order, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Rehearsal Mark",
+   "answer": "PRELUDE",
+   "mechanism": "Spiral route",
+   "transform": null,
+   "encoded": "PRELUDOE",
+   "mutated": "PRELUDOE"
+  },
+  {
+   "id": 2,
+   "title": "Da Capo",
+   "answer": "VIOLIN",
+   "mechanism": "Seating plan (logic)",
+   "transform": null,
+   "encoded": "VVIOLIN",
+   "mutated": "VVIOLIN"
+  },
+  {
+   "id": 3,
+   "title": "First Chair",
+   "answer": "BASSOON",
+   "mechanism": "Gapless Morse",
+   "transform": null,
+   "encoded": "BEASSOON",
+   "mutated": "BEASSOON"
+  },
+  {
+   "id": 4,
+   "title": "Con Sordino",
+   "answer": "TEMPO",
+   "mechanism": "Prime indices in Roman numerals",
+   "transform": null,
+   "encoded": "TREMPO",
+   "mutated": "TREMPO"
+  },
+  {
+   "id": 5,
+   "title": "Pizzicato",
+   "answer": "VIOLA",
+   "mechanism": "Atomic numbers (symbols)",
+   "transform": "Atbash (A↔Z mirror)",
+   "encoded": "ERLOZG",
+   "mutated": "VIOLAT"
+  },
+  {
+   "id": 6,
+   "title": "Coda",
+   "answer": "ROSIN",
+   "mechanism": "Element spelling",
+   "transform": null,
+   "encoded": "RUOSIN",
+   "mutated": "RUOSIN"
+  },
+  {
+   "id": 7,
+   "title": "Fermata",
+   "answer": "INTERMISSION",
+   "mechanism": "Letter sudoku",
+   "transform": "ROT13",
+   "encoded": "VAGREEZVFFVBA",
+   "mutated": "INTERRMISSION"
+  },
+  {
+   "id": 8,
+   "title": "Cadenza",
+   "answer": "METRONOME",
+   "mechanism": "Drop quote",
+   "transform": null,
+   "encoded": "METREONOME",
+   "mutated": "METREONOME"
+  }
+ ]
+}

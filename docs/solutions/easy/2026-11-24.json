@@ -1,0 +1,82 @@
+{
+ "date": "2026-11-24",
+ "number": 59,
+ "difficulty": "easy",
+ "final": "ENSEMBLE",
+ "metaType": "fitin",
+ "explain": "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Grand Pause",
+   "answer": "CELLO",
+   "mechanism": "Shredded sentence",
+   "transform": null,
+   "encoded": "CELLO",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Cadenza",
+   "answer": "OBOE",
+   "mechanism": "Anagrams with an extra letter",
+   "transform": null,
+   "encoded": "OBOE",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Fermata",
+   "answer": "STACCATO",
+   "mechanism": "Scrambled sentence",
+   "transform": null,
+   "encoded": "STACCATO",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "First Chair",
+   "answer": "TRUMPET",
+   "mechanism": "Missing letters",
+   "transform": null,
+   "encoded": "TRUMPET",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Coda",
+   "answer": "BOW",
+   "mechanism": "Semaphore (compass bearings)",
+   "transform": null,
+   "encoded": "BOW",
+   "mutated": null
+  },
+  {
+   "id": 6,
+   "title": "Tutti",
+   "answer": "XYLOPHONE",
+   "mechanism": "Morse code (audio)",
+   "transform": null,
+   "encoded": "XYLOPHONE",
+   "mutated": null
+  },
+  {
+   "id": 7,
+   "title": "Pizzicato",
+   "answer": "ENCORE",
+   "mechanism": "Seating plan (logic)",
+   "transform": null,
+   "encoded": "ENCORE",
+   "mutated": null
+  },
+  {
+   "id": 8,
+   "title": "Rehearsal Mark",
+   "answer": "INTERMISSION",
+   "mechanism": "Nonogram",
+   "transform": null,
+   "encoded": "INTERMISSION",
+   "mutated": null
+  }
+ ]
+}

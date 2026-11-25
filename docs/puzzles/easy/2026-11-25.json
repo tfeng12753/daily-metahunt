@@ -1,0 +1,230 @@
+{
+ "date": "2026-11-25",
+ "difficulty": "easy",
+ "salt": "2026-11-25/easy",
+ "number": 60,
+ "round": "The Endgame Study",
+ "intro": "In the corner of the tournament hall, beside the rack where the spare clocks are kept, there is a rack of wooden slots, each shaped and sized by the club's carpenter decades ago, one for every kind of scoresheet the players tend to produce: long and thin for the endgame draws, square for the miniatures, narrow as a pencil for the games that ended in a resignation on move nine. Each sheet, when it comes down from the boards, goes into the slot that takes it without a crease. The last sheet to join them belonged to a grandmaster who resigned in a winning position and never played again, and no other sheet has ever slid into its place. The carpenter's rule, still carved into the rail above, is that a thing belongs where it fits, and nowhere else.",
+ "echo": "Every good opening starts by giving something away.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Adjournment",
+   "flavor": "The typesetter dropped the tray. Every letter landed in the right column, at least.",
+   "blocks": [
+    {
+     "type": "dropquote",
+     "cols": [
+      "DLNTTU",
+      "HIOS",
+      "ABETTT",
+      "HNOZ",
+      "DIOPY",
+      "NORSY",
+      "EIN",
+      "EEFZ",
+      "AEWX",
+      "OPRT",
+      "EIOR",
+      "CDSS",
+      "GOT",
+      "BEEJ"
+     ],
+     "mask": [
+      "......#.......",
+      ".#......#..#..",
+      ".#....#...#..#",
+      "...#.....#..#.",
+      "...#...#....#.",
+      "....##########"
+     ]
+    }
+   ],
+   "hash": "10301b0a7a6c638baee125d809ebf818149367c47a6716cc6d551d2e92139f29",
+   "partials": {},
+   "hints": [
+    "A drop quote: each column's letters (shown alphabetised above it) drop into that column of the grid below. Black squares are spaces; words can wrap between rows. The sentence tells you the answer.",
+    "To check you're on track: the answer begins with B."
+   ],
+   "technique": "Drop quote",
+   "length": 5
+  },
+  {
+   "id": 2,
+   "title": "Opposition",
+   "flavor": "Static, then something that isn't static.",
+   "blocks": [
+    {
+     "type": "audio",
+     "kind": "morse",
+     "groups": [
+      ".--.",
+      "..",
+      "-."
+     ]
+    }
+   ],
+   "hash": "252e8ade26374bb89c6db161b9d06f1242eddbf5a87b7f57e4cdd96fe6330d26",
+   "partials": {},
+   "hints": [
+    "Morse code, played as beeps. Short = dot, long = dash; longer silences separate letters.",
+    "To check you're on track: the answer begins with P."
+   ],
+   "technique": "Morse code (audio)",
+   "length": 3
+  },
+  {
+   "id": 3,
+   "title": "Zwischenzug",
+   "flavor": "Not a single letter on the page, and yet it says something.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "◆♫◆▼♦ ☁☀☀○ ✿✈♣✚ ◆♣○☆ ▽■✚✿ ☂ ☆■♣☁★◆ ▽☀▼○ ☂♣○ ✚✿◆ ▽☀▼○ ♦☀✈ ▽☂♣✚ ▲▼☀□ ✚✿■☆ ●☂☁◆ ■☆ ○■☂☁☀♣☂★",
+     "wide": true,
+     "solver": "substitution"
+    }
+   ],
+   "hash": "7ed78482c40c5746cefbc22f966839072f3140eb0720cd9bf0ee222d6eb879e8",
+   "partials": {},
+   "hints": [
+    "Each symbol stands for one letter (a simple substitution); word breaks are kept. Solve the sentence; it tells you the answer.",
+    "To check you're on track: the answer begins with D."
+   ],
+   "technique": "Symbol cryptogram",
+   "length": 8
+  },
+  {
+   "id": 4,
+   "title": "Windmill",
+   "flavor": "The labels in the tournament hall have faded. Each one lost exactly one letter.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "_EMPO",
+      "_UTPOST",
+      "SQ_ARE",
+      "F_ENCH",
+      "NOTATIO_",
+      "FI_NCHETTO",
+      "GRAND_ASTER",
+      "QUE_N",
+      "E_GLISH",
+      "CA_ALAN"
+     ],
+     "ordered": true,
+     "mono": true
+    }
+   ],
+   "hash": "160c5d12fa32a0c4912f8da392aff4dfefae2557063df7999534aecf83fc0bb1",
+   "partials": {},
+   "hints": [
+    "Each theme word is missing one letter. The missing letters, in order, spell the answer.",
+    "To check you're on track: the answer begins with T."
+   ],
+   "technique": "Missing letters",
+   "length": 10
+  },
+  {
+   "id": 5,
+   "title": "Desperado",
+   "flavor": "The typesetter shook each word like a box of tiles, one word at a time.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "HTAW",
+      "EHT",
+      "ORECURI",
+      "RDEACIR",
+      "AWS",
+      "NTO",
+      "GDOL",
+      "RO",
+      "SCTERES",
+      "BTU",
+      "A",
+      "GNLESI",
+      "ORWD",
+      "RFNAJDO"
+     ],
+     "inline": true,
+     "tray": "word"
+    }
+   ],
+   "hash": "371490a78006f5125bf0c5b770cfd6911f9d77c6bdab22d7f268dbee63b3b304",
+   "partials": {},
+   "hints": [
+    "Each word of a sentence has had its letters shuffled. Unscramble them; the sentence tells you the answer.",
+    "To check you're on track: the answer begins with N."
+   ],
+   "technique": "Scrambled sentence",
+   "length": 7
+  },
+  {
+   "id": 6,
+   "title": "Smothered Mate",
+   "flavor": "Every letter in the tournament hall took the same number of steps down the road, and none of them came back.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "LAHNEW MABL GHMX YTEE BGMH MAX PKHGZ ATGWL IEXTLX YHKZXM MAX PHKW DGBZAM",
+     "wide": true,
+     "solver": "substitution",
+     "wheel": true
+    }
+   ],
+   "hash": "6c51dc0c03f2a330a6c7fb5f108dac11251893f60fa56e46fee1d294bfe38dbe",
+   "partials": {},
+   "hints": [
+    "Every letter of the sentence was shifted along the alphabet by the same amount. Find the shift; the sentence tells you the answer.",
+    "To check you're on track: the answer begins with K."
+   ],
+   "technique": "Caesar shift",
+   "length": 6
+  }
+ ],
+ "meta": {
+  "title": "Meta: The Endgame Study",
+  "flavor": "Pigeonholes, each cut to fit one thing, and some of them marked.",
+  "blocks": [
+   {
+    "type": "fitgrid",
+    "rows": [
+     {
+      "len": 8,
+      "shade": 3
+     },
+     {
+      "len": 7,
+      "shade": 1
+     },
+     {
+      "len": 10,
+      "shade": 6
+     },
+     {
+      "len": 5,
+      "shade": 0
+     },
+     {
+      "len": 3,
+      "shade": 1
+     },
+     {
+      "len": 6,
+      "shade": 5
+     }
+    ]
+   }
+  ],
+  "length": 6,
+  "hash": "3f121650e8528e384b003b2523ba377323718045aa78fedfdb4835d5b9149efb",
+  "hints": [
+   "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+   "To check you're on track: the final answer begins with G."
+  ]
+ },
+ "described": true
+}
