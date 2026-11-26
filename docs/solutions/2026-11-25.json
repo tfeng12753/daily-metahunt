@@ -1,0 +1,55 @@
+{
+ "date": "2026-11-25",
+ "number": 60,
+ "difficulty": "hard",
+ "final": "PROMOTION",
+ "metaType": "initials",
+ "explain": "The ciphertext is Vigenère-encrypted with the first letters of the feeder answers (in puzzle order) as the key.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Fianchetto",
+   "answer": "PAWN",
+   "mechanism": "Letter sudoku",
+   "transform": "Reversal",
+   "encoded": "NWAP",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Desperado",
+   "answer": "OPENING",
+   "mechanism": "Gapless Morse",
+   "transform": null,
+   "encoded": "OPENING",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Lucena Position",
+   "answer": "BLITZ",
+   "mechanism": "Keyboard shift",
+   "transform": "ROT13",
+   "encoded": "OYVGM",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Windmill",
+   "answer": "DIAGONAL",
+   "mechanism": "Spiral route",
+   "transform": null,
+   "encoded": "DIAGONAL",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Smothered Mate",
+   "answer": "FORK",
+   "mechanism": "Scrambled sentence",
+   "transform": null,
+   "encoded": "FORK",
+   "mutated": null
+  }
+ ]
+}

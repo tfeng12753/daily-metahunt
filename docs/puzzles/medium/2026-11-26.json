@@ -1,0 +1,332 @@
+{
+ "date": "2026-11-26",
+ "difficulty": "medium",
+ "salt": "2026-11-26/medium",
+ "number": 61,
+ "round": "Hut Eight",
+ "intro": "A drawer at Bletchley Park was found to have a false bottom. Beneath it: a stack of intercepts that were never logged, each one pinned to a different page of a crossword. The filing clerk who unpacked them, a pale man named Wicks, kept muttering that he had counted the pages twice and still come up one short each time. On the last page, in the margin, someone had written a single letter in pencil, as if correcting a transcription, and crossed nothing out.",
+ "echo": "Elgar wrote variations on it; the Kriegsmarine typed on it.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Depth",
+   "flavor": "A sentence in disguise, and not a very good disguise.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "PTFL BORIYL DTL GCZR WFEEKY ZR MBLLZYLY QFG XT OTG GYKK GCY TGCYLR CTI PTF HTG ZG",
+     "wide": true,
+     "solver": "substitution"
+    }
+   ],
+   "hash": "c5589457828975cc4cf7cf8e7591812ca49b50327f540db9be8857f584acbb2b",
+   "partials": {
+    "dd021544bea1e725443ae8c2ea9ca255063c976831802f2c419e331c4f398f67": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Which short words are most common in English? Could any of them be hiding here?",
+    "Each symbol always stands for the same letter. The finished sentence tells you what to submit."
+   ],
+   "length": 7
+  },
+  {
+   "id": 2,
+   "title": "Kiss",
+   "flavor": "Two forward, one across.",
+   "blocks": [
+    {
+     "type": "board",
+     "rows": [
+      "AFWFIKTX",
+      "LCTMJXII",
+      "HYBQCUWQ",
+      "JNQKZBDM",
+      "FPHFIPQH",
+      "THCBXNNL",
+      "REBHEWKQ",
+      "UDQMCPEH"
+     ]
+    },
+    {
+     "type": "prose",
+     "text": "The knight sets out from d1: Nf2 Nh1 Ng3 Ne2 Ng1 Nh3."
+    }
+   ],
+   "hash": "51262b69f86aa823271a2d189dff1acb7eb30d80f739725414234b1d13b95b7c",
+   "partials": {
+    "d2a1fcdc691b665b283cf415b03879b981d63e17280045630bb515f7d5b8e79d": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Those are chess moves. Which squares does the piece land on, and what's written there?",
+    "Start on the given square, play each move, and read the letter on every square it lands on."
+   ],
+   "length": 5
+  },
+  {
+   "id": 3,
+   "title": "The Crib",
+   "flavor": "The sprocket keeps count; the holes do the talking. Alpha and Omega traded places before this was written down.",
+   "blocks": [
+    {
+     "type": "tape",
+     "rows": [
+      [
+       1,
+       0,
+       0,
+       1,
+       1,
+       0,
+       0
+      ],
+      [
+       1,
+       0,
+       0,
+       1,
+       0,
+       1,
+       1
+      ],
+      [
+       1,
+       0,
+       1,
+       0,
+       1,
+       1,
+       0
+      ],
+      [
+       1,
+       0,
+       0,
+       1,
+       0,
+       0,
+       1
+      ],
+      [
+       1,
+       0,
+       1,
+       0,
+       0,
+       1,
+       0
+      ],
+      [
+       1,
+       0,
+       1,
+       1,
+       0,
+       1,
+       0
+      ],
+      [
+       1,
+       0,
+       0,
+       0,
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       0,
+       0,
+       1,
+       1,
+       0,
+       0
+      ],
+      [
+       1,
+       0,
+       0,
+       1,
+       0,
+       0,
+       1
+      ]
+     ]
+    }
+   ],
+   "hash": "c3f7d9de136209a05962790289c012b8dcab3c97df95b060f2a4b19df18b6d94",
+   "partials": {
+    "817092ffd441a5d131a2807872ee9f747899a7a913d2c65383486bd6de212300": "You've decoded it, but it's not finished. One more layer.",
+    "fffc4379c5d292ca0a44bc718cb683c695b57573ee84c52808d3b25afb657690": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Seven positions a row, each punched or not. What were seven bits once enough for? And if what you get still isn't a word, reread the flavour text.",
+    "Seven-bit ASCII: a hole is 1, the leftmost hole is the highest bit. Then one more layer: Turn the alphabet end to end: A for Z, B for Y."
+   ],
+   "length": 8
+  },
+  {
+   "id": 4,
+   "title": "Room Forty",
+   "flavor": "Only the first two stripes on each were ever meant to be read.",
+   "blocks": [
+    {
+     "type": "resistors",
+     "items": [
+      [
+       "black",
+       "blue",
+       "black",
+       "gold"
+      ],
+      [
+       "brown",
+       "grey",
+       "black",
+       "gold"
+      ],
+      [
+       "black",
+       "green",
+       "black",
+       "gold"
+      ],
+      [
+       "brown",
+       "violet",
+       "black",
+       "gold"
+      ],
+      [
+       "red",
+       "brown",
+       "black",
+       "gold"
+      ],
+      [
+       "black",
+       "green",
+       "black",
+       "gold"
+      ],
+      [
+       "black",
+       "violet",
+       "black",
+       "gold"
+      ],
+      [
+       "brown",
+       "yellow",
+       "black",
+       "gold"
+      ],
+      [
+       "black",
+       "orange",
+       "black",
+       "gold"
+      ],
+      [
+       "red",
+       "green",
+       "black",
+       "gold"
+      ]
+     ]
+    }
+   ],
+   "hash": "98b1c5057f39fde2b24e9c186e6fdfb5fbdc76b1d1f9d55750658637e99bc521",
+   "partials": {
+    "f714986fe688197d5ae06a545f0c79f3b59fb9e4af5f4c423c875393a50731f8": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Engineers read stripes like these as numbers. What number does each part give, and what is a number up to 26?",
+    "Resistor colour code: the first two bands are two digits; that number is a letter position."
+   ],
+   "length": 9
+  },
+  {
+   "id": 5,
+   "title": "Rodding",
+   "flavor": "Shredded, then sorted by a very tidy intern.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "AND",
+      "AYS",
+      "DDE",
+      "ENM",
+      "EWA",
+      "IGH",
+      "IMP",
+      "INS",
+      "ITS",
+      "LAL",
+      "LOR",
+      "LYS",
+      "MES",
+      "NIN",
+      "ONG",
+      "PLA",
+      "SAG",
+      "SHI",
+      "TAL",
+      "THE",
+      "Z"
+     ],
+     "inline": true,
+     "tiles": true
+    },
+    {
+     "type": "prose",
+     "text": "Word lengths: (3 7 3 6 2 5 5 3 5 3 2 6 4 7)"
+    }
+   ],
+   "hash": "c0844ee3daf6bff9f4114a6d0bd28502f015a9a41ee36e1baa7b721de8482f30",
+   "partials": {
+    "c9739e3c2306bc1b784dd4d3e74b0ed1e0cfeb267bef11621ae7cd92665a16ed": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "The strips are alphabetised, not in order. The word lengths say where the breaks fall. Which strip could start the sentence?",
+    "Chain the strips into one string and split it by the word lengths; the sentence tells you what to submit."
+   ],
+   "length": 6
+  },
+  {
+   "id": 6,
+   "title": "Banburismus",
+   "flavor": "Walk the fence; don't read it.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "IATNT ULFHE HRFCN DHETE HOHAR YOTEW RCIIE SYURA ISECE YAEED UDASW ISALS OESNN VANNH WE",
+     "wide": true,
+     "rails": 4
+    }
+   ],
+   "hash": "036907c7543d5b92e4cd1fe64ceeb1c9290006aa973bf8eef1c0ea66c0699948",
+   "partials": {
+    "b69bc1901158b2e534a26cc4bc1af365c80bd41af54ae2cf14fc2181cb80b39f": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "All the right letters are here, just out of order. Could they have been written along a path that goes up and down?",
+    "Rail fence: written in a zigzag over a few rows, then copied out row by row. Try two to five rows."
+   ],
+   "length": 8
+  }
+ ],
+ "meta": {
+  "title": "Meta: Hut Eight",
+  "flavor": "Count heads at the gangway.",
+  "blocks": [],
+  "length": 6,
+  "hash": "0c4417775554a8aad3ea63c9f6f866d943c43c56fa51a9b1de243c5c53e06a62",
+  "hints": [
+   "Did every answer come out the right size the first time? Each had one letter too many. Did you keep them?",
+   "Take the extra letter from each feeder, in puzzle order."
+  ]
+ },
+ "described": true
+}

@@ -1,0 +1,64 @@
+{
+ "date": "2026-11-25",
+ "number": 60,
+ "difficulty": "easy",
+ "final": "GAMBIT",
+ "metaType": "fitin",
+ "explain": "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Adjournment",
+   "answer": "BLITZ",
+   "mechanism": "Drop quote",
+   "transform": null,
+   "encoded": "BLITZ",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Opposition",
+   "answer": "PIN",
+   "mechanism": "Morse code (audio)",
+   "transform": null,
+   "encoded": "PIN",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Zwischenzug",
+   "answer": "DIAGONAL",
+   "mechanism": "Symbol cryptogram",
+   "transform": null,
+   "encoded": "DIAGONAL",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Windmill",
+   "answer": "TOURNAMENT",
+   "mechanism": "Missing letters",
+   "transform": null,
+   "encoded": "TOURNAMENT",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Desperado",
+   "answer": "NAJDORF",
+   "mechanism": "Scrambled sentence",
+   "transform": null,
+   "encoded": "NAJDORF",
+   "mutated": null
+  },
+  {
+   "id": 6,
+   "title": "Smothered Mate",
+   "answer": "KNIGHT",
+   "mechanism": "Caesar shift",
+   "transform": null,
+   "encoded": "KNIGHT",
+   "mutated": null
+  }
+ ]
+}

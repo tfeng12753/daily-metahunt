@@ -1,0 +1,207 @@
+{
+ "date": "2026-11-26",
+ "difficulty": "hard",
+ "salt": "2026-11-26",
+ "number": 61,
+ "round": "Hut Eight",
+ "intro": "In Hut Eight the daylight comes late and leaves early, slipping between blinds that are always half-drawn over the crossword table. A drawer with a false bottom turned up beneath the loose papers: a stack of intercepts that were never logged, each one pinned to a different page of a crossword. The oldest clerk, whose hands are ink-stained from the reference slips she repairs, has filed the lot behind the puzzle names rather than under the sender, and the rack of pegs she uses has each card bowed so its fold sits at a different depth. No one else in the room asks her system, because her system has never once lost a crib. The kettle is always on when the rain comes off the roof.",
+ "echo": "He asked whether machines could think, and did not live to see them try.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Depth",
+   "flavor": "Three characters to a colour, if you ask the right way.",
+   "blocks": [
+    {
+     "type": "swatches",
+     "items": [
+      "#50554E",
+      "#434843",
+      "#415244"
+     ]
+    }
+   ],
+   "hash": "9c90d5526301f99eb9024632151cae233b08a3142351481f306830c604d49100",
+   "partials": {},
+   "hints": [
+    "Split each colour code into three pairs of hex digits. What else is a two-digit hex number?"
+   ]
+  },
+  {
+   "id": 2,
+   "title": "Menu",
+   "flavor": "Everyone has a place. Everyone pays for it in their own name.",
+   "blocks": [
+    {
+     "type": "seating",
+     "seats": 5,
+     "names": [
+      "Winifred",
+      "Hector",
+      "Rosalind",
+      "Catherine",
+      "Ludwig"
+     ],
+     "clues": [
+      "Catherine sits somewhere to the left of Ludwig.",
+      "Rosalind has an end seat.",
+      "Hector sits immediately to the right of Winifred.",
+      "Exactly one person sits between Ludwig and Rosalind."
+     ],
+     "logic": [
+      [
+       "left_of",
+       "CATHERINE",
+       "LUDWIG"
+      ],
+      [
+       "end",
+       "ROSALIND"
+      ],
+      [
+       "right_of",
+       "HECTOR",
+       "WINIFRED"
+      ],
+      [
+       "gap",
+       "LUDWIG",
+       "ROSALIND",
+       1
+      ]
+     ]
+    }
+   ],
+   "hash": "507becb097a7707a068fd2f12485e5bfa955cd044525901a5a5afb971da31d6b",
+   "partials": {},
+   "hints": [
+    "Only one arrangement satisfies every clue; start from whoever has an end seat or a fixed neighbour. Once they're seated, why might the seat numbers matter?"
+   ]
+  },
+  {
+   "id": 3,
+   "title": "Enigma Variations",
+   "flavor": "Each entry picked up a hitchhiker on the way.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "RERCSMCLAB",
+      "CDERPYAT",
+      "ITGESNRT",
+      "ERXDIN",
+      "OIRCWOSDRS",
+      "NGESLIA",
+      "BLDMARAPOR"
+     ],
+     "ordered": true,
+     "mono": true
+    }
+   ],
+   "hash": "fd1cb65c321e3af44ea46b12560f1e715692f4d97076eb4db9ec38b434f1b945",
+   "partials": {},
+   "hints": [
+    "Each jumble is almost a word from this round, but with a letter to spare. Which letter, every time?"
+   ]
+  },
+  {
+   "id": 4,
+   "title": "Cillies",
+   "flavor": "An accountant who changes currency every line, but never the amount.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "40₅",
+      "101₂",
+      "1100₂",
+      "12₃",
+      "12₅",
+      "12₁₆",
+      "1₉",
+      "23₅"
+     ],
+     "inline": true
+    }
+   ],
+   "hash": "deec71b6ed8bc176932be5da4161f0116df96a27b71fa500b3b094d10e727173",
+   "partials": {},
+   "hints": [
+    "The subscript is a base. Once everything is in ordinary decimal, what range are the numbers in?"
+   ]
+  },
+  {
+   "id": 5,
+   "title": "The Crib",
+   "flavor": "It goes round and round, and only gets anywhere in the middle.",
+   "blocks": [
+    {
+     "type": "lettergrid",
+     "rows": [
+      "ASNOTGW",
+      "WSINGOH",
+      "DAAGLLA",
+      "ETSEEDT",
+      "IUS·WOT",
+      "RBE·ORH",
+      "RSMDRSE",
+      "ATERCEC",
+      "CREIRUO"
+     ]
+    }
+   ],
+   "hash": "c23df0fecfb262532f6076d856d8c9fcf22ebf13d8d2735d7964e83720fd21d2",
+   "partials": {},
+   "hints": [
+    "All the letters of a sentence are here, but not in rows. Try walking the grid the way a snail would."
+   ]
+  },
+  {
+   "id": 6,
+   "title": "Rodding",
+   "flavor": "Nothing is missing. Nothing is where it was.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "EHT",
+      "OUYR",
+      "RFO",
+      "HTSI",
+      "OD",
+      "WARSEN",
+      "UOY",
+      "ELLT",
+      "SHTOER",
+      "TGO",
+      "TI",
+      "OWH",
+      "NTO",
+      "ZUZLPE",
+      "ELORNZ",
+      "SI",
+      "BTU"
+     ],
+     "inline": true,
+     "tray": "word"
+    }
+   ],
+   "hash": "e05691c28350956da8424ec1aecd619c08f6fd370c60f39725a1fc9326c86393",
+   "partials": {},
+   "hints": [
+    "Each word is complete but shuffled. Start with the shortest ones: does a sentence appear?"
+   ]
+  }
+ ],
+ "meta": {
+  "title": "Meta: Hut Eight",
+  "flavor": "Every drawer is labelled. Walk down them.",
+  "blocks": [],
+  "length": 6,
+  "hash": "672734b375f7951b00078c47c061df2d844d7c031ebc2c2315359671e9309c62",
+  "hints": [
+   "The puzzles' titles might be more than labels. What order would they put the answers in, and where would you read?"
+  ]
+ },
+ "described": true
+}

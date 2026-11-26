@@ -1,0 +1,414 @@
+{
+ "date": "2026-11-26",
+ "difficulty": "easy",
+ "salt": "2026-11-26/easy",
+ "number": 61,
+ "round": "Hut Eight",
+ "intro": "The false bottom of the drawer gave up its secrets slowly, the way old paper always does. Beneath the stack of unlogged intercepts, each pinned to a different page of a crossword, lay the hut's old watch-keeper's ledger, its pages filled not with words but with pairs of numbers, neat as a clock's face. Every entry was the same shape: a day, and a bell. The night watchmen had kept it for years, each one writing only the number of the watch and the number of the bell that marked its turning, and the hut had never thought to ask why. Tonight, though, the new recruits found the ledger open on the bench, a fresh entry scratched in the margin: two numbers, side by side, as if waiting.",
+ "echo": "A nobody, a zero and a secret, all spelled the same way.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Depth",
+   "flavor": "An inventory from the stores in Hut Eight, listed by order of arrival rather than by weight.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "potassium",
+      "lithium",
+      "argon",
+      "hydrogen",
+      "aluminium",
+      "helium",
+      "magnesium",
+      "boron",
+      "argon"
+     ]
+    }
+   ],
+   "hash": "ce17258dddbdd484f2a147a0f2fa4a5378c549b6a849701e5e10aef3ff5e3504",
+   "partials": {},
+   "hints": [
+    "Each element's atomic number is a letter position (hydrogen = 1 = A).",
+    "To check you're on track: the answer begins with S."
+   ],
+   "technique": "Atomic numbers",
+   "length": 9
+  },
+  {
+   "id": 2,
+   "title": "Banburismus",
+   "flavor": "Place cards, a long table and a host who counts: seat one, first letter; seat two, second letter; and so on down the row.",
+   "blocks": [
+    {
+     "type": "seating",
+     "seats": 5,
+     "names": [
+      "Daniel",
+      "Raphael",
+      "Gideon",
+      "Fabian",
+      "Malcolm"
+     ],
+     "clues": [
+      "Raphael is not in seat 4.",
+      "Malcolm has an end seat.",
+      "Fabian sits immediately to the right of Gideon.",
+      "Exactly one person sits between Gideon and Raphael.",
+      "Gideon sits somewhere between Daniel and Malcolm."
+     ],
+     "logic": [
+      [
+       "not_at",
+       "RAPHAEL",
+       4
+      ],
+      [
+       "end",
+       "MALCOLM"
+      ],
+      [
+       "right_of",
+       "FABIAN",
+       "GIDEON"
+      ],
+      [
+       "gap",
+       "GIDEON",
+       "RAPHAEL",
+       1
+      ],
+      [
+       "between",
+       "DANIEL",
+       "GIDEON",
+       "MALCOLM"
+      ]
+     ]
+    }
+   ],
+   "hash": "de35a3abc7980f7f480855d936ba6b3c1e7b5ba307fb32d63b9ed5e81a2c0bcc",
+   "partials": {},
+   "hints": [
+    "A logic puzzle: use the clues to find the one seating that works (seats are numbered 1 to n from the left). Then the guest in seat k gives the k-th letter of their name.",
+    "To check you're on track: the answer begins with R."
+   ],
+   "technique": "Seating plan (logic)",
+   "length": 5
+  },
+  {
+   "id": 3,
+   "title": "Weather Report",
+   "flavor": "Start in a corner, follow the edge, and keep turning inward. Which corner, and which way, is up to you to find.",
+   "blocks": [
+    {
+     "type": "lettergrid",
+     "rows": [
+      "IDDENINPLA",
+      "HGANDITSII",
+      "SNNOTCH·MN",
+      "AOSYASYLPS",
+      "WLALLATHGI",
+      "EGASSEMEHT"
+     ]
+    }
+   ],
+   "hash": "f68189e4d1ef3f6290ba7c3b74b078c1fe27f918ef33d245b1129707ba854228",
+   "partials": {},
+   "hints": [
+    "A sentence was written into the grid along a spiral, starting in one corner and winding inward. Find the corner and the direction, read the sentence (dots are padding), and it tells you the answer.",
+    "To check you're on track: the answer begins with N."
+   ],
+   "technique": "Spiral route",
+   "length": 5
+  },
+  {
+   "id": 4,
+   "title": "Shark",
+   "flavor": "Paint by numbers. The picture is worth exactly one word.",
+   "blocks": [
+    {
+     "type": "nonogram",
+     "rows": [
+      [
+       4,
+       5,
+       4,
+       4,
+       3,
+       5,
+       4,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1,
+       3,
+       4,
+       5,
+       1,
+       1,
+       5
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       4,
+       5,
+       4,
+       1,
+       1,
+       1,
+       1,
+       4,
+       1,
+       1
+      ]
+     ],
+     "cols": [
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       3
+      ],
+      [],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1
+      ],
+      [],
+      [
+       4
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       4
+      ],
+      [],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [],
+      [
+       3
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       5
+      ]
+     ],
+     "givens": [
+      [
+       4,
+       28,
+       1
+      ],
+      [
+       3,
+       16,
+       1
+      ],
+      [
+       1,
+       36,
+       1
+      ],
+      [
+       3,
+       36,
+       1
+      ],
+      [
+       1,
+       16,
+       0
+      ]
+     ]
+    }
+   ],
+   "hash": "8061e4504f82bf9eabd02053dcb6002edd6d16423394b0759de853d5fa6aa3bb",
+   "partials": {},
+   "hints": [
+    "A nonogram (paint-by-numbers). The filled picture is the answer written in 5×5 block letters.",
+    "To check you're on track: the answer begins with D."
+   ],
+   "technique": "Nonogram",
+   "length": 8
+  }
+ ],
+ "meta": {
+  "title": "Meta: Hut Eight",
+  "flavor": "Tonight's seating chart. Every seat is one letter wide.",
+  "blocks": [
+   {
+    "type": "list",
+    "items": [
+     "Row 1, seat 2",
+     "Row 4, seat 2",
+     "Row 4, seat 4",
+     "Row 3, seat 5",
+     "Row 1, seat 8",
+     "Row 2, seat 1"
+    ],
+    "ordered": true
+   }
+  ],
+  "length": 6,
+  "hash": "db207a0849770e63fe2ce019dba771ff20cbc6e9f4d8459f0fd232736b8aefab",
+  "hints": [
+   "Each entry is (puzzle number, letter number): index into that puzzle's answer.",
+   "To check you're on track: the final answer begins with C."
+  ]
+ },
+ "described": true
+}
