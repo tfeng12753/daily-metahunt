@@ -1,0 +1,46 @@
+{
+ "date": "2026-11-26",
+ "number": 61,
+ "difficulty": "easy",
+ "final": "CIPHER",
+ "metaType": "logbook",
+ "explain": "Each entry is (puzzle number, letter number): index into that puzzle's answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Depth",
+   "answer": "SCRAMBLER",
+   "mechanism": "Atomic numbers",
+   "transform": null,
+   "encoded": "SCRAMBLER",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Banburismus",
+   "answer": "RADIO",
+   "mechanism": "Seating plan (logic)",
+   "transform": null,
+   "encoded": "RADIO",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Weather Report",
+   "answer": "NOTCH",
+   "mechanism": "Spiral route",
+   "transform": null,
+   "encoded": "NOTCH",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Shark",
+   "answer": "DISPATCH",
+   "mechanism": "Nonogram",
+   "transform": null,
+   "encoded": "DISPATCH",
+   "mutated": null
+  }
+ ]
+}

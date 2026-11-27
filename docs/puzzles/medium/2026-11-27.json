@@ -1,0 +1,306 @@
+{
+ "date": "2026-11-27",
+ "difficulty": "medium",
+ "salt": "2026-11-27/medium",
+ "number": 62,
+ "round": "Dead Men's Chest",
+ "intro": "The captain died with the map in his head. Luckily for the crew, he was a paranoid man, and he had it tattooed, in pieces, on each of them. The bosun keeps the captain's chart table in the great cabin, and its side is a long row of pigeonholes, each cut to take one thing and one thing only. No man can slip his piece into a neighbour's hole; the pieces are not interchangeable, and the table will not forgive a wrong fit. The crew are learning the shape of their own pieces by trying them against the holes, one at a time, until each arm finds the place that holds it.",
+ "echo": "Fletcher Christian took the Bounty. The crew here are considering something similar.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "The Brig",
+   "flavor": "Shredded, then sorted by a very tidy intern.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "AYN",
+      "BLO",
+      "DOU",
+      "EDO",
+      "ETL",
+      "EXT",
+      "HEN",
+      "HEW",
+      "LDO",
+      "NDM",
+      "NEY",
+      "ONA",
+      "ONE",
+      "ORD",
+      "OUM",
+      "OVE",
+      "OWW",
+      "QUI",
+      "RIT",
+      "TOT",
+      "WEL",
+      "WNT",
+      "YON"
+     ],
+     "inline": true,
+     "tiles": true
+    },
+    {
+     "type": "prose",
+     "text": "Word lengths: (4 4 3 3 3 5 4 3 4 8 3 4 7 2 2 3 4 3)"
+    }
+   ],
+   "hash": "3e8640bfd9a06887fd33c7761521cc5dd56997f58437a925dcfd24819d4fb2fa",
+   "partials": {},
+   "hints": [
+    "The strips are alphabetised, not in order. The word lengths say where the breaks fall. Which strip could start the sentence?",
+    "Chain the strips into one string and split it by the word lengths; the sentence tells you what to submit."
+   ],
+   "length": 8
+  },
+  {
+   "id": 2,
+   "title": "Walk The Plank",
+   "flavor": "Shaken, one word at a time.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "ATWH",
+      "ETH",
+      "UIRROEC",
+      "DIAECRR",
+      "WSA",
+      "ONT",
+      "GLOD",
+      "RO",
+      "TRCESSE",
+      "BTU",
+      "A",
+      "ELGNIS",
+      "DWRO",
+      "VRYCSU"
+     ],
+     "inline": true,
+     "tray": "word"
+    }
+   ],
+   "hash": "357d424ea3708eba40f465459345e9e4f0ea8aafdac29bb123ed49ee9e82554b",
+   "partials": {},
+   "hints": [
+    "Each word is complete but shuffled. Start with the shortest ones: does a sentence appear?",
+    "Unscramble each word where it stands; the sentence tells you what to submit."
+   ],
+   "length": 6
+  },
+  {
+   "id": 3,
+   "title": "Shiver Me Timbers",
+   "flavor": "An inventory, tangled.",
+   "blocks": [
+    {
+     "type": "caption",
+     "text": "Hidden in the grid: 10 words to do with the ship."
+    },
+    {
+     "type": "board",
+     "rows": [
+      "QUARLIME",
+      "SPYGLASS",
+      "TKOOHLER",
+      "TORRAPUM",
+      "DNALSIAH",
+      "SBOSUNTE",
+      "LEEKLIAS",
+      "HAMMOCKR"
+     ],
+     "plain": true,
+     "words": [
+      "BOSUN",
+      "HAMMOCK",
+      "HOOK",
+      "HULL",
+      "ISLAND",
+      "KEEL",
+      "LIME",
+      "PARROT",
+      "SAIL",
+      "SPYGLASS"
+     ]
+    }
+   ],
+   "hash": "48feb8694b4a9d52904babdbfa1261c44bddc90969d98eba6336fd0e3148300d",
+   "partials": {},
+   "hints": [
+    "Once every theme word is found, is anything left unclaimed? Read it in order.",
+    "Find the theme words; the letters no word uses, read row by row, are the answer.",
+    "The hidden words are: BOSUN, HAMMOCK, HOOK, HULL, ISLAND, KEEL, LIME, PARROT, SAIL, SPYGLASS."
+   ],
+   "length": 13
+  },
+  {
+   "id": 4,
+   "title": "Articles",
+   "flavor": "The spy always carried a novel. This page will have to do.",
+   "blocks": [
+    {
+     "type": "prose",
+     "text": "The captain died with the map in his head. Luckily for the crew, he was a paranoid man, and he had it tattooed, in pieces, on each of them.",
+     "paper": true
+    },
+    {
+     "type": "list",
+     "items": [
+      "29.4",
+      "16.1",
+      "25.6",
+      "5.1"
+     ],
+     "inline": true
+    }
+   ],
+   "hash": "189c6af3bd4869c120d608d935dfbc85cdbbfea0252bb29e77edc6db4db54ee6",
+   "partials": {},
+   "hints": [
+    "The first number in each pair never goes past the number of words on the page. What does the second count?",
+    "The first number finds a word on the page; the second finds a letter in it."
+   ],
+   "length": 4
+  },
+  {
+   "id": 5,
+   "title": "Letter Of Marque",
+   "flavor": "A familiar grid, an unfamiliar alphabet.",
+   "blocks": [
+    {
+     "type": "sudoku",
+     "size": 9,
+     "rows": [
+      ".DR...O.U",
+      ".P.D...N.",
+      ".G...O...",
+      "P...DE...",
+      "....N.R..",
+      "N..O....E",
+      "...NO.W..",
+      "....RWNDG",
+      "...U...R."
+     ],
+     "alphabet": "DEGNOPRUW",
+     "marks": [
+      [
+       4,
+       0
+      ],
+      [
+       7,
+       0
+      ],
+      [
+       0,
+       5
+      ],
+      [
+       7,
+       2
+      ],
+      [
+       1,
+       0
+      ],
+      [
+       0,
+       4
+      ],
+      [
+       2,
+       6
+      ],
+      [
+       0,
+       0
+      ],
+      [
+       2,
+       8
+      ]
+     ]
+    }
+   ],
+   "hash": "6a7775a31efa429d131fa4499171bb75d333fd0f75edb6029282d01f38d0660d",
+   "partials": {},
+   "hints": [
+    "A familiar grid puzzle in unfamiliar clothes. Once it's done, are some squares more important than others?",
+    "Solve it like a sudoku, then read the numbered squares in order."
+   ],
+   "length": 9
+  },
+  {
+   "id": 6,
+   "title": "Crow's Nest",
+   "flavor": "A formula no chemist would sign.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "Ar",
+      "F",
+      "N",
+      "N",
+      "F",
+      "Si",
+      "N"
+     ],
+     "inline": true,
+     "variant": "symbols"
+    }
+   ],
+   "hash": "ecd1a99bb3c2e8fb3e54443f2defc1967db8dfc14d8baf468f50ff598baf3863",
+   "partials": {},
+   "hints": [
+    "Everything here has a number in a famous chemical line-up. What number does each one have?",
+    "Atomic numbers, then count through the alphabet (hydrogen = 1 = A)."
+   ],
+   "length": 7
+  }
+ ],
+ "meta": {
+  "title": "Meta: Dead Men's Chest",
+  "flavor": "Pigeonholes, each cut to fit one thing only.",
+  "blocks": [
+   {
+    "type": "fitgrid",
+    "rows": [
+     {
+      "len": 4,
+      "shade": 0
+     },
+     {
+      "len": 8,
+      "shade": 2
+     },
+     {
+      "len": 13,
+      "shade": 4
+     },
+     {
+      "len": 7,
+      "shade": 1
+     },
+     {
+      "len": 9,
+      "shade": 2
+     },
+     {
+      "len": 6,
+      "shade": 5
+     }
+    ]
+   }
+  ],
+  "length": 6,
+  "hash": "fe49a7e4bfb4b7dfa20813a521019b75b42f66d54d7d2efcb58248bd7c62adbb",
+  "hints": [
+   "The grid's rows are all different lengths. So are your answers.",
+   "Put each answer in the row its length fits; read the shaded squares top to bottom."
+  ]
+ },
+ "described": true
+}

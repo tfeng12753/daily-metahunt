@@ -1,0 +1,64 @@
+{
+ "date": "2026-11-26",
+ "number": 61,
+ "difficulty": "medium",
+ "final": "ENIGMA",
+ "metaType": "stowaway",
+ "explain": "Each feeder decodes to its answer plus one inserted letter. The inserted letters, in puzzle order, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Depth",
+   "answer": "CARRIER",
+   "mechanism": "Cryptogram (cluephrase)",
+   "transform": null,
+   "encoded": "CARRIERE",
+   "mutated": "CARRIERE"
+  },
+  {
+   "id": 2,
+   "title": "Kiss",
+   "answer": "WHEEL",
+   "mechanism": "Knight's path",
+   "transform": null,
+   "encoded": "WHNEEL",
+   "mutated": "WHNEEL"
+  },
+  {
+   "id": 3,
+   "title": "The Crib",
+   "answer": "OPERATOR",
+   "mechanism": "Punched tape",
+   "transform": "Atbash (A↔Z mirror)",
+   "encoded": "LKVIRZGLI",
+   "mutated": "OPERIATOR"
+  },
+  {
+   "id": 4,
+   "title": "Room Forty",
+   "answer": "FREQUENCY",
+   "mechanism": "Resistor colour bands",
+   "transform": null,
+   "encoded": "FREQUEGNCY",
+   "mutated": "FREQUEGNCY"
+  },
+  {
+   "id": 5,
+   "title": "Rodding",
+   "answer": "LORENZ",
+   "mechanism": "Shredded sentence",
+   "transform": null,
+   "encoded": "LORENMZ",
+   "mutated": "LORENMZ"
+  },
+  {
+   "id": 6,
+   "title": "Banburismus",
+   "answer": "WIRELESS",
+   "mechanism": "Rail fence (cluephrase)",
+   "transform": null,
+   "encoded": "WAIRELESS",
+   "mutated": "WAIRELESS"
+  }
+ ]
+}

@@ -1,0 +1,64 @@
+{
+ "date": "2026-11-26",
+ "number": 61,
+ "difficulty": "hard",
+ "final": "TURING",
+ "metaType": "title_diagonal",
+ "explain": "Order the puzzles alphabetically by title; take the k-th letter of the k-th answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Depth",
+   "answer": "PUNCHCARD",
+   "mechanism": "Hex colour ASCII",
+   "transform": null,
+   "encoded": "PUNCHCARD",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Menu",
+   "answer": "RADIO",
+   "mechanism": "Seating plan (logic)",
+   "transform": null,
+   "encoded": "RADIO",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Enigma Variations",
+   "answer": "CARRIER",
+   "mechanism": "Anagrams with an extra letter",
+   "transform": null,
+   "encoded": "CARRIER",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Cillies",
+   "answer": "TELEGRAM",
+   "mechanism": "Mixed number bases",
+   "transform": null,
+   "encoded": "TELEGRAM",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "The Crib",
+   "answer": "MESSAGE",
+   "mechanism": "Spiral route",
+   "transform": null,
+   "encoded": "MESSAGE",
+   "mutated": null
+  },
+  {
+   "id": 6,
+   "title": "Rodding",
+   "answer": "LORENZ",
+   "mechanism": "Scrambled sentence",
+   "transform": null,
+   "encoded": "LORENZ",
+   "mutated": null
+  }
+ ]
+}

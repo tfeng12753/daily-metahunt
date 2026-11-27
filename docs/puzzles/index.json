@@ -1,5 +1,5 @@
 {
- "latest": "2026-11-26",
+ "latest": "2026-11-27",
  "puzzles": [
   {
    "date": "2026-09-27",
@@ -726,6 +726,18 @@
     "hard": 6,
     "medium": 6,
     "easy": 4
+   },
+   "medium": true,
+   "easy": true
+  },
+  {
+   "date": "2026-11-27",
+   "number": 62,
+   "round": "Dead Men's Chest",
+   "count": {
+    "hard": 6,
+    "medium": 6,
+    "easy": 7
    },
    "medium": true,
    "easy": true

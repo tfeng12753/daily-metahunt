@@ -1,0 +1,627 @@
+{
+ "date": "2026-11-27",
+ "difficulty": "easy",
+ "salt": "2026-11-27/easy",
+ "number": 62,
+ "round": "Dead Men's Chest",
+ "intro": "The captain died with the map in his head, and, being a paranoid man, he had it tattooed in pieces on each of us, so the coastline goes on under shirts and round wrists. He left behind the compositor's case he had owned ashore, with the wooden boxes gauged out for different lengths of type and the compartments that held no sorts painted black. He told the boatswain, in his only moment of explanation, that every tattooed phrase must go back to the box cut for its length, not the box nearest to it. As the ink is sorted, the black compartments stay black and the fitted phrases settle around them, leaving the captain's last word in the spaces. The men grumble because some of their strips are only a word long and others run to a whole verse. Below, the cook has already used the case for ginger, and the smell is sharp.",
+ "echo": "A short, heavy blade: far better below decks than any rapier.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Articles",
+   "flavor": "Noughts and crosses, with a few stray dots where someone pressed too hard.",
+   "blocks": [
+    {
+     "type": "pigpen",
+     "items": [
+      {
+       "g": "x",
+       "p": 0,
+       "dot": false
+      },
+      {
+       "g": "hash",
+       "p": 7,
+       "dot": false
+      },
+      {
+       "g": "hash",
+       "p": 8,
+       "dot": false
+      },
+      {
+       "g": "hash",
+       "p": 6,
+       "dot": true
+      },
+      {
+       "g": "x",
+       "p": 0,
+       "dot": true
+      },
+      {
+       "g": "hash",
+       "p": 8,
+       "dot": true
+      },
+      {
+       "g": "hash",
+       "p": 4,
+       "dot": false
+      },
+      {
+       "g": "hash",
+       "p": 2,
+       "dot": false
+      },
+      {
+       "g": "hash",
+       "p": 1,
+       "dot": true
+      }
+     ]
+    }
+   ],
+   "hash": "9422cc5122b6cdd85f81373e2136509685aa172ffedea1c95550ddb52fce3021",
+   "partials": {},
+   "hints": [
+    "Pigpen (Freemason's) cipher: A–I in a # grid, J–R the same with dots, S–V in an X, W–Z the X with dots.",
+    "To check you're on track: the answer begins with S."
+   ],
+   "technique": "Pigpen cipher",
+   "length": 9
+  },
+  {
+   "id": 2,
+   "title": "Dead Reckoning",
+   "flavor": "Two forward, one across. Remember where you land.",
+   "blocks": [
+    {
+     "type": "board",
+     "rows": [
+      "MIVTUDUN",
+      "RTAMYOPR",
+      "KKZQHNLP",
+      "SCUAFMLP",
+      "MUBHCLHK",
+      "SAVVAHUO",
+      "RRPMMPAF",
+      "SGCEJAXJ"
+     ]
+    },
+    {
+     "type": "prose",
+     "text": "The knight sets out from b1: Nd2 Nb3 Na5 Nb7."
+    }
+   ],
+   "hash": "5d9c2e247475da25240454871fa9487b2c94f64ea28d6248fbdb526f315296dd",
+   "partials": {},
+   "hints": [
+    "Start on the given square and follow the knight moves; read the letter on each square it lands on.",
+    "To check you're on track: the answer begins with M."
+   ],
+   "technique": "Knight's path",
+   "length": 4
+  },
+  {
+   "id": 3,
+   "title": "Shiver Me Timbers",
+   "flavor": "Paint by numbers. The picture is worth exactly one word.",
+   "blocks": [
+    {
+     "type": "nonogram",
+     "rows": [
+      [
+       4,
+       4,
+       1,
+       1,
+       4,
+       1,
+       3,
+       4,
+       4
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       3,
+       4,
+       1,
+       1,
+       2,
+       1,
+       5,
+       3,
+       3
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       4,
+       1,
+       1,
+       4,
+       5,
+       1,
+       1,
+       4,
+       4
+      ]
+     ],
+     "cols": [
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1
+      ],
+      [],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       3
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [],
+      [
+       3
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       3
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [],
+      [
+       4
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       4
+      ],
+      [],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "givens": [
+      [
+       4,
+       0,
+       1
+      ],
+      [
+       0,
+       34,
+       0
+      ],
+      [
+       1,
+       10,
+       1
+      ],
+      [
+       0,
+       46,
+       1
+      ],
+      [
+       4,
+       14,
+       1
+      ],
+      [
+       3,
+       16,
+       0
+      ],
+      [
+       0,
+       16,
+       1
+      ],
+      [
+       1,
+       0,
+       1
+      ],
+      [
+       3,
+       42,
+       0
+      ],
+      [
+       1,
+       36,
+       1
+      ],
+      [
+       3,
+       36,
+       0
+      ],
+      [
+       1,
+       12,
+       0
+      ]
+     ]
+    }
+   ],
+   "hash": "2420676dac4c5982c05722aa953746fac4d44c1199cf2d08a49785e3c8bf8214",
+   "partials": {},
+   "hints": [
+    "A nonogram (paint-by-numbers). The filled picture is the answer written in 5×5 block letters.",
+    "To check you're on track: the answer begins with S."
+   ],
+   "technique": "Nonogram",
+   "length": 8
+  },
+  {
+   "id": 4,
+   "title": "Crow's Nest",
+   "flavor": "Somebody shook the sentence and all the letters fell to the bottom of their columns.",
+   "blocks": [
+    {
+     "type": "dropquote",
+     "cols": [
+      "EHSWX",
+      "EENTTT",
+      "ELLO",
+      "LORWWY",
+      "NO",
+      "ADEORW",
+      "DNNOR",
+      "DIN",
+      "EQTT",
+      "EMOU",
+      "AOY",
+      "DORTV",
+      "EHOTU",
+      "EEW",
+      "MNQR",
+      "AMNU",
+      "AEITY"
+     ],
+     "mask": [
+      "....#....#...#...",
+      "#...#.....#....#.",
+      "..#....#.........",
+      "....#...#....#...",
+      "....#..#..#...#..",
+      "..#...###########"
+     ]
+    }
+   ],
+   "hash": "c99e117b12fca0123c58094b1724714b9fb41f5858872668bf80107e93ab8bbe",
+   "partials": {},
+   "hints": [
+    "A drop quote: each column's letters (shown alphabetised above it) drop into that column of the grid below. Black squares are spaces; words can wrap between rows. The sentence tells you the answer.",
+    "To check you're on track: the answer begins with Q."
+   ],
+   "technique": "Drop quote",
+   "length": 13
+  },
+  {
+   "id": 5,
+   "title": "Pieces Of Eight",
+   "flavor": "Seat them correctly first. Then each guest owes you the letter of their name that matches their seat number.",
+   "blocks": [
+    {
+     "type": "seating",
+     "seats": 7,
+     "names": [
+      "Bartholomew",
+      "Simone",
+      "Humphrey",
+      "Noemi",
+      "Mordecai",
+      "Desmond",
+      "Patrick"
+     ],
+     "clues": [
+      "Desmond and Mordecai sit side by side.",
+      "Exactly 3 people sit between Bartholomew and Mordecai.",
+      "Exactly 2 people sit between Noemi and Patrick.",
+      "Noemi sits somewhere between Desmond and Humphrey.",
+      "Mordecai and Patrick sit side by side.",
+      "Humphrey has an end seat.",
+      "Bartholomew is not in seat 6."
+     ],
+     "logic": [
+      [
+       "beside",
+       "DESMOND",
+       "MORDECAI"
+      ],
+      [
+       "gap",
+       "BARTHOLOMEW",
+       "MORDECAI",
+       3
+      ],
+      [
+       "gap",
+       "NOEMI",
+       "PATRICK",
+       2
+      ],
+      [
+       "between",
+       "DESMOND",
+       "NOEMI",
+       "HUMPHREY"
+      ],
+      [
+       "beside",
+       "MORDECAI",
+       "PATRICK"
+      ],
+      [
+       "end",
+       "HUMPHREY"
+      ],
+      [
+       "not_at",
+       "BARTHOLOMEW",
+       6
+      ]
+     ]
+    }
+   ],
+   "hash": "ce3925e9666177e4908d82219487c8ec759ce393966e7e27a03f61f418d97e10",
+   "partials": {},
+   "hints": [
+    "A logic puzzle: use the clues to find the one seating that works (seats are numbered 1 to n from the left). Then the guest in seat k gives the k-th letter of their name.",
+    "To check you're on track: the answer begins with H."
+   ],
+   "technique": "Seating plan (logic)",
+   "length": 7
+  },
+  {
+   "id": 6,
+   "title": "Walk The Plank",
+   "flavor": "The clerk ran out of alphabet and kept going anyway.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "♥☂✚ ○✚☾☾■▼✚ ♠■☾ ☂●□□✚★ ●★ ▽☆■●★ ☾●▼☂♥ ■☆☆ ■☆⚑★▼ ■★□ ●♥ ☾●○▽☆✈ ☾■✈☾ ○♣☾♫✚♥",
+     "wide": true,
+     "solver": "substitution"
+    }
+   ],
+   "hash": "2be5c5314799d523695fdee097457125320dbd14f37f4d8c4094fd37a5ccf23e",
+   "partials": {},
+   "hints": [
+    "Each symbol stands for one letter (a simple substitution); word breaks are kept. Solve the sentence; it tells you the answer.",
+    "To check you're on track: the answer begins with M."
+   ],
+   "technique": "Symbol cryptogram",
+   "length": 6
+  },
+  {
+   "id": 7,
+   "title": "Letter Of Marque",
+   "flavor": "Everything aboard the ship got thrown in the tumble dryer, and every item came out with a little something extra.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "ORCHACN",
+      "HUSKLL",
+      "VCSYERU",
+      "RNKSKAE",
+      "PMCSTOSA"
+     ],
+     "ordered": true,
+     "mono": true
+    }
+   ],
+   "hash": "992e952badeceece2c529ff0af9cdfed0c168f78bb9bfd5ba77027230669cbe5",
+   "partials": {},
+   "hints": [
+    "Each jumble is an anagram of a word from this round's theme plus one extra letter. The extra letters, in order, spell the answer.",
+    "To check you're on track: the answer begins with C."
+   ],
+   "technique": "Anagrams with an extra letter",
+   "length": 5
+  }
+ ],
+ "meta": {
+  "title": "Meta: Dead Men's Chest",
+  "flavor": "Pigeonholes, each cut to fit one thing, and some of them marked.",
+  "blocks": [
+   {
+    "type": "fitgrid",
+    "rows": [
+     {
+      "len": 7,
+      "shade": 5
+     },
+     {
+      "len": 6,
+      "shade": 1
+     },
+     {
+      "len": 5,
+      "shade": 4
+     },
+     {
+      "len": 8,
+      "shade": 4
+     },
+     {
+      "len": 13,
+      "shade": 8
+     },
+     {
+      "len": 4,
+      "shade": 2
+     },
+     {
+      "len": 9,
+      "shade": 0
+     }
+    ]
+   }
+  ],
+  "length": 7,
+  "hash": "d8829db79b051b23d5860d981837c7e243a6a902c505b61ed5d9a1b88fc5cb78",
+  "hints": [
+   "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+   "To check you're on track: the final answer begins with C."
+  ]
+ },
+ "described": true
+}

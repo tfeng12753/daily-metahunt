@@ -1,0 +1,390 @@
+{
+ "date": "2026-11-27",
+ "difficulty": "hard",
+ "salt": "2026-11-27",
+ "number": 62,
+ "round": "Dead Men's Chest",
+ "intro": "The captain died with the map in his head. Luckily for the crew, he was a paranoid man, and he had it tattooed, in pieces, on each of them. Now they sit in the long evenings with the lamps low, each nursing a wound or a secret, while the bosun keeps his little book of marks and the cook mutters recipes that make no sense to anyone but him. A sailor on watch has taken to scratching two marks on the rail each time the wind shifts, as if remembering something he never learned. The captain's parrot, which nobody feeds, still answers to a name it has never heard.",
+ "echo": "Every year the Spanish fleet sailed home low in the water, heavy with silver.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Articles",
+   "flavor": "Every word ran into itself. The little numbers know where to look.",
+   "blocks": [
+    {
+     "type": "morselines",
+     "items": [
+      {
+       "code": ".....---------.-.-.-",
+       "len": 7,
+       "index": 7
+      },
+      {
+       "code": "-.-.-..--.-.-.",
+       "len": 6,
+       "index": 5
+      },
+      {
+       "code": "-.-.........-",
+       "len": 5,
+       "index": 3
+      },
+      {
+       "code": "-....-.-..-...-..",
+       "len": 6,
+       "index": 6
+      }
+     ]
+    }
+   ],
+   "hash": "f197ad7e0e075abed05c5d0d296b3bb35d327223cec3e8ca1e6b8e0de6e042b0",
+   "partials": {},
+   "hints": [
+    "Two symbols, no spaces, and a letter count. Which old code is it, and which word from this round fits each line?"
+   ]
+  },
+  {
+   "id": 2,
+   "title": "Keelhauled",
+   "flavor": "Bumps on a lift button, copied carefully.",
+   "blocks": [
+    {
+     "type": "braille",
+     "items": [
+      "111100",
+      "111000",
+      "100000",
+      "101110",
+      "101000"
+     ]
+    }
+   ],
+   "hash": "1acf2f8b5f41097f215e52e3a19227add9d9ed1a8010a9790e3f6d61ea87372b",
+   "partials": {},
+   "hints": [
+    "Write each number in binary. Six yes-or-no choices: is there an alphabet built from exactly that?"
+   ]
+  },
+  {
+   "id": 3,
+   "title": "Letter Of Marque",
+   "flavor": "Some squares have been given to you for free.",
+   "blocks": [
+    {
+     "type": "nonogram",
+     "rows": [
+      [
+       1,
+       1,
+       3,
+       4,
+       4,
+       3,
+       4
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       5,
+       5,
+       4,
+       4,
+       1,
+       1,
+       4
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       4,
+       3,
+       1,
+       1
+      ]
+     ],
+     "cols": [
+      [
+       5
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       1
+      ],
+      [
+       5
+      ],
+      [],
+      [
+       4
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       4
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [],
+      [
+       3
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       3
+      ],
+      [],
+      [
+       5
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "givens": [
+      [
+       1,
+       24,
+       1
+      ],
+      [
+       3,
+       25,
+       0
+      ],
+      [
+       0,
+       7,
+       1
+      ]
+     ]
+    }
+   ],
+   "hash": "8b44e6aedea1cafdf36aea2ec02c650db8122d3522295a6179176f4c2d14d8ed",
+   "partials": {},
+   "hints": [
+    "The numbers describe runs of filled squares. What picture could they be drawing?"
+   ]
+  },
+  {
+   "id": 4,
+   "title": "Walk The Plank",
+   "flavor": "Somewhere between the lab and the server room, four became two, and two became three. The tape was spooled back onto the wrong reel.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "000011 011001 100010 000111 000001 100100 011110"
+    }
+   ],
+   "hash": "fb675c700f0e3b9e64f227af4a6590c339bff2c49c5dc4b233ff6e27ec53ea53",
+   "partials": {
+    "ecb10fa64879ea738bf453e1e130b501bb11d854db0249c3729ce5512b91fc32": "You've decoded it, but it's not finished. One more layer."
+   },
+   "hints": [
+    "How many different things can a pair of bits say? Four is a very biological number. And if what you get still isn't a word, reread the flavour text."
+   ]
+  },
+  {
+   "id": 5,
+   "title": "Davy Jones",
+   "flavor": "A snail wrote this.",
+   "blocks": [
+    {
+     "type": "lettergrid",
+     "rows": [
+      "THEMESS",
+      "IGHTALA",
+      "SPLYSLG",
+      "NM··AAE",
+      "IIE·YLW",
+      "ASG·SOA",
+      "LTLIBNS",
+      "PIDNAGH",
+      "NINEDDI"
+     ]
+    }
+   ],
+   "hash": "88a03b62020878dd096fe220a131895f35ad80d320c5d1cdd6e4ba653b88ad30",
+   "partials": {},
+   "hints": [
+    "All the letters of a sentence are here, but not in rows. Try walking the grid the way a snail would."
+   ]
+  },
+  {
+   "id": 6,
+   "title": "Crow's Nest",
+   "flavor": "An inventory, tangled.",
+   "blocks": [
+    {
+     "type": "caption",
+     "text": "Somewhere in here: things to do with the ship."
+    },
+    {
+     "type": "board",
+     "rows": [
+      "IKPMAST",
+      "LRASGLA",
+      "LARKUHT",
+      "UKRCTOS",
+      "HEOEROE",
+      "NNTDOKH",
+      "SAILTDC"
+     ],
+     "plain": true,
+     "words": [
+      "CHEST",
+      "DECK",
+      "HOOK",
+      "HULL",
+      "KRAKEN",
+      "MAST",
+      "PARROT",
+      "SAIL",
+      "TORTUGA"
+     ]
+    }
+   ],
+   "hash": "7e7dcefaf4b416db47d0dd7e363edd0fbc4048fd6b26f855501f291c0b03b640",
+   "partials": {},
+   "hints": [
+    "Once every theme word is found, is anything left unclaimed? Read it in order.",
+    "The hidden words are: CHEST, DECK, HOOK, HULL, KRAKEN, MAST, PARROT, SAIL, TORTUGA."
+   ]
+  }
+ ],
+ "meta": {
+  "title": "Meta: Dead Men's Chest",
+  "flavor": "Someone underlined a few verses.",
+  "blocks": [
+   {
+    "type": "list",
+    "items": [
+     "Ch. 5 v. 4",
+     "Ch. 4 v. 2",
+     "Ch. 2 v. 2",
+     "Ch. 1 v. 4",
+     "Ch. 1 v. 2",
+     "Ch. 3 v. 5",
+     "Ch. 6 v. 5"
+    ],
+    "ordered": true
+   }
+  ],
+  "length": 7,
+  "hash": "98fb7fef6b3f7db86c2e31262601e874ed22b00c6d8300fa697f5b0eadb0f51d",
+  "hints": [
+   "Every entry has two numbers. What in this round is numbered, and what could the second number count?"
+  ]
+ },
+ "described": true
+}
