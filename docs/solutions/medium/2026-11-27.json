@@ -1,0 +1,64 @@
+{
+ "date": "2026-11-27",
+ "number": 62,
+ "difficulty": "medium",
+ "final": "MUTINY",
+ "metaType": "fitin",
+ "explain": "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "The Brig",
+   "answer": "DOUBLOON",
+   "mechanism": "Shredded sentence",
+   "transform": null,
+   "encoded": "DOUBLOON",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Walk The Plank",
+   "answer": "SCURVY",
+   "mechanism": "Scrambled sentence",
+   "transform": null,
+   "encoded": "SCURVY",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Shiver Me Timbers",
+   "answer": "QUARTERMASTER",
+   "mechanism": "Word search leftovers",
+   "transform": null,
+   "encoded": "QUARTERMASTER",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Articles",
+   "answer": "MAST",
+   "mechanism": "Book cipher",
+   "transform": null,
+   "encoded": "MAST",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Letter Of Marque",
+   "answer": "GUNPOWDER",
+   "mechanism": "Letter sudoku",
+   "transform": null,
+   "encoded": "GUNPOWDER",
+   "mutated": null
+  },
+  {
+   "id": 6,
+   "title": "Crow's Nest",
+   "answer": "RIGGING",
+   "mechanism": "Atomic numbers (symbols)",
+   "transform": null,
+   "encoded": "RIGGING",
+   "mutated": null
+  }
+ ]
+}

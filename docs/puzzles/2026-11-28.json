@@ -1,0 +1,143 @@
+{
+ "date": "2026-11-28",
+ "difficulty": "hard",
+ "salt": "2026-11-28",
+ "number": 63,
+ "round": "The Inside Job",
+ "intro": "The plan was perfect, which is why nobody wrote it down. Instead, each member of the crew hid their part of it somewhere only the others would think to look: beneath the felt, inside the bartender's sleeve, in the lining of the dealer's coat. The house keeps its own records, of course, and every signature in the book at the far end of the room is a single stroke, a flourish, a name reduced to the one mark its owner could not deny. No one has ever asked why the book's cover is too new, or why the ink on those pages is still wet.",
+ "echo": "Everyone in the crew has seen the films, and everyone thinks theirs will end differently.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Blind Spot",
+   "flavor": "Up and down, up and down, and not a single space left.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "WORNR BLUHC UARSO OSSUG EHFAE RCIAT DETTN WSFTH IREWG LCEAI ODLTE DORSR E",
+     "wide": true,
+     "rails": 5
+    }
+   ],
+   "hash": "279b08db657f63d2716fa11df1a4aca0645af553cf354ccab0838f90abc192e6",
+   "partials": {},
+   "hints": [
+    "All the right letters are here, just out of order. Could they have been written along a path that goes up and down?"
+   ]
+  },
+  {
+   "id": 2,
+   "title": "Loaded Dice",
+   "flavor": "Some visitors stayed briefly; others lingered. Something in here has been through the looking glass.",
+   "blocks": [
+    {
+     "type": "glyphs",
+     "groups": [
+      "♠♦♦♠",
+      "♠♠♦♦",
+      "♠♦",
+      "♦♦♦♠",
+      "♦♦",
+      "♠♠♦♦"
+     ],
+     "legend": [
+      "♦",
+      "♠"
+     ]
+    }
+   ],
+   "hash": "5810e5e434f082f414ce3623b1dbdd97e0017bb379c9487fea5f15845f3aa122",
+   "partials": {
+    "f74dcba4141729d2e860a090105f612f2b5e83e2e1047bb36ea174ca6f0ad8a8": "You've decoded it, but it's not finished. One more layer."
+   },
+   "hints": [
+    "Only two kinds of mark, in groups of one to four. Which old alphabet is built from exactly that? And if what you get still isn't a word, reread the flavour text."
+   ]
+  },
+  {
+   "id": 3,
+   "title": "Alibi",
+   "flavor": "Some of these are far too big to be letters.",
+   "blocks": [
+    {
+     "type": "numbers",
+     "items": [
+      6,
+      1,
+      53,
+      15,
+      16
+     ],
+     "tray": 2
+    }
+   ],
+   "hash": "5862010123fb6a50f21321dd11c33f2754a061a8685864a92767bee97f3beede",
+   "partials": {},
+   "hints": [
+    "Several of these numbers are bigger than 26, so they can't be letter positions. What else has a number that high?"
+   ]
+  },
+  {
+   "id": 4,
+   "title": "The Mark",
+   "flavor": "Room numbers in a hotel where nobody reads with their eyes. Unlucky for some, and the same distance either way.",
+   "blocks": [
+    {
+     "type": "numbers",
+     "items": [
+      21,
+      29,
+      15,
+      15,
+      29,
+      17,
+      29,
+      27
+     ]
+    }
+   ],
+   "hash": "c85e4975b3499af2279b86ffacbc168f4692a650b2f221d712a98e4e6a90fe60",
+   "partials": {
+    "f9bf05c145ae721d215b1cfec93f709c47e94cc8b29b093e15130b49f6a390ed": "You've decoded it, but it's not finished. One more layer."
+   },
+   "hints": [
+    "Write each number in binary. Six yes-or-no choices: is there an alphabet built from exactly that? And if what you get still isn't a word, reread the flavour text."
+   ]
+  },
+  {
+   "id": 5,
+   "title": "Double Cross",
+   "flavor": "Every letter here is wearing someone else's coat.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "BAP WYTB BACXN BAP UDPZYBUZ BIDPR LPHUZP BAP WCXP FPXB RPYR FYT MPXBCWYBCUX",
+     "wide": true,
+     "solver": "substitution"
+    }
+   ],
+   "hash": "48304a2115e96045b95683295b0cb4a5953362ca72ae90204266ec4ae21ce5fb",
+   "partials": {},
+   "hints": [
+    "Which short words are most common in English? Could any of them be hiding here?"
+   ]
+  }
+ ],
+ "meta": {
+  "title": "Meta: The Inside Job",
+  "flavor": "The last lock takes every signature at once.",
+  "blocks": [
+   {
+    "type": "mono",
+    "text": "ZGKTO",
+    "big": true
+   }
+  ],
+  "length": 5,
+  "hash": "cb786a8326e2e968e611d5e95c06d9e9027d3b06af10bd55c31e2416330658d5",
+  "hints": [
+   "Blaise de Vigenère needed a key to open this. Has every answer signed its work?"
+  ]
+ },
+ "described": true
+}

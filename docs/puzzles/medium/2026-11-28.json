@@ -1,0 +1,208 @@
+{
+ "date": "2026-11-28",
+ "difficulty": "medium",
+ "salt": "2026-11-28/medium",
+ "number": 63,
+ "round": "The Inside Job",
+ "intro": "The plan was perfect, which is why nobody wrote it down. Instead, each member of the crew hid their part of it somewhere only the others would think to look: a chip stack with a crooked top at the blackjack table, a tip folded inside a dealer's badge, a reservation for a room that does not exist. Before the first table opens, the pit boss calls the crew's names over the public address system and the floor answers with the usual echo, but the pegboard by the time clock keeps one more empty hook than there are people. The croupiers have started tapping their name tags against that gap as they pass. The air smells of ozone and yesterday's perfume, and no one mentions the extra space.",
+ "echo": "The architect gave the strongroom an arched ceiling, as if it were a cathedral.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Alibi",
+   "flavor": "Everything fell straight down, and landed in the right column.",
+   "blocks": [
+    {
+     "type": "dropquote",
+     "cols": [
+      "AASTT",
+      "HN",
+      "DGIIV",
+      "ESTU",
+      "ARST",
+      "HPRY",
+      "AADS",
+      "EGLTV",
+      "CEO",
+      "NRS",
+      "EEGH",
+      "ACT",
+      "RST",
+      "EFI",
+      "KMOT",
+      "EER",
+      "IP"
+     ],
+     "mask": [
+      "....#....#...#...",
+      ".#...#......#...#",
+      ".#....#....#....#",
+      "...#....#......#.",
+      ".#......#########"
+     ]
+    }
+   ],
+   "hash": "9149a89d765320c7703cc06931e4b40578a5921136df6818020621317297baf1",
+   "partials": {
+    "e749d8156f21f6fb38173d79a4eed45a468f9214ffe29c026a9f293ba00641e9": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Black squares are spaces. Which two- and three-letter words fit, using only the letters each column allows?",
+    "Each column's letters drop into that column of the grid; cross them off as you place them. The sentence tells you what to submit."
+   ],
+   "length": 5
+  },
+  {
+   "id": 2,
+   "title": "House Edge",
+   "flavor": "Count everything. Then count again, differently.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "Faces on an icosahedron",
+      "Spots on a standard die, all faces added up",
+      "Moons orbiting Earth",
+      "Original British colonies that became the United States",
+      "Wheels on a bicycle",
+      "Months in a year",
+      "Sides of a pentagon",
+      "Holes on a full golf course"
+     ],
+     "ordered": true,
+     "tray": "letter"
+    }
+   ],
+   "hash": "d5cb2f5c5c5afdf572da066dc2b149682458ce879e67305552d63029feea9d39",
+   "partials": {
+    "00531116a894f366ca6c8be738a7eb2a1b60485ce20ff85b66301d4a85f90ddb": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Every line has a number for an answer. Could those numbers be counting through something else?",
+    "They're all between 1 and 26: A = 1, B = 2…"
+   ],
+   "length": 7
+  },
+  {
+   "id": 3,
+   "title": "Getaway Driver",
+   "flavor": "Recorded through a wall. Count carefully.",
+   "blocks": [
+    {
+     "type": "audio",
+     "kind": "taps",
+     "groups": [
+      [
+       4,
+       3
+      ],
+      [
+       2,
+       3
+      ],
+      [
+       4,
+       5
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       3,
+       1
+      ],
+      [
+       1,
+       5
+      ],
+      [
+       4,
+       5
+      ]
+     ]
+    }
+   ],
+   "hash": "939be75ba124abaedbd64ae132d015692720d4e44ea0b4d5a6351d81849229c0",
+   "partials": {
+    "adea9838687c6e40c516de7a987ede67fbd13553979b0517818a44c946da0412": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Always two numbers, never more than five. How would two prisoners spell through a wall with a 5×5 grid?",
+    "Tap code: the first count is the row, the second the column, in a 5×5 alphabet with no K."
+   ],
+   "length": 7
+  },
+  {
+   "id": 4,
+   "title": "The Vault Door",
+   "flavor": "Each entry picked up a hitchhiker on the way.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "RSEAFCIEPB",
+      "ENPLUBIRTL",
+      "RESLAE",
+      "ICPHSN",
+      "KTKCAACBLJ",
+      "HRKEOP",
+      "BCATCOAAR",
+      "ULRLDI",
+      "ISKKOPCCL",
+      "RPUIEOERC"
+     ],
+     "ordered": true,
+     "mono": true
+    }
+   ],
+   "hash": "608c467e87adb85824a67cc52777ccbc82047ac905a1370ac5de602ea20e47b4",
+   "partials": {
+    "fc849d44b2b98b0d7b62025ad1af64fb44b731a2391a34821a99333b50c9e49a": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Each jumble is almost a word from this round, but with a letter to spare. Which letter, every time?",
+    "Rearrange each into a theme word; the spare letters, in order, are the answer."
+   ],
+   "length": 9
+  },
+  {
+   "id": 5,
+   "title": "Loaded Dice",
+   "flavor": "An emperor's idea of privacy.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "YMJ RJXXFLJ BFX MNIIJS NS UQFNS XNLMY FQQ FQTSL FSI NY XNRUQD XFDX HWTBGFWY",
+     "wide": true,
+     "solver": "substitution"
+    }
+   ],
+   "hash": "94ae308b47ae6d5f6e435dd02c0c3f83025e541b782e10376e3308d5c6548e79",
+   "partials": {
+    "7fcbf3831b76e7d3faad3193f6f514b8366927de808f3d7de3fae6ffae71ca94": "Nearly. There's a stowaway aboard: one letter too many. Put it ashore, but remember who it was."
+   },
+   "hints": [
+    "Try moving every letter the same distance. How far turns the short words into English?",
+    "A Caesar shift: find the one shift that fixes a short word, then apply it everywhere."
+   ],
+   "length": 7
+  }
+ ],
+ "meta": {
+  "title": "Meta: The Inside Job",
+  "flavor": "Everything arrived a little heavier than it left.",
+  "blocks": [],
+  "length": 5,
+  "hash": "1988ea55beb4f882bbd0b448ed222053da27eab236d1ca430c9fdf0af8421e6b",
+  "hints": [
+   "Did every answer come out the right size the first time? Each had one letter too many. Did you keep them?",
+   "Take the extra letter from each feeder, in puzzle order."
+  ]
+ },
+ "described": true
+}

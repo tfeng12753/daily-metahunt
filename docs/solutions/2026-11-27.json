@@ -1,0 +1,64 @@
+{
+ "date": "2026-11-27",
+ "number": 62,
+ "difficulty": "hard",
+ "final": "GALLEON",
+ "metaType": "logbook",
+ "explain": "Each entry is (puzzle number, letter number): index into that puzzle's answer.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Articles",
+   "answer": "KEEL",
+   "mechanism": "Gapless Morse",
+   "transform": null,
+   "encoded": "KEEL",
+   "mutated": null
+  },
+  {
+   "id": 2,
+   "title": "Keelhauled",
+   "answer": "PLANK",
+   "mechanism": "Braille (drawn)",
+   "transform": null,
+   "encoded": "PLANK",
+   "mutated": null
+  },
+  {
+   "id": 3,
+   "title": "Letter Of Marque",
+   "answer": "HARBOR",
+   "mechanism": "Nonogram",
+   "transform": null,
+   "encoded": "HARBOR",
+   "mutated": null
+  },
+  {
+   "id": 4,
+   "title": "Walk The Plank",
+   "answer": "LANTERN",
+   "mechanism": "Binary codons",
+   "transform": "Reversal",
+   "encoded": "NRETNAL",
+   "mutated": null
+  },
+  {
+   "id": 5,
+   "title": "Davy Jones",
+   "answer": "BILGE",
+   "mechanism": "Spiral route",
+   "transform": null,
+   "encoded": "BILGE",
+   "mutated": null
+  },
+  {
+   "id": 6,
+   "title": "Crow's Nest",
+   "answer": "ISLAND",
+   "mechanism": "Word search leftovers",
+   "transform": null,
+   "encoded": "ISLAND",
+   "mutated": null
+  }
+ ]
+}

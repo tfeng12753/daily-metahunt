@@ -1,0 +1,332 @@
+{
+ "date": "2026-11-28",
+ "difficulty": "easy",
+ "salt": "2026-11-28/easy",
+ "number": 63,
+ "round": "The Inside Job",
+ "intro": "The plan was perfect, which is why nobody wrote it down. Instead, each member of the crew hid their part of it somewhere only the others would think to look: the croupier in the loose floorboard beneath the zero, the pit boss in the hollowed-out heel of his left shoe, the floor walker in the wiring behind the gilt mirror in the staff loo. The night of the job, they met in the back office where the old croupier’s case stood open — a long, shallow tray divided into seven cells, each padded and sized for exactly one tool, no room to spare, no cell big enough for two. The crew slid their pieces in one at a time, and each piece settled where it belonged with a hush of felt, as if the case had been waiting its whole life for exactly these seven things.",
+ "echo": "The driver has been idling around the corner since before any of this began.",
+ "puzzles": [
+  {
+   "id": 1,
+   "title": "Double Cross",
+   "flavor": "Noughts and crosses, with a few stray dots where someone pressed too hard.",
+   "blocks": [
+    {
+     "type": "pigpen",
+     "items": [
+      {
+       "g": "hash",
+       "p": 8,
+       "dot": true
+      },
+      {
+       "g": "hash",
+       "p": 5,
+       "dot": true
+      },
+      {
+       "g": "x",
+       "p": 2,
+       "dot": false
+      },
+      {
+       "g": "hash",
+       "p": 2,
+       "dot": true
+      },
+      {
+       "g": "hash",
+       "p": 4,
+       "dot": false
+      },
+      {
+       "g": "x",
+       "p": 1,
+       "dot": false
+      },
+      {
+       "g": "x",
+       "p": 1,
+       "dot": false
+      },
+      {
+       "g": "hash",
+       "p": 4,
+       "dot": false
+      }
+     ]
+    }
+   ],
+   "hash": "be1dc5fed55a82fd7280d4fdca0e19a1581a2747ce3ef0e03c386ba308833306",
+   "partials": {},
+   "hints": [
+    "Pigpen (Freemason's) cipher: A–I in a # grid, J–R the same with dots, S–V in an X, W–Z the X with dots.",
+    "To check you're on track: the answer begins with R."
+   ],
+   "technique": "Pigpen cipher",
+   "length": 8
+  },
+  {
+   "id": 2,
+   "title": "Getaway Driver",
+   "flavor": "Run up the halyard at dawn and left there: a string of bunting that isn't meant for decoration.",
+   "blocks": [
+    {
+     "type": "flags",
+     "items": [
+      "B",
+      "R",
+      "I",
+      "E",
+      "F",
+      "C",
+      "A",
+      "S",
+      "E"
+     ]
+    }
+   ],
+   "hash": "e39deccbe219a8082cee4af7e190d98f1dc5f9fe8caa2d56b7910755d1cb4a91",
+   "partials": {},
+   "hints": [
+    "International maritime signal flags, one letter each.",
+    "To check you're on track: the answer begins with B."
+   ],
+   "technique": "Maritime signal flags",
+   "length": 9
+  },
+  {
+   "id": 3,
+   "title": "Plan B",
+   "flavor": "The spy's handbook said to always carry a novel. It never said which one; this page will have to do.",
+   "blocks": [
+    {
+     "type": "prose",
+     "text": "The plan was perfect, which is why nobody wrote it down. Instead, each member of the crew hid their part of it somewhere only the others would think to look.",
+     "paper": true
+    },
+    {
+     "type": "list",
+     "items": [
+      "12.3",
+      "27.4",
+      "8.2",
+      "25.1",
+      "14.3",
+      "3.2",
+      "13.3",
+      "28.2",
+      "19.4",
+      "2.4",
+      "1.3"
+     ],
+     "inline": true
+    }
+   ],
+   "hash": "dc6ed7f37df592a69ec8afddf478c018f9af3d4cd7bb22b3d29348aa413261b4",
+   "partials": {},
+   "hints": [
+    "Each pair is word.letter into the recovered page (words split on spaces; punctuation ignored).",
+    "To check you're on track: the answer begins with S."
+   ],
+   "technique": "Book cipher",
+   "length": 11
+  },
+  {
+   "id": 4,
+   "title": "Shift Change",
+   "flavor": "A familiar grid, an unfamiliar alphabet.",
+   "blocks": [
+    {
+     "type": "sudoku",
+     "size": 9,
+     "rows": [
+      ".M...EUV.",
+      "..V.W.O.E",
+      ".E..U..SW",
+      ".W...UMGS",
+      "E.......V",
+      "..MWVSEUL",
+      "..OU.WSE.",
+      ".S.VE....",
+      ".GEL.O.WU"
+     ],
+     "alphabet": "EGLMOSUVW",
+     "marks": [
+      [
+       2,
+       2
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       3,
+       4
+      ],
+      [
+       3,
+       0
+      ],
+      [
+       3,
+       3
+      ],
+      [
+       1,
+       3
+      ]
+     ]
+    }
+   ],
+   "hash": "796edca0a6e6f39ae7e5d81aae8eac465523ae3f271f9d7c64cbddae403e113a",
+   "partials": {},
+   "hints": [
+    "Sudoku using the letters shown instead of digits (each row, column and box uses each letter once). Read the numbered squares in order.",
+    "To check you're on track: the answer begins with G."
+   ],
+   "technique": "Letter sudoku",
+   "length": 6
+  },
+  {
+   "id": 5,
+   "title": "Loaded Dice",
+   "flavor": "Nothing was lost in transcription; everything simply moved over.",
+   "blocks": [
+    {
+     "type": "mono",
+     "text": "VTPENST",
+     "big": true,
+     "shift": 1
+    }
+   ],
+   "hash": "c3cda84aa111dede1d94a3a383c9fc2cea931099f8f64161e5fd1f2af0035e3f",
+   "partials": {},
+   "hints": [
+    "Every letter was typed one key to the side on a QWERTY keyboard.",
+    "To check you're on track: the answer begins with C."
+   ],
+   "technique": "Keyboard shift",
+   "length": 7
+  },
+  {
+   "id": 6,
+   "title": "The Vault Door",
+   "flavor": "An inventory of the casino, tangled up. Whatever is left over when every item is accounted for is yours.",
+   "blocks": [
+    {
+     "type": "caption",
+     "text": "Hidden in the grid: 9 words to do with the casino (lengths 4, 4, 5, 5, 5, 5, 6, 7, 7), running in any direction."
+    },
+    {
+     "type": "board",
+     "rows": [
+      "MPOKERA",
+      "SAFEMEG",
+      "ASDYOLU",
+      "LPLCSBA",
+      "AIOANMR",
+      "RHGRAUD",
+      "MCSDRTK"
+     ],
+     "plain": true,
+     "words": [
+      "ALARM",
+      "CHIPS",
+      "GOLD",
+      "GUARD",
+      "KEYCARD",
+      "POKER",
+      "RANSOM",
+      "SAFE",
+      "TUMBLER"
+     ]
+    }
+   ],
+   "hash": "4647ffdf93fd46d79c254743cfa88548b3538b1ad6a5570565334b9e43783b0e",
+   "partials": {},
+   "hints": [
+    "Find every hidden word (any of 8 directions). The unused letters, read left-to-right, top-to-bottom, spell the answer.",
+    "The hidden words are: ALARM, CHIPS, GOLD, GUARD, KEYCARD, POKER, RANSOM, SAFE, TUMBLER.",
+    "To check you're on track: the answer begins with M."
+   ],
+   "technique": "Word search leftovers",
+   "length": 4
+  },
+  {
+   "id": 7,
+   "title": "The Mark",
+   "flavor": "The scale is very precise; the list is very short.",
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "9.012",
+      "10.81",
+      "6.94",
+      "30.974",
+      "54.938"
+     ],
+     "inline": true,
+     "variant": "masses"
+    }
+   ],
+   "hash": "ba6b5fd4c976e12a09418bf78832f975991528b7b400aeb90deba8ff3ab5f065",
+   "partials": {},
+   "hints": [
+    "Standard atomic masses: identify each element, then use its atomic number as a letter position.",
+    "To check you're on track: the answer begins with D."
+   ],
+   "technique": "Atomic numbers (by mass)",
+   "length": 5
+  }
+ ],
+ "meta": {
+  "title": "Meta: The Inside Job",
+  "flavor": "Pigeonholes, each cut to fit one thing, and some of them marked.",
+  "blocks": [
+   {
+    "type": "fitgrid",
+    "rows": [
+     {
+      "len": 6,
+      "shade": 0
+     },
+     {
+      "len": 11,
+      "shade": 10
+     },
+     {
+      "len": 8,
+      "shade": 6
+     },
+     {
+      "len": 4,
+      "shade": 1
+     },
+     {
+      "len": 7,
+      "shade": 3
+     },
+     {
+      "len": 9,
+      "shade": 6
+     },
+     {
+      "len": 5,
+      "shade": 4
+     }
+    ]
+   }
+  ],
+  "length": 7,
+  "hash": "797eeda2f05e033194b437931a47b48369b394dcaa8bd5f9ba581d93530206cd",
+  "hints": [
+   "Each answer fits exactly one row of the grid by length; the shaded squares, top to bottom, spell the final answer.",
+   "To check you're on track: the final answer begins with G."
+  ]
+ },
+ "described": true
+}
